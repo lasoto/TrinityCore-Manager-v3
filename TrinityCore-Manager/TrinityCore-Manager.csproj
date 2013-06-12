@@ -85,6 +85,18 @@
     <Compile Include="AddIPBan.designer.cs">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterRemoveResurrectionSickenss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterRemoveResurrectionSickenss.Designer.cs">
+      <DependentUpon>CharacterRemoveResurrectionSickenss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterSetLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSetLevel.Designer.cs">
+      <DependentUpon>CharacterSetLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
     <Compile Include="CreateItem.cs">
       <SubType>Form</SubType>
@@ -191,6 +203,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddIPBan.resx">
       <DependentUpon>AddIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterRemoveResurrectionSickenss.resx">
+      <DependentUpon>CharacterRemoveResurrectionSickenss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterSetLevel.resx">
+      <DependentUpon>CharacterSetLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateItem.resx">
       <DependentUpon>CreateItem.cs</DependentUpon>
