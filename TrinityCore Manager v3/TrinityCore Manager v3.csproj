@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47A840B1-AC0E-4EF2-B9B8-6E02DFADE9B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrinityCore_Manager_v3</RootNamespace>
+    <AssemblyName>TrinityCore Manager v3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.3, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCleanup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountCleanup.Designer.cs">
+      <DependentUpon>AccountCleanup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccountBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccountBan.Designer.cs">
+      <DependentUpon>AddAccountBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIPBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIPBan.Designer.cs">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateItem.Designer.cs">
+      <DependentUpon>CreateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItem.Designer.cs">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemArea.Designer.cs">
+      <DependentUpon>FindItemArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemDisplayID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemDisplayID.Designer.cs">
+      <DependentUpon>FindItemDisplayID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemGemProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemGemProperties.Designer.cs">
+      <DependentUpon>FindItemGemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemMap.Designer.cs">
+      <DependentUpon>FindItemMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemQuest.Designer.cs">
+      <DependentUpon>FindItemQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemRequiredSpell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemRequiredSpell.Designer.cs">
+      <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSet.Designer.cs">
+      <DependentUpon>FindItemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSocketBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSocketBonus.Designer.cs">
+      <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSpell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSpell.Designer.cs">
+      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindNpc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindNpc.Designer.cs">
+      <DependentUpon>FindNpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountCleanup.resx">
+      <DependentUpon>AccountCleanup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccountBan.resx">
+      <DependentUpon>AddAccountBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIPBan.resx">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateItem.resx">
+      <DependentUpon>CreateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItem.resx">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemArea.resx">
+      <DependentUpon>FindItemArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemDisplayID.resx">
+      <DependentUpon>FindItemDisplayID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemGemProperties.resx">
+      <DependentUpon>FindItemGemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemMap.resx">
+      <DependentUpon>FindItemMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemQuest.resx">
+      <DependentUpon>FindItemQuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemRequiredSpell.resx">
+      <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSet.resx">
+      <DependentUpon>FindItemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSocketBonus.resx">
+      <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSpell.resx">
+      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindNpc.resx">
+      <DependentUpon>FindNpc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
