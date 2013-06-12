@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58FBDA40-62BF-4358-970B-6EA18059F6B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrinityCore_Manager</RootNamespace>
+    <AssemblyName>TrinityCore Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.3, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Dependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2Sharp">
+      <HintPath>..\packages\LibGit2Sharp.0.12.0.0\lib\net35\LibGit2Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.6.5\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\Dependencies\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCleanup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountCleanup.designer.cs">
+      <DependentUpon>AccountCleanup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccount.designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccountBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccountBan.designer.cs">
+      <DependentUpon>AddAccountBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIPBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIPBan.designer.cs">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\TCCommandAttribute.cs" />
+    <Compile Include="CreateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateItem.designer.cs">
+      <DependentUpon>CreateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IDatabase.cs" />
+    <Compile Include="Database\MySqlDatabase.cs" />
+    <Compile Include="Database\MySqlHelper.cs" />
+    <Compile Include="Extensions\AttributeExtensions.cs" />
+    <Compile Include="FindItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItem.designer.cs">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemArea.designer.cs">
+      <DependentUpon>FindItemArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemDisplayID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemDisplayID.designer.cs">
+      <DependentUpon>FindItemDisplayID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemGemProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemGemProperties.designer.cs">
+      <DependentUpon>FindItemGemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemMap.designer.cs">
+      <DependentUpon>FindItemMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemQuest.designer.cs">
+      <DependentUpon>FindItemQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemRequiredSpell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemRequiredSpell.designer.cs">
+      <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSet.designer.cs">
+      <DependentUpon>FindItemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSocketBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSocketBonus.designer.cs">
+      <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItemSpell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItemSpell.designer.cs">
+      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindNpc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindNpc.designer.cs">
+      <DependentUpon>FindNpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CommandsHelper.cs" />
+    <Compile Include="Commands\TCCommand.cs" />
+    <Compile Include="TC\CMake.cs" />
+    <Compile Include="Misc\FileHelper.cs" />
+    <Compile Include="Misc\ProcessHelper.cs" />
+    <Compile Include="Misc\VisualStudio.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\SecurityExtensions.cs" />
+    <Compile Include="TCP\TCClient.cs" />
+    <Compile Include="TC\TCCompiler.cs" />
+    <Compile Include="TC\TrinityCoreRepository.cs" />
+    <EmbeddedResource Include="AccountCleanup.resx">
+      <DependentUpon>AccountCleanup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccountBan.resx">
+      <DependentUpon>AddAccountBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIPBan.resx">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateItem.resx">
+      <DependentUpon>CreateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItem.resx">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemArea.resx">
+      <DependentUpon>FindItemArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemDisplayID.resx">
+      <DependentUpon>FindItemDisplayID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemGemProperties.resx">
+      <DependentUpon>FindItemGemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemMap.resx">
+      <DependentUpon>FindItemMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemQuest.resx">
+      <DependentUpon>FindItemQuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemRequiredSpell.resx">
+      <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSet.resx">
+      <DependentUpon>FindItemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSocketBonus.resx">
+      <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItemSpell.resx">
+      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindNpc.resx">
+      <DependentUpon>FindNpc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)NativeBinaries" md "$(TargetDir)NativeBinaries"
+if not exist "$(TargetDir)NativeBinaries\x86" md "$(TargetDir)NativeBinaries\x86"
+xcopy /s /y "$(SolutionDir)packages\LibGit2Sharp.0.12.0.0\NativeBinaries\x86\*.*" "$(TargetDir)NativeBinaries\x86"
+if not exist "$(TargetDir)NativeBinaries\amd64" md "$(TargetDir)NativeBinaries\amd64"
+xcopy /s /y "$(SolutionDir)packages\LibGit2Sharp.0.12.0.0\NativeBinaries\amd64\*.*" "$(TargetDir)NativeBinaries\amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
