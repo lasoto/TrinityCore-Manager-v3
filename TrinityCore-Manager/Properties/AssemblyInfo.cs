@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TrinityCore-Manager")]
+[assembly: AssemblyTitle("TrinityCore Manager v3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TrinityCore-Manager")]
+[assembly: AssemblyProduct("TrinityCore Manager v3")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dbfd31bc-19af-41fe-826c-c9abc277d2c4")]
+[assembly: Guid("8fac10c1-5a91-4a5d-b3aa-bd00fe29cf6e")]
 
 // Version information for an assembly consists of the following four values:
 //

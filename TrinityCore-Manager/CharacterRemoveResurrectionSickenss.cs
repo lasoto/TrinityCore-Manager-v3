@@ -11,9 +11,9 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager_v3
 {
-    public partial class FindNpc : DevComponents.DotNetBar.Office2007Form
+    public partial class CharacterRemoveResurrectionSickenss : DevComponents.DotNetBar.Office2007Form
     {
-        public FindNpc()
+        public CharacterRemoveResurrectionSickenss()
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager
+﻿namespace TrinityCore_Manager_v3
 {
     partial class FindItemDisplayID
     {

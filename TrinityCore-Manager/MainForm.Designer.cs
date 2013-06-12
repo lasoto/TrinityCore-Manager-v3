@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager
+﻿namespace TrinityCore_Manager_v3
 {
     partial class MainForm
     {
@@ -104,7 +104,7 @@
             this.setLevelButton = new DevComponents.DotNetBar.ButtonItem();
             this.setReputationButton = new DevComponents.DotNetBar.ButtonItem();
             this.setSkillLevelButton = new DevComponents.DotNetBar.ButtonItem();
-            this.removeRessSicknessButton = new DevComponents.DotNetBar.ButtonItem();
+            this.removeResSicknessButton = new DevComponents.DotNetBar.ButtonItem();
             this.showPlayerInfoButton = new DevComponents.DotNetBar.ButtonItem();
             this.deleteCharacterButton = new DevComponents.DotNetBar.ButtonItem();
             this.characterListRibbonBar = new DevComponents.DotNetBar.RibbonBar();
@@ -163,13 +163,13 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -231,6 +231,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // playerManagementRibbonBar
             // 
@@ -1139,7 +1140,6 @@
             // 
             this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // characterEditorRibbonBar
             // 
@@ -1160,7 +1160,7 @@
             this.setLevelButton,
             this.setReputationButton,
             this.setSkillLevelButton,
-            this.removeRessSicknessButton,
+            this.removeResSicknessButton,
             this.showPlayerInfoButton,
             this.deleteCharacterButton});
             this.characterEditorRibbonBar.ItemSpacing = 10;
@@ -1264,11 +1264,11 @@
             this.setSkillLevelButton.SubItemsExpandWidth = 14;
             this.setSkillLevelButton.Text = "<div align=\"center\">Set<br/>Skill Level</div>";
             // 
-            // removeRessSicknessButton
+            // removeResSicknessButton
             // 
-            this.removeRessSicknessButton.Name = "removeRessSicknessButton";
-            this.removeRessSicknessButton.SubItemsExpandWidth = 14;
-            this.removeRessSicknessButton.Text = "<div align=\"center\">Remove<br/>Ressurection Sickness</div>";
+            this.removeResSicknessButton.Name = "removeResSicknessButton";
+            this.removeResSicknessButton.SubItemsExpandWidth = 14;
+            this.removeResSicknessButton.Text = "<div align=\"center\">Remove<br/>Resurrection Sickness</div>";
             // 
             // showPlayerInfoButton
             // 
@@ -1481,7 +1481,6 @@
             // 
             // serverManagementTab
             // 
-            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
@@ -1500,6 +1499,7 @@
             // 
             // characterManagementTab
             // 
+            this.characterManagementTab.Checked = true;
             this.characterManagementTab.Name = "characterManagementTab";
             this.characterManagementTab.Panel = this.ribbonPanel4;
             this.characterManagementTab.Text = "Character Management";
@@ -1762,7 +1762,7 @@
         private DevComponents.DotNetBar.ButtonItem setLevelButton;
         private DevComponents.DotNetBar.ButtonItem setReputationButton;
         private DevComponents.DotNetBar.ButtonItem setSkillLevelButton;
-        private DevComponents.DotNetBar.ButtonItem removeRessSicknessButton;
+        private DevComponents.DotNetBar.ButtonItem removeResSicknessButton;
         private DevComponents.DotNetBar.ButtonItem showPlayerInfoButton;
         private DevComponents.DotNetBar.ButtonItem deleteCharacterButton;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel5;
