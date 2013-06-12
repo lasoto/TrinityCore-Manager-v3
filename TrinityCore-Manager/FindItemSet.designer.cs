@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class FindItemSet
     {
@@ -123,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(366, 522);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
@@ -130,9 +131,12 @@
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindItemSet";
             this.Text = "Find Item Set";
             this.ResumeLayout(false);

@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class AddAccountBan
     {
@@ -43,7 +43,7 @@
             // 
             this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountAddBanLabel.Location = new System.Drawing.Point(65, 75);
+            this.accountAddBanLabel.Location = new System.Drawing.Point(59, 49);
             this.accountAddBanLabel.Name = "accountAddBanLabel";
             this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
             this.accountAddBanLabel.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.accountBanComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.accountBanComboBox.FormattingEnabled = true;
             this.accountBanComboBox.ItemHeight = 14;
-            this.accountBanComboBox.Location = new System.Drawing.Point(137, 77);
+            this.accountBanComboBox.Location = new System.Drawing.Point(131, 51);
             this.accountBanComboBox.Name = "accountBanComboBox";
             this.accountBanComboBox.Size = new System.Drawing.Size(189, 20);
             this.accountBanComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -65,7 +65,7 @@
             // 
             this.banButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.banButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.banButton.Location = new System.Drawing.Point(304, 168);
+            this.banButton.Location = new System.Drawing.Point(282, 150);
             this.banButton.Name = "banButton";
             this.banButton.Size = new System.Drawing.Size(103, 33);
             this.banButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -77,7 +77,7 @@
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cancelButton.Location = new System.Drawing.Point(12, 168);
+            this.cancelButton.Location = new System.Drawing.Point(12, 150);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(103, 33);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -88,7 +88,7 @@
             // 
             this.refreshButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.refreshButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.refreshButton.Location = new System.Drawing.Point(186, 103);
+            this.refreshButton.Location = new System.Drawing.Point(180, 77);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(75, 23);
             this.refreshButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -100,16 +100,19 @@
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 213);
+            this.ClientSize = new System.Drawing.Size(397, 195);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.banButton);
             this.Controls.Add(this.accountBanComboBox);
             this.Controls.Add(this.accountAddBanLabel);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AddAccountBan";
             this.Text = "Add Account Ban";
             this.ResumeLayout(false);

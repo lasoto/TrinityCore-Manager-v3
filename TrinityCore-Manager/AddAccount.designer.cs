@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class AddAccount
     {
@@ -337,7 +337,9 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(518, 301);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "AddAccount";
             this.Text = "Add Account";
             this.ResumeLayout(false);

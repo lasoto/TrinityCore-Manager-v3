@@ -117,18 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="itemDetailsInfoLabel.Text" xml:space="preserve">
-    <value>Name : What the item will be called when you mouseover it.
-
-Quote : Shows up on the bottom of the item in yellow text. Leave blank for no quote.
-
-Quality : The color will the text be. This also typically relates to the rarity of finding the item.
-
-Display ID : This is the ID for the model the item will use. 
-The best way to find it is to find an item that already uses the model, look it up in our DisplayID Finder, and copy display ID for it.
-
-Entry ID : This is the code used when spawning the item. It must be unique and should be 5 digits or less.</value>
-  </data>
+  <metadata name="itemCreatorSuperTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="createWeaponWizardPage.Style.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1527,19 +1518,6 @@ Entry ID : This is the code used when spawning the item. It must be unique and s
   <metadata name="itemCreatorWizard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="itemTypeInfoLabel.Text" xml:space="preserve">
-    <value>Equip: Where the item will be equipped on the character.
-
-Type: What hand will the weapon be in? Use Bows for both bows and crossbows.
-
-Durability: Total amount of possible durability the item can have.
-
-Binds: How the item is bound to the player, if at all.
-
-Buy Price: If the item is added to a vendor inventory, this is how much it will cost players.
-
-Sell Price: This is how much a vendor will pay the player for the item.</value>
-  </data>
   <data name="itemWeaponStatsInfoLabel.Text" xml:space="preserve">
     <value>Sheath: How the weapon is put away. Two-handed puts it on the back, crossed if the weapon is actually single handed. 
 One handed puts it on the waist, etc.
@@ -1554,20 +1532,21 @@ Armor: How much armor will be added once the item is equipped. Can be a negative
   </data>
   <data name="itemReqInfoLabel.Text" xml:space="preserve">
     <value>Required Level: What level the player (1-255) must be to use the item. Leave at blank for no requirement.
+
 Item Level: Used to indicate the quality of the item numerically, also impacts enchanting requirements.
+
 Reputation: Use this to set a required faction/reputation.
-Standing: Set the level of Req Reputation you want.
+
+Rep. Rank: Set the level of Req Reputation you want.
+
 Skill/Profession: Use this to set a required skill/profession.
-Skill Level: Set the level of Req Skill you want.
-Max Number Allowed: How many a player can have in their inventory at any given time. Leave blank for no limit.
-Allowed Class: Choose whether an item is restricted to certain classes or not.
-Allowed Race: Restrict item based on race?
-Stackable: How many can be grouped in a single stack? Leave blank or at 1 for no stacking.</value>
+
+Skill Level: Set the level of Req Skill you want.</value>
   </data>
   <data name="addStatsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAduSURBVFhHvZZZUFTZGYAPqy27NigOguIyKIiyCIKszS40
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAduSURBVFhHvZZZUFTZGYAPqy27NigOguIyKIiyCIKszS40
         oLghoC0gO6hA64DggiiCgIiKW9zNqHEXUSPg2q64m0FnJmW1ZcqhkjE1Y/KQpDKVL4eZJJXH4aHn4at7
         6ta55373P///nysAo5/LiKgRC+yibXuNA0Wv8JNMlfhKfESvia9x7/Do4b2eiZ6an7te/zwxkMkWEYr7
         pXuKyGzJIHldPMlrJFXxzKxUU9ScR8vBZoZE2D0ayJoDEhDThS6lRc3+L/bR0F1Lc/cmWm5spvVmI+fe
@@ -1710,9 +1689,6 @@ all sockets are filled with gems that match the colors of the sockets.</value>
   </data>
   <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="itemCreatorSuperTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>149, 17</value>
   </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

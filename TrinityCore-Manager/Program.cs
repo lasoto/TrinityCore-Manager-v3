@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrinityCore_Manager_v3
+namespace TrinityCore_Manager
 {
     static class Program
     {

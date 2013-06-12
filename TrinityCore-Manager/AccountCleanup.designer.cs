@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class AccountCleanup
     {
@@ -132,9 +132,12 @@
             this.Controls.Add(this.deleteAccountsDateTimeInput);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(518, 301);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "AccountCleanup";
             this.Text = "Database Account Cleanup";
             ((System.ComponentModel.ISupportInitialize)(this.deleteAccountsDateTimeInput)).EndInit();

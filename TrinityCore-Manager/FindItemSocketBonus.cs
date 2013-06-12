@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 
-namespace TrinityCore_Manager_v3
+namespace TrinityCore_Manager
 {
     public partial class FindItemSocketBonus : DevComponents.DotNetBar.Office2007Form
     {

@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class AddIPBan
     {
@@ -98,9 +98,12 @@
             this.Controls.Add(this.ipAddressBanInput);
             this.Controls.Add(this.ipAddressBanLabel);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AddIPBan";
             this.Text = "Add IP Ban";
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).EndInit();

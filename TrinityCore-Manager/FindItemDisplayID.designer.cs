@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class FindItemDisplayID
     {
@@ -126,7 +126,7 @@
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             // 
-            // ItemFindDisplayID
+            // FindItemDisplayID
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,10 +139,13 @@
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.itemFindDisplayIdTextBox);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
-            this.Name = "ItemFindDisplayID";
+            this.MinimumSize = new System.Drawing.Size(382, 560);
+            this.Name = "FindItemDisplayID";
             this.Text = "Find Item Display ID";
             this.ResumeLayout(false);
 

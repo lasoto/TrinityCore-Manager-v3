@@ -1,4 +1,4 @@
-﻿namespace TrinityCore_Manager_v3
+﻿namespace TrinityCore_Manager
 {
     partial class CreateItem
     {
@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateItem));
             this.itemDetailsWizardPage = new DevComponents.DotNetBar.WizardPage();
+            this.itemSubClassIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemDetailsLink = new System.Windows.Forms.LinkLabel();
             this.itemFlagsExtraComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.eitherFactionComboItem = new DevComponents.Editors.ComboItem();
             this.hordeComboItem = new DevComponents.Editors.ComboItem();
             this.allianceComboItem = new DevComponents.Editors.ComboItem();
             this.extendedCostComboItem = new DevComponents.Editors.ComboItem();
-            this.comboItem5 = new DevComponents.Editors.ComboItem();
             this.rollDisabledComboItem = new DevComponents.Editors.ComboItem();
             this.itemFlagsExtraLabel = new DevComponents.DotNetBar.LabelX();
             this.itemFlagsComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -62,8 +61,6 @@
             this.millableComboItem = new DevComponents.Editors.ComboItem();
             this.bindOnPickupComboItem = new DevComponents.Editors.ComboItem();
             this.itemFlagsLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemSubClassComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.nyiComboItem = new DevComponents.Editors.ComboItem();
             this.itemSubClassLabel = new DevComponents.DotNetBar.LabelX();
             this.itemClassComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.consumableComboItem = new DevComponents.Editors.ComboItem();
@@ -84,7 +81,6 @@
             this.miscellaneousComboItem = new DevComponents.Editors.ComboItem();
             this.glyphComboItem = new DevComponents.Editors.ComboItem();
             this.itemClassLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemDetailsInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.itemEntryIdIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemDisplayIdIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemQualityComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -96,7 +92,7 @@
             this.legendaryComboItem = new DevComponents.Editors.ComboItem();
             this.artifactComboItem = new DevComponents.Editors.ComboItem();
             this.bindToAccountComboItem = new DevComponents.Editors.ComboItem();
-            this.itemQuoteTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.itemDescriptionTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.itemNameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.findDisplayIdButton = new DevComponents.DotNetBar.ButtonX();
             this.itemEntryIdLabel = new DevComponents.DotNetBar.LabelX();
@@ -112,7 +108,7 @@
             this.itemCreatorMiniMssgLabel = new System.Windows.Forms.Label();
             this.itemCreatorWizard = new DevComponents.DotNetBar.Wizard();
             this.itemTypeWizardPage = new DevComponents.DotNetBar.WizardPage();
-            this.sellPriceCopperIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.sellCopperIntegerInput = new DevComponents.Editors.IntegerInput();
             this.containerSlotsIntegerInput = new DevComponents.Editors.IntegerInput();
             this.stackableIntegerInput = new DevComponents.Editors.IntegerInput();
             this.maxCountIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -156,7 +152,6 @@
             this.quiverInvTypeComboItem = new DevComponents.Editors.ComboItem();
             this.relicInvTypeComboItem = new DevComponents.Editors.ComboItem();
             this.goldLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemTypeInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.buyCopperIntegerInput = new DevComponents.Editors.IntegerInput();
             this.sellSilverIntegerInput = new DevComponents.Editors.IntegerInput();
             this.buySilverIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -203,6 +198,8 @@
             this.ammoTypeLabel = new DevComponents.DotNetBar.LabelX();
             this.itemSheathLabel = new DevComponents.DotNetBar.LabelX();
             this.itemRequirementsWizardPage = new DevComponents.DotNetBar.WizardPage();
+            this.findFactionButton = new DevComponents.DotNetBar.ButtonX();
+            this.reqRepFactionIntegerInput = new DevComponents.Editors.IntegerInput();
             this.reqDisenchantSkillIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemReqDisenchantSkillLabel = new DevComponents.DotNetBar.LabelX();
             this.reqHonorRankIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -264,82 +261,6 @@
             this.skinningComboItem = new DevComponents.Editors.ComboItem();
             this.jewelcraftingComboItem = new DevComponents.Editors.ComboItem();
             this.inscriptionComboItem = new DevComponents.Editors.ComboItem();
-            this.reqReputationComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.selectFactionComboItem = new DevComponents.Editors.ComboItem();
-            this.allianceVanguardComboItem = new DevComponents.Editors.ComboItem();
-            this.argentCrusadeComboItem = new DevComponents.Editors.ComboItem();
-            this.argentDawnComboItem = new DevComponents.Editors.ComboItem();
-            this.ashtoungeDeathswornComboItem = new DevComponents.Editors.ComboItem();
-            this.bloodsailBuccaneersComboItem = new DevComponents.Editors.ComboItem();
-            this.bootyBayComboItem = new DevComponents.Editors.ComboItem();
-            this.broodOfNozdormuComboItem = new DevComponents.Editors.ComboItem();
-            this.cenarionCircleComboItem = new DevComponents.Editors.ComboItem();
-            this.cenarionExpeditionComboItem = new DevComponents.Editors.ComboItem();
-            this.darkmoonFaireComboItem = new DevComponents.Editors.ComboItem();
-            this.darkspearTrollsComboItem = new DevComponents.Editors.ComboItem();
-            this.darnassusComboItem = new DevComponents.Editors.ComboItem();
-            this.everlookComboItem = new DevComponents.Editors.ComboItem();
-            this.exodarComboItem = new DevComponents.Editors.ComboItem();
-            this.explorersLeagueComboItem = new DevComponents.Editors.ComboItem();
-            this.frenzyheartTribeComboItem = new DevComponents.Editors.ComboItem();
-            this.frostwolfClanComboItem = new DevComponents.Editors.ComboItem();
-            this.gadgetzanComboItem = new DevComponents.Editors.ComboItem();
-            this.gelkisClanCentaurComboItem = new DevComponents.Editors.ComboItem();
-            this.gnomereganExilesComboItem = new DevComponents.Editors.ComboItem();
-            this.honorHoldComboItem = new DevComponents.Editors.ComboItem();
-            this.hordeExpeditionComboItem = new DevComponents.Editors.ComboItem();
-            this.hydraxianWaterlordComboItem = new DevComponents.Editors.ComboItem();
-            this.ironforgeComboItem = new DevComponents.Editors.ComboItem();
-            this.keepersOfTimeComboItem = new DevComponents.Editors.ComboItem();
-            this.kirinTorComboItem = new DevComponents.Editors.ComboItem();
-            this.knightsOfTheEbonBladeComboItem = new DevComponents.Editors.ComboItem();
-            this.kurenaiComboItem = new DevComponents.Editors.ComboItem();
-            this.lowerCityComboItem = new DevComponents.Editors.ComboItem();
-            this.magramClanCentaurComboItem = new DevComponents.Editors.ComboItem();
-            this.netherwingComboItem = new DevComponents.Editors.ComboItem();
-            this.ogrilaComboItem = new DevComponents.Editors.ComboItem();
-            this.orgrimmarComboItem = new DevComponents.Editors.ComboItem();
-            this.ratchetComboItem = new DevComponents.Editors.ComboItem();
-            this.ravenholdtComboItem = new DevComponents.Editors.ComboItem();
-            this.shatariSkyguarComboItem = new DevComponents.Editors.ComboItem();
-            this.shatteredSunOffensiveComboItem = new DevComponents.Editors.ComboItem();
-            this.shendralarComboItem = new DevComponents.Editors.ComboItem();
-            this.silvermoonCityComboItem = new DevComponents.Editors.ComboItem();
-            this.silverwingSentinelsComboItem = new DevComponents.Editors.ComboItem();
-            this.sporeggarComboItem = new DevComponents.Editors.ComboItem();
-            this.stormpikeGuardComboItem = new DevComponents.Editors.ComboItem();
-            this.stormwindComboItem = new DevComponents.Editors.ComboItem();
-            this.syndicateComboItem = new DevComponents.Editors.ComboItem();
-            this.theAldorComboItem = new DevComponents.Editors.ComboItem();
-            this.theConsortiumComboItem = new DevComponents.Editors.ComboItem();
-            this.theDefilersComboItem = new DevComponents.Editors.ComboItem();
-            this.theFrostbornComboItem = new DevComponents.Editors.ComboItem();
-            this.theHandOfVengeanceComboItem = new DevComponents.Editors.ComboItem();
-            this.theKaluakComboItem = new DevComponents.Editors.ComboItem();
-            this.theLeagueOfArathorComboItem = new DevComponents.Editors.ComboItem();
-            this.theMagharComboItem = new DevComponents.Editors.ComboItem();
-            this.theOraclesComboItem = new DevComponents.Editors.ComboItem();
-            this.theScaleOfTheSandsComboItem = new DevComponents.Editors.ComboItem();
-            this.theScryersComboItem = new DevComponents.Editors.ComboItem();
-            this.theShatarComboItem = new DevComponents.Editors.ComboItem();
-            this.theSilverCovenantComboItem = new DevComponents.Editors.ComboItem();
-            this.theSonsOfHodirComboItem = new DevComponents.Editors.ComboItem();
-            this.theSunreaversComboItem = new DevComponents.Editors.ComboItem();
-            this.theTaunkaComboItem = new DevComponents.Editors.ComboItem();
-            this.theVioletEyeComboItem = new DevComponents.Editors.ComboItem();
-            this.theWyrmrestAccordComboItem = new DevComponents.Editors.ComboItem();
-            this.thoriumBrotherhoodComboItem = new DevComponents.Editors.ComboItem();
-            this.thrallmarComboItem = new DevComponents.Editors.ComboItem();
-            this.thunderBluffComboItem = new DevComponents.Editors.ComboItem();
-            this.timbermawHoldComboItem = new DevComponents.Editors.ComboItem();
-            this.tranquillienComboItem = new DevComponents.Editors.ComboItem();
-            this.undercityComboItem = new DevComponents.Editors.ComboItem();
-            this.valianceExpeditionComboItem = new DevComponents.Editors.ComboItem();
-            this.warsongOffensiveComboItem = new DevComponents.Editors.ComboItem();
-            this.warsongOutridersComboItem = new DevComponents.Editors.ComboItem();
-            this.wildhammerClanComboItem = new DevComponents.Editors.ComboItem();
-            this.wintersaberTrainersComboItem = new DevComponents.Editors.ComboItem();
-            this.zandalarTribeComboItem = new DevComponents.Editors.ComboItem();
             this.itemSkillReqLabel = new DevComponents.DotNetBar.LabelX();
             this.allowedRaceLabel = new DevComponents.DotNetBar.LabelX();
             this.allowedClassLabel = new DevComponents.DotNetBar.LabelX();
@@ -377,57 +298,11 @@
             this.itemDamageMinLabel = new DevComponents.DotNetBar.LabelX();
             this.itemStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemStatsGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
             this.addStatsButton = new DevComponents.DotNetBar.ButtonX();
-            this.statTypeComboBox1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.healthComboItem = new DevComponents.Editors.ComboItem();
-            this.agilityComboItem = new DevComponents.Editors.ComboItem();
-            this.strengthComboItem = new DevComponents.Editors.ComboItem();
-            this.intellectComboItem = new DevComponents.Editors.ComboItem();
-            this.spiritComboItem = new DevComponents.Editors.ComboItem();
-            this.staminaComboItem = new DevComponents.Editors.ComboItem();
-            this.defenseComboItem = new DevComponents.Editors.ComboItem();
-            this.dodgeComboItem = new DevComponents.Editors.ComboItem();
-            this.parryComboItem = new DevComponents.Editors.ComboItem();
-            this.blockComboItem = new DevComponents.Editors.ComboItem();
-            this.expertiseComboItem = new DevComponents.Editors.ComboItem();
-            this.resilienceComboItem = new DevComponents.Editors.ComboItem();
-            this.healingBonusComboItem = new DevComponents.Editors.ComboItem();
-            this.damageBonusComboItem = new DevComponents.Editors.ComboItem();
-            this.manaperfivesecComboItem = new DevComponents.Editors.ComboItem();
-            this.blockValueComboItem = new DevComponents.Editors.ComboItem();
-            this.healthRegenComboItem = new DevComponents.Editors.ComboItem();
-            this.spellPenetrationComboItem = new DevComponents.Editors.ComboItem();
-            this.armorPenetrationComboItem = new DevComponents.Editors.ComboItem();
-            this.attackPowerComboItem = new DevComponents.Editors.ComboItem();
-            this.hitRatingComboItem = new DevComponents.Editors.ComboItem();
-            this.hitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.hitCritRatingComboItem = new DevComponents.Editors.ComboItem();
-            this.hitCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.hitHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHitComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeCritComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedAttackPwrComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHitComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedCritComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHitComboItem = new DevComponents.Editors.ComboItem();
-            this.spellCritComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.spellCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.spellPowerComboItem = new DevComponents.Editors.ComboItem();
-            this.feralAttackPwrComboItem = new DevComponents.Editors.ComboItem();
-            this.itemStatTypeLabel1 = new DevComponents.DotNetBar.LabelX();
-            this.itemStatValueLabel1 = new DevComponents.DotNetBar.LabelX();
-            this.itemStatsValueIntegerInput1 = new DevComponents.Editors.IntegerInput();
-            this.itemScalingStatsValueIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.scalingStatValueIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemScalingStatsValueLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemScalingStatDistributionIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.scalingStatDistributionIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemScalingStatDistLabel = new DevComponents.DotNetBar.LabelX();
             this.itemStatsInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.resistsWizardPage = new DevComponents.DotNetBar.WizardPage();
@@ -477,7 +352,7 @@
             this.itemSpellPpmRateLabel = new DevComponents.DotNetBar.LabelX();
             this.spellChargesIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemSpellChargesLabel = new DevComponents.DotNetBar.LabelX();
-            this.triggerComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.spellTriggerComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.onUseSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
             this.onEquipSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
             this.chanceOnHitSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
@@ -500,7 +375,7 @@
             this.itemOtherHolidayIdLabel = new DevComponents.DotNetBar.LabelX();
             this.limitCategoryIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemOtherItemLimitCategoryLabel = new DevComponents.DotNetBar.LabelX();
-            this.maxMoneLootIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.maxMoneyLootIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemOtherMaxMoneyLootLabel = new DevComponents.DotNetBar.LabelX();
             this.minMoneyLootIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemOtherMinMoneyLootLabel = new DevComponents.DotNetBar.LabelX();
@@ -596,7 +471,7 @@
             this.valentinePageMatComboItem = new DevComponents.Editors.ComboItem();
             this.illidanPageMatComboItem = new DevComponents.Editors.ComboItem();
             this.itemOtherPageMatLabel = new DevComponents.DotNetBar.LabelX();
-            this.langIdComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.languageIdComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.universalComboItem = new DevComponents.Editors.ComboItem();
             this.orcishComboItem = new DevComponents.Editors.ComboItem();
             this.darnassianComboItem = new DevComponents.Editors.ComboItem();
@@ -617,7 +492,7 @@
             this.goblinBinaryComboItem = new DevComponents.Editors.ComboItem();
             this.addonComboItem = new DevComponents.Editors.ComboItem();
             this.itemOtherLangIdLabel = new DevComponents.DotNetBar.LabelX();
-            this.pageTxtIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.pageTextIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemOtherPageTxtLabel = new DevComponents.DotNetBar.LabelX();
             this.materialComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.consumableMatComboItem = new DevComponents.Editors.ComboItem();
@@ -653,15 +528,16 @@
             this.eightagilityComboItem = new DevComponents.Editors.ComboItem();
             this.eightStrengthComboItem = new DevComponents.Editors.ComboItem();
             this.socketBonusNoneComboItem = new DevComponents.Editors.ComboItem();
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager();
             this.itemCreatorSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.itemDetailsWizardPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemSubClassIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemDisplayIdIntegerInput)).BeginInit();
             this.createWeaponWizardPage.SuspendLayout();
             this.itemCreatorWizard.SuspendLayout();
             this.itemTypeWizardPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sellPriceCopperIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellCopperIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.containerSlotsIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackableIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCountIntegerInput)).BeginInit();
@@ -680,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.blockIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durabilityIntegerInput)).BeginInit();
             this.itemRequirementsWizardPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reqRepFactionIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqDisenchantSkillIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqHonorRankIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqSpellIntegerInput)).BeginInit();
@@ -697,9 +574,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.damageMinIntegerInput)).BeginInit();
             this.itemStatsWizardPage.SuspendLayout();
             this.itemStatsGroupPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemStatsValueIntegerInput1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemScalingStatsValueIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemScalingStatDistributionIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalingStatValueIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalingStatDistributionIntegerInput)).BeginInit();
             this.resistsWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resistsArcaneIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resistsFrostIntegerInput)).BeginInit();
@@ -725,7 +601,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WDBVerifiedIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.holidayIdIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitCategoryIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxMoneLootIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxMoneyLootIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minMoneyLootIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomArmorDmgModIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomSuffixIntegerInput)).BeginInit();
@@ -736,7 +612,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mapIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pageTxtIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pageTextIntegerInput)).BeginInit();
             this.wizardPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -747,20 +623,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemDetailsWizardPage.AntiAlias = false;
             this.itemDetailsWizardPage.BackColor = System.Drawing.Color.Transparent;
+            this.itemDetailsWizardPage.Controls.Add(this.itemSubClassIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemDetailsLink);
             this.itemDetailsWizardPage.Controls.Add(this.itemFlagsExtraComboBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemFlagsExtraLabel);
             this.itemDetailsWizardPage.Controls.Add(this.itemFlagsComboBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemFlagsLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemSubClassComboBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemSubClassLabel);
             this.itemDetailsWizardPage.Controls.Add(this.itemClassComboBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemClassLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemDetailsInfoLabel);
             this.itemDetailsWizardPage.Controls.Add(this.itemEntryIdIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemDisplayIdIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemQualityComboBox);
-            this.itemDetailsWizardPage.Controls.Add(this.itemQuoteTextBox);
+            this.itemDetailsWizardPage.Controls.Add(this.itemDescriptionTextBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemNameTextBox);
             this.itemDetailsWizardPage.Controls.Add(this.findDisplayIdButton);
             this.itemDetailsWizardPage.Controls.Add(this.itemEntryIdLabel);
@@ -787,6 +662,21 @@
             this.itemDetailsWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemDetailsWizardPage.TabIndex = 0;
             // 
+            // itemSubClassIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.itemSubClassIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.itemSubClassIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemSubClassIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.itemSubClassIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.itemSubClassIntegerInput.Location = new System.Drawing.Point(441, 110);
+            this.itemSubClassIntegerInput.Name = "itemSubClassIntegerInput";
+            this.itemSubClassIntegerInput.ShowUpDown = true;
+            this.itemSubClassIntegerInput.Size = new System.Drawing.Size(300, 20);
+            this.itemSubClassIntegerInput.TabIndex = 19;
+            // 
             // itemDetailsLink
             // 
             this.itemDetailsLink.AutoSize = true;
@@ -800,11 +690,13 @@
             this.itemDetailsLink.Tag = "";
             this.itemDetailsLink.Text = "For more info click here.";
             this.itemDetailsLink.VisitedLinkColor = System.Drawing.Color.Chartreuse;
+            this.itemDetailsLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.itemDetailsLink_LinkClicked);
             // 
             // itemFlagsExtraComboBox
             // 
             this.itemFlagsExtraComboBox.DisplayMember = "Text";
             this.itemFlagsExtraComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.itemFlagsExtraComboBox.ForeColor = System.Drawing.Color.White;
             this.itemFlagsExtraComboBox.FormattingEnabled = true;
             this.itemFlagsExtraComboBox.ItemHeight = 14;
             this.itemFlagsExtraComboBox.Items.AddRange(new object[] {
@@ -812,13 +704,12 @@
             this.hordeComboItem,
             this.allianceComboItem,
             this.extendedCostComboItem,
-            this.comboItem5,
             this.rollDisabledComboItem});
             this.itemFlagsExtraComboBox.Location = new System.Drawing.Point(441, 186);
             this.itemFlagsExtraComboBox.Name = "itemFlagsExtraComboBox";
             this.itemFlagsExtraComboBox.Size = new System.Drawing.Size(300, 20);
             this.itemFlagsExtraComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemFlagsExtraComboBox.TabIndex = 17;
+            this.itemFlagsExtraComboBox.TabIndex = 6;
             // 
             // eitherFactionComboItem
             // 
@@ -835,10 +726,6 @@
             // extendedCostComboItem
             // 
             this.extendedCostComboItem.Text = "When item uses ExtendedCost in npc_vendor, gold is also required";
-            // 
-            // comboItem5
-            // 
-            this.comboItem5.Text = "comboItem5";
             // 
             // rollDisabledComboItem
             // 
@@ -861,6 +748,7 @@
             // 
             this.itemFlagsComboBox.DisplayMember = "Text";
             this.itemFlagsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.itemFlagsComboBox.ForeColor = System.Drawing.Color.White;
             this.itemFlagsComboBox.FormattingEnabled = true;
             this.itemFlagsComboBox.ItemHeight = 14;
             this.itemFlagsComboBox.Items.AddRange(new object[] {
@@ -888,7 +776,7 @@
             this.itemFlagsComboBox.Name = "itemFlagsComboBox";
             this.itemFlagsComboBox.Size = new System.Drawing.Size(300, 20);
             this.itemFlagsComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemFlagsComboBox.TabIndex = 15;
+            this.itemFlagsComboBox.TabIndex = 5;
             // 
             // soulboundComboItem
             // 
@@ -983,25 +871,6 @@
             this.itemFlagsLabel.TabIndex = 14;
             this.itemFlagsLabel.Text = "Flags:";
             // 
-            // itemSubClassComboBox
-            // 
-            this.itemSubClassComboBox.DisplayMember = "Text";
-            this.itemSubClassComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.itemSubClassComboBox.FormattingEnabled = true;
-            this.itemSubClassComboBox.ItemHeight = 14;
-            this.itemSubClassComboBox.Items.AddRange(new object[] {
-            this.nyiComboItem});
-            this.itemSubClassComboBox.Location = new System.Drawing.Point(441, 110);
-            this.itemSubClassComboBox.Name = "itemSubClassComboBox";
-            this.itemSubClassComboBox.Size = new System.Drawing.Size(300, 20);
-            this.itemSubClassComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemSubClassComboBox.TabIndex = 13;
-            // 
-            // nyiComboItem
-            // 
-            this.nyiComboItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.nyiComboItem.Text = "NOT YET IMPLEMENTED";
-            // 
             // itemSubClassLabel
             // 
             // 
@@ -1019,6 +888,7 @@
             // 
             this.itemClassComboBox.DisplayMember = "Text";
             this.itemClassComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.itemClassComboBox.ForeColor = System.Drawing.Color.White;
             this.itemClassComboBox.FormattingEnabled = true;
             this.itemClassComboBox.ItemHeight = 14;
             this.itemClassComboBox.Items.AddRange(new object[] {
@@ -1043,7 +913,7 @@
             this.itemClassComboBox.Name = "itemClassComboBox";
             this.itemClassComboBox.Size = new System.Drawing.Size(300, 20);
             this.itemClassComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemClassComboBox.TabIndex = 11;
+            this.itemClassComboBox.TabIndex = 3;
             // 
             // consumableComboItem
             // 
@@ -1064,6 +934,7 @@
             // armorComboItem
             // 
             this.armorComboItem.Text = "Armor";
+            this.armorComboItem.Value = "";
             // 
             // reagentComboItem
             // 
@@ -1106,7 +977,7 @@
             // permanentOBSOLETEComboItem
             // 
             this.permanentOBSOLETEComboItem.ForeColor = System.Drawing.Color.Tomato;
-            this.permanentOBSOLETEComboItem.Text = "Permanent";
+            this.permanentOBSOLETEComboItem.Text = "Permanent (OBSOLETE)";
             // 
             // miscellaneousComboItem
             // 
@@ -1129,18 +1000,6 @@
             this.itemClassLabel.TabIndex = 10;
             this.itemClassLabel.Text = "Class:";
             // 
-            // itemDetailsInfoLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemDetailsInfoLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDetailsInfoLabel.Location = new System.Drawing.Point(282, 379);
-            this.itemDetailsInfoLabel.Name = "itemDetailsInfoLabel";
-            this.itemDetailsInfoLabel.Size = new System.Drawing.Size(632, 139);
-            this.itemDetailsInfoLabel.TabIndex = 0;
-            this.itemDetailsInfoLabel.Text = resources.GetString("itemDetailsInfoLabel.Text");
-            // 
             // itemEntryIdIntegerInput
             // 
             // 
@@ -1154,7 +1013,7 @@
             this.itemEntryIdIntegerInput.Name = "itemEntryIdIntegerInput";
             this.itemEntryIdIntegerInput.ShowUpDown = true;
             this.itemEntryIdIntegerInput.Size = new System.Drawing.Size(300, 20);
-            this.itemEntryIdIntegerInput.TabIndex = 5;
+            this.itemEntryIdIntegerInput.TabIndex = 9;
             // 
             // itemDisplayIdIntegerInput
             // 
@@ -1169,7 +1028,7 @@
             this.itemDisplayIdIntegerInput.Name = "itemDisplayIdIntegerInput";
             this.itemDisplayIdIntegerInput.ShowUpDown = true;
             this.itemDisplayIdIntegerInput.Size = new System.Drawing.Size(300, 20);
-            this.itemDisplayIdIntegerInput.TabIndex = 4;
+            this.itemDisplayIdIntegerInput.TabIndex = 8;
             // 
             // itemQualityComboBox
             // 
@@ -1191,7 +1050,7 @@
             this.itemQualityComboBox.Name = "itemQualityComboBox";
             this.itemQualityComboBox.Size = new System.Drawing.Size(300, 20);
             this.itemQualityComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemQualityComboBox.TabIndex = 9;
+            this.itemQualityComboBox.TabIndex = 7;
             // 
             // poorComboItem
             // 
@@ -1233,19 +1092,19 @@
             this.bindToAccountComboItem.ForeColor = System.Drawing.Color.Gold;
             this.bindToAccountComboItem.Text = "Bind to Account";
             // 
-            // itemQuoteTextBox
+            // itemDescriptionTextBox
             // 
-            this.itemQuoteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.itemDescriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.itemQuoteTextBox.Border.Class = "TextBoxBorder";
-            this.itemQuoteTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemQuoteTextBox.ForeColor = System.Drawing.Color.White;
-            this.itemQuoteTextBox.Location = new System.Drawing.Point(441, 38);
-            this.itemQuoteTextBox.Name = "itemQuoteTextBox";
-            this.itemQuoteTextBox.Size = new System.Drawing.Size(300, 20);
-            this.itemQuoteTextBox.TabIndex = 2;
+            this.itemDescriptionTextBox.Border.Class = "TextBoxBorder";
+            this.itemDescriptionTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemDescriptionTextBox.ForeColor = System.Drawing.Color.White;
+            this.itemDescriptionTextBox.Location = new System.Drawing.Point(441, 38);
+            this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
+            this.itemDescriptionTextBox.Size = new System.Drawing.Size(300, 20);
+            this.itemDescriptionTextBox.TabIndex = 2;
             // 
             // itemNameTextBox
             // 
@@ -1259,6 +1118,7 @@
             this.itemNameTextBox.Location = new System.Drawing.Point(441, 3);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(300, 20);
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.itemNameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "TEST TOOLTIP", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.itemNameTextBox.TabIndex = 1;
             // 
             // findDisplayIdButton
@@ -1266,12 +1126,13 @@
             this.findDisplayIdButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findDisplayIdButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.findDisplayIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.findDisplayIdButton.Location = new System.Drawing.Point(533, 326);
+            this.findDisplayIdButton.Location = new System.Drawing.Point(533, 393);
             this.findDisplayIdButton.Name = "findDisplayIdButton";
             this.findDisplayIdButton.Size = new System.Drawing.Size(109, 47);
             this.findDisplayIdButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findDisplayIdButton.TabIndex = 6;
+            this.findDisplayIdButton.TabIndex = 10;
             this.findDisplayIdButton.Text = "Find Item Display ID";
+            this.findDisplayIdButton.Click += new System.EventHandler(this.findDisplayIdButton_Click);
             // 
             // itemEntryIdLabel
             // 
@@ -1454,7 +1315,7 @@
             this.itemCreatorWizard.FooterStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemCreatorWizard.FooterStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.itemCreatorWizard.FooterStyle.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.itemCreatorWizard.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.itemCreatorWizard.ForeColor = System.Drawing.Color.White;
             this.itemCreatorWizard.HeaderCaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.itemCreatorWizard.HeaderDescriptionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.itemCreatorWizard.HeaderDescriptionIndent = 16;
@@ -1499,7 +1360,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemTypeWizardPage.AntiAlias = false;
             this.itemTypeWizardPage.BackColor = System.Drawing.Color.Transparent;
-            this.itemTypeWizardPage.Controls.Add(this.sellPriceCopperIntegerInput);
+            this.itemTypeWizardPage.Controls.Add(this.sellCopperIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.containerSlotsIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.stackableIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.maxCountIntegerInput);
@@ -1514,7 +1375,6 @@
             this.itemTypeWizardPage.Controls.Add(this.silverLabel);
             this.itemTypeWizardPage.Controls.Add(this.inventoryTypeComboBox);
             this.itemTypeWizardPage.Controls.Add(this.goldLabel);
-            this.itemTypeWizardPage.Controls.Add(this.itemTypeInfoLabel);
             this.itemTypeWizardPage.Controls.Add(this.buyCopperIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.sellSilverIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.buySilverIntegerInput);
@@ -1541,19 +1401,20 @@
             this.itemTypeWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemTypeWizardPage.TabIndex = 0;
             // 
-            // sellPriceCopperIntegerInput
+            // sellCopperIntegerInput
             // 
             // 
             // 
             // 
-            this.sellPriceCopperIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.sellPriceCopperIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.sellPriceCopperIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.sellPriceCopperIntegerInput.Location = new System.Drawing.Point(705, 71);
-            this.sellPriceCopperIntegerInput.Name = "sellPriceCopperIntegerInput";
-            this.sellPriceCopperIntegerInput.ShowUpDown = true;
-            this.sellPriceCopperIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.sellPriceCopperIntegerInput.TabIndex = 31;
+            this.sellCopperIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.sellCopperIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.sellCopperIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.sellCopperIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.sellCopperIntegerInput.Location = new System.Drawing.Point(711, 171);
+            this.sellCopperIntegerInput.Name = "sellCopperIntegerInput";
+            this.sellCopperIntegerInput.ShowUpDown = true;
+            this.sellCopperIntegerInput.Size = new System.Drawing.Size(111, 20);
+            this.sellCopperIntegerInput.TabIndex = 6;
             // 
             // containerSlotsIntegerInput
             // 
@@ -1563,11 +1424,12 @@
             this.containerSlotsIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.containerSlotsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.containerSlotsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.containerSlotsIntegerInput.Location = new System.Drawing.Point(657, 155);
+            this.containerSlotsIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.containerSlotsIntegerInput.Location = new System.Drawing.Point(664, 322);
             this.containerSlotsIntegerInput.Name = "containerSlotsIntegerInput";
             this.containerSlotsIntegerInput.ShowUpDown = true;
             this.containerSlotsIntegerInput.Size = new System.Drawing.Size(148, 20);
-            this.containerSlotsIntegerInput.TabIndex = 30;
+            this.containerSlotsIntegerInput.TabIndex = 10;
             // 
             // stackableIntegerInput
             // 
@@ -1577,11 +1439,12 @@
             this.stackableIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.stackableIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.stackableIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.stackableIntegerInput.Location = new System.Drawing.Point(374, 121);
+            this.stackableIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.stackableIntegerInput.Location = new System.Drawing.Point(381, 257);
             this.stackableIntegerInput.Name = "stackableIntegerInput";
             this.stackableIntegerInput.ShowUpDown = true;
             this.stackableIntegerInput.Size = new System.Drawing.Size(148, 20);
-            this.stackableIntegerInput.TabIndex = 29;
+            this.stackableIntegerInput.TabIndex = 7;
             // 
             // maxCountIntegerInput
             // 
@@ -1591,11 +1454,12 @@
             this.maxCountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.maxCountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.maxCountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.maxCountIntegerInput.Location = new System.Drawing.Point(374, 155);
+            this.maxCountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.maxCountIntegerInput.Location = new System.Drawing.Point(381, 322);
             this.maxCountIntegerInput.Name = "maxCountIntegerInput";
             this.maxCountIntegerInput.ShowUpDown = true;
             this.maxCountIntegerInput.Size = new System.Drawing.Size(148, 20);
-            this.maxCountIntegerInput.TabIndex = 28;
+            this.maxCountIntegerInput.TabIndex = 9;
             // 
             // statsCountIntegerInput
             // 
@@ -1605,11 +1469,12 @@
             this.statsCountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.statsCountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.statsCountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.statsCountIntegerInput.Location = new System.Drawing.Point(657, 184);
+            this.statsCountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.statsCountIntegerInput.Location = new System.Drawing.Point(664, 396);
             this.statsCountIntegerInput.Name = "statsCountIntegerInput";
             this.statsCountIntegerInput.ShowUpDown = true;
             this.statsCountIntegerInput.Size = new System.Drawing.Size(148, 20);
-            this.statsCountIntegerInput.TabIndex = 27;
+            this.statsCountIntegerInput.TabIndex = 12;
             // 
             // itemStatsCountLabel
             // 
@@ -1618,7 +1483,7 @@
             // 
             this.itemStatsCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemStatsCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemStatsCountLabel.Location = new System.Drawing.Point(567, 181);
+            this.itemStatsCountLabel.Location = new System.Drawing.Point(574, 393);
             this.itemStatsCountLabel.Name = "itemStatsCountLabel";
             this.itemStatsCountLabel.Size = new System.Drawing.Size(88, 23);
             this.itemStatsCountLabel.TabIndex = 26;
@@ -1632,11 +1497,12 @@
             this.buyCountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.buyCountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.buyCountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.buyCountIntegerInput.Location = new System.Drawing.Point(374, 184);
+            this.buyCountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.buyCountIntegerInput.Location = new System.Drawing.Point(381, 396);
             this.buyCountIntegerInput.Name = "buyCountIntegerInput";
             this.buyCountIntegerInput.ShowUpDown = true;
             this.buyCountIntegerInput.Size = new System.Drawing.Size(148, 20);
-            this.buyCountIntegerInput.TabIndex = 25;
+            this.buyCountIntegerInput.TabIndex = 11;
             // 
             // itemBuyCountLabel
             // 
@@ -1645,7 +1511,7 @@
             // 
             this.itemBuyCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemBuyCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemBuyCountLabel.Location = new System.Drawing.Point(286, 181);
+            this.itemBuyCountLabel.Location = new System.Drawing.Point(293, 393);
             this.itemBuyCountLabel.Name = "itemBuyCountLabel";
             this.itemBuyCountLabel.Size = new System.Drawing.Size(82, 23);
             this.itemBuyCountLabel.TabIndex = 24;
@@ -1658,7 +1524,7 @@
             // 
             this.itemContainerSlotsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemContainerSlotsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemContainerSlotsLabel.Location = new System.Drawing.Point(545, 149);
+            this.itemContainerSlotsLabel.Location = new System.Drawing.Point(552, 316);
             this.itemContainerSlotsLabel.Name = "itemContainerSlotsLabel";
             this.itemContainerSlotsLabel.Size = new System.Drawing.Size(110, 23);
             this.itemContainerSlotsLabel.TabIndex = 22;
@@ -1671,7 +1537,7 @@
             // 
             this.stackableLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.stackableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.stackableLabel.Location = new System.Drawing.Point(293, 118);
+            this.stackableLabel.Location = new System.Drawing.Point(300, 254);
             this.stackableLabel.Name = "stackableLabel";
             this.stackableLabel.Size = new System.Drawing.Size(75, 23);
             this.stackableLabel.TabIndex = 20;
@@ -1684,7 +1550,7 @@
             // 
             this.itemMaxCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemMaxCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemMaxCountLabel.Location = new System.Drawing.Point(286, 152);
+            this.itemMaxCountLabel.Location = new System.Drawing.Point(293, 319);
             this.itemMaxCountLabel.Name = "itemMaxCountLabel";
             this.itemMaxCountLabel.Size = new System.Drawing.Size(82, 23);
             this.itemMaxCountLabel.TabIndex = 18;
@@ -1697,7 +1563,7 @@
             // 
             this.copperLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.copperLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.copperLabel.Location = new System.Drawing.Point(726, 1);
+            this.copperLabel.Location = new System.Drawing.Point(732, 74);
             this.copperLabel.Name = "copperLabel";
             this.copperLabel.Size = new System.Drawing.Size(54, 24);
             this.copperLabel.TabIndex = 7;
@@ -1710,7 +1576,7 @@
             // 
             this.silverLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.silverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.silverLabel.Location = new System.Drawing.Point(552, 1);
+            this.silverLabel.Location = new System.Drawing.Point(558, 74);
             this.silverLabel.Name = "silverLabel";
             this.silverLabel.Size = new System.Drawing.Size(40, 24);
             this.silverLabel.TabIndex = 8;
@@ -1721,6 +1587,7 @@
             this.inventoryTypeComboBox.DisplayMember = "Text";
             this.inventoryTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.inventoryTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inventoryTypeComboBox.ForeColor = System.Drawing.Color.White;
             this.inventoryTypeComboBox.FormattingEnabled = true;
             this.inventoryTypeComboBox.ItemHeight = 14;
             this.inventoryTypeComboBox.Items.AddRange(new object[] {
@@ -1753,11 +1620,11 @@
             this.rangedRightInvTypeComboItem,
             this.quiverInvTypeComboItem,
             this.relicInvTypeComboItem});
-            this.inventoryTypeComboBox.Location = new System.Drawing.Point(657, 121);
+            this.inventoryTypeComboBox.Location = new System.Drawing.Point(664, 257);
             this.inventoryTypeComboBox.Name = "inventoryTypeComboBox";
             this.inventoryTypeComboBox.Size = new System.Drawing.Size(148, 20);
             this.inventoryTypeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.inventoryTypeComboBox.TabIndex = 2;
+            this.inventoryTypeComboBox.TabIndex = 8;
             // 
             // nonEquipableInvTypeComboItem
             // 
@@ -1882,24 +1749,11 @@
             // 
             this.goldLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.goldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.goldLabel.Location = new System.Drawing.Point(381, 1);
+            this.goldLabel.Location = new System.Drawing.Point(387, 74);
             this.goldLabel.Name = "goldLabel";
             this.goldLabel.Size = new System.Drawing.Size(40, 24);
             this.goldLabel.TabIndex = 9;
             this.goldLabel.Text = "Gold";
-            // 
-            // itemTypeInfoLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemTypeInfoLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemTypeInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.itemTypeInfoLabel.Location = new System.Drawing.Point(374, 371);
-            this.itemTypeInfoLabel.Name = "itemTypeInfoLabel";
-            this.itemTypeInfoLabel.Size = new System.Drawing.Size(431, 158);
-            this.itemTypeInfoLabel.TabIndex = 0;
-            this.itemTypeInfoLabel.Text = resources.GetString("itemTypeInfoLabel.Text");
             // 
             // buyCopperIntegerInput
             // 
@@ -1909,11 +1763,12 @@
             this.buyCopperIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.buyCopperIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.buyCopperIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.buyCopperIntegerInput.Location = new System.Drawing.Point(705, 31);
+            this.buyCopperIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.buyCopperIntegerInput.Location = new System.Drawing.Point(711, 104);
             this.buyCopperIntegerInput.Name = "buyCopperIntegerInput";
             this.buyCopperIntegerInput.ShowUpDown = true;
             this.buyCopperIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.buyCopperIntegerInput.TabIndex = 14;
+            this.buyCopperIntegerInput.TabIndex = 3;
             // 
             // sellSilverIntegerInput
             // 
@@ -1923,11 +1778,12 @@
             this.sellSilverIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.sellSilverIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.sellSilverIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.sellSilverIntegerInput.Location = new System.Drawing.Point(524, 71);
+            this.sellSilverIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.sellSilverIntegerInput.Location = new System.Drawing.Point(530, 171);
             this.sellSilverIntegerInput.Name = "sellSilverIntegerInput";
             this.sellSilverIntegerInput.ShowUpDown = true;
             this.sellSilverIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.sellSilverIntegerInput.TabIndex = 16;
+            this.sellSilverIntegerInput.TabIndex = 5;
             // 
             // buySilverIntegerInput
             // 
@@ -1937,11 +1793,12 @@
             this.buySilverIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.buySilverIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.buySilverIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.buySilverIntegerInput.Location = new System.Drawing.Point(524, 31);
+            this.buySilverIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.buySilverIntegerInput.Location = new System.Drawing.Point(530, 104);
             this.buySilverIntegerInput.Name = "buySilverIntegerInput";
             this.buySilverIntegerInput.ShowUpDown = true;
             this.buySilverIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.buySilverIntegerInput.TabIndex = 13;
+            this.buySilverIntegerInput.TabIndex = 2;
             // 
             // sellGoldIntegerInput
             // 
@@ -1951,11 +1808,12 @@
             this.sellGoldIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.sellGoldIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.sellGoldIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.sellGoldIntegerInput.Location = new System.Drawing.Point(351, 71);
+            this.sellGoldIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.sellGoldIntegerInput.Location = new System.Drawing.Point(357, 171);
             this.sellGoldIntegerInput.Name = "sellGoldIntegerInput";
             this.sellGoldIntegerInput.ShowUpDown = true;
             this.sellGoldIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.sellGoldIntegerInput.TabIndex = 15;
+            this.sellGoldIntegerInput.TabIndex = 4;
             // 
             // itemInventoryTypeLabel
             // 
@@ -1964,7 +1822,7 @@
             // 
             this.itemInventoryTypeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemInventoryTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemInventoryTypeLabel.Location = new System.Drawing.Point(545, 118);
+            this.itemInventoryTypeLabel.Location = new System.Drawing.Point(552, 254);
             this.itemInventoryTypeLabel.Name = "itemInventoryTypeLabel";
             this.itemInventoryTypeLabel.Size = new System.Drawing.Size(106, 23);
             this.itemInventoryTypeLabel.TabIndex = 0;
@@ -1978,11 +1836,12 @@
             this.buyGoldIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.buyGoldIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.buyGoldIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.buyGoldIntegerInput.Location = new System.Drawing.Point(351, 31);
+            this.buyGoldIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.buyGoldIntegerInput.Location = new System.Drawing.Point(357, 104);
             this.buyGoldIntegerInput.Name = "buyGoldIntegerInput";
             this.buyGoldIntegerInput.ShowUpDown = true;
             this.buyGoldIntegerInput.Size = new System.Drawing.Size(111, 20);
-            this.buyGoldIntegerInput.TabIndex = 12;
+            this.buyGoldIntegerInput.TabIndex = 1;
             // 
             // sellPriceLabel
             // 
@@ -1991,7 +1850,7 @@
             // 
             this.sellPriceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.sellPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.sellPriceLabel.Location = new System.Drawing.Point(274, 63);
+            this.sellPriceLabel.Location = new System.Drawing.Point(280, 163);
             this.sellPriceLabel.Name = "sellPriceLabel";
             this.sellPriceLabel.Size = new System.Drawing.Size(71, 28);
             this.sellPriceLabel.TabIndex = 10;
@@ -2004,7 +1863,7 @@
             // 
             this.buyPriceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.buyPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buyPriceLabel.Location = new System.Drawing.Point(274, 23);
+            this.buyPriceLabel.Location = new System.Drawing.Point(280, 96);
             this.buyPriceLabel.Name = "buyPriceLabel";
             this.buyPriceLabel.Size = new System.Drawing.Size(71, 28);
             this.buyPriceLabel.TabIndex = 11;
@@ -2063,8 +1922,9 @@
             this.findItemSetButton.Name = "findItemSetButton";
             this.findItemSetButton.Size = new System.Drawing.Size(75, 23);
             this.findItemSetButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findItemSetButton.TabIndex = 20;
+            this.findItemSetButton.TabIndex = 6;
             this.findItemSetButton.Text = "Find Item Set";
+            this.findItemSetButton.Click += new System.EventHandler(this.findItemSetButton_Click);
             // 
             // itemSetIntegerInput
             // 
@@ -2079,7 +1939,7 @@
             this.itemSetIntegerInput.Name = "itemSetIntegerInput";
             this.itemSetIntegerInput.ShowUpDown = true;
             this.itemSetIntegerInput.Size = new System.Drawing.Size(182, 20);
-            this.itemSetIntegerInput.TabIndex = 19;
+            this.itemSetIntegerInput.TabIndex = 5;
             // 
             // rangedModDamageIntegerInput
             // 
@@ -2089,11 +1949,12 @@
             this.rangedModDamageIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.rangedModDamageIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.rangedModDamageIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.rangedModDamageIntegerInput.ForeColor = System.Drawing.Color.White;
             this.rangedModDamageIntegerInput.Location = new System.Drawing.Point(547, 217);
             this.rangedModDamageIntegerInput.Name = "rangedModDamageIntegerInput";
             this.rangedModDamageIntegerInput.ShowUpDown = true;
             this.rangedModDamageIntegerInput.Size = new System.Drawing.Size(182, 20);
-            this.rangedModDamageIntegerInput.TabIndex = 18;
+            this.rangedModDamageIntegerInput.TabIndex = 10;
             // 
             // itemRangedModDamageLabel
             // 
@@ -2116,11 +1977,12 @@
             this.delayIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.delayIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.delayIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.delayIntegerInput.ForeColor = System.Drawing.Color.White;
             this.delayIntegerInput.Location = new System.Drawing.Point(359, 166);
             this.delayIntegerInput.Name = "delayIntegerInput";
             this.delayIntegerInput.ShowUpDown = true;
             this.delayIntegerInput.Size = new System.Drawing.Size(182, 20);
-            this.delayIntegerInput.TabIndex = 16;
+            this.delayIntegerInput.TabIndex = 8;
             // 
             // itemDelayLabel
             // 
@@ -2169,11 +2031,12 @@
             this.armorIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.armorIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.armorIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.armorIntegerInput.ForeColor = System.Drawing.Color.White;
             this.armorIntegerInput.Location = new System.Drawing.Point(661, 166);
             this.armorIntegerInput.Name = "armorIntegerInput";
             this.armorIntegerInput.ShowUpDown = true;
             this.armorIntegerInput.Size = new System.Drawing.Size(177, 20);
-            this.armorIntegerInput.TabIndex = 14;
+            this.armorIntegerInput.TabIndex = 9;
             // 
             // blockIntegerInput
             // 
@@ -2183,11 +2046,12 @@
             this.blockIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.blockIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.blockIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.blockIntegerInput.ForeColor = System.Drawing.Color.White;
             this.blockIntegerInput.Location = new System.Drawing.Point(661, 111);
             this.blockIntegerInput.Name = "blockIntegerInput";
             this.blockIntegerInput.ShowUpDown = true;
             this.blockIntegerInput.Size = new System.Drawing.Size(177, 20);
-            this.blockIntegerInput.TabIndex = 13;
+            this.blockIntegerInput.TabIndex = 7;
             // 
             // itemSetLabel
             // 
@@ -2207,6 +2071,7 @@
             this.bindsComboBox.DisplayMember = "Text";
             this.bindsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.bindsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bindsComboBox.ForeColor = System.Drawing.Color.White;
             this.bindsComboBox.FormattingEnabled = true;
             this.bindsComboBox.ItemHeight = 14;
             this.bindsComboBox.Items.AddRange(new object[] {
@@ -2220,7 +2085,7 @@
             this.bindsComboBox.Name = "bindsComboBox";
             this.bindsComboBox.Size = new System.Drawing.Size(177, 20);
             this.bindsComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bindsComboBox.TabIndex = 8;
+            this.bindsComboBox.TabIndex = 4;
             // 
             // noneComboItem
             // 
@@ -2272,7 +2137,7 @@
             this.durabilityIntegerInput.Name = "durabilityIntegerInput";
             this.durabilityIntegerInput.ShowUpDown = true;
             this.durabilityIntegerInput.Size = new System.Drawing.Size(182, 20);
-            this.durabilityIntegerInput.TabIndex = 6;
+            this.durabilityIntegerInput.TabIndex = 3;
             // 
             // itemDurabilityLabel
             // 
@@ -2413,6 +2278,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemRequirementsWizardPage.AntiAlias = false;
             this.itemRequirementsWizardPage.BackColor = System.Drawing.Color.Transparent;
+            this.itemRequirementsWizardPage.Controls.Add(this.findFactionButton);
+            this.itemRequirementsWizardPage.Controls.Add(this.reqRepFactionIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqDisenchantSkillIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.itemReqDisenchantSkillLabel);
             this.itemRequirementsWizardPage.Controls.Add(this.reqHonorRankIntegerInput);
@@ -2428,7 +2295,6 @@
             this.itemRequirementsWizardPage.Controls.Add(this.levelReqIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqLevelIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqSkillComboBox);
-            this.itemRequirementsWizardPage.Controls.Add(this.reqReputationComboBox);
             this.itemRequirementsWizardPage.Controls.Add(this.itemSkillReqLabel);
             this.itemRequirementsWizardPage.Controls.Add(this.allowedRaceLabel);
             this.itemRequirementsWizardPage.Controls.Add(this.allowedClassLabel);
@@ -2454,6 +2320,35 @@
             this.itemRequirementsWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemRequirementsWizardPage.TabIndex = 0;
             // 
+            // findFactionButton
+            // 
+            this.findFactionButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.findFactionButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.findFactionButton.Location = new System.Drawing.Point(510, 27);
+            this.findFactionButton.Name = "findFactionButton";
+            this.findFactionButton.Size = new System.Drawing.Size(75, 23);
+            this.findFactionButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.findFactionButton.TabIndex = 4;
+            this.findFactionButton.Text = "Find Faction";
+            this.findFactionButton.Click += new System.EventHandler(this.findFactionButton_Click);
+            // 
+            // reqRepFactionIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.reqRepFactionIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.reqRepFactionIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.reqRepFactionIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqRepFactionIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.reqRepFactionIntegerInput.Location = new System.Drawing.Point(317, 30);
+            this.reqRepFactionIntegerInput.MaxValue = 255;
+            this.reqRepFactionIntegerInput.MinValue = 0;
+            this.reqRepFactionIntegerInput.Name = "reqRepFactionIntegerInput";
+            this.reqRepFactionIntegerInput.ShowUpDown = true;
+            this.reqRepFactionIntegerInput.Size = new System.Drawing.Size(187, 20);
+            this.reqRepFactionIntegerInput.TabIndex = 3;
+            // 
             // reqDisenchantSkillIntegerInput
             // 
             // 
@@ -2462,12 +2357,13 @@
             this.reqDisenchantSkillIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.reqDisenchantSkillIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reqDisenchantSkillIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqDisenchantSkillIntegerInput.ForeColor = System.Drawing.Color.White;
             this.reqDisenchantSkillIntegerInput.Location = new System.Drawing.Point(688, 128);
             this.reqDisenchantSkillIntegerInput.MinValue = 0;
             this.reqDisenchantSkillIntegerInput.Name = "reqDisenchantSkillIntegerInput";
             this.reqDisenchantSkillIntegerInput.ShowUpDown = true;
             this.reqDisenchantSkillIntegerInput.Size = new System.Drawing.Size(168, 20);
-            this.reqDisenchantSkillIntegerInput.TabIndex = 28;
+            this.reqDisenchantSkillIntegerInput.TabIndex = 11;
             // 
             // itemReqDisenchantSkillLabel
             // 
@@ -2490,12 +2386,13 @@
             this.reqHonorRankIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.reqHonorRankIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reqHonorRankIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqHonorRankIntegerInput.ForeColor = System.Drawing.Color.White;
             this.reqHonorRankIntegerInput.Location = new System.Drawing.Point(317, 91);
             this.reqHonorRankIntegerInput.MinValue = 0;
             this.reqHonorRankIntegerInput.Name = "reqHonorRankIntegerInput";
             this.reqHonorRankIntegerInput.ShowUpDown = true;
             this.reqHonorRankIntegerInput.Size = new System.Drawing.Size(186, 20);
-            this.reqHonorRankIntegerInput.TabIndex = 26;
+            this.reqHonorRankIntegerInput.TabIndex = 8;
             // 
             // itemReqHonorRankLabel
             // 
@@ -2518,8 +2415,9 @@
             this.findReqSpellButton.Name = "findReqSpellButton";
             this.findReqSpellButton.Size = new System.Drawing.Size(88, 29);
             this.findReqSpellButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findReqSpellButton.TabIndex = 24;
+            this.findReqSpellButton.TabIndex = 10;
             this.findReqSpellButton.Text = "Find Required Spell";
+            this.findReqSpellButton.Click += new System.EventHandler(this.findReqSpellButton_Click);
             // 
             // reqSpellIntegerInput
             // 
@@ -2529,12 +2427,13 @@
             this.reqSpellIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.reqSpellIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reqSpellIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqSpellIntegerInput.ForeColor = System.Drawing.Color.White;
             this.reqSpellIntegerInput.Location = new System.Drawing.Point(688, 91);
             this.reqSpellIntegerInput.MinValue = 0;
             this.reqSpellIntegerInput.Name = "reqSpellIntegerInput";
             this.reqSpellIntegerInput.ShowUpDown = true;
             this.reqSpellIntegerInput.Size = new System.Drawing.Size(168, 20);
-            this.reqSpellIntegerInput.TabIndex = 23;
+            this.reqSpellIntegerInput.TabIndex = 9;
             // 
             // itemReqSpellLabel
             // 
@@ -2557,7 +2456,7 @@
             this.itemReqInfoLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemReqInfoLabel.Location = new System.Drawing.Point(317, 354);
             this.itemReqInfoLabel.Name = "itemReqInfoLabel";
-            this.itemReqInfoLabel.Size = new System.Drawing.Size(557, 178);
+            this.itemReqInfoLabel.Size = new System.Drawing.Size(557, 175);
             this.itemReqInfoLabel.TabIndex = 0;
             this.itemReqInfoLabel.Text = resources.GetString("itemReqInfoLabel.Text");
             // 
@@ -2607,8 +2506,9 @@
             this.reqAllClassesCheckBox.Name = "reqAllClassesCheckBox";
             this.reqAllClassesCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqAllClassesCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqAllClassesCheckBox.TabIndex = 0;
+            this.reqAllClassesCheckBox.TabIndex = 12;
             this.reqAllClassesCheckBox.Text = "All Classes";
+            this.reqAllClassesCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqDeathKnightCheckBox
             // 
@@ -2620,8 +2520,9 @@
             this.reqDeathKnightCheckBox.Name = "reqDeathKnightCheckBox";
             this.reqDeathKnightCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqDeathKnightCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqDeathKnightCheckBox.TabIndex = 0;
+            this.reqDeathKnightCheckBox.TabIndex = 22;
             this.reqDeathKnightCheckBox.Text = "Death Knight";
+            this.reqDeathKnightCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqWarlockCheckBox
             // 
@@ -2633,8 +2534,9 @@
             this.reqWarlockCheckBox.Name = "reqWarlockCheckBox";
             this.reqWarlockCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqWarlockCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqWarlockCheckBox.TabIndex = 0;
+            this.reqWarlockCheckBox.TabIndex = 21;
             this.reqWarlockCheckBox.Text = "Warlock";
+            this.reqWarlockCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqMageCheckBox
             // 
@@ -2646,8 +2548,9 @@
             this.reqMageCheckBox.Name = "reqMageCheckBox";
             this.reqMageCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqMageCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqMageCheckBox.TabIndex = 0;
+            this.reqMageCheckBox.TabIndex = 20;
             this.reqMageCheckBox.Text = "Mage";
+            this.reqMageCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqPriestCheckBox
             // 
@@ -2659,8 +2562,9 @@
             this.reqPriestCheckBox.Name = "reqPriestCheckBox";
             this.reqPriestCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqPriestCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqPriestCheckBox.TabIndex = 0;
+            this.reqPriestCheckBox.TabIndex = 17;
             this.reqPriestCheckBox.Text = "Priest";
+            this.reqPriestCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqDruidCheckBox
             // 
@@ -2672,8 +2576,9 @@
             this.reqDruidCheckBox.Name = "reqDruidCheckBox";
             this.reqDruidCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqDruidCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqDruidCheckBox.TabIndex = 0;
+            this.reqDruidCheckBox.TabIndex = 18;
             this.reqDruidCheckBox.Text = "Druid";
+            this.reqDruidCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqShamanCheckBox
             // 
@@ -2685,8 +2590,9 @@
             this.reqShamanCheckBox.Name = "reqShamanCheckBox";
             this.reqShamanCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqShamanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqShamanCheckBox.TabIndex = 0;
+            this.reqShamanCheckBox.TabIndex = 19;
             this.reqShamanCheckBox.Text = "Shaman";
+            this.reqShamanCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqPaladinCheckBox
             // 
@@ -2698,8 +2604,9 @@
             this.reqPaladinCheckBox.Name = "reqPaladinCheckBox";
             this.reqPaladinCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqPaladinCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqPaladinCheckBox.TabIndex = 0;
+            this.reqPaladinCheckBox.TabIndex = 14;
             this.reqPaladinCheckBox.Text = "Paladin";
+            this.reqPaladinCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqWarriorCheckBox
             // 
@@ -2711,8 +2618,9 @@
             this.reqWarriorCheckBox.Name = "reqWarriorCheckBox";
             this.reqWarriorCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqWarriorCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqWarriorCheckBox.TabIndex = 0;
+            this.reqWarriorCheckBox.TabIndex = 13;
             this.reqWarriorCheckBox.Text = "Warrior";
+            this.reqWarriorCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqHunterCheckBox
             // 
@@ -2724,8 +2632,9 @@
             this.reqHunterCheckBox.Name = "reqHunterCheckBox";
             this.reqHunterCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqHunterCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqHunterCheckBox.TabIndex = 0;
+            this.reqHunterCheckBox.TabIndex = 15;
             this.reqHunterCheckBox.Text = "Hunter";
+            this.reqHunterCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqRogueCheckBox
             // 
@@ -2737,11 +2646,13 @@
             this.reqRogueCheckBox.Name = "reqRogueCheckBox";
             this.reqRogueCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqRogueCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqRogueCheckBox.TabIndex = 0;
+            this.reqRogueCheckBox.TabIndex = 16;
             this.reqRogueCheckBox.Text = "Rogue";
+            this.reqRogueCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqAllRacesCheckBox
             // 
+            this.reqAllRacesCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2750,11 +2661,13 @@
             this.reqAllRacesCheckBox.Name = "reqAllRacesCheckBox";
             this.reqAllRacesCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqAllRacesCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqAllRacesCheckBox.TabIndex = 0;
+            this.reqAllRacesCheckBox.TabIndex = 23;
             this.reqAllRacesCheckBox.Text = "All Races";
+            this.reqAllRacesCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqTaurenCheckBox
             // 
+            this.reqTaurenCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2763,11 +2676,13 @@
             this.reqTaurenCheckBox.Name = "reqTaurenCheckBox";
             this.reqTaurenCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqTaurenCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqTaurenCheckBox.TabIndex = 0;
+            this.reqTaurenCheckBox.TabIndex = 29;
             this.reqTaurenCheckBox.Text = "Tauren";
+            this.reqTaurenCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqDraeneiCheckBox
             // 
+            this.reqDraeneiCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2776,11 +2691,13 @@
             this.reqDraeneiCheckBox.Name = "reqDraeneiCheckBox";
             this.reqDraeneiCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqDraeneiCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqDraeneiCheckBox.TabIndex = 0;
+            this.reqDraeneiCheckBox.TabIndex = 33;
             this.reqDraeneiCheckBox.Text = "Draenei";
+            this.reqDraeneiCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqNightElfCheckBox
             // 
+            this.reqNightElfCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2789,11 +2706,13 @@
             this.reqNightElfCheckBox.Name = "reqNightElfCheckBox";
             this.reqNightElfCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqNightElfCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqNightElfCheckBox.TabIndex = 0;
+            this.reqNightElfCheckBox.TabIndex = 27;
             this.reqNightElfCheckBox.Text = "Night Elf";
+            this.reqNightElfCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqBloodElfCheckBox
             // 
+            this.reqBloodElfCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2802,11 +2721,13 @@
             this.reqBloodElfCheckBox.Name = "reqBloodElfCheckBox";
             this.reqBloodElfCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqBloodElfCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqBloodElfCheckBox.TabIndex = 0;
+            this.reqBloodElfCheckBox.TabIndex = 32;
             this.reqBloodElfCheckBox.Text = "Blood Elf";
+            this.reqBloodElfCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqDwarfCheckBox
             // 
+            this.reqDwarfCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2815,11 +2736,13 @@
             this.reqDwarfCheckBox.Name = "reqDwarfCheckBox";
             this.reqDwarfCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqDwarfCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqDwarfCheckBox.TabIndex = 0;
+            this.reqDwarfCheckBox.TabIndex = 26;
             this.reqDwarfCheckBox.Text = "Dwarf";
+            this.reqDwarfCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqTrollCheckBox
             // 
+            this.reqTrollCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2828,11 +2751,13 @@
             this.reqTrollCheckBox.Name = "reqTrollCheckBox";
             this.reqTrollCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqTrollCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqTrollCheckBox.TabIndex = 0;
+            this.reqTrollCheckBox.TabIndex = 31;
             this.reqTrollCheckBox.Text = "Troll";
+            this.reqTrollCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqHumanCheckBox
             // 
+            this.reqHumanCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2841,11 +2766,13 @@
             this.reqHumanCheckBox.Name = "reqHumanCheckBox";
             this.reqHumanCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqHumanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqHumanCheckBox.TabIndex = 0;
+            this.reqHumanCheckBox.TabIndex = 24;
             this.reqHumanCheckBox.Text = "Human";
+            this.reqHumanCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqUndeadCheckBox
             // 
+            this.reqUndeadCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2854,11 +2781,13 @@
             this.reqUndeadCheckBox.Name = "reqUndeadCheckBox";
             this.reqUndeadCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqUndeadCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqUndeadCheckBox.TabIndex = 0;
+            this.reqUndeadCheckBox.TabIndex = 28;
             this.reqUndeadCheckBox.Text = "Undead";
+            this.reqUndeadCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqOrcCheckBox
             // 
+            this.reqOrcCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2867,11 +2796,13 @@
             this.reqOrcCheckBox.Name = "reqOrcCheckBox";
             this.reqOrcCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqOrcCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqOrcCheckBox.TabIndex = 0;
+            this.reqOrcCheckBox.TabIndex = 25;
             this.reqOrcCheckBox.Text = "Orc";
+            this.reqOrcCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqGnomeCheckBox
             // 
+            this.reqGnomeCheckBox.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -2880,13 +2811,15 @@
             this.reqGnomeCheckBox.Name = "reqGnomeCheckBox";
             this.reqGnomeCheckBox.Size = new System.Drawing.Size(100, 23);
             this.reqGnomeCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqGnomeCheckBox.TabIndex = 0;
+            this.reqGnomeCheckBox.TabIndex = 30;
             this.reqGnomeCheckBox.Text = "Gnome";
+            this.reqGnomeCheckBox.TextColor = System.Drawing.Color.White;
             // 
             // reqReputationRankComboBox
             // 
             this.reqReputationRankComboBox.DisplayMember = "Text";
             this.reqReputationRankComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.reqReputationRankComboBox.ForeColor = System.Drawing.Color.White;
             this.reqReputationRankComboBox.FormattingEnabled = true;
             this.reqReputationRankComboBox.ItemHeight = 14;
             this.reqReputationRankComboBox.Items.AddRange(new object[] {
@@ -2903,7 +2836,7 @@
             this.reqReputationRankComboBox.Name = "reqReputationRankComboBox";
             this.reqReputationRankComboBox.Size = new System.Drawing.Size(187, 20);
             this.reqReputationRankComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqReputationRankComboBox.TabIndex = 5;
+            this.reqReputationRankComboBox.TabIndex = 6;
             // 
             // selectFactionStandingComboItem
             // 
@@ -2962,12 +2895,13 @@
             this.reqSkillRankIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.reqSkillRankIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reqSkillRankIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqSkillRankIntegerInput.ForeColor = System.Drawing.Color.White;
             this.reqSkillRankIntegerInput.Location = new System.Drawing.Point(688, 59);
             this.reqSkillRankIntegerInput.MinValue = 0;
             this.reqSkillRankIntegerInput.Name = "reqSkillRankIntegerInput";
             this.reqSkillRankIntegerInput.ShowUpDown = true;
             this.reqSkillRankIntegerInput.Size = new System.Drawing.Size(168, 20);
-            this.reqSkillRankIntegerInput.TabIndex = 6;
+            this.reqSkillRankIntegerInput.TabIndex = 7;
             // 
             // levelReqIntegerInput
             // 
@@ -2977,6 +2911,7 @@
             this.levelReqIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.levelReqIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.levelReqIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.levelReqIntegerInput.ForeColor = System.Drawing.Color.White;
             this.levelReqIntegerInput.Location = new System.Drawing.Point(688, 1);
             this.levelReqIntegerInput.MinValue = 0;
             this.levelReqIntegerInput.Name = "levelReqIntegerInput";
@@ -2992,6 +2927,7 @@
             this.reqLevelIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.reqLevelIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reqLevelIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.reqLevelIntegerInput.ForeColor = System.Drawing.Color.White;
             this.reqLevelIntegerInput.Location = new System.Drawing.Point(317, 1);
             this.reqLevelIntegerInput.MaxValue = 255;
             this.reqLevelIntegerInput.MinValue = 0;
@@ -3004,6 +2940,7 @@
             // 
             this.reqSkillComboBox.DisplayMember = "Text";
             this.reqSkillComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.reqSkillComboBox.ForeColor = System.Drawing.Color.White;
             this.reqSkillComboBox.FormattingEnabled = true;
             this.reqSkillComboBox.ItemHeight = 14;
             this.reqSkillComboBox.Items.AddRange(new object[] {
@@ -3026,7 +2963,7 @@
             this.reqSkillComboBox.Name = "reqSkillComboBox";
             this.reqSkillComboBox.Size = new System.Drawing.Size(168, 20);
             this.reqSkillComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqSkillComboBox.TabIndex = 8;
+            this.reqSkillComboBox.TabIndex = 5;
             // 
             // selectProfessionComboItem
             // 
@@ -3087,394 +3024,6 @@
             // inscriptionComboItem
             // 
             this.inscriptionComboItem.Text = "Inscription";
-            // 
-            // reqReputationComboBox
-            // 
-            this.reqReputationComboBox.DisplayMember = "Text";
-            this.reqReputationComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.reqReputationComboBox.FormattingEnabled = true;
-            this.reqReputationComboBox.ItemHeight = 14;
-            this.reqReputationComboBox.Items.AddRange(new object[] {
-            this.selectFactionComboItem,
-            this.allianceVanguardComboItem,
-            this.argentCrusadeComboItem,
-            this.argentDawnComboItem,
-            this.ashtoungeDeathswornComboItem,
-            this.bloodsailBuccaneersComboItem,
-            this.bootyBayComboItem,
-            this.broodOfNozdormuComboItem,
-            this.cenarionCircleComboItem,
-            this.cenarionExpeditionComboItem,
-            this.darkmoonFaireComboItem,
-            this.darkspearTrollsComboItem,
-            this.darnassusComboItem,
-            this.everlookComboItem,
-            this.exodarComboItem,
-            this.explorersLeagueComboItem,
-            this.frenzyheartTribeComboItem,
-            this.frostwolfClanComboItem,
-            this.gadgetzanComboItem,
-            this.gelkisClanCentaurComboItem,
-            this.gnomereganExilesComboItem,
-            this.honorHoldComboItem,
-            this.hordeExpeditionComboItem,
-            this.hydraxianWaterlordComboItem,
-            this.ironforgeComboItem,
-            this.keepersOfTimeComboItem,
-            this.kirinTorComboItem,
-            this.knightsOfTheEbonBladeComboItem,
-            this.kurenaiComboItem,
-            this.lowerCityComboItem,
-            this.magramClanCentaurComboItem,
-            this.netherwingComboItem,
-            this.ogrilaComboItem,
-            this.orgrimmarComboItem,
-            this.ratchetComboItem,
-            this.ravenholdtComboItem,
-            this.shatariSkyguarComboItem,
-            this.shatteredSunOffensiveComboItem,
-            this.shendralarComboItem,
-            this.silvermoonCityComboItem,
-            this.silverwingSentinelsComboItem,
-            this.sporeggarComboItem,
-            this.stormpikeGuardComboItem,
-            this.stormwindComboItem,
-            this.syndicateComboItem,
-            this.theAldorComboItem,
-            this.theConsortiumComboItem,
-            this.theDefilersComboItem,
-            this.theFrostbornComboItem,
-            this.theHandOfVengeanceComboItem,
-            this.theKaluakComboItem,
-            this.theLeagueOfArathorComboItem,
-            this.theMagharComboItem,
-            this.theOraclesComboItem,
-            this.theScaleOfTheSandsComboItem,
-            this.theScryersComboItem,
-            this.theShatarComboItem,
-            this.theSilverCovenantComboItem,
-            this.theSonsOfHodirComboItem,
-            this.theSunreaversComboItem,
-            this.theTaunkaComboItem,
-            this.theVioletEyeComboItem,
-            this.theWyrmrestAccordComboItem,
-            this.thoriumBrotherhoodComboItem,
-            this.thrallmarComboItem,
-            this.thunderBluffComboItem,
-            this.timbermawHoldComboItem,
-            this.tranquillienComboItem,
-            this.undercityComboItem,
-            this.valianceExpeditionComboItem,
-            this.warsongOffensiveComboItem,
-            this.warsongOutridersComboItem,
-            this.wildhammerClanComboItem,
-            this.wintersaberTrainersComboItem,
-            this.zandalarTribeComboItem});
-            this.reqReputationComboBox.Location = new System.Drawing.Point(317, 30);
-            this.reqReputationComboBox.Name = "reqReputationComboBox";
-            this.reqReputationComboBox.Size = new System.Drawing.Size(187, 20);
-            this.reqReputationComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reqReputationComboBox.TabIndex = 3;
-            // 
-            // selectFactionComboItem
-            // 
-            this.selectFactionComboItem.Text = "Select Faction";
-            // 
-            // allianceVanguardComboItem
-            // 
-            this.allianceVanguardComboItem.Text = "Alliance Vanguard";
-            // 
-            // argentCrusadeComboItem
-            // 
-            this.argentCrusadeComboItem.Text = "Argent Crusade";
-            // 
-            // argentDawnComboItem
-            // 
-            this.argentDawnComboItem.Text = "Argent Dawn";
-            // 
-            // ashtoungeDeathswornComboItem
-            // 
-            this.ashtoungeDeathswornComboItem.Text = "Ashtounge Deathsworn";
-            // 
-            // bloodsailBuccaneersComboItem
-            // 
-            this.bloodsailBuccaneersComboItem.Text = "Bloodsail Buccaneers";
-            // 
-            // bootyBayComboItem
-            // 
-            this.bootyBayComboItem.Text = "Booty Bay";
-            // 
-            // broodOfNozdormuComboItem
-            // 
-            this.broodOfNozdormuComboItem.Text = "Brood of Nozdormu";
-            // 
-            // cenarionCircleComboItem
-            // 
-            this.cenarionCircleComboItem.Text = "Cenarion Circle";
-            // 
-            // cenarionExpeditionComboItem
-            // 
-            this.cenarionExpeditionComboItem.Text = "Cenarion Expedition";
-            // 
-            // darkmoonFaireComboItem
-            // 
-            this.darkmoonFaireComboItem.Text = "Darkmoon Fair";
-            // 
-            // darkspearTrollsComboItem
-            // 
-            this.darkspearTrollsComboItem.Text = "Darkspear Trolls";
-            // 
-            // darnassusComboItem
-            // 
-            this.darnassusComboItem.Text = "Darnassus";
-            // 
-            // everlookComboItem
-            // 
-            this.everlookComboItem.Text = "Everlook";
-            // 
-            // exodarComboItem
-            // 
-            this.exodarComboItem.Text = "Exodar";
-            // 
-            // explorersLeagueComboItem
-            // 
-            this.explorersLeagueComboItem.Text = "Explorer\'s League";
-            // 
-            // frenzyheartTribeComboItem
-            // 
-            this.frenzyheartTribeComboItem.Text = "Frenzyheart Tribe";
-            // 
-            // frostwolfClanComboItem
-            // 
-            this.frostwolfClanComboItem.Text = "Frostwolf Clan";
-            // 
-            // gadgetzanComboItem
-            // 
-            this.gadgetzanComboItem.Text = "Gadgetzan";
-            // 
-            // gelkisClanCentaurComboItem
-            // 
-            this.gelkisClanCentaurComboItem.Text = "Gelkis Clan Centaur";
-            // 
-            // gnomereganExilesComboItem
-            // 
-            this.gnomereganExilesComboItem.Text = "Gnomeregan Exiles";
-            // 
-            // honorHoldComboItem
-            // 
-            this.honorHoldComboItem.Text = "Honor Hold";
-            // 
-            // hordeExpeditionComboItem
-            // 
-            this.hordeExpeditionComboItem.Text = "Horde Expedition";
-            // 
-            // hydraxianWaterlordComboItem
-            // 
-            this.hydraxianWaterlordComboItem.Text = "Hydraxian Waterlord";
-            // 
-            // ironforgeComboItem
-            // 
-            this.ironforgeComboItem.Text = "Ironforge";
-            // 
-            // keepersOfTimeComboItem
-            // 
-            this.keepersOfTimeComboItem.Text = "Keepers of Time";
-            // 
-            // kirinTorComboItem
-            // 
-            this.kirinTorComboItem.Text = "Kirin Tor";
-            // 
-            // knightsOfTheEbonBladeComboItem
-            // 
-            this.knightsOfTheEbonBladeComboItem.Text = "Knights of the Ebon Blade";
-            // 
-            // kurenaiComboItem
-            // 
-            this.kurenaiComboItem.Text = "Kurenai";
-            // 
-            // lowerCityComboItem
-            // 
-            this.lowerCityComboItem.Text = "Lower City";
-            // 
-            // magramClanCentaurComboItem
-            // 
-            this.magramClanCentaurComboItem.Text = "Magram Clan Centaur";
-            // 
-            // netherwingComboItem
-            // 
-            this.netherwingComboItem.Text = "Netherwing";
-            // 
-            // ogrilaComboItem
-            // 
-            this.ogrilaComboItem.Text = "Ogri\'la";
-            // 
-            // orgrimmarComboItem
-            // 
-            this.orgrimmarComboItem.Text = "Orgrimmar";
-            // 
-            // ratchetComboItem
-            // 
-            this.ratchetComboItem.Text = "Ratchet";
-            // 
-            // ravenholdtComboItem
-            // 
-            this.ravenholdtComboItem.Text = "Ravenholdt";
-            // 
-            // shatariSkyguarComboItem
-            // 
-            this.shatariSkyguarComboItem.Text = "Sha\'tari Skyguard";
-            // 
-            // shatteredSunOffensiveComboItem
-            // 
-            this.shatteredSunOffensiveComboItem.Text = "Shattered Sun Offensive";
-            // 
-            // shendralarComboItem
-            // 
-            this.shendralarComboItem.Text = "Shen\'dralar";
-            // 
-            // silvermoonCityComboItem
-            // 
-            this.silvermoonCityComboItem.Text = "Silvermoon City";
-            // 
-            // silverwingSentinelsComboItem
-            // 
-            this.silverwingSentinelsComboItem.Text = "Silverwing Sentinels";
-            // 
-            // sporeggarComboItem
-            // 
-            this.sporeggarComboItem.Text = "Sporeggar";
-            // 
-            // stormpikeGuardComboItem
-            // 
-            this.stormpikeGuardComboItem.Text = "Stormpike Guard";
-            // 
-            // stormwindComboItem
-            // 
-            this.stormwindComboItem.Text = "Stormwind";
-            // 
-            // syndicateComboItem
-            // 
-            this.syndicateComboItem.Text = "Syndicate";
-            // 
-            // theAldorComboItem
-            // 
-            this.theAldorComboItem.Text = "The Aldor";
-            // 
-            // theConsortiumComboItem
-            // 
-            this.theConsortiumComboItem.Text = "The Consortium";
-            // 
-            // theDefilersComboItem
-            // 
-            this.theDefilersComboItem.Text = "The Defilers";
-            // 
-            // theFrostbornComboItem
-            // 
-            this.theFrostbornComboItem.Text = "The Frostborn";
-            // 
-            // theHandOfVengeanceComboItem
-            // 
-            this.theHandOfVengeanceComboItem.Text = "The Hand of Vengeance";
-            // 
-            // theKaluakComboItem
-            // 
-            this.theKaluakComboItem.Text = "The Kalu\'ak";
-            // 
-            // theLeagueOfArathorComboItem
-            // 
-            this.theLeagueOfArathorComboItem.Text = "The League of Arathor";
-            // 
-            // theMagharComboItem
-            // 
-            this.theMagharComboItem.Text = "The Mag\'har";
-            // 
-            // theOraclesComboItem
-            // 
-            this.theOraclesComboItem.Text = "The Oracles";
-            // 
-            // theScaleOfTheSandsComboItem
-            // 
-            this.theScaleOfTheSandsComboItem.Text = "The Scale of the Sands";
-            // 
-            // theScryersComboItem
-            // 
-            this.theScryersComboItem.Text = "The Scryers";
-            // 
-            // theShatarComboItem
-            // 
-            this.theShatarComboItem.Text = "The Sha\'tar";
-            // 
-            // theSilverCovenantComboItem
-            // 
-            this.theSilverCovenantComboItem.Text = "The Silver Covenant";
-            // 
-            // theSonsOfHodirComboItem
-            // 
-            this.theSonsOfHodirComboItem.Text = "The Sons of Hodir";
-            // 
-            // theSunreaversComboItem
-            // 
-            this.theSunreaversComboItem.Text = "The Sunreavers";
-            // 
-            // theTaunkaComboItem
-            // 
-            this.theTaunkaComboItem.Text = "The Taunka";
-            // 
-            // theVioletEyeComboItem
-            // 
-            this.theVioletEyeComboItem.Text = "The Violet Eye";
-            // 
-            // theWyrmrestAccordComboItem
-            // 
-            this.theWyrmrestAccordComboItem.Text = "The Wyrmrest Accord";
-            // 
-            // thoriumBrotherhoodComboItem
-            // 
-            this.thoriumBrotherhoodComboItem.Text = "Thorium Brotherhood";
-            // 
-            // thrallmarComboItem
-            // 
-            this.thrallmarComboItem.Text = "Thrallmar";
-            // 
-            // thunderBluffComboItem
-            // 
-            this.thunderBluffComboItem.Text = "Thunder Bluff";
-            // 
-            // timbermawHoldComboItem
-            // 
-            this.timbermawHoldComboItem.Text = "Timbermaw Hold";
-            // 
-            // tranquillienComboItem
-            // 
-            this.tranquillienComboItem.Text = "Tranquillien";
-            // 
-            // undercityComboItem
-            // 
-            this.undercityComboItem.Text = "Undercity";
-            // 
-            // valianceExpeditionComboItem
-            // 
-            this.valianceExpeditionComboItem.Text = "Valiance Expedition";
-            // 
-            // warsongOffensiveComboItem
-            // 
-            this.warsongOffensiveComboItem.Text = "Warsong Offensive";
-            // 
-            // warsongOutridersComboItem
-            // 
-            this.warsongOutridersComboItem.Text = "Warsong Outriders";
-            // 
-            // wildhammerClanComboItem
-            // 
-            this.wildhammerClanComboItem.Text = "Wildhammer Clan";
-            // 
-            // wintersaberTrainersComboItem
-            // 
-            this.wintersaberTrainersComboItem.Text = "Wintersaber Trainer";
-            // 
-            // zandalarTribeComboItem
-            // 
-            this.zandalarTribeComboItem.Text = "Zandalar Tribe";
             // 
             // itemSkillReqLabel
             // 
@@ -3609,6 +3158,7 @@
             // 
             this.damageTypeComboBox2.DisplayMember = "Text";
             this.damageTypeComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.damageTypeComboBox2.ForeColor = System.Drawing.Color.White;
             this.damageTypeComboBox2.FormattingEnabled = true;
             this.damageTypeComboBox2.ItemHeight = 14;
             this.damageTypeComboBox2.Items.AddRange(new object[] {
@@ -3657,6 +3207,7 @@
             // 
             this.damageTypeComboBox.DisplayMember = "Text";
             this.damageTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.damageTypeComboBox.ForeColor = System.Drawing.Color.White;
             this.damageTypeComboBox.FormattingEnabled = true;
             this.damageTypeComboBox.ItemHeight = 14;
             this.damageTypeComboBox.Items.AddRange(new object[] {
@@ -3723,6 +3274,7 @@
             this.damageMaxIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.damageMaxIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.damageMaxIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.damageMaxIntegerInput.ForeColor = System.Drawing.Color.White;
             this.damageMaxIntegerInput.Location = new System.Drawing.Point(557, 81);
             this.damageMaxIntegerInput.Name = "damageMaxIntegerInput";
             this.damageMaxIntegerInput.ShowUpDown = true;
@@ -3737,6 +3289,7 @@
             this.damageMaxIntegerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
             this.damageMaxIntegerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.damageMaxIntegerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.damageMaxIntegerInput2.ForeColor = System.Drawing.Color.White;
             this.damageMaxIntegerInput2.Location = new System.Drawing.Point(557, 169);
             this.damageMaxIntegerInput2.Name = "damageMaxIntegerInput2";
             this.damageMaxIntegerInput2.ShowUpDown = true;
@@ -3751,6 +3304,7 @@
             this.damageMinIntegerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
             this.damageMinIntegerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.damageMinIntegerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.damageMinIntegerInput2.ForeColor = System.Drawing.Color.White;
             this.damageMinIntegerInput2.Location = new System.Drawing.Point(368, 169);
             this.damageMinIntegerInput2.Name = "damageMinIntegerInput2";
             this.damageMinIntegerInput2.ShowUpDown = true;
@@ -3765,6 +3319,7 @@
             this.damageMinIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.damageMinIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.damageMinIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.damageMinIntegerInput.ForeColor = System.Drawing.Color.White;
             this.damageMinIntegerInput.Location = new System.Drawing.Point(368, 81);
             this.damageMinIntegerInput.Name = "damageMinIntegerInput";
             this.damageMinIntegerInput.ShowUpDown = true;
@@ -3857,9 +3412,9 @@
             this.itemStatsWizardPage.AntiAlias = false;
             this.itemStatsWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.itemStatsWizardPage.Controls.Add(this.itemStatsGroupPanel);
-            this.itemStatsWizardPage.Controls.Add(this.itemScalingStatsValueIntegerInput);
+            this.itemStatsWizardPage.Controls.Add(this.scalingStatValueIntegerInput);
             this.itemStatsWizardPage.Controls.Add(this.itemScalingStatsValueLabel);
-            this.itemStatsWizardPage.Controls.Add(this.itemScalingStatDistributionIntegerInput);
+            this.itemStatsWizardPage.Controls.Add(this.scalingStatDistributionIntegerInput);
             this.itemStatsWizardPage.Controls.Add(this.itemScalingStatDistLabel);
             this.itemStatsWizardPage.Controls.Add(this.itemStatsInfoLabel);
             this.itemStatsWizardPage.Location = new System.Drawing.Point(7, 72);
@@ -3885,11 +3440,8 @@
             this.itemStatsGroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.itemStatsGroupPanel.CanvasColor = System.Drawing.SystemColors.Control;
             this.itemStatsGroupPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.itemStatsGroupPanel.Controls.Add(this.itemStatsControl1);
             this.itemStatsGroupPanel.Controls.Add(this.addStatsButton);
-            this.itemStatsGroupPanel.Controls.Add(this.statTypeComboBox1);
-            this.itemStatsGroupPanel.Controls.Add(this.itemStatTypeLabel1);
-            this.itemStatsGroupPanel.Controls.Add(this.itemStatValueLabel1);
-            this.itemStatsGroupPanel.Controls.Add(this.itemStatsValueIntegerInput1);
             this.itemStatsGroupPanel.Location = new System.Drawing.Point(250, 0);
             this.itemStatsGroupPanel.Name = "itemStatsGroupPanel";
             this.itemStatsGroupPanel.Size = new System.Drawing.Size(644, 327);
@@ -3924,6 +3476,14 @@
             this.itemStatsGroupPanel.TabIndex = 25;
             this.itemStatsGroupPanel.Text = "Item Stats";
             // 
+            // itemStatsControl1
+            // 
+            this.itemStatsControl1.BackColor = System.Drawing.Color.Transparent;
+            this.itemStatsControl1.Location = new System.Drawing.Point(33, -6);
+            this.itemStatsControl1.Name = "itemStatsControl1";
+            this.itemStatsControl1.Size = new System.Drawing.Size(585, 56);
+            this.itemStatsControl1.TabIndex = 4;
+            // 
             // addStatsButton
             // 
             this.addStatsButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -3933,290 +3493,23 @@
             this.addStatsButton.Name = "addStatsButton";
             this.addStatsButton.Size = new System.Drawing.Size(32, 32);
             this.addStatsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.addStatsButton.TabIndex = 12;
+            this.addStatsButton.TabIndex = 3;
+            this.addStatsButton.Click += new System.EventHandler(this.addStatsButton_Click);
             // 
-            // statTypeComboBox1
+            // scalingStatValueIntegerInput
             // 
-            this.statTypeComboBox1.DisplayMember = "Text";
-            this.statTypeComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.statTypeComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statTypeComboBox1.FormattingEnabled = true;
-            this.statTypeComboBox1.ItemHeight = 14;
-            this.statTypeComboBox1.Items.AddRange(new object[] {
-            this.healthComboItem,
-            this.agilityComboItem,
-            this.strengthComboItem,
-            this.intellectComboItem,
-            this.spiritComboItem,
-            this.staminaComboItem,
-            this.defenseComboItem,
-            this.dodgeComboItem,
-            this.parryComboItem,
-            this.blockComboItem,
-            this.expertiseComboItem,
-            this.resilienceComboItem,
-            this.healingBonusComboItem,
-            this.damageBonusComboItem,
-            this.manaperfivesecComboItem,
-            this.blockValueComboItem,
-            this.healthRegenComboItem,
-            this.spellPenetrationComboItem,
-            this.armorPenetrationComboItem,
-            this.attackPowerComboItem,
-            this.hitRatingComboItem,
-            this.hitAvoidComboItem,
-            this.hitCritRatingComboItem,
-            this.hitCritAvoidComboItem,
-            this.hitHasteComboItem,
-            this.meleeHitComboItem,
-            this.meleeCritComboItem,
-            this.meleeHitAvoidComboItem,
-            this.meleeCritAvoidComboItem,
-            this.meleeHasteComboItem,
-            this.rangedAttackPwrComboItem,
-            this.rangedHitComboItem,
-            this.rangedCritComboItem,
-            this.rangedHitAvoidComboItem,
-            this.rangedCritAvoidComboItem,
-            this.rangedHasteComboItem,
-            this.spellHitComboItem,
-            this.spellCritComboItem,
-            this.spellHitAvoidComboItem,
-            this.spellCritAvoidComboItem,
-            this.spellHasteComboItem,
-            this.spellPowerComboItem,
-            this.feralAttackPwrComboItem});
-            this.statTypeComboBox1.Location = new System.Drawing.Point(107, 14);
-            this.statTypeComboBox1.Name = "statTypeComboBox1";
-            this.statTypeComboBox1.Size = new System.Drawing.Size(310, 20);
-            this.statTypeComboBox1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.statTypeComboBox1.TabIndex = 1;
             // 
-            // healthComboItem
             // 
-            this.healthComboItem.Text = "Health";
             // 
-            // agilityComboItem
-            // 
-            this.agilityComboItem.Text = "Agility";
-            // 
-            // strengthComboItem
-            // 
-            this.strengthComboItem.Text = "Strength";
-            // 
-            // intellectComboItem
-            // 
-            this.intellectComboItem.Text = "Intellect";
-            // 
-            // spiritComboItem
-            // 
-            this.spiritComboItem.Text = "Spirit";
-            // 
-            // staminaComboItem
-            // 
-            this.staminaComboItem.Text = "Stamina";
-            // 
-            // defenseComboItem
-            // 
-            this.defenseComboItem.Text = "Defense";
-            // 
-            // dodgeComboItem
-            // 
-            this.dodgeComboItem.Text = "Dodge";
-            // 
-            // parryComboItem
-            // 
-            this.parryComboItem.Text = "Parry";
-            // 
-            // blockComboItem
-            // 
-            this.blockComboItem.Text = "Block";
-            // 
-            // expertiseComboItem
-            // 
-            this.expertiseComboItem.Text = "Expertise";
-            // 
-            // resilienceComboItem
-            // 
-            this.resilienceComboItem.Text = "Resilience";
-            // 
-            // healingBonusComboItem
-            // 
-            this.healingBonusComboItem.Text = "Healing Bonus";
-            // 
-            // damageBonusComboItem
-            // 
-            this.damageBonusComboItem.Text = "Damage Bonus";
-            // 
-            // manaperfivesecComboItem
-            // 
-            this.manaperfivesecComboItem.Text = "Mana Per 5 Sec";
-            // 
-            // blockValueComboItem
-            // 
-            this.blockValueComboItem.Text = "Block Value";
-            // 
-            // healthRegenComboItem
-            // 
-            this.healthRegenComboItem.Text = "Health Regeneration";
-            // 
-            // spellPenetrationComboItem
-            // 
-            this.spellPenetrationComboItem.Text = "Spell Penetration";
-            // 
-            // armorPenetrationComboItem
-            // 
-            this.armorPenetrationComboItem.Text = "Armor Penetration";
-            // 
-            // attackPowerComboItem
-            // 
-            this.attackPowerComboItem.Text = "Attack Power";
-            // 
-            // hitRatingComboItem
-            // 
-            this.hitRatingComboItem.Text = "Hit Rating";
-            // 
-            // hitAvoidComboItem
-            // 
-            this.hitAvoidComboItem.Text = "Hit Avoidance";
-            // 
-            // hitCritRatingComboItem
-            // 
-            this.hitCritRatingComboItem.Text = "Hit Crit Rating";
-            // 
-            // hitCritAvoidComboItem
-            // 
-            this.hitCritAvoidComboItem.Text = "Hit Crit Avoidance";
-            // 
-            // hitHasteComboItem
-            // 
-            this.hitHasteComboItem.Text = "Hit Haste Rating";
-            // 
-            // meleeHitComboItem
-            // 
-            this.meleeHitComboItem.Text = "Melee Hit Rating";
-            // 
-            // meleeCritComboItem
-            // 
-            this.meleeCritComboItem.Text = "Melee Crit Rating";
-            // 
-            // meleeHitAvoidComboItem
-            // 
-            this.meleeHitAvoidComboItem.Text = "Melee Hit Avoidance";
-            // 
-            // meleeCritAvoidComboItem
-            // 
-            this.meleeCritAvoidComboItem.Text = "Melee Crit Avoidance";
-            // 
-            // meleeHasteComboItem
-            // 
-            this.meleeHasteComboItem.Text = "Melee Haste Rating";
-            // 
-            // rangedAttackPwrComboItem
-            // 
-            this.rangedAttackPwrComboItem.Text = "Ranged Attack Power";
-            // 
-            // rangedHitComboItem
-            // 
-            this.rangedHitComboItem.Text = "Ranged Hit Rating";
-            // 
-            // rangedCritComboItem
-            // 
-            this.rangedCritComboItem.Text = "Ranged Crit Rating";
-            // 
-            // rangedHitAvoidComboItem
-            // 
-            this.rangedHitAvoidComboItem.Text = "Ranged Hit Avoidance";
-            // 
-            // rangedCritAvoidComboItem
-            // 
-            this.rangedCritAvoidComboItem.Text = "Ranged Crit Avoidance";
-            // 
-            // rangedHasteComboItem
-            // 
-            this.rangedHasteComboItem.Text = "Ranged Haste Rating";
-            // 
-            // spellHitComboItem
-            // 
-            this.spellHitComboItem.Text = "Spell Hit Rating";
-            // 
-            // spellCritComboItem
-            // 
-            this.spellCritComboItem.Text = "Spell Crit Rating";
-            // 
-            // spellHitAvoidComboItem
-            // 
-            this.spellHitAvoidComboItem.Text = "Spell Hit Avoidance";
-            // 
-            // spellCritAvoidComboItem
-            // 
-            this.spellCritAvoidComboItem.Text = "Spell Crit Avoidance";
-            // 
-            // spellHasteComboItem
-            // 
-            this.spellHasteComboItem.Text = "Spell Haste Rating";
-            // 
-            // spellPowerComboItem
-            // 
-            this.spellPowerComboItem.Text = "Spell Power";
-            // 
-            // feralAttackPwrComboItem
-            // 
-            this.feralAttackPwrComboItem.Text = "Feral Attack Power";
-            // 
-            // itemStatTypeLabel1
-            // 
-            // 
-            // 
-            // 
-            this.itemStatTypeLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemStatTypeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemStatTypeLabel1.Location = new System.Drawing.Point(26, 11);
-            this.itemStatTypeLabel1.Name = "itemStatTypeLabel1";
-            this.itemStatTypeLabel1.Size = new System.Drawing.Size(75, 23);
-            this.itemStatTypeLabel1.TabIndex = 0;
-            this.itemStatTypeLabel1.Text = "Stat Type:";
-            // 
-            // itemStatValueLabel1
-            // 
-            // 
-            // 
-            // 
-            this.itemStatValueLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemStatValueLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemStatValueLabel1.Location = new System.Drawing.Point(447, 11);
-            this.itemStatValueLabel1.Name = "itemStatValueLabel1";
-            this.itemStatValueLabel1.Size = new System.Drawing.Size(43, 23);
-            this.itemStatValueLabel1.TabIndex = 0;
-            this.itemStatValueLabel1.Text = "Value";
-            // 
-            // itemStatsValueIntegerInput1
-            // 
-            // 
-            // 
-            // 
-            this.itemStatsValueIntegerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.itemStatsValueIntegerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemStatsValueIntegerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.itemStatsValueIntegerInput1.Location = new System.Drawing.Point(496, 14);
-            this.itemStatsValueIntegerInput1.Name = "itemStatsValueIntegerInput1";
-            this.itemStatsValueIntegerInput1.ShowUpDown = true;
-            this.itemStatsValueIntegerInput1.Size = new System.Drawing.Size(108, 20);
-            this.itemStatsValueIntegerInput1.TabIndex = 11;
-            // 
-            // itemScalingStatsValueIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.itemScalingStatsValueIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.itemScalingStatsValueIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemScalingStatsValueIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.itemScalingStatsValueIntegerInput.Location = new System.Drawing.Point(496, 371);
-            this.itemScalingStatsValueIntegerInput.Name = "itemScalingStatsValueIntegerInput";
-            this.itemScalingStatsValueIntegerInput.ShowUpDown = true;
-            this.itemScalingStatsValueIntegerInput.Size = new System.Drawing.Size(310, 20);
-            this.itemScalingStatsValueIntegerInput.TabIndex = 24;
+            this.scalingStatValueIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.scalingStatValueIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.scalingStatValueIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.scalingStatValueIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.scalingStatValueIntegerInput.Location = new System.Drawing.Point(496, 371);
+            this.scalingStatValueIntegerInput.Name = "scalingStatValueIntegerInput";
+            this.scalingStatValueIntegerInput.ShowUpDown = true;
+            this.scalingStatValueIntegerInput.Size = new System.Drawing.Size(310, 20);
+            this.scalingStatValueIntegerInput.TabIndex = 5;
             // 
             // itemScalingStatsValueLabel
             // 
@@ -4231,19 +3524,20 @@
             this.itemScalingStatsValueLabel.TabIndex = 23;
             this.itemScalingStatsValueLabel.Text = "Scaling Stats Value:";
             // 
-            // itemScalingStatDistributionIntegerInput
+            // scalingStatDistributionIntegerInput
             // 
             // 
             // 
             // 
-            this.itemScalingStatDistributionIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.itemScalingStatDistributionIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemScalingStatDistributionIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.itemScalingStatDistributionIntegerInput.Location = new System.Drawing.Point(496, 333);
-            this.itemScalingStatDistributionIntegerInput.Name = "itemScalingStatDistributionIntegerInput";
-            this.itemScalingStatDistributionIntegerInput.ShowUpDown = true;
-            this.itemScalingStatDistributionIntegerInput.Size = new System.Drawing.Size(310, 20);
-            this.itemScalingStatDistributionIntegerInput.TabIndex = 22;
+            this.scalingStatDistributionIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.scalingStatDistributionIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.scalingStatDistributionIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.scalingStatDistributionIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.scalingStatDistributionIntegerInput.Location = new System.Drawing.Point(496, 333);
+            this.scalingStatDistributionIntegerInput.Name = "scalingStatDistributionIntegerInput";
+            this.scalingStatDistributionIntegerInput.ShowUpDown = true;
+            this.scalingStatDistributionIntegerInput.Size = new System.Drawing.Size(310, 20);
+            this.scalingStatDistributionIntegerInput.TabIndex = 4;
             // 
             // itemScalingStatDistLabel
             // 
@@ -4346,7 +3640,7 @@
             this.resistsFrostIntegerInput.Name = "resistsFrostIntegerInput";
             this.resistsFrostIntegerInput.ShowUpDown = true;
             this.resistsFrostIntegerInput.Size = new System.Drawing.Size(141, 20);
-            this.resistsFrostIntegerInput.TabIndex = 5;
+            this.resistsFrostIntegerInput.TabIndex = 4;
             // 
             // resistsFireIntegerInput
             // 
@@ -4360,7 +3654,7 @@
             this.resistsFireIntegerInput.Name = "resistsFireIntegerInput";
             this.resistsFireIntegerInput.ShowUpDown = true;
             this.resistsFireIntegerInput.Size = new System.Drawing.Size(141, 20);
-            this.resistsFireIntegerInput.TabIndex = 4;
+            this.resistsFireIntegerInput.TabIndex = 2;
             // 
             // resistsShadowIntegerInput
             // 
@@ -4374,7 +3668,7 @@
             this.resistsShadowIntegerInput.Name = "resistsShadowIntegerInput";
             this.resistsShadowIntegerInput.ShowUpDown = true;
             this.resistsShadowIntegerInput.Size = new System.Drawing.Size(141, 20);
-            this.resistsShadowIntegerInput.TabIndex = 3;
+            this.resistsShadowIntegerInput.TabIndex = 5;
             // 
             // resistsNatureIntegerInput
             // 
@@ -4388,7 +3682,7 @@
             this.resistsNatureIntegerInput.Name = "resistsNatureIntegerInput";
             this.resistsNatureIntegerInput.ShowUpDown = true;
             this.resistsNatureIntegerInput.Size = new System.Drawing.Size(141, 20);
-            this.resistsNatureIntegerInput.TabIndex = 2;
+            this.resistsNatureIntegerInput.TabIndex = 3;
             // 
             // resistsHolyIntegerInput
             // 
@@ -4568,7 +3862,7 @@
             this.addSocketButton.Name = "addSocketButton";
             this.addSocketButton.Size = new System.Drawing.Size(32, 32);
             this.addSocketButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.addSocketButton.TabIndex = 18;
+            this.addSocketButton.TabIndex = 3;
             // 
             // socketAmountIntegerInput
             // 
@@ -4578,11 +3872,12 @@
             this.socketAmountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.socketAmountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.socketAmountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.socketAmountIntegerInput.ForeColor = System.Drawing.Color.White;
             this.socketAmountIntegerInput.Location = new System.Drawing.Point(468, 15);
             this.socketAmountIntegerInput.Name = "socketAmountIntegerInput";
             this.socketAmountIntegerInput.ShowUpDown = true;
             this.socketAmountIntegerInput.Size = new System.Drawing.Size(154, 20);
-            this.socketAmountIntegerInput.TabIndex = 17;
+            this.socketAmountIntegerInput.TabIndex = 2;
             // 
             // itemSocketAmountLabel
             // 
@@ -4601,6 +3896,7 @@
             // 
             this.socketComboBox.DisplayMember = "Text";
             this.socketComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.socketComboBox.ForeColor = System.Drawing.Color.White;
             this.socketComboBox.FormattingEnabled = true;
             this.socketComboBox.ItemHeight = 14;
             this.socketComboBox.Items.AddRange(new object[] {
@@ -4660,8 +3956,9 @@
             this.findGemPropButton.Name = "findGemPropButton";
             this.findGemPropButton.Size = new System.Drawing.Size(88, 37);
             this.findGemPropButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findGemPropButton.TabIndex = 20;
+            this.findGemPropButton.TabIndex = 7;
             this.findGemPropButton.Text = "Find Gem Properties";
+            this.findGemPropButton.Click += new System.EventHandler(this.findGemPropButton_Click);
             // 
             // gemPropIntegerInput
             // 
@@ -4671,11 +3968,12 @@
             this.gemPropIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.gemPropIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.gemPropIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.gemPropIntegerInput.ForeColor = System.Drawing.Color.White;
             this.gemPropIntegerInput.Location = new System.Drawing.Point(777, 372);
             this.gemPropIntegerInput.Name = "gemPropIntegerInput";
             this.gemPropIntegerInput.ShowUpDown = true;
             this.gemPropIntegerInput.Size = new System.Drawing.Size(138, 20);
-            this.gemPropIntegerInput.TabIndex = 19;
+            this.gemPropIntegerInput.TabIndex = 6;
             // 
             // itemGemPropLabel
             // 
@@ -4698,8 +3996,9 @@
             this.findSocketBonusButton.Name = "findSocketBonusButton";
             this.findSocketBonusButton.Size = new System.Drawing.Size(87, 37);
             this.findSocketBonusButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findSocketBonusButton.TabIndex = 17;
+            this.findSocketBonusButton.TabIndex = 5;
             this.findSocketBonusButton.Text = "Find Socket Bonus";
+            this.findSocketBonusButton.Click += new System.EventHandler(this.findSocketBonusButton_Click);
             // 
             // socketBonusIntegerInput
             // 
@@ -4709,11 +4008,12 @@
             this.socketBonusIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.socketBonusIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.socketBonusIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.socketBonusIntegerInput.ForeColor = System.Drawing.Color.White;
             this.socketBonusIntegerInput.Location = new System.Drawing.Point(401, 372);
             this.socketBonusIntegerInput.Name = "socketBonusIntegerInput";
             this.socketBonusIntegerInput.ShowUpDown = true;
             this.socketBonusIntegerInput.Size = new System.Drawing.Size(138, 20);
-            this.socketBonusIntegerInput.TabIndex = 16;
+            this.socketBonusIntegerInput.TabIndex = 4;
             // 
             // itemSocketBonusLabel
             // 
@@ -4775,8 +4075,9 @@
             this.findSpellForItemButton.Name = "findSpellForItemButton";
             this.findSpellForItemButton.Size = new System.Drawing.Size(89, 40);
             this.findSpellForItemButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findSpellForItemButton.TabIndex = 1;
+            this.findSpellForItemButton.TabIndex = 9;
             this.findSpellForItemButton.Text = "Find Spell For Item";
+            this.findSpellForItemButton.Click += new System.EventHandler(this.findSpellForItemButton_Click);
             // 
             // itemSpellGroupPanel
             // 
@@ -4794,7 +4095,7 @@
             this.itemSpellGroupPanel.Controls.Add(this.itemSpellPpmRateLabel);
             this.itemSpellGroupPanel.Controls.Add(this.spellChargesIntegerInput);
             this.itemSpellGroupPanel.Controls.Add(this.itemSpellChargesLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.triggerComboBox);
+            this.itemSpellGroupPanel.Controls.Add(this.spellTriggerComboBox);
             this.itemSpellGroupPanel.Controls.Add(this.itemTriggerSpellLabel);
             this.itemSpellGroupPanel.Controls.Add(this.spellIntegerInput);
             this.itemSpellGroupPanel.Controls.Add(this.itemSpellLabel);
@@ -4841,7 +4142,7 @@
             this.addSpellButton.Name = "addSpellButton";
             this.addSpellButton.Size = new System.Drawing.Size(32, 32);
             this.addSpellButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.addSpellButton.TabIndex = 14;
+            this.addSpellButton.TabIndex = 8;
             // 
             // spellCategoryCooldownIntegerInput
             // 
@@ -4851,11 +4152,12 @@
             this.spellCategoryCooldownIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellCategoryCooldownIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellCategoryCooldownIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellCategoryCooldownIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellCategoryCooldownIntegerInput.Location = new System.Drawing.Point(924, 12);
             this.spellCategoryCooldownIntegerInput.Name = "spellCategoryCooldownIntegerInput";
             this.spellCategoryCooldownIntegerInput.ShowUpDown = true;
             this.spellCategoryCooldownIntegerInput.Size = new System.Drawing.Size(65, 20);
-            this.spellCategoryCooldownIntegerInput.TabIndex = 13;
+            this.spellCategoryCooldownIntegerInput.TabIndex = 7;
             // 
             // itemSpellCategoryCdLabel
             // 
@@ -4864,11 +4166,11 @@
             // 
             this.itemSpellCategoryCdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemSpellCategoryCdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellCategoryCdLabel.Location = new System.Drawing.Point(851, 9);
+            this.itemSpellCategoryCdLabel.Location = new System.Drawing.Point(851, 3);
             this.itemSpellCategoryCdLabel.Name = "itemSpellCategoryCdLabel";
-            this.itemSpellCategoryCdLabel.Size = new System.Drawing.Size(67, 23);
+            this.itemSpellCategoryCdLabel.Size = new System.Drawing.Size(67, 39);
             this.itemSpellCategoryCdLabel.TabIndex = 12;
-            this.itemSpellCategoryCdLabel.Text = "Category:";
+            this.itemSpellCategoryCdLabel.Text = "<div align=\"center\">Category<br/>Cooldown</div>";
             // 
             // spellCategoryIntegerInput
             // 
@@ -4878,11 +4180,12 @@
             this.spellCategoryIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellCategoryIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellCategoryIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellCategoryIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellCategoryIntegerInput.Location = new System.Drawing.Point(778, 12);
             this.spellCategoryIntegerInput.Name = "spellCategoryIntegerInput";
             this.spellCategoryIntegerInput.ShowUpDown = true;
             this.spellCategoryIntegerInput.Size = new System.Drawing.Size(67, 20);
-            this.spellCategoryIntegerInput.TabIndex = 11;
+            this.spellCategoryIntegerInput.TabIndex = 6;
             // 
             // itemSpellCategoryLabel
             // 
@@ -4905,11 +4208,12 @@
             this.spellCooldownIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellCooldownIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellCooldownIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellCooldownIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellCooldownIntegerInput.Location = new System.Drawing.Point(631, 12);
             this.spellCooldownIntegerInput.Name = "spellCooldownIntegerInput";
             this.spellCooldownIntegerInput.ShowUpDown = true;
             this.spellCooldownIntegerInput.Size = new System.Drawing.Size(68, 20);
-            this.spellCooldownIntegerInput.TabIndex = 9;
+            this.spellCooldownIntegerInput.TabIndex = 5;
             // 
             // itemSpellCooldownLabel
             // 
@@ -4932,11 +4236,12 @@
             this.spellPpmIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellPpmIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellPpmIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellPpmIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellPpmIntegerInput.Location = new System.Drawing.Point(478, 12);
             this.spellPpmIntegerInput.Name = "spellPpmIntegerInput";
             this.spellPpmIntegerInput.ShowUpDown = true;
             this.spellPpmIntegerInput.Size = new System.Drawing.Size(69, 20);
-            this.spellPpmIntegerInput.TabIndex = 7;
+            this.spellPpmIntegerInput.TabIndex = 4;
             // 
             // itemSpellPpmRateLabel
             // 
@@ -4959,11 +4264,12 @@
             this.spellChargesIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellChargesIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellChargesIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellChargesIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellChargesIntegerInput.Location = new System.Drawing.Point(330, 12);
             this.spellChargesIntegerInput.Name = "spellChargesIntegerInput";
             this.spellChargesIntegerInput.ShowUpDown = true;
             this.spellChargesIntegerInput.Size = new System.Drawing.Size(61, 20);
-            this.spellChargesIntegerInput.TabIndex = 5;
+            this.spellChargesIntegerInput.TabIndex = 3;
             // 
             // itemSpellChargesLabel
             // 
@@ -4978,24 +4284,25 @@
             this.itemSpellChargesLabel.TabIndex = 4;
             this.itemSpellChargesLabel.Text = "Spell Charges:";
             // 
-            // triggerComboBox
+            // spellTriggerComboBox
             // 
-            this.triggerComboBox.DisplayMember = "Text";
-            this.triggerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.triggerComboBox.FormattingEnabled = true;
-            this.triggerComboBox.ItemHeight = 14;
-            this.triggerComboBox.Items.AddRange(new object[] {
+            this.spellTriggerComboBox.DisplayMember = "Text";
+            this.spellTriggerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.spellTriggerComboBox.ForeColor = System.Drawing.Color.White;
+            this.spellTriggerComboBox.FormattingEnabled = true;
+            this.spellTriggerComboBox.ItemHeight = 14;
+            this.spellTriggerComboBox.Items.AddRange(new object[] {
             this.onUseSpellTriggerComboItem,
             this.onEquipSpellTriggerComboItem,
             this.chanceOnHitSpellTriggerComboItem,
             this.soulstoneSpellTriggerComboItem,
             this.useWithNoDelaySpellTriggerComboItem,
             this.learnSpellIdSpellTriggerComboItem});
-            this.triggerComboBox.Location = new System.Drawing.Point(171, 12);
-            this.triggerComboBox.Name = "triggerComboBox";
-            this.triggerComboBox.Size = new System.Drawing.Size(48, 20);
-            this.triggerComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.triggerComboBox.TabIndex = 3;
+            this.spellTriggerComboBox.Location = new System.Drawing.Point(171, 12);
+            this.spellTriggerComboBox.Name = "spellTriggerComboBox";
+            this.spellTriggerComboBox.Size = new System.Drawing.Size(48, 20);
+            this.spellTriggerComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.spellTriggerComboBox.TabIndex = 2;
             // 
             // onUseSpellTriggerComboItem
             // 
@@ -5042,6 +4349,7 @@
             this.spellIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.spellIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.spellIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.spellIntegerInput.ForeColor = System.Drawing.Color.White;
             this.spellIntegerInput.Location = new System.Drawing.Point(53, 12);
             this.spellIntegerInput.Name = "spellIntegerInput";
             this.spellIntegerInput.ShowUpDown = true;
@@ -5077,7 +4385,7 @@
             this.wizardPage1.Controls.Add(this.itemOtherHolidayIdLabel);
             this.wizardPage1.Controls.Add(this.limitCategoryIntegerInput);
             this.wizardPage1.Controls.Add(this.itemOtherItemLimitCategoryLabel);
-            this.wizardPage1.Controls.Add(this.maxMoneLootIntegerInput);
+            this.wizardPage1.Controls.Add(this.maxMoneyLootIntegerInput);
             this.wizardPage1.Controls.Add(this.itemOtherMaxMoneyLootLabel);
             this.wizardPage1.Controls.Add(this.minMoneyLootIntegerInput);
             this.wizardPage1.Controls.Add(this.itemOtherMinMoneyLootLabel);
@@ -5111,9 +4419,9 @@
             this.wizardPage1.Controls.Add(this.itemOtherDurationLabel);
             this.wizardPage1.Controls.Add(this.pageMatComboBox);
             this.wizardPage1.Controls.Add(this.itemOtherPageMatLabel);
-            this.wizardPage1.Controls.Add(this.langIdComboBox);
+            this.wizardPage1.Controls.Add(this.languageIdComboBox);
             this.wizardPage1.Controls.Add(this.itemOtherLangIdLabel);
-            this.wizardPage1.Controls.Add(this.pageTxtIntegerInput);
+            this.wizardPage1.Controls.Add(this.pageTextIntegerInput);
             this.wizardPage1.Controls.Add(this.itemOtherPageTxtLabel);
             this.wizardPage1.Controls.Add(this.materialComboBox);
             this.wizardPage1.Controls.Add(this.itemOtherMaterialLabel);
@@ -5143,27 +4451,29 @@
             this.scriptNameIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.scriptNameIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.scriptNameIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.scriptNameIntegerInput.ForeColor = System.Drawing.Color.White;
             this.scriptNameIntegerInput.Location = new System.Drawing.Point(374, 182);
             this.scriptNameIntegerInput.Name = "scriptNameIntegerInput";
             this.scriptNameIntegerInput.ShowUpDown = true;
             this.scriptNameIntegerInput.Size = new System.Drawing.Size(137, 20);
-            this.scriptNameIntegerInput.TabIndex = 49;
+            this.scriptNameIntegerInput.TabIndex = 12;
             // 
             // flagsCustomComboBox
             // 
             this.flagsCustomComboBox.DisplayMember = "Text";
             this.flagsCustomComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.flagsCustomComboBox.ForeColor = System.Drawing.Color.White;
             this.flagsCustomComboBox.FormattingEnabled = true;
             this.flagsCustomComboBox.ItemHeight = 14;
             this.flagsCustomComboBox.Items.AddRange(new object[] {
             this.itemFlagsCuDurationRealTimeFlagsCustomComboItem,
             this.itemFlagsCuIgnoreQuestStatusFlagsCustomComboItem,
             this.itemFlagsCuFollowLootRulesFlagsCustomComboItem});
-            this.flagsCustomComboBox.Location = new System.Drawing.Point(773, 451);
+            this.flagsCustomComboBox.Location = new System.Drawing.Point(644, 451);
             this.flagsCustomComboBox.Name = "flagsCustomComboBox";
-            this.flagsCustomComboBox.Size = new System.Drawing.Size(131, 20);
+            this.flagsCustomComboBox.Size = new System.Drawing.Size(376, 20);
             this.flagsCustomComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.flagsCustomComboBox.TabIndex = 48;
+            this.flagsCustomComboBox.TabIndex = 26;
             // 
             // itemFlagsCuDurationRealTimeFlagsCustomComboItem
             // 
@@ -5187,7 +4497,7 @@
             // 
             this.itemOtherFlagsCustomLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemOtherFlagsCustomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherFlagsCustomLabel.Location = new System.Drawing.Point(662, 448);
+            this.itemOtherFlagsCustomLabel.Location = new System.Drawing.Point(533, 448);
             this.itemOtherFlagsCustomLabel.Name = "itemOtherFlagsCustomLabel";
             this.itemOtherFlagsCustomLabel.Size = new System.Drawing.Size(103, 23);
             this.itemOtherFlagsCustomLabel.TabIndex = 47;
@@ -5201,11 +4511,12 @@
             this.WDBVerifiedIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.WDBVerifiedIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.WDBVerifiedIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.WDBVerifiedIntegerInput.Location = new System.Drawing.Point(525, 451);
+            this.WDBVerifiedIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.WDBVerifiedIntegerInput.Location = new System.Drawing.Point(398, 451);
             this.WDBVerifiedIntegerInput.Name = "WDBVerifiedIntegerInput";
             this.WDBVerifiedIntegerInput.ShowUpDown = true;
             this.WDBVerifiedIntegerInput.Size = new System.Drawing.Size(113, 20);
-            this.WDBVerifiedIntegerInput.TabIndex = 46;
+            this.WDBVerifiedIntegerInput.TabIndex = 25;
             // 
             // itemOtherWDBVerified
             // 
@@ -5214,7 +4525,7 @@
             // 
             this.itemOtherWDBVerified.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemOtherWDBVerified.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherWDBVerified.Location = new System.Drawing.Point(423, 448);
+            this.itemOtherWDBVerified.Location = new System.Drawing.Point(296, 448);
             this.itemOtherWDBVerified.Name = "itemOtherWDBVerified";
             this.itemOtherWDBVerified.Size = new System.Drawing.Size(96, 23);
             this.itemOtherWDBVerified.TabIndex = 45;
@@ -5228,11 +4539,12 @@
             this.holidayIdIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.holidayIdIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.holidayIdIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.holidayIdIntegerInput.Location = new System.Drawing.Point(268, 451);
+            this.holidayIdIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.holidayIdIntegerInput.Location = new System.Drawing.Point(139, 451);
             this.holidayIdIntegerInput.Name = "holidayIdIntegerInput";
             this.holidayIdIntegerInput.ShowUpDown = true;
             this.holidayIdIntegerInput.Size = new System.Drawing.Size(132, 20);
-            this.holidayIdIntegerInput.TabIndex = 44;
+            this.holidayIdIntegerInput.TabIndex = 24;
             // 
             // itemOtherHolidayIdLabel
             // 
@@ -5241,7 +4553,7 @@
             // 
             this.itemOtherHolidayIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemOtherHolidayIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherHolidayIdLabel.Location = new System.Drawing.Point(184, 448);
+            this.itemOtherHolidayIdLabel.Location = new System.Drawing.Point(55, 448);
             this.itemOtherHolidayIdLabel.Name = "itemOtherHolidayIdLabel";
             this.itemOtherHolidayIdLabel.Size = new System.Drawing.Size(78, 23);
             this.itemOtherHolidayIdLabel.TabIndex = 43;
@@ -5255,11 +4567,12 @@
             this.limitCategoryIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.limitCategoryIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.limitCategoryIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.limitCategoryIntegerInput.ForeColor = System.Drawing.Color.White;
             this.limitCategoryIntegerInput.Location = new System.Drawing.Point(889, 363);
             this.limitCategoryIntegerInput.Name = "limitCategoryIntegerInput";
             this.limitCategoryIntegerInput.ShowUpDown = true;
             this.limitCategoryIntegerInput.Size = new System.Drawing.Size(131, 20);
-            this.limitCategoryIntegerInput.TabIndex = 42;
+            this.limitCategoryIntegerInput.TabIndex = 23;
             // 
             // itemOtherItemLimitCategoryLabel
             // 
@@ -5274,19 +4587,20 @@
             this.itemOtherItemLimitCategoryLabel.TabIndex = 41;
             this.itemOtherItemLimitCategoryLabel.Text = "<div align=\"center\">ItemLimit<br/>Category</div>";
             // 
-            // maxMoneLootIntegerInput
+            // maxMoneyLootIntegerInput
             // 
             // 
             // 
             // 
-            this.maxMoneLootIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.maxMoneLootIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.maxMoneLootIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.maxMoneLootIntegerInput.Location = new System.Drawing.Point(642, 363);
-            this.maxMoneLootIntegerInput.Name = "maxMoneLootIntegerInput";
-            this.maxMoneLootIntegerInput.ShowUpDown = true;
-            this.maxMoneLootIntegerInput.Size = new System.Drawing.Size(131, 20);
-            this.maxMoneLootIntegerInput.TabIndex = 40;
+            this.maxMoneyLootIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.maxMoneyLootIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.maxMoneyLootIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.maxMoneyLootIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.maxMoneyLootIntegerInput.Location = new System.Drawing.Point(642, 363);
+            this.maxMoneyLootIntegerInput.Name = "maxMoneyLootIntegerInput";
+            this.maxMoneyLootIntegerInput.ShowUpDown = true;
+            this.maxMoneyLootIntegerInput.Size = new System.Drawing.Size(131, 20);
+            this.maxMoneyLootIntegerInput.TabIndex = 22;
             // 
             // itemOtherMaxMoneyLootLabel
             // 
@@ -5309,11 +4623,12 @@
             this.minMoneyLootIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.minMoneyLootIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.minMoneyLootIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.minMoneyLootIntegerInput.ForeColor = System.Drawing.Color.White;
             this.minMoneyLootIntegerInput.Location = new System.Drawing.Point(394, 363);
             this.minMoneyLootIntegerInput.Name = "minMoneyLootIntegerInput";
             this.minMoneyLootIntegerInput.ShowUpDown = true;
             this.minMoneyLootIntegerInput.Size = new System.Drawing.Size(113, 20);
-            this.minMoneyLootIntegerInput.TabIndex = 38;
+            this.minMoneyLootIntegerInput.TabIndex = 21;
             // 
             // itemOtherMinMoneyLootLabel
             // 
@@ -5332,6 +4647,7 @@
             // 
             this.foodTypeComboBox.DisplayMember = "Text";
             this.foodTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.foodTypeComboBox.ForeColor = System.Drawing.Color.White;
             this.foodTypeComboBox.FormattingEnabled = true;
             this.foodTypeComboBox.ItemHeight = 14;
             this.foodTypeComboBox.Items.AddRange(new object[] {
@@ -5347,7 +4663,7 @@
             this.foodTypeComboBox.Name = "foodTypeComboBox";
             this.foodTypeComboBox.Size = new System.Drawing.Size(132, 20);
             this.foodTypeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.foodTypeComboBox.TabIndex = 36;
+            this.foodTypeComboBox.TabIndex = 20;
             // 
             // meatFoodTypeComboItem
             // 
@@ -5402,11 +4718,12 @@
             this.randomArmorDmgModIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.randomArmorDmgModIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.randomArmorDmgModIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.randomArmorDmgModIntegerInput.ForeColor = System.Drawing.Color.White;
             this.randomArmorDmgModIntegerInput.Location = new System.Drawing.Point(891, 274);
             this.randomArmorDmgModIntegerInput.Name = "randomArmorDmgModIntegerInput";
             this.randomArmorDmgModIntegerInput.ShowUpDown = true;
             this.randomArmorDmgModIntegerInput.Size = new System.Drawing.Size(131, 20);
-            this.randomArmorDmgModIntegerInput.TabIndex = 34;
+            this.randomArmorDmgModIntegerInput.TabIndex = 19;
             // 
             // itemOtherArmorDmgModLabel
             // 
@@ -5429,11 +4746,12 @@
             this.randomSuffixIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.randomSuffixIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.randomSuffixIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.randomSuffixIntegerInput.ForeColor = System.Drawing.Color.White;
             this.randomSuffixIntegerInput.Location = new System.Drawing.Point(644, 274);
             this.randomSuffixIntegerInput.Name = "randomSuffixIntegerInput";
             this.randomSuffixIntegerInput.ShowUpDown = true;
             this.randomSuffixIntegerInput.Size = new System.Drawing.Size(131, 20);
-            this.randomSuffixIntegerInput.TabIndex = 32;
+            this.randomSuffixIntegerInput.TabIndex = 18;
             // 
             // itemOtherRandomSuffixLabel
             // 
@@ -5456,11 +4774,12 @@
             this.randomPropIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.randomPropIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.randomPropIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.randomPropIntegerInput.ForeColor = System.Drawing.Color.White;
             this.randomPropIntegerInput.Location = new System.Drawing.Point(398, 274);
             this.randomPropIntegerInput.Name = "randomPropIntegerInput";
             this.randomPropIntegerInput.ShowUpDown = true;
             this.randomPropIntegerInput.Size = new System.Drawing.Size(113, 20);
-            this.randomPropIntegerInput.TabIndex = 30;
+            this.randomPropIntegerInput.TabIndex = 17;
             // 
             // itemOtherRandomPropLabel
             // 
@@ -5483,11 +4802,12 @@
             this.disenchantIdIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.disenchantIdIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.disenchantIdIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.disenchantIdIntegerInput.ForeColor = System.Drawing.Color.White;
             this.disenchantIdIntegerInput.Location = new System.Drawing.Point(139, 274);
             this.disenchantIdIntegerInput.Name = "disenchantIdIntegerInput";
             this.disenchantIdIntegerInput.ShowUpDown = true;
             this.disenchantIdIntegerInput.Size = new System.Drawing.Size(132, 20);
-            this.disenchantIdIntegerInput.TabIndex = 28;
+            this.disenchantIdIntegerInput.TabIndex = 16;
             // 
             // itemOtherDisenchantIdLabel
             // 
@@ -5510,12 +4830,13 @@
             this.lockIdIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.lockIdIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lockIdIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.lockIdIntegerInput.ForeColor = System.Drawing.Color.White;
             this.lockIdIntegerInput.Location = new System.Drawing.Point(898, 182);
             this.lockIdIntegerInput.MinValue = 0;
             this.lockIdIntegerInput.Name = "lockIdIntegerInput";
             this.lockIdIntegerInput.ShowUpDown = true;
             this.lockIdIntegerInput.Size = new System.Drawing.Size(124, 20);
-            this.lockIdIntegerInput.TabIndex = 26;
+            this.lockIdIntegerInput.TabIndex = 15;
             // 
             // itemOtherLockIdLabel
             // 
@@ -5538,8 +4859,9 @@
             this.findStartQuestButton.Name = "findStartQuestButton";
             this.findStartQuestButton.Size = new System.Drawing.Size(75, 23);
             this.findStartQuestButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findStartQuestButton.TabIndex = 24;
+            this.findStartQuestButton.TabIndex = 14;
             this.findStartQuestButton.Text = "Find Quest";
+            this.findStartQuestButton.Click += new System.EventHandler(this.findStartQuestButton_Click);
             // 
             // startQuestIntegerInput
             // 
@@ -5549,12 +4871,13 @@
             this.startQuestIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.startQuestIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.startQuestIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.startQuestIntegerInput.ForeColor = System.Drawing.Color.White;
             this.startQuestIntegerInput.Location = new System.Drawing.Point(643, 182);
             this.startQuestIntegerInput.MinValue = 0;
             this.startQuestIntegerInput.Name = "startQuestIntegerInput";
             this.startQuestIntegerInput.ShowUpDown = true;
             this.startQuestIntegerInput.Size = new System.Drawing.Size(132, 20);
-            this.startQuestIntegerInput.TabIndex = 23;
+            this.startQuestIntegerInput.TabIndex = 13;
             // 
             // itemOtherStartQuestLabel
             // 
@@ -5590,8 +4913,9 @@
             this.findMapButton.Name = "findMapButton";
             this.findMapButton.Size = new System.Drawing.Size(75, 23);
             this.findMapButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findMapButton.TabIndex = 19;
+            this.findMapButton.TabIndex = 11;
             this.findMapButton.Text = "Find Map";
+            this.findMapButton.Click += new System.EventHandler(this.findMapButton_Click);
             // 
             // mapIntegerInput
             // 
@@ -5601,12 +4925,13 @@
             this.mapIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.mapIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mapIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.mapIntegerInput.ForeColor = System.Drawing.Color.White;
             this.mapIntegerInput.Location = new System.Drawing.Point(139, 182);
             this.mapIntegerInput.MinValue = 0;
             this.mapIntegerInput.Name = "mapIntegerInput";
             this.mapIntegerInput.ShowUpDown = true;
             this.mapIntegerInput.Size = new System.Drawing.Size(132, 20);
-            this.mapIntegerInput.TabIndex = 18;
+            this.mapIntegerInput.TabIndex = 10;
             // 
             // itemOtherMapLabel
             // 
@@ -5629,8 +4954,9 @@
             this.findAreaButton.Name = "findAreaButton";
             this.findAreaButton.Size = new System.Drawing.Size(75, 23);
             this.findAreaButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findAreaButton.TabIndex = 16;
+            this.findAreaButton.TabIndex = 9;
             this.findAreaButton.Text = "Find Area";
+            this.findAreaButton.Click += new System.EventHandler(this.findAreaButton_Click);
             // 
             // areaIntegerInput
             // 
@@ -5640,12 +4966,13 @@
             this.areaIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.areaIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.areaIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.areaIntegerInput.ForeColor = System.Drawing.Color.White;
             this.areaIntegerInput.Location = new System.Drawing.Point(896, 96);
             this.areaIntegerInput.MinValue = 0;
             this.areaIntegerInput.Name = "areaIntegerInput";
             this.areaIntegerInput.ShowUpDown = true;
             this.areaIntegerInput.Size = new System.Drawing.Size(124, 20);
-            this.areaIntegerInput.TabIndex = 15;
+            this.areaIntegerInput.TabIndex = 8;
             // 
             // itemOtherAreaLabel
             // 
@@ -5664,6 +4991,7 @@
             // 
             this.totemCategoryComboBox.DisplayMember = "Text";
             this.totemCategoryComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.totemCategoryComboBox.ForeColor = System.Drawing.Color.White;
             this.totemCategoryComboBox.FormattingEnabled = true;
             this.totemCategoryComboBox.ItemHeight = 14;
             this.totemCategoryComboBox.Items.AddRange(new object[] {
@@ -5703,7 +5031,7 @@
             this.totemCategoryComboBox.Name = "totemCategoryComboBox";
             this.totemCategoryComboBox.Size = new System.Drawing.Size(131, 20);
             this.totemCategoryComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.totemCategoryComboBox.TabIndex = 13;
+            this.totemCategoryComboBox.TabIndex = 7;
             // 
             // skinningKnifeOLDTotemCategoryComboItem
             // 
@@ -5853,6 +5181,7 @@
             // 
             this.bagFamilyComboBox.DisplayMember = "Text";
             this.bagFamilyComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bagFamilyComboBox.ForeColor = System.Drawing.Color.White;
             this.bagFamilyComboBox.FormattingEnabled = true;
             this.bagFamilyComboBox.ItemHeight = 14;
             this.bagFamilyComboBox.Items.AddRange(new object[] {
@@ -5875,7 +5204,7 @@
             this.bagFamilyComboBox.Name = "bagFamilyComboBox";
             this.bagFamilyComboBox.Size = new System.Drawing.Size(137, 20);
             this.bagFamilyComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bagFamilyComboBox.TabIndex = 11;
+            this.bagFamilyComboBox.TabIndex = 6;
             // 
             // noneBagFamilyComboItem
             // 
@@ -5958,11 +5287,12 @@
             this.durationIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.durationIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.durationIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.durationIntegerInput.ForeColor = System.Drawing.Color.White;
             this.durationIntegerInput.Location = new System.Drawing.Point(137, 96);
             this.durationIntegerInput.Name = "durationIntegerInput";
             this.durationIntegerInput.ShowUpDown = true;
             this.durationIntegerInput.Size = new System.Drawing.Size(132, 20);
-            this.durationIntegerInput.TabIndex = 9;
+            this.durationIntegerInput.TabIndex = 5;
             // 
             // itemOtherDurationLabel
             // 
@@ -5981,6 +5311,7 @@
             // 
             this.pageMatComboBox.DisplayMember = "Text";
             this.pageMatComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.pageMatComboBox.ForeColor = System.Drawing.Color.White;
             this.pageMatComboBox.FormattingEnabled = true;
             this.pageMatComboBox.ItemHeight = 14;
             this.pageMatComboBox.Items.AddRange(new object[] {
@@ -5995,7 +5326,7 @@
             this.pageMatComboBox.Name = "pageMatComboBox";
             this.pageMatComboBox.Size = new System.Drawing.Size(131, 20);
             this.pageMatComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.pageMatComboBox.TabIndex = 7;
+            this.pageMatComboBox.TabIndex = 3;
             // 
             // parchmentPageMatComboItem
             // 
@@ -6038,13 +5369,14 @@
             this.itemOtherPageMatLabel.TabIndex = 6;
             this.itemOtherPageMatLabel.Text = "Page Material:";
             // 
-            // langIdComboBox
+            // languageIdComboBox
             // 
-            this.langIdComboBox.DisplayMember = "Text";
-            this.langIdComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.langIdComboBox.FormattingEnabled = true;
-            this.langIdComboBox.ItemHeight = 14;
-            this.langIdComboBox.Items.AddRange(new object[] {
+            this.languageIdComboBox.DisplayMember = "Text";
+            this.languageIdComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.languageIdComboBox.ForeColor = System.Drawing.Color.White;
+            this.languageIdComboBox.FormattingEnabled = true;
+            this.languageIdComboBox.ItemHeight = 14;
+            this.languageIdComboBox.Items.AddRange(new object[] {
             this.universalComboItem,
             this.orcishComboItem,
             this.darnassianComboItem,
@@ -6064,11 +5396,11 @@
             this.gnomishBinaryComboItem,
             this.goblinBinaryComboItem,
             this.addonComboItem});
-            this.langIdComboBox.Location = new System.Drawing.Point(896, 15);
-            this.langIdComboBox.Name = "langIdComboBox";
-            this.langIdComboBox.Size = new System.Drawing.Size(124, 20);
-            this.langIdComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.langIdComboBox.TabIndex = 5;
+            this.languageIdComboBox.Location = new System.Drawing.Point(896, 15);
+            this.languageIdComboBox.Name = "languageIdComboBox";
+            this.languageIdComboBox.Size = new System.Drawing.Size(124, 20);
+            this.languageIdComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.languageIdComboBox.TabIndex = 4;
             // 
             // universalComboItem
             // 
@@ -6159,19 +5491,20 @@
             this.itemOtherLangIdLabel.TabIndex = 4;
             this.itemOtherLangIdLabel.Text = "Language ID:";
             // 
-            // pageTxtIntegerInput
+            // pageTextIntegerInput
             // 
             // 
             // 
             // 
-            this.pageTxtIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.pageTxtIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pageTxtIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.pageTxtIntegerInput.Location = new System.Drawing.Point(372, 15);
-            this.pageTxtIntegerInput.Name = "pageTxtIntegerInput";
-            this.pageTxtIntegerInput.ShowUpDown = true;
-            this.pageTxtIntegerInput.Size = new System.Drawing.Size(137, 20);
-            this.pageTxtIntegerInput.TabIndex = 3;
+            this.pageTextIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.pageTextIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pageTextIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.pageTextIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.pageTextIntegerInput.Location = new System.Drawing.Point(372, 15);
+            this.pageTextIntegerInput.Name = "pageTextIntegerInput";
+            this.pageTextIntegerInput.ShowUpDown = true;
+            this.pageTextIntegerInput.Size = new System.Drawing.Size(137, 20);
+            this.pageTextIntegerInput.TabIndex = 2;
             // 
             // itemOtherPageTxtLabel
             // 
@@ -6190,6 +5523,7 @@
             // 
             this.materialComboBox.DisplayMember = "Text";
             this.materialComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.materialComboBox.ForeColor = System.Drawing.Color.White;
             this.materialComboBox.FormattingEnabled = true;
             this.materialComboBox.ItemHeight = 14;
             this.materialComboBox.Items.AddRange(new object[] {
@@ -6212,52 +5546,52 @@
             // consumableMatComboItem
             // 
             this.consumableMatComboItem.Text = "Consumable";
-            this.consumableMatComboItem.Value = "-1";
+            this.consumableMatComboItem.Value = "";
             // 
             // notDefinedMatComboItem
             // 
             this.notDefinedMatComboItem.Text = "Not Defined";
-            this.notDefinedMatComboItem.Value = "0";
+            this.notDefinedMatComboItem.Value = "";
             // 
             // metalMatComboItem
             // 
             this.metalMatComboItem.Text = "Metal";
-            this.metalMatComboItem.Value = "1";
+            this.metalMatComboItem.Value = "";
             // 
             // woodMatComboItem
             // 
             this.woodMatComboItem.Text = "Wood";
-            this.woodMatComboItem.Value = "2";
+            this.woodMatComboItem.Value = "";
             // 
             // liquidMatComboItem
             // 
             this.liquidMatComboItem.Text = "Liquid";
-            this.liquidMatComboItem.Value = "3";
+            this.liquidMatComboItem.Value = "";
             // 
             // jewelryMatComboItem
             // 
             this.jewelryMatComboItem.Text = "Jewelry";
-            this.jewelryMatComboItem.Value = "4";
+            this.jewelryMatComboItem.Value = "";
             // 
             // chainMatComboItem
             // 
             this.chainMatComboItem.Text = "Chain";
-            this.chainMatComboItem.Value = "5";
+            this.chainMatComboItem.Value = "";
             // 
             // plateMatComboItem
             // 
             this.plateMatComboItem.Text = "Plate";
-            this.plateMatComboItem.Value = "6";
+            this.plateMatComboItem.Value = "";
             // 
             // clothMatComboItem
             // 
             this.clothMatComboItem.Text = "Cloth";
-            this.clothMatComboItem.Value = "7";
+            this.clothMatComboItem.Value = "";
             // 
             // leatherMatComboItem
             // 
             this.leatherMatComboItem.Text = "Leather";
-            this.leatherMatComboItem.Value = "8";
+            this.leatherMatComboItem.Value = "";
             // 
             // itemOtherMaterialLabel
             // 
@@ -6305,12 +5639,13 @@
             // 
             // 
             this.saveAsSqlCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.saveAsSqlCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.saveAsSqlCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.saveAsSqlCheckBox.Location = new System.Drawing.Point(476, 264);
             this.saveAsSqlCheckBox.Name = "saveAsSqlCheckBox";
             this.saveAsSqlCheckBox.Size = new System.Drawing.Size(172, 26);
             this.saveAsSqlCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.saveAsSqlCheckBox.TabIndex = 1;
+            this.saveAsSqlCheckBox.TabIndex = 2;
             this.saveAsSqlCheckBox.Text = "Save as SQL file";
             // 
             // importToDBCheckBox
@@ -6319,6 +5654,7 @@
             // 
             // 
             this.importToDBCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.importToDBCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.importToDBCheckBox.Checked = true;
             this.importToDBCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.importToDBCheckBox.CheckValue = "Y";
@@ -6327,7 +5663,7 @@
             this.importToDBCheckBox.Name = "importToDBCheckBox";
             this.importToDBCheckBox.Size = new System.Drawing.Size(192, 26);
             this.importToDBCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.importToDBCheckBox.TabIndex = 0;
+            this.importToDBCheckBox.TabIndex = 1;
             this.importToDBCheckBox.Text = "Import to Database";
             // 
             // eightHasteRatingCombotItem
@@ -6423,19 +5759,24 @@
             this.ClientSize = new System.Drawing.Size(1143, 662);
             this.Controls.Add(this.itemCreatorWizard);
             this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1159, 700);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1159, 700);
             this.Name = "CreateItem";
             this.Text = "Create Item";
+            this.Load += new System.EventHandler(this.CreateItem_Load);
             this.itemDetailsWizardPage.ResumeLayout(false);
             this.itemDetailsWizardPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemSubClassIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemDisplayIdIntegerInput)).EndInit();
             this.createWeaponWizardPage.ResumeLayout(false);
             this.itemCreatorWizard.ResumeLayout(false);
             this.itemTypeWizardPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sellPriceCopperIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellCopperIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.containerSlotsIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackableIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCountIntegerInput)).EndInit();
@@ -6454,6 +5795,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.blockIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durabilityIntegerInput)).EndInit();
             this.itemRequirementsWizardPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reqRepFactionIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqDisenchantSkillIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqHonorRankIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reqSpellIntegerInput)).EndInit();
@@ -6471,9 +5813,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.damageMinIntegerInput)).EndInit();
             this.itemStatsWizardPage.ResumeLayout(false);
             this.itemStatsGroupPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.itemStatsValueIntegerInput1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemScalingStatsValueIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemScalingStatDistributionIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalingStatValueIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalingStatDistributionIntegerInput)).EndInit();
             this.resistsWizardPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resistsArcaneIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resistsFrostIntegerInput)).EndInit();
@@ -6499,7 +5840,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WDBVerifiedIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.holidayIdIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitCategoryIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxMoneLootIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxMoneyLootIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minMoneyLootIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomArmorDmgModIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomSuffixIntegerInput)).EndInit();
@@ -6510,7 +5851,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mapIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pageTxtIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pageTextIntegerInput)).EndInit();
             this.wizardPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -6532,15 +5873,13 @@
         private DevComponents.DotNetBar.LabelX itemEntryIdLabel;
         private DevComponents.DotNetBar.LabelX itemDisplayIdLabel;
         private DevComponents.DotNetBar.ButtonX findDisplayIdButton;
-        private DevComponents.DotNetBar.Controls.TextBoxX itemQuoteTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX itemDescriptionTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX itemNameTextBox;
         private DevComponents.DotNetBar.Controls.ComboBoxEx itemQualityComboBox;
         private DevComponents.Editors.IntegerInput itemEntryIdIntegerInput;
         private DevComponents.Editors.IntegerInput itemDisplayIdIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemDetailsInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemTypeWizardPage;
         private DevComponents.DotNetBar.LabelX itemInventoryTypeLabel;
-        private DevComponents.DotNetBar.LabelX itemTypeInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemWeaponStatsWizardPage;
         private DevComponents.DotNetBar.LabelX ammoTypeLabel;
         private DevComponents.DotNetBar.LabelX itemSheathLabel;
@@ -6553,7 +5892,6 @@
         private DevComponents.DotNetBar.LabelX itemLvlReqLabel;
         private DevComponents.DotNetBar.LabelX itemSkillRankReqLabel;
         private DevComponents.DotNetBar.LabelX repItemReqLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx reqReputationComboBox;
         private DevComponents.DotNetBar.Controls.ComboBoxEx reqSkillComboBox;
         private DevComponents.Editors.IntegerInput reqLevelIntegerInput;
         private DevComponents.Editors.IntegerInput levelReqIntegerInput;
@@ -6597,9 +5935,6 @@
         private DevComponents.Editors.IntegerInput damageMinIntegerInput;
         private DevComponents.DotNetBar.LabelX itemDamageInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemStatsWizardPage;
-        private DevComponents.DotNetBar.LabelX itemStatTypeLabel1;
-        private DevComponents.DotNetBar.LabelX itemStatValueLabel1;
-        private DevComponents.Editors.IntegerInput itemStatsValueIntegerInput1;
         private DevComponents.DotNetBar.LabelX itemStatsInfoLabel;
         private DevComponents.DotNetBar.WizardPage resistsWizardPage;
         private DevComponents.DotNetBar.LabelX itemResistsHolyLabel;
@@ -6626,50 +5961,6 @@
         private DevComponents.Editors.ComboItem staffSheathComboItem;
         private DevComponents.Editors.ComboItem oneHandedSheathComboItem;
         private DevComponents.Editors.ComboItem shieldSheathComboItem;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx statTypeComboBox1;
-        private DevComponents.Editors.ComboItem healthComboItem;
-        private DevComponents.Editors.ComboItem agilityComboItem;
-        private DevComponents.Editors.ComboItem strengthComboItem;
-        private DevComponents.Editors.ComboItem intellectComboItem;
-        private DevComponents.Editors.ComboItem spiritComboItem;
-        private DevComponents.Editors.ComboItem staminaComboItem;
-        private DevComponents.Editors.ComboItem defenseComboItem;
-        private DevComponents.Editors.ComboItem dodgeComboItem;
-        private DevComponents.Editors.ComboItem parryComboItem;
-        private DevComponents.Editors.ComboItem blockComboItem;
-        private DevComponents.Editors.ComboItem expertiseComboItem;
-        private DevComponents.Editors.ComboItem resilienceComboItem;
-        private DevComponents.Editors.ComboItem healingBonusComboItem;
-        private DevComponents.Editors.ComboItem damageBonusComboItem;
-        private DevComponents.Editors.ComboItem manaperfivesecComboItem;
-        private DevComponents.Editors.ComboItem blockValueComboItem;
-        private DevComponents.Editors.ComboItem healthRegenComboItem;
-        private DevComponents.Editors.ComboItem spellPenetrationComboItem;
-        private DevComponents.Editors.ComboItem armorPenetrationComboItem;
-        private DevComponents.Editors.ComboItem attackPowerComboItem;
-        private DevComponents.Editors.ComboItem hitRatingComboItem;
-        private DevComponents.Editors.ComboItem hitAvoidComboItem;
-        private DevComponents.Editors.ComboItem hitCritRatingComboItem;
-        private DevComponents.Editors.ComboItem hitCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem hitHasteComboItem;
-        private DevComponents.Editors.ComboItem meleeHitComboItem;
-        private DevComponents.Editors.ComboItem meleeCritComboItem;
-        private DevComponents.Editors.ComboItem meleeHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem meleeCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem meleeHasteComboItem;
-        private DevComponents.Editors.ComboItem rangedAttackPwrComboItem;
-        private DevComponents.Editors.ComboItem rangedHitComboItem;
-        private DevComponents.Editors.ComboItem rangedCritComboItem;
-        private DevComponents.Editors.ComboItem rangedHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem rangedCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem rangedHasteComboItem;
-        private DevComponents.Editors.ComboItem spellHitComboItem;
-        private DevComponents.Editors.ComboItem spellCritComboItem;
-        private DevComponents.Editors.ComboItem spellHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem spellCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem spellHasteComboItem;
-        private DevComponents.Editors.ComboItem spellPowerComboItem;
-        private DevComponents.Editors.ComboItem feralAttackPwrComboItem;
         private DevComponents.DotNetBar.Controls.ComboBoxEx inventoryTypeComboBox;
         private DevComponents.Editors.ComboItem nonEquipableInvTypeComboItem;
         private DevComponents.Editors.ComboItem headInvTypeComboItem;
@@ -6732,81 +6023,6 @@
         private DevComponents.Editors.ComboItem comboItem35;
         private DevComponents.Editors.ComboItem comboItem36;
         private DevComponents.Editors.ComboItem comboItem37;
-        private DevComponents.Editors.ComboItem allianceVanguardComboItem;
-        private DevComponents.Editors.ComboItem argentCrusadeComboItem;
-        private DevComponents.Editors.ComboItem argentDawnComboItem;
-        private DevComponents.Editors.ComboItem ashtoungeDeathswornComboItem;
-        private DevComponents.Editors.ComboItem bloodsailBuccaneersComboItem;
-        private DevComponents.Editors.ComboItem bootyBayComboItem;
-        private DevComponents.Editors.ComboItem broodOfNozdormuComboItem;
-        private DevComponents.Editors.ComboItem selectFactionComboItem;
-        private DevComponents.Editors.ComboItem cenarionCircleComboItem;
-        private DevComponents.Editors.ComboItem cenarionExpeditionComboItem;
-        private DevComponents.Editors.ComboItem darkmoonFaireComboItem;
-        private DevComponents.Editors.ComboItem darkspearTrollsComboItem;
-        private DevComponents.Editors.ComboItem darnassusComboItem;
-        private DevComponents.Editors.ComboItem everlookComboItem;
-        private DevComponents.Editors.ComboItem exodarComboItem;
-        private DevComponents.Editors.ComboItem explorersLeagueComboItem;
-        private DevComponents.Editors.ComboItem frenzyheartTribeComboItem;
-        private DevComponents.Editors.ComboItem frostwolfClanComboItem;
-        private DevComponents.Editors.ComboItem gadgetzanComboItem;
-        private DevComponents.Editors.ComboItem gelkisClanCentaurComboItem;
-        private DevComponents.Editors.ComboItem gnomereganExilesComboItem;
-        private DevComponents.Editors.ComboItem honorHoldComboItem;
-        private DevComponents.Editors.ComboItem hordeExpeditionComboItem;
-        private DevComponents.Editors.ComboItem hydraxianWaterlordComboItem;
-        private DevComponents.Editors.ComboItem ironforgeComboItem;
-        private DevComponents.Editors.ComboItem keepersOfTimeComboItem;
-        private DevComponents.Editors.ComboItem kirinTorComboItem;
-        private DevComponents.Editors.ComboItem knightsOfTheEbonBladeComboItem;
-        private DevComponents.Editors.ComboItem kurenaiComboItem;
-        private DevComponents.Editors.ComboItem lowerCityComboItem;
-        private DevComponents.Editors.ComboItem magramClanCentaurComboItem;
-        private DevComponents.Editors.ComboItem netherwingComboItem;
-        private DevComponents.Editors.ComboItem ogrilaComboItem;
-        private DevComponents.Editors.ComboItem orgrimmarComboItem;
-        private DevComponents.Editors.ComboItem ratchetComboItem;
-        private DevComponents.Editors.ComboItem ravenholdtComboItem;
-        private DevComponents.Editors.ComboItem shatariSkyguarComboItem;
-        private DevComponents.Editors.ComboItem shatteredSunOffensiveComboItem;
-        private DevComponents.Editors.ComboItem shendralarComboItem;
-        private DevComponents.Editors.ComboItem silvermoonCityComboItem;
-        private DevComponents.Editors.ComboItem silverwingSentinelsComboItem;
-        private DevComponents.Editors.ComboItem sporeggarComboItem;
-        private DevComponents.Editors.ComboItem stormpikeGuardComboItem;
-        private DevComponents.Editors.ComboItem stormwindComboItem;
-        private DevComponents.Editors.ComboItem syndicateComboItem;
-        private DevComponents.Editors.ComboItem theAldorComboItem;
-        private DevComponents.Editors.ComboItem theConsortiumComboItem;
-        private DevComponents.Editors.ComboItem theDefilersComboItem;
-        private DevComponents.Editors.ComboItem theFrostbornComboItem;
-        private DevComponents.Editors.ComboItem theHandOfVengeanceComboItem;
-        private DevComponents.Editors.ComboItem theKaluakComboItem;
-        private DevComponents.Editors.ComboItem theLeagueOfArathorComboItem;
-        private DevComponents.Editors.ComboItem theMagharComboItem;
-        private DevComponents.Editors.ComboItem theOraclesComboItem;
-        private DevComponents.Editors.ComboItem theScaleOfTheSandsComboItem;
-        private DevComponents.Editors.ComboItem theScryersComboItem;
-        private DevComponents.Editors.ComboItem theShatarComboItem;
-        private DevComponents.Editors.ComboItem theSilverCovenantComboItem;
-        private DevComponents.Editors.ComboItem theSonsOfHodirComboItem;
-        private DevComponents.Editors.ComboItem theSunreaversComboItem;
-        private DevComponents.Editors.ComboItem theTaunkaComboItem;
-        private DevComponents.Editors.ComboItem theVioletEyeComboItem;
-        private DevComponents.Editors.ComboItem theWyrmrestAccordComboItem;
-        private DevComponents.Editors.ComboItem thoriumBrotherhoodComboItem;
-        private DevComponents.Editors.ComboItem thrallmarComboItem;
-        private DevComponents.Editors.ComboItem thunderBluffComboItem;
-        private DevComponents.Editors.ComboItem timbermawHoldComboItem;
-        private DevComponents.Editors.ComboItem tranquillienComboItem;
-        private DevComponents.Editors.ComboItem undercityComboItem;
-        private DevComponents.Editors.ComboItem valianceExpeditionComboItem;
-        private DevComponents.Editors.ComboItem warsongOffensiveComboItem;
-        private DevComponents.Editors.ComboItem warsongOutridersComboItem;
-        private DevComponents.Editors.ComboItem wildhammerClanComboItem;
-        private DevComponents.Editors.ComboItem wintersaberTrainersComboItem;
-        private DevComponents.Editors.ComboItem zandalarTribeComboItem;
         private DevComponents.Editors.ComboItem selectFactionStandingComboItem;
         private DevComponents.Editors.ComboItem selectProfessionComboItem;
         private DevComponents.DotNetBar.LabelX itemSocketLabel;
@@ -6830,8 +6046,6 @@
         private DevComponents.Editors.ComboItem permanentOBSOLETEComboItem;
         private DevComponents.Editors.ComboItem miscellaneousComboItem;
         private DevComponents.Editors.ComboItem glyphComboItem;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx itemSubClassComboBox;
-        private DevComponents.Editors.ComboItem nyiComboItem;
         private DevComponents.DotNetBar.LabelX itemSubClassLabel;
         private DevComponents.DotNetBar.Controls.ComboBoxEx itemFlagsComboBox;
         private DevComponents.Editors.ComboItem soulboundComboItem;
@@ -6862,7 +6076,6 @@
         private DevComponents.Editors.ComboItem hordeComboItem;
         private DevComponents.Editors.ComboItem allianceComboItem;
         private DevComponents.Editors.ComboItem extendedCostComboItem;
-        private DevComponents.Editors.ComboItem comboItem5;
         private DevComponents.Editors.ComboItem rollDisabledComboItem;
         private System.Windows.Forms.LinkLabel itemDetailsLink;
         private DevComponents.DotNetBar.LabelX copperLabel;
@@ -6903,7 +6116,7 @@
         private DevComponents.Editors.ComboItem onPickupComboItem;
         private DevComponents.Editors.ComboItem onEquipComboItem;
         private DevComponents.Editors.ComboItem onUseComboItem;
-        private DevComponents.Editors.IntegerInput sellPriceCopperIntegerInput;
+        private DevComponents.Editors.IntegerInput sellCopperIntegerInput;
         private DevComponents.Editors.IntegerInput containerSlotsIntegerInput;
         private DevComponents.Editors.IntegerInput stackableIntegerInput;
         private DevComponents.Editors.IntegerInput maxCountIntegerInput;
@@ -6924,8 +6137,8 @@
         private DevComponents.DotNetBar.LabelX itemReqDisenchantSkillLabel;
         private DevComponents.Editors.IntegerInput reqDisenchantSkillIntegerInput;
         private DevComponents.DotNetBar.LabelX itemScalingStatDistLabel;
-        private DevComponents.Editors.IntegerInput itemScalingStatDistributionIntegerInput;
-        private DevComponents.Editors.IntegerInput itemScalingStatsValueIntegerInput;
+        private DevComponents.Editors.IntegerInput scalingStatDistributionIntegerInput;
+        private DevComponents.Editors.IntegerInput scalingStatValueIntegerInput;
         private DevComponents.DotNetBar.LabelX itemScalingStatsValueLabel;
         private DevComponents.DotNetBar.ButtonX findSocketBonusButton;
         private DevComponents.Editors.IntegerInput socketBonusIntegerInput;
@@ -6963,7 +6176,7 @@
         private DevComponents.Editors.IntegerInput spellIntegerInput;
         private DevComponents.DotNetBar.ButtonX findSpellForItemButton;
         private DevComponents.DotNetBar.LabelX itemTriggerSpellLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx triggerComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx spellTriggerComboBox;
         private DevComponents.Editors.ComboItem onUseSpellTriggerComboItem;
         private DevComponents.Editors.ComboItem onEquipSpellTriggerComboItem;
         private DevComponents.Editors.ComboItem chanceOnHitSpellTriggerComboItem;
@@ -6999,9 +6212,9 @@
         private DevComponents.Editors.ComboItem plateMatComboItem;
         private DevComponents.Editors.ComboItem clothMatComboItem;
         private DevComponents.Editors.ComboItem leatherMatComboItem;
-        private DevComponents.Editors.IntegerInput pageTxtIntegerInput;
+        private DevComponents.Editors.IntegerInput pageTextIntegerInput;
         private DevComponents.DotNetBar.LabelX itemOtherPageTxtLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx langIdComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx languageIdComboBox;
         private DevComponents.Editors.ComboItem universalComboItem;
         private DevComponents.Editors.ComboItem orcishComboItem;
         private DevComponents.Editors.ComboItem darnassianComboItem;
@@ -7121,7 +6334,7 @@
         private DevComponents.Editors.ComboItem rawFishFoodTypeComboItem;
         private DevComponents.DotNetBar.LabelX itemOtherMinMoneyLootLabel;
         private DevComponents.Editors.IntegerInput minMoneyLootIntegerInput;
-        private DevComponents.Editors.IntegerInput maxMoneLootIntegerInput;
+        private DevComponents.Editors.IntegerInput maxMoneyLootIntegerInput;
         private DevComponents.DotNetBar.LabelX itemOtherMaxMoneyLootLabel;
         private DevComponents.DotNetBar.LabelX itemOtherItemLimitCategoryLabel;
         private DevComponents.Editors.IntegerInput limitCategoryIntegerInput;
@@ -7143,6 +6356,10 @@
         private DevComponents.Editors.IntegerInput scriptNameIntegerInput;
         private DevComponents.DotNetBar.Controls.GroupPanel itemStatsGroupPanel;
         private DevComponents.DotNetBar.ButtonX addStatsButton;
+        private DevComponents.Editors.IntegerInput reqRepFactionIntegerInput;
+        private DevComponents.DotNetBar.ButtonX findFactionButton;
+        private DevComponents.Editors.IntegerInput itemSubClassIntegerInput;
+        private ItemStatsControl itemStatsControl1;
 
 
     }

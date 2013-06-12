@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrinityCore_Manager_v3.Properties
+namespace TrinityCore_Manager.Properties
 {
 
 

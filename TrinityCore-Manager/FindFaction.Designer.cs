@@ -1,6 +1,6 @@
 ﻿namespace TrinityCore_Manager
 {
-    partial class FindItemGemProperties
+    partial class FindFaction
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindItemGemProperties));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindFaction));
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
-            this.itemGemPropertiesListView = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.gemPropertiesIdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gemPropertiesNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.findFactionListView = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.factionIdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.factionNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.searchLabel = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(214, 484);
+            this.cancelButton.Location = new System.Drawing.Point(214, 493);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -55,42 +55,42 @@
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(295, 484);
+            this.okButton.Location = new System.Drawing.Point(295, 493);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(68, 23);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.okButton.TabIndex = 8;
             this.okButton.Text = "Ok";
             // 
-            // itemGemPropertiesListView
+            // findFactionListView
             // 
-            this.itemGemPropertiesListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.findFactionListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.itemGemPropertiesListView.Border.Class = "ListViewBorder";
-            this.itemGemPropertiesListView.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemGemPropertiesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.gemPropertiesIdColumnHeader,
-            this.gemPropertiesNameColumnHeader});
-            this.itemGemPropertiesListView.ForeColor = System.Drawing.Color.White;
-            this.itemGemPropertiesListView.Location = new System.Drawing.Point(2, 41);
-            this.itemGemPropertiesListView.Name = "itemGemPropertiesListView";
-            this.itemGemPropertiesListView.Size = new System.Drawing.Size(361, 437);
-            this.itemGemPropertiesListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.itemGemPropertiesListView.TabIndex = 5;
-            this.itemGemPropertiesListView.UseCompatibleStateImageBehavior = false;
-            this.itemGemPropertiesListView.View = System.Windows.Forms.View.Details;
+            this.findFactionListView.Border.Class = "ListViewBorder";
+            this.findFactionListView.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.findFactionListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.factionIdColumnHeader,
+            this.factionNameColumnHeader});
+            this.findFactionListView.ForeColor = System.Drawing.Color.White;
+            this.findFactionListView.Location = new System.Drawing.Point(2, 50);
+            this.findFactionListView.Name = "findFactionListView";
+            this.findFactionListView.Size = new System.Drawing.Size(361, 437);
+            this.findFactionListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.findFactionListView.TabIndex = 5;
+            this.findFactionListView.UseCompatibleStateImageBehavior = false;
+            this.findFactionListView.View = System.Windows.Forms.View.Details;
             // 
-            // gemPropertiesIdColumnHeader
+            // factionIdColumnHeader
             // 
-            this.gemPropertiesIdColumnHeader.Text = "Properties ID";
-            this.gemPropertiesIdColumnHeader.Width = 79;
+            this.factionIdColumnHeader.Text = "Faction ID";
+            this.factionIdColumnHeader.Width = 79;
             // 
-            // gemPropertiesNameColumnHeader
+            // factionNameColumnHeader
             // 
-            this.gemPropertiesNameColumnHeader.Text = "Properties Name";
-            this.gemPropertiesNameColumnHeader.Width = 278;
+            this.factionNameColumnHeader.Text = "Faction Name";
+            this.factionNameColumnHeader.Width = 277;
             // 
             // searchTextBox
             // 
@@ -101,7 +101,7 @@
             this.searchTextBox.Border.Class = "TextBoxBorder";
             this.searchTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.searchTextBox.ForeColor = System.Drawing.Color.White;
-            this.searchTextBox.Location = new System.Drawing.Point(2, 15);
+            this.searchTextBox.Location = new System.Drawing.Point(2, 24);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(361, 20);
             this.searchTextBox.TabIndex = 7;
@@ -113,20 +113,20 @@
             // 
             this.searchLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.searchLabel.Location = new System.Drawing.Point(2, -6);
+            this.searchLabel.Location = new System.Drawing.Point(2, 3);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(43, 23);
             this.searchLabel.TabIndex = 6;
             this.searchLabel.Text = "Search";
             // 
-            // FindItemGemProperties
+            // FindFaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 522);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.itemGemPropertiesListView);
+            this.Controls.Add(this.findFactionListView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
             this.DoubleBuffered = true;
@@ -136,8 +136,8 @@
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(382, 560);
-            this.Name = "FindItemGemProperties";
-            this.Text = "Gem Properties";
+            this.Name = "FindFaction";
+            this.Text = "Find Faction";
             this.ResumeLayout(false);
 
         }
@@ -146,9 +146,9 @@
 
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
-        private DevComponents.DotNetBar.Controls.ListViewEx itemGemPropertiesListView;
-        private System.Windows.Forms.ColumnHeader gemPropertiesIdColumnHeader;
-        private System.Windows.Forms.ColumnHeader gemPropertiesNameColumnHeader;
+        private DevComponents.DotNetBar.Controls.ListViewEx findFactionListView;
+        private System.Windows.Forms.ColumnHeader factionIdColumnHeader;
+        private System.Windows.Forms.ColumnHeader factionNameColumnHeader;
         private DevComponents.DotNetBar.Controls.TextBoxX searchTextBox;
         private DevComponents.DotNetBar.LabelX searchLabel;
     }
