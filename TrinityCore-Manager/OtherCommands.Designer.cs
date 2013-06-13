@@ -1,0 +1,195 @@
+﻿namespace TrinityCore_Manager
+{
+    partial class OtherCommands
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OtherCommands));
+            this.setMotdLabel = new DevComponents.DotNetBar.LabelX();
+            this.motdTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.playerLimitLabel = new DevComponents.DotNetBar.LabelX();
+            this.playerLimitIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.allowConnLabel = new DevComponents.DotNetBar.LabelX();
+            this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.okButton = new DevComponents.DotNetBar.ButtonX();
+            this.cancelButton = new DevComponents.DotNetBar.ButtonX();
+            this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            ((System.ComponentModel.ISupportInitialize)(this.playerLimitIntegerInput)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // setMotdLabel
+            // 
+            // 
+            // 
+            // 
+            this.setMotdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.setMotdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.setMotdLabel.Location = new System.Drawing.Point(12, 12);
+            this.setMotdLabel.Name = "setMotdLabel";
+            this.setMotdLabel.Size = new System.Drawing.Size(166, 23);
+            this.setMotdLabel.TabIndex = 0;
+            this.setMotdLabel.Text = "Set Message of the Day:";
+            // 
+            // motdTextBox
+            // 
+            this.motdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.motdTextBox.Border.Class = "TextBoxBorder";
+            this.motdTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.motdTextBox.ForeColor = System.Drawing.Color.White;
+            this.motdTextBox.Location = new System.Drawing.Point(12, 41);
+            this.motdTextBox.Multiline = true;
+            this.motdTextBox.Name = "motdTextBox";
+            this.motdTextBox.Size = new System.Drawing.Size(756, 160);
+            this.motdTextBox.TabIndex = 1;
+            // 
+            // playerLimitLabel
+            // 
+            // 
+            // 
+            // 
+            this.playerLimitLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.playerLimitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.playerLimitLabel.Location = new System.Drawing.Point(230, 207);
+            this.playerLimitLabel.Name = "playerLimitLabel";
+            this.playerLimitLabel.Size = new System.Drawing.Size(162, 23);
+            this.playerLimitLabel.TabIndex = 2;
+            this.playerLimitLabel.Text = "Set Server Player Limit:";
+            // 
+            // playerLimitIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.playerLimitIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.playerLimitIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.playerLimitIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.playerLimitIntegerInput.Location = new System.Drawing.Point(398, 210);
+            this.playerLimitIntegerInput.MinValue = 0;
+            this.playerLimitIntegerInput.Name = "playerLimitIntegerInput";
+            this.playerLimitIntegerInput.ShowUpDown = true;
+            this.playerLimitIntegerInput.Size = new System.Drawing.Size(172, 20);
+            this.playerLimitIntegerInput.TabIndex = 3;
+            // 
+            // allowConnLabel
+            // 
+            // 
+            // 
+            // 
+            this.allowConnLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.allowConnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.allowConnLabel.Location = new System.Drawing.Point(260, 245);
+            this.allowConnLabel.Name = "allowConnLabel";
+            this.allowConnLabel.Size = new System.Drawing.Size(132, 23);
+            this.allowConnLabel.TabIndex = 4;
+            this.allowConnLabel.Text = "Allow connections?";
+            // 
+            // switchButton
+            // 
+            // 
+            // 
+            // 
+            this.switchButton.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton.Location = new System.Drawing.Point(398, 246);
+            this.switchButton.Name = "switchButton";
+            this.switchButton.OffText = "NO";
+            this.switchButton.OffTextColor = System.Drawing.Color.Tomato;
+            this.switchButton.OnText = "YES";
+            this.switchButton.OnTextColor = System.Drawing.Color.Chartreuse;
+            this.switchButton.Size = new System.Drawing.Size(66, 22);
+            this.switchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton.TabIndex = 5;
+            this.switchButton.Value = true;
+            this.switchButton.ValueObject = "Y";
+            // 
+            // okButton
+            // 
+            this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.okButton.Location = new System.Drawing.Point(670, 277);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(98, 39);
+            this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.okButton.TabIndex = 6;
+            this.okButton.Text = "Submit";
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.Location = new System.Drawing.Point(12, 277);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(98, 39);
+            this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cancelButton.TabIndex = 7;
+            this.cancelButton.Text = "Cancel";
+            // 
+            // superTooltip
+            // 
+            this.superTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
+            // OtherCommands
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(780, 328);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.okButton);
+            this.Controls.Add(this.switchButton);
+            this.Controls.Add(this.allowConnLabel);
+            this.Controls.Add(this.playerLimitIntegerInput);
+            this.Controls.Add(this.playerLimitLabel);
+            this.Controls.Add(this.motdTextBox);
+            this.Controls.Add(this.setMotdLabel);
+            this.DoubleBuffered = true;
+            this.EnableGlass = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "OtherCommands";
+            this.Text = "Other Server Commands";
+            this.Load += new System.EventHandler(this.OtherCommands_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.playerLimitIntegerInput)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevComponents.DotNetBar.LabelX setMotdLabel;
+        private DevComponents.DotNetBar.Controls.TextBoxX motdTextBox;
+        private DevComponents.DotNetBar.LabelX playerLimitLabel;
+        private DevComponents.Editors.IntegerInput playerLimitIntegerInput;
+        private DevComponents.DotNetBar.LabelX allowConnLabel;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
+        private DevComponents.DotNetBar.ButtonX okButton;
+        private DevComponents.DotNetBar.ButtonX cancelButton;
+        private DevComponents.DotNetBar.SuperTooltip superTooltip;
+    }
+}

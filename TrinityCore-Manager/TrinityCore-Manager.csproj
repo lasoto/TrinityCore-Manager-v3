@@ -99,6 +99,12 @@
     <Compile Include="CharacterSetReputation.Designer.cs">
       <DependentUpon>CharacterSetReputation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterSetSkillLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSetSkillLevel.Designer.cs">
+      <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
     <Compile Include="CreateGuild.cs">
       <SubType>Form</SubType>
@@ -139,6 +145,12 @@
     </Compile>
     <Compile Include="FindFaction.Designer.cs">
       <DependentUpon>FindFaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindGUID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindGUID.Designer.cs">
+      <DependentUpon>FindGUID.cs</DependentUpon>
     </Compile>
     <Compile Include="FindItem.cs">
       <SubType>Form</SubType>
@@ -220,6 +232,12 @@
     </Compile>
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
+    <Compile Include="OtherCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherCommands.Designer.cs">
+      <DependentUpon>OtherCommands.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +290,9 @@
     <EmbeddedResource Include="CharacterSetReputation.resx">
       <DependentUpon>CharacterSetReputation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CharacterSetSkillLevel.resx">
+      <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateGuild.resx">
       <DependentUpon>CreateGuild.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindFaction.resx">
       <DependentUpon>FindFaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindGUID.resx">
+      <DependentUpon>FindGUID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindItem.resx">
       <DependentUpon>FindItem.cs</DependentUpon>
@@ -328,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherCommands.resx">
+      <DependentUpon>OtherCommands.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerInformation.resx">
       <DependentUpon>PlayerInformation.cs</DependentUpon>

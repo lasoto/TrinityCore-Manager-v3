@@ -61,6 +61,15 @@ namespace TrinityCore_Manager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets whether the world accepts new client connections. Even if the server is online..
+        /// </summary>
+        internal static string AllowConnDesc {
+            get {
+                return ResourceManager.GetString("AllowConnDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The type of ammunition the item uses.
         /// </summary>
         internal static string AmmoTypeDesc {
