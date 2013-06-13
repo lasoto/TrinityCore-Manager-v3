@@ -219,7 +219,7 @@
             // 
             this.createButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.createButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.createButton.Location = new System.Drawing.Point(384, 224);
+            this.createButton.Location = new System.Drawing.Point(384, 216);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(106, 35);
             this.createButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -232,7 +232,7 @@
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(6, 224);
+            this.cancelButton.Location = new System.Drawing.Point(12, 216);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(106, 35);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -246,7 +246,7 @@
             // 
             this.accountUsernameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountUsernameLabel.Location = new System.Drawing.Point(102, 36);
+            this.accountUsernameLabel.Location = new System.Drawing.Point(63, 49);
             this.accountUsernameLabel.Name = "accountUsernameLabel";
             this.accountUsernameLabel.Size = new System.Drawing.Size(139, 26);
             this.accountUsernameLabel.TabIndex = 4;
@@ -259,7 +259,7 @@
             // 
             this.accountPasswordLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPasswordLabel.Location = new System.Drawing.Point(102, 81);
+            this.accountPasswordLabel.Location = new System.Drawing.Point(63, 94);
             this.accountPasswordLabel.Name = "accountPasswordLabel";
             this.accountPasswordLabel.Size = new System.Drawing.Size(139, 26);
             this.accountPasswordLabel.TabIndex = 5;
@@ -272,7 +272,7 @@
             // 
             this.accountPermissionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountPermissionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPermissionLabel.Location = new System.Drawing.Point(60, 124);
+            this.accountPermissionLabel.Location = new System.Drawing.Point(21, 137);
             this.accountPermissionLabel.Name = "accountPermissionLabel";
             this.accountPermissionLabel.Size = new System.Drawing.Size(181, 26);
             this.accountPermissionLabel.TabIndex = 6;
@@ -287,7 +287,7 @@
             this.accountCreateUsernameTextBox.Border.Class = "TextBoxBorder";
             this.accountCreateUsernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountCreateUsernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreateUsernameTextBox.Location = new System.Drawing.Point(247, 41);
+            this.accountCreateUsernameTextBox.Location = new System.Drawing.Point(208, 54);
             this.accountCreateUsernameTextBox.Name = "accountCreateUsernameTextBox";
             this.accountCreateUsernameTextBox.Size = new System.Drawing.Size(216, 20);
             this.accountCreateUsernameTextBox.TabIndex = 7;
@@ -301,7 +301,7 @@
             this.accountCreatePasswordTextBox.Border.Class = "TextBoxBorder";
             this.accountCreatePasswordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountCreatePasswordTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreatePasswordTextBox.Location = new System.Drawing.Point(247, 86);
+            this.accountCreatePasswordTextBox.Location = new System.Drawing.Point(208, 99);
             this.accountCreatePasswordTextBox.Name = "accountCreatePasswordTextBox";
             this.accountCreatePasswordTextBox.Size = new System.Drawing.Size(216, 20);
             this.accountCreatePasswordTextBox.TabIndex = 8;
@@ -312,7 +312,7 @@
             this.accountPermissionLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.accountPermissionLevelComboBox.FormattingEnabled = true;
             this.accountPermissionLevelComboBox.ItemHeight = 14;
-            this.accountPermissionLevelComboBox.Location = new System.Drawing.Point(247, 130);
+            this.accountPermissionLevelComboBox.Location = new System.Drawing.Point(208, 143);
             this.accountPermissionLevelComboBox.Name = "accountPermissionLevelComboBox";
             this.accountPermissionLevelComboBox.Size = new System.Drawing.Size(216, 20);
             this.accountPermissionLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

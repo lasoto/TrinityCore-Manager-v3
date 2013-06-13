@@ -43,7 +43,7 @@
             // 
             this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountAddBanLabel.Location = new System.Drawing.Point(59, 49);
+            this.accountAddBanLabel.Location = new System.Drawing.Point(49, 64);
             this.accountAddBanLabel.Name = "accountAddBanLabel";
             this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
             this.accountAddBanLabel.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.accountBanComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.accountBanComboBox.FormattingEnabled = true;
             this.accountBanComboBox.ItemHeight = 14;
-            this.accountBanComboBox.Location = new System.Drawing.Point(131, 51);
+            this.accountBanComboBox.Location = new System.Drawing.Point(121, 66);
             this.accountBanComboBox.Name = "accountBanComboBox";
             this.accountBanComboBox.Size = new System.Drawing.Size(189, 20);
             this.accountBanComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -88,7 +88,7 @@
             // 
             this.refreshButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.refreshButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.refreshButton.Location = new System.Drawing.Point(180, 77);
+            this.refreshButton.Location = new System.Drawing.Point(170, 92);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(75, 23);
             this.refreshButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

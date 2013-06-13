@@ -29,127 +29,127 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountCleanup));
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.deleteAccountsDateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.deleteAccOlderThenLabel = new DevComponents.DotNetBar.LabelX();
+            this.dateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
-            this.createButton = new DevComponents.DotNetBar.ButtonX();
-            ((System.ComponentModel.ISupportInitialize)(this.deleteAccountsDateTimeInput)).BeginInit();
+            this.deleteButton = new DevComponents.DotNetBar.ButtonX();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelX1
+            // deleteAccOlderThenLabel
             // 
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(156, 77);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(193, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Delete Accounts Older Then";
+            this.deleteAccOlderThenLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.deleteAccOlderThenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.deleteAccOlderThenLabel.Location = new System.Drawing.Point(97, 49);
+            this.deleteAccOlderThenLabel.Name = "deleteAccOlderThenLabel";
+            this.deleteAccOlderThenLabel.Size = new System.Drawing.Size(193, 23);
+            this.deleteAccOlderThenLabel.TabIndex = 0;
+            this.deleteAccOlderThenLabel.Text = "Delete Accounts Older Then";
             // 
-            // deleteAccountsDateTimeInput
-            // 
-            // 
-            // 
-            // 
-            this.deleteAccountsDateTimeInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.deleteAccountsDateTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.deleteAccountsDateTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.deleteAccountsDateTimeInput.ButtonDropDown.Visible = true;
-            this.deleteAccountsDateTimeInput.IsPopupCalendarOpen = false;
-            this.deleteAccountsDateTimeInput.Location = new System.Drawing.Point(156, 125);
+            // dateTimeInput
             // 
             // 
             // 
-            this.deleteAccountsDateTimeInput.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            this.dateTimeInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimeInput.ButtonDropDown.Visible = true;
+            this.dateTimeInput.IsPopupCalendarOpen = false;
+            this.dateTimeInput.Location = new System.Drawing.Point(97, 78);
             // 
             // 
             // 
-            this.deleteAccountsDateTimeInput.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.deleteAccountsDateTimeInput.MonthCalendar.ClearButtonVisible = true;
+            this.dateTimeInput.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.deleteAccountsDateTimeInput.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.deleteAccountsDateTimeInput.MonthCalendar.DisplayMonth = new System.DateTime(2013, 6, 1, 0, 0, 0, 0);
-            this.deleteAccountsDateTimeInput.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.deleteAccountsDateTimeInput.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.deleteAccountsDateTimeInput.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            this.dateTimeInput.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimeInput.MonthCalendar.ClearButtonVisible = true;
             // 
             // 
             // 
-            this.deleteAccountsDateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.deleteAccountsDateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.deleteAccountsDateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.deleteAccountsDateTimeInput.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.deleteAccountsDateTimeInput.MonthCalendar.TodayButtonVisible = true;
-            this.deleteAccountsDateTimeInput.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.deleteAccountsDateTimeInput.Name = "deleteAccountsDateTimeInput";
-            this.deleteAccountsDateTimeInput.Size = new System.Drawing.Size(193, 20);
-            this.deleteAccountsDateTimeInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.deleteAccountsDateTimeInput.TabIndex = 1;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimeInput.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput.MonthCalendar.DisplayMonth = new System.DateTime(2013, 6, 1, 0, 0, 0, 0);
+            this.dateTimeInput.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimeInput.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimeInput.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimeInput.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimeInput.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dateTimeInput.Name = "dateTimeInput";
+            this.dateTimeInput.Size = new System.Drawing.Size(193, 20);
+            this.dateTimeInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimeInput.TabIndex = 1;
             // 
             // cancelButton
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(6, 216);
+            this.cancelButton.Location = new System.Drawing.Point(12, 148);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(106, 35);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             // 
-            // createButton
+            // deleteButton
             // 
-            this.createButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.createButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.createButton.Location = new System.Drawing.Point(384, 216);
-            this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(106, 35);
-            this.createButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.createButton.TabIndex = 4;
-            this.createButton.Text = "Delete";
-            this.createButton.TextColor = System.Drawing.Color.Chartreuse;
+            this.deleteButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.deleteButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.deleteButton.Location = new System.Drawing.Point(279, 148);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(106, 35);
+            this.deleteButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.deleteButton.TabIndex = 4;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.TextColor = System.Drawing.Color.Chartreuse;
             // 
             // AccountCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 263);
+            this.ClientSize = new System.Drawing.Size(397, 195);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.createButton);
-            this.Controls.Add(this.deleteAccountsDateTimeInput);
-            this.Controls.Add(this.labelX1);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.dateTimeInput);
+            this.Controls.Add(this.deleteAccOlderThenLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(518, 301);
+            this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(518, 301);
+            this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AccountCleanup";
             this.Text = "Database Account Cleanup";
-            ((System.ComponentModel.ISupportInitialize)(this.deleteAccountsDateTimeInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput deleteAccountsDateTimeInput;
+        private DevComponents.DotNetBar.LabelX deleteAccOlderThenLabel;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput;
         private DevComponents.DotNetBar.ButtonX cancelButton;
-        private DevComponents.DotNetBar.ButtonX createButton;
+        private DevComponents.DotNetBar.ButtonX deleteButton;
     }
 }

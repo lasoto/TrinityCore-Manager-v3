@@ -87,19 +87,25 @@
     <Compile Include="AddIPBan.designer.cs">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterRemoveResurrectionSickenss.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterRemoveResurrectionSickenss.Designer.cs">
-      <DependentUpon>CharacterRemoveResurrectionSickenss.cs</DependentUpon>
-    </Compile>
     <Compile Include="CharacterSetLevel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CharacterSetLevel.Designer.cs">
       <DependentUpon>CharacterSetLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterSetReputation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSetReputation.Designer.cs">
+      <DependentUpon>CharacterSetReputation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
+    <Compile Include="CreateGuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateGuild.Designer.cs">
+      <DependentUpon>CreateGuild.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,24 @@
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="Database\MySqlDatabase.cs" />
     <Compile Include="Database\MySqlHelper.cs" />
+    <Compile Include="DeleteGuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteGuild.Designer.cs">
+      <DependentUpon>DeleteGuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccount.Designer.cs">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditGuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGuild.Designer.cs">
+      <DependentUpon>EditGuild.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="FindFaction.cs">
       <SubType>Form</SubType>
@@ -196,6 +220,30 @@
     </Compile>
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
+    <Compile Include="PlayerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerInformation.Designer.cs">
+      <DependentUpon>PlayerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveAccountBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveAccountBan.Designer.cs">
+      <DependentUpon>RemoveAccountBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveIPBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveIPBan.Designer.cs">
+      <DependentUpon>RemoveIPBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMail.Designer.cs">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="TC\CMake.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\ProcessHelper.cs" />
@@ -218,14 +266,26 @@
     <EmbeddedResource Include="AddIPBan.resx">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterRemoveResurrectionSickenss.resx">
-      <DependentUpon>CharacterRemoveResurrectionSickenss.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CharacterSetLevel.resx">
       <DependentUpon>CharacterSetLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CharacterSetReputation.resx">
+      <DependentUpon>CharacterSetReputation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateGuild.resx">
+      <DependentUpon>CreateGuild.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateItem.resx">
       <DependentUpon>CreateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteGuild.resx">
+      <DependentUpon>DeleteGuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccount.resx">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGuild.resx">
+      <DependentUpon>EditGuild.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindFaction.resx">
       <DependentUpon>FindFaction.cs</DependentUpon>
@@ -269,6 +329,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayerInformation.resx">
+      <DependentUpon>PlayerInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -279,6 +342,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemoveAccountBan.resx">
+      <DependentUpon>RemoveAccountBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveIPBan.resx">
+      <DependentUpon>RemoveIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMail.resx">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
