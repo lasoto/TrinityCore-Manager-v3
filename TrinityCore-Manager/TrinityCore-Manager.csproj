@@ -118,6 +118,12 @@
     <Compile Include="CreateItem.designer.cs">
       <DependentUpon>CreateItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNPC.Designer.cs">
+      <DependentUpon>CreateNPC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="Database\MySqlDatabase.cs" />
     <Compile Include="Database\MySqlHelper.cs" />
@@ -140,17 +146,41 @@
       <DependentUpon>EditGuild.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\AttributeExtensions.cs" />
+    <Compile Include="FindClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindClass.Designer.cs">
+      <DependentUpon>FindClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindDynamicFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDynamicFlags.Designer.cs">
+      <DependentUpon>FindDynamicFlags.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindFaction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FindFaction.Designer.cs">
       <DependentUpon>FindFaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindFlagsExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindFlagsExtra.Designer.cs">
+      <DependentUpon>FindFlagsExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindGUID.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FindGUID.Designer.cs">
       <DependentUpon>FindGUID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindInhabitType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindInhabitType.Designer.cs">
+      <DependentUpon>FindInhabitType.cs</DependentUpon>
     </Compile>
     <Compile Include="FindItem.cs">
       <SubType>Form</SubType>
@@ -206,17 +236,53 @@
     <Compile Include="FindItemSocketBonus.designer.cs">
       <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemSpell.cs">
+    <Compile Include="FindMechanicImmuneMask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemSpell.designer.cs">
-      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    <Compile Include="FindMechanicImmuneMask.Designer.cs">
+      <DependentUpon>FindMechanicImmuneMask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindNpc.cs">
+    <Compile Include="FindNPCFlag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindNpc.designer.cs">
-      <DependentUpon>FindNpc.cs</DependentUpon>
+    <Compile Include="FindNPCFlag.Designer.cs">
+      <DependentUpon>FindNPCFlag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindRace.Designer.cs">
+      <DependentUpon>FindRace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindSpell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindSpell.designer.cs">
+      <DependentUpon>FindSpell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindNPC.designer.cs">
+      <DependentUpon>FindNPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindTypeFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindTypeFlags.Designer.cs">
+      <DependentUpon>FindTypeFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindUnitFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindUnitFlags.Designer.cs">
+      <DependentUpon>FindUnitFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindUnitFlags2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindUnitFlags2.Designer.cs">
+      <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemStatsControl.cs">
       <SubType>UserControl</SubType>
@@ -299,6 +365,9 @@
     <EmbeddedResource Include="CreateItem.resx">
       <DependentUpon>CreateItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateNPC.resx">
+      <DependentUpon>CreateNPC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteGuild.resx">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,11 +377,23 @@
     <EmbeddedResource Include="EditGuild.resx">
       <DependentUpon>EditGuild.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindClass.resx">
+      <DependentUpon>FindClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDynamicFlags.resx">
+      <DependentUpon>FindDynamicFlags.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindFaction.resx">
       <DependentUpon>FindFaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindFlagsExtra.resx">
+      <DependentUpon>FindFlagsExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindGUID.resx">
       <DependentUpon>FindGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindInhabitType.resx">
+      <DependentUpon>FindInhabitType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindItem.resx">
       <DependentUpon>FindItem.cs</DependentUpon>
@@ -341,11 +422,29 @@
     <EmbeddedResource Include="FindItemSocketBonus.resx">
       <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemSpell.resx">
-      <DependentUpon>FindItemSpell.cs</DependentUpon>
+    <EmbeddedResource Include="FindMechanicImmuneMask.resx">
+      <DependentUpon>FindMechanicImmuneMask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindNpc.resx">
-      <DependentUpon>FindNpc.cs</DependentUpon>
+    <EmbeddedResource Include="FindNPCFlag.resx">
+      <DependentUpon>FindNPCFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindRace.resx">
+      <DependentUpon>FindRace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindSpell.resx">
+      <DependentUpon>FindSpell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindNPC.resx">
+      <DependentUpon>FindNPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindTypeFlags.resx">
+      <DependentUpon>FindTypeFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindUnitFlags.resx">
+      <DependentUpon>FindUnitFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindUnitFlags2.resx">
+      <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemStatsControl.resx">
       <DependentUpon>ItemStatsControl.cs</DependentUpon>

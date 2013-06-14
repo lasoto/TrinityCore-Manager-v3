@@ -85,5 +85,65 @@ namespace TrinityCore_Manager
             CharacterSetReputation setReputation = new CharacterSetReputation();
             setReputation.ShowDialog();
         }
+
+        private void setSkillLevelButton_Click(object sender, EventArgs e)
+        {
+            CharacterSetSkillLevel setSkill = new CharacterSetSkillLevel();
+            setSkill.ShowDialog();
+        }
+
+        private void createItemButton_Click(object sender, EventArgs e)
+        {
+            CreateItem createItem = new CreateItem();
+            createItem.ShowDialog();
+        }
+
+        private void createNpcButton_Click(object sender, EventArgs e)
+        {
+            CreateNPC createNPC = new CreateNPC();
+            createNPC.ShowDialog();
+        }
+
+        private void findFirstUnusedGuidForNpcButton_Click(object sender, EventArgs e)
+        {
+            FindGUID findGUID = new FindGUID();
+            findGUID.ShowDialog();
+        }
+
+        private void findNpcButton_Click(object sender, EventArgs e)
+        {
+            FindNPC findNPC = new FindNPC();
+            findNPC.ShowDialog();
+        }
+
+        private void findItemButton_Click(object sender, EventArgs e)
+        {
+            FindItem findItem = new FindItem();
+            findItem.ShowDialog();
+        }
+
+        private void createGuildButton_Click(object sender, EventArgs e)
+        {
+            CreateGuild createGuild = new CreateGuild();
+            createGuild.ShowDialog();
+        }
+
+        private void editGuildButton_Click(object sender, EventArgs e)
+        {
+            EditGuild editGuild = new EditGuild();
+            editGuild.ShowDialog();
+        }
+
+        private void deleteGuildButton_Click(object sender, EventArgs e)
+        {
+            DeleteGuild deleteGuild = new DeleteGuild();
+            deleteGuild.ShowDialog();
+        }
+
+        private void sendMailButton_Click(object sender, EventArgs e)
+        {
+            SendMail sendMail = new SendMail();
+            sendMail.ShowDialog();
+        }
     }
 }

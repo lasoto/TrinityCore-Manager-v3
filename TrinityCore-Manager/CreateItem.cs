@@ -118,7 +118,7 @@ namespace TrinityCore_Manager
 
         private void findSpellForItemButton_Click(object sender, EventArgs e)
         {
-            FindItemSpell ItemSpell = new FindItemSpell();
+            FindSpell ItemSpell = new FindSpell();
             ItemSpell.ShowDialog();
         }
 

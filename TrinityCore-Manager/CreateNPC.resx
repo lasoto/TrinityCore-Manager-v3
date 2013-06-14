@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="itemCreatorSuperTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>149, 17</value>
+  <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="createWeaponWizardPage.Style.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="npcWizardPage1.Style.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAAK8CAYAAACqdPBgAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAP+iSURBVHhe7J13fJTXlf6REAKBJCSKQIjee+9FICGJ
@@ -1515,186 +1515,152 @@
         hFKoYkXOYXDyHOT/BxtBC7Ts7/f0AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="itemCreatorWizard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="npcSuperTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 17</value>
   </metadata>
-  <data name="itemWeaponStatsInfoLabel.Text" xml:space="preserve">
-    <value>Sheath: How the weapon is put away. Two-handed puts it on the back, crossed if the weapon is actually single handed. 
-One handed puts it on the waist, etc.
-
-Ammo Type: The kind of ammo it uses. Leave at No Ammo if it isnt a ranged weapon.
-
-Delay: Weapon speed. Input is in milliseconds. Example: 3000 milliseconds = 3.0 seconds.
-
-Block: How much block will be added when the item is equipped.
-
-Armor: How much armor will be added once the item is equipped. Can be a negative amount.</value>
+  <data name="vehicleIdIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>Entryid of Vehicle if creature is/has a vehicle entry. This field determines how the player appears on the vehicle, how the vehicle moves, and whether or not the vehicle action bar is shown. For example, a VehicleID of 292 will make the player invisible, prevent the vehicle from strafing left/right (but will allow fowards/backwards), and will show the vehicle action bar spells (which are defined in spell1-8). An npc_spellclick_spells entry must be made for this creature entry in order for this to work.</value>
   </data>
-  <data name="itemReqInfoLabel.Text" xml:space="preserve">
-    <value>Required Level: What level the player (1-255) must be to use the item. Leave at blank for no requirement.
-
-Item Level: Used to indicate the quality of the item numerically, also impacts enchanting requirements.
-
-Reputation: Use this to set a required faction/reputation.
-
-Rep. Rank: Set the level of Req Reputation you want.
-
-Skill/Profession: Use this to set a required skill/profession.
-
-Skill Level: Set the level of Req Skill you want.</value>
+  <data name="killCredit2IntegerInput.SuperTooltip" xml:space="preserve">
+    <value>If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link the the second entry of the creature that could be killed to give quest credit. If more than two creatures can be killed and count toward a single objective, an EAI or C++ script will be required.</value>
   </data>
-  <data name="addStatsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
-</value>
+  <data name="killCredit1IntegerInput.SuperTooltip" xml:space="preserve">
+    <value>If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link the the fist entry of the creature that could be killed to give quest credit.</value>
   </data>
-  <data name="itemStatsInfoLabel.Text" xml:space="preserve">
-    <value>Stat Type: This is a bonus once the item is equipped.
+  <data name="diffEntry3IntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field connects the stats from another entry to this template when in 25man normal, 10man heroic or 25man heroic mode instance. 
+For Dungeons: 
+difficulty_entry_1 = 5 (Heroic)
 
-Value: How much of the Stat Type is being added. 
-Leave blank for no bonus. Can also be a negative amount.
-
-ScalingStatDistribution : Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear)
-use like static stats
-
-ScalingStatValue: Final (level 80) value of the scaling-stat.</value>
+For Raids:
+difficulty_entry_1 = 25 (Normal)
+difficulty_entry_2 = 10 (Heroic)
+difficulty_entry_3 = 25 (Heroic)</value>
   </data>
-  <data name="itemResistsInfoLabel.Text" xml:space="preserve">
-    <value>Holy: How much holy resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
+  <data name="diffEntry2IntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field connects the stats from another entry to this template when in 25man normal, 10man heroic or 25man heroic mode instance. 
+For Dungeons: 
+difficulty_entry_1 = 5 (Heroic)
 
-Fire: How much fire resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
-
-Nature: How much nature resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
-
-Frost: How much frost resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
-
-Shadow: How much shadow resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
-
-Arcane: How much arcane resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.</value>
+For Raids:
+difficulty_entry_1 = 25 (Normal)
+difficulty_entry_2 = 10 (Heroic)
+difficulty_entry_3 = 25 (Heroic)</value>
   </data>
-  <data name="addSocketButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="itemSocketInfoLabel.Text" xml:space="preserve">
-    <value>Socket: Select what color socket you want on your item. If you do not want a socket, select the no symbol.
+  <data name="diffEntry1IntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field connects the stats from another entry to this template when in 25man normal, 10man heroic or 25man heroic mode instance. 
+For Dungeons: 
+difficulty_entry_1 = 5 (Heroic)
 
-Socket Bonus: This bonus will become active when certain criteria are met - usually when 
-all sockets are filled with gems that match the colors of the sockets.</value>
+For Raids:
+difficulty_entry_1 = 25 (Normal)
+difficulty_entry_2 = 10 (Heroic)
+difficulty_entry_3 = 25 (Heroic)</value>
   </data>
-  <data name="addSpellButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
-</value>
+  <data name="iconNameTextBox.SuperTooltip" xml:space="preserve">
+    <value>Used to tell the player what kind of NPC this creature is.
+
+List of known icon names:
+Directions - Used for Guards and Teleporter NPC's.
+Gunner - Indicator of a Turret NPC/Player Controlled.
+vehichleCursor - Indicator that this is a PCV (Player Controlled Vehicle)
+Driver - Shows a Steering Wheel icon when mouse over.
+Attack - Shows a Sword icon indicating you can attack this target.
+Buy - Shows a Brown Bag icon usually if the NPC only sells things.
+Speak - Shows a Chat Bubble icon if this NPC has Quest/Gossip options.
+Pickup - Shows a Hand Grasping icon of if this NPC can be picked up for quest/items.
+Interact - Shows Cog icon commonly used for quest/transport.
+Trainer - Shows a Book icon, identifying this NPC as a "Trainer".
+Taxi - Shows a Boot w/Wings icon identifying this NPC as a "Taxi".
+Repair - Shows a Anvil icon identifying this npc as a Repair NPC.
+LootAll - Shows a Multiple Brown Bag icon (Same as holding Shift before looting a creature).
+Quest - Unused or Unknown. (See EntryID 32870 The Real Ronakada).
+PVP - Unused or Unknown.(See EntryID 29387 Arena Master: Dalaran Arena).
+
+Note: This is not required to make the creature/npc function unless you are using scripts or gossip options.</value>
   </data>
-  <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="npcFlagIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>A bitmask that represents what NPC flags the creature has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
+
+So if you want an NPC that is a quest giver, a vendor, and can repair you just add the specific flags together: `npcflag`=`npcflag`|1|2|128|4096  
+The same with hexadecimal numbers: 0x1 + 0x2 + 0x80 + 0x1000 = 0x1083</value>
+  </data>
+  <data name="wdbVerifiedIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field is used by the TrinityDB Team to determine whether a template has been verified from WDB files.
+
+If value is 0 then it has not been parsed yet.
+
+If value is above 0 then it has been parsed with WDB files from that specific client build.
+
+If value is -1 then it is just a place holder until proper data are found on WDBs.
+
+If value is -Client Build then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.</value>
+  </data>
+  <data name="typeFlagsIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field can control whether a mob is minable or herbable or lootable by enineer. If it is either of those three, then the loot given when it is skinned/mined will be stored in the skinning_loot_templatetable. It also controls, whether this mob can be tamed by a hunter. Other fields have no special meaning on the serverside. The entire field will be send to the client in SMSG_CREATURE_QUERY_RESPONSE</value>
+  </data>
+  <data name="factionHIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>The faction if the creature is on the horde side. See FactionTemplate.dbc. Just because more than one faction has the same name, the inter-faction relationships can be different.
+Note: This field also controls the creature family assistance mechanic. Only creatures with the same faction will assist each othe</value>
+  </data>
+  <data name="factionAIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>The faction if the creature is on the alliance side. See FactionTemplate.dbc. Just because more than one faction has the same name, the inter-faction relationships can be different.
+Note: This field also controls the creature family assistance mechanic. Only creatures with the same faction will assist each other.</value>
+  </data>
+  <data name="unitClassComboBox.SuperTooltip" xml:space="preserve">
+    <value>This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to exp, health_mod, and mana_mod. Not setting this value will report a minor warning in the DB_Errors.log.
+
+WARRIOR: Health only (equal to Rogue)
+
+PALADIN: Health &amp; Mana (more health than Mage but less mana)
+
+ROGUE: Health only (equal to Warrior)
+
+MAGE: Health &amp; Mana (less health than Paladin but more mana)</value>
+  </data>
+  <data name="rangedAttackPowerIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>This field also refers to the damage multiplier.
+Example: If the creature is using a ranged weapon and its rangedattackpower = 500 and the dmg_multiplier is 10 the max that it can hit for with ranged attacks would be 5000</value>
+  </data>
+  <data name="attackPowerIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>The attack power for the creature's melee attacks. This field along with mindmg and maxdmg dictate how much the creature will hit for. The formula in applying correct damages is as follows:
+UPDATE `creature_template` SET 
+    `mindmg` = &lt;#1&gt;, 
+    `maxdmg` = &lt;#2&gt;, 
+    `attackpower` = ROUND((`mindmg` + `maxdmg`) / 4 * 7), 
+    `mindmg` = ROUND(`mindmg` - `attackpower` / 7), 
+    `maxdmg` = ROUND(`maxdmg` - `attackpower` / 7) 
+  WHERE `entry` = ...
+In the query above, substitute '&lt;#1&gt;' with the minimum damage you want the creature to deal and '&lt;#2&gt;' with the maximum damage you want the creature to deal.
+NOTE: You might also want to double check the values calculated after the query is run because if the difference between mindmg and maxdmg is too high, mindmg will end up being a negative value.</value>
+  </data>
+  <data name="classIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>If the NPC is a class trainer or a pet trainer (trainer_type == 0 or 3), then the player's class must be the same as the value specified here to talk to this trainer. For pet trainers, this value must be 3 (hunter). See characters.class</value>
+  </data>
+  <data name="aiNameComboBox.SuperTooltip" xml:space="preserve">
+    <value>This field is overridden by ScriptName field if both are set.
+
+Null AI: Empty AI, creature does nothing.
+
+Aggressor AI: Creature attacks as soon as something is in aggro range.
+
+Reactor AI: Creature attacks only if aggroed by attack, spell etc.
+
+Guard AI: No description available.
+
+Pet AI: Creature is a pet.
+
+Totem AI: Creature casts spell from field spell1, otherwise like NullAI.
+
+Event AI: Creature uses event based AI.
+
+Smart AI: Creature uses new smart AI.</value>
+  </data>
+  <data name="gossipMenuIdIntegerInput.SuperTooltip" xml:space="preserve">
+    <value>The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to gossip_menu.entry.</value>
+  </data>
   <metadata name="saveFileAsSQLDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>335, 17</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+    <value>290, 17</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

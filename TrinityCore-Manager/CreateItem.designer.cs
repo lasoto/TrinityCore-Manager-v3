@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateItem));
             this.itemDetailsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemSubClassIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -528,8 +529,9 @@
             this.eightagilityComboItem = new DevComponents.Editors.ComboItem();
             this.eightStrengthComboItem = new DevComponents.Editors.ComboItem();
             this.socketBonusNoneComboItem = new DevComponents.Editors.ComboItem();
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager();
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.itemCreatorSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            this.saveFileAsSQLDialog = new System.Windows.Forms.SaveFileDialog();
             this.itemDetailsWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemSubClassIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).BeginInit();
@@ -5752,6 +5754,10 @@
             this.itemCreatorSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemCreatorSuperTooltip.ShowTooltipImmediately = true;
             // 
+            // saveFileAsSQLDialog
+            // 
+            this.saveFileAsSQLDialog.Filter = "SQL File | *.sql";
+            // 
             // CreateItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6360,6 +6366,7 @@
         private DevComponents.DotNetBar.ButtonX findFactionButton;
         private DevComponents.Editors.IntegerInput itemSubClassIntegerInput;
         private ItemStatsControl itemStatsControl1;
+        private System.Windows.Forms.SaveFileDialog saveFileAsSQLDialog;
 
 
     }

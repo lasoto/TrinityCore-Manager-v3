@@ -11,9 +11,9 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindNPC : DevComponents.DotNetBar.Office2007Form
+    public partial class FindInhabitType : DevComponents.DotNetBar.Office2007Form
     {
-        public FindNPC()
+        public FindInhabitType()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace TrinityCore_Manager
 {
-    partial class FindNpc
+    partial class FindNPC
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindNpc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindNPC));
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.findNpcListView = new DevComponents.DotNetBar.Controls.ListViewEx();
