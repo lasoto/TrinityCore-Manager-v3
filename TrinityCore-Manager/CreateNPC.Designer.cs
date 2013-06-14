@@ -902,7 +902,7 @@
             this.subnameTextBox.Location = new System.Drawing.Point(172, 110);
             this.subnameTextBox.Name = "subnameTextBox";
             this.subnameTextBox.Size = new System.Drawing.Size(181, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.subnameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "he subname of the creature that appears in <> below the creature\'s name.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.npcSuperTooltip.SetSuperTooltip(this.subnameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The subname of the creature that appears in <> below the creature\'s name.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.subnameTextBox.TabIndex = 21;
             // 
             // nameTextBox
@@ -3017,6 +3017,7 @@
             // 
             this.trainerTypeComboBox.DisplayMember = "Text";
             this.trainerTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.trainerTypeComboBox.DropDownWidth = 250;
             this.trainerTypeComboBox.ForeColor = System.Drawing.Color.White;
             this.trainerTypeComboBox.FormattingEnabled = true;
             this.trainerTypeComboBox.ItemHeight = 14;
@@ -3446,6 +3447,7 @@
             // 
             this.movementyTypeComboBox.DisplayMember = "Text";
             this.movementyTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.movementyTypeComboBox.DropDownWidth = 250;
             this.movementyTypeComboBox.ForeColor = System.Drawing.Color.White;
             this.movementyTypeComboBox.FormattingEnabled = true;
             this.movementyTypeComboBox.ItemHeight = 14;

@@ -698,6 +698,7 @@
             // 
             this.itemFlagsExtraComboBox.DisplayMember = "Text";
             this.itemFlagsExtraComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.itemFlagsExtraComboBox.DropDownWidth = 500;
             this.itemFlagsExtraComboBox.ForeColor = System.Drawing.Color.White;
             this.itemFlagsExtraComboBox.FormattingEnabled = true;
             this.itemFlagsExtraComboBox.ItemHeight = 14;
@@ -2189,6 +2190,7 @@
             this.sheathComboBox.DisplayMember = "Text";
             this.sheathComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.sheathComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sheathComboBox.DropDownWidth = 300;
             this.sheathComboBox.ForeColor = System.Drawing.Color.White;
             this.sheathComboBox.FormattingEnabled = true;
             this.sheathComboBox.ItemHeight = 14;
@@ -4464,6 +4466,7 @@
             // 
             this.flagsCustomComboBox.DisplayMember = "Text";
             this.flagsCustomComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.flagsCustomComboBox.DropDownWidth = 550;
             this.flagsCustomComboBox.ForeColor = System.Drawing.Color.White;
             this.flagsCustomComboBox.FormattingEnabled = true;
             this.flagsCustomComboBox.ItemHeight = 14;
