@@ -169,7 +169,7 @@
             this.switchButton.OnTextColor = System.Drawing.Color.Chartreuse;
             this.switchButton.Size = new System.Drawing.Size(66, 22);
             this.switchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.editAccountSuperTooltip.SetSuperTooltip(this.switchButton, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Allow login only from current used IP.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.editAccountSuperTooltip.SetSuperTooltip(this.switchButton, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Allow login only from currently used IP.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.switchButton.TabIndex = 21;
             // 
             // labelX2

@@ -11,9 +11,9 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class OtherCommands : DevComponents.DotNetBar.Office2007Form
+    public partial class SetupWizard : DevComponents.DotNetBar.Office2007Form
     {
-        public OtherCommands()
+        public SetupWizard()
         {
             InitializeComponent();
         }

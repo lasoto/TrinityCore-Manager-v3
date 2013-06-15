@@ -163,7 +163,9 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(413, 465);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(413, 465);
             this.Name = "FindGUID";
             this.Text = "Find GUID";
             ((System.ComponentModel.ISupportInitialize)(this.guidIntegerInput)).EndInit();

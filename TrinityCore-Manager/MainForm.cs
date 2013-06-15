@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 using DevComponents.DotNetBar;
 using Microsoft.Win32;
+using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
 {
@@ -152,10 +154,22 @@ namespace TrinityCore_Manager
             eventStart.ShowDialog();
         }
 
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
+
         private void eventActiveButton_Click(object sender, EventArgs e)
         {
             EventActiveList evActList = new EventActiveList();
             evActList.ShowDialog();
+        }
+
+        private void openConfigurationFileButton_Click(object sender, EventArgs e)
+        {
+            string path = Path.Combine(Settings.Default.ServerFolder, "worldserver.conf");
+            Process.Start("notepad.exe", path);
         }
     }
 }

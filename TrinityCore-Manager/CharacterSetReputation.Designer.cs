@@ -29,55 +29,57 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterSetReputation));
-            this.characterLabel = new DevComponents.DotNetBar.LabelX();
-            this.factionLabel = new DevComponents.DotNetBar.LabelX();
-            this.factionStandingLabel = new DevComponents.DotNetBar.LabelX();
+            this.label1 = new DevComponents.DotNetBar.LabelX();
+            this.label2 = new DevComponents.DotNetBar.LabelX();
+            this.label4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.factionComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.repIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.charLabel = new DevComponents.DotNetBar.LabelX();
+            this.factionStandingLabel = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.repIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
-            // characterLabel
+            // label1
             // 
             // 
             // 
             // 
-            this.characterLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.characterLabel.Location = new System.Drawing.Point(85, 12);
-            this.characterLabel.Name = "characterLabel";
-            this.characterLabel.Size = new System.Drawing.Size(369, 23);
-            this.characterLabel.TabIndex = 1;
-            this.characterLabel.Text = "Character:";
+            this.label1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.Location = new System.Drawing.Point(85, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Character:";
             // 
-            // factionLabel
-            // 
-            // 
+            // label2
             // 
             // 
-            this.factionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.factionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.factionLabel.Location = new System.Drawing.Point(99, 60);
-            this.factionLabel.Name = "factionLabel";
-            this.factionLabel.Size = new System.Drawing.Size(56, 23);
-            this.factionLabel.TabIndex = 7;
-            this.factionLabel.Text = "Faction:";
             // 
-            // factionStandingLabel
+            // 
+            this.label2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.Location = new System.Drawing.Point(99, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Faction:";
+            // 
+            // label4
             // 
             // 
             // 
             // 
             this.factionStandingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.factionStandingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.factionStandingLabel.Location = new System.Drawing.Point(37, 106);
-            this.factionStandingLabel.Name = "factionStandingLabel";
-            this.factionStandingLabel.Size = new System.Drawing.Size(338, 23);
-            this.factionStandingLabel.TabIndex = 9;
-            this.factionStandingLabel.Text = "Faction Standing:";
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.Location = new System.Drawing.Point(37, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 23);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Faction Standing:";
             // 
             // labelX1
             // 
@@ -142,19 +144,45 @@
             this.repIntegerInput.Size = new System.Drawing.Size(217, 20);
             this.repIntegerInput.TabIndex = 16;
             // 
+            // charLabel
+            // 
+            // 
+            // 
+            // 
+            this.charLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.charLabel.Location = new System.Drawing.Point(158, 12);
+            this.charLabel.Name = "charLabel";
+            this.charLabel.Size = new System.Drawing.Size(217, 23);
+            this.charLabel.TabIndex = 17;
+            // 
+            // factionStandingLabel
+            // 
+            // 
+            // 
+            // 
+            this.factionStandingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.factionStandingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.factionStandingLabel.Location = new System.Drawing.Point(158, 106);
+            this.factionStandingLabel.Name = "factionStandingLabel";
+            this.factionStandingLabel.Size = new System.Drawing.Size(217, 23);
+            this.factionStandingLabel.TabIndex = 18;
+            // 
             // CharacterSetReputation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 263);
+            this.Controls.Add(this.factionStandingLabel);
+            this.Controls.Add(this.charLabel);
             this.Controls.Add(this.repIntegerInput);
             this.Controls.Add(this.factionComboBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.factionStandingLabel);
-            this.Controls.Add(this.factionLabel);
-            this.Controls.Add(this.characterLabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -171,13 +199,15 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.LabelX characterLabel;
-        private DevComponents.DotNetBar.LabelX factionLabel;
-        private DevComponents.DotNetBar.LabelX factionStandingLabel;
+        private DevComponents.DotNetBar.LabelX label1;
+        private DevComponents.DotNetBar.LabelX label2;
+        private DevComponents.DotNetBar.LabelX label4;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx factionComboBox;
         private DevComponents.Editors.IntegerInput repIntegerInput;
+        private DevComponents.DotNetBar.LabelX charLabel;
+        private DevComponents.DotNetBar.LabelX factionStandingLabel;
     }
 }

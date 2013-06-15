@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountCleanup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +365,12 @@
     <Compile Include="SendMail.Designer.cs">
       <DependentUpon>SendMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetupWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWizard.Designer.cs">
+      <DependentUpon>SetupWizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TC\CMake.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\ProcessHelper.cs" />
@@ -368,6 +381,9 @@
     <Compile Include="TCP\TCClient.cs" />
     <Compile Include="TC\TCCompiler.cs" />
     <Compile Include="TC\TrinityCoreRepository.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountCleanup.resx">
       <DependentUpon>AccountCleanup.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +537,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SendMail.resx">
       <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupWizard.resx">
+      <DependentUpon>SetupWizard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

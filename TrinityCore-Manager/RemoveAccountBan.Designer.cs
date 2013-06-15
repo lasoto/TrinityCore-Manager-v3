@@ -29,23 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveAccountBan));
-            this.refreshButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.banButton = new DevComponents.DotNetBar.ButtonX();
             this.accountListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.accountAddBanLabel = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.refreshButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.refreshButton.Location = new System.Drawing.Point(169, 71);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
-            this.refreshButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.refreshButton.TabIndex = 9;
-            this.refreshButton.Text = "Refresh List";
             // 
             // cancelButton
             // 
@@ -77,7 +65,7 @@
             this.accountListComboBox.ForeColor = System.Drawing.Color.White;
             this.accountListComboBox.FormattingEnabled = true;
             this.accountListComboBox.ItemHeight = 14;
-            this.accountListComboBox.Location = new System.Drawing.Point(120, 45);
+            this.accountListComboBox.Location = new System.Drawing.Point(119, 64);
             this.accountListComboBox.Name = "accountListComboBox";
             this.accountListComboBox.Size = new System.Drawing.Size(189, 20);
             this.accountListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -90,7 +78,7 @@
             // 
             this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountAddBanLabel.Location = new System.Drawing.Point(48, 43);
+            this.accountAddBanLabel.Location = new System.Drawing.Point(47, 62);
             this.accountAddBanLabel.Name = "accountAddBanLabel";
             this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
             this.accountAddBanLabel.TabIndex = 5;
@@ -101,7 +89,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 195);
-            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.banButton);
             this.Controls.Add(this.accountListComboBox);
@@ -121,7 +108,6 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.ButtonX refreshButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX banButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accountListComboBox;

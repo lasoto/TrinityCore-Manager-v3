@@ -191,6 +191,7 @@
             this.startDateTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.startDateTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.startDateTimeInput.ButtonDropDown.Visible = true;
+            this.startDateTimeInput.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.startDateTimeInput.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.startDateTimeInput.IsPopupCalendarOpen = false;
             this.startDateTimeInput.Location = new System.Drawing.Point(138, 97);
@@ -243,6 +244,7 @@
             this.endDateTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.endDateTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.endDateTimeInput.ButtonDropDown.Visible = true;
+            this.endDateTimeInput.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.endDateTimeInput.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.endDateTimeInput.IsPopupCalendarOpen = false;
             this.endDateTimeInput.Location = new System.Drawing.Point(138, 150);
@@ -464,7 +466,9 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(457, 563);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(457, 563);
             this.Name = "EventStart";
             this.Text = "Start Event";
             ((System.ComponentModel.ISupportInitialize)(this.eventIdIntegerInput)).EndInit();

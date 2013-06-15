@@ -37,7 +37,7 @@
             this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
-            this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            this.otherServerCommandsSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.motdTextBox.Multiline = true;
             this.motdTextBox.Name = "motdTextBox";
             this.motdTextBox.Size = new System.Drawing.Size(756, 160);
+            this.otherServerCommandsSuperTooltip.SetSuperTooltip(this.motdTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Show server Message of the day.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.motdTextBox.TabIndex = 1;
             // 
             // playerLimitLabel
@@ -95,6 +96,7 @@
             this.serverLimitIntegerInput.Name = "serverLimitIntegerInput";
             this.serverLimitIntegerInput.ShowUpDown = true;
             this.serverLimitIntegerInput.Size = new System.Drawing.Size(172, 20);
+            this.otherServerCommandsSuperTooltip.SetSuperTooltip(this.serverLimitIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("serverLimitIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.serverLimitIntegerInput.TabIndex = 3;
             // 
             // allowConnLabel
@@ -124,6 +126,7 @@
             this.switchButton.OnTextColor = System.Drawing.Color.Chartreuse;
             this.switchButton.Size = new System.Drawing.Size(66, 22);
             this.switchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.otherServerCommandsSuperTooltip.SetSuperTooltip(this.switchButton, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Sets whether the world accepts new client connections.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.switchButton.TabIndex = 5;
             this.switchButton.Value = true;
             this.switchButton.ValueObject = "Y";
@@ -150,9 +153,9 @@
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
             // 
-            // superTooltip
+            // otherServerCommandsSuperTooltip
             // 
-            this.superTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.otherServerCommandsSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // OtherCommands
             // 
@@ -174,7 +177,6 @@
             this.MinimizeBox = false;
             this.Name = "OtherCommands";
             this.Text = "Other Server Commands";
-            this.Load += new System.EventHandler(this.OtherCommands_Load);
             ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).EndInit();
             this.ResumeLayout(false);
 
@@ -190,6 +192,6 @@
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
-        private DevComponents.DotNetBar.SuperTooltip superTooltip;
+        private DevComponents.DotNetBar.SuperTooltip otherServerCommandsSuperTooltip;
     }
 }

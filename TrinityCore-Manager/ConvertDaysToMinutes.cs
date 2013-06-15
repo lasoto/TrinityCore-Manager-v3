@@ -13,9 +13,31 @@ namespace TrinityCore_Manager
 {
     public partial class ConvertDaysToMinutes : DevComponents.DotNetBar.Office2007Form
     {
+
         public ConvertDaysToMinutes()
         {
             InitializeComponent();
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void daysIntegerInput_ValueChanged(object sender, EventArgs e)
+        {
+            inMinutesLabel.Text = ((int)TimeSpan.FromDays(daysIntegerInput.Value).TotalMinutes).ToString();
+        }
+
+        private void copyToClipboardButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(inMinutesLabel.Text);
+        }
+
     }
 }

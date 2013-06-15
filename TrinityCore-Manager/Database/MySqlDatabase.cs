@@ -13,11 +13,12 @@ namespace TrinityCore_Manager.Database
 
         public string ConnectionString { get; private set; }
 
-        public MySqlDatabase(string serverHost, string username, string password, string dbName)
+        public MySqlDatabase(string serverHost, int port, string username, string password, string dbName)
         {
 
             var connStr = new MySqlConnectionStringBuilder();
             connStr.Server = serverHost;
+            connStr.Port = (uint)port;
             connStr.UserID = username;
             connStr.Password = password;
             connStr.Database = dbName;
@@ -25,6 +26,11 @@ namespace TrinityCore_Manager.Database
 
             ConnectionString = connStr.ToString();
 
+        }
+
+        public void CleanupAccounts(DateTime date)
+        {
+            ExecuteNonQuery("DELETE FROM account WHERE `last_login` < @date AND `joindate` < @date", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
         }
 
         #region Helper Methods
