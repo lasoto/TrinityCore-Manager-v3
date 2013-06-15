@@ -58,6 +58,8 @@
             this.dateTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dateTimeInput.ButtonDropDown.Visible = true;
+            this.dateTimeInput.CustomFormat = "0000-00-00 00:00:00";
+            this.dateTimeInput.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dateTimeInput.IsPopupCalendarOpen = false;
             this.dateTimeInput.Location = new System.Drawing.Point(97, 78);
             // 

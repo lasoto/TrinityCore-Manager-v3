@@ -145,5 +145,17 @@ namespace TrinityCore_Manager
             SendMail sendMail = new SendMail();
             sendMail.ShowDialog();
         }
+
+        private void startEventButton_Click(object sender, EventArgs e)
+        {
+            EventStart eventStart = new EventStart();
+            eventStart.ShowDialog();
+        }
+
+        private void eventActiveButton_Click(object sender, EventArgs e)
+        {
+            EventActiveList evActList = new EventActiveList();
+            evActList.ShowDialog();
+        }
     }
 }

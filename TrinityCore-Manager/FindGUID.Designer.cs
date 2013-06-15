@@ -58,6 +58,7 @@
             // 
             this.tableComboBox.DisplayMember = "Text";
             this.tableComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.tableComboBox.ForeColor = System.Drawing.Color.White;
             this.tableComboBox.FormattingEnabled = true;
             this.tableComboBox.ItemHeight = 14;
             this.tableComboBox.Items.AddRange(new object[] {

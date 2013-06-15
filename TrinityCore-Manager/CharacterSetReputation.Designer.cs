@@ -33,18 +33,11 @@
             this.factionLabel = new DevComponents.DotNetBar.LabelX();
             this.factionStandingLabel = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.setRankComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
-            this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.comboItem5 = new DevComponents.Editors.ComboItem();
-            this.comboItem6 = new DevComponents.Editors.ComboItem();
-            this.comboItem7 = new DevComponents.Editors.ComboItem();
-            this.comboItem8 = new DevComponents.Editors.ComboItem();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.factionComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.repIntegerInput = new DevComponents.Editors.IntegerInput();
+            ((System.ComponentModel.ISupportInitialize)(this.repIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
             // characterLabel
@@ -99,60 +92,6 @@
             this.labelX1.TabIndex = 11;
             this.labelX1.Text = "Change to:";
             // 
-            // setRankComboBox
-            // 
-            this.setRankComboBox.DisplayMember = "Text";
-            this.setRankComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.setRankComboBox.ForeColor = System.Drawing.Color.White;
-            this.setRankComboBox.FormattingEnabled = true;
-            this.setRankComboBox.ItemHeight = 14;
-            this.setRankComboBox.Items.AddRange(new object[] {
-            this.comboItem1,
-            this.comboItem2,
-            this.comboItem3,
-            this.comboItem4,
-            this.comboItem5,
-            this.comboItem6,
-            this.comboItem7,
-            this.comboItem8});
-            this.setRankComboBox.Location = new System.Drawing.Point(158, 160);
-            this.setRankComboBox.Name = "setRankComboBox";
-            this.setRankComboBox.Size = new System.Drawing.Size(217, 20);
-            this.setRankComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.setRankComboBox.TabIndex = 12;
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "Hated";
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.Text = "Hostile";
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "Unfriendly";
-            // 
-            // comboItem4
-            // 
-            this.comboItem4.Text = "Neutral";
-            // 
-            // comboItem5
-            // 
-            this.comboItem5.Text = "Friendly";
-            // 
-            // comboItem6
-            // 
-            this.comboItem6.Text = "Honored";
-            // 
-            // comboItem7
-            // 
-            this.comboItem7.Text = "Revered";
-            // 
-            // comboItem8
-            // 
-            this.comboItem8.Text = "Exalted";
-            // 
             // cancelButton
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -189,15 +128,29 @@
             this.factionComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.factionComboBox.TabIndex = 15;
             // 
+            // repIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.repIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.repIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.repIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.repIntegerInput.Location = new System.Drawing.Point(158, 160);
+            this.repIntegerInput.Name = "repIntegerInput";
+            this.repIntegerInput.ShowUpDown = true;
+            this.repIntegerInput.Size = new System.Drawing.Size(217, 20);
+            this.repIntegerInput.TabIndex = 16;
+            // 
             // CharacterSetReputation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 263);
+            this.Controls.Add(this.repIntegerInput);
             this.Controls.Add(this.factionComboBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.setRankComboBox);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.factionStandingLabel);
             this.Controls.Add(this.factionLabel);
@@ -211,6 +164,7 @@
             this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "CharacterSetReputation";
             this.Text = "Character Set Reputation";
+            ((System.ComponentModel.ISupportInitialize)(this.repIntegerInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,17 +175,9 @@
         private DevComponents.DotNetBar.LabelX factionLabel;
         private DevComponents.DotNetBar.LabelX factionStandingLabel;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx setRankComboBox;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx factionComboBox;
-        private DevComponents.Editors.ComboItem comboItem1;
-        private DevComponents.Editors.ComboItem comboItem2;
-        private DevComponents.Editors.ComboItem comboItem3;
-        private DevComponents.Editors.ComboItem comboItem4;
-        private DevComponents.Editors.ComboItem comboItem5;
-        private DevComponents.Editors.ComboItem comboItem6;
-        private DevComponents.Editors.ComboItem comboItem7;
-        private DevComponents.Editors.ComboItem comboItem8;
+        private DevComponents.Editors.IntegerInput repIntegerInput;
     }
 }

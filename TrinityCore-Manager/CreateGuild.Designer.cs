@@ -44,7 +44,7 @@
             // 
             this.guildNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.guildNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.guildNameLabel.Location = new System.Drawing.Point(51, 30);
+            this.guildNameLabel.Location = new System.Drawing.Point(36, 38);
             this.guildNameLabel.Name = "guildNameLabel";
             this.guildNameLabel.Size = new System.Drawing.Size(86, 23);
             this.guildNameLabel.TabIndex = 0;
@@ -59,9 +59,9 @@
             this.guildNameTextBox.Border.Class = "TextBoxBorder";
             this.guildNameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.guildNameTextBox.ForeColor = System.Drawing.Color.White;
-            this.guildNameTextBox.Location = new System.Drawing.Point(143, 34);
+            this.guildNameTextBox.Location = new System.Drawing.Point(128, 42);
             this.guildNameTextBox.Name = "guildNameTextBox";
-            this.guildNameTextBox.Size = new System.Drawing.Size(162, 20);
+            this.guildNameTextBox.Size = new System.Drawing.Size(232, 20);
             this.guildNameTextBox.TabIndex = 1;
             // 
             // leaderNameLabel
@@ -71,7 +71,7 @@
             // 
             this.leaderNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.leaderNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.leaderNameLabel.Location = new System.Drawing.Point(45, 76);
+            this.leaderNameLabel.Location = new System.Drawing.Point(30, 84);
             this.leaderNameLabel.Name = "leaderNameLabel";
             this.leaderNameLabel.Size = new System.Drawing.Size(92, 23);
             this.leaderNameLabel.TabIndex = 2;
@@ -81,11 +81,12 @@
             // 
             this.guildLeaderComboBox.DisplayMember = "Text";
             this.guildLeaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildLeaderComboBox.ForeColor = System.Drawing.Color.White;
             this.guildLeaderComboBox.FormattingEnabled = true;
             this.guildLeaderComboBox.ItemHeight = 14;
-            this.guildLeaderComboBox.Location = new System.Drawing.Point(143, 80);
+            this.guildLeaderComboBox.Location = new System.Drawing.Point(128, 88);
             this.guildLeaderComboBox.Name = "guildLeaderComboBox";
-            this.guildLeaderComboBox.Size = new System.Drawing.Size(162, 20);
+            this.guildLeaderComboBox.Size = new System.Drawing.Size(232, 20);
             this.guildLeaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.guildLeaderComboBox.TabIndex = 3;
             // 

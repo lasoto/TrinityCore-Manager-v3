@@ -53,6 +53,7 @@
             // 
             this.accountBanComboBox.DisplayMember = "Text";
             this.accountBanComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accountBanComboBox.ForeColor = System.Drawing.Color.White;
             this.accountBanComboBox.FormattingEnabled = true;
             this.accountBanComboBox.ItemHeight = 14;
             this.accountBanComboBox.Location = new System.Drawing.Point(121, 66);

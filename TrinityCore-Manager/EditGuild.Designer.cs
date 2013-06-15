@@ -71,6 +71,7 @@
             // 
             this.guildLeaderComboBox.DisplayMember = "Text";
             this.guildLeaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildLeaderComboBox.ForeColor = System.Drawing.Color.White;
             this.guildLeaderComboBox.FormattingEnabled = true;
             this.guildLeaderComboBox.ItemHeight = 14;
             this.guildLeaderComboBox.Location = new System.Drawing.Point(205, 48);
@@ -109,6 +110,7 @@
             // 
             this.guildNameComboBox.DisplayMember = "Text";
             this.guildNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildNameComboBox.ForeColor = System.Drawing.Color.White;
             this.guildNameComboBox.FormattingEnabled = true;
             this.guildNameComboBox.ItemHeight = 14;
             this.guildNameComboBox.Location = new System.Drawing.Point(205, 12);
@@ -185,6 +187,7 @@
             // 
             this.playerListComboBox.DisplayMember = "Text";
             this.playerListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.playerListComboBox.ForeColor = System.Drawing.Color.White;
             this.playerListComboBox.FormattingEnabled = true;
             this.playerListComboBox.ItemHeight = 14;
             this.playerListComboBox.Location = new System.Drawing.Point(205, 86);

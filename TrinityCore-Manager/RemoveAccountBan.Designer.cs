@@ -74,6 +74,7 @@
             // 
             this.accountListComboBox.DisplayMember = "Text";
             this.accountListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accountListComboBox.ForeColor = System.Drawing.Color.White;
             this.accountListComboBox.FormattingEnabled = true;
             this.accountListComboBox.ItemHeight = 14;
             this.accountListComboBox.Location = new System.Drawing.Point(120, 45);

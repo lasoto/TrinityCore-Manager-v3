@@ -84,6 +84,7 @@
             // 
             this.onlinePlayersComboBox.DisplayMember = "Text";
             this.onlinePlayersComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.onlinePlayersComboBox.ForeColor = System.Drawing.Color.White;
             this.onlinePlayersComboBox.FormattingEnabled = true;
             this.onlinePlayersComboBox.ItemHeight = 14;
             this.onlinePlayersComboBox.Location = new System.Drawing.Point(144, 33);
@@ -96,6 +97,7 @@
             // 
             this.offlinePlayersComboBox.DisplayMember = "Text";
             this.offlinePlayersComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.offlinePlayersComboBox.ForeColor = System.Drawing.Color.White;
             this.offlinePlayersComboBox.FormattingEnabled = true;
             this.offlinePlayersComboBox.ItemHeight = 14;
             this.offlinePlayersComboBox.Location = new System.Drawing.Point(507, 33);

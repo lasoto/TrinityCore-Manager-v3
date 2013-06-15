@@ -31,22 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainRibbonControl = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.playerManagementRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.refreshListPlayerManagementButton = new DevComponents.DotNetBar.ButtonItem();
-            this.kickPlayerButton = new DevComponents.DotNetBar.ButtonItem();
-            this.itemContainer5 = new DevComponents.DotNetBar.ItemContainer();
-            this.playerManagementComboBox = new DevComponents.DotNetBar.ComboBoxItem();
-            this.serverCommandsRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.serverCommandPanelItemContainer = new DevComponents.DotNetBar.ItemContainer();
-            this.executeCommandTextBox = new DevComponents.DotNetBar.TextBoxItem();
-            this.executeCommandButton = new DevComponents.DotNetBar.ButtonItem();
-            this.serverRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.startServerButton = new DevComponents.DotNetBar.ButtonItem();
-            this.stopServerButton = new DevComponents.DotNetBar.ButtonItem();
-            this.openConfigurationFileButton = new DevComponents.DotNetBar.ButtonItem();
-            this.otherCommandsButton = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.otherRibbonPanel = new DevComponents.DotNetBar.RibbonPanel();
+            this.eventsRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.eventActiveButton = new DevComponents.DotNetBar.ButtonItem();
+            this.startEventButton = new DevComponents.DotNetBar.ButtonItem();
+            this.stopEventButton = new DevComponents.DotNetBar.ButtonItem();
             this.guildRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.createGuildButton = new DevComponents.DotNetBar.ButtonItem();
             this.editGuildButton = new DevComponents.DotNetBar.ButtonItem();
@@ -87,6 +76,7 @@
             this.revivePlayerButton = new DevComponents.DotNetBar.ButtonItem();
             this.forceRenameButton = new DevComponents.DotNetBar.ButtonItem();
             this.banCharacterButton = new DevComponents.DotNetBar.ButtonItem();
+            this.freezeButton = new DevComponents.DotNetBar.ButtonItem();
             this.characterEditorItemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.requestCharacterCustomizationButton = new DevComponents.DotNetBar.ButtonItem();
             this.requestRaceChangeButton = new DevComponents.DotNetBar.ButtonItem();
@@ -123,35 +113,54 @@
             this.communicationsItemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.communicationsTextBox = new DevComponents.DotNetBar.TextBoxItem();
             this.sendMessageButton = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.playerManagementRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.refreshListPlayerManagementButton = new DevComponents.DotNetBar.ButtonItem();
+            this.kickPlayerButton = new DevComponents.DotNetBar.ButtonItem();
+            this.itemContainer5 = new DevComponents.DotNetBar.ItemContainer();
+            this.playerManagementComboBox = new DevComponents.DotNetBar.ComboBoxItem();
+            this.serverCommandsRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.serverCommandPanelItemContainer = new DevComponents.DotNetBar.ItemContainer();
+            this.executeCommandTextBox = new DevComponents.DotNetBar.TextBoxItem();
+            this.executeCommandButton = new DevComponents.DotNetBar.ButtonItem();
+            this.serverRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.startServerButton = new DevComponents.DotNetBar.ButtonItem();
+            this.stopServerButton = new DevComponents.DotNetBar.ButtonItem();
+            this.openConfigurationFileButton = new DevComponents.DotNetBar.ButtonItem();
+            this.otherCommandsButton = new DevComponents.DotNetBar.ButtonItem();
             this.serverManagementTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.communicationRibbonTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.accountManagementTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.characterManagementTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.createEditTab = new DevComponents.DotNetBar.RibbonTabItem();
-            this.compileRibbonTab = new DevComponents.DotNetBar.RibbonTabItem();
-            this.otherRibbonTab = new DevComponents.DotNetBar.RibbonTabItem();
+            this.compileTab = new DevComponents.DotNetBar.RibbonTabItem();
+            this.otherTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.bottomStatusBar = new DevComponents.DotNetBar.Bar();
             this.authServerLabel = new DevComponents.DotNetBar.LabelItem();
             this.worldServerLabel = new DevComponents.DotNetBar.LabelItem();
             this.playersOnlineLabel = new DevComponents.DotNetBar.LabelItem();
-            this.serverTabControl = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.consolseTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.serverTabItem = new DevComponents.DotNetBar.TabItem(this.components);
+            this.consoleTabControl = new DevComponents.DotNetBar.TabControl();
+            this.authServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
+            this.authServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.authServerTab = new DevComponents.DotNetBar.TabItem(this.components);
+            this.worldServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
+            this.worldServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.worldServerTab = new DevComponents.DotNetBar.TabItem(this.components);
             this.mainRibbonControl.SuspendLayout();
-            this.ribbonPanel1.SuspendLayout();
-            this.ribbonPanel7.SuspendLayout();
+            this.otherRibbonPanel.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
+            this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomStatusBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serverTabControl)).BeginInit();
-            this.serverTabControl.SuspendLayout();
-            this.tabControlPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.consoleTabControl)).BeginInit();
+            this.consoleTabControl.SuspendLayout();
+            this.authServerTabControlPanel.SuspendLayout();
+            this.worldServerTabControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainRibbonControl
@@ -162,13 +171,13 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
+            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -177,8 +186,8 @@
             this.accountManagementTab,
             this.characterManagementTab,
             this.createEditTab,
-            this.compileRibbonTab,
-            this.otherRibbonTab});
+            this.compileTab,
+            this.otherTab});
             this.mainRibbonControl.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.mainRibbonControl.Location = new System.Drawing.Point(5, 1);
             this.mainRibbonControl.Name = "mainRibbonControl";
@@ -206,240 +215,85 @@
             this.mainRibbonControl.TabIndex = 0;
             this.mainRibbonControl.Text = "mainRibbonControl";
             // 
-            // ribbonPanel1
+            // otherRibbonPanel
             // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel1.Controls.Add(this.playerManagementRibbonBar);
-            this.ribbonPanel1.Controls.Add(this.serverCommandsRibbonBar);
-            this.ribbonPanel1.Controls.Add(this.serverRibbonBar);
-            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1127, 139);
+            this.otherRibbonPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.otherRibbonPanel.Controls.Add(this.eventsRibbonBar);
+            this.otherRibbonPanel.Controls.Add(this.guildRibbonBar);
+            this.otherRibbonPanel.Controls.Add(this.mailRibbonBar);
+            this.otherRibbonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherRibbonPanel.Location = new System.Drawing.Point(0, 53);
+            this.otherRibbonPanel.Name = "otherRibbonPanel";
+            this.otherRibbonPanel.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.otherRibbonPanel.Size = new System.Drawing.Size(1127, 139);
             // 
             // 
             // 
-            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherRibbonPanel.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherRibbonPanel.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel1.TabIndex = 1;
+            this.otherRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherRibbonPanel.TabIndex = 7;
             // 
-            // playerManagementRibbonBar
+            // eventsRibbonBar
             // 
-            this.playerManagementRibbonBar.AutoOverflowEnabled = true;
+            this.eventsRibbonBar.AutoOverflowEnabled = true;
             // 
             // 
             // 
-            this.playerManagementRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.eventsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.playerManagementRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.playerManagementRibbonBar.ContainerControlProcessDialogKey = true;
-            this.playerManagementRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.playerManagementRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.refreshListPlayerManagementButton,
-            this.kickPlayerButton,
-            this.itemContainer5});
-            this.playerManagementRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.playerManagementRibbonBar.Location = new System.Drawing.Point(813, 0);
-            this.playerManagementRibbonBar.Name = "playerManagementRibbonBar";
-            this.playerManagementRibbonBar.Size = new System.Drawing.Size(296, 136);
-            this.playerManagementRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.playerManagementRibbonBar.TabIndex = 2;
-            this.playerManagementRibbonBar.Text = "Player Management Panel";
+            this.eventsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.eventsRibbonBar.ContainerControlProcessDialogKey = true;
+            this.eventsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.eventsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.eventActiveButton,
+            this.startEventButton,
+            this.stopEventButton});
+            this.eventsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.eventsRibbonBar.Location = new System.Drawing.Point(279, 0);
+            this.eventsRibbonBar.Name = "eventsRibbonBar";
+            this.eventsRibbonBar.Size = new System.Drawing.Size(218, 136);
+            this.eventsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.eventsRibbonBar.TabIndex = 2;
+            this.eventsRibbonBar.Text = "Events";
             // 
             // 
             // 
-            this.playerManagementRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.eventsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.playerManagementRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.eventsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // refreshListPlayerManagementButton
+            // eventActiveButton
             // 
-            this.refreshListPlayerManagementButton.Name = "refreshListPlayerManagementButton";
-            this.refreshListPlayerManagementButton.Text = "Refresh List";
+            this.eventActiveButton.Name = "eventActiveButton";
+            this.eventActiveButton.SubItemsExpandWidth = 14;
+            this.eventActiveButton.Text = "Event Active List";
+            this.eventActiveButton.Click += new System.EventHandler(this.eventActiveButton_Click);
             // 
-            // kickPlayerButton
+            // startEventButton
             // 
-            this.kickPlayerButton.Name = "kickPlayerButton";
-            this.kickPlayerButton.Text = "Kick Player";
+            this.startEventButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.startEventButton.Name = "startEventButton";
+            this.startEventButton.SubItemsExpandWidth = 14;
+            this.startEventButton.Text = "Start Event";
+            this.startEventButton.Click += new System.EventHandler(this.startEventButton_Click);
             // 
-            // itemContainer5
+            // stopEventButton
             // 
-            // 
-            // 
-            // 
-            this.itemContainer5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer5.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemContainer5.Name = "itemContainer5";
-            this.itemContainer5.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.playerManagementComboBox});
-            // 
-            // 
-            // 
-            this.itemContainer5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer5.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // playerManagementComboBox
-            // 
-            this.playerManagementComboBox.ComboWidth = 155;
-            this.playerManagementComboBox.DropDownHeight = 106;
-            this.playerManagementComboBox.Name = "playerManagementComboBox";
-            // 
-            // serverCommandsRibbonBar
-            // 
-            this.serverCommandsRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.serverCommandsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.serverCommandsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.serverCommandsRibbonBar.ContainerControlProcessDialogKey = true;
-            this.serverCommandsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.serverCommandsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.serverCommandPanelItemContainer});
-            this.serverCommandsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.serverCommandsRibbonBar.Location = new System.Drawing.Point(301, 0);
-            this.serverCommandsRibbonBar.Name = "serverCommandsRibbonBar";
-            this.serverCommandsRibbonBar.Size = new System.Drawing.Size(512, 136);
-            this.serverCommandsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.serverCommandsRibbonBar.TabIndex = 1;
-            this.serverCommandsRibbonBar.Text = "Server Commands Panel";
-            // 
-            // 
-            // 
-            this.serverCommandsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.serverCommandsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // serverCommandPanelItemContainer
-            // 
-            // 
-            // 
-            // 
-            this.serverCommandPanelItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.serverCommandPanelItemContainer.Name = "serverCommandPanelItemContainer";
-            this.serverCommandPanelItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.executeCommandTextBox,
-            this.executeCommandButton});
-            // 
-            // 
-            // 
-            this.serverCommandPanelItemContainer.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.serverCommandPanelItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // executeCommandTextBox
-            // 
-            this.executeCommandTextBox.Name = "executeCommandTextBox";
-            this.executeCommandTextBox.TextBoxWidth = 390;
-            this.executeCommandTextBox.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // executeCommandButton
-            // 
-            this.executeCommandButton.Name = "executeCommandButton";
-            this.executeCommandButton.Text = "Execute Command";
-            // 
-            // serverRibbonBar
-            // 
-            this.serverRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.serverRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.serverRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.serverRibbonBar.ContainerControlProcessDialogKey = true;
-            this.serverRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.serverRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.startServerButton,
-            this.stopServerButton,
-            this.openConfigurationFileButton,
-            this.otherCommandsButton});
-            this.serverRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.serverRibbonBar.Location = new System.Drawing.Point(3, 0);
-            this.serverRibbonBar.Name = "serverRibbonBar";
-            this.serverRibbonBar.Size = new System.Drawing.Size(298, 136);
-            this.serverRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.serverRibbonBar.TabIndex = 0;
-            this.serverRibbonBar.Text = "Server Panel";
-            // 
-            // 
-            // 
-            this.serverRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.serverRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // startServerButton
-            // 
-            this.startServerButton.ForeColor = System.Drawing.Color.Chartreuse;
-            this.startServerButton.Name = "startServerButton";
-            this.startServerButton.SubItemsExpandWidth = 14;
-            this.startServerButton.Text = "Start Server";
-            // 
-            // stopServerButton
-            // 
-            this.stopServerButton.ForeColor = System.Drawing.Color.Tomato;
-            this.stopServerButton.Name = "stopServerButton";
-            this.stopServerButton.SubItemsExpandWidth = 14;
-            this.stopServerButton.Text = "Stop Server";
-            // 
-            // openConfigurationFileButton
-            // 
-            this.openConfigurationFileButton.ForeColor = System.Drawing.Color.Teal;
-            this.openConfigurationFileButton.Name = "openConfigurationFileButton";
-            this.openConfigurationFileButton.SubItemsExpandWidth = 14;
-            this.openConfigurationFileButton.Text = "<div align=\"center\">Open<br/>Configuration File</div>";
-            // 
-            // otherCommandsButton
-            // 
-            this.otherCommandsButton.Name = "otherCommandsButton";
-            this.otherCommandsButton.SubItemsExpandWidth = 14;
-            this.otherCommandsButton.Text = "<div align=\"center\">Other<br/>Commands</div>";
-            this.otherCommandsButton.Click += new System.EventHandler(this.otherCommandsButton_Click);
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel7.Controls.Add(this.guildRibbonBar);
-            this.ribbonPanel7.Controls.Add(this.mailRibbonBar);
-            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel7.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel7.Name = "ribbonPanel7";
-            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel7.Size = new System.Drawing.Size(1127, 139);
-            // 
-            // 
-            // 
-            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel7.TabIndex = 7;
-            this.ribbonPanel7.Visible = false;
+            this.stopEventButton.ForeColor = System.Drawing.Color.Tomato;
+            this.stopEventButton.Name = "stopEventButton";
+            this.stopEventButton.SubItemsExpandWidth = 14;
+            this.stopEventButton.Text = "Stop Event";
             // 
             // guildRibbonBar
             // 
@@ -1035,7 +889,8 @@
             this.characterEditorItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.revivePlayerButton,
             this.forceRenameButton,
-            this.banCharacterButton});
+            this.banCharacterButton,
+            this.freezeButton});
             // 
             // 
             // 
@@ -1056,6 +911,11 @@
             // 
             this.banCharacterButton.Name = "banCharacterButton";
             this.banCharacterButton.Text = "Ban Character";
+            // 
+            // freezeButton
+            // 
+            this.freezeButton.Name = "freezeButton";
+            this.freezeButton.Text = "Freeze";
             // 
             // characterEditorItemContainer2
             // 
@@ -1530,9 +1390,219 @@
             this.sendMessageButton.Name = "sendMessageButton";
             this.sendMessageButton.Text = "Send Message";
             // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.playerManagementRibbonBar);
+            this.ribbonPanel1.Controls.Add(this.serverCommandsRibbonBar);
+            this.ribbonPanel1.Controls.Add(this.serverRibbonBar);
+            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1127, 139);
+            // 
+            // 
+            // 
+            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
+            // 
+            // playerManagementRibbonBar
+            // 
+            this.playerManagementRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.playerManagementRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.playerManagementRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.playerManagementRibbonBar.ContainerControlProcessDialogKey = true;
+            this.playerManagementRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.playerManagementRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.refreshListPlayerManagementButton,
+            this.kickPlayerButton,
+            this.itemContainer5});
+            this.playerManagementRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.playerManagementRibbonBar.Location = new System.Drawing.Point(813, 0);
+            this.playerManagementRibbonBar.Name = "playerManagementRibbonBar";
+            this.playerManagementRibbonBar.Size = new System.Drawing.Size(296, 136);
+            this.playerManagementRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.playerManagementRibbonBar.TabIndex = 2;
+            this.playerManagementRibbonBar.Text = "Player Management Panel";
+            // 
+            // 
+            // 
+            this.playerManagementRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.playerManagementRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // refreshListPlayerManagementButton
+            // 
+            this.refreshListPlayerManagementButton.Name = "refreshListPlayerManagementButton";
+            this.refreshListPlayerManagementButton.Text = "Refresh List";
+            // 
+            // kickPlayerButton
+            // 
+            this.kickPlayerButton.Name = "kickPlayerButton";
+            this.kickPlayerButton.Text = "Kick Player";
+            // 
+            // itemContainer5
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer5.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer5.Name = "itemContainer5";
+            this.itemContainer5.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.playerManagementComboBox});
+            // 
+            // 
+            // 
+            this.itemContainer5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer5.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // playerManagementComboBox
+            // 
+            this.playerManagementComboBox.ComboWidth = 155;
+            this.playerManagementComboBox.DropDownHeight = 106;
+            this.playerManagementComboBox.Name = "playerManagementComboBox";
+            // 
+            // serverCommandsRibbonBar
+            // 
+            this.serverCommandsRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.serverCommandsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.serverCommandsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCommandsRibbonBar.ContainerControlProcessDialogKey = true;
+            this.serverCommandsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.serverCommandsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.serverCommandPanelItemContainer});
+            this.serverCommandsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.serverCommandsRibbonBar.Location = new System.Drawing.Point(301, 0);
+            this.serverCommandsRibbonBar.Name = "serverCommandsRibbonBar";
+            this.serverCommandsRibbonBar.Size = new System.Drawing.Size(512, 136);
+            this.serverCommandsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.serverCommandsRibbonBar.TabIndex = 1;
+            this.serverCommandsRibbonBar.Text = "Server Commands Panel";
+            // 
+            // 
+            // 
+            this.serverCommandsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.serverCommandsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // serverCommandPanelItemContainer
+            // 
+            // 
+            // 
+            // 
+            this.serverCommandPanelItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCommandPanelItemContainer.Name = "serverCommandPanelItemContainer";
+            this.serverCommandPanelItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.executeCommandTextBox,
+            this.executeCommandButton});
+            // 
+            // 
+            // 
+            this.serverCommandPanelItemContainer.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCommandPanelItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // executeCommandTextBox
+            // 
+            this.executeCommandTextBox.Name = "executeCommandTextBox";
+            this.executeCommandTextBox.TextBoxWidth = 390;
+            this.executeCommandTextBox.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // executeCommandButton
+            // 
+            this.executeCommandButton.Name = "executeCommandButton";
+            this.executeCommandButton.Text = "Execute Command";
+            // 
+            // serverRibbonBar
+            // 
+            this.serverRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.serverRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.serverRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverRibbonBar.ContainerControlProcessDialogKey = true;
+            this.serverRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.serverRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.startServerButton,
+            this.stopServerButton,
+            this.openConfigurationFileButton,
+            this.otherCommandsButton});
+            this.serverRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.serverRibbonBar.Location = new System.Drawing.Point(3, 0);
+            this.serverRibbonBar.Name = "serverRibbonBar";
+            this.serverRibbonBar.Size = new System.Drawing.Size(298, 136);
+            this.serverRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.serverRibbonBar.TabIndex = 0;
+            this.serverRibbonBar.Text = "Server Panel";
+            // 
+            // 
+            // 
+            this.serverRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.serverRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // startServerButton
+            // 
+            this.startServerButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.startServerButton.Name = "startServerButton";
+            this.startServerButton.SubItemsExpandWidth = 14;
+            this.startServerButton.Text = "Start Server";
+            // 
+            // stopServerButton
+            // 
+            this.stopServerButton.ForeColor = System.Drawing.Color.Tomato;
+            this.stopServerButton.Name = "stopServerButton";
+            this.stopServerButton.SubItemsExpandWidth = 14;
+            this.stopServerButton.Text = "Stop Server";
+            // 
+            // openConfigurationFileButton
+            // 
+            this.openConfigurationFileButton.ForeColor = System.Drawing.Color.Teal;
+            this.openConfigurationFileButton.Name = "openConfigurationFileButton";
+            this.openConfigurationFileButton.SubItemsExpandWidth = 14;
+            this.openConfigurationFileButton.Text = "<div align=\"center\">Open<br/>Configuration File</div>";
+            // 
+            // otherCommandsButton
+            // 
+            this.otherCommandsButton.Name = "otherCommandsButton";
+            this.otherCommandsButton.SubItemsExpandWidth = 14;
+            this.otherCommandsButton.Text = "<div align=\"center\">Other<br/>Commands</div>";
+            this.otherCommandsButton.Click += new System.EventHandler(this.otherCommandsButton_Click);
+            // 
             // serverManagementTab
             // 
-            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
@@ -1561,17 +1631,18 @@
             this.createEditTab.Panel = this.ribbonPanel5;
             this.createEditTab.Text = "Create / Edit";
             // 
-            // compileRibbonTab
+            // compileTab
             // 
-            this.compileRibbonTab.Name = "compileRibbonTab";
-            this.compileRibbonTab.Panel = this.ribbonPanel6;
-            this.compileRibbonTab.Text = "Compile";
+            this.compileTab.Name = "compileTab";
+            this.compileTab.Panel = this.ribbonPanel6;
+            this.compileTab.Text = "Compile";
             // 
-            // otherRibbonTab
+            // otherTab
             // 
-            this.otherRibbonTab.Name = "otherRibbonTab";
-            this.otherRibbonTab.Panel = this.ribbonPanel7;
-            this.otherRibbonTab.Text = "Other";
+            this.otherTab.Checked = true;
+            this.otherTab.Name = "otherTab";
+            this.otherTab.Panel = this.otherRibbonPanel;
+            this.otherTab.Text = "Other";
             // 
             // qatCustomizeItem1
             // 
@@ -1618,66 +1689,111 @@
             this.playersOnlineLabel.Name = "playersOnlineLabel";
             this.playersOnlineLabel.Text = "Players Online: 0";
             // 
-            // serverTabControl
+            // consoleTabControl
             // 
-            this.serverTabControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.serverTabControl.CanReorderTabs = true;
-            this.serverTabControl.Controls.Add(this.tabControlPanel1);
-            this.serverTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.serverTabControl.ForeColor = System.Drawing.Color.White;
-            this.serverTabControl.Location = new System.Drawing.Point(5, 196);
-            this.serverTabControl.Name = "serverTabControl";
-            this.serverTabControl.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.serverTabControl.SelectedTabIndex = 0;
-            this.serverTabControl.Size = new System.Drawing.Size(1127, 525);
-            this.serverTabControl.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.serverTabControl.TabIndex = 6;
-            this.serverTabControl.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.serverTabControl.Tabs.Add(this.serverTabItem);
-            this.serverTabControl.Text = "serverTabControl";
+            this.consoleTabControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.consoleTabControl.CanReorderTabs = true;
+            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
+            this.consoleTabControl.Controls.Add(this.authServerTabControlPanel);
+            this.consoleTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleTabControl.ForeColor = System.Drawing.Color.White;
+            this.consoleTabControl.Location = new System.Drawing.Point(5, 196);
+            this.consoleTabControl.Name = "consoleTabControl";
+            this.consoleTabControl.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.consoleTabControl.SelectedTabIndex = 0;
+            this.consoleTabControl.Size = new System.Drawing.Size(1127, 525);
+            this.consoleTabControl.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
+            this.consoleTabControl.TabIndex = 6;
+            this.consoleTabControl.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.consoleTabControl.Tabs.Add(this.worldServerTab);
+            this.consoleTabControl.Tabs.Add(this.authServerTab);
+            this.consoleTabControl.Text = "serverTabControl";
             // 
-            // tabControlPanel1
+            // authServerTabControlPanel
             // 
-            this.tabControlPanel1.Controls.Add(this.consolseTextBox);
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 27);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(1127, 498);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            this.authServerTabControlPanel.Controls.Add(this.authServerTextBox);
+            this.authServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.authServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
+            this.authServerTabControlPanel.Name = "authServerTabControlPanel";
+            this.authServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.authServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
+            this.authServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.authServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.authServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
+            this.authServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.serverTabItem;
+            this.authServerTabControlPanel.Style.GradientAngle = 90;
+            this.authServerTabControlPanel.TabIndex = 2;
+            this.authServerTabControlPanel.TabItem = this.authServerTab;
             // 
-            // consolseTextBox
+            // authServerTextBox
             // 
-            this.consolseTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.authServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.consolseTextBox.Border.Class = "TextBoxBorder";
-            this.consolseTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.consolseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consolseTextBox.ForeColor = System.Drawing.Color.White;
-            this.consolseTextBox.Location = new System.Drawing.Point(1, 1);
-            this.consolseTextBox.Multiline = true;
-            this.consolseTextBox.Name = "consolseTextBox";
-            this.consolseTextBox.ReadOnly = true;
-            this.consolseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.consolseTextBox.Size = new System.Drawing.Size(1125, 496);
-            this.consolseTextBox.TabIndex = 0;
-            this.consolseTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
-            this.consolseTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.authServerTextBox.Border.Class = "TextBoxBorder";
+            this.authServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.authServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.authServerTextBox.ForeColor = System.Drawing.Color.White;
+            this.authServerTextBox.Location = new System.Drawing.Point(1, 1);
+            this.authServerTextBox.Multiline = true;
+            this.authServerTextBox.Name = "authServerTextBox";
+            this.authServerTextBox.ReadOnly = true;
+            this.authServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.authServerTextBox.Size = new System.Drawing.Size(1125, 496);
+            this.authServerTextBox.TabIndex = 1;
+            this.authServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
+            this.authServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // serverTabItem
+            // authServerTab
             // 
-            this.serverTabItem.AttachedControl = this.tabControlPanel1;
-            this.serverTabItem.Name = "serverTabItem";
-            this.serverTabItem.Text = "Console";
+            this.authServerTab.AttachedControl = this.authServerTabControlPanel;
+            this.authServerTab.Name = "authServerTab";
+            this.authServerTab.Text = "Auth Server Console";
+            // 
+            // worldServerTabControlPanel
+            // 
+            this.worldServerTabControlPanel.Controls.Add(this.worldServerTextBox);
+            this.worldServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.worldServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
+            this.worldServerTabControlPanel.Name = "worldServerTabControlPanel";
+            this.worldServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.worldServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
+            this.worldServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.worldServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.worldServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
+            this.worldServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.worldServerTabControlPanel.Style.GradientAngle = 90;
+            this.worldServerTabControlPanel.TabIndex = 1;
+            this.worldServerTabControlPanel.TabItem = this.worldServerTab;
+            // 
+            // worldServerTextBox
+            // 
+            this.worldServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.worldServerTextBox.Border.Class = "TextBoxBorder";
+            this.worldServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.worldServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.worldServerTextBox.ForeColor = System.Drawing.Color.White;
+            this.worldServerTextBox.Location = new System.Drawing.Point(1, 1);
+            this.worldServerTextBox.Multiline = true;
+            this.worldServerTextBox.Name = "worldServerTextBox";
+            this.worldServerTextBox.ReadOnly = true;
+            this.worldServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.worldServerTextBox.Size = new System.Drawing.Size(1125, 496);
+            this.worldServerTextBox.TabIndex = 0;
+            this.worldServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
+            this.worldServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // worldServerTab
+            // 
+            this.worldServerTab.AttachedControl = this.worldServerTabControlPanel;
+            this.worldServerTab.Name = "worldServerTab";
+            this.worldServerTab.Text = "World Server Console";
             // 
             // MainForm
             // 
@@ -1685,7 +1801,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BottomLeftCornerSize = 10;
             this.ClientSize = new System.Drawing.Size(1137, 744);
-            this.Controls.Add(this.serverTabControl);
+            this.Controls.Add(this.consoleTabControl);
             this.Controls.Add(this.bottomStatusBar);
             this.Controls.Add(this.mainRibbonControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1694,17 +1810,18 @@
             this.Text = "TrinityCore Manager v 3.0";
             this.mainRibbonControl.ResumeLayout(false);
             this.mainRibbonControl.PerformLayout();
-            this.ribbonPanel1.ResumeLayout(false);
-            this.ribbonPanel7.ResumeLayout(false);
+            this.otherRibbonPanel.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
+            this.ribbonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomStatusBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serverTabControl)).EndInit();
-            this.serverTabControl.ResumeLayout(false);
-            this.tabControlPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.consoleTabControl)).EndInit();
+            this.consoleTabControl.ResumeLayout(false);
+            this.authServerTabControlPanel.ResumeLayout(false);
+            this.worldServerTabControlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1788,7 +1905,7 @@
         private DevComponents.DotNetBar.ButtonItem findNpcButton;
         private DevComponents.DotNetBar.ButtonItem findItemButton;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel6;
-        private DevComponents.DotNetBar.RibbonTabItem compileRibbonTab;
+        private DevComponents.DotNetBar.RibbonTabItem compileTab;
         private DevComponents.DotNetBar.RibbonBar trinityCoreRibbonBar;
         private DevComponents.DotNetBar.ButtonItem setTrunkLocationButton;
         private DevComponents.DotNetBar.ButtonItem downloadUpdateButton;
@@ -1800,8 +1917,8 @@
         private DevComponents.DotNetBar.RibbonBar progressRibbonBar;
         private DevComponents.DotNetBar.ItemContainer progressPanelItemContainer;
         private DevComponents.DotNetBar.ProgressBarItem progressBar;
-        private DevComponents.DotNetBar.RibbonPanel ribbonPanel7;
-        private DevComponents.DotNetBar.RibbonTabItem otherRibbonTab;
+        private DevComponents.DotNetBar.RibbonPanel otherRibbonPanel;
+        private DevComponents.DotNetBar.RibbonTabItem otherTab;
         private DevComponents.DotNetBar.RibbonBar mailRibbonBar;
         private DevComponents.DotNetBar.ButtonItem sendMailButton;
         private DevComponents.DotNetBar.RibbonBar guildRibbonBar;
@@ -1811,16 +1928,24 @@
         private DevComponents.DotNetBar.LabelItem authServerLabel;
         private DevComponents.DotNetBar.LabelItem worldServerLabel;
         private DevComponents.DotNetBar.LabelItem playersOnlineLabel;
-        private DevComponents.DotNetBar.TabControl serverTabControl;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel1;
-        private DevComponents.DotNetBar.TabItem serverTabItem;
-        private DevComponents.DotNetBar.Controls.TextBoxX consolseTextBox;
+        private DevComponents.DotNetBar.TabControl consoleTabControl;
+        private DevComponents.DotNetBar.TabControlPanel worldServerTabControlPanel;
+        private DevComponents.DotNetBar.TabItem worldServerTab;
+        private DevComponents.DotNetBar.Controls.TextBoxX worldServerTextBox;
         private DevComponents.Editors.ComboItem x86ComboItem;
         private DevComponents.Editors.ComboItem x64ComboItem;
         private DevComponents.DotNetBar.RibbonBar accountCleanupRibbonBar;
         private DevComponents.DotNetBar.ButtonItem accountCleanupButton;
         private DevComponents.DotNetBar.ButtonItem editGuildButton;
         private DevComponents.DotNetBar.ButtonItem otherCommandsButton;
+        private DevComponents.DotNetBar.RibbonBar eventsRibbonBar;
+        private DevComponents.DotNetBar.ButtonItem eventActiveButton;
+        private DevComponents.DotNetBar.ButtonItem startEventButton;
+        private DevComponents.DotNetBar.ButtonItem stopEventButton;
+        private DevComponents.DotNetBar.ButtonItem freezeButton;
+        private DevComponents.DotNetBar.TabControlPanel authServerTabControlPanel;
+        private DevComponents.DotNetBar.TabItem authServerTab;
+        private DevComponents.DotNetBar.Controls.TextBoxX authServerTextBox;
     }
 }
 

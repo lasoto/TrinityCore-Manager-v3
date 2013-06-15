@@ -32,13 +32,13 @@
             this.setMotdLabel = new DevComponents.DotNetBar.LabelX();
             this.motdTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.playerLimitLabel = new DevComponents.DotNetBar.LabelX();
-            this.playerLimitIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.serverLimitIntegerInput = new DevComponents.Editors.IntegerInput();
             this.allowConnLabel = new DevComponents.DotNetBar.LabelX();
             this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            ((System.ComponentModel.ISupportInitialize)(this.playerLimitIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
             // setMotdLabel
@@ -82,20 +82,20 @@
             this.playerLimitLabel.TabIndex = 2;
             this.playerLimitLabel.Text = "Set Server Player Limit:";
             // 
-            // playerLimitIntegerInput
+            // serverLimitIntegerInput
             // 
             // 
             // 
             // 
-            this.playerLimitIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.playerLimitIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.playerLimitIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.playerLimitIntegerInput.Location = new System.Drawing.Point(398, 210);
-            this.playerLimitIntegerInput.MinValue = 0;
-            this.playerLimitIntegerInput.Name = "playerLimitIntegerInput";
-            this.playerLimitIntegerInput.ShowUpDown = true;
-            this.playerLimitIntegerInput.Size = new System.Drawing.Size(172, 20);
-            this.playerLimitIntegerInput.TabIndex = 3;
+            this.serverLimitIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.serverLimitIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverLimitIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.serverLimitIntegerInput.Location = new System.Drawing.Point(398, 210);
+            this.serverLimitIntegerInput.MinValue = 0;
+            this.serverLimitIntegerInput.Name = "serverLimitIntegerInput";
+            this.serverLimitIntegerInput.ShowUpDown = true;
+            this.serverLimitIntegerInput.Size = new System.Drawing.Size(172, 20);
+            this.serverLimitIntegerInput.TabIndex = 3;
             // 
             // allowConnLabel
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.switchButton);
             this.Controls.Add(this.allowConnLabel);
-            this.Controls.Add(this.playerLimitIntegerInput);
+            this.Controls.Add(this.serverLimitIntegerInput);
             this.Controls.Add(this.playerLimitLabel);
             this.Controls.Add(this.motdTextBox);
             this.Controls.Add(this.setMotdLabel);
@@ -175,7 +175,7 @@
             this.Name = "OtherCommands";
             this.Text = "Other Server Commands";
             this.Load += new System.EventHandler(this.OtherCommands_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.playerLimitIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,7 +185,7 @@
         private DevComponents.DotNetBar.LabelX setMotdLabel;
         private DevComponents.DotNetBar.Controls.TextBoxX motdTextBox;
         private DevComponents.DotNetBar.LabelX playerLimitLabel;
-        private DevComponents.Editors.IntegerInput playerLimitIntegerInput;
+        private DevComponents.Editors.IntegerInput serverLimitIntegerInput;
         private DevComponents.DotNetBar.LabelX allowConnLabel;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
         private DevComponents.DotNetBar.ButtonX okButton;

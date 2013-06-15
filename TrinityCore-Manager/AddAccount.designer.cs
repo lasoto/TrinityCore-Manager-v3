@@ -52,7 +52,12 @@
             this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
             this.accountCreateUsernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.accountCreatePasswordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.accountPermissionLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accAddonComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.vanillaComboItem = new DevComponents.Editors.ComboItem();
+            this.tbcComboItem = new DevComponents.Editors.ComboItem();
+            this.wotlkComboItem = new DevComponents.Editors.ComboItem();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -246,7 +251,7 @@
             // 
             this.accountUsernameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountUsernameLabel.Location = new System.Drawing.Point(63, 49);
+            this.accountUsernameLabel.Location = new System.Drawing.Point(62, 35);
             this.accountUsernameLabel.Name = "accountUsernameLabel";
             this.accountUsernameLabel.Size = new System.Drawing.Size(139, 26);
             this.accountUsernameLabel.TabIndex = 4;
@@ -259,7 +264,7 @@
             // 
             this.accountPasswordLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPasswordLabel.Location = new System.Drawing.Point(63, 94);
+            this.accountPasswordLabel.Location = new System.Drawing.Point(62, 71);
             this.accountPasswordLabel.Name = "accountPasswordLabel";
             this.accountPasswordLabel.Size = new System.Drawing.Size(139, 26);
             this.accountPasswordLabel.TabIndex = 5;
@@ -272,7 +277,7 @@
             // 
             this.accountPermissionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountPermissionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPermissionLabel.Location = new System.Drawing.Point(21, 137);
+            this.accountPermissionLabel.Location = new System.Drawing.Point(20, 105);
             this.accountPermissionLabel.Name = "accountPermissionLabel";
             this.accountPermissionLabel.Size = new System.Drawing.Size(181, 26);
             this.accountPermissionLabel.TabIndex = 6;
@@ -287,7 +292,7 @@
             this.accountCreateUsernameTextBox.Border.Class = "TextBoxBorder";
             this.accountCreateUsernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountCreateUsernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreateUsernameTextBox.Location = new System.Drawing.Point(208, 54);
+            this.accountCreateUsernameTextBox.Location = new System.Drawing.Point(207, 40);
             this.accountCreateUsernameTextBox.Name = "accountCreateUsernameTextBox";
             this.accountCreateUsernameTextBox.Size = new System.Drawing.Size(216, 20);
             this.accountCreateUsernameTextBox.TabIndex = 7;
@@ -301,22 +306,65 @@
             this.accountCreatePasswordTextBox.Border.Class = "TextBoxBorder";
             this.accountCreatePasswordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountCreatePasswordTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreatePasswordTextBox.Location = new System.Drawing.Point(208, 99);
+            this.accountCreatePasswordTextBox.Location = new System.Drawing.Point(207, 76);
             this.accountCreatePasswordTextBox.Name = "accountCreatePasswordTextBox";
             this.accountCreatePasswordTextBox.Size = new System.Drawing.Size(216, 20);
             this.accountCreatePasswordTextBox.TabIndex = 8;
             // 
-            // accountPermissionLevelComboBox
+            // accLevelComboBox
             // 
-            this.accountPermissionLevelComboBox.DisplayMember = "Text";
-            this.accountPermissionLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accountPermissionLevelComboBox.FormattingEnabled = true;
-            this.accountPermissionLevelComboBox.ItemHeight = 14;
-            this.accountPermissionLevelComboBox.Location = new System.Drawing.Point(208, 143);
-            this.accountPermissionLevelComboBox.Name = "accountPermissionLevelComboBox";
-            this.accountPermissionLevelComboBox.Size = new System.Drawing.Size(216, 20);
-            this.accountPermissionLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accountPermissionLevelComboBox.TabIndex = 9;
+            this.accLevelComboBox.DisplayMember = "Text";
+            this.accLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accLevelComboBox.ForeColor = System.Drawing.Color.White;
+            this.accLevelComboBox.FormattingEnabled = true;
+            this.accLevelComboBox.ItemHeight = 14;
+            this.accLevelComboBox.Location = new System.Drawing.Point(207, 111);
+            this.accLevelComboBox.Name = "accLevelComboBox";
+            this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
+            this.accLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.accLevelComboBox.TabIndex = 9;
+            // 
+            // accAddonComboBox
+            // 
+            this.accAddonComboBox.DisplayMember = "Text";
+            this.accAddonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accAddonComboBox.ForeColor = System.Drawing.Color.White;
+            this.accAddonComboBox.FormattingEnabled = true;
+            this.accAddonComboBox.ItemHeight = 14;
+            this.accAddonComboBox.Items.AddRange(new object[] {
+            this.vanillaComboItem,
+            this.tbcComboItem,
+            this.wotlkComboItem});
+            this.accAddonComboBox.Location = new System.Drawing.Point(207, 146);
+            this.accAddonComboBox.Name = "accAddonComboBox";
+            this.accAddonComboBox.Size = new System.Drawing.Size(216, 20);
+            this.accAddonComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.accAddonComboBox.TabIndex = 27;
+            // 
+            // vanillaComboItem
+            // 
+            this.vanillaComboItem.Text = "Vanilla";
+            // 
+            // tbcComboItem
+            // 
+            this.tbcComboItem.Text = "TBC";
+            // 
+            // wotlkComboItem
+            // 
+            this.wotlkComboItem.Text = "WOTLK";
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX2.Location = new System.Drawing.Point(89, 140);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(112, 26);
+            this.labelX2.TabIndex = 26;
+            this.labelX2.Text = "Account Addon:";
             // 
             // AddAccount
             // 
@@ -325,7 +373,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(502, 263);
-            this.Controls.Add(this.accountPermissionLevelComboBox);
+            this.Controls.Add(this.accAddonComboBox);
+            this.Controls.Add(this.labelX2);
+            this.Controls.Add(this.accLevelComboBox);
             this.Controls.Add(this.accountCreatePasswordTextBox);
             this.Controls.Add(this.accountCreateUsernameTextBox);
             this.Controls.Add(this.accountPermissionLabel);
@@ -370,6 +420,11 @@
         private DevComponents.DotNetBar.LabelX accountPermissionLabel;
         private DevComponents.DotNetBar.Controls.TextBoxX accountCreateUsernameTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX accountCreatePasswordTextBox;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx accountPermissionLevelComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx accLevelComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx accAddonComboBox;
+        private DevComponents.Editors.ComboItem vanillaComboItem;
+        private DevComponents.Editors.ComboItem tbcComboItem;
+        private DevComponents.Editors.ComboItem wotlkComboItem;
+        private DevComponents.DotNetBar.LabelX labelX2;
     }
 }

@@ -62,6 +62,7 @@
             // 
             this.guildComboBox.DisplayMember = "Text";
             this.guildComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildComboBox.ForeColor = System.Drawing.Color.White;
             this.guildComboBox.FormattingEnabled = true;
             this.guildComboBox.ItemHeight = 14;
             this.guildComboBox.Location = new System.Drawing.Point(128, 68);

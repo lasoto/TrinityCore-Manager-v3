@@ -106,6 +106,12 @@
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
+    <Compile Include="ConvertDaysToMinutes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertDaysToMinutes.Designer.cs">
+      <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateGuild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,18 @@
     <Compile Include="EditGuild.Designer.cs">
       <DependentUpon>EditGuild.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventActiveList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventActiveList.Designer.cs">
+      <DependentUpon>EventActiveList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventStart.Designer.cs">
+      <DependentUpon>EventStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="FindClass.cs">
       <SubType>Form</SubType>
@@ -157,6 +175,12 @@
     </Compile>
     <Compile Include="FindDynamicFlags.Designer.cs">
       <DependentUpon>FindDynamicFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindEvent.Designer.cs">
+      <DependentUpon>FindEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="FindFaction.cs">
       <SubType>Form</SubType>
@@ -175,6 +199,12 @@
     </Compile>
     <Compile Include="FindGUID.Designer.cs">
       <DependentUpon>FindGUID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindHoliday.Designer.cs">
+      <DependentUpon>FindHoliday.cs</DependentUpon>
     </Compile>
     <Compile Include="FindInhabitType.cs">
       <SubType>Form</SubType>
@@ -359,6 +389,9 @@
     <EmbeddedResource Include="CharacterSetSkillLevel.resx">
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConvertDaysToMinutes.resx">
+      <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateGuild.resx">
       <DependentUpon>CreateGuild.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,11 +410,20 @@
     <EmbeddedResource Include="EditGuild.resx">
       <DependentUpon>EditGuild.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventActiveList.resx">
+      <DependentUpon>EventActiveList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventStart.resx">
+      <DependentUpon>EventStart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindClass.resx">
       <DependentUpon>FindClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindDynamicFlags.resx">
       <DependentUpon>FindDynamicFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindEvent.resx">
+      <DependentUpon>FindEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindFaction.resx">
       <DependentUpon>FindFaction.cs</DependentUpon>
@@ -391,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindGUID.resx">
       <DependentUpon>FindGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindHoliday.resx">
+      <DependentUpon>FindHoliday.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindInhabitType.resx">
       <DependentUpon>FindInhabitType.cs</DependentUpon>
