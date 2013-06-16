@@ -109,7 +109,7 @@
             this.textBoxX1.Size = new System.Drawing.Size(291, 131);
             this.textBoxX1.TabIndex = 5;
             this.textBoxX1.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            this.textBoxX1.WatermarkColor = System.Drawing.Color.LawnGreen;
+            this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
             this.textBoxX1.WatermarkText = resources.GetString("textBoxX1.WatermarkText");
             // 
             // aboutSuperTooltip

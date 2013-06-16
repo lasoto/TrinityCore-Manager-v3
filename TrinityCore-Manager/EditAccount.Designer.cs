@@ -37,7 +37,7 @@
             this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
-            this.accUsernameComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.usernameComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -46,7 +46,7 @@
             this.tbcComboItem = new DevComponents.Editors.ComboItem();
             this.wotlkComboItem = new DevComponents.Editors.ComboItem();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.accPassTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.passTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.editAccountSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.SuspendLayout();
             // 
@@ -129,18 +129,18 @@
             // 
             this.accLvl3ComboItem.Text = "Level 3";
             // 
-            // accUsernameComboBox
+            // usernameComboBox
             // 
-            this.accUsernameComboBox.DisplayMember = "Text";
-            this.accUsernameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accUsernameComboBox.ForeColor = System.Drawing.Color.White;
-            this.accUsernameComboBox.FormattingEnabled = true;
-            this.accUsernameComboBox.ItemHeight = 14;
-            this.accUsernameComboBox.Location = new System.Drawing.Point(208, 22);
-            this.accUsernameComboBox.Name = "accUsernameComboBox";
-            this.accUsernameComboBox.Size = new System.Drawing.Size(216, 20);
-            this.accUsernameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accUsernameComboBox.TabIndex = 19;
+            this.usernameComboBox.DisplayMember = "Text";
+            this.usernameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.usernameComboBox.ForeColor = System.Drawing.Color.White;
+            this.usernameComboBox.FormattingEnabled = true;
+            this.usernameComboBox.ItemHeight = 14;
+            this.usernameComboBox.Location = new System.Drawing.Point(208, 22);
+            this.usernameComboBox.Name = "usernameComboBox";
+            this.usernameComboBox.Size = new System.Drawing.Size(216, 20);
+            this.usernameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.usernameComboBox.TabIndex = 19;
             // 
             // labelX1
             // 
@@ -204,7 +204,7 @@
             // 
             // vanillaComboItem
             // 
-            this.vanillaComboItem.Text = "Vanilla";
+            this.vanillaComboItem.Text = "VANILLA (ORIGINAL)";
             // 
             // tbcComboItem
             // 
@@ -227,19 +227,19 @@
             this.labelX3.TabIndex = 24;
             this.labelX3.Text = "Account Password:";
             // 
-            // accPassTextBox
+            // passTextBox
             // 
-            this.accPassTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.passTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.accPassTextBox.Border.Class = "TextBoxBorder";
-            this.accPassTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accPassTextBox.ForeColor = System.Drawing.Color.White;
-            this.accPassTextBox.Location = new System.Drawing.Point(208, 53);
-            this.accPassTextBox.Name = "accPassTextBox";
-            this.accPassTextBox.Size = new System.Drawing.Size(216, 20);
-            this.accPassTextBox.TabIndex = 25;
+            this.passTextBox.Border.Class = "TextBoxBorder";
+            this.passTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.passTextBox.ForeColor = System.Drawing.Color.White;
+            this.passTextBox.Location = new System.Drawing.Point(208, 53);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(216, 20);
+            this.passTextBox.TabIndex = 25;
             // 
             // editAccountSuperTooltip
             // 
@@ -250,13 +250,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 263);
-            this.Controls.Add(this.accPassTextBox);
+            this.Controls.Add(this.passTextBox);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.switchButton);
             this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.accUsernameComboBox);
+            this.Controls.Add(this.usernameComboBox);
             this.Controls.Add(this.accLevelComboBox);
             this.Controls.Add(this.accountPermissionLabel);
             this.Controls.Add(this.accountUsernameLabel);
@@ -282,7 +282,7 @@
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accLevelComboBox;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx accUsernameComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx usernameComboBox;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
         private DevComponents.Editors.ComboItem accLvl1ComboItem;
@@ -294,7 +294,7 @@
         private DevComponents.Editors.ComboItem tbcComboItem;
         private DevComponents.Editors.ComboItem wotlkComboItem;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX accPassTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX passTextBox;
         private DevComponents.DotNetBar.SuperTooltip editAccountSuperTooltip;
     }
 }

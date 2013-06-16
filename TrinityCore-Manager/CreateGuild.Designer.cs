@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateGuild));
             this.guildNameLabel = new DevComponents.DotNetBar.LabelX();
-            this.guildNameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.nameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.leaderNameLabel = new DevComponents.DotNetBar.LabelX();
-            this.guildLeaderComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.leaderComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.createButton = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
@@ -50,19 +50,19 @@
             this.guildNameLabel.TabIndex = 0;
             this.guildNameLabel.Text = "Guild Name:";
             // 
-            // guildNameTextBox
+            // nameTextBox
             // 
-            this.guildNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.guildNameTextBox.Border.Class = "TextBoxBorder";
-            this.guildNameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.guildNameTextBox.ForeColor = System.Drawing.Color.White;
-            this.guildNameTextBox.Location = new System.Drawing.Point(128, 42);
-            this.guildNameTextBox.Name = "guildNameTextBox";
-            this.guildNameTextBox.Size = new System.Drawing.Size(232, 20);
-            this.guildNameTextBox.TabIndex = 1;
+            this.nameTextBox.Border.Class = "TextBoxBorder";
+            this.nameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.nameTextBox.ForeColor = System.Drawing.Color.White;
+            this.nameTextBox.Location = new System.Drawing.Point(128, 42);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(232, 20);
+            this.nameTextBox.TabIndex = 1;
             // 
             // leaderNameLabel
             // 
@@ -77,18 +77,18 @@
             this.leaderNameLabel.TabIndex = 2;
             this.leaderNameLabel.Text = "Guild Leader:";
             // 
-            // guildLeaderComboBox
+            // leaderComboBox
             // 
-            this.guildLeaderComboBox.DisplayMember = "Text";
-            this.guildLeaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guildLeaderComboBox.ForeColor = System.Drawing.Color.White;
-            this.guildLeaderComboBox.FormattingEnabled = true;
-            this.guildLeaderComboBox.ItemHeight = 14;
-            this.guildLeaderComboBox.Location = new System.Drawing.Point(128, 88);
-            this.guildLeaderComboBox.Name = "guildLeaderComboBox";
-            this.guildLeaderComboBox.Size = new System.Drawing.Size(232, 20);
-            this.guildLeaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.guildLeaderComboBox.TabIndex = 3;
+            this.leaderComboBox.DisplayMember = "Text";
+            this.leaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.leaderComboBox.ForeColor = System.Drawing.Color.White;
+            this.leaderComboBox.FormattingEnabled = true;
+            this.leaderComboBox.ItemHeight = 14;
+            this.leaderComboBox.Location = new System.Drawing.Point(128, 88);
+            this.leaderComboBox.Name = "leaderComboBox";
+            this.leaderComboBox.Size = new System.Drawing.Size(232, 20);
+            this.leaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.leaderComboBox.TabIndex = 3;
             // 
             // cancelButton
             // 
@@ -120,9 +120,9 @@
             this.ClientSize = new System.Drawing.Size(397, 195);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
-            this.Controls.Add(this.guildLeaderComboBox);
+            this.Controls.Add(this.leaderComboBox);
             this.Controls.Add(this.leaderNameLabel);
-            this.Controls.Add(this.guildNameTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.guildNameLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -140,9 +140,9 @@
         #endregion
 
         private DevComponents.DotNetBar.LabelX guildNameLabel;
-        private DevComponents.DotNetBar.Controls.TextBoxX guildNameTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX nameTextBox;
         private DevComponents.DotNetBar.LabelX leaderNameLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx guildLeaderComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx leaderComboBox;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX createButton;
     }

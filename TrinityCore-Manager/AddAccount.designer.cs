@@ -50,8 +50,8 @@
             this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
             this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
             this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
-            this.accountCreateUsernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.accountCreatePasswordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.accAddonComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.vanillaComboItem = new DevComponents.Editors.ComboItem();
@@ -283,33 +283,33 @@
             this.accountPermissionLabel.TabIndex = 6;
             this.accountPermissionLabel.Text = "Account Permission Level:";
             // 
-            // accountCreateUsernameTextBox
+            // usernameTextBox
             // 
-            this.accountCreateUsernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.accountCreateUsernameTextBox.Border.Class = "TextBoxBorder";
-            this.accountCreateUsernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountCreateUsernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreateUsernameTextBox.Location = new System.Drawing.Point(207, 40);
-            this.accountCreateUsernameTextBox.Name = "accountCreateUsernameTextBox";
-            this.accountCreateUsernameTextBox.Size = new System.Drawing.Size(216, 20);
-            this.accountCreateUsernameTextBox.TabIndex = 7;
-            // 
-            // accountCreatePasswordTextBox
-            // 
-            this.accountCreatePasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             // 
             // 
             // 
-            this.accountCreatePasswordTextBox.Border.Class = "TextBoxBorder";
-            this.accountCreatePasswordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountCreatePasswordTextBox.ForeColor = System.Drawing.Color.White;
-            this.accountCreatePasswordTextBox.Location = new System.Drawing.Point(207, 76);
-            this.accountCreatePasswordTextBox.Name = "accountCreatePasswordTextBox";
-            this.accountCreatePasswordTextBox.Size = new System.Drawing.Size(216, 20);
-            this.accountCreatePasswordTextBox.TabIndex = 8;
+            this.usernameTextBox.Border.Class = "TextBoxBorder";
+            this.usernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.usernameTextBox.ForeColor = System.Drawing.Color.White;
+            this.usernameTextBox.Location = new System.Drawing.Point(207, 40);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(216, 20);
+            this.usernameTextBox.TabIndex = 7;
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.passwordTextBox.Border.Class = "TextBoxBorder";
+            this.passwordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
+            this.passwordTextBox.Location = new System.Drawing.Point(207, 76);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(216, 20);
+            this.passwordTextBox.TabIndex = 8;
             // 
             // accLevelComboBox
             // 
@@ -343,7 +343,7 @@
             // 
             // vanillaComboItem
             // 
-            this.vanillaComboItem.Text = "Vanilla";
+            this.vanillaComboItem.Text = "VANILLA (ORIGINAL)";
             // 
             // tbcComboItem
             // 
@@ -376,8 +376,8 @@
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
-            this.Controls.Add(this.accountCreatePasswordTextBox);
-            this.Controls.Add(this.accountCreateUsernameTextBox);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.accountPermissionLabel);
             this.Controls.Add(this.accountPasswordLabel);
             this.Controls.Add(this.accountUsernameLabel);
@@ -418,8 +418,8 @@
         private DevComponents.DotNetBar.LabelX accountUsernameLabel;
         private DevComponents.DotNetBar.LabelX accountPasswordLabel;
         private DevComponents.DotNetBar.LabelX accountPermissionLabel;
-        private DevComponents.DotNetBar.Controls.TextBoxX accountCreateUsernameTextBox;
-        private DevComponents.DotNetBar.Controls.TextBoxX accountCreatePasswordTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX usernameTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX passwordTextBox;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accLevelComboBox;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accAddonComboBox;
         private DevComponents.Editors.ComboItem vanillaComboItem;

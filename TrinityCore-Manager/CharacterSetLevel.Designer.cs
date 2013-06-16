@@ -104,7 +104,7 @@
             this.levelIntegerInput.MinValue = 0;
             this.levelIntegerInput.Name = "levelIntegerInput";
             this.levelIntegerInput.ShowUpDown = true;
-            this.levelIntegerInput.Size = new System.Drawing.Size(139, 20);
+            this.levelIntegerInput.Size = new System.Drawing.Size(89, 20);
             this.levelIntegerInput.TabIndex = 7;
             // 
             // labelX1
@@ -129,7 +129,7 @@
             this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.charLabel.Location = new System.Drawing.Point(209, 46);
             this.charLabel.Name = "charLabel";
-            this.charLabel.Size = new System.Drawing.Size(222, 23);
+            this.charLabel.Size = new System.Drawing.Size(230, 23);
             this.charLabel.TabIndex = 9;
             // 
             // currLevelLabel
@@ -141,7 +141,7 @@
             this.currLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.currLevelLabel.Location = new System.Drawing.Point(209, 91);
             this.currLevelLabel.Name = "currLevelLabel";
-            this.currLevelLabel.Size = new System.Drawing.Size(139, 23);
+            this.currLevelLabel.Size = new System.Drawing.Size(89, 23);
             this.currLevelLabel.TabIndex = 10;
             // 
             // CharacterSetLevel

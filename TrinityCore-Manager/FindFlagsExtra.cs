@@ -17,5 +17,5 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
-    }
+   }
 }

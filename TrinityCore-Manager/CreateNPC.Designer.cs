@@ -1268,6 +1268,7 @@
             this.npcFlagButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcFlagButton.TabIndex = 52;
             this.npcFlagButton.Text = "Find NPC Flag";
+            this.npcFlagButton.Click += new System.EventHandler(this.npcFlagButton_Click);
             // 
             // npcFlagIntegerInput
             // 
@@ -1309,6 +1310,7 @@
             this.dynamicFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsButton.TabIndex = 49;
             this.dynamicFlagsButton.Text = "Find DynamicFlags";
+            this.dynamicFlagsButton.Click += new System.EventHandler(this.dynamicFlagsButton_Click);
             // 
             // dynamicFlagsIntegerInput
             // 
@@ -1335,6 +1337,7 @@
             this.typeFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsButton.TabIndex = 47;
             this.typeFlagsButton.Text = "Find TypeFlags";
+            this.typeFlagsButton.Click += new System.EventHandler(this.typeFlagsButton_Click);
             // 
             // typeFlagsIntegerInput
             // 
@@ -1441,6 +1444,7 @@
             this.factionHButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.factionHButton.TabIndex = 44;
             this.factionHButton.Text = "Find Faction";
+            this.factionHButton.Click += new System.EventHandler(this.factionHButton_Click);
             // 
             // factionHIntegerInput
             // 
@@ -1467,6 +1471,7 @@
             this.factionAButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.factionAButton.TabIndex = 42;
             this.factionAButton.Text = "Find Faction";
+            this.factionAButton.Click += new System.EventHandler(this.factionAButton_Click);
             // 
             // factionAIntegerInput
             // 
@@ -1747,6 +1752,7 @@
             this.unitFlags2Button.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.unitFlags2Button.TabIndex = 38;
             this.unitFlags2Button.Text = "Find UnitFlags2";
+            this.unitFlags2Button.Click += new System.EventHandler(this.unitFlags2Button_Click);
             // 
             // unitFlags2IntegerInput
             // 
@@ -1774,6 +1780,7 @@
             this.unitFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.unitFlagsButton.TabIndex = 36;
             this.unitFlagsButton.Text = "Find UnitFlags";
+            this.unitFlagsButton.Click += new System.EventHandler(this.unitFlagsButton_Click);
             // 
             // unitFlagsIntegerInput
             // 
@@ -2371,6 +2378,7 @@
             this.flagsExtraButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.flagsExtraButton.TabIndex = 38;
             this.flagsExtraButton.Text = "Find Flags Extra";
+            this.flagsExtraButton.Click += new System.EventHandler(this.flagsExtraButton_Click);
             // 
             // flagsExtraIntegerInput
             // 
@@ -2440,6 +2448,7 @@
             this.mechImmuneMaskButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.mechImmuneMaskButton.TabIndex = 33;
             this.mechImmuneMaskButton.Text = "Find Immune Masks";
+            this.mechImmuneMaskButton.Click += new System.EventHandler(this.mechImmuneMaskButton_Click);
             // 
             // mechImmuneMaskIntegerInput
             // 
@@ -2990,6 +2999,7 @@
             this.findClassButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.findClassButton.TabIndex = 27;
             this.findClassButton.Text = "Find Class";
+            this.findClassButton.Click += new System.EventHandler(this.findClassButton_Click);
             // 
             // findRaceButton
             // 
@@ -3001,6 +3011,7 @@
             this.findRaceButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.findRaceButton.TabIndex = 26;
             this.findRaceButton.Text = "Find Race";
+            this.findRaceButton.Click += new System.EventHandler(this.findRaceButton_Click);
             // 
             // findSpellButton
             // 
@@ -3012,6 +3023,7 @@
             this.findSpellButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.findSpellButton.TabIndex = 25;
             this.findSpellButton.Text = "Find Spell";
+            this.findSpellButton.Click += new System.EventHandler(this.findSpellButton_Click);
             // 
             // trainerTypeComboBox
             // 
@@ -3442,6 +3454,7 @@
             this.findInhabitTypeButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.findInhabitTypeButton.TabIndex = 24;
             this.findInhabitTypeButton.Text = "Find Inhabit Type";
+            this.findInhabitTypeButton.Click += new System.EventHandler(this.findInhabitTypeButton_Click);
             // 
             // movementyTypeComboBox
             // 

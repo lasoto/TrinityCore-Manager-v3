@@ -36,10 +36,10 @@
             this.skillComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label3 = new DevComponents.DotNetBar.LabelX();
             this.label4 = new DevComponents.DotNetBar.LabelX();
-            this.integerInput1 = new DevComponents.Editors.IntegerInput();
-            this.charLabel = new DevComponents.DotNetBar.LabelX();
+            this.skillIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.characterLabel = new DevComponents.DotNetBar.LabelX();
             this.currentSkillLabel = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +49,7 @@
             // 
             this.label1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(111, 12);
+            this.label1.Location = new System.Drawing.Point(136, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 23);
             this.label1.TabIndex = 1;
@@ -87,7 +87,7 @@
             // 
             this.label2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.Location = new System.Drawing.Point(146, 56);
+            this.label2.Location = new System.Drawing.Point(171, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 23);
             this.label2.TabIndex = 8;
@@ -97,9 +97,10 @@
             // 
             this.skillComboBox.DisplayMember = "Text";
             this.skillComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skillComboBox.ForeColor = System.Drawing.Color.White;
             this.skillComboBox.FormattingEnabled = true;
             this.skillComboBox.ItemHeight = 14;
-            this.skillComboBox.Location = new System.Drawing.Point(188, 59);
+            this.skillComboBox.Location = new System.Drawing.Point(213, 73);
             this.skillComboBox.Name = "skillComboBox";
             this.skillComboBox.Size = new System.Drawing.Size(219, 20);
             this.skillComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -112,7 +113,7 @@
             // 
             this.label3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(55, 105);
+            this.label3.Location = new System.Drawing.Point(80, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 23);
             this.label3.TabIndex = 10;
@@ -125,37 +126,37 @@
             // 
             this.label4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(81, 160);
+            this.label4.Location = new System.Drawing.Point(106, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "Set Skill Level:";
             // 
-            // integerInput1
+            // skillIntegerInput
             // 
             // 
             // 
             // 
-            this.integerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput1.Location = new System.Drawing.Point(188, 163);
-            this.integerInput1.Name = "integerInput1";
-            this.integerInput1.ShowUpDown = true;
-            this.integerInput1.Size = new System.Drawing.Size(219, 20);
-            this.integerInput1.TabIndex = 12;
+            this.skillIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.skillIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.skillIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.skillIntegerInput.Location = new System.Drawing.Point(213, 177);
+            this.skillIntegerInput.Name = "skillIntegerInput";
+            this.skillIntegerInput.ShowUpDown = true;
+            this.skillIntegerInput.Size = new System.Drawing.Size(104, 20);
+            this.skillIntegerInput.TabIndex = 12;
             // 
-            // charLabel
-            // 
-            // 
+            // characterLabel
             // 
             // 
-            this.charLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.charLabel.Location = new System.Drawing.Point(188, 12);
-            this.charLabel.Name = "charLabel";
-            this.charLabel.Size = new System.Drawing.Size(219, 23);
-            this.charLabel.TabIndex = 13;
+            // 
+            // 
+            this.characterLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.characterLabel.Location = new System.Drawing.Point(213, 26);
+            this.characterLabel.Name = "characterLabel";
+            this.characterLabel.Size = new System.Drawing.Size(219, 23);
+            this.characterLabel.TabIndex = 13;
             // 
             // currentSkillLabel
             // 
@@ -164,9 +165,9 @@
             // 
             this.currentSkillLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.currentSkillLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.currentSkillLabel.Location = new System.Drawing.Point(188, 105);
+            this.currentSkillLabel.Location = new System.Drawing.Point(213, 119);
             this.currentSkillLabel.Name = "currentSkillLabel";
-            this.currentSkillLabel.Size = new System.Drawing.Size(219, 23);
+            this.currentSkillLabel.Size = new System.Drawing.Size(104, 23);
             this.currentSkillLabel.TabIndex = 14;
             // 
             // CharacterSetSkillLevel
@@ -175,8 +176,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 279);
             this.Controls.Add(this.currentSkillLabel);
-            this.Controls.Add(this.charLabel);
-            this.Controls.Add(this.integerInput1);
+            this.Controls.Add(this.characterLabel);
+            this.Controls.Add(this.skillIntegerInput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.skillComboBox);
@@ -193,7 +194,7 @@
             this.MinimumSize = new System.Drawing.Size(530, 317);
             this.Name = "CharacterSetSkillLevel";
             this.Text = "Character Set Skill Level";
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillIntegerInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,8 +208,8 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx skillComboBox;
         private DevComponents.DotNetBar.LabelX label3;
         private DevComponents.DotNetBar.LabelX label4;
-        private DevComponents.Editors.IntegerInput integerInput1;
-        private DevComponents.DotNetBar.LabelX charLabel;
+        private DevComponents.Editors.IntegerInput skillIntegerInput;
+        private DevComponents.DotNetBar.LabelX characterLabel;
         private DevComponents.DotNetBar.LabelX currentSkillLabel;
     }
 }

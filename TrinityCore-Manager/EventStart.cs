@@ -20,14 +20,14 @@ namespace TrinityCore_Manager
 
         private void findEventButton_Click(object sender, EventArgs e)
         {
-            FindEvent findEvent = new FindEvent();
-            findEvent.ShowDialog();
+            FindEvent fe = new FindEvent();
+            fe.ShowDialog();
         }
 
         private void findHolidayButton_Click(object sender, EventArgs e)
         {
-            FindHoliday findHoliday = new FindHoliday();
-            findHoliday.ShowDialog();
+            FindHoliday fh = new FindHoliday();
+            fh.ShowDialog();
         }
 
         private void convertButton_Click(object sender, EventArgs e)

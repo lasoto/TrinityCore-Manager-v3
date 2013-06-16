@@ -37,8 +37,8 @@
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.factionComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.repIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.charLabel = new DevComponents.DotNetBar.LabelX();
-            this.factionStandingLabel = new DevComponents.DotNetBar.LabelX();
+            this.characterLabel = new DevComponents.DotNetBar.LabelX();
+            this.standingLabel = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.repIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             // 
             this.label1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(85, 12);
+            this.label1.Location = new System.Drawing.Point(101, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 23);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.label2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.Location = new System.Drawing.Point(99, 60);
+            this.label2.Location = new System.Drawing.Point(115, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 7;
@@ -73,9 +73,9 @@
             // 
             // 
             // 
-            this.factionStandingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(37, 106);
+            this.label4.Location = new System.Drawing.Point(53, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 23);
             this.label4.TabIndex = 9;
@@ -88,7 +88,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(76, 157);
+            this.labelX1.Location = new System.Drawing.Point(92, 157);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(79, 23);
             this.labelX1.TabIndex = 11;
@@ -122,9 +122,10 @@
             // 
             this.factionComboBox.DisplayMember = "Text";
             this.factionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.factionComboBox.ForeColor = System.Drawing.Color.White;
             this.factionComboBox.FormattingEnabled = true;
             this.factionComboBox.ItemHeight = 14;
-            this.factionComboBox.Location = new System.Drawing.Point(158, 63);
+            this.factionComboBox.Location = new System.Drawing.Point(174, 63);
             this.factionComboBox.Name = "factionComboBox";
             this.factionComboBox.Size = new System.Drawing.Size(217, 20);
             this.factionComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -138,43 +139,43 @@
             this.repIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.repIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.repIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.repIntegerInput.Location = new System.Drawing.Point(158, 160);
+            this.repIntegerInput.Location = new System.Drawing.Point(174, 160);
             this.repIntegerInput.Name = "repIntegerInput";
             this.repIntegerInput.ShowUpDown = true;
             this.repIntegerInput.Size = new System.Drawing.Size(217, 20);
             this.repIntegerInput.TabIndex = 16;
             // 
-            // charLabel
+            // characterLabel
             // 
             // 
             // 
             // 
-            this.charLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.charLabel.Location = new System.Drawing.Point(158, 12);
-            this.charLabel.Name = "charLabel";
-            this.charLabel.Size = new System.Drawing.Size(217, 23);
-            this.charLabel.TabIndex = 17;
+            this.characterLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.characterLabel.Location = new System.Drawing.Point(174, 12);
+            this.characterLabel.Name = "characterLabel";
+            this.characterLabel.Size = new System.Drawing.Size(217, 23);
+            this.characterLabel.TabIndex = 17;
             // 
-            // factionStandingLabel
-            // 
-            // 
+            // standingLabel
             // 
             // 
-            this.factionStandingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.factionStandingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.factionStandingLabel.Location = new System.Drawing.Point(158, 106);
-            this.factionStandingLabel.Name = "factionStandingLabel";
-            this.factionStandingLabel.Size = new System.Drawing.Size(217, 23);
-            this.factionStandingLabel.TabIndex = 18;
+            // 
+            // 
+            this.standingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.standingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.standingLabel.Location = new System.Drawing.Point(174, 106);
+            this.standingLabel.Name = "standingLabel";
+            this.standingLabel.Size = new System.Drawing.Size(217, 23);
+            this.standingLabel.TabIndex = 18;
             // 
             // CharacterSetReputation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 263);
-            this.Controls.Add(this.factionStandingLabel);
-            this.Controls.Add(this.charLabel);
+            this.Controls.Add(this.standingLabel);
+            this.Controls.Add(this.characterLabel);
             this.Controls.Add(this.repIntegerInput);
             this.Controls.Add(this.factionComboBox);
             this.Controls.Add(this.cancelButton);
@@ -207,7 +208,7 @@
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx factionComboBox;
         private DevComponents.Editors.IntegerInput repIntegerInput;
-        private DevComponents.DotNetBar.LabelX charLabel;
-        private DevComponents.DotNetBar.LabelX factionStandingLabel;
+        private DevComponents.DotNetBar.LabelX characterLabel;
+        private DevComponents.DotNetBar.LabelX standingLabel;
     }
 }

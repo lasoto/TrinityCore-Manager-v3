@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccountBan));
             this.accountAddBanLabel = new DevComponents.DotNetBar.LabelX();
-            this.accountBanComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.banButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.refreshButton = new DevComponents.DotNetBar.ButtonX();
@@ -49,18 +49,18 @@
             this.accountAddBanLabel.TabIndex = 0;
             this.accountAddBanLabel.Text = "Account:";
             // 
-            // accountBanComboBox
+            // accListComboBox
             // 
-            this.accountBanComboBox.DisplayMember = "Text";
-            this.accountBanComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accountBanComboBox.ForeColor = System.Drawing.Color.White;
-            this.accountBanComboBox.FormattingEnabled = true;
-            this.accountBanComboBox.ItemHeight = 14;
-            this.accountBanComboBox.Location = new System.Drawing.Point(121, 66);
-            this.accountBanComboBox.Name = "accountBanComboBox";
-            this.accountBanComboBox.Size = new System.Drawing.Size(189, 20);
-            this.accountBanComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accountBanComboBox.TabIndex = 1;
+            this.accListComboBox.DisplayMember = "Text";
+            this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accListComboBox.ForeColor = System.Drawing.Color.White;
+            this.accListComboBox.FormattingEnabled = true;
+            this.accListComboBox.ItemHeight = 14;
+            this.accListComboBox.Location = new System.Drawing.Point(121, 66);
+            this.accListComboBox.Name = "accListComboBox";
+            this.accListComboBox.Size = new System.Drawing.Size(189, 20);
+            this.accListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.accListComboBox.TabIndex = 1;
             // 
             // banButton
             // 
@@ -105,7 +105,7 @@
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.banButton);
-            this.Controls.Add(this.accountBanComboBox);
+            this.Controls.Add(this.accListComboBox);
             this.Controls.Add(this.accountAddBanLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -123,7 +123,7 @@
         #endregion
 
         private DevComponents.DotNetBar.LabelX accountAddBanLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx accountBanComboBox;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx accListComboBox;
         private DevComponents.DotNetBar.ButtonX banButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX refreshButton;

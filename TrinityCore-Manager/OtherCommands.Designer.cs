@@ -174,7 +174,9 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(796, 366);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(796, 366);
             this.Name = "OtherCommands";
             this.Text = "Other Server Commands";
             ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).EndInit();

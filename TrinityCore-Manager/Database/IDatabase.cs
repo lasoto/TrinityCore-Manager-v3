@@ -8,8 +8,6 @@ namespace TrinityCore_Manager.Database
 {
     interface IDatabase
     {
-
         void CleanupAccounts(DateTime date);
-
     }
 }

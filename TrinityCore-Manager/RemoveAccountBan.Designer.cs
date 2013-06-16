@@ -65,7 +65,7 @@
             this.accountListComboBox.ForeColor = System.Drawing.Color.White;
             this.accountListComboBox.FormattingEnabled = true;
             this.accountListComboBox.ItemHeight = 14;
-            this.accountListComboBox.Location = new System.Drawing.Point(119, 64);
+            this.accountListComboBox.Location = new System.Drawing.Point(98, 71);
             this.accountListComboBox.Name = "accountListComboBox";
             this.accountListComboBox.Size = new System.Drawing.Size(189, 20);
             this.accountListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -78,11 +78,11 @@
             // 
             this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountAddBanLabel.Location = new System.Drawing.Point(47, 62);
+            this.accountAddBanLabel.Location = new System.Drawing.Point(129, 43);
             this.accountAddBanLabel.Name = "accountAddBanLabel";
-            this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
+            this.accountAddBanLabel.Size = new System.Drawing.Size(127, 22);
             this.accountAddBanLabel.TabIndex = 5;
-            this.accountAddBanLabel.Text = "Account:";
+            this.accountAddBanLabel.Text = "Banned Accounts:";
             // 
             // RemoveAccountBan
             // 

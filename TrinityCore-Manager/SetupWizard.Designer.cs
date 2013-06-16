@@ -35,12 +35,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.wizardPage2 = new DevComponents.DotNetBar.WizardPage();
+            this.localCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.remoteCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.typeLabel = new DevComponents.DotNetBar.LabelX();
             this.wizardPage3 = new DevComponents.DotNetBar.WizardPage();
             this.browseButton = new DevComponents.DotNetBar.ButtonX();
             this.folderTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.wizardPage4 = new DevComponents.DotNetBar.WizardPage();
+            this.autoConnectCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.hostTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -77,12 +80,9 @@
             this.MySQLWorldDBLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLCharDBLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLAuthDBLabelX = new DevComponents.DotNetBar.LabelX();
-            this.setupSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.remoteCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.localCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.autoConnectCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.wizardPage8 = new DevComponents.DotNetBar.WizardPage();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.setupSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.wizard1.SuspendLayout();
             this.wizardPage1.SuspendLayout();
             this.wizardPage2.SuspendLayout();
@@ -246,6 +246,36 @@
             this.wizardPage2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.wizardPage2.TabIndex = 8;
             // 
+            // localCheckBox
+            // 
+            // 
+            // 
+            // 
+            this.localCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.localCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.localCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.localCheckBox.Location = new System.Drawing.Point(366, 297);
+            this.localCheckBox.Name = "localCheckBox";
+            this.localCheckBox.Size = new System.Drawing.Size(86, 23);
+            this.localCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.localCheckBox.TabIndex = 4;
+            this.localCheckBox.Text = "Locally";
+            // 
+            // remoteCheckBox
+            // 
+            // 
+            // 
+            // 
+            this.remoteCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.remoteCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.remoteCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.remoteCheckBox.Location = new System.Drawing.Point(366, 248);
+            this.remoteCheckBox.Name = "remoteCheckBox";
+            this.remoteCheckBox.Size = new System.Drawing.Size(86, 23);
+            this.remoteCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.remoteCheckBox.TabIndex = 3;
+            this.remoteCheckBox.Text = "Remotely";
+            // 
             // typeLabel
             // 
             // 
@@ -361,6 +391,19 @@
             // 
             this.wizardPage4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.wizardPage4.TabIndex = 10;
+            // 
+            // autoConnectCheckBox
+            // 
+            // 
+            // 
+            // 
+            this.autoConnectCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.autoConnectCheckBox.Location = new System.Drawing.Point(367, 333);
+            this.autoConnectCheckBox.Name = "autoConnectCheckBox";
+            this.autoConnectCheckBox.Size = new System.Drawing.Size(100, 23);
+            this.autoConnectCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.autoConnectCheckBox.TabIndex = 32;
+            this.autoConnectCheckBox.Text = "Auto Connect";
             // 
             // passwordTextBox
             // 
@@ -751,7 +794,7 @@
             // 
             this.MySQLPercentLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLPercentLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MySQLPercentLabelX.Location = new System.Drawing.Point(382, 353);
+            this.MySQLPercentLabelX.Location = new System.Drawing.Point(398, 353);
             this.MySQLPercentLabelX.Name = "MySQLPercentLabelX";
             this.MySQLPercentLabelX.Size = new System.Drawing.Size(42, 23);
             this.MySQLPercentLabelX.TabIndex = 5;
@@ -774,7 +817,7 @@
             // 
             this.downloadGitRepoButtonX.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.downloadGitRepoButtonX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadGitRepoButtonX.Location = new System.Drawing.Point(288, 177);
+            this.downloadGitRepoButtonX.Location = new System.Drawing.Point(309, 176);
             this.downloadGitRepoButtonX.Name = "downloadGitRepoButtonX";
             this.downloadGitRepoButtonX.Size = new System.Drawing.Size(213, 68);
             this.downloadGitRepoButtonX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -896,53 +939,6 @@
             this.MySQLAuthDBLabelX.TabIndex = 32;
             this.MySQLAuthDBLabelX.Text = "Auth DB";
             // 
-            // setupSuperTooltip
-            // 
-            this.setupSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            // 
-            // remoteCheckBox
-            // 
-            // 
-            // 
-            // 
-            this.remoteCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.remoteCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.remoteCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.remoteCheckBox.Location = new System.Drawing.Point(366, 248);
-            this.remoteCheckBox.Name = "remoteCheckBox";
-            this.remoteCheckBox.Size = new System.Drawing.Size(86, 23);
-            this.remoteCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.remoteCheckBox.TabIndex = 3;
-            this.remoteCheckBox.Text = "Remotely";
-            // 
-            // localCheckBox
-            // 
-            // 
-            // 
-            // 
-            this.localCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.localCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.localCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.localCheckBox.Location = new System.Drawing.Point(366, 297);
-            this.localCheckBox.Name = "localCheckBox";
-            this.localCheckBox.Size = new System.Drawing.Size(86, 23);
-            this.localCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.localCheckBox.TabIndex = 4;
-            this.localCheckBox.Text = "Locally";
-            // 
-            // autoConnectCheckBox
-            // 
-            // 
-            // 
-            // 
-            this.autoConnectCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.autoConnectCheckBox.Location = new System.Drawing.Point(367, 333);
-            this.autoConnectCheckBox.Name = "autoConnectCheckBox";
-            this.autoConnectCheckBox.Size = new System.Drawing.Size(100, 23);
-            this.autoConnectCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.autoConnectCheckBox.TabIndex = 32;
-            this.autoConnectCheckBox.Text = "Auto Connect";
-            // 
             // wizardPage8
             // 
             this.wizardPage8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -981,6 +977,10 @@
             this.labelX4.Size = new System.Drawing.Size(467, 27);
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "You have successfully completed your server setup.";
+            // 
+            // setupSuperTooltip
+            // 
+            this.setupSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // SetupWizard
             // 

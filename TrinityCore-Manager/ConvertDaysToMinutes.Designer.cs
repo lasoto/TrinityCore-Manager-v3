@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(24, 59);
+            this.label1.Location = new System.Drawing.Point(97, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 18);
             this.label1.TabIndex = 0;
@@ -57,11 +57,12 @@
             this.daysIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.daysIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.daysIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.daysIntegerInput.Location = new System.Drawing.Point(76, 59);
+            this.daysIntegerInput.Location = new System.Drawing.Point(149, 59);
+            this.daysIntegerInput.MaxValue = 3600;
             this.daysIntegerInput.MinValue = 0;
             this.daysIntegerInput.Name = "daysIntegerInput";
             this.daysIntegerInput.ShowUpDown = true;
-            this.daysIntegerInput.Size = new System.Drawing.Size(173, 20);
+            this.daysIntegerInput.Size = new System.Drawing.Size(101, 20);
             this.daysIntegerInput.TabIndex = 2;
             this.daysIntegerInput.ValueChanged += new System.EventHandler(this.daysIntegerInput_ValueChanged);
             // 
@@ -69,7 +70,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.okButton.Location = new System.Drawing.Point(198, 226);
+            this.okButton.Location = new System.Drawing.Point(300, 226);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(74, 24);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -96,11 +97,11 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(8, 117);
+            this.labelX1.Location = new System.Drawing.Point(77, 116);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(78, 23);
+            this.labelX1.Size = new System.Drawing.Size(66, 23);
             this.labelX1.TabIndex = 6;
-            this.labelX1.Text = "In Minutes:";
+            this.labelX1.Text = "Minutes:";
             // 
             // inMinutesLabel
             // 
@@ -109,16 +110,16 @@
             // 
             this.inMinutesLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.inMinutesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.inMinutesLabel.Location = new System.Drawing.Point(93, 116);
+            this.inMinutesLabel.Location = new System.Drawing.Point(149, 116);
             this.inMinutesLabel.Name = "inMinutesLabel";
-            this.inMinutesLabel.Size = new System.Drawing.Size(156, 23);
+            this.inMinutesLabel.Size = new System.Drawing.Size(225, 23);
             this.inMinutesLabel.TabIndex = 7;
             // 
             // copyToClipboardButton
             // 
             this.copyToClipboardButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.copyToClipboardButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.copyToClipboardButton.Location = new System.Drawing.Point(93, 172);
+            this.copyToClipboardButton.Location = new System.Drawing.Point(149, 162);
             this.copyToClipboardButton.Name = "copyToClipboardButton";
             this.copyToClipboardButton.Size = new System.Drawing.Size(101, 30);
             this.copyToClipboardButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -130,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(386, 262);
             this.Controls.Add(this.copyToClipboardButton);
             this.Controls.Add(this.inMinutesLabel);
             this.Controls.Add(this.labelX1);
@@ -142,9 +143,9 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 300);
+            this.MaximumSize = new System.Drawing.Size(402, 300);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.MinimumSize = new System.Drawing.Size(402, 300);
             this.Name = "ConvertDaysToMinutes";
             this.Text = "Convert Days To Minutes";
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();

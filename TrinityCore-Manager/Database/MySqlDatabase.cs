@@ -30,7 +30,8 @@ namespace TrinityCore_Manager.Database
 
         public void CleanupAccounts(DateTime date)
         {
-            ExecuteNonQuery("DELETE FROM account WHERE `last_login` < @date AND `joindate` < @date", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
+            ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `joindate` < @date;", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
+            ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `last_login` <> '0000-00-00 00:00:00';", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
         }
 
         #region Helper Methods
