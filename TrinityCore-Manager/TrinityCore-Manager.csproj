@@ -137,9 +137,11 @@
     <Compile Include="CreateNPC.Designer.cs">
       <DependentUpon>CreateNPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\IDatabase.cs" />
+    <Compile Include="Database\AuthDatabase.cs" />
+    <Compile Include="Database\CharDatabase.cs" />
     <Compile Include="Database\MySqlDatabase.cs" />
     <Compile Include="Database\MySqlHelper.cs" />
+    <Compile Include="Database\WorldDatabase.cs" />
     <Compile Include="DeleteGuild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +337,7 @@
     </Compile>
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
+    <Compile Include="Misc\ServerType.cs" />
     <Compile Include="OtherCommands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +374,7 @@
     <Compile Include="SetupWizard.Designer.cs">
       <DependentUpon>SetupWizard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TCManager.cs" />
     <Compile Include="TC\CMake.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\ProcessHelper.cs" />

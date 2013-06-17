@@ -11,6 +11,7 @@ using System.IO;
 using System.Diagnostics;
 using DevComponents.DotNetBar;
 using Microsoft.Win32;
+using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Security;
@@ -22,6 +23,94 @@ namespace TrinityCore_Manager
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            CheckSettings();
+
+        }
+
+        private void CheckSettings(bool exit = false)
+        {
+
+            var set = Settings.Default;
+
+            if (string.IsNullOrEmpty(set.DBHost) || string.IsNullOrEmpty(set.DBUsername) || string.IsNullOrEmpty(set.DBPassword) || string.IsNullOrEmpty(set.DBAuthName) ||
+                string.IsNullOrEmpty(set.DBCharName) || string.IsNullOrEmpty(set.DBWorldName))
+            {
+
+                if (!exit)
+                {
+                    using (var wizard = new SetupWizard())
+                    {
+                        Hide();
+                        wizard.FormClosing += wizard_FormClosing;
+                        wizard.ShowDialog();
+                    }
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
+            else if ((ServerType)set.ServerType == ServerType.Local)
+            {
+                if (string.IsNullOrEmpty(set.ServerFolder))
+                {
+                    if (!exit)
+                    {
+                        using (var wizard = new SetupWizard())
+                        {
+                            Hide();
+                            wizard.FormClosing += wizard_FormClosing;
+                            wizard.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        Application.Exit();
+                    }
+                }
+            }
+            else if ((ServerType)set.ServerType == ServerType.RemoteAccess)
+            {
+                if (string.IsNullOrEmpty(set.RAUsername) || string.IsNullOrEmpty(set.RAPassword))
+                {
+                    if (!exit)
+                    {
+                        using (var wizard = new SetupWizard())
+                        {
+                            Hide();
+                            wizard.FormClosing += wizard_FormClosing;
+                            wizard.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        Application.Exit();
+                    }
+                }
+            }
+
+        }
+
+        void wizard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            var sw = (SetupWizard)sender;
+
+            if (!sw.Result)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                CheckSettings(true);
+            }
+
         }
 
         private void otherCommandsButton_Click(object sender, EventArgs e)
@@ -174,8 +263,11 @@ namespace TrinityCore_Manager
             Process.Start("notepad.exe", path);
         }
 
-        private void lootCleanupButton_Click(object sender, EventArgs e)
+        private async void lootCleanupButton_Click(object sender, EventArgs e)
         {
+
+            await TCManager.Instance.WorldDatabase.CleanupLoot();
+
             /* THIS SQL CODE HAS TO BE EXECUTED ONCE THE cleanLoot BUTTON IS CLICKED
              * 
              * 
@@ -201,8 +293,11 @@ DELETE FROM `mail_loot_template` WHERE `item` NOT IN (SELECT `entry` FROM `item_
 
         }
 
-        private void cleanRefLootButton_Click(object sender, EventArgs e)
+        private async void cleanRefLootButton_Click(object sender, EventArgs e)
         {
+
+            await TCManager.Instance.WorldDatabase.CleanRefLoot();
+
             /* THIS SQL CODE HAS TO BE EXECUTED ONCE THE cleanRefLoot BUTTON IS CLICKED 
              * 
              * 
@@ -222,8 +317,11 @@ DROP TABLE `RL_temp`;
              */
         }
 
-        private void cleanWorldButton_Click(object sender, EventArgs e)
+        private async void cleanWorldButton_Click(object sender, EventArgs e)
         {
+
+            await TCManager.Instance.WorldDatabase.CleanWorld();
+
             /* 
              * THIS SQL CODE HAS TO BE EXECUTED ONCE THE CLEANWORLD BUTTON IS CLICKED 
                 
@@ -272,5 +370,6 @@ DELETE FROM `pet_levelstats` WHERE `creature_entry` NOT IN (SELECT `entry` FROM 
              * 
              */
         }
+
     }
 }

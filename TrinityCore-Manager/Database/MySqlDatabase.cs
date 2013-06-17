@@ -8,12 +8,12 @@ using MySql.Data.MySqlClient;
 
 namespace TrinityCore_Manager.Database
 {
-    class MySqlDatabase : IDatabase
+    abstract class MySqlDatabase
     {
 
         public string ConnectionString { get; private set; }
 
-        public MySqlDatabase(string serverHost, int port, string username, string password, string dbName)
+        protected MySqlDatabase(string serverHost, int port, string username, string password, string dbName)
         {
 
             var connStr = new MySqlConnectionStringBuilder();
@@ -27,12 +27,7 @@ namespace TrinityCore_Manager.Database
             ConnectionString = connStr.ToString();
 
         }
-
-        public void CleanupAccounts(DateTime date)
-        {
-            ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `joindate` < @date;", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
-            ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `last_login` <> '0000-00-00 00:00:00';", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
-        }
+        
 
         #region Helper Methods
 

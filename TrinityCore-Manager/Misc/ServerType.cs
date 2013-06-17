@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrinityCore_Manager.Database
+namespace TrinityCore_Manager.Misc
 {
-    interface IDatabase
+    public enum ServerType
     {
-        void CleanupAccounts(DateTime date);
+        Local = 1,
+        RemoteAccess = 2
     }
 }

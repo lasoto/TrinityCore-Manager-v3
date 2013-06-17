@@ -33,23 +33,18 @@ namespace TrinityCore_Manager.Database
 
         }
 
-        public static async Task ExecuteScript(this MySqlDatabase db, string sqlFile)
+        public static async Task ExecuteScript(this MySqlDatabase db, FileInfo sqlFile)
         {
-            await ExecuteScript(db, new FileInfo(sqlFile));
+            await ExecuteScript(db, File.ReadAllText(sqlFile.FullName));
         }
 
-        public static async Task ExecuteScript(this MySqlDatabase db, FileInfo scriptFile)
+        public static async Task ExecuteScript(this MySqlDatabase db, string sql)
         {
-
-            if (!scriptFile.Exists)
-                return;
-
-            string scriptTxt = File.ReadAllText(scriptFile.FullName);
 
             using (var conn = new MySqlConnection(db.ConnectionString))
             {
 
-                var script = new MySqlScript(conn, scriptTxt);
+                var script = new MySqlScript(conn, sql);
 
                 var tcs = new TaskCompletionSource<bool>();
 
@@ -63,6 +58,34 @@ namespace TrinityCore_Manager.Database
                 conn.Close();
 
             }
+
+        }
+
+        public static async Task<bool> TestConnection(this MySqlDatabase db)
+        {
+
+            return await Task.Run(() =>
+            {
+                using (var conn = new MySqlConnection(db.ConnectionString))
+                {
+
+                    try
+                    {
+
+                        conn.Open();
+
+                        conn.Close();
+
+                        return true;
+
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+
+                }
+            });
 
         }
 

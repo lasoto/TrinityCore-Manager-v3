@@ -31,7 +31,8 @@ namespace TrinityCore_Manager
              * 
              */
 
-            MySqlDatabase database = new MySqlDatabase(Settings.Default.DBHost, Settings.Default.DBPort, Settings.Default.DBUsername, Settings.Default.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), Settings.Default.DBAuthName);
+
+            var database = TCManager.Instance.AuthDatabase;
 
             DateTime combined = dateTimeInput.Value.Date + timeInput.Value.TimeOfDay;
 

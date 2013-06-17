@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupWizard));
             this.wizard1 = new DevComponents.DotNetBar.Wizard();
-            this.wizardPage1 = new DevComponents.DotNetBar.WizardPage();
+            this.welcomePage = new DevComponents.DotNetBar.WizardPage();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.wizardPage2 = new DevComponents.DotNetBar.WizardPage();
+            this.connectOptionPage = new DevComponents.DotNetBar.WizardPage();
             this.localCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.remoteCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.typeLabel = new DevComponents.DotNetBar.LabelX();
-            this.wizardPage3 = new DevComponents.DotNetBar.WizardPage();
+            this.trinitySFolderPage = new DevComponents.DotNetBar.WizardPage();
             this.browseButton = new DevComponents.DotNetBar.ButtonX();
             this.folderTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.wizardPage4 = new DevComponents.DotNetBar.WizardPage();
+            this.raDetailsPage = new DevComponents.DotNetBar.WizardPage();
             this.autoConnectCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -54,46 +54,42 @@
             this.portIntegerInput = new DevComponents.Editors.IntegerInput();
             this.portLabelX = new DevComponents.DotNetBar.LabelX();
             this.hostLabelX = new DevComponents.DotNetBar.LabelX();
-            this.wizardPage5 = new DevComponents.DotNetBar.WizardPage();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.mysqlDetailsPage = new DevComponents.DotNetBar.WizardPage();
             this.mySqlPassTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mySqlUsernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mySqlHostTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mySqlConnectionProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.dbTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.newDBComboItem = new DevComponents.Editors.ComboItem();
-            this.existDBComboItem = new DevComponents.Editors.ComboItem();
             this.MySQLPasswordLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLUsernameLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLSettingsLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLIntegerInputX = new DevComponents.Editors.IntegerInput();
             this.MySQLPortLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLHostLabelX = new DevComponents.DotNetBar.LabelX();
-            this.wizardPage6 = new DevComponents.DotNetBar.WizardPage();
+            this.createDBsPage = new DevComponents.DotNetBar.WizardPage();
             this.MySQLPercentLabelX = new DevComponents.DotNetBar.LabelX();
             this.downloadProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.downloadGitRepoButtonX = new DevComponents.DotNetBar.ButtonX();
-            this.wizardPage7 = new DevComponents.DotNetBar.WizardPage();
+            this.downloadCreateDBButton = new DevComponents.DotNetBar.ButtonX();
+            this.dbDetailsPage = new DevComponents.DotNetBar.WizardPage();
             this.worldDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.charactersDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.authDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.MySQLWorldDBLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLCharDBLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLAuthDBLabelX = new DevComponents.DotNetBar.LabelX();
-            this.wizardPage8 = new DevComponents.DotNetBar.WizardPage();
+            this.serverCompletedPage = new DevComponents.DotNetBar.WizardPage();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.setupSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.wizard1.SuspendLayout();
-            this.wizardPage1.SuspendLayout();
-            this.wizardPage2.SuspendLayout();
-            this.wizardPage3.SuspendLayout();
-            this.wizardPage4.SuspendLayout();
+            this.welcomePage.SuspendLayout();
+            this.connectOptionPage.SuspendLayout();
+            this.trinitySFolderPage.SuspendLayout();
+            this.raDetailsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portIntegerInput)).BeginInit();
-            this.wizardPage5.SuspendLayout();
+            this.mysqlDetailsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MySQLIntegerInputX)).BeginInit();
-            this.wizardPage6.SuspendLayout();
-            this.wizardPage7.SuspendLayout();
-            this.wizardPage8.SuspendLayout();
+            this.createDBsPage.SuspendLayout();
+            this.dbDetailsPage.SuspendLayout();
+            this.serverCompletedPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // wizard1
@@ -138,47 +134,48 @@
             this.wizard1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.wizard1.Location = new System.Drawing.Point(0, 0);
             this.wizard1.Name = "wizard1";
-            this.wizard1.Size = new System.Drawing.Size(823, 632);
+            this.wizard1.Size = new System.Drawing.Size(823, 631);
             this.wizard1.TabIndex = 0;
             this.wizard1.WizardPages.AddRange(new DevComponents.DotNetBar.WizardPage[] {
-            this.wizardPage1,
-            this.wizardPage2,
-            this.wizardPage3,
-            this.wizardPage4,
-            this.wizardPage5,
-            this.wizardPage6,
-            this.wizardPage7,
-            this.wizardPage8});
+            this.welcomePage,
+            this.connectOptionPage,
+            this.trinitySFolderPage,
+            this.raDetailsPage,
+            this.mysqlDetailsPage,
+            this.createDBsPage,
+            this.dbDetailsPage,
+            this.serverCompletedPage});
+            this.wizard1.WizardPageChanging += new DevComponents.DotNetBar.WizardCancelPageChangeEventHandler(this.wizard1_WizardPageChanging);
             // 
-            // wizardPage1
+            // welcomePage
             // 
-            this.wizardPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.welcomePage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage1.BackColor = System.Drawing.Color.White;
-            this.wizardPage1.Controls.Add(this.label1);
-            this.wizardPage1.Controls.Add(this.label2);
-            this.wizardPage1.Controls.Add(this.label3);
-            this.wizardPage1.InteriorPage = false;
-            this.wizardPage1.Location = new System.Drawing.Point(0, 0);
-            this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(823, 586);
+            this.welcomePage.BackColor = System.Drawing.Color.White;
+            this.welcomePage.Controls.Add(this.label1);
+            this.welcomePage.Controls.Add(this.label2);
+            this.welcomePage.Controls.Add(this.label3);
+            this.welcomePage.InteriorPage = false;
+            this.welcomePage.Location = new System.Drawing.Point(0, 0);
+            this.welcomePage.Name = "welcomePage";
+            this.welcomePage.Size = new System.Drawing.Size(823, 585);
             // 
             // 
             // 
-            this.wizardPage1.Style.BackColor = System.Drawing.Color.White;
-            this.wizardPage1.Style.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wizardPage1.Style.BackgroundImage")));
-            this.wizardPage1.Style.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.TopLeft;
-            this.wizardPage1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.welcomePage.Style.BackColor = System.Drawing.Color.White;
+            this.welcomePage.Style.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wizardPage1.Style.BackgroundImage")));
+            this.welcomePage.Style.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.TopLeft;
+            this.welcomePage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.welcomePage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage1.TabIndex = 7;
+            this.welcomePage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.welcomePage.TabIndex = 7;
             // 
             // label1
             // 
@@ -202,7 +199,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(210, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(598, 454);
+            this.label2.Size = new System.Drawing.Size(598, 453);
             this.label2.TabIndex = 1;
             this.label2.Text = "This wizard will guide you through the process of setting a server environment fo" +
     "r TrinityCore Manager v 3.0\r\n\r\n";
@@ -212,39 +209,39 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(210, 563);
+            this.label3.Location = new System.Drawing.Point(210, 562);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "To continue, click Next.";
             // 
-            // wizardPage2
+            // connectOptionPage
             // 
-            this.wizardPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.connectOptionPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage2.AntiAlias = false;
-            this.wizardPage2.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage2.Controls.Add(this.localCheckBox);
-            this.wizardPage2.Controls.Add(this.remoteCheckBox);
-            this.wizardPage2.Controls.Add(this.typeLabel);
-            this.wizardPage2.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage2.Name = "wizardPage2";
-            this.wizardPage2.PageTitle = "Initial Setting";
-            this.wizardPage2.Size = new System.Drawing.Size(809, 502);
+            this.connectOptionPage.AntiAlias = false;
+            this.connectOptionPage.BackColor = System.Drawing.Color.Transparent;
+            this.connectOptionPage.Controls.Add(this.localCheckBox);
+            this.connectOptionPage.Controls.Add(this.remoteCheckBox);
+            this.connectOptionPage.Controls.Add(this.typeLabel);
+            this.connectOptionPage.Location = new System.Drawing.Point(7, 72);
+            this.connectOptionPage.Name = "connectOptionPage";
+            this.connectOptionPage.PageTitle = "Initial Setting";
+            this.connectOptionPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.connectOptionPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.connectOptionPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage2.TabIndex = 8;
+            this.connectOptionPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.connectOptionPage.TabIndex = 8;
             // 
             // localCheckBox
             // 
@@ -290,33 +287,33 @@
             this.typeLabel.TabIndex = 2;
             this.typeLabel.Text = "How would you like to connect to your TrinityCore server?";
             // 
-            // wizardPage3
+            // trinitySFolderPage
             // 
-            this.wizardPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.trinitySFolderPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage3.AntiAlias = false;
-            this.wizardPage3.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage3.Controls.Add(this.browseButton);
-            this.wizardPage3.Controls.Add(this.folderTextBox);
-            this.wizardPage3.Controls.Add(this.labelX1);
-            this.wizardPage3.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage3.Name = "wizardPage3";
-            this.wizardPage3.PageTitle = "Local Setup";
-            this.wizardPage3.Size = new System.Drawing.Size(809, 502);
+            this.trinitySFolderPage.AntiAlias = false;
+            this.trinitySFolderPage.BackColor = System.Drawing.Color.Transparent;
+            this.trinitySFolderPage.Controls.Add(this.browseButton);
+            this.trinitySFolderPage.Controls.Add(this.folderTextBox);
+            this.trinitySFolderPage.Controls.Add(this.labelX1);
+            this.trinitySFolderPage.Location = new System.Drawing.Point(7, 72);
+            this.trinitySFolderPage.Name = "trinitySFolderPage";
+            this.trinitySFolderPage.PageTitle = "Local Setup";
+            this.trinitySFolderPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.trinitySFolderPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.trinitySFolderPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage3.TabIndex = 9;
+            this.trinitySFolderPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.trinitySFolderPage.TabIndex = 9;
             // 
             // browseButton
             // 
@@ -328,6 +325,7 @@
             this.browseButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.browseButton.TabIndex = 2;
             this.browseButton.Text = "Browse for folder";
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // folderTextBox
             // 
@@ -338,9 +336,10 @@
             this.folderTextBox.Border.Class = "TextBoxBorder";
             this.folderTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.folderTextBox.ForeColor = System.Drawing.Color.White;
-            this.folderTextBox.Location = new System.Drawing.Point(257, 222);
+            this.folderTextBox.Location = new System.Drawing.Point(196, 222);
             this.folderTextBox.Name = "folderTextBox";
-            this.folderTextBox.Size = new System.Drawing.Size(293, 20);
+            this.folderTextBox.ReadOnly = true;
+            this.folderTextBox.Size = new System.Drawing.Size(413, 20);
             this.folderTextBox.TabIndex = 1;
             // 
             // labelX1
@@ -356,41 +355,41 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Please locate your TrinityCore server folder.";
             // 
-            // wizardPage4
+            // raDetailsPage
             // 
-            this.wizardPage4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.raDetailsPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage4.AntiAlias = false;
-            this.wizardPage4.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage4.Controls.Add(this.autoConnectCheckBox);
-            this.wizardPage4.Controls.Add(this.passwordTextBox);
-            this.wizardPage4.Controls.Add(this.usernameTextBox);
-            this.wizardPage4.Controls.Add(this.hostTextBox);
-            this.wizardPage4.Controls.Add(this.labelX2);
-            this.wizardPage4.Controls.Add(this.raInfoLabelX);
-            this.wizardPage4.Controls.Add(this.passwordLabelX);
-            this.wizardPage4.Controls.Add(this.usernameLabelX);
-            this.wizardPage4.Controls.Add(this.portIntegerInput);
-            this.wizardPage4.Controls.Add(this.portLabelX);
-            this.wizardPage4.Controls.Add(this.hostLabelX);
-            this.wizardPage4.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage4.Name = "wizardPage4";
-            this.wizardPage4.PageTitle = "Remote Access Setup";
-            this.wizardPage4.Size = new System.Drawing.Size(809, 502);
+            this.raDetailsPage.AntiAlias = false;
+            this.raDetailsPage.BackColor = System.Drawing.Color.Transparent;
+            this.raDetailsPage.Controls.Add(this.autoConnectCheckBox);
+            this.raDetailsPage.Controls.Add(this.passwordTextBox);
+            this.raDetailsPage.Controls.Add(this.usernameTextBox);
+            this.raDetailsPage.Controls.Add(this.hostTextBox);
+            this.raDetailsPage.Controls.Add(this.labelX2);
+            this.raDetailsPage.Controls.Add(this.raInfoLabelX);
+            this.raDetailsPage.Controls.Add(this.passwordLabelX);
+            this.raDetailsPage.Controls.Add(this.usernameLabelX);
+            this.raDetailsPage.Controls.Add(this.portIntegerInput);
+            this.raDetailsPage.Controls.Add(this.portLabelX);
+            this.raDetailsPage.Controls.Add(this.hostLabelX);
+            this.raDetailsPage.Location = new System.Drawing.Point(7, 72);
+            this.raDetailsPage.Name = "raDetailsPage";
+            this.raDetailsPage.PageTitle = "Remote Access Setup";
+            this.raDetailsPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.raDetailsPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.raDetailsPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage4.TabIndex = 10;
+            this.raDetailsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.raDetailsPage.TabIndex = 10;
             // 
             // autoConnectCheckBox
             // 
@@ -418,7 +417,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(210, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account password", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.passwordTextBox.TabIndex = 31;
+            this.passwordTextBox.TabIndex = 4;
             // 
             // usernameTextBox
             // 
@@ -433,7 +432,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(208, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.usernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account username", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.usernameTextBox.TabIndex = 30;
+            this.usernameTextBox.TabIndex = 3;
             // 
             // hostTextBox
             // 
@@ -448,7 +447,7 @@
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(210, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.hostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. server.examplename.com", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.hostTextBox.TabIndex = 29;
+            this.hostTextBox.TabIndex = 1;
             // 
             // labelX2
             // 
@@ -514,11 +513,12 @@
             this.portIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.portIntegerInput.ForeColor = System.Drawing.Color.White;
             this.portIntegerInput.Location = new System.Drawing.Point(316, 191);
+            this.portIntegerInput.MinValue = 0;
             this.portIntegerInput.Name = "portIntegerInput";
             this.portIntegerInput.ShowUpDown = true;
             this.portIntegerInput.Size = new System.Drawing.Size(80, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3443", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.portIntegerInput.TabIndex = 18;
+            this.portIntegerInput.TabIndex = 2;
             // 
             // portLabelX
             // 
@@ -546,55 +546,40 @@
             this.hostLabelX.TabIndex = 15;
             this.hostLabelX.Text = "Host";
             // 
-            // wizardPage5
+            // mysqlDetailsPage
             // 
-            this.wizardPage5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mysqlDetailsPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage5.AntiAlias = false;
-            this.wizardPage5.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage5.Controls.Add(this.labelX3);
-            this.wizardPage5.Controls.Add(this.mySqlPassTextBox);
-            this.wizardPage5.Controls.Add(this.mySqlUsernameTextBox);
-            this.wizardPage5.Controls.Add(this.mySqlHostTextBox);
-            this.wizardPage5.Controls.Add(this.mySqlConnectionProgressBar);
-            this.wizardPage5.Controls.Add(this.dbTypeComboBox);
-            this.wizardPage5.Controls.Add(this.MySQLPasswordLabelX);
-            this.wizardPage5.Controls.Add(this.MySQLUsernameLabelX);
-            this.wizardPage5.Controls.Add(this.MySQLSettingsLabelX);
-            this.wizardPage5.Controls.Add(this.MySQLIntegerInputX);
-            this.wizardPage5.Controls.Add(this.MySQLPortLabelX);
-            this.wizardPage5.Controls.Add(this.MySQLHostLabelX);
-            this.wizardPage5.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage5.Name = "wizardPage5";
-            this.wizardPage5.PageTitle = "MySQL Settings";
-            this.wizardPage5.Size = new System.Drawing.Size(809, 502);
+            this.mysqlDetailsPage.AntiAlias = false;
+            this.mysqlDetailsPage.BackColor = System.Drawing.Color.Transparent;
+            this.mysqlDetailsPage.Controls.Add(this.mySqlPassTextBox);
+            this.mysqlDetailsPage.Controls.Add(this.mySqlUsernameTextBox);
+            this.mysqlDetailsPage.Controls.Add(this.mySqlHostTextBox);
+            this.mysqlDetailsPage.Controls.Add(this.mySqlConnectionProgressBar);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLPasswordLabelX);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLUsernameLabelX);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLSettingsLabelX);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLIntegerInputX);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLPortLabelX);
+            this.mysqlDetailsPage.Controls.Add(this.MySQLHostLabelX);
+            this.mysqlDetailsPage.Location = new System.Drawing.Point(7, 72);
+            this.mysqlDetailsPage.Name = "mysqlDetailsPage";
+            this.mysqlDetailsPage.PageTitle = "MySQL Settings";
+            this.mysqlDetailsPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mysqlDetailsPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mysqlDetailsPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage5.TabIndex = 11;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(260, 302);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(69, 23);
-            this.labelX3.TabIndex = 35;
-            this.labelX3.Text = "Database";
+            this.mysqlDetailsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mysqlDetailsPage.TabIndex = 11;
             // 
             // mySqlPassTextBox
             // 
@@ -605,10 +590,10 @@
             this.mySqlPassTextBox.Border.Class = "TextBoxBorder";
             this.mySqlPassTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mySqlPassTextBox.ForeColor = System.Drawing.Color.White;
-            this.mySqlPassTextBox.Location = new System.Drawing.Point(335, 257);
+            this.mySqlPassTextBox.Location = new System.Drawing.Point(319, 280);
             this.mySqlPassTextBox.Name = "mySqlPassTextBox";
             this.mySqlPassTextBox.Size = new System.Drawing.Size(213, 20);
-            this.mySqlPassTextBox.TabIndex = 34;
+            this.mySqlPassTextBox.TabIndex = 4;
             // 
             // mySqlUsernameTextBox
             // 
@@ -619,11 +604,11 @@
             this.mySqlUsernameTextBox.Border.Class = "TextBoxBorder";
             this.mySqlUsernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mySqlUsernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.mySqlUsernameTextBox.Location = new System.Drawing.Point(335, 217);
+            this.mySqlUsernameTextBox.Location = new System.Drawing.Point(319, 240);
             this.mySqlUsernameTextBox.Name = "mySqlUsernameTextBox";
             this.mySqlUsernameTextBox.Size = new System.Drawing.Size(213, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.mySqlUsernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: root", null, null, DevComponents.DotNetBar.eTooltipColor.Blue));
-            this.mySqlUsernameTextBox.TabIndex = 33;
+            this.mySqlUsernameTextBox.TabIndex = 3;
             // 
             // mySqlHostTextBox
             // 
@@ -634,11 +619,11 @@
             this.mySqlHostTextBox.Border.Class = "TextBoxBorder";
             this.mySqlHostTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mySqlHostTextBox.ForeColor = System.Drawing.Color.White;
-            this.mySqlHostTextBox.Location = new System.Drawing.Point(335, 127);
+            this.mySqlHostTextBox.Location = new System.Drawing.Point(319, 150);
             this.mySqlHostTextBox.Name = "mySqlHostTextBox";
             this.mySqlHostTextBox.Size = new System.Drawing.Size(213, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.mySqlHostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: localhost", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.mySqlHostTextBox.TabIndex = 32;
+            this.mySqlHostTextBox.TabIndex = 1;
             // 
             // mySqlConnectionProgressBar
             // 
@@ -653,31 +638,6 @@
             this.mySqlConnectionProgressBar.TabIndex = 31;
             this.mySqlConnectionProgressBar.Visible = false;
             // 
-            // dbTypeComboBox
-            // 
-            this.dbTypeComboBox.DisplayMember = "Text";
-            this.dbTypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dbTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dbTypeComboBox.ForeColor = System.Drawing.Color.White;
-            this.dbTypeComboBox.FormattingEnabled = true;
-            this.dbTypeComboBox.ItemHeight = 14;
-            this.dbTypeComboBox.Items.AddRange(new object[] {
-            this.newDBComboItem,
-            this.existDBComboItem});
-            this.dbTypeComboBox.Location = new System.Drawing.Point(335, 305);
-            this.dbTypeComboBox.Name = "dbTypeComboBox";
-            this.dbTypeComboBox.Size = new System.Drawing.Size(80, 20);
-            this.dbTypeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dbTypeComboBox.TabIndex = 22;
-            // 
-            // newDBComboItem
-            // 
-            this.newDBComboItem.Text = "New Database";
-            // 
-            // existDBComboItem
-            // 
-            this.existDBComboItem.Text = "Existing Database";
-            // 
             // MySQLPasswordLabelX
             // 
             // 
@@ -685,7 +645,7 @@
             // 
             this.MySQLPasswordLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLPasswordLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MySQLPasswordLabelX.Location = new System.Drawing.Point(260, 253);
+            this.MySQLPasswordLabelX.Location = new System.Drawing.Point(244, 276);
             this.MySQLPasswordLabelX.Name = "MySQLPasswordLabelX";
             this.MySQLPasswordLabelX.Size = new System.Drawing.Size(69, 23);
             this.MySQLPasswordLabelX.TabIndex = 29;
@@ -698,7 +658,7 @@
             // 
             this.MySQLUsernameLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLUsernameLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MySQLUsernameLabelX.Location = new System.Drawing.Point(258, 213);
+            this.MySQLUsernameLabelX.Location = new System.Drawing.Point(242, 236);
             this.MySQLUsernameLabelX.Name = "MySQLUsernameLabelX";
             this.MySQLUsernameLabelX.Size = new System.Drawing.Size(71, 23);
             this.MySQLUsernameLabelX.TabIndex = 28;
@@ -711,7 +671,7 @@
             // 
             this.MySQLSettingsLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLSettingsLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MySQLSettingsLabelX.Location = new System.Drawing.Point(308, 71);
+            this.MySQLSettingsLabelX.Location = new System.Drawing.Point(292, 94);
             this.MySQLSettingsLabelX.Name = "MySQLSettingsLabelX";
             this.MySQLSettingsLabelX.Size = new System.Drawing.Size(240, 24);
             this.MySQLSettingsLabelX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -726,12 +686,14 @@
             this.MySQLIntegerInputX.BackgroundStyle.Class = "DateTimeInputBackground";
             this.MySQLIntegerInputX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLIntegerInputX.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.MySQLIntegerInputX.Location = new System.Drawing.Point(335, 173);
+            this.MySQLIntegerInputX.Location = new System.Drawing.Point(319, 196);
+            this.MySQLIntegerInputX.MinValue = 0;
             this.MySQLIntegerInputX.Name = "MySQLIntegerInputX";
             this.MySQLIntegerInputX.ShowUpDown = true;
             this.MySQLIntegerInputX.Size = new System.Drawing.Size(80, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.MySQLIntegerInputX, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3306", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.MySQLIntegerInputX.TabIndex = 19;
+            this.MySQLIntegerInputX.TabIndex = 2;
+            this.MySQLIntegerInputX.Value = 3306;
             // 
             // MySQLPortLabelX
             // 
@@ -740,7 +702,7 @@
             // 
             this.MySQLPortLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLPortLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MySQLPortLabelX.Location = new System.Drawing.Point(303, 171);
+            this.MySQLPortLabelX.Location = new System.Drawing.Point(287, 194);
             this.MySQLPortLabelX.Name = "MySQLPortLabelX";
             this.MySQLPortLabelX.Size = new System.Drawing.Size(29, 23);
             this.MySQLPortLabelX.TabIndex = 24;
@@ -753,39 +715,39 @@
             // 
             this.MySQLHostLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MySQLHostLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MySQLHostLabelX.Location = new System.Drawing.Point(294, 125);
+            this.MySQLHostLabelX.Location = new System.Drawing.Point(278, 148);
             this.MySQLHostLabelX.Name = "MySQLHostLabelX";
             this.MySQLHostLabelX.Size = new System.Drawing.Size(38, 23);
             this.MySQLHostLabelX.TabIndex = 23;
             this.MySQLHostLabelX.Text = "Host";
             // 
-            // wizardPage6
+            // createDBsPage
             // 
-            this.wizardPage6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.createDBsPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage6.AntiAlias = false;
-            this.wizardPage6.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage6.Controls.Add(this.MySQLPercentLabelX);
-            this.wizardPage6.Controls.Add(this.downloadProgressBar);
-            this.wizardPage6.Controls.Add(this.downloadGitRepoButtonX);
-            this.wizardPage6.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage6.Name = "wizardPage6";
-            this.wizardPage6.PageTitle = "TrinityCore Database Setup";
-            this.wizardPage6.Size = new System.Drawing.Size(809, 502);
+            this.createDBsPage.AntiAlias = false;
+            this.createDBsPage.BackColor = System.Drawing.Color.Transparent;
+            this.createDBsPage.Controls.Add(this.MySQLPercentLabelX);
+            this.createDBsPage.Controls.Add(this.downloadProgressBar);
+            this.createDBsPage.Controls.Add(this.downloadCreateDBButton);
+            this.createDBsPage.Location = new System.Drawing.Point(7, 72);
+            this.createDBsPage.Name = "createDBsPage";
+            this.createDBsPage.PageTitle = "TrinityCore Database Setup";
+            this.createDBsPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.createDBsPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.createDBsPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage6.TabIndex = 12;
+            this.createDBsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.createDBsPage.TabIndex = 12;
             // 
             // MySQLPercentLabelX
             // 
@@ -813,47 +775,48 @@
             this.downloadProgressBar.TabIndex = 4;
             this.downloadProgressBar.Visible = false;
             // 
-            // downloadGitRepoButtonX
+            // downloadCreateDBButton
             // 
-            this.downloadGitRepoButtonX.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.downloadGitRepoButtonX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadGitRepoButtonX.Location = new System.Drawing.Point(309, 176);
-            this.downloadGitRepoButtonX.Name = "downloadGitRepoButtonX";
-            this.downloadGitRepoButtonX.Size = new System.Drawing.Size(213, 68);
-            this.downloadGitRepoButtonX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.downloadGitRepoButtonX.TabIndex = 3;
-            this.downloadGitRepoButtonX.Text = "Download and Create Databases";
+            this.downloadCreateDBButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.downloadCreateDBButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadCreateDBButton.Location = new System.Drawing.Point(298, 157);
+            this.downloadCreateDBButton.Name = "downloadCreateDBButton";
+            this.downloadCreateDBButton.Size = new System.Drawing.Size(213, 68);
+            this.downloadCreateDBButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.downloadCreateDBButton.TabIndex = 3;
+            this.downloadCreateDBButton.Text = "Download and Create Databases";
+            this.downloadCreateDBButton.Click += new System.EventHandler(this.downloadCreateDBButton_Click);
             // 
-            // wizardPage7
+            // dbDetailsPage
             // 
-            this.wizardPage7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dbDetailsPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage7.AntiAlias = false;
-            this.wizardPage7.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage7.Controls.Add(this.worldDBTextBox);
-            this.wizardPage7.Controls.Add(this.charactersDBTextBox);
-            this.wizardPage7.Controls.Add(this.authDBTextBox);
-            this.wizardPage7.Controls.Add(this.MySQLWorldDBLabelX);
-            this.wizardPage7.Controls.Add(this.MySQLCharDBLabelX);
-            this.wizardPage7.Controls.Add(this.MySQLAuthDBLabelX);
-            this.wizardPage7.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage7.Name = "wizardPage7";
-            this.wizardPage7.PageTitle = "Existing TrinityCore Databases";
-            this.wizardPage7.Size = new System.Drawing.Size(809, 502);
+            this.dbDetailsPage.AntiAlias = false;
+            this.dbDetailsPage.BackColor = System.Drawing.Color.Transparent;
+            this.dbDetailsPage.Controls.Add(this.worldDBTextBox);
+            this.dbDetailsPage.Controls.Add(this.charactersDBTextBox);
+            this.dbDetailsPage.Controls.Add(this.authDBTextBox);
+            this.dbDetailsPage.Controls.Add(this.MySQLWorldDBLabelX);
+            this.dbDetailsPage.Controls.Add(this.MySQLCharDBLabelX);
+            this.dbDetailsPage.Controls.Add(this.MySQLAuthDBLabelX);
+            this.dbDetailsPage.Location = new System.Drawing.Point(7, 72);
+            this.dbDetailsPage.Name = "dbDetailsPage";
+            this.dbDetailsPage.PageTitle = "Existing TrinityCore Databases";
+            this.dbDetailsPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dbDetailsPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dbDetailsPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage7.TabIndex = 13;
+            this.dbDetailsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dbDetailsPage.TabIndex = 13;
             // 
             // worldDBTextBox
             // 
@@ -939,31 +902,31 @@
             this.MySQLAuthDBLabelX.TabIndex = 32;
             this.MySQLAuthDBLabelX.Text = "Auth DB";
             // 
-            // wizardPage8
+            // serverCompletedPage
             // 
-            this.wizardPage8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.serverCompletedPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wizardPage8.AntiAlias = false;
-            this.wizardPage8.BackColor = System.Drawing.Color.Transparent;
-            this.wizardPage8.Controls.Add(this.labelX4);
-            this.wizardPage8.Location = new System.Drawing.Point(7, 72);
-            this.wizardPage8.Name = "wizardPage8";
-            this.wizardPage8.PageTitle = "Setup Done";
-            this.wizardPage8.Size = new System.Drawing.Size(809, 502);
+            this.serverCompletedPage.AntiAlias = false;
+            this.serverCompletedPage.BackColor = System.Drawing.Color.Transparent;
+            this.serverCompletedPage.Controls.Add(this.labelX4);
+            this.serverCompletedPage.Location = new System.Drawing.Point(7, 72);
+            this.serverCompletedPage.Name = "serverCompletedPage";
+            this.serverCompletedPage.PageTitle = "Setup Done";
+            this.serverCompletedPage.Size = new System.Drawing.Size(809, 501);
             // 
             // 
             // 
-            this.wizardPage8.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCompletedPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage8.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCompletedPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.wizardPage8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.wizardPage8.TabIndex = 14;
+            this.serverCompletedPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.serverCompletedPage.TabIndex = 14;
             // 
             // labelX4
             // 
@@ -986,7 +949,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 632);
+            this.ClientSize = new System.Drawing.Size(823, 631);
             this.Controls.Add(this.wizard1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -997,17 +960,18 @@
             this.MinimumSize = new System.Drawing.Size(839, 670);
             this.Name = "SetupWizard";
             this.Text = "Setup Wizard";
+            this.Load += new System.EventHandler(this.SetupWizard_Load);
             this.wizard1.ResumeLayout(false);
-            this.wizardPage1.ResumeLayout(false);
-            this.wizardPage2.ResumeLayout(false);
-            this.wizardPage3.ResumeLayout(false);
-            this.wizardPage4.ResumeLayout(false);
+            this.welcomePage.ResumeLayout(false);
+            this.connectOptionPage.ResumeLayout(false);
+            this.trinitySFolderPage.ResumeLayout(false);
+            this.raDetailsPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.portIntegerInput)).EndInit();
-            this.wizardPage5.ResumeLayout(false);
+            this.mysqlDetailsPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MySQLIntegerInputX)).EndInit();
-            this.wizardPage6.ResumeLayout(false);
-            this.wizardPage7.ResumeLayout(false);
-            this.wizardPage8.ResumeLayout(false);
+            this.createDBsPage.ResumeLayout(false);
+            this.dbDetailsPage.ResumeLayout(false);
+            this.serverCompletedPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1015,18 +979,18 @@
         #endregion
 
         private DevComponents.DotNetBar.Wizard wizard1;
-        private DevComponents.DotNetBar.WizardPage wizardPage1;
+        private DevComponents.DotNetBar.WizardPage welcomePage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.WizardPage wizardPage2;
+        private DevComponents.DotNetBar.WizardPage connectOptionPage;
         private DevComponents.DotNetBar.LabelX typeLabel;
-        private DevComponents.DotNetBar.WizardPage wizardPage3;
+        private DevComponents.DotNetBar.WizardPage trinitySFolderPage;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX folderTextBox;
         private DevComponents.DotNetBar.ButtonX browseButton;
         private DevComponents.DotNetBar.Controls.TextBoxX hostTextBox;
-        private DevComponents.DotNetBar.WizardPage wizardPage4;
+        private DevComponents.DotNetBar.WizardPage raDetailsPage;
         private DevComponents.DotNetBar.Controls.TextBoxX passwordTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX usernameTextBox;
         private DevComponents.DotNetBar.LabelX labelX2;
@@ -1037,11 +1001,8 @@
         private DevComponents.DotNetBar.LabelX portLabelX;
         private DevComponents.DotNetBar.LabelX hostLabelX;
         private DevComponents.DotNetBar.SuperTooltip setupSuperTooltip;
-        private DevComponents.DotNetBar.WizardPage wizardPage5;
+        private DevComponents.DotNetBar.WizardPage mysqlDetailsPage;
         private DevComponents.DotNetBar.Controls.ProgressBarX mySqlConnectionProgressBar;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx dbTypeComboBox;
-        private DevComponents.Editors.ComboItem newDBComboItem;
-        private DevComponents.Editors.ComboItem existDBComboItem;
         private DevComponents.DotNetBar.LabelX MySQLPasswordLabelX;
         private DevComponents.DotNetBar.LabelX MySQLUsernameLabelX;
         private DevComponents.DotNetBar.LabelX MySQLSettingsLabelX;
@@ -1051,12 +1012,11 @@
         private DevComponents.DotNetBar.Controls.TextBoxX mySqlPassTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX mySqlUsernameTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX mySqlHostTextBox;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.WizardPage wizardPage6;
+        private DevComponents.DotNetBar.WizardPage createDBsPage;
         private DevComponents.DotNetBar.LabelX MySQLPercentLabelX;
         private DevComponents.DotNetBar.Controls.ProgressBarX downloadProgressBar;
-        private DevComponents.DotNetBar.ButtonX downloadGitRepoButtonX;
-        private DevComponents.DotNetBar.WizardPage wizardPage7;
+        private DevComponents.DotNetBar.ButtonX downloadCreateDBButton;
+        private DevComponents.DotNetBar.WizardPage dbDetailsPage;
         private DevComponents.DotNetBar.Controls.TextBoxX worldDBTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX charactersDBTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX authDBTextBox;
@@ -1066,7 +1026,7 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX remoteCheckBox;
         private DevComponents.DotNetBar.Controls.CheckBoxX localCheckBox;
         private DevComponents.DotNetBar.Controls.CheckBoxX autoConnectCheckBox;
-        private DevComponents.DotNetBar.WizardPage wizardPage8;
+        private DevComponents.DotNetBar.WizardPage serverCompletedPage;
         private DevComponents.DotNetBar.LabelX labelX4;
 
     }
