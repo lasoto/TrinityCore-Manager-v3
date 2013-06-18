@@ -152,6 +152,11 @@
             this.authServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
             this.authServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.authServerTab = new DevComponents.DotNetBar.TabItem(this.components);
+            this.setupWizardButton = new DevComponents.DotNetBar.ButtonItem();
+            this.settingsButton = new DevComponents.DotNetBar.ButtonItem();
+            this.raTabItem = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.raTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mainRibbonControl.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.otherRibbonPanel.SuspendLayout();
@@ -165,6 +170,7 @@
             this.consoleTabControl.SuspendLayout();
             this.worldServerTabControlPanel.SuspendLayout();
             this.authServerTabControlPanel.SuspendLayout();
+            this.tabControlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainRibbonControl
@@ -176,12 +182,12 @@
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
-            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
+            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -197,6 +203,8 @@
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.mainRibbonControl.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.setupWizardButton,
+            this.settingsButton,
             this.aboutButton});
             this.mainRibbonControl.Size = new System.Drawing.Size(1127, 195);
             this.mainRibbonControl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1755,8 +1763,9 @@
             // 
             this.consoleTabControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.consoleTabControl.CanReorderTabs = true;
-            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
+            this.consoleTabControl.Controls.Add(this.tabControlPanel1);
             this.consoleTabControl.Controls.Add(this.authServerTabControlPanel);
+            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
             this.consoleTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.consoleTabControl.ForeColor = System.Drawing.Color.White;
             this.consoleTabControl.Location = new System.Drawing.Point(5, 196);
@@ -1769,6 +1778,7 @@
             this.consoleTabControl.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.consoleTabControl.Tabs.Add(this.worldServerTab);
             this.consoleTabControl.Tabs.Add(this.authServerTab);
+            this.consoleTabControl.Tabs.Add(this.raTabItem);
             this.consoleTabControl.Text = "serverTabControl";
             // 
             // worldServerTabControlPanel
@@ -1857,6 +1867,60 @@
             this.authServerTab.Name = "authServerTab";
             this.authServerTab.Text = "Auth Server Console";
             // 
+            // setupWizardButton
+            // 
+            this.setupWizardButton.Name = "setupWizardButton";
+            this.setupWizardButton.Text = "Setup";
+            this.setupWizardButton.Click += new System.EventHandler(this.setupWizardButton_Click);
+            // 
+            // settingsButton
+            // 
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Text = "Settings";
+            // 
+            // raTabItem
+            // 
+            this.raTabItem.AttachedControl = this.tabControlPanel1;
+            this.raTabItem.Name = "raTabItem";
+            this.raTabItem.Text = "Remote Access";
+            // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Controls.Add(this.raTextBox);
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 27);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(1127, 498);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 3;
+            this.tabControlPanel1.TabItem = this.raTabItem;
+            // 
+            // raTextBox
+            // 
+            this.raTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.raTextBox.Border.Class = "TextBoxBorder";
+            this.raTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.raTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.raTextBox.ForeColor = System.Drawing.Color.White;
+            this.raTextBox.Location = new System.Drawing.Point(1, 1);
+            this.raTextBox.Multiline = true;
+            this.raTextBox.Name = "raTextBox";
+            this.raTextBox.ReadOnly = true;
+            this.raTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.raTextBox.Size = new System.Drawing.Size(1125, 496);
+            this.raTextBox.TabIndex = 2;
+            this.raTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
+            this.raTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1885,6 +1949,7 @@
             this.consoleTabControl.ResumeLayout(false);
             this.worldServerTabControlPanel.ResumeLayout(false);
             this.authServerTabControlPanel.ResumeLayout(false);
+            this.tabControlPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2013,6 +2078,11 @@
         private DevComponents.DotNetBar.ButtonItem cleanLootButton;
         private DevComponents.DotNetBar.ButtonItem cleanRefLootButton;
         private DevComponents.DotNetBar.ButtonItem cleanWorldButton;
+        private DevComponents.DotNetBar.ButtonItem setupWizardButton;
+        private DevComponents.DotNetBar.ButtonItem settingsButton;
+        private DevComponents.DotNetBar.TabControlPanel tabControlPanel1;
+        private DevComponents.DotNetBar.TabItem raTabItem;
+        private DevComponents.DotNetBar.Controls.TextBoxX raTextBox;
     }
 }
 

@@ -166,5 +166,41 @@ namespace TrinityCore_Manager.Properties {
                 this["RAPassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RAHost {
+            get {
+                return ((string)(this["RAHost"]));
+            }
+            set {
+                this["RAHost"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int RAPort {
+            get {
+                return ((int)(this["RAPort"]));
+            }
+            set {
+                this["RAPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool RAAutoConnect {
+            get {
+                return ((bool)(this["RAAutoConnect"]));
+            }
+            set {
+                this["RAAutoConnect"] = value;
+            }
+        }
     }
 }

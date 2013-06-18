@@ -100,6 +100,8 @@ namespace TrinityCore_Manager
         void wizard_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+            this.Show();
+
             var sw = (SetupWizard)sender;
 
             if (!sw.Result)
@@ -369,6 +371,20 @@ DELETE FROM `npc_vendor` WHERE `item` NOT IN (SELECT `entry` FROM `item_template
 DELETE FROM `pet_levelstats` WHERE `creature_entry` NOT IN (SELECT `entry` FROM `creature_template`);
              * 
              */
+        }
+
+        private void setupWizardButton_Click(object sender, EventArgs e)
+        {
+            using (var sWizard = new SetupWizard())
+            {
+                sWizard.FormClosing += sWizard_FormClosing;
+                sWizard.ShowDialog();
+            }
+        }
+
+        void sWizard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
         }
 
     }

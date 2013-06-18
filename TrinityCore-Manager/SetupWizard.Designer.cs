@@ -113,6 +113,7 @@
             this.wizard1.FooterStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.wizard1.FooterStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.wizard1.FooterStyle.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.wizard1.FormCancelButton = DevComponents.DotNetBar.eWizardFormCancelButton.None;
             this.wizard1.HeaderCaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wizard1.HeaderDescriptionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wizard1.HeaderDescriptionIndent = 16;
@@ -145,6 +146,8 @@
             this.createDBsPage,
             this.dbDetailsPage,
             this.serverCompletedPage});
+            this.wizard1.FinishButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_FinishButtonClick);
+            this.wizard1.CancelButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_CancelButtonClick);
             this.wizard1.WizardPageChanging += new DevComponents.DotNetBar.WizardCancelPageChangeEventHandler(this.wizard1_WizardPageChanging);
             // 
             // welcomePage
@@ -771,6 +774,7 @@
             this.downloadProgressBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.downloadProgressBar.Location = new System.Drawing.Point(78, 382);
             this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.ProgressType = DevComponents.DotNetBar.eProgressItemType.Marquee;
             this.downloadProgressBar.Size = new System.Drawing.Size(642, 48);
             this.downloadProgressBar.TabIndex = 4;
             this.downloadProgressBar.Visible = false;
