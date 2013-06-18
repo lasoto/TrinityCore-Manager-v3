@@ -185,7 +185,7 @@ namespace TrinityCore_Manager
 
                         if (success)
                         {
-                            e.NewPage = createDBsPage;
+                            wizard1.SelectedPage = createDBsPage;
                         }
                         else
                         {
@@ -282,6 +282,8 @@ namespace TrinityCore_Manager
                 settings.RAPort = portIntegerInput.Value;
                 settings.RAAutoConnect = autoConnectCheckBox.Checked;
             }
+
+            Result = true;
 
             settings.Save();
 
