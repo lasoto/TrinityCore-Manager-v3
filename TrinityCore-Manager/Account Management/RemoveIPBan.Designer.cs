@@ -58,6 +58,7 @@
             this.banButton.TabIndex = 6;
             this.banButton.Text = "Remove";
             this.banButton.TextColor = System.Drawing.Color.Chartreuse;
+            this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // ipAddressBanInput
             // 

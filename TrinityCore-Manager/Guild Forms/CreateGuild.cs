@@ -18,9 +18,10 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
+        // NOT FINISHED; NEEDS WORK
         private void createButton_Click(object sender, EventArgs e)
         {
-            TCManager.Instance.CharDatabase.CreateGuild(nameTextBox.Text, leaderComboBox.SelectedIndex);
+            //TCManager.Instance.CharDatabase.CreateGuild(nameTextBox.Text, leaderComboBox.SelectedIndex);
         }
     }
 }

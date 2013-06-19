@@ -20,7 +20,7 @@ namespace TrinityCore_Manager
 
         private void banButton_Click(object sender, EventArgs e)
         {
-            //TCManager.Instance.AuthDatabase.AccountBan(
+            // NOT FINISHED; NEEDS WORK
         }
 
         private void AddAccountBan_Load(object sender, EventArgs e)

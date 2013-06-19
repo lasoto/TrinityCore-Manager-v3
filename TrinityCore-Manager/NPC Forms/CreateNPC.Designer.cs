@@ -80,13 +80,15 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.npcWizardPage3 = new DevComponents.DotNetBar.WizardPage();
+            this.typeFlagsTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.npcFlagTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.unitFlags2TextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.unitFlagsTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.npcFlagButton = new DevComponents.DotNetBar.ButtonX();
-            this.npcFlagIntegerInput = new DevComponents.Editors.IntegerInput();
             this.wdbVerifiedIntegerInput = new DevComponents.Editors.IntegerInput();
             this.dynamicFlagsButton = new DevComponents.DotNetBar.ButtonX();
             this.dynamicFlagsIntegerInput = new DevComponents.Editors.IntegerInput();
             this.typeFlagsButton = new DevComponents.DotNetBar.ButtonX();
-            this.typeFlagsIntegerInput = new DevComponents.Editors.IntegerInput();
             this.typeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.tBeastComboItem = new DevComponents.Editors.ComboItem();
             this.tDragonkinComboItem = new DevComponents.Editors.ComboItem();
@@ -153,9 +155,7 @@
             this.rankBossComboItem = new DevComponents.Editors.ComboItem();
             this.rankRareComboItem = new DevComponents.Editors.ComboItem();
             this.unitFlags2Button = new DevComponents.DotNetBar.ButtonX();
-            this.unitFlags2IntegerInput = new DevComponents.Editors.IntegerInput();
             this.unitFlagsButton = new DevComponents.DotNetBar.ButtonX();
-            this.unitFlagsIntegerInput = new DevComponents.Editors.IntegerInput();
             this.unitClassComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.uClassWarriorComboItem = new DevComponents.Editors.ComboItem();
             this.uClassPaladinComboItem = new DevComponents.Editors.ComboItem();
@@ -196,13 +196,13 @@
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
             this.labelX21 = new DevComponents.DotNetBar.LabelX();
             this.npcWizardPage4 = new DevComponents.DotNetBar.WizardPage();
+            this.flagsExtraTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.mechImmuneMaskTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.flagsExtraButton = new DevComponents.DotNetBar.ButtonX();
-            this.flagsExtraIntegerInput = new DevComponents.Editors.IntegerInput();
             this.labelX61 = new DevComponents.DotNetBar.LabelX();
             this.petSpellDataIdIntegerInput = new DevComponents.Editors.IntegerInput();
             this.labelX60 = new DevComponents.DotNetBar.LabelX();
             this.mechImmuneMaskButton = new DevComponents.DotNetBar.ButtonX();
-            this.mechImmuneMaskIntegerInput = new DevComponents.Editors.IntegerInput();
             this.labelX59 = new DevComponents.DotNetBar.LabelX();
             this.racialLeaderCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.questItem6IntegerInput = new DevComponents.Editors.IntegerInput();
@@ -329,14 +329,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.diffEntry2IntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diffEntry1IntegerInput)).BeginInit();
             this.npcWizardPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.npcFlagIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wdbVerifiedIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynamicFlagsIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeFlagsIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factionHIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factionAIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitFlags2IntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitFlagsIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regenHealthIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangedAttackPowerIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangeAttackTimeIntegerInput)).BeginInit();
@@ -349,9 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxDmgIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minDmgIntegerInput)).BeginInit();
             this.npcWizardPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flagsExtraIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petSpellDataIdIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mechImmuneMaskIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem6IntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem5IntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem4IntegerInput)).BeginInit();
@@ -623,7 +617,7 @@
             this.manaModDoubleInput.Size = new System.Drawing.Size(111, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.manaModDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Used to modify the base Level/Class mana of a creature. This field comes from WDB" +
             ".", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.manaModDoubleInput.TabIndex = 41;
+            this.manaModDoubleInput.TabIndex = 18;
             // 
             // healthModDoubleInput
             // 
@@ -640,7 +634,7 @@
             this.healthModDoubleInput.Size = new System.Drawing.Size(181, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.healthModDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Used to modify the base Level/Class health of a creature. This field comes from W" +
             "DB.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.healthModDoubleInput.TabIndex = 40;
+            this.healthModDoubleInput.TabIndex = 17;
             // 
             // expIntegerInput
             // 
@@ -658,7 +652,7 @@
             this.expIntegerInput.Size = new System.Drawing.Size(142, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.expIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The expansion table the creatures health value is taken from. Values are from 0 t" +
             "o 2.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.expIntegerInput.TabIndex = 39;
+            this.expIntegerInput.TabIndex = 20;
             // 
             // vehicleIdIntegerInput
             // 
@@ -673,7 +667,7 @@
             this.vehicleIdIntegerInput.ShowUpDown = true;
             this.vehicleIdIntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.vehicleIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("vehicleIdIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.vehicleIdIntegerInput.TabIndex = 38;
+            this.vehicleIdIntegerInput.TabIndex = 19;
             // 
             // maxLevelIntegerInput
             // 
@@ -689,7 +683,7 @@
             this.maxLevelIntegerInput.Size = new System.Drawing.Size(142, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.maxLevelIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The maximum level of the creature if the creature has a level range. When added t" +
             "o world, a level in chosen in the specified level range.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.maxLevelIntegerInput.TabIndex = 35;
+            this.maxLevelIntegerInput.TabIndex = 16;
             // 
             // minLevelIntegerInput
             // 
@@ -704,7 +698,7 @@
             this.minLevelIntegerInput.ShowUpDown = true;
             this.minLevelIntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.minLevelIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The minimum level of the creature if the creature has a level range.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.minLevelIntegerInput.TabIndex = 34;
+            this.minLevelIntegerInput.TabIndex = 15;
             // 
             // maxGoldIntegerInput
             // 
@@ -719,7 +713,7 @@
             this.maxGoldIntegerInput.ShowUpDown = true;
             this.maxGoldIntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.maxGoldIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Maximum money that the creature drops when killed, in copper.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.maxGoldIntegerInput.TabIndex = 33;
+            this.maxGoldIntegerInput.TabIndex = 14;
             // 
             // minGoldIntegerInput
             // 
@@ -734,7 +728,7 @@
             this.minGoldIntegerInput.ShowUpDown = true;
             this.minGoldIntegerInput.Size = new System.Drawing.Size(181, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.minGoldIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Minimum money that the creature drops when killed, in copper.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.minGoldIntegerInput.TabIndex = 32;
+            this.minGoldIntegerInput.TabIndex = 13;
             // 
             // modelId4IntegerInput
             // 
@@ -750,7 +744,7 @@
             this.modelId4IntegerInput.Size = new System.Drawing.Size(142, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.modelId4IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "A random graphical model that the client applies on this creature. This is a crea" +
             "ture_model_info.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.modelId4IntegerInput.TabIndex = 31;
+            this.modelId4IntegerInput.TabIndex = 12;
             // 
             // modelId3IntegerInput
             // 
@@ -766,7 +760,7 @@
             this.modelId3IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.modelId3IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "A random graphical model that the client applies on this creature. This is a crea" +
             "ture_model_info.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.modelId3IntegerInput.TabIndex = 30;
+            this.modelId3IntegerInput.TabIndex = 11;
             // 
             // modelId1IntegerInput
             // 
@@ -782,7 +776,7 @@
             this.modelId1IntegerInput.Size = new System.Drawing.Size(181, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.modelId1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "A random graphical model that the client applies on this creature. This is a crea" +
             "ture_model_info.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.modelId1IntegerInput.TabIndex = 29;
+            this.modelId1IntegerInput.TabIndex = 9;
             // 
             // modelId2IntegerInput
             // 
@@ -798,7 +792,7 @@
             this.modelId2IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.modelId2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "A random graphical model that the client applies on this creature. This is a crea" +
             "ture_model_info.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.modelId2IntegerInput.TabIndex = 28;
+            this.modelId2IntegerInput.TabIndex = 10;
             // 
             // killCredit2IntegerInput
             // 
@@ -813,7 +807,7 @@
             this.killCredit2IntegerInput.ShowUpDown = true;
             this.killCredit2IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.killCredit2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("killCredit2IntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.killCredit2IntegerInput.TabIndex = 27;
+            this.killCredit2IntegerInput.TabIndex = 7;
             // 
             // killCredit1IntegerInput
             // 
@@ -828,7 +822,7 @@
             this.killCredit1IntegerInput.ShowUpDown = true;
             this.killCredit1IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.killCredit1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("killCredit1IntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.killCredit1IntegerInput.TabIndex = 26;
+            this.killCredit1IntegerInput.TabIndex = 6;
             // 
             // diffEntry3IntegerInput
             // 
@@ -843,7 +837,7 @@
             this.diffEntry3IntegerInput.ShowUpDown = true;
             this.diffEntry3IntegerInput.Size = new System.Drawing.Size(149, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.diffEntry3IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("diffEntry3IntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.diffEntry3IntegerInput.TabIndex = 25;
+            this.diffEntry3IntegerInput.TabIndex = 4;
             // 
             // diffEntry2IntegerInput
             // 
@@ -858,7 +852,7 @@
             this.diffEntry2IntegerInput.ShowUpDown = true;
             this.diffEntry2IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.diffEntry2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("diffEntry2IntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.diffEntry2IntegerInput.TabIndex = 24;
+            this.diffEntry2IntegerInput.TabIndex = 3;
             // 
             // diffEntry1IntegerInput
             // 
@@ -873,7 +867,7 @@
             this.diffEntry1IntegerInput.ShowUpDown = true;
             this.diffEntry1IntegerInput.Size = new System.Drawing.Size(102, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.diffEntry1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("diffEntry1IntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.diffEntry1IntegerInput.TabIndex = 23;
+            this.diffEntry1IntegerInput.TabIndex = 2;
             // 
             // iconNameTextBox
             // 
@@ -888,7 +882,7 @@
             this.iconNameTextBox.Name = "iconNameTextBox";
             this.iconNameTextBox.Size = new System.Drawing.Size(149, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.iconNameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("iconNameTextBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.iconNameTextBox.TabIndex = 22;
+            this.iconNameTextBox.TabIndex = 8;
             // 
             // subnameTextBox
             // 
@@ -903,7 +897,7 @@
             this.subnameTextBox.Name = "subnameTextBox";
             this.subnameTextBox.Size = new System.Drawing.Size(181, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.subnameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The subname of the creature that appears in <> below the creature\'s name.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.subnameTextBox.TabIndex = 21;
+            this.subnameTextBox.TabIndex = 5;
             // 
             // nameTextBox
             // 
@@ -918,7 +912,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(181, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.nameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Base name of the creature.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.nameTextBox.TabIndex = 20;
+            this.nameTextBox.TabIndex = 1;
             // 
             // labelX20
             // 
@@ -1187,13 +1181,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.npcWizardPage3.AntiAlias = false;
             this.npcWizardPage3.BackColor = System.Drawing.Color.Transparent;
+            this.npcWizardPage3.Controls.Add(this.typeFlagsTextBox);
+            this.npcWizardPage3.Controls.Add(this.npcFlagTextBox);
+            this.npcWizardPage3.Controls.Add(this.unitFlags2TextBox);
+            this.npcWizardPage3.Controls.Add(this.unitFlagsTextBox);
             this.npcWizardPage3.Controls.Add(this.npcFlagButton);
-            this.npcWizardPage3.Controls.Add(this.npcFlagIntegerInput);
             this.npcWizardPage3.Controls.Add(this.wdbVerifiedIntegerInput);
             this.npcWizardPage3.Controls.Add(this.dynamicFlagsButton);
             this.npcWizardPage3.Controls.Add(this.dynamicFlagsIntegerInput);
             this.npcWizardPage3.Controls.Add(this.typeFlagsButton);
-            this.npcWizardPage3.Controls.Add(this.typeFlagsIntegerInput);
             this.npcWizardPage3.Controls.Add(this.typeComboBox);
             this.npcWizardPage3.Controls.Add(this.factionHButton);
             this.npcWizardPage3.Controls.Add(this.factionHIntegerInput);
@@ -1202,9 +1198,7 @@
             this.npcWizardPage3.Controls.Add(this.familyComboBox);
             this.npcWizardPage3.Controls.Add(this.rankComboBox);
             this.npcWizardPage3.Controls.Add(this.unitFlags2Button);
-            this.npcWizardPage3.Controls.Add(this.unitFlags2IntegerInput);
             this.npcWizardPage3.Controls.Add(this.unitFlagsButton);
-            this.npcWizardPage3.Controls.Add(this.unitFlagsIntegerInput);
             this.npcWizardPage3.Controls.Add(this.unitClassComboBox);
             this.npcWizardPage3.Controls.Add(this.regenHealthIntegerInput);
             this.npcWizardPage3.Controls.Add(this.rangedAttackPowerIntegerInput);
@@ -1258,6 +1252,74 @@
             this.npcWizardPage3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.npcWizardPage3.TabIndex = 9;
             // 
+            // typeFlagsTextBox
+            // 
+            this.typeFlagsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.typeFlagsTextBox.Border.Class = "TextBoxBorder";
+            this.typeFlagsTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.typeFlagsTextBox.ForeColor = System.Drawing.Color.White;
+            this.typeFlagsTextBox.Location = new System.Drawing.Point(287, 451);
+            this.typeFlagsTextBox.Name = "typeFlagsTextBox";
+            this.typeFlagsTextBox.Size = new System.Drawing.Size(147, 20);
+            this.typeFlagsTextBox.TabIndex = 26;
+            this.typeFlagsTextBox.Text = "0";
+            this.typeFlagsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.typeFlagsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.typeFlagsTextBox_KeyPress);
+            // 
+            // npcFlagTextBox
+            // 
+            this.npcFlagTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.npcFlagTextBox.Border.Class = "TextBoxBorder";
+            this.npcFlagTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.npcFlagTextBox.ForeColor = System.Drawing.Color.White;
+            this.npcFlagTextBox.Location = new System.Drawing.Point(958, 356);
+            this.npcFlagTextBox.Name = "npcFlagTextBox";
+            this.npcFlagTextBox.Size = new System.Drawing.Size(136, 20);
+            this.npcFlagTextBox.TabIndex = 24;
+            this.npcFlagTextBox.Text = "0";
+            this.npcFlagTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.npcFlagTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.typeFlagsTextBox_KeyPress);
+            // 
+            // unitFlags2TextBox
+            // 
+            this.unitFlags2TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.unitFlags2TextBox.Border.Class = "TextBoxBorder";
+            this.unitFlags2TextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.unitFlags2TextBox.ForeColor = System.Drawing.Color.White;
+            this.unitFlags2TextBox.Location = new System.Drawing.Point(440, 268);
+            this.unitFlags2TextBox.Name = "unitFlags2TextBox";
+            this.unitFlags2TextBox.Size = new System.Drawing.Size(114, 20);
+            this.unitFlags2TextBox.TabIndex = 15;
+            this.unitFlags2TextBox.Text = "0";
+            this.unitFlags2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.unitFlags2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.unitFlags2TextBox_KeyPress);
+            // 
+            // unitFlagsTextBox
+            // 
+            this.unitFlagsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.unitFlagsTextBox.Border.Class = "TextBoxBorder";
+            this.unitFlagsTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.unitFlagsTextBox.ForeColor = System.Drawing.Color.White;
+            this.unitFlagsTextBox.Location = new System.Drawing.Point(166, 267);
+            this.unitFlagsTextBox.Name = "unitFlagsTextBox";
+            this.unitFlagsTextBox.Size = new System.Drawing.Size(114, 20);
+            this.unitFlagsTextBox.TabIndex = 13;
+            this.unitFlagsTextBox.Text = "0";
+            this.unitFlagsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.unitFlagsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.unitFlagsTextBox_KeyPress);
+            // 
             // npcFlagButton
             // 
             this.npcFlagButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1266,24 +1328,9 @@
             this.npcFlagButton.Name = "npcFlagButton";
             this.npcFlagButton.Size = new System.Drawing.Size(85, 28);
             this.npcFlagButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.npcFlagButton.TabIndex = 52;
+            this.npcFlagButton.TabIndex = 25;
             this.npcFlagButton.Text = "Find NPC Flag";
             this.npcFlagButton.Click += new System.EventHandler(this.npcFlagButton_Click);
-            // 
-            // npcFlagIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.npcFlagIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.npcFlagIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.npcFlagIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.npcFlagIntegerInput.Location = new System.Drawing.Point(958, 356);
-            this.npcFlagIntegerInput.Name = "npcFlagIntegerInput";
-            this.npcFlagIntegerInput.ShowUpDown = true;
-            this.npcFlagIntegerInput.Size = new System.Drawing.Size(136, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.npcFlagIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("npcFlagIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.npcFlagIntegerInput.TabIndex = 51;
             // 
             // wdbVerifiedIntegerInput
             // 
@@ -1298,7 +1345,7 @@
             this.wdbVerifiedIntegerInput.ShowUpDown = true;
             this.wdbVerifiedIntegerInput.Size = new System.Drawing.Size(159, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.wdbVerifiedIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("wdbVerifiedIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.wdbVerifiedIntegerInput.TabIndex = 50;
+            this.wdbVerifiedIntegerInput.TabIndex = 30;
             // 
             // dynamicFlagsButton
             // 
@@ -1308,7 +1355,7 @@
             this.dynamicFlagsButton.Name = "dynamicFlagsButton";
             this.dynamicFlagsButton.Size = new System.Drawing.Size(85, 28);
             this.dynamicFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dynamicFlagsButton.TabIndex = 49;
+            this.dynamicFlagsButton.TabIndex = 29;
             this.dynamicFlagsButton.Text = "Find DynamicFlags";
             this.dynamicFlagsButton.Click += new System.EventHandler(this.dynamicFlagsButton_Click);
             // 
@@ -1321,11 +1368,12 @@
             this.dynamicFlagsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dynamicFlagsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dynamicFlagsIntegerInput.Location = new System.Drawing.Point(604, 450);
+            this.dynamicFlagsIntegerInput.MinValue = 0;
             this.dynamicFlagsIntegerInput.Name = "dynamicFlagsIntegerInput";
             this.dynamicFlagsIntegerInput.ShowUpDown = true;
             this.dynamicFlagsIntegerInput.Size = new System.Drawing.Size(150, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.dynamicFlagsIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Flags that control visual appearance of the creature.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.dynamicFlagsIntegerInput.TabIndex = 48;
+            this.dynamicFlagsIntegerInput.TabIndex = 28;
             // 
             // typeFlagsButton
             // 
@@ -1335,24 +1383,9 @@
             this.typeFlagsButton.Name = "typeFlagsButton";
             this.typeFlagsButton.Size = new System.Drawing.Size(85, 28);
             this.typeFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.typeFlagsButton.TabIndex = 47;
+            this.typeFlagsButton.TabIndex = 27;
             this.typeFlagsButton.Text = "Find TypeFlags";
             this.typeFlagsButton.Click += new System.EventHandler(this.typeFlagsButton_Click);
-            // 
-            // typeFlagsIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.typeFlagsIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.typeFlagsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.typeFlagsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.typeFlagsIntegerInput.Location = new System.Drawing.Point(286, 450);
-            this.typeFlagsIntegerInput.Name = "typeFlagsIntegerInput";
-            this.typeFlagsIntegerInput.ShowUpDown = true;
-            this.typeFlagsIntegerInput.Size = new System.Drawing.Size(150, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.typeFlagsIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("typeFlagsIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.typeFlagsIntegerInput.TabIndex = 46;
             // 
             // typeComboBox
             // 
@@ -1380,7 +1413,7 @@
             this.typeComboBox.Size = new System.Drawing.Size(114, 20);
             this.typeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcSuperTooltip.SetSuperTooltip(this.typeComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The type of the creature", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.typeComboBox.TabIndex = 45;
+            this.typeComboBox.TabIndex = 23;
             // 
             // tBeastComboItem
             // 
@@ -1442,7 +1475,7 @@
             this.factionHButton.Name = "factionHButton";
             this.factionHButton.Size = new System.Drawing.Size(87, 28);
             this.factionHButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.factionHButton.TabIndex = 44;
+            this.factionHButton.TabIndex = 22;
             this.factionHButton.Text = "Find Faction";
             this.factionHButton.Click += new System.EventHandler(this.factionHButton_Click);
             // 
@@ -1459,7 +1492,7 @@
             this.factionHIntegerInput.ShowUpDown = true;
             this.factionHIntegerInput.Size = new System.Drawing.Size(116, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.factionHIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("factionHIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.factionHIntegerInput.TabIndex = 43;
+            this.factionHIntegerInput.TabIndex = 21;
             // 
             // factionAButton
             // 
@@ -1469,7 +1502,7 @@
             this.factionAButton.Name = "factionAButton";
             this.factionAButton.Size = new System.Drawing.Size(85, 28);
             this.factionAButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.factionAButton.TabIndex = 42;
+            this.factionAButton.TabIndex = 20;
             this.factionAButton.Text = "Find Faction";
             this.factionAButton.Click += new System.EventHandler(this.factionAButton_Click);
             // 
@@ -1486,7 +1519,7 @@
             this.factionAIntegerInput.ShowUpDown = true;
             this.factionAIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.factionAIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("factionAIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.factionAIntegerInput.TabIndex = 41;
+            this.factionAIntegerInput.TabIndex = 19;
             // 
             // familyComboBox
             // 
@@ -1541,7 +1574,7 @@
             this.familyComboBox.Size = new System.Drawing.Size(136, 20);
             this.familyComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcSuperTooltip.SetSuperTooltip(this.familyComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The family this creature belongs to.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.familyComboBox.TabIndex = 40;
+            this.familyComboBox.TabIndex = 18;
             // 
             // comboItem10
             // 
@@ -1720,7 +1753,7 @@
             this.rankComboBox.Name = "rankComboBox";
             this.rankComboBox.Size = new System.Drawing.Size(114, 20);
             this.rankComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.rankComboBox.TabIndex = 39;
+            this.rankComboBox.TabIndex = 17;
             // 
             // rankNormalComboItem
             // 
@@ -1750,25 +1783,9 @@
             this.unitFlags2Button.Name = "unitFlags2Button";
             this.unitFlags2Button.Size = new System.Drawing.Size(85, 28);
             this.unitFlags2Button.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.unitFlags2Button.TabIndex = 38;
+            this.unitFlags2Button.TabIndex = 16;
             this.unitFlags2Button.Text = "Find UnitFlags2";
             this.unitFlags2Button.Click += new System.EventHandler(this.unitFlags2Button_Click);
-            // 
-            // unitFlags2IntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.unitFlags2IntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.unitFlags2IntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unitFlags2IntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.unitFlags2IntegerInput.Location = new System.Drawing.Point(440, 267);
-            this.unitFlags2IntegerInput.Name = "unitFlags2IntegerInput";
-            this.unitFlags2IntegerInput.ShowUpDown = true;
-            this.unitFlags2IntegerInput.Size = new System.Drawing.Size(114, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.unitFlags2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Allows additional application of unit flags to creatures. Again, this is a bitmas" +
-            "k field and to apply more than one flag, just add the different numbers.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.unitFlags2IntegerInput.TabIndex = 37;
             // 
             // unitFlagsButton
             // 
@@ -1778,25 +1795,9 @@
             this.unitFlagsButton.Name = "unitFlagsButton";
             this.unitFlagsButton.Size = new System.Drawing.Size(85, 28);
             this.unitFlagsButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.unitFlagsButton.TabIndex = 36;
+            this.unitFlagsButton.TabIndex = 14;
             this.unitFlagsButton.Text = "Find UnitFlags";
             this.unitFlagsButton.Click += new System.EventHandler(this.unitFlagsButton_Click);
-            // 
-            // unitFlagsIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.unitFlagsIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.unitFlagsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unitFlagsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.unitFlagsIntegerInput.Location = new System.Drawing.Point(166, 267);
-            this.unitFlagsIntegerInput.Name = "unitFlagsIntegerInput";
-            this.unitFlagsIntegerInput.ShowUpDown = true;
-            this.unitFlagsIntegerInput.Size = new System.Drawing.Size(114, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.unitFlagsIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Allows the manual application of unit flags to creatures. Again this is a bitmask" +
-            " field and to apply more than one flag, just add the different numbers", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.unitFlagsIntegerInput.TabIndex = 35;
             // 
             // unitClassComboBox
             // 
@@ -1815,7 +1816,7 @@
             this.unitClassComboBox.Size = new System.Drawing.Size(136, 20);
             this.unitClassComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcSuperTooltip.SetSuperTooltip(this.unitClassComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("unitClassComboBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.unitClassComboBox.TabIndex = 34;
+            this.unitClassComboBox.TabIndex = 12;
             // 
             // uClassWarriorComboItem
             // 
@@ -1848,7 +1849,7 @@
             this.regenHealthIntegerInput.ShowUpDown = true;
             this.regenHealthIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.regenHealthIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Boolean 1 or 0 controlling if the creature should regenerate its health or not.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.regenHealthIntegerInput.TabIndex = 33;
+            this.regenHealthIntegerInput.TabIndex = 11;
             // 
             // rangedAttackPowerIntegerInput
             // 
@@ -1863,7 +1864,7 @@
             this.rangedAttackPowerIntegerInput.ShowUpDown = true;
             this.rangedAttackPowerIntegerInput.Size = new System.Drawing.Size(116, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.rangedAttackPowerIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("rangedAttackPowerIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.rangedAttackPowerIntegerInput.TabIndex = 32;
+            this.rangedAttackPowerIntegerInput.TabIndex = 10;
             // 
             // rangeAttackTimeIntegerInput
             // 
@@ -1879,7 +1880,7 @@
             this.rangeAttackTimeIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.rangeAttackTimeIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "This is the base time that determines how long a creature must wait between range" +
             "d attacks. This time is in milliseconds", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.rangeAttackTimeIntegerInput.TabIndex = 31;
+            this.rangeAttackTimeIntegerInput.TabIndex = 9;
             // 
             // dmgSchoolIntegerInput
             // 
@@ -1893,7 +1894,7 @@
             this.dmgSchoolIntegerInput.Name = "dmgSchoolIntegerInput";
             this.dmgSchoolIntegerInput.ShowUpDown = true;
             this.dmgSchoolIntegerInput.Size = new System.Drawing.Size(136, 20);
-            this.dmgSchoolIntegerInput.TabIndex = 30;
+            this.dmgSchoolIntegerInput.TabIndex = 8;
             // 
             // maxRangeDmgIntegerInput
             // 
@@ -1908,7 +1909,7 @@
             this.maxRangeDmgIntegerInput.ShowUpDown = true;
             this.maxRangeDmgIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.maxRangeDmgIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Maximum range damage the creature inflicts.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.maxRangeDmgIntegerInput.TabIndex = 29;
+            this.maxRangeDmgIntegerInput.TabIndex = 7;
             // 
             // minRangeDmgIntegerInput
             // 
@@ -1923,7 +1924,7 @@
             this.minRangeDmgIntegerInput.ShowUpDown = true;
             this.minRangeDmgIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.minRangeDmgIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Minimum ranged damage the creature inflicts.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.minRangeDmgIntegerInput.TabIndex = 28;
+            this.minRangeDmgIntegerInput.TabIndex = 6;
             // 
             // baseAttackTimeIntegerInput
             // 
@@ -1939,7 +1940,7 @@
             this.baseAttackTimeIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.baseAttackTimeIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "This is the base time that determines how long a creature must wait between melee" +
             " attacks. This time is in milliseconds.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.baseAttackTimeIntegerInput.TabIndex = 27;
+            this.baseAttackTimeIntegerInput.TabIndex = 5;
             // 
             // dmgMultiplierDoubleInput
             // 
@@ -1956,7 +1957,7 @@
             this.dmgMultiplierDoubleInput.Size = new System.Drawing.Size(136, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.dmgMultiplierDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Multiplier for mindmg and maxdmg\r\nExample: mindmg=200 maxdmg = 500 dmg_multiplier" +
             " = 10\r\nOutcome: mob will hit for 2000-5000", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.dmgMultiplierDoubleInput.TabIndex = 26;
+            this.dmgMultiplierDoubleInput.TabIndex = 4;
             // 
             // attackPowerIntegerInput
             // 
@@ -1971,7 +1972,7 @@
             this.attackPowerIntegerInput.ShowUpDown = true;
             this.attackPowerIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.attackPowerIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("attackPowerIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.attackPowerIntegerInput.TabIndex = 25;
+            this.attackPowerIntegerInput.TabIndex = 3;
             // 
             // maxDmgIntegerInput
             // 
@@ -1987,7 +1988,7 @@
             this.maxDmgIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.maxDmgIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Maximum damage the creature deals in melee. This field is no longer combined with" +
             " the attackpower field to calculate the damage.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.maxDmgIntegerInput.TabIndex = 24;
+            this.maxDmgIntegerInput.TabIndex = 2;
             // 
             // minDmgIntegerInput
             // 
@@ -2003,7 +2004,7 @@
             this.minDmgIntegerInput.Size = new System.Drawing.Size(114, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.minDmgIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Minimum damage the creature deals in melee. This field is no longer combined with" +
             " the attackpower field to calculate the damage.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.minDmgIntegerInput.TabIndex = 23;
+            this.minDmgIntegerInput.TabIndex = 1;
             // 
             // labelX43
             // 
@@ -2090,7 +2091,7 @@
             // 
             this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX37.Location = new System.Drawing.Point(99, 353);
+            this.labelX37.Location = new System.Drawing.Point(86, 353);
             this.labelX37.Name = "labelX37";
             this.labelX37.Size = new System.Drawing.Size(70, 23);
             this.labelX37.TabIndex = 16;
@@ -2142,7 +2143,7 @@
             // 
             this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX33.Location = new System.Drawing.Point(95, 264);
+            this.labelX33.Location = new System.Drawing.Point(86, 264);
             this.labelX33.Name = "labelX33";
             this.labelX33.Size = new System.Drawing.Size(74, 23);
             this.labelX33.TabIndex = 12;
@@ -2311,13 +2312,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.npcWizardPage4.AntiAlias = false;
             this.npcWizardPage4.BackColor = System.Drawing.Color.Transparent;
+            this.npcWizardPage4.Controls.Add(this.flagsExtraTextBox);
+            this.npcWizardPage4.Controls.Add(this.mechImmuneMaskTextBox);
             this.npcWizardPage4.Controls.Add(this.flagsExtraButton);
-            this.npcWizardPage4.Controls.Add(this.flagsExtraIntegerInput);
             this.npcWizardPage4.Controls.Add(this.labelX61);
             this.npcWizardPage4.Controls.Add(this.petSpellDataIdIntegerInput);
             this.npcWizardPage4.Controls.Add(this.labelX60);
             this.npcWizardPage4.Controls.Add(this.mechImmuneMaskButton);
-            this.npcWizardPage4.Controls.Add(this.mechImmuneMaskIntegerInput);
             this.npcWizardPage4.Controls.Add(this.labelX59);
             this.npcWizardPage4.Controls.Add(this.racialLeaderCheckBox);
             this.npcWizardPage4.Controls.Add(this.questItem6IntegerInput);
@@ -2368,6 +2369,39 @@
             this.npcWizardPage4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.npcWizardPage4.TabIndex = 10;
             // 
+            // flagsExtraTextBox
+            // 
+            this.flagsExtraTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.flagsExtraTextBox.Border.Class = "TextBoxBorder";
+            this.flagsExtraTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.flagsExtraTextBox.ForeColor = System.Drawing.Color.White;
+            this.flagsExtraTextBox.Location = new System.Drawing.Point(806, 419);
+            this.flagsExtraTextBox.Name = "flagsExtraTextBox";
+            this.flagsExtraTextBox.Size = new System.Drawing.Size(138, 20);
+            this.flagsExtraTextBox.TabIndex = 18;
+            this.flagsExtraTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.flagsExtraTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.flagsExtraTextBox_KeyPress);
+            // 
+            // mechImmuneMaskTextBox
+            // 
+            this.mechImmuneMaskTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.mechImmuneMaskTextBox.Border.Class = "TextBoxBorder";
+            this.mechImmuneMaskTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mechImmuneMaskTextBox.ForeColor = System.Drawing.Color.White;
+            this.mechImmuneMaskTextBox.Location = new System.Drawing.Point(216, 419);
+            this.mechImmuneMaskTextBox.Name = "mechImmuneMaskTextBox";
+            this.mechImmuneMaskTextBox.Size = new System.Drawing.Size(138, 20);
+            this.mechImmuneMaskTextBox.TabIndex = 16;
+            this.mechImmuneMaskTextBox.Text = "0";
+            this.mechImmuneMaskTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mechImmuneMaskTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mechImmuneMaskTextBox_KeyPress);
+            // 
             // flagsExtraButton
             // 
             this.flagsExtraButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -2376,25 +2410,9 @@
             this.flagsExtraButton.Name = "flagsExtraButton";
             this.flagsExtraButton.Size = new System.Drawing.Size(92, 39);
             this.flagsExtraButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.flagsExtraButton.TabIndex = 38;
-            this.flagsExtraButton.Text = "Find Flags Extra";
+            this.flagsExtraButton.TabIndex = 21;
+            this.flagsExtraButton.Text = "Find NPC Flags Extra";
             this.flagsExtraButton.Click += new System.EventHandler(this.flagsExtraButton_Click);
-            // 
-            // flagsExtraIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.flagsExtraIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.flagsExtraIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.flagsExtraIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.flagsExtraIntegerInput.Location = new System.Drawing.Point(806, 418);
-            this.flagsExtraIntegerInput.Name = "flagsExtraIntegerInput";
-            this.flagsExtraIntegerInput.ShowUpDown = true;
-            this.flagsExtraIntegerInput.Size = new System.Drawing.Size(138, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.flagsExtraIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "These flags control certain creature specific attributes. Flags can be added toge" +
-            "ther to apply more than one.\r\nExample: 32+64=96", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.flagsExtraIntegerInput.TabIndex = 37;
             // 
             // labelX61
             // 
@@ -2423,7 +2441,7 @@
             this.petSpellDataIdIntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.petSpellDataIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "ID, found in CreatureSpellData.dbc, that displays what spells the pet has in the " +
             "client.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.petSpellDataIdIntegerInput.TabIndex = 35;
+            this.petSpellDataIdIntegerInput.TabIndex = 17;
             // 
             // labelX60
             // 
@@ -2446,25 +2464,9 @@
             this.mechImmuneMaskButton.Name = "mechImmuneMaskButton";
             this.mechImmuneMaskButton.Size = new System.Drawing.Size(92, 39);
             this.mechImmuneMaskButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.mechImmuneMaskButton.TabIndex = 33;
+            this.mechImmuneMaskButton.TabIndex = 19;
             this.mechImmuneMaskButton.Text = "Find Immune Masks";
             this.mechImmuneMaskButton.Click += new System.EventHandler(this.mechImmuneMaskButton_Click);
-            // 
-            // mechImmuneMaskIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.mechImmuneMaskIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.mechImmuneMaskIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mechImmuneMaskIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.mechImmuneMaskIntegerInput.Location = new System.Drawing.Point(216, 418);
-            this.mechImmuneMaskIntegerInput.Name = "mechImmuneMaskIntegerInput";
-            this.mechImmuneMaskIntegerInput.ShowUpDown = true;
-            this.mechImmuneMaskIntegerInput.Size = new System.Drawing.Size(138, 20);
-            this.npcSuperTooltip.SetSuperTooltip(this.mechImmuneMaskIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "This makes the creature immune to specific spell natures. See Spell.dbc at row ef" +
-            "fect_X_mechanic_id.\r\nUses references from SpellMechanic.dbc.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.mechImmuneMaskIntegerInput.TabIndex = 32;
             // 
             // labelX59
             // 
@@ -2485,14 +2487,13 @@
             // 
             // 
             this.racialLeaderCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.racialLeaderCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.racialLeaderCheckBox.Location = new System.Drawing.Point(501, 484);
             this.racialLeaderCheckBox.Name = "racialLeaderCheckBox";
             this.racialLeaderCheckBox.Size = new System.Drawing.Size(172, 23);
             this.racialLeaderCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcSuperTooltip.SetSuperTooltip(this.racialLeaderCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "A flag indicating wheather the creature is a racial leader. Killing racial leader" +
             "s grants 100 honor.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.racialLeaderCheckBox.TabIndex = 30;
+            this.racialLeaderCheckBox.TabIndex = 20;
             this.racialLeaderCheckBox.Text = "Is this NPC a Racial Leader?";
             // 
             // questItem6IntegerInput
@@ -2509,7 +2510,7 @@
             this.questItem6IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem6IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem6IntegerInput.TabIndex = 29;
+            this.questItem6IntegerInput.TabIndex = 15;
             // 
             // labelX58
             // 
@@ -2538,7 +2539,7 @@
             this.questItem5IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem5IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem5IntegerInput.TabIndex = 27;
+            this.questItem5IntegerInput.TabIndex = 14;
             // 
             // labelX57
             // 
@@ -2567,7 +2568,7 @@
             this.questItem4IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem4IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem4IntegerInput.TabIndex = 25;
+            this.questItem4IntegerInput.TabIndex = 13;
             // 
             // labelX56
             // 
@@ -2596,7 +2597,7 @@
             this.questItem3IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem3IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem3IntegerInput.TabIndex = 23;
+            this.questItem3IntegerInput.TabIndex = 12;
             // 
             // labelX55
             // 
@@ -2625,7 +2626,7 @@
             this.questItem2IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem2IntegerInput.TabIndex = 21;
+            this.questItem2IntegerInput.TabIndex = 11;
             // 
             // labelX54
             // 
@@ -2654,7 +2655,7 @@
             this.questItem1IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.questItem1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tells the client (mouse-hovering this creature -> tooltip) that this creature wil" +
             "l drop the item specified in this field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.questItem1IntegerInput.TabIndex = 19;
+            this.questItem1IntegerInput.TabIndex = 10;
             // 
             // labelX53
             // 
@@ -2682,7 +2683,7 @@
             this.resistance6IntegerInput.ShowUpDown = true;
             this.resistance6IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance6IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Arcane resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance6IntegerInput.TabIndex = 17;
+            this.resistance6IntegerInput.TabIndex = 9;
             // 
             // labelX52
             // 
@@ -2710,7 +2711,7 @@
             this.resistance5IntegerInput.ShowUpDown = true;
             this.resistance5IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance5IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Shadow resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance5IntegerInput.TabIndex = 15;
+            this.resistance5IntegerInput.TabIndex = 8;
             // 
             // labelX51
             // 
@@ -2738,7 +2739,7 @@
             this.resistance4IntegerInput.ShowUpDown = true;
             this.resistance4IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance4IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Frost resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance4IntegerInput.TabIndex = 13;
+            this.resistance4IntegerInput.TabIndex = 7;
             // 
             // labelX50
             // 
@@ -2766,7 +2767,7 @@
             this.resistance3IntegerInput.ShowUpDown = true;
             this.resistance3IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance3IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Nature resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance3IntegerInput.TabIndex = 11;
+            this.resistance3IntegerInput.TabIndex = 6;
             // 
             // labelX49
             // 
@@ -2794,7 +2795,7 @@
             this.resistance2IntegerInput.ShowUpDown = true;
             this.resistance2IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Fire resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance2IntegerInput.TabIndex = 9;
+            this.resistance2IntegerInput.TabIndex = 5;
             // 
             // labelX48
             // 
@@ -2822,7 +2823,7 @@
             this.resistance1IntegerInput.ShowUpDown = true;
             this.resistance1IntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.resistance1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Holy resistance.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.resistance1IntegerInput.TabIndex = 7;
+            this.resistance1IntegerInput.TabIndex = 4;
             // 
             // labelX47
             // 
@@ -2851,7 +2852,7 @@
             this.skinLootIdIntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.skinLootIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The ID of the skinning loot template that this creature should use to generate sk" +
             "inning loots. See skinning_loot_template.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.skinLootIdIntegerInput.TabIndex = 5;
+            this.skinLootIdIntegerInput.TabIndex = 3;
             // 
             // labelX46
             // 
@@ -2880,7 +2881,7 @@
             this.pickpocketLootIdIntegerInput.Size = new System.Drawing.Size(138, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.pickpocketLootIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The ID of the pickpocketing loot template that this creature should use to genera" +
             "te pickpocketing loots. See pickpocketing_loot_template.entry", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.pickpocketLootIdIntegerInput.TabIndex = 3;
+            this.pickpocketLootIdIntegerInput.TabIndex = 2;
             // 
             // labelX45
             // 
@@ -2997,7 +2998,7 @@
             this.findClassButton.Name = "findClassButton";
             this.findClassButton.Size = new System.Drawing.Size(80, 34);
             this.findClassButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findClassButton.TabIndex = 27;
+            this.findClassButton.TabIndex = 7;
             this.findClassButton.Text = "Find Class";
             this.findClassButton.Click += new System.EventHandler(this.findClassButton_Click);
             // 
@@ -3009,7 +3010,7 @@
             this.findRaceButton.Name = "findRaceButton";
             this.findRaceButton.Size = new System.Drawing.Size(80, 34);
             this.findRaceButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findRaceButton.TabIndex = 26;
+            this.findRaceButton.TabIndex = 5;
             this.findRaceButton.Text = "Find Race";
             this.findRaceButton.Click += new System.EventHandler(this.findRaceButton_Click);
             // 
@@ -3021,7 +3022,7 @@
             this.findSpellButton.Name = "findSpellButton";
             this.findSpellButton.Size = new System.Drawing.Size(80, 34);
             this.findSpellButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findSpellButton.TabIndex = 25;
+            this.findSpellButton.TabIndex = 3;
             this.findSpellButton.Text = "Find Spell";
             this.findSpellButton.Click += new System.EventHandler(this.findSpellButton_Click);
             // 
@@ -3045,7 +3046,7 @@
             this.npcSuperTooltip.SetSuperTooltip(this.trainerTypeComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "If the NPC is a trainer (has the trainer flag), then this field controls what kin" +
             "d of trainer it is. Both this field and the related field must be filled in for " +
             "a trainer to work correctly.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.trainerTypeComboBox.TabIndex = 24;
+            this.trainerTypeComboBox.TabIndex = 1;
             // 
             // typeClassComboItem
             // 
@@ -3077,7 +3078,7 @@
             this.spell6IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell6IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 6th spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell6IntegerInput.TabIndex = 23;
+            this.spell6IntegerInput.TabIndex = 13;
             // 
             // spell1IntegerInput
             // 
@@ -3093,7 +3094,7 @@
             this.spell1IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell1IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 1st spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell1IntegerInput.TabIndex = 22;
+            this.spell1IntegerInput.TabIndex = 8;
             // 
             // spell2IntegerInput
             // 
@@ -3109,7 +3110,7 @@
             this.spell2IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell2IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 2nd spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell2IntegerInput.TabIndex = 21;
+            this.spell2IntegerInput.TabIndex = 9;
             // 
             // spell3IntegerInput
             // 
@@ -3125,7 +3126,7 @@
             this.spell3IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell3IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 3rd spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell3IntegerInput.TabIndex = 20;
+            this.spell3IntegerInput.TabIndex = 10;
             // 
             // spell4IntegerInput
             // 
@@ -3141,7 +3142,7 @@
             this.spell4IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell4IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 4th spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell4IntegerInput.TabIndex = 19;
+            this.spell4IntegerInput.TabIndex = 11;
             // 
             // spell5IntegerInput
             // 
@@ -3157,7 +3158,7 @@
             this.spell5IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell5IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 5th spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell5IntegerInput.TabIndex = 18;
+            this.spell5IntegerInput.TabIndex = 12;
             // 
             // spell7IntegerInput
             // 
@@ -3173,7 +3174,7 @@
             this.spell7IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell7IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 7th spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell7IntegerInput.TabIndex = 17;
+            this.spell7IntegerInput.TabIndex = 14;
             // 
             // spell8IntegerInput
             // 
@@ -3189,7 +3190,7 @@
             this.spell8IntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.spell8IntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell ID that can be used for Mind Control of this creature. \r\nFor vehicle creatu" +
             "res: 8th spell on action bar", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spell8IntegerInput.TabIndex = 16;
+            this.spell8IntegerInput.TabIndex = 15;
             // 
             // classIntegerInput
             // 
@@ -3204,7 +3205,7 @@
             this.classIntegerInput.ShowUpDown = true;
             this.classIntegerInput.Size = new System.Drawing.Size(133, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.classIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("classIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.classIntegerInput.TabIndex = 15;
+            this.classIntegerInput.TabIndex = 6;
             // 
             // raceIntegerInput
             // 
@@ -3221,7 +3222,7 @@
             this.npcSuperTooltip.SetSuperTooltip(this.raceIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "If the NPC is a mount trainer (trainer_type == 1), then the player\'s race must be" +
             " the same as the value specified here to talk to this trainer. See characters.ra" +
             "ce", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.raceIntegerInput.TabIndex = 14;
+            this.raceIntegerInput.TabIndex = 4;
             // 
             // trainerSpellIntegerInput
             // 
@@ -3238,7 +3239,7 @@
             this.npcSuperTooltip.SetSuperTooltip(this.trainerSpellIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "If the NPC is a trainer that teaches professions (trainer_type == 2), then the pl" +
             "ayer must already know the spell ID specified here to be able to talk to this NP" +
             "C.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.trainerSpellIntegerInput.TabIndex = 13;
+            this.trainerSpellIntegerInput.TabIndex = 2;
             // 
             // labelX73
             // 
@@ -3452,7 +3453,7 @@
             this.findInhabitTypeButton.Name = "findInhabitTypeButton";
             this.findInhabitTypeButton.Size = new System.Drawing.Size(82, 37);
             this.findInhabitTypeButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findInhabitTypeButton.TabIndex = 24;
+            this.findInhabitTypeButton.TabIndex = 8;
             this.findInhabitTypeButton.Text = "Find Inhabit Type";
             this.findInhabitTypeButton.Click += new System.EventHandler(this.findInhabitTypeButton_Click);
             // 
@@ -3472,7 +3473,7 @@
             this.movementyTypeComboBox.Name = "movementyTypeComboBox";
             this.movementyTypeComboBox.Size = new System.Drawing.Size(120, 20);
             this.movementyTypeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.movementyTypeComboBox.TabIndex = 23;
+            this.movementyTypeComboBox.TabIndex = 5;
             // 
             // idleComboItem
             // 
@@ -3507,7 +3508,7 @@
             this.aiNameComboBox.Size = new System.Drawing.Size(151, 20);
             this.aiNameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.npcSuperTooltip.SetSuperTooltip(this.aiNameComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("aiNameComboBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.aiNameComboBox.TabIndex = 22;
+            this.aiNameComboBox.TabIndex = 9;
             // 
             // nullAiComboItem
             // 
@@ -3555,7 +3556,7 @@
             this.scriptNameIntegerInput.Size = new System.Drawing.Size(151, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.scriptNameIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The name of the script that this creature uses, if any. This ties a script from a" +
             " scripting engine to this creature.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.scriptNameIntegerInput.TabIndex = 21;
+            this.scriptNameIntegerInput.TabIndex = 12;
             // 
             // labelX84
             // 
@@ -3583,7 +3584,7 @@
             this.gossipMenuIdIntegerInput.ShowUpDown = true;
             this.gossipMenuIdIntegerInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.gossipMenuIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("gossipMenuIdIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.gossipMenuIdIntegerInput.TabIndex = 19;
+            this.gossipMenuIdIntegerInput.TabIndex = 11;
             // 
             // labelX83
             // 
@@ -3612,7 +3613,7 @@
             this.hoverHightIntegerInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.hoverHightIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Distance above the ground that the creature will hover if it has MOVEMENTFLAG_DIS" +
             "ABLE_GRAVITY enabled. Value taken from sniffs.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.hoverHightIntegerInput.TabIndex = 17;
+            this.hoverHightIntegerInput.TabIndex = 10;
             // 
             // labelX82
             // 
@@ -3636,11 +3637,13 @@
             this.inhabitTypeIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.inhabitTypeIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.inhabitTypeIntegerInput.Location = new System.Drawing.Point(690, 230);
+            this.inhabitTypeIntegerInput.MaxValue = 7;
+            this.inhabitTypeIntegerInput.MinValue = 0;
             this.inhabitTypeIntegerInput.Name = "inhabitTypeIntegerInput";
             this.inhabitTypeIntegerInput.ShowUpDown = true;
             this.inhabitTypeIntegerInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.inhabitTypeIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Controls where the creature can move and attack.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.inhabitTypeIntegerInput.TabIndex = 15;
+            this.inhabitTypeIntegerInput.TabIndex = 7;
             // 
             // movementIdIntegerInput
             // 
@@ -3655,7 +3658,7 @@
             this.movementIdIntegerInput.ShowUpDown = true;
             this.movementIdIntegerInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.movementIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "We have no idea what this field does. It is passed directly to the client.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.movementIdIntegerInput.TabIndex = 14;
+            this.movementIdIntegerInput.TabIndex = 6;
             // 
             // labelX81
             // 
@@ -3724,7 +3727,7 @@
             this.scaleDoubleInput.Size = new System.Drawing.Size(151, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.scaleDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "If non-zero, this field defines the size of how the model of the creature appears" +
             " ingame. If zero, it will use default model size taken from the DBC.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.scaleDoubleInput.TabIndex = 7;
+            this.scaleDoubleInput.TabIndex = 4;
             // 
             // speedRunDoubleInput
             // 
@@ -3741,7 +3744,7 @@
             this.speedRunDoubleInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.speedRunDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Controls how fast the creature can run. For vehicles: increases ground movement s" +
             "peed.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.speedRunDoubleInput.TabIndex = 6;
+            this.speedRunDoubleInput.TabIndex = 3;
             // 
             // speedWalkDoubleInput
             // 
@@ -3757,7 +3760,7 @@
             this.speedWalkDoubleInput.ShowUpDown = true;
             this.speedWalkDoubleInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.speedWalkDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Controls how fast the creature can walk. For vehicles: increases fly speed.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.speedWalkDoubleInput.TabIndex = 5;
+            this.speedWalkDoubleInput.TabIndex = 2;
             // 
             // armorModDoubleInput
             // 
@@ -3773,7 +3776,7 @@
             this.armorModDoubleInput.ShowUpDown = true;
             this.armorModDoubleInput.Size = new System.Drawing.Size(120, 20);
             this.npcSuperTooltip.SetSuperTooltip(this.armorModDoubleInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Used to modify the base Level/Class armor of a creature.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.armorModDoubleInput.TabIndex = 4;
+            this.armorModDoubleInput.TabIndex = 1;
             // 
             // labelX77
             // 
@@ -3867,7 +3870,7 @@
             this.saveAsSqlCheckBox.Name = "saveAsSqlCheckBox";
             this.saveAsSqlCheckBox.Size = new System.Drawing.Size(172, 26);
             this.saveAsSqlCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.saveAsSqlCheckBox.TabIndex = 4;
+            this.saveAsSqlCheckBox.TabIndex = 2;
             this.saveAsSqlCheckBox.Text = "Save as SQL file";
             // 
             // importToDBCheckBox
@@ -3885,7 +3888,7 @@
             this.importToDBCheckBox.Name = "importToDBCheckBox";
             this.importToDBCheckBox.Size = new System.Drawing.Size(192, 26);
             this.importToDBCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.importToDBCheckBox.TabIndex = 3;
+            this.importToDBCheckBox.TabIndex = 1;
             this.importToDBCheckBox.Text = "Import to Database";
             // 
             // npcSuperTooltip
@@ -3932,14 +3935,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.diffEntry2IntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diffEntry1IntegerInput)).EndInit();
             this.npcWizardPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.npcFlagIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wdbVerifiedIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynamicFlagsIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeFlagsIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factionHIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factionAIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitFlags2IntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitFlagsIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regenHealthIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangedAttackPowerIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangeAttackTimeIntegerInput)).EndInit();
@@ -3952,9 +3951,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxDmgIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minDmgIntegerInput)).EndInit();
             this.npcWizardPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flagsExtraIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petSpellDataIdIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mechImmuneMaskIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem6IntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem5IntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.questItem4IntegerInput)).EndInit();
@@ -4085,9 +4082,7 @@
         private DevComponents.Editors.ComboItem uClassRogueComboItem;
         private DevComponents.Editors.ComboItem uClassMageComboItem;
         private DevComponents.DotNetBar.ButtonX unitFlagsButton;
-        private DevComponents.Editors.IntegerInput unitFlagsIntegerInput;
         private DevComponents.DotNetBar.ButtonX unitFlags2Button;
-        private DevComponents.Editors.IntegerInput unitFlags2IntegerInput;
         private DevComponents.DotNetBar.Controls.ComboBoxEx rankComboBox;
         private DevComponents.Editors.ComboItem rankNormalComboItem;
         private DevComponents.Editors.ComboItem rankEliteComboItem;
@@ -4153,13 +4148,11 @@
         private DevComponents.Editors.ComboItem tTotemComboItem;
         private DevComponents.Editors.ComboItem tNonCombatPetComboItem;
         private DevComponents.Editors.ComboItem tGasCloudComboItem;
-        private DevComponents.Editors.IntegerInput typeFlagsIntegerInput;
         private DevComponents.DotNetBar.ButtonX typeFlagsButton;
         private DevComponents.Editors.IntegerInput dynamicFlagsIntegerInput;
         private DevComponents.Editors.IntegerInput wdbVerifiedIntegerInput;
         private DevComponents.DotNetBar.ButtonX dynamicFlagsButton;
         private DevComponents.DotNetBar.ButtonX npcFlagButton;
-        private DevComponents.Editors.IntegerInput npcFlagIntegerInput;
         private DevComponents.DotNetBar.WizardPage npcWizardPage4;
         private DevComponents.DotNetBar.LabelX labelX44;
         private DevComponents.Editors.IntegerInput lootIdIntegerInput;
@@ -4193,12 +4186,10 @@
         private DevComponents.DotNetBar.LabelX labelX53;
         private DevComponents.DotNetBar.Controls.CheckBoxX racialLeaderCheckBox;
         private DevComponents.DotNetBar.LabelX labelX59;
-        private DevComponents.Editors.IntegerInput mechImmuneMaskIntegerInput;
         private DevComponents.DotNetBar.ButtonX mechImmuneMaskButton;
         private DevComponents.DotNetBar.LabelX labelX60;
         private DevComponents.Editors.IntegerInput petSpellDataIdIntegerInput;
         private DevComponents.DotNetBar.LabelX labelX61;
-        private DevComponents.Editors.IntegerInput flagsExtraIntegerInput;
         private DevComponents.DotNetBar.ButtonX flagsExtraButton;
         private DevComponents.Editors.DoubleInput manaModDoubleInput;
         private DevComponents.Editors.DoubleInput healthModDoubleInput;
@@ -4276,5 +4267,11 @@
         private DevComponents.Editors.ComboItem waypointComboItem;
         private DevComponents.DotNetBar.ButtonX findInhabitTypeButton;
         private System.Windows.Forms.SaveFileDialog saveFileAsSQLDialog;
+        private DevComponents.DotNetBar.Controls.TextBoxX unitFlagsTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX unitFlags2TextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX npcFlagTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX typeFlagsTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX mechImmuneMaskTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX flagsExtraTextBox;
     }
 }

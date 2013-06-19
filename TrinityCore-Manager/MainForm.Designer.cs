@@ -147,15 +147,15 @@
             this.worldServerLabel = new DevComponents.DotNetBar.LabelItem();
             this.playersOnlineLabel = new DevComponents.DotNetBar.LabelItem();
             this.consoleTabControl = new DevComponents.DotNetBar.TabControl();
-            this.worldServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
-            this.worldServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.worldServerTab = new DevComponents.DotNetBar.TabItem(this.components);
-            this.authServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
-            this.authServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.authServerTab = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.raTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.raTabItem = new DevComponents.DotNetBar.TabItem(this.components);
+            this.authServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
+            this.authServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.authServerTab = new DevComponents.DotNetBar.TabItem(this.components);
+            this.worldServerTabControlPanel = new DevComponents.DotNetBar.TabControlPanel();
+            this.worldServerTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.worldServerTab = new DevComponents.DotNetBar.TabItem(this.components);
             this.mainRibbonControl.SuspendLayout();
             this.otherRibbonPanel.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
@@ -167,9 +167,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bottomStatusBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consoleTabControl)).BeginInit();
             this.consoleTabControl.SuspendLayout();
-            this.worldServerTabControlPanel.SuspendLayout();
-            this.authServerTabControlPanel.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
+            this.authServerTabControlPanel.SuspendLayout();
+            this.worldServerTabControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainRibbonControl
@@ -183,8 +183,8 @@
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1763,9 +1763,9 @@
             // 
             this.consoleTabControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.consoleTabControl.CanReorderTabs = true;
+            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
             this.consoleTabControl.Controls.Add(this.tabControlPanel1);
             this.consoleTabControl.Controls.Add(this.authServerTabControlPanel);
-            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
             this.consoleTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.consoleTabControl.ForeColor = System.Drawing.Color.White;
             this.consoleTabControl.Location = new System.Drawing.Point(5, 196);
@@ -1780,96 +1780,6 @@
             this.consoleTabControl.Tabs.Add(this.authServerTab);
             this.consoleTabControl.Tabs.Add(this.raTabItem);
             this.consoleTabControl.Text = "serverTabControl";
-            // 
-            // worldServerTabControlPanel
-            // 
-            this.worldServerTabControlPanel.Controls.Add(this.worldServerTextBox);
-            this.worldServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.worldServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
-            this.worldServerTabControlPanel.Name = "worldServerTabControlPanel";
-            this.worldServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
-            this.worldServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
-            this.worldServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.worldServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.worldServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
-            this.worldServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.worldServerTabControlPanel.Style.GradientAngle = 90;
-            this.worldServerTabControlPanel.TabIndex = 1;
-            this.worldServerTabControlPanel.TabItem = this.worldServerTab;
-            // 
-            // worldServerTextBox
-            // 
-            this.worldServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.worldServerTextBox.Border.Class = "TextBoxBorder";
-            this.worldServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.worldServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.worldServerTextBox.ForeColor = System.Drawing.Color.White;
-            this.worldServerTextBox.Location = new System.Drawing.Point(1, 1);
-            this.worldServerTextBox.Multiline = true;
-            this.worldServerTextBox.Name = "worldServerTextBox";
-            this.worldServerTextBox.ReadOnly = true;
-            this.worldServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.worldServerTextBox.Size = new System.Drawing.Size(1125, 496);
-            this.worldServerTextBox.TabIndex = 0;
-            this.worldServerTextBox.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            this.worldServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
-            this.worldServerTextBox.WatermarkImage = ((System.Drawing.Image)(resources.GetObject("worldServerTextBox.WatermarkImage")));
-            this.worldServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // worldServerTab
-            // 
-            this.worldServerTab.AttachedControl = this.worldServerTabControlPanel;
-            this.worldServerTab.Name = "worldServerTab";
-            this.worldServerTab.Text = "World Server Console";
-            // 
-            // authServerTabControlPanel
-            // 
-            this.authServerTabControlPanel.Controls.Add(this.authServerTextBox);
-            this.authServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
-            this.authServerTabControlPanel.Name = "authServerTabControlPanel";
-            this.authServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
-            this.authServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
-            this.authServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.authServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.authServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
-            this.authServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.authServerTabControlPanel.Style.GradientAngle = 90;
-            this.authServerTabControlPanel.TabIndex = 2;
-            this.authServerTabControlPanel.TabItem = this.authServerTab;
-            // 
-            // authServerTextBox
-            // 
-            this.authServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.authServerTextBox.Border.Class = "TextBoxBorder";
-            this.authServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.authServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authServerTextBox.ForeColor = System.Drawing.Color.White;
-            this.authServerTextBox.Location = new System.Drawing.Point(1, 1);
-            this.authServerTextBox.Multiline = true;
-            this.authServerTextBox.Name = "authServerTextBox";
-            this.authServerTextBox.ReadOnly = true;
-            this.authServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.authServerTextBox.Size = new System.Drawing.Size(1125, 496);
-            this.authServerTextBox.TabIndex = 1;
-            this.authServerTextBox.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            this.authServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
-            this.authServerTextBox.WatermarkImage = ((System.Drawing.Image)(resources.GetObject("authServerTextBox.WatermarkImage")));
-            this.authServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // authServerTab
-            // 
-            this.authServerTab.AttachedControl = this.authServerTabControlPanel;
-            this.authServerTab.Name = "authServerTab";
-            this.authServerTab.Text = "Auth Server Console";
             // 
             // tabControlPanel1
             // 
@@ -1916,6 +1826,96 @@
             this.raTabItem.Name = "raTabItem";
             this.raTabItem.Text = "Remote Access";
             // 
+            // authServerTabControlPanel
+            // 
+            this.authServerTabControlPanel.Controls.Add(this.authServerTextBox);
+            this.authServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.authServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
+            this.authServerTabControlPanel.Name = "authServerTabControlPanel";
+            this.authServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.authServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
+            this.authServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.authServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.authServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
+            this.authServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.authServerTabControlPanel.Style.GradientAngle = 90;
+            this.authServerTabControlPanel.TabIndex = 2;
+            this.authServerTabControlPanel.TabItem = this.authServerTab;
+            // 
+            // authServerTextBox
+            // 
+            this.authServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.authServerTextBox.Border.Class = "TextBoxBorder";
+            this.authServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.authServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.authServerTextBox.ForeColor = System.Drawing.Color.White;
+            this.authServerTextBox.Location = new System.Drawing.Point(1, 1);
+            this.authServerTextBox.Multiline = true;
+            this.authServerTextBox.Name = "authServerTextBox";
+            this.authServerTextBox.ReadOnly = true;
+            this.authServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.authServerTextBox.Size = new System.Drawing.Size(1125, 496);
+            this.authServerTextBox.TabIndex = 1;
+            this.authServerTextBox.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            this.authServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
+            this.authServerTextBox.WatermarkImage = ((System.Drawing.Image)(resources.GetObject("authServerTextBox.WatermarkImage")));
+            this.authServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // authServerTab
+            // 
+            this.authServerTab.AttachedControl = this.authServerTabControlPanel;
+            this.authServerTab.Name = "authServerTab";
+            this.authServerTab.Text = "Auth Server Console";
+            // 
+            // worldServerTabControlPanel
+            // 
+            this.worldServerTabControlPanel.Controls.Add(this.worldServerTextBox);
+            this.worldServerTabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.worldServerTabControlPanel.Location = new System.Drawing.Point(0, 27);
+            this.worldServerTabControlPanel.Name = "worldServerTabControlPanel";
+            this.worldServerTabControlPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.worldServerTabControlPanel.Size = new System.Drawing.Size(1127, 498);
+            this.worldServerTabControlPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.worldServerTabControlPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.worldServerTabControlPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(91)))));
+            this.worldServerTabControlPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.worldServerTabControlPanel.Style.GradientAngle = 90;
+            this.worldServerTabControlPanel.TabIndex = 1;
+            this.worldServerTabControlPanel.TabItem = this.worldServerTab;
+            // 
+            // worldServerTextBox
+            // 
+            this.worldServerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.worldServerTextBox.Border.Class = "TextBoxBorder";
+            this.worldServerTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.worldServerTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.worldServerTextBox.ForeColor = System.Drawing.Color.White;
+            this.worldServerTextBox.Location = new System.Drawing.Point(1, 1);
+            this.worldServerTextBox.Multiline = true;
+            this.worldServerTextBox.Name = "worldServerTextBox";
+            this.worldServerTextBox.ReadOnly = true;
+            this.worldServerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.worldServerTextBox.Size = new System.Drawing.Size(1125, 496);
+            this.worldServerTextBox.TabIndex = 0;
+            this.worldServerTextBox.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            this.worldServerTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
+            this.worldServerTextBox.WatermarkImage = ((System.Drawing.Image)(resources.GetObject("worldServerTextBox.WatermarkImage")));
+            this.worldServerTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // worldServerTab
+            // 
+            this.worldServerTab.AttachedControl = this.worldServerTabControlPanel;
+            this.worldServerTab.Name = "worldServerTab";
+            this.worldServerTab.Text = "World Server Console";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1942,9 +1942,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bottomStatusBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consoleTabControl)).EndInit();
             this.consoleTabControl.ResumeLayout(false);
-            this.worldServerTabControlPanel.ResumeLayout(false);
-            this.authServerTabControlPanel.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
+            this.authServerTabControlPanel.ResumeLayout(false);
+            this.worldServerTabControlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

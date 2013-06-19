@@ -20,8 +20,8 @@ namespace TrinityCore_Manager
 
         private void findItemButton_Click(object sender, EventArgs e)
         {
-            FindItem FindItem = new FindItem();
-            FindItem.ShowDialog();
+            FindItem fi = new FindItem();
+            fi.ShowDialog();  
         }
     }
 }

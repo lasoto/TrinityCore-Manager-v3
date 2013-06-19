@@ -33,6 +33,11 @@
             this.ipAddressBanInput = new DevComponents.Editors.IpAddressInput();
             this.banButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.banReasonTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.banTimeTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.ipBanSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +48,7 @@
             // 
             this.ipAddressBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ipAddressBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ipAddressBanLabel.Location = new System.Drawing.Point(70, 65);
+            this.ipAddressBanLabel.Location = new System.Drawing.Point(43, 16);
             this.ipAddressBanLabel.Name = "ipAddressBanLabel";
             this.ipAddressBanLabel.Size = new System.Drawing.Size(84, 26);
             this.ipAddressBanLabel.TabIndex = 0;
@@ -59,9 +64,9 @@
             this.ipAddressBanInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ipAddressBanInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.ipAddressBanInput.ButtonFreeText.Visible = true;
-            this.ipAddressBanInput.Location = new System.Drawing.Point(160, 71);
+            this.ipAddressBanInput.Location = new System.Drawing.Point(133, 22);
             this.ipAddressBanInput.Name = "ipAddressBanInput";
-            this.ipAddressBanInput.Size = new System.Drawing.Size(127, 20);
+            this.ipAddressBanInput.Size = new System.Drawing.Size(195, 20);
             this.ipAddressBanInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ipAddressBanInput.TabIndex = 1;
             // 
@@ -88,11 +93,78 @@
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX1.Location = new System.Drawing.Point(32, 95);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(95, 26);
+            this.labelX1.TabIndex = 4;
+            this.labelX1.Text = "Ban Reason:";
+            // 
+            // banReasonTextBox
+            // 
+            this.banReasonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.banReasonTextBox.Border.Class = "TextBoxBorder";
+            this.banReasonTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.banReasonTextBox.ForeColor = System.Drawing.Color.White;
+            this.banReasonTextBox.Location = new System.Drawing.Point(133, 100);
+            this.banReasonTextBox.Name = "banReasonTextBox";
+            this.banReasonTextBox.Size = new System.Drawing.Size(195, 20);
+            this.ipBanSuperTooltip.SetSuperTooltip(this.banReasonTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Reason for banning this Ip. It will get stored in the \'banreason\' column, in the " +
+            "\'ip_banned\' table.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.banReasonTextBox.TabIndex = 5;
+            // 
+            // banTimeTextBox
+            // 
+            this.banTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.banTimeTextBox.Border.Class = "TextBoxBorder";
+            this.banTimeTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.banTimeTextBox.ForeColor = System.Drawing.Color.White;
+            this.banTimeTextBox.Location = new System.Drawing.Point(133, 62);
+            this.banTimeTextBox.Name = "banTimeTextBox";
+            this.banTimeTextBox.Size = new System.Drawing.Size(195, 20);
+            this.ipBanSuperTooltip.SetSuperTooltip(this.banTimeTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Using a negative value (-1) mean it will be a permanent ban.\r\n\r\nFor a specified b" +
+            "an time, use this format: #d#h#s\r\n\r\nExample: 4d20h30s - the ban will last for 4 " +
+            "days 20 hours and 30 seconds.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.banTimeTextBox.TabIndex = 12;
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX2.Location = new System.Drawing.Point(50, 57);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(71, 26);
+            this.labelX2.TabIndex = 11;
+            this.labelX2.Text = "Ban Time:";
+            // 
+            // ipBanSuperTooltip
+            // 
+            this.ipBanSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
             // AddIPBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 195);
+            this.Controls.Add(this.banTimeTextBox);
+            this.Controls.Add(this.labelX2);
+            this.Controls.Add(this.banReasonTextBox);
+            this.Controls.Add(this.labelX1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.banButton);
             this.Controls.Add(this.ipAddressBanInput);
@@ -117,5 +189,10 @@
         private DevComponents.Editors.IpAddressInput ipAddressBanInput;
         private DevComponents.DotNetBar.ButtonX banButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX banReasonTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX banTimeTextBox;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.SuperTooltip ipBanSuperTooltip;
     }
 }

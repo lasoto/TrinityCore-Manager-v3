@@ -15,6 +15,7 @@ namespace TrinityCore_Manager.Database
         {
         }
 
+        // NOT FINISHED; NEEDS WORK
         public void CreateGuild(string name, string leaderguid)
         {
 

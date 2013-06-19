@@ -17,5 +17,11 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
+
+        // NOT FINISHED; NEEDS WORK
+        private void banButton_Click(object sender, EventArgs e)
+        {
+            //TCManager.Instance.AuthDatabase.IpAccountBan(ipAddressBanInput.Value, banTimeTextBox.Text, banReasonTextBox.Text);
+        }
     }
 }

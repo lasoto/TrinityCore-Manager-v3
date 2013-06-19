@@ -421,7 +421,7 @@
             this.okButton.Size = new System.Drawing.Size(106, 35);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.okButton.TabIndex = 18;
-            this.okButton.Text = "Ok";
+            this.okButton.Text = "Start";
             this.okButton.TextColor = System.Drawing.Color.GreenYellow;
             // 
             // convertButton
