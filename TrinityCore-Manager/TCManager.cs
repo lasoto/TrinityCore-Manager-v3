@@ -12,7 +12,7 @@ namespace TrinityCore_Manager
     class TCManager
     {
 
-        private static object _lock;
+        private static object _lock = new object();
 
         private static TCManager _instance;
 

@@ -70,71 +70,91 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccountCleanup.cs">
+    <Compile Include="Account Management\AccountCleanup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountCleanup.designer.cs">
+    <Compile Include="Account Management\AccountCleanup.designer.cs">
       <DependentUpon>AccountCleanup.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddAccount.cs">
+    <Compile Include="Account Management\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAccount.designer.cs">
+    <Compile Include="Account Management\AddAccount.designer.cs">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddAccountBan.cs">
+    <Compile Include="Account Management\AddAccountBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAccountBan.designer.cs">
+    <Compile Include="Account Management\AddAccountBan.designer.cs">
       <DependentUpon>AddAccountBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddIPBan.cs">
+    <Compile Include="Account Management\AddIPBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddIPBan.designer.cs">
+    <Compile Include="Account Management\AddIPBan.designer.cs">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterSetLevel.cs">
+    <Compile Include="Character Management\CharacterSetLevel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterSetLevel.Designer.cs">
+    <Compile Include="Character Management\CharacterSetLevel.Designer.cs">
       <DependentUpon>CharacterSetLevel.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterSetReputation.cs">
+    <Compile Include="Character Management\CharacterSetReputation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterSetReputation.Designer.cs">
+    <Compile Include="Character Management\CharacterSetReputation.Designer.cs">
       <DependentUpon>CharacterSetReputation.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterSetSkillLevel.cs">
+    <Compile Include="Character Management\CharacterSetSkillLevel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterSetSkillLevel.Designer.cs">
+    <Compile Include="Character Management\CharacterSetSkillLevel.Designer.cs">
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
-    <Compile Include="ConvertDaysToMinutes.cs">
+    <Compile Include="Database\Classes\Account.cs" />
+    <Compile Include="Database\Classes\BannedAccount.cs" />
+    <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConvertDaysToMinutes.Designer.cs">
+    <Compile Include="Events Forms\ConvertDaysToMinutes.Designer.cs">
       <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateGuild.cs">
+    <Compile Include="Guild Forms\CreateGuild.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateGuild.Designer.cs">
+    <Compile Include="Guild Forms\CreateGuild.Designer.cs">
       <DependentUpon>CreateGuild.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateItem.cs">
+    <Compile Include="Item Forms\CreateItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateItem.designer.cs">
+    <Compile Include="Item Forms\CreateItem.designer.cs">
       <DependentUpon>CreateItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateNPC.cs">
+    <Compile Include="Item Forms\FindItemFlags.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateNPC.Designer.cs">
+    <Compile Include="Item Forms\FindItemFlags.Designer.cs">
+      <DependentUpon>FindItemFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item Forms\FindItemFlagsCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item Forms\FindItemFlagsCustom.Designer.cs">
+      <DependentUpon>FindItemFlagsCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item Forms\FindItemFlagsExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item Forms\FindItemFlagsExtra.Designer.cs">
+      <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPC Forms\CreateNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPC Forms\CreateNPC.Designer.cs">
       <DependentUpon>CreateNPC.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\AuthDatabase.cs" />
@@ -142,185 +162,185 @@
     <Compile Include="Database\MySqlDatabase.cs" />
     <Compile Include="Database\MySqlHelper.cs" />
     <Compile Include="Database\WorldDatabase.cs" />
-    <Compile Include="DeleteGuild.cs">
+    <Compile Include="NPC Forms\DeleteGuild.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteGuild.Designer.cs">
+    <Compile Include="NPC Forms\DeleteGuild.Designer.cs">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditAccount.cs">
+    <Compile Include="Account Management\EditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditAccount.Designer.cs">
+    <Compile Include="Account Management\EditAccount.Designer.cs">
       <DependentUpon>EditAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditGuild.cs">
+    <Compile Include="Guild Forms\EditGuild.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditGuild.Designer.cs">
+    <Compile Include="Guild Forms\EditGuild.Designer.cs">
       <DependentUpon>EditGuild.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventActiveList.cs">
+    <Compile Include="Events Forms\EventActiveList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventActiveList.Designer.cs">
+    <Compile Include="Events Forms\EventActiveList.Designer.cs">
       <DependentUpon>EventActiveList.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventStart.cs">
+    <Compile Include="Events Forms\EventStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventStart.Designer.cs">
+    <Compile Include="Events Forms\EventStart.Designer.cs">
       <DependentUpon>EventStart.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\AttributeExtensions.cs" />
-    <Compile Include="FindClass.cs">
+    <Compile Include="NPC Forms\FindClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindClass.Designer.cs">
+    <Compile Include="NPC Forms\FindClass.Designer.cs">
       <DependentUpon>FindClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindDynamicFlags.cs">
+    <Compile Include="NPC Forms\FindDynamicFlags.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindDynamicFlags.Designer.cs">
+    <Compile Include="NPC Forms\FindDynamicFlags.Designer.cs">
       <DependentUpon>FindDynamicFlags.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindEvent.cs">
+    <Compile Include="Events Forms\FindEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindEvent.Designer.cs">
+    <Compile Include="Events Forms\FindEvent.Designer.cs">
       <DependentUpon>FindEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindFaction.cs">
+    <Compile Include="NPC Forms\FindFaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindFaction.Designer.cs">
+    <Compile Include="NPC Forms\FindFaction.Designer.cs">
       <DependentUpon>FindFaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindFlagsExtra.cs">
+    <Compile Include="NPC Forms\FindFlagsExtra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindFlagsExtra.Designer.cs">
+    <Compile Include="NPC Forms\FindFlagsExtra.Designer.cs">
       <DependentUpon>FindFlagsExtra.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindGUID.cs">
+    <Compile Include="NPC Forms\FindGUID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindGUID.Designer.cs">
+    <Compile Include="NPC Forms\FindGUID.Designer.cs">
       <DependentUpon>FindGUID.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindHoliday.cs">
+    <Compile Include="Events Forms\FindHoliday.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindHoliday.Designer.cs">
+    <Compile Include="Events Forms\FindHoliday.Designer.cs">
       <DependentUpon>FindHoliday.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindInhabitType.cs">
+    <Compile Include="NPC Forms\FindInhabitType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindInhabitType.Designer.cs">
+    <Compile Include="NPC Forms\FindInhabitType.Designer.cs">
       <DependentUpon>FindInhabitType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItem.cs">
+    <Compile Include="Item Forms\FindItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItem.designer.cs">
+    <Compile Include="Item Forms\FindItem.designer.cs">
       <DependentUpon>FindItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemArea.cs">
+    <Compile Include="Item Forms\FindItemArea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemArea.designer.cs">
+    <Compile Include="Item Forms\FindItemArea.designer.cs">
       <DependentUpon>FindItemArea.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemDisplayID.cs">
+    <Compile Include="Item Forms\FindItemDisplayID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemDisplayID.designer.cs">
+    <Compile Include="Item Forms\FindItemDisplayID.designer.cs">
       <DependentUpon>FindItemDisplayID.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemGemProperties.cs">
+    <Compile Include="Item Forms\FindItemGemProperties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemGemProperties.designer.cs">
+    <Compile Include="Item Forms\FindItemGemProperties.designer.cs">
       <DependentUpon>FindItemGemProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemMap.cs">
+    <Compile Include="Item Forms\FindItemMap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemMap.designer.cs">
+    <Compile Include="Item Forms\FindItemMap.designer.cs">
       <DependentUpon>FindItemMap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemQuest.cs">
+    <Compile Include="Item Forms\FindItemQuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemQuest.designer.cs">
+    <Compile Include="Item Forms\FindItemQuest.designer.cs">
       <DependentUpon>FindItemQuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemRequiredSpell.cs">
+    <Compile Include="Item Forms\FindItemRequiredSpell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemRequiredSpell.designer.cs">
+    <Compile Include="Item Forms\FindItemRequiredSpell.designer.cs">
       <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemSet.cs">
+    <Compile Include="Item Forms\FindItemSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemSet.designer.cs">
+    <Compile Include="Item Forms\FindItemSet.designer.cs">
       <DependentUpon>FindItemSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindItemSocketBonus.cs">
+    <Compile Include="Item Forms\FindItemSocketBonus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindItemSocketBonus.designer.cs">
+    <Compile Include="Item Forms\FindItemSocketBonus.designer.cs">
       <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindMechanicImmuneMask.cs">
+    <Compile Include="NPC Forms\FindMechanicImmuneMask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindMechanicImmuneMask.Designer.cs">
+    <Compile Include="NPC Forms\FindMechanicImmuneMask.Designer.cs">
       <DependentUpon>FindMechanicImmuneMask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindNPCFlag.cs">
+    <Compile Include="NPC Forms\FindNPCFlag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindNPCFlag.Designer.cs">
+    <Compile Include="NPC Forms\FindNPCFlag.Designer.cs">
       <DependentUpon>FindNPCFlag.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindRace.cs">
+    <Compile Include="NPC Forms\FindRace.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindRace.Designer.cs">
+    <Compile Include="NPC Forms\FindRace.Designer.cs">
       <DependentUpon>FindRace.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindSpell.cs">
+    <Compile Include="NPC Forms\FindSpell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindSpell.designer.cs">
+    <Compile Include="NPC Forms\FindSpell.designer.cs">
       <DependentUpon>FindSpell.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindNPC.cs">
+    <Compile Include="NPC Forms\FindNPC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindNPC.designer.cs">
+    <Compile Include="NPC Forms\FindNPC.designer.cs">
       <DependentUpon>FindNPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindTypeFlags.cs">
+    <Compile Include="NPC Forms\FindTypeFlags.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindTypeFlags.Designer.cs">
+    <Compile Include="NPC Forms\FindTypeFlags.Designer.cs">
       <DependentUpon>FindTypeFlags.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindUnitFlags.cs">
+    <Compile Include="NPC Forms\FindUnitFlags.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindUnitFlags.Designer.cs">
+    <Compile Include="NPC Forms\FindUnitFlags.Designer.cs">
       <DependentUpon>FindUnitFlags.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindUnitFlags2.cs">
+    <Compile Include="NPC Forms\FindUnitFlags2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindUnitFlags2.Designer.cs">
+    <Compile Include="NPC Forms\FindUnitFlags2.Designer.cs">
       <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemStatsControl.cs">
@@ -344,28 +364,28 @@
     <Compile Include="OtherCommands.Designer.cs">
       <DependentUpon>OtherCommands.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayerInformation.cs">
+    <Compile Include="Character Management\PlayerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayerInformation.Designer.cs">
+    <Compile Include="Character Management\PlayerInformation.Designer.cs">
       <DependentUpon>PlayerInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveAccountBan.cs">
+    <Compile Include="Account Management\RemoveAccountBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveAccountBan.Designer.cs">
+    <Compile Include="Account Management\RemoveAccountBan.Designer.cs">
       <DependentUpon>RemoveAccountBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveIPBan.cs">
+    <Compile Include="Account Management\RemoveIPBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveIPBan.Designer.cs">
+    <Compile Include="Account Management\RemoveIPBan.Designer.cs">
       <DependentUpon>RemoveIPBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="SendMail.cs">
+    <Compile Include="Mail Form\SendMail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SendMail.Designer.cs">
+    <Compile Include="Mail Form\SendMail.Designer.cs">
       <DependentUpon>SendMail.cs</DependentUpon>
     </Compile>
     <Compile Include="SetupWizard.cs">
@@ -388,127 +408,136 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccountCleanup.resx">
+    <EmbeddedResource Include="Account Management\AccountCleanup.resx">
       <DependentUpon>AccountCleanup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddAccount.resx">
+    <EmbeddedResource Include="Account Management\AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddAccountBan.resx">
+    <EmbeddedResource Include="Account Management\AddAccountBan.resx">
       <DependentUpon>AddAccountBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddIPBan.resx">
+    <EmbeddedResource Include="Account Management\AddIPBan.resx">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterSetLevel.resx">
+    <EmbeddedResource Include="Character Management\CharacterSetLevel.resx">
       <DependentUpon>CharacterSetLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterSetReputation.resx">
+    <EmbeddedResource Include="Character Management\CharacterSetReputation.resx">
       <DependentUpon>CharacterSetReputation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterSetSkillLevel.resx">
+    <EmbeddedResource Include="Character Management\CharacterSetSkillLevel.resx">
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConvertDaysToMinutes.resx">
+    <EmbeddedResource Include="Events Forms\ConvertDaysToMinutes.resx">
       <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateGuild.resx">
+    <EmbeddedResource Include="Guild Forms\CreateGuild.resx">
       <DependentUpon>CreateGuild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateItem.resx">
+    <EmbeddedResource Include="Item Forms\CreateItem.resx">
       <DependentUpon>CreateItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateNPC.resx">
+    <EmbeddedResource Include="Item Forms\FindItemFlags.resx">
+      <DependentUpon>FindItemFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item Forms\FindItemFlagsCustom.resx">
+      <DependentUpon>FindItemFlagsCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item Forms\FindItemFlagsExtra.resx">
+      <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPC Forms\CreateNPC.resx">
       <DependentUpon>CreateNPC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteGuild.resx">
+    <EmbeddedResource Include="NPC Forms\DeleteGuild.resx">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditAccount.resx">
+    <EmbeddedResource Include="Account Management\EditAccount.resx">
       <DependentUpon>EditAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditGuild.resx">
+    <EmbeddedResource Include="Guild Forms\EditGuild.resx">
       <DependentUpon>EditGuild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventActiveList.resx">
+    <EmbeddedResource Include="Events Forms\EventActiveList.resx">
       <DependentUpon>EventActiveList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventStart.resx">
+    <EmbeddedResource Include="Events Forms\EventStart.resx">
       <DependentUpon>EventStart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindClass.resx">
+    <EmbeddedResource Include="NPC Forms\FindClass.resx">
       <DependentUpon>FindClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindDynamicFlags.resx">
+    <EmbeddedResource Include="NPC Forms\FindDynamicFlags.resx">
       <DependentUpon>FindDynamicFlags.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindEvent.resx">
+    <EmbeddedResource Include="Events Forms\FindEvent.resx">
       <DependentUpon>FindEvent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindFaction.resx">
+    <EmbeddedResource Include="NPC Forms\FindFaction.resx">
       <DependentUpon>FindFaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindFlagsExtra.resx">
+    <EmbeddedResource Include="NPC Forms\FindFlagsExtra.resx">
       <DependentUpon>FindFlagsExtra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindGUID.resx">
+    <EmbeddedResource Include="NPC Forms\FindGUID.resx">
       <DependentUpon>FindGUID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindHoliday.resx">
+    <EmbeddedResource Include="Events Forms\FindHoliday.resx">
       <DependentUpon>FindHoliday.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindInhabitType.resx">
+    <EmbeddedResource Include="NPC Forms\FindInhabitType.resx">
       <DependentUpon>FindInhabitType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItem.resx">
+    <EmbeddedResource Include="Item Forms\FindItem.resx">
       <DependentUpon>FindItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemArea.resx">
+    <EmbeddedResource Include="Item Forms\FindItemArea.resx">
       <DependentUpon>FindItemArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemDisplayID.resx">
+    <EmbeddedResource Include="Item Forms\FindItemDisplayID.resx">
       <DependentUpon>FindItemDisplayID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemGemProperties.resx">
+    <EmbeddedResource Include="Item Forms\FindItemGemProperties.resx">
       <DependentUpon>FindItemGemProperties.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemMap.resx">
+    <EmbeddedResource Include="Item Forms\FindItemMap.resx">
       <DependentUpon>FindItemMap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemQuest.resx">
+    <EmbeddedResource Include="Item Forms\FindItemQuest.resx">
       <DependentUpon>FindItemQuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemRequiredSpell.resx">
+    <EmbeddedResource Include="Item Forms\FindItemRequiredSpell.resx">
       <DependentUpon>FindItemRequiredSpell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemSet.resx">
+    <EmbeddedResource Include="Item Forms\FindItemSet.resx">
       <DependentUpon>FindItemSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindItemSocketBonus.resx">
+    <EmbeddedResource Include="Item Forms\FindItemSocketBonus.resx">
       <DependentUpon>FindItemSocketBonus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindMechanicImmuneMask.resx">
+    <EmbeddedResource Include="NPC Forms\FindMechanicImmuneMask.resx">
       <DependentUpon>FindMechanicImmuneMask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindNPCFlag.resx">
+    <EmbeddedResource Include="NPC Forms\FindNPCFlag.resx">
       <DependentUpon>FindNPCFlag.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindRace.resx">
+    <EmbeddedResource Include="NPC Forms\FindRace.resx">
       <DependentUpon>FindRace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindSpell.resx">
+    <EmbeddedResource Include="NPC Forms\FindSpell.resx">
       <DependentUpon>FindSpell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindNPC.resx">
+    <EmbeddedResource Include="NPC Forms\FindNPC.resx">
       <DependentUpon>FindNPC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindTypeFlags.resx">
+    <EmbeddedResource Include="NPC Forms\FindTypeFlags.resx">
       <DependentUpon>FindTypeFlags.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindUnitFlags.resx">
+    <EmbeddedResource Include="NPC Forms\FindUnitFlags.resx">
       <DependentUpon>FindUnitFlags.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindUnitFlags2.resx">
+    <EmbeddedResource Include="NPC Forms\FindUnitFlags2.resx">
       <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemStatsControl.resx">
@@ -520,7 +549,7 @@
     <EmbeddedResource Include="OtherCommands.resx">
       <DependentUpon>OtherCommands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerInformation.resx">
+    <EmbeddedResource Include="Character Management\PlayerInformation.resx">
       <DependentUpon>PlayerInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -533,13 +562,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RemoveAccountBan.resx">
+    <EmbeddedResource Include="Account Management\RemoveAccountBan.resx">
       <DependentUpon>RemoveAccountBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveIPBan.resx">
+    <EmbeddedResource Include="Account Management\RemoveIPBan.resx">
       <DependentUpon>RemoveIPBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SendMail.resx">
+    <EmbeddedResource Include="Mail Form\SendMail.resx">
       <DependentUpon>SendMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetupWizard.resx">
