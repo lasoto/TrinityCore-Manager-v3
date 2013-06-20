@@ -12,10 +12,16 @@ namespace TrinityCore_Manager.Database.Classes
         public int Id { get; set; }
         public string Username { get; set; }
         public string Hash { get; set; }
-        public string SessionKey { get; set; }
-        public string V { get; set; }
-        public string S { get; set; }
         public string Email { get; set; }
+        public DateTime JoinDate { get; set; }
+        public string LastIp { get; set; }
+        public int FailedLogins { get; set; }
+        public int Locked { get; set; }
+        public string LockCountry { get; set; }
+        public DateTime LastLogin { get; set; }
+        public bool Online { get; set; }
+        public int Exp { get; set; }
+
 
     }
 }

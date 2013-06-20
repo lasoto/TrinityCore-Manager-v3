@@ -113,6 +113,9 @@
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\TCCommandAttribute.cs" />
+    <Compile Include="CustomForms\TCMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database\Classes\Account.cs" />
     <Compile Include="Database\Classes\BannedAccount.cs" />
     <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
@@ -121,6 +124,7 @@
     <Compile Include="Events Forms\ConvertDaysToMinutes.Designer.cs">
       <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Guild Forms\CreateGuild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -434,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Character Management\CharacterSetSkillLevel.resx">
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\TCMForm.resx">
+      <DependentUpon>TCMForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events Forms\ConvertDaysToMinutes.resx">
       <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>

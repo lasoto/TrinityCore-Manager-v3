@@ -8,23 +8,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.CustomForms;
 
 namespace TrinityCore_Manager
 {
-    public partial class AddAccount : DevComponents.DotNetBar.Office2007Form
+    public partial class AddAccount : TCMForm
     {
         public AddAccount()
         {
             InitializeComponent();
         }
 
+        private void AddAccount_Load(object sender, EventArgs e)
+        {
+            accLevelComboBox.SelectedIndex = 0;
+            accAddonComboBox.SelectedIndex = 0;
+        }
+
         private void createButton_Click(object sender, EventArgs e)
         {
 
-            TCManager.Instance.AuthDatabase.CreateAccount(usernameTextBox.Text, passwordTextBox.Text, accLevelComboBox.SelectedIndex, accAddonComboBox.SelectedIndex);
+            if (string.IsNullOrEmpty(usernameTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text) || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
+            {
 
-            this.Close();
+                MessageBoxEx.Show(this, "All fields are requried to be filled in!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            StartLoading();
+
+            TCManager.Instance.AuthDatabase.CreateAccount(usernameTextBox.Text, passwordTextBox.Text, accLevelComboBox.SelectedIndex, accAddonComboBox.SelectedIndex).ContinueWith(task =>
+            {
+
+                Invoke((MethodInvoker)StopLoading);
+
+                if (task.Result)
+                {
+                    Invoke((MethodInvoker)this.Close);
+                }
+                else
+                {
+                    Invoke((MethodInvoker)(() => MessageBoxEx.Show(this, "That username already exists in the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)));
+                }
+            });
 
         }
+
     }
 }

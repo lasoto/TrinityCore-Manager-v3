@@ -20,7 +20,7 @@ namespace TrinityCore_Manager
         {
             get
             {
-                lock (_instance)
+                lock (_lock)
                 {
 
                     if (_instance == null)

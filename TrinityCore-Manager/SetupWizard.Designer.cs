@@ -167,7 +167,7 @@
             // 
             // 
             this.welcomePage.Style.BackColor = System.Drawing.Color.White;
-            this.welcomePage.Style.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wizardPage1.Style.BackgroundImage")));
+            this.welcomePage.Style.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("welcomePage.Style.BackgroundImage")));
             this.welcomePage.Style.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.TopLeft;
             this.welcomePage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
@@ -421,6 +421,7 @@
             this.passwordTextBox.Size = new System.Drawing.Size(210, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account password", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // usernameTextBox
             // 
@@ -597,6 +598,7 @@
             this.mySqlPassTextBox.Name = "mySqlPassTextBox";
             this.mySqlPassTextBox.Size = new System.Drawing.Size(213, 20);
             this.mySqlPassTextBox.TabIndex = 4;
+            this.mySqlPassTextBox.UseSystemPasswordChar = true;
             // 
             // mySqlUsernameTextBox
             // 

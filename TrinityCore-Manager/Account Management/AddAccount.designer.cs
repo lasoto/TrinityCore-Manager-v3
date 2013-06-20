@@ -314,6 +314,7 @@
             // 
             this.accLevelComboBox.DisplayMember = "Text";
             this.accLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accLevelComboBox.ForeColor = System.Drawing.Color.White;
             this.accLevelComboBox.FormattingEnabled = true;
             this.accLevelComboBox.ItemHeight = 14;
@@ -348,6 +349,7 @@
             // 
             this.accAddonComboBox.DisplayMember = "Text";
             this.accAddonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accAddonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accAddonComboBox.ForeColor = System.Drawing.Color.White;
             this.accAddonComboBox.FormattingEnabled = true;
             this.accAddonComboBox.ItemHeight = 14;
@@ -392,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(502, 263);
+            this.ClientSize = new System.Drawing.Size(502, 262);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
@@ -412,6 +414,7 @@
             this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "AddAccount";
             this.Text = "Add Account";
+            this.Load += new System.EventHandler(this.AddAccount_Load);
             this.ResumeLayout(false);
 
         }

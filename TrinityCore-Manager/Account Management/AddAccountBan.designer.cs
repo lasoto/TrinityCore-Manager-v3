@@ -89,6 +89,7 @@
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // banReasonTextBox
             // 
@@ -158,7 +159,7 @@
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 195);
+            this.ClientSize = new System.Drawing.Size(397, 194);
             this.Controls.Add(this.banTimeTextBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.banReasonTextBox);

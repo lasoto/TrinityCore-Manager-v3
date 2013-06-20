@@ -23,6 +23,7 @@ namespace TrinityCore_Manager.Database
             connStr.Password = password;
             connStr.Database = dbName;
             connStr.AllowUserVariables = true;
+            connStr.AllowZeroDateTime = true;
 
             ConnectionString = connStr.ToString();
 
@@ -31,60 +32,70 @@ namespace TrinityCore_Manager.Database
 
         #region Helper Methods
 
-        public void ExecuteNonQuery(string nonQuery, params MySqlParameter[] mParams)
+        public async Task ExecuteNonQuery(string nonQuery, params MySqlParameter[] mParams)
         {
 
-            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+            await Task.Run(() =>
             {
 
-                conn.Open();
-
-                using (MySqlCommand cmd = new MySqlCommand(nonQuery, conn))
+                using (MySqlConnection conn = new MySqlConnection(ConnectionString))
                 {
 
-                    foreach (var param in mParams)
+                    conn.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(nonQuery, conn))
                     {
-                        cmd.Parameters.Add(param);
+
+                        foreach (var param in mParams)
+                        {
+                            cmd.Parameters.Add(param);
+                        }
+
+                        cmd.ExecuteNonQuery();
+
                     }
-
-                    cmd.ExecuteNonQuery();
-
-                }
-
-                conn.Close();
-
-            }
-
-        }
-
-        public DataTable ExecuteQuery(string query, params MySqlParameter[] mParams)
-        {
-
-            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
-            {
-
-                conn.Open();
-
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-
-                    foreach (var param in mParams)
-                    {
-                        cmd.Parameters.Add(param);
-                    }
-
-                    var reader = cmd.ExecuteReader();
-
-                    var dt = new DataTable();
-                    dt.Load(reader);
 
                     conn.Close();
 
-                    return dt;
+                }
+
+            });
+
+        }
+
+        public async Task<DataTable> ExecuteQuery(string query, params MySqlParameter[] mParams)
+        {
+
+            return await Task.Run(() =>
+            {
+
+                using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+                {
+
+                    conn.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+
+                        foreach (var param in mParams)
+                        {
+                            cmd.Parameters.Add(param);
+                        }
+
+                        var reader = cmd.ExecuteReader();
+
+                        var dt = new DataTable();
+                        dt.Load(reader);
+
+                        conn.Close();
+
+                        return dt;
+
+                    }
 
                 }
 
-            }
+            });
 
         }
 

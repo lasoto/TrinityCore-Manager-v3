@@ -23,16 +23,21 @@ namespace TrinityCore_Manager
             // NOT FINISHED; NEEDS WORK
         }
 
-        private void AddAccountBan_Load(object sender, EventArgs e)
+        private async void AddAccountBan_Load(object sender, EventArgs e)
         {
 
-            var bannedAccts = TCManager.Instance.AuthDatabase.GetAccounts();
+            var bannedAccts = await TCManager.Instance.AuthDatabase.GetAccounts();
 
             foreach (var acct in bannedAccts)
             {
-                accListComboBox.Items.Add(acct.Id);
+                accListComboBox.Items.Add(acct.Username);
             }
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
