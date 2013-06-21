@@ -43,11 +43,17 @@ namespace TrinityCore_Manager.CustomForms
 
             _loading.BringToFront();
 
+            this.Enabled = false;
+
         }
 
         public void StopLoading()
         {
+
             this.Controls.Remove(_loading);
+
+            this.Enabled = true;
+
         }
 
     }

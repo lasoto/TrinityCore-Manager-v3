@@ -180,12 +180,12 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
+            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
@@ -251,6 +251,7 @@
             // 
             this.otherRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.otherRibbonPanel.TabIndex = 7;
+            this.otherRibbonPanel.Visible = false;
             // 
             // dbCleanupBar
             // 
@@ -511,6 +512,7 @@
             // 
             // 
             this.progressPanelItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.progressPanelItemContainer.FixedSize = new System.Drawing.Size(590, 0);
             this.progressPanelItemContainer.Name = "progressPanelItemContainer";
             this.progressPanelItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.progressBar});
@@ -531,6 +533,7 @@
             this.progressBar.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.progressBar.Name = "progressBar";
             this.progressBar.RecentlyUsed = false;
+            this.progressBar.Visible = false;
             this.progressBar.Width = 590;
             // 
             // ribbonBar1
@@ -574,8 +577,8 @@
             this.compilerItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.compilerItemContainer.Name = "compilerItemContainer";
             this.compilerItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.platformComboBox,
-            this.platformLabel});
+            this.platformLabel,
+            this.platformComboBox});
             // 
             // 
             // 
@@ -592,11 +595,11 @@
             // 
             // x86ComboItem
             // 
-            this.x86ComboItem.Text = "X86";
+            this.x86ComboItem.Text = "x86";
             // 
             // x64ComboItem
             // 
-            this.x64ComboItem.Text = "X64";
+            this.x64ComboItem.Text = "x64";
             // 
             // platformLabel
             // 
@@ -606,7 +609,7 @@
             // compileTrinityCoreButton
             // 
             this.compileTrinityCoreButton.Name = "compileTrinityCoreButton";
-            this.compileTrinityCoreButton.Text = "Compile & Replace Trinity Core";
+            this.compileTrinityCoreButton.Text = "Compile && Replace Trinity Core";
             // 
             // trinityCoreRibbonBar
             // 
@@ -1339,7 +1342,6 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
             // 
             // playerManagementRibbonBar
             // 
@@ -1656,6 +1658,7 @@
             // 
             // serverManagementTab
             // 
+            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
@@ -1692,7 +1695,6 @@
             // 
             // otherTab
             // 
-            this.otherTab.Checked = true;
             this.otherTab.Name = "otherTab";
             this.otherTab.Panel = this.otherRibbonPanel;
             this.otherTab.Text = "Other";
@@ -1763,9 +1765,9 @@
             // 
             this.consoleTabControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.consoleTabControl.CanReorderTabs = true;
-            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
             this.consoleTabControl.Controls.Add(this.tabControlPanel1);
             this.consoleTabControl.Controls.Add(this.authServerTabControlPanel);
+            this.consoleTabControl.Controls.Add(this.worldServerTabControlPanel);
             this.consoleTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.consoleTabControl.ForeColor = System.Drawing.Color.White;
             this.consoleTabControl.Location = new System.Drawing.Point(5, 196);
@@ -1825,6 +1827,7 @@
             this.worldServerTab.AttachedControl = this.worldServerTabControlPanel;
             this.worldServerTab.Name = "worldServerTab";
             this.worldServerTab.Text = "World Server Console";
+            this.worldServerTab.Visible = false;
             // 
             // tabControlPanel1
             // 
@@ -1870,6 +1873,7 @@
             this.raTabItem.AttachedControl = this.tabControlPanel1;
             this.raTabItem.Name = "raTabItem";
             this.raTabItem.Text = "Remote Access";
+            this.raTabItem.Visible = false;
             // 
             // authServerTabControlPanel
             // 
@@ -1915,6 +1919,7 @@
             this.authServerTab.AttachedControl = this.authServerTabControlPanel;
             this.authServerTab.Name = "authServerTab";
             this.authServerTab.Text = "Auth Server Console";
+            this.authServerTab.Visible = false;
             // 
             // MainForm
             // 

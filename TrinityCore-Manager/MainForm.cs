@@ -15,6 +15,7 @@ using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Security;
+using TrinityCore_Manager.TCP;
 
 namespace TrinityCore_Manager
 {
@@ -25,11 +26,61 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
+        private TCClient _raClient;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
             CheckSettings();
+            Init();
 
+        }
+
+        private void Init()
+        {
+
+            if (Settings.Default.ServerType == (int)ServerType.RemoteAccess)
+            {
+
+                startServerButton.Enabled = false;
+                stopServerButton.Enabled = false;
+                openConfigurationFileButton.Enabled = false;
+                raTabItem.Visible = true;
+
+                //if (Settings.Default.RAAutoConnect)
+                    ConnectRA();
+
+            }
+            else
+            {
+                worldServerTab.Visible = true;
+                authServerTab.Visible = true;
+            }
+
+        }
+
+        private void ConnectRA()
+        {
+
+            _raClient = new TCClient(Settings.Default.RAHost, Settings.Default.RAPort);
+
+            try
+            {
+                _raClient.Connect();
+            }
+            catch (Exception ex)
+            {
+
+                _raClient.Dispose();
+
+                MessageBoxEx.Show(this, "Could not connect to RA! (" + ex.Message + ")", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            }
+
+        }
+
+        private void DisableAll()
+        {
         }
 
         private void CheckSettings(bool exit = false)
@@ -330,7 +381,7 @@ DELETE FROM `pet_levelstats` WHERE `creature_entry` NOT IN (SELECT `entry` FROM 
 
         void sWizard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Show();
+            Init();
         }
 
     }
