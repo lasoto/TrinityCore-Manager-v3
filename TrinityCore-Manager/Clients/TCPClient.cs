@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using TrinityCore_Manager.TCM;
 
-namespace TrinityCore_Manager.TCP
+namespace TrinityCore_Manager.Clients
 {
-    class TCClient : IDisposable
+    class TCPClient : TCMClient, IDisposable
     {
 
         public event EventHandler TCConnected;
@@ -25,7 +22,7 @@ namespace TrinityCore_Manager.TCP
 
         public bool IsConnected { get; private set; }
 
-        public TCClient(string host, int port)
+        public TCPClient(string host, int port)
         {
 
             _host = host;
@@ -49,7 +46,7 @@ namespace TrinityCore_Manager.TCP
             _client = new TcpClient();
 
             _client.BeginConnect(_host, _port, Connected, _client);
-        
+
         }
 
         /// <summary>
@@ -70,7 +67,7 @@ namespace TrinityCore_Manager.TCP
                 TCDisconnected(this, EventArgs.Empty);
 
             _client.Close();
-            
+
             _client = null;
             _buffer = null;
 
@@ -239,6 +236,26 @@ namespace TrinityCore_Manager.TCP
 
         }
 
+        public override bool IsOnline
+        {
+            get { return IsConnected; }
+        }
+
+        public override void Start()
+        {
+            Connect();
+        }
+
+        public override void Stop()
+        {
+            Disconnect();
+        }
+
+        public override void SendMessage(string message)
+        {
+            Send(message);
+        }
+
         public void Dispose()
         {
 
@@ -261,7 +278,7 @@ namespace TrinityCore_Manager.TCP
 
         }
 
-        ~TCClient()
+        ~TCPClient()
         {
             Dispose(false);
         }

@@ -112,6 +112,7 @@
     <Compile Include="Character Management\CharacterSetSkillLevel.Designer.cs">
       <DependentUpon>CharacterSetSkillLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clients\LocalClient.cs" />
     <Compile Include="Commands\TCCommandAttribute.cs" />
     <Compile Include="Compile Forms\SetTrunkLocation.cs">
       <SubType>Form</SubType>
@@ -428,7 +429,9 @@
     <Compile Include="SetupWizard.Designer.cs">
       <DependentUpon>SetupWizard.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCManager.cs" />
+    <Compile Include="TCM\TCAction.cs" />
+    <Compile Include="TCM\TCManager.cs" />
+    <Compile Include="TCM\TCMClient.cs" />
     <Compile Include="TC\CMake.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\ProcessHelper.cs" />
@@ -436,7 +439,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\SecurityExtensions.cs" />
-    <Compile Include="TCP\TCClient.cs" />
+    <Compile Include="Clients\TCPClient.cs" />
     <Compile Include="TC\TCCompiler.cs" />
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <EmbeddedResource Include="About.resx">

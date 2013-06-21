@@ -113,11 +113,13 @@ namespace TrinityCore_Manager.Misc
 
             psi.RedirectStandardOutput = true;
             psi.RedirectStandardError = true;
+            psi.RedirectStandardInput = true;
 
             psi.Arguments = arguments;
 
             var proc = new Process();
             proc.StartInfo = psi;
+            proc.EnableRaisingEvents = true;
 
             proc.Start();
 

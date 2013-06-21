@@ -11,6 +11,7 @@ using DevComponents.DotNetBar;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Security;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {

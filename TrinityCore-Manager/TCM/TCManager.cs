@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using TrinityCore_Manager.Database;
+using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Security;
 
-namespace TrinityCore_Manager
+namespace TrinityCore_Manager.TCM
 {
     class TCManager
     {
@@ -33,6 +30,11 @@ namespace TrinityCore_Manager
                 }
             }
         }
+
+        public TCMClient AuthClient { get; set; }
+        public TCMClient WorldClient { get; set; }
+
+        public TCMClient RAClient { get; set; }
 
         public AuthDatabase AuthDatabase { get; set; }
         public CharDatabase CharDatabase { get; set; }
