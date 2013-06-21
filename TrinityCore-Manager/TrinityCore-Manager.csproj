@@ -128,6 +128,18 @@
     <Compile Include="CustomForms\TCMForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Database Management\BackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database Management\BackupDatabase.Designer.cs">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Management\RestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database Management\RestoreDatabase.Designer.cs">
+      <DependentUpon>RestoreDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\Classes\Account.cs" />
     <Compile Include="Database\Classes\BannedAccount.cs" />
     <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
@@ -380,10 +392,10 @@
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
     <Compile Include="Misc\ServerType.cs" />
-    <Compile Include="OtherCommands.cs">
+    <Compile Include="Server Management\OtherCommands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OtherCommands.Designer.cs">
+    <Compile Include="Server Management\OtherCommands.Designer.cs">
       <DependentUpon>OtherCommands.cs</DependentUpon>
     </Compile>
     <Compile Include="Character Management\PlayerInformation.cs">
@@ -459,6 +471,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\TCMForm.resx">
       <DependentUpon>TCMForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database Management\BackupDatabase.resx">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database Management\RestoreDatabase.resx">
+      <DependentUpon>RestoreDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events Forms\ConvertDaysToMinutes.resx">
       <DependentUpon>ConvertDaysToMinutes.cs</DependentUpon>
@@ -580,7 +598,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OtherCommands.resx">
+    <EmbeddedResource Include="Server Management\OtherCommands.resx">
       <DependentUpon>OtherCommands.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Character Management\PlayerInformation.resx">
