@@ -43,6 +43,30 @@ namespace TrinityCore_Manager.TC
 
         }
 
+        public static async Task Fetch(string gitDir, IProgress<double> progress)
+        {
+
+            await Task.Run(() =>
+            {
+
+                var thandler = new TransferProgressHandler(h =>
+                {
+
+                    progress.Report(((double)h.ReceivedObjects / h.TotalObjects) * 100);
+
+                    return 0;
+
+                });
+
+                using (var repo = new Repository(gitDir))
+                {
+                    repo.Network.Fetch(repo.Head.Remote, TagFetchMode.All, null, null, null, thandler);
+                }
+
+            });
+
+        }
+
     }
 
 }

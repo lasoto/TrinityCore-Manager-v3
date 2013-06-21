@@ -105,7 +105,7 @@ namespace TrinityCore_Manager.Database
 
         public async Task RemoveIpBan(string ip)
         {
-            await ExecuteNonQuery("DELETE * FROM `ip_banned` WHERE `ip` = @ip", new MySqlParameter("@ip", ip));
+            await ExecuteNonQuery("DELETE FROM `ip_banned` WHERE `ip` = @ip", new MySqlParameter("@ip", ip));
         }
 
     }

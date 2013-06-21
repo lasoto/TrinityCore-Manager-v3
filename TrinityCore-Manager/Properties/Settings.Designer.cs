@@ -202,5 +202,17 @@ namespace TrinityCore_Manager.Properties {
                 this["RAAutoConnect"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TrunkLocation {
+            get {
+                return ((string)(this["TrunkLocation"]));
+            }
+            set {
+                this["TrunkLocation"] = value;
+            }
+        }
     }
 }

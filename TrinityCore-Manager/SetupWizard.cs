@@ -41,7 +41,7 @@ namespace TrinityCore_Manager
                 remoteCheckBox.Checked = true;
             }
 
-            trinitySFolderPage.Text = settings.ServerFolder;
+            folderTextBox.Text = settings.ServerFolder;
             
             hostTextBox.Text = settings.RAHost;
             portIntegerInput.Value = settings.RAPort;

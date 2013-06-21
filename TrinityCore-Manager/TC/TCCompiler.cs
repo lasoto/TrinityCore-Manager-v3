@@ -48,8 +48,6 @@ namespace TrinityCore_Manager.TC
                         proc.Kill();
                         proc.Dispose();
 
-                        token.ThrowIfCancellationRequested();
-
                     }
 
                 };
@@ -68,7 +66,7 @@ namespace TrinityCore_Manager.TC
             return await Task.Run(() =>
             {
 
-                string args = String.Empty;
+                string args;
 
                 if (x64)
                 {
@@ -83,6 +81,8 @@ namespace TrinityCore_Manager.TC
 
                 var proc = ProcessHelper.StartProcess(cpath, Path.GetDirectoryName(cpath), args);
 
+                int id = proc.Id;
+
                 proc.EnableRaisingEvents = true;
 
                 proc.BeginOutputReadLine();
@@ -90,15 +90,18 @@ namespace TrinityCore_Manager.TC
                 proc.OutputDataReceived += (sender, e) =>
                 {
 
+                    Thread.Sleep(50);
+
                     progress.Report(e.Data);
 
                     if (token.IsCancellationRequested)
                     {
 
-                        proc.Kill();
-                        proc.Dispose();
-
-                        token.ThrowIfCancellationRequested();
+                        if (ProcessHelper.ProcessExists(id))
+                        {
+                            proc.Kill();
+                            proc.Dispose();
+                        }
 
                     }
 

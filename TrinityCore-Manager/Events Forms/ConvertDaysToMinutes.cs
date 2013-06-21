@@ -36,7 +36,8 @@ namespace TrinityCore_Manager
 
         private void copyToClipboardButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(inMinutesLabel.Text);
+            if (!string.IsNullOrEmpty(inMinutesLabel.Text))
+                Clipboard.SetText(inMinutesLabel.Text);
         }
 
     }

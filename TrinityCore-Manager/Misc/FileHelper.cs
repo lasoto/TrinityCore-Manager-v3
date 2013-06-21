@@ -10,6 +10,17 @@ namespace TrinityCore_Manager.Misc
     static class FileHelper
     {
 
+        public static string GenerateTempDirectory()
+        {
+
+            string newDir = Path.GetTempFileName() + ".tcm";
+
+            Directory.CreateDirectory(newDir);
+
+            return newDir;
+
+        }
+
         public static void DeleteDirectory(string directory)
         {
             string[] files = Directory.GetFiles(directory);

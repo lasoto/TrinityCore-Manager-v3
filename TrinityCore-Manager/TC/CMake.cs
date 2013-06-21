@@ -48,6 +48,8 @@ namespace TrinityCore_Manager.TC
 
                     var proc = ProcessHelper.StartProcess(cmake, destDir, args);
 
+                    int id = proc.Id;
+
                     proc.EnableRaisingEvents = true;
 
                     proc.BeginOutputReadLine();
@@ -61,10 +63,11 @@ namespace TrinityCore_Manager.TC
                         if (token.IsCancellationRequested)
                         {
 
-                            proc.Kill();
-                            proc.Dispose();
-
-                            token.ThrowIfCancellationRequested();
+                            if (ProcessHelper.ProcessExists(id))
+                            {
+                                proc.Kill();
+                                proc.Dispose();
+                            }
 
                         }
 
@@ -78,10 +81,11 @@ namespace TrinityCore_Manager.TC
                         if (token.IsCancellationRequested)
                         {
 
-                            proc.Kill();
-                            proc.Dispose();
-
-                            token.ThrowIfCancellationRequested();
+                            if (ProcessHelper.ProcessExists(id))
+                            {
+                                proc.Kill();
+                                proc.Dispose();
+                            }
 
                         }
 
