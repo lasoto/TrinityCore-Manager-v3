@@ -57,6 +57,7 @@
             // 
             this.accListComboBox.DisplayMember = "Text";
             this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accListComboBox.ForeColor = System.Drawing.Color.White;
             this.accListComboBox.FormattingEnabled = true;
             this.accListComboBox.ItemHeight = 14;

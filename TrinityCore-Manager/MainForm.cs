@@ -52,8 +52,15 @@ namespace TrinityCore_Manager
             platformComboBox.SelectedIndex = 0;
         }
 
+        private bool IsRAConnected()
+        {
+            return _raClient != null && _raClient.IsConnected;
+        }
+
         private void Init()
         {
+
+            DisableAllLocal();
 
             if (Settings.Default.ServerType == (int)ServerType.RemoteAccess)
             {
@@ -83,6 +90,9 @@ namespace TrinityCore_Manager
             try
             {
                 _raClient.Connect();
+                _raClient.TCConnected += _raClient_TCConnected;
+                _raClient.TCDisconnected += _raClient_TCDisconnected;
+                _raClient.TCMessageReceived += _raClient_TCMessageReceived;
             }
             catch (Exception ex)
             {
@@ -95,8 +105,27 @@ namespace TrinityCore_Manager
 
         }
 
-        private void DisableAll()
+        void _raClient_TCMessageReceived(object sender, MessageReceivedEventArgs e)
         {
+            raTextBox.AppendText(e.Message + Environment.NewLine);
+        }
+
+        void _raClient_TCDisconnected(object sender, EventArgs e)
+        {
+            raTextBox.AppendText("Disconnected!" + Environment.NewLine);
+        }
+
+        void _raClient_TCConnected(object sender, EventArgs e)
+        {
+            raTextBox.AppendText("Connected!" + Environment.NewLine);
+        }
+
+        private void DisableAllLocal()
+        {
+            stopServerButton.Enabled = false;
+            openConfigurationFileButton.Enabled = false;
+            authServerTab.Visible = false;
+            worldServerTab.Visible = false;
         }
 
         private void CheckSettings(bool exit = false)
@@ -589,6 +618,53 @@ namespace TrinityCore_Manager
 
             }
 
+        }
+
+        private void startServerButton_Click(object sender, EventArgs e)
+        {
+
+            if (ProcessHelper.ProcessExists("authserver.exe"))
+            {
+
+                if (MessageBoxEx.Show(this, "Authserver is already running! Kill it?", "Already running", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                    return;
+
+                ProcessHelper.KillProcess("authserver.exe");
+
+            }
+
+            if (ProcessHelper.ProcessExists("worldserver.exe"))
+            {
+
+                if (MessageBoxEx.Show(this, "Worldserver is already running! Kill it?", "Already running", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                    return;
+
+                ProcessHelper.KillProcess("worldserver.exe");
+
+            }
+
+            var authProc = ProcessHelper.StartProcess(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"), Settings.Default.ServerFolder);
+            var worldProc = ProcessHelper.StartProcess(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"), Settings.Default.ServerFolder);
+
+            authProc.Exited += authProc_Exited;
+            worldProc.Exited += worldProc_Exited;
+
+        }
+
+        void worldProc_Exited(object sender, EventArgs e)
+        {
+            DisableAllLocal();
+        }
+
+        void authProc_Exited(object sender, EventArgs e)
+        {
+            DisableAllLocal();
+        }
+
+        private void stopServerButton_Click(object sender, EventArgs e)
+        {
+            ProcessHelper.KillProcess("authserver.exe");
+            ProcessHelper.KillProcess("worldserver.exe");
         }
     }
 }
