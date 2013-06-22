@@ -23,6 +23,14 @@ namespace TrinityCore_Manager.Clients
             }
         }
 
+        public int UnderlyingProcessId
+        {
+            get
+            {
+                return _procId;
+            }
+        }
+
         private int _procId = -1;
 
         private readonly string _exeFile;
@@ -50,12 +58,12 @@ namespace TrinityCore_Manager.Clients
             ProcessHelper.KillProcess(_procId);
         }
 
-        public override void SendMessage(string message)
+        public override async Task SendMessage(string message)
         {
 
             StreamWriter writer = _proc.StandardInput;
 
-            writer.WriteLine(message);
+            await writer.WriteLineAsync(message);
 
         }
 

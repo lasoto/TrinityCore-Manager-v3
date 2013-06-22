@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager.Clients
@@ -189,7 +190,7 @@ namespace TrinityCore_Manager.Clients
         /// Send a message to the server
         /// </summary>
         /// <param name="message">The message to send</param>
-        public void Send(string message)
+        public async Task Send(string message)
         {
 
             try
@@ -205,7 +206,7 @@ namespace TrinityCore_Manager.Clients
 
                 var stream = _client.GetStream();
 
-                stream.BeginWrite(msg, 0, msg.Length, Send, stream);
+                await Task.FromResult(stream.BeginWrite(msg, 0, msg.Length, Send, stream));
 
             }
             catch (Exception)
@@ -251,9 +252,9 @@ namespace TrinityCore_Manager.Clients
             Disconnect();
         }
 
-        public override void SendMessage(string message)
+        public override async Task SendMessage(string message)
         {
-            Send(message);
+            await Send(message);
         }
 
         public void Dispose()

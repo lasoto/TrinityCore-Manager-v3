@@ -15,11 +15,10 @@ namespace TrinityCore_Manager.Database
         {
         }
 
-        // NOT FINISHED; NEEDS WORK
-        public void CreateGuild(string name, string leaderguid)
+        public async void CreateGuild(string name, string leaderguid)
         {
 
-            ExecuteNonQuery("INSERT INTO `guild` (`name`, `leaderguid`) VALUES (@name, @leaderguid", new MySqlParameter("@name", name), new MySqlParameter("@leaderguid", leaderguid));
+            await ExecuteNonQuery("INSERT INTO `guild` (`name`, `leaderguid`) VALUES (@name, @leaderguid", new MySqlParameter("@name", name), new MySqlParameter("@leaderguid", leaderguid));
 
         }
     }

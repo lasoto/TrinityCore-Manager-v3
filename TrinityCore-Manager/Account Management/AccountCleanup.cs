@@ -22,14 +22,14 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        private async void deleteButton_Click(object sender, EventArgs e)
         {
 
             var database = TCManager.Instance.AuthDatabase;
 
             DateTime combined = dateTimeInput.Value.Date + timeInput.Value.TimeOfDay;
 
-            database.CleanupAccounts(combined);
+            await database.CleanupAccounts(combined);
 
             this.Close();
         

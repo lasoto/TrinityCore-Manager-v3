@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.CustomForms;
+using TrinityCore_Manager.Extensions;
+using TrinityCore_Manager.Misc;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
-    public partial class AddAccountBan : DevComponents.DotNetBar.Office2007Form
+    public partial class AddAccountBan : TCMForm
     {
         public AddAccountBan()
         {
             InitializeComponent();
-        }
-
-        private void banButton_Click(object sender, EventArgs e)
-        {
-            // NOT FINISHED; NEEDS WORK
         }
 
         private async void AddAccountBan_Load(object sender, EventArgs e)
@@ -32,6 +31,44 @@ namespace TrinityCore_Manager
             {
                 accListComboBox.Items.Add(acct.Username);
             }
+
+            if (accListComboBox.Items.Count > 0)
+                accListComboBox.SelectedIndex = 0;
+
+        }
+
+        private async void banButton_Click(object sender, EventArgs e)
+        {
+
+            if (accListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No user selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            if (!TCManager.Instance.Online)
+            {
+
+                MessageBoxEx.Show(this, "Currently offline!", "Offline", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            string username = accListComboBox.Items[accListComboBox.SelectedIndex].ToString();
+            int unix = (int)banTimeDateTimeInput.Value.ToUnixTimestamp();
+            string reason = banReasonTextBox.Text;
+
+            StartLoading();
+
+            await TCAction.BanAccount(username, unix, reason);
+
+            StopLoading();
+
+            this.Close();
 
         }
 

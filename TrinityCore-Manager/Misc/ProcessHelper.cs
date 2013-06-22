@@ -52,11 +52,15 @@ namespace TrinityCore_Manager.Misc
         public static bool KillProcess(int pid)
         {
 
-            var proc = Process.GetProcessById(pid);
-
             try
             {
+
+                var proc = Process.GetProcessById(pid);
+
                 proc.Kill();
+
+                return true;
+            
             }
             catch (Exception)
             {
@@ -68,7 +72,7 @@ namespace TrinityCore_Manager.Misc
 
         public static bool ProcessExists(string name)
         {
-            return Process.GetProcesses(name).Length > 0;
+            return Process.GetProcessesByName(name).Length > 0;
         }
 
         public static bool ProcessExists(int pid)
@@ -94,6 +98,7 @@ namespace TrinityCore_Manager.Misc
         /// Start a process
         /// </summary>
         /// <param name="exeLoc">The location of the exe file</param>
+        /// <param name="workingDir">The directory in which to start the exe from</param>
         /// <param name="arguments">Optional arguments to pass</param>
         /// <returns>The process that has been started</returns>
         public static Process StartProcess(string exeLoc, string workingDir, string arguments = "")
@@ -109,7 +114,6 @@ namespace TrinityCore_Manager.Misc
             psi.UseShellExecute = false;
 
             psi.CreateNoWindow = true;
-            psi.WindowStyle = ProcessWindowStyle.Hidden;
 
             psi.RedirectStandardOutput = true;
             psi.RedirectStandardError = true;
@@ -124,21 +128,6 @@ namespace TrinityCore_Manager.Misc
             proc.Start();
 
             return proc;
-
-        }
-
-        public static async Task StartProcessAsync(string exeLoc, string workingDir, string arguments = "")
-        {
-
-            await Task.Run(() =>
-            {
-
-                var proc = StartProcess(exeLoc, workingDir, arguments);
-
-                proc.WaitForExit();
-                proc.Dispose();
-
-            });
 
         }
 

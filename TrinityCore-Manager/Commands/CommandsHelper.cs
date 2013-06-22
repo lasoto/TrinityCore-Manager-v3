@@ -12,7 +12,7 @@ namespace TrinityCore_Manager.Commands
 
             var attrib = command.GetAttribute<TCCommandAttribute>();
 
-            if (attrib.ParamsNum != parameters.Length)
+            if (attrib.ParamsNum > parameters.Length)
                 throw new ArgumentOutOfRangeException("parameters");
 
             var sb = new StringBuilder(attrib.CommandName);

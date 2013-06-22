@@ -12,13 +12,14 @@ using System.IO;
 using System.Diagnostics;
 using DevComponents.DotNetBar;
 using Microsoft.Win32;
+using TrinityCore_Manager.Clients;
 using TrinityCore_Manager.Compile_Forms;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Security;
 using TrinityCore_Manager.TC;
-using TrinityCore_Manager.TCP;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
@@ -29,7 +30,7 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private TCClient _raClient;
+        private TCPClient _raClient;
 
         private bool _isCloning;
         private bool _isCompiling;
@@ -55,22 +56,17 @@ namespace TrinityCore_Manager
         private void Init()
         {
 
+            stopServerButton.Enabled = false;
+
             if (Settings.Default.ServerType == (int)ServerType.RemoteAccess)
             {
 
                 startServerButton.Enabled = false;
-                stopServerButton.Enabled = false;
                 openConfigurationFileButton.Enabled = false;
-                raTabItem.Visible = true;
 
                 //if (Settings.Default.RAAutoConnect)
                 ConnectRA();
 
-            }
-            else
-            {
-                worldServerTab.Visible = true;
-                authServerTab.Visible = true;
             }
 
         }
@@ -78,11 +74,14 @@ namespace TrinityCore_Manager
         private void ConnectRA()
         {
 
-            _raClient = new TCClient(Settings.Default.RAHost, Settings.Default.RAPort);
+            _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
 
             try
             {
                 _raClient.Connect();
+                _raClient.TCConnected += _raClient_TCConnected;
+                _raClient.TCDisconnected += _raClient_TCDisconnected;
+                _raClient.TCMessageReceived += _raClient_TCMessageReceived;
             }
             catch (Exception ex)
             {
@@ -95,8 +94,19 @@ namespace TrinityCore_Manager
 
         }
 
-        private void DisableAll()
+        void _raClient_TCMessageReceived(object sender, MessageReceivedEventArgs e)
         {
+            consoleTextBox.AppendText(e.Message + Environment.NewLine);
+        }
+
+        void _raClient_TCDisconnected(object sender, EventArgs e)
+        {
+            consoleTextBox.AppendText("Disconnected!" + Environment.NewLine);
+        }
+
+        void _raClient_TCConnected(object sender, EventArgs e)
+        {
+            consoleTextBox.AppendText("Connected!" + Environment.NewLine);
         }
 
         private void CheckSettings(bool exit = false)
@@ -589,6 +599,224 @@ namespace TrinityCore_Manager
 
             }
 
+        }
+
+        private void startServerButton_Click(object sender, EventArgs e)
+        {
+
+
+            TCManager inst = TCManager.Instance;
+
+
+            if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
+            {
+
+                MessageBoxEx.Show(this, "The file authserver.exe does not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
+            {
+
+                MessageBoxEx.Show(this, "The file worldserver.exe does not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            if (inst.AuthClient != null)
+            {
+
+                if (inst.AuthClient.IsOnline)
+                {
+
+                    if (MessageBoxEx.Show(this, "Authserver is already running! Kill it?", "Already running", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                        return;
+
+                    ProcessHelper.KillProcess(((LocalClient)inst.AuthClient).UnderlyingProcessId);
+
+                }
+
+            }
+
+            if (inst.WorldClient != null)
+            {
+
+                if (inst.WorldClient.IsOnline)
+                {
+
+                    if (MessageBoxEx.Show(this, "Worldserver is already running! Kill it?", "Already running", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                        return;
+
+                    ProcessHelper.KillProcess(((LocalClient)inst.WorldClient).UnderlyingProcessId);
+
+                }
+
+            }
+
+            var authClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"));
+            var worldClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"));
+
+            inst.AuthClient = authClient;
+            inst.WorldClient = worldClient;
+
+            inst.AuthClient.Start();
+            inst.WorldClient.Start();
+
+            stopServerButton.Enabled = true;
+            startServerButton.Enabled = false;
+
+            var authProc = authClient.UnderlyingProcess;
+            var worldProc = worldClient.UnderlyingProcess;
+
+            worldProc.Exited += worldProc_Exited;
+            authProc.Exited += authProc_Exited;
+
+            worldProc.BeginErrorReadLine();
+            worldProc.BeginOutputReadLine();
+
+            worldProc.ErrorDataReceived += worldProc_DataReceived;
+            worldProc.OutputDataReceived += worldProc_OutputDataReceived;
+
+        }
+
+        void worldProc_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Invoke((MethodInvoker)delegate
+            {
+                if (e.Data != null && !IsDisposed)
+                {
+                    consoleTextBox.AppendText(e.Data + Environment.NewLine);
+                }
+            });
+        }
+
+        void worldProc_DataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Invoke((MethodInvoker)delegate
+            {
+                if (e.Data != null && !IsDisposed)
+                    consoleTextBox.AppendText(e.Data + Environment.NewLine);
+            });
+        }
+
+        void worldProc_Exited(object sender, EventArgs e)
+        {
+
+            TCManager.Instance.AuthClient.Stop();
+
+            if (!IsDisposed)
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    stopServerButton.Enabled = false;
+                    startServerButton.Enabled = true;
+                });
+            }
+
+        }
+
+        void authProc_Exited(object sender, EventArgs e)
+        {
+
+            TCManager.Instance.WorldClient.Stop();
+
+            if (!IsDisposed)
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    stopServerButton.Enabled = false;
+                    startServerButton.Enabled = true;
+                });
+            }
+
+        }
+
+        private void stopServerButton_Click(object sender, EventArgs e)
+        {
+
+            var inst = TCManager.Instance;
+
+            var authClient = inst.AuthClient;
+            var worldClient = inst.WorldClient;
+
+            if (authClient == null)
+                throw new NullReferenceException("authClient");
+
+            if (worldClient == null)
+                throw new NullReferenceException("worldClient");
+
+
+            authClient.Stop();
+            worldClient.Stop();
+
+        }
+
+        private void executeCommandButton_Click(object sender, EventArgs e)
+        {
+
+            if (TCManager.Instance.Online)
+            {
+                if (Settings.Default.ServerType == (int)ServerType.RemoteAccess)
+                    TCManager.Instance.RAClient.SendMessage(executeCommandTextBox.Text);
+                else
+                    TCManager.Instance.WorldClient.SendMessage(executeCommandTextBox.Text);
+            }
+
+        }
+
+        private void executeCommandTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+
+        }
+
+        private void executeCommandTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                executeCommandButton.RaiseClick();
+            }
+
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var inst = TCManager.Instance;
+
+            if (inst.AuthClient != null)
+            {
+                if (inst.AuthClient.IsOnline)
+                {
+                    Console.WriteLine("on1");
+                    inst.AuthClient.Stop();
+                }
+            }
+
+            if (inst.WorldClient != null)
+            {
+                if (inst.WorldClient.IsOnline)
+                {
+                    Console.WriteLine("on2");
+                    inst.WorldClient.Stop();
+                }
+            }
+
+            if (inst.RAClient != null)
+            {
+                if (inst.RAClient.IsOnline)
+                {
+                    inst.RAClient.Stop();
+                }
+            }
         }
     }
 }

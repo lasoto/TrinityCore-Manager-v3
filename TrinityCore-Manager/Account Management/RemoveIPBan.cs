@@ -19,10 +19,22 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        // DOUBLE CHECK THIS, NOT SURE IF THE CODING IS CORRECT
-        private void banButton_Click(object sender, EventArgs e)
+        private async void banButton_Click(object sender, EventArgs e)
         {
-            TCManager.Instance.AuthDatabase.RemoveIpBan(ipAddressBanInput.Value);
+
+            if (string.IsNullOrEmpty(ipAddressBanInput.Value))
+            {
+
+                MessageBoxEx.Show(this, "IP Address required!", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            await TCManager.Instance.AuthDatabase.RemoveIpBan(ipAddressBanInput.Value);
+
+            this.Close();
+        
         }
     }
 }

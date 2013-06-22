@@ -40,6 +40,14 @@ namespace TrinityCore_Manager.TCM
         public CharDatabase CharDatabase { get; set; }
         public WorldDatabase WorldDatabase { get; set; }
 
+        public bool Online
+        {
+            get
+            {
+                return ((ServerType)Settings.Default.ServerType) == ServerType.Local ? AuthClient != null && AuthClient.IsOnline && WorldClient != null && WorldClient.IsOnline : RAClient != null && RAClient.IsOnline;
+            }
+        }
+
         public TCManager()
         {
 

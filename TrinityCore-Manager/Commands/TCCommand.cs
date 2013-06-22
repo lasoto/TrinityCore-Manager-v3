@@ -2,7 +2,15 @@
 {
     public enum TCCommand
     {
-        [TCCommand("account create", 3)]
-        CreateAccount
+
+        [TCCommand("account create", 2)]
+        CreateAccount,
+    
+        [TCCommand("ban account", 3)]
+        BanAccount,
+
+        [TCCommand("account set gmlevel", 3)]
+        SetGMLevel
+    
     }
 }

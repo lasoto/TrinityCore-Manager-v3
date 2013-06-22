@@ -15,7 +15,7 @@ namespace TrinityCore_Manager.TCM
 
         public abstract void Stop();
 
-        public abstract void SendMessage(string message);
+        public abstract Task SendMessage(string message);
 
     }
 }
