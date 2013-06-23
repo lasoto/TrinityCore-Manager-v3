@@ -48,6 +48,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.passTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.editAccountSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // accountPermissionLabel
@@ -104,13 +105,15 @@
             // 
             this.accLevelComboBox.DisplayMember = "Text";
             this.accLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accLevelComboBox.ForeColor = System.Drawing.Color.White;
             this.accLevelComboBox.FormattingEnabled = true;
             this.accLevelComboBox.ItemHeight = 14;
             this.accLevelComboBox.Items.AddRange(new object[] {
             this.accLvl1ComboItem,
             this.accLvl2ComboItem,
-            this.accLvl3ComboItem});
+            this.accLvl3ComboItem,
+            this.accLvl4ComboItem});
             this.accLevelComboBox.Location = new System.Drawing.Point(208, 86);
             this.accLevelComboBox.Name = "accLevelComboBox";
             this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
@@ -119,20 +122,21 @@
             // 
             // accLvl1ComboItem
             // 
-            this.accLvl1ComboItem.Text = "Level 1";
+            this.accLvl1ComboItem.Text = "Player";
             // 
             // accLvl2ComboItem
             // 
-            this.accLvl2ComboItem.Text = "Level 2";
+            this.accLvl2ComboItem.Text = "Moderator";
             // 
             // accLvl3ComboItem
             // 
-            this.accLvl3ComboItem.Text = "Level 3";
+            this.accLvl3ComboItem.Text = "Game Master";
             // 
             // usernameComboBox
             // 
             this.usernameComboBox.DisplayMember = "Text";
             this.usernameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.usernameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.usernameComboBox.ForeColor = System.Drawing.Color.White;
             this.usernameComboBox.FormattingEnabled = true;
             this.usernameComboBox.ItemHeight = 14;
@@ -141,6 +145,7 @@
             this.usernameComboBox.Size = new System.Drawing.Size(216, 20);
             this.usernameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.usernameComboBox.TabIndex = 19;
+            this.usernameComboBox.SelectedIndexChanged += new System.EventHandler(this.usernameComboBox_SelectedIndexChanged);
             // 
             // labelX1
             // 
@@ -189,6 +194,7 @@
             // 
             this.accAddonComboBox.DisplayMember = "Text";
             this.accAddonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accAddonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accAddonComboBox.ForeColor = System.Drawing.Color.White;
             this.accAddonComboBox.FormattingEnabled = true;
             this.accAddonComboBox.ItemHeight = 14;
@@ -245,6 +251,10 @@
             // 
             this.editAccountSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
+            // accLvl4ComboItem
+            // 
+            this.accLvl4ComboItem.Text = "Administrator";
+            // 
             // EditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +281,7 @@
             this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "EditAccount";
             this.Text = "Edit Account";
+            this.Load += new System.EventHandler(this.EditAccount_Load);
             this.ResumeLayout(false);
 
         }
@@ -296,5 +307,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX passTextBox;
         private DevComponents.DotNetBar.SuperTooltip editAccountSuperTooltip;
+        private DevComponents.Editors.ComboItem accLvl4ComboItem;
     }
 }

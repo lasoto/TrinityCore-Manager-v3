@@ -62,6 +62,7 @@
             // 
             this.accountListComboBox.DisplayMember = "Text";
             this.accountListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accountListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accountListComboBox.ForeColor = System.Drawing.Color.White;
             this.accountListComboBox.FormattingEnabled = true;
             this.accountListComboBox.ItemHeight = 14;
@@ -102,6 +103,7 @@
             this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "RemoveAccountBan";
             this.Text = "Remove Account Ban";
+            this.Load += new System.EventHandler(this.RemoveAccountBan_Load);
             this.ResumeLayout(false);
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrinityCore_Manager.Database.Enums;
 
 namespace TrinityCore_Manager.Database.Classes
 {
@@ -19,6 +20,6 @@ namespace TrinityCore_Manager.Database.Classes
         public string LockCountry { get; set; }
         public DateTime LastLogin { get; set; }
         public bool Online { get; set; }
-        public int Exp { get; set; }
+        public Expansion Exp { get; set; }
     }
 }

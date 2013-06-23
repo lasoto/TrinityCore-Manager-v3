@@ -181,13 +181,13 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
@@ -684,6 +684,7 @@
             // 
             this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel7.TabIndex = 8;
+            this.ribbonPanel7.Visible = false;
             // 
             // backupRestoreRibbonBar
             // 
@@ -1136,7 +1137,6 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
             // 
             // accountCleanupRibbonBar
             // 
@@ -1743,6 +1743,7 @@
             // 
             // accountManagementTab
             // 
+            this.accountManagementTab.Checked = true;
             this.accountManagementTab.Name = "accountManagementTab";
             this.accountManagementTab.Panel = this.ribbonPanel3;
             this.accountManagementTab.Text = "Account Management";
@@ -1755,7 +1756,6 @@
             // 
             // databaseManagementRibbonTab
             // 
-            this.databaseManagementRibbonTab.Checked = true;
             this.databaseManagementRibbonTab.Name = "databaseManagementRibbonTab";
             this.databaseManagementRibbonTab.Panel = this.ribbonPanel7;
             this.databaseManagementRibbonTab.Text = "Database Management";

@@ -32,7 +32,7 @@ namespace TrinityCore_Manager.CustomForms
             }
 
             _loading = new CircularProgress();
-            _loading.Size = new Size(128, 128);
+            _loading.Size = new Size(64, 64);
             _loading.Location = new Point((this.Width / 2) - (_loading.Width / 2), (this.Height / 2) - (_loading.Height / 2));
             _loading.Visible = true;
             _loading.ProgressColor = Color.White;

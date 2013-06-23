@@ -46,21 +46,21 @@
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.createButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
-            this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
-            this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
-            this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
-            this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.level1ComboItem = new DevComponents.Editors.ComboItem();
-            this.level2ComboItem = new DevComponents.Editors.ComboItem();
-            this.level3ComboItem = new DevComponents.Editors.ComboItem();
-            this.level4ComboItem = new DevComponents.Editors.ComboItem();
             this.accAddonComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.vanillaComboItem = new DevComponents.Editors.ComboItem();
             this.tbcComboItem = new DevComponents.Editors.ComboItem();
             this.wotlkComboItem = new DevComponents.Editors.ComboItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.level1ComboItem = new DevComponents.Editors.ComboItem();
+            this.level2ComboItem = new DevComponents.Editors.ComboItem();
+            this.level3ComboItem = new DevComponents.Editors.ComboItem();
+            this.level4ComboItem = new DevComponents.Editors.ComboItem();
+            this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
+            this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
+            this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -243,108 +243,6 @@
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             // 
-            // accountUsernameLabel
-            // 
-            // 
-            // 
-            // 
-            this.accountUsernameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountUsernameLabel.Location = new System.Drawing.Point(62, 35);
-            this.accountUsernameLabel.Name = "accountUsernameLabel";
-            this.accountUsernameLabel.Size = new System.Drawing.Size(139, 26);
-            this.accountUsernameLabel.TabIndex = 4;
-            this.accountUsernameLabel.Text = "Account Username:";
-            // 
-            // accountPasswordLabel
-            // 
-            // 
-            // 
-            // 
-            this.accountPasswordLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPasswordLabel.Location = new System.Drawing.Point(62, 71);
-            this.accountPasswordLabel.Name = "accountPasswordLabel";
-            this.accountPasswordLabel.Size = new System.Drawing.Size(139, 26);
-            this.accountPasswordLabel.TabIndex = 5;
-            this.accountPasswordLabel.Text = "Account  Password:";
-            // 
-            // accountPermissionLabel
-            // 
-            // 
-            // 
-            // 
-            this.accountPermissionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountPermissionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountPermissionLabel.Location = new System.Drawing.Point(20, 105);
-            this.accountPermissionLabel.Name = "accountPermissionLabel";
-            this.accountPermissionLabel.Size = new System.Drawing.Size(181, 26);
-            this.accountPermissionLabel.TabIndex = 6;
-            this.accountPermissionLabel.Text = "Account Permission Level:";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.usernameTextBox.Border.Class = "TextBoxBorder";
-            this.usernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.usernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.usernameTextBox.Location = new System.Drawing.Point(207, 40);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(216, 20);
-            this.usernameTextBox.TabIndex = 7;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.passwordTextBox.Border.Class = "TextBoxBorder";
-            this.passwordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
-            this.passwordTextBox.Location = new System.Drawing.Point(207, 76);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(216, 20);
-            this.passwordTextBox.TabIndex = 8;
-            // 
-            // accLevelComboBox
-            // 
-            this.accLevelComboBox.DisplayMember = "Text";
-            this.accLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.accLevelComboBox.ForeColor = System.Drawing.Color.White;
-            this.accLevelComboBox.FormattingEnabled = true;
-            this.accLevelComboBox.ItemHeight = 14;
-            this.accLevelComboBox.Items.AddRange(new object[] {
-            this.level1ComboItem,
-            this.level2ComboItem,
-            this.level3ComboItem,
-            this.level4ComboItem});
-            this.accLevelComboBox.Location = new System.Drawing.Point(207, 111);
-            this.accLevelComboBox.Name = "accLevelComboBox";
-            this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
-            this.accLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accLevelComboBox.TabIndex = 9;
-            // 
-            // level1ComboItem
-            // 
-            this.level1ComboItem.Text = "Player";
-            // 
-            // level2ComboItem
-            // 
-            this.level2ComboItem.Text = "Moderator";
-            // 
-            // level3ComboItem
-            // 
-            this.level3ComboItem.Text = "Game Master";
-            // 
-            // level4ComboItem
-            // 
-            this.level4ComboItem.Text = "Administrator";
-            // 
             // accAddonComboBox
             // 
             this.accAddonComboBox.DisplayMember = "Text";
@@ -388,13 +286,115 @@
             this.labelX2.TabIndex = 26;
             this.labelX2.Text = "Account Addon:";
             // 
+            // accLevelComboBox
+            // 
+            this.accLevelComboBox.DisplayMember = "Text";
+            this.accLevelComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.accLevelComboBox.ForeColor = System.Drawing.Color.White;
+            this.accLevelComboBox.FormattingEnabled = true;
+            this.accLevelComboBox.ItemHeight = 14;
+            this.accLevelComboBox.Items.AddRange(new object[] {
+            this.level1ComboItem,
+            this.level2ComboItem,
+            this.level3ComboItem,
+            this.level4ComboItem});
+            this.accLevelComboBox.Location = new System.Drawing.Point(207, 111);
+            this.accLevelComboBox.Name = "accLevelComboBox";
+            this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
+            this.accLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.accLevelComboBox.TabIndex = 9;
+            // 
+            // level1ComboItem
+            // 
+            this.level1ComboItem.Text = "Player";
+            // 
+            // level2ComboItem
+            // 
+            this.level2ComboItem.Text = "Moderator";
+            // 
+            // level3ComboItem
+            // 
+            this.level3ComboItem.Text = "Game Master";
+            // 
+            // level4ComboItem
+            // 
+            this.level4ComboItem.Text = "Administrator";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.passwordTextBox.Border.Class = "TextBoxBorder";
+            this.passwordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
+            this.passwordTextBox.Location = new System.Drawing.Point(207, 76);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(216, 20);
+            this.passwordTextBox.TabIndex = 8;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.usernameTextBox.Border.Class = "TextBoxBorder";
+            this.usernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.usernameTextBox.ForeColor = System.Drawing.Color.White;
+            this.usernameTextBox.Location = new System.Drawing.Point(207, 40);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(216, 20);
+            this.usernameTextBox.TabIndex = 7;
+            // 
+            // accountPermissionLabel
+            // 
+            // 
+            // 
+            // 
+            this.accountPermissionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountPermissionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountPermissionLabel.Location = new System.Drawing.Point(20, 105);
+            this.accountPermissionLabel.Name = "accountPermissionLabel";
+            this.accountPermissionLabel.Size = new System.Drawing.Size(181, 26);
+            this.accountPermissionLabel.TabIndex = 6;
+            this.accountPermissionLabel.Text = "Account Permission Level:";
+            // 
+            // accountPasswordLabel
+            // 
+            // 
+            // 
+            // 
+            this.accountPasswordLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountPasswordLabel.Location = new System.Drawing.Point(62, 71);
+            this.accountPasswordLabel.Name = "accountPasswordLabel";
+            this.accountPasswordLabel.Size = new System.Drawing.Size(139, 26);
+            this.accountPasswordLabel.TabIndex = 5;
+            this.accountPasswordLabel.Text = "Account  Password:";
+            // 
+            // accountUsernameLabel
+            // 
+            // 
+            // 
+            // 
+            this.accountUsernameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountUsernameLabel.Location = new System.Drawing.Point(62, 35);
+            this.accountUsernameLabel.Name = "accountUsernameLabel";
+            this.accountUsernameLabel.Size = new System.Drawing.Size(139, 26);
+            this.accountUsernameLabel.TabIndex = 4;
+            this.accountUsernameLabel.Text = "Account Username:";
+            // 
             // AddAccount
             // 
             this.AcceptButton = this.createButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(502, 262);
+            this.ClientSize = new System.Drawing.Size(498, 259);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
@@ -407,6 +407,7 @@
             this.Controls.Add(this.createButton);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
