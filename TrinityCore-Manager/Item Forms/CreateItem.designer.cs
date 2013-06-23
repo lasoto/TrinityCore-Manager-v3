@@ -276,6 +276,7 @@
             this.itemDamageMinLabel = new DevComponents.DotNetBar.LabelX();
             this.itemStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemStatsGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
             this.addStatsButton = new DevComponents.DotNetBar.ButtonX();
             this.scalingStatValueIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemScalingStatsValueLabel = new DevComponents.DotNetBar.LabelX();
@@ -334,6 +335,7 @@
             this.itemSpellWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.findSpellForItemButton = new DevComponents.DotNetBar.ButtonX();
             this.itemSpellGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.itemSpellControl1 = new TrinityCore_Manager.ItemSpellControl();
             this.addSpellButton = new DevComponents.DotNetBar.ButtonX();
             this.wizardPage1 = new DevComponents.DotNetBar.WizardPage();
             this.flagsCustomButton = new DevComponents.DotNetBar.ButtonX();
@@ -502,8 +504,6 @@
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.itemCreatorSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.saveFileAsSQLDialog = new System.Windows.Forms.SaveFileDialog();
-            this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
-            this.itemSpellControl1 = new TrinityCore_Manager.ItemSpellControl();
             this.itemDetailsWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemSubClassIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).BeginInit();
@@ -3404,6 +3404,14 @@
             this.itemStatsGroupPanel.TabIndex = 25;
             this.itemStatsGroupPanel.Text = "Item Stats";
             // 
+            // itemStatsControl1
+            // 
+            this.itemStatsControl1.BackColor = System.Drawing.Color.Transparent;
+            this.itemStatsControl1.Location = new System.Drawing.Point(30, 3);
+            this.itemStatsControl1.Name = "itemStatsControl1";
+            this.itemStatsControl1.Size = new System.Drawing.Size(585, 30);
+            this.itemStatsControl1.TabIndex = 4;
+            // 
             // addStatsButton
             // 
             this.addStatsButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -4202,6 +4210,14 @@
             this.itemSpellGroupPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemSpellGroupPanel.TabIndex = 0;
             this.itemSpellGroupPanel.Text = "Add Spell";
+            // 
+            // itemSpellControl1
+            // 
+            this.itemSpellControl1.BackColor = System.Drawing.Color.Transparent;
+            this.itemSpellControl1.Location = new System.Drawing.Point(3, 3);
+            this.itemSpellControl1.Name = "itemSpellControl1";
+            this.itemSpellControl1.Size = new System.Drawing.Size(995, 30);
+            this.itemSpellControl1.TabIndex = 9;
             // 
             // addSpellButton
             // 
@@ -5629,22 +5645,6 @@
             // saveFileAsSQLDialog
             // 
             this.saveFileAsSQLDialog.Filter = "SQL File | *.sql";
-            // 
-            // itemStatsControl1
-            // 
-            this.itemStatsControl1.BackColor = System.Drawing.Color.Transparent;
-            this.itemStatsControl1.Location = new System.Drawing.Point(30, 3);
-            this.itemStatsControl1.Name = "itemStatsControl1";
-            this.itemStatsControl1.Size = new System.Drawing.Size(585, 30);
-            this.itemStatsControl1.TabIndex = 4;
-            // 
-            // itemSpellControl1
-            // 
-            this.itemSpellControl1.BackColor = System.Drawing.Color.Transparent;
-            this.itemSpellControl1.Location = new System.Drawing.Point(3, 3);
-            this.itemSpellControl1.Name = "itemSpellControl1";
-            this.itemSpellControl1.Size = new System.Drawing.Size(995, 30);
-            this.itemSpellControl1.TabIndex = 9;
             // 
             // CreateItem
             // 

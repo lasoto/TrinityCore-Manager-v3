@@ -416,6 +416,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(323, 478);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(106, 35);
@@ -428,6 +429,7 @@
             // 
             this.convertButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.convertButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.convertButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.convertButton.Location = new System.Drawing.Point(354, 201);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(75, 70);
@@ -438,9 +440,11 @@
             // 
             // EventStart
             // 
+            this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 525);
+            this.CancelButton = this.cancelButton;
+            this.ClientSize = new System.Drawing.Size(437, 521);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
@@ -464,6 +468,7 @@
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(457, 563);

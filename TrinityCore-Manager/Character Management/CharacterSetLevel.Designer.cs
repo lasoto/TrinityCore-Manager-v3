@@ -35,8 +35,8 @@
             this.levelLabel = new DevComponents.DotNetBar.LabelX();
             this.levelIntegerInput = new DevComponents.Editors.IntegerInput();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.charLabel = new DevComponents.DotNetBar.LabelX();
-            this.currLevelLabel = new DevComponents.DotNetBar.LabelX();
+            this.charNameLabel = new DevComponents.DotNetBar.LabelX();
+            this.currentLevelLabel = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.levelIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,31 +120,31 @@
             this.labelX1.TabIndex = 8;
             this.labelX1.Text = "Current Level:";
             // 
-            // charLabel
+            // charNameLabel
             // 
             // 
             // 
             // 
-            this.charLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.charLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.charLabel.Location = new System.Drawing.Point(209, 46);
-            this.charLabel.Name = "charLabel";
-            this.charLabel.Size = new System.Drawing.Size(230, 23);
-            this.charLabel.TabIndex = 9;
+            this.charNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.charNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.charNameLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.charNameLabel.Location = new System.Drawing.Point(209, 46);
+            this.charNameLabel.Name = "charNameLabel";
+            this.charNameLabel.Size = new System.Drawing.Size(230, 23);
+            this.charNameLabel.TabIndex = 9;
             // 
-            // currLevelLabel
-            // 
-            // 
+            // currentLevelLabel
             // 
             // 
-            this.currLevelLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.currLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.currLevelLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.currLevelLabel.Location = new System.Drawing.Point(209, 91);
-            this.currLevelLabel.Name = "currLevelLabel";
-            this.currLevelLabel.Size = new System.Drawing.Size(89, 23);
-            this.currLevelLabel.TabIndex = 10;
+            // 
+            // 
+            this.currentLevelLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.currentLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.currentLevelLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.currentLevelLabel.Location = new System.Drawing.Point(209, 91);
+            this.currentLevelLabel.Name = "currentLevelLabel";
+            this.currentLevelLabel.Size = new System.Drawing.Size(89, 23);
+            this.currentLevelLabel.TabIndex = 10;
             // 
             // CharacterSetLevel
             // 
@@ -153,8 +153,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(502, 263);
-            this.Controls.Add(this.currLevelLabel);
-            this.Controls.Add(this.charLabel);
+            this.Controls.Add(this.currentLevelLabel);
+            this.Controls.Add(this.charNameLabel);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.levelIntegerInput);
             this.Controls.Add(this.levelLabel);
@@ -163,6 +163,7 @@
             this.Controls.Add(this.characterLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
@@ -183,8 +184,8 @@
         private DevComponents.DotNetBar.LabelX levelLabel;
         private DevComponents.Editors.IntegerInput levelIntegerInput;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.LabelX charLabel;
-        private DevComponents.DotNetBar.LabelX currLevelLabel;
+        private DevComponents.DotNetBar.LabelX charNameLabel;
+        private DevComponents.DotNetBar.LabelX currentLevelLabel;
 
     }
 }

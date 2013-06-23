@@ -18,10 +18,14 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        // NOT FINISHED; NEEDS WORK
+        private void leaderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // This ComboBox should list only characters that are not in any guild
+        }
+
         private void createButton_Click(object sender, EventArgs e)
         {
-            //TCManager.Instance.CharDatabase.CreateGuild(nameTextBox.Text, leaderComboBox.SelectedIndex);
+            
         }
     }
 }

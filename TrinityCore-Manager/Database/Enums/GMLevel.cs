@@ -8,10 +8,9 @@ namespace TrinityCore_Manager.Database.Enums
 {
     public enum GMLevel
     {
-        NA = 0,
-        Player = 1,
-        Moderator = 2,
-        GM = 3,
-        Admin = 4
+        Player = 0,
+        Moderator = 1,
+        GM = 2,
+        Admin = 3
     }
 }

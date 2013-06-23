@@ -110,6 +110,7 @@
             // 
             this.inMinutesLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.inMinutesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.inMinutesLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.inMinutesLabel.Location = new System.Drawing.Point(149, 116);
             this.inMinutesLabel.Name = "inMinutesLabel";
             this.inMinutesLabel.Size = new System.Drawing.Size(225, 23);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(402, 300);

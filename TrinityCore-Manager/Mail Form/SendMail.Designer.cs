@@ -137,6 +137,7 @@
             // 
             this.findItemButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findItemButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.findItemButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.findItemButton.Location = new System.Drawing.Point(346, 125);
             this.findItemButton.Name = "findItemButton";
             this.findItemButton.Size = new System.Drawing.Size(75, 23);
@@ -297,6 +298,7 @@
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(12, 541);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(110, 42);
@@ -306,8 +308,10 @@
             // 
             // SendMail
             // 
+            this.AcceptButton = this.sendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(781, 595);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.sendButton);
@@ -330,6 +334,7 @@
             this.Controls.Add(this.onlinePlayersLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(797, 633);

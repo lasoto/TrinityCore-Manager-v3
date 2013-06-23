@@ -274,6 +274,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(437, 506);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(106, 35);
@@ -282,7 +283,7 @@
             this.okButton.Text = "Ok";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // FindFlagsExtra
+            // FindNPCFlagsExtra
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,12 +309,13 @@
             this.Controls.Add(this.instanceBindCheckBox);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(571, 591);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(571, 591);
-            this.Name = "FindFlagsExtra";
+            this.Name = "FindNPCFlagsExtra";
             this.Text = "Find Flags_Extra";
             this.ResumeLayout(false);
 

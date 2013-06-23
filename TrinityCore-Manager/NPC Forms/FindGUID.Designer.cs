@@ -89,6 +89,7 @@
             // 
             this.findButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.findButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.findButton.Location = new System.Drawing.Point(300, 382);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(85, 33);
@@ -150,8 +151,10 @@
             // 
             // FindGUID
             // 
+            this.AcceptButton = this.findButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(397, 427);
             this.Controls.Add(this.guidListView);
             this.Controls.Add(this.guidIntegerInput);
@@ -162,6 +165,7 @@
             this.Controls.Add(this.tableLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(413, 465);

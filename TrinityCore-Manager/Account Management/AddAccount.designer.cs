@@ -52,10 +52,10 @@
             this.wotlkComboItem = new DevComponents.Editors.ComboItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.level1ComboItem = new DevComponents.Editors.ComboItem();
-            this.level2ComboItem = new DevComponents.Editors.ComboItem();
-            this.level3ComboItem = new DevComponents.Editors.ComboItem();
-            this.level4ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl0ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
@@ -295,31 +295,31 @@
             this.accLevelComboBox.FormattingEnabled = true;
             this.accLevelComboBox.ItemHeight = 14;
             this.accLevelComboBox.Items.AddRange(new object[] {
-            this.level1ComboItem,
-            this.level2ComboItem,
-            this.level3ComboItem,
-            this.level4ComboItem});
+            this.accLvl0ComboItem,
+            this.accLvl1ComboItem,
+            this.accLvl2ComboItem,
+            this.accLvl3ComboItem});
             this.accLevelComboBox.Location = new System.Drawing.Point(207, 111);
             this.accLevelComboBox.Name = "accLevelComboBox";
             this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
             this.accLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.accLevelComboBox.TabIndex = 9;
             // 
-            // level1ComboItem
+            // accLvl0ComboItem
             // 
-            this.level1ComboItem.Text = "Player";
+            this.accLvl0ComboItem.Text = "Player";
             // 
-            // level2ComboItem
+            // accLvl1ComboItem
             // 
-            this.level2ComboItem.Text = "Moderator";
+            this.accLvl1ComboItem.Text = "Moderator";
             // 
-            // level3ComboItem
+            // accLvl2ComboItem
             // 
-            this.level3ComboItem.Text = "Game Master";
+            this.accLvl2ComboItem.Text = "Game Master";
             // 
-            // level4ComboItem
+            // accLvl3ComboItem
             // 
-            this.level4ComboItem.Text = "Administrator";
+            this.accLvl3ComboItem.Text = "Administrator";
             // 
             // passwordTextBox
             // 
@@ -449,9 +449,9 @@
         private DevComponents.Editors.ComboItem tbcComboItem;
         private DevComponents.Editors.ComboItem wotlkComboItem;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.Editors.ComboItem level1ComboItem;
-        private DevComponents.Editors.ComboItem level2ComboItem;
-        private DevComponents.Editors.ComboItem level3ComboItem;
-        private DevComponents.Editors.ComboItem level4ComboItem;
+        private DevComponents.Editors.ComboItem accLvl0ComboItem;
+        private DevComponents.Editors.ComboItem accLvl1ComboItem;
+        private DevComponents.Editors.ComboItem accLvl2ComboItem;
+        private DevComponents.Editors.ComboItem accLvl3ComboItem;
     }
 }

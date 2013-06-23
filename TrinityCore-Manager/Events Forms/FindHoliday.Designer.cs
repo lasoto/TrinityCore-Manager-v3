@@ -43,7 +43,7 @@
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(215, 495);
+            this.cancelButton.Location = new System.Drawing.Point(213, 494);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -54,8 +54,8 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(296, 495);
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.Location = new System.Drawing.Point(294, 494);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(68, 23);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -74,7 +74,7 @@
             this.holidayIdColumnHeader,
             this.holidayNameColumnHeader});
             this.findEventListView.ForeColor = System.Drawing.Color.White;
-            this.findEventListView.Location = new System.Drawing.Point(3, 52);
+            this.findEventListView.Location = new System.Drawing.Point(1, 51);
             this.findEventListView.Name = "findEventListView";
             this.findEventListView.Size = new System.Drawing.Size(361, 437);
             this.findEventListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
@@ -101,7 +101,7 @@
             this.searchTextBox.Border.Class = "TextBoxBorder";
             this.searchTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.searchTextBox.ForeColor = System.Drawing.Color.White;
-            this.searchTextBox.Location = new System.Drawing.Point(3, 26);
+            this.searchTextBox.Location = new System.Drawing.Point(1, 25);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(361, 20);
             this.searchTextBox.TabIndex = 17;
@@ -113,7 +113,7 @@
             // 
             this.searchLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.searchLabel.Location = new System.Drawing.Point(3, 5);
+            this.searchLabel.Location = new System.Drawing.Point(1, 4);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(43, 23);
             this.searchLabel.TabIndex = 16;
@@ -131,6 +131,7 @@
             this.Controls.Add(this.searchLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);

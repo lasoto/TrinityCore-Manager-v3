@@ -825,5 +825,10 @@ namespace TrinityCore_Manager
                 }
             }
         }
+
+        private void platformComboBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

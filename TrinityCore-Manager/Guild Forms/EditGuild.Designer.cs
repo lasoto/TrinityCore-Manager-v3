@@ -48,6 +48,7 @@
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(12, 548);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(85, 33);
@@ -59,6 +60,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(461, 548);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(85, 33);
@@ -71,6 +73,7 @@
             // 
             this.guildLeaderComboBox.DisplayMember = "Text";
             this.guildLeaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildLeaderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guildLeaderComboBox.ForeColor = System.Drawing.Color.White;
             this.guildLeaderComboBox.FormattingEnabled = true;
             this.guildLeaderComboBox.ItemHeight = 14;
@@ -110,6 +113,7 @@
             // 
             this.guildNameComboBox.DisplayMember = "Text";
             this.guildNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guildNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guildNameComboBox.ForeColor = System.Drawing.Color.White;
             this.guildNameComboBox.FormattingEnabled = true;
             this.guildNameComboBox.ItemHeight = 14;
@@ -152,6 +156,7 @@
             // 
             this.inviteButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.inviteButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.inviteButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.inviteButton.Location = new System.Drawing.Point(388, 80);
             this.inviteButton.Name = "inviteButton";
             this.inviteButton.Size = new System.Drawing.Size(78, 33);
@@ -187,6 +192,7 @@
             // 
             this.playerListComboBox.DisplayMember = "Text";
             this.playerListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.playerListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.playerListComboBox.ForeColor = System.Drawing.Color.White;
             this.playerListComboBox.FormattingEnabled = true;
             this.playerListComboBox.ItemHeight = 14;
@@ -198,9 +204,11 @@
             // 
             // EditGuild
             // 
+            this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 593);
+            this.CancelButton = this.cancelButton;
+            this.ClientSize = new System.Drawing.Size(554, 589);
             this.Controls.Add(this.playerListComboBox);
             this.Controls.Add(this.playerListLabel);
             this.Controls.Add(this.uninviteButton);
@@ -214,6 +222,7 @@
             this.Controls.Add(this.leaderNameLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(574, 631);

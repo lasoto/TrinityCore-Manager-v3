@@ -43,7 +43,7 @@
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(208, 496);
+            this.cancelButton.Location = new System.Drawing.Point(205, 493);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -54,8 +54,8 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(289, 496);
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.Location = new System.Drawing.Point(286, 493);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -74,7 +74,7 @@
             this.itemMapIdColumnHeader,
             this.itemAreaNameColumnHeader});
             this.itemFindMapListView.ForeColor = System.Drawing.Color.White;
-            this.itemFindMapListView.Location = new System.Drawing.Point(3, 44);
+            this.itemFindMapListView.Location = new System.Drawing.Point(0, 41);
             this.itemFindMapListView.Name = "itemFindMapListView";
             this.itemFindMapListView.Size = new System.Drawing.Size(361, 446);
             this.itemFindMapListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
@@ -99,7 +99,7 @@
             // 
             this.searchLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.searchLabel.Location = new System.Drawing.Point(3, -3);
+            this.searchLabel.Location = new System.Drawing.Point(0, -6);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(53, 20);
             this.searchLabel.TabIndex = 12;
@@ -114,15 +114,17 @@
             this.itemFindDisplayIdTextBox.Border.Class = "TextBoxBorder";
             this.itemFindDisplayIdTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemFindDisplayIdTextBox.ForeColor = System.Drawing.Color.White;
-            this.itemFindDisplayIdTextBox.Location = new System.Drawing.Point(3, 18);
+            this.itemFindDisplayIdTextBox.Location = new System.Drawing.Point(0, 15);
             this.itemFindDisplayIdTextBox.Name = "itemFindDisplayIdTextBox";
             this.itemFindDisplayIdTextBox.Size = new System.Drawing.Size(361, 20);
             this.itemFindDisplayIdTextBox.TabIndex = 11;
             // 
             // FindItemMap
             // 
+            this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(366, 522);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
@@ -131,6 +133,7 @@
             this.Controls.Add(this.itemFindDisplayIdTextBox);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);

@@ -49,7 +49,7 @@ namespace TrinityCore_Manager.Database
             DataTable dt = await ExecuteQuery("SELECT `gmlevel` FROM `account_access` WHERE `id` = @id", new MySqlParameter("@id", accountId));
 
             if (dt.Rows.Count == 0)
-                return GMLevel.NA;
+                return GMLevel.NA; // You were right, gmlevel does start from 0 - player, 1 - mod , 2 - gm, 3 - admin. My fault.
 
             DataRow row = dt.Rows[0];
 

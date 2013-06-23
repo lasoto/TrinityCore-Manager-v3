@@ -70,7 +70,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.labelX4.Font = new System.Drawing.Font("AR BLANCA", 13F);
             this.labelX4.Location = new System.Drawing.Point(47, 146);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
@@ -83,10 +83,10 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.labelX5.Location = new System.Drawing.Point(202, 146);
+            this.labelX5.Font = new System.Drawing.Font("Viner Hand ITC", 13F);
+            this.labelX5.Location = new System.Drawing.Point(200, 146);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(66, 23);
+            this.labelX5.Size = new System.Drawing.Size(67, 23);
             this.labelX5.TabIndex = 4;
             this.labelX5.Text = "Hobbilis";
             // 
@@ -128,6 +128,7 @@
             this.Controls.Add(this.labelX2);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(331, 356);

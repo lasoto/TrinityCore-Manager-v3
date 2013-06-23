@@ -143,6 +143,8 @@
     </Compile>
     <Compile Include="Database\Classes\Account.cs" />
     <Compile Include="Database\Classes\BannedAccount.cs" />
+    <Compile Include="Database\Classes\Character.cs" />
+    <Compile Include="Database\Classes\Guild.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
     <Compile Include="Database\Enums\GMLevel.cs" />

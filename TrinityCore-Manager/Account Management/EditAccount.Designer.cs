@@ -34,9 +34,9 @@
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.accLevelComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accLvl0ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
-            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.usernameComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
@@ -48,7 +48,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.passTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.editAccountSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // accountPermissionLabel
@@ -112,27 +112,27 @@
             this.accLevelComboBox.FormattingEnabled = true;
             this.accLevelComboBox.ItemHeight = 14;
             this.accLevelComboBox.Items.AddRange(new object[] {
+            this.accLvl0ComboItem,
             this.accLvl1ComboItem,
             this.accLvl2ComboItem,
-            this.accLvl3ComboItem,
-            this.accLvl4ComboItem});
+            this.accLvl3ComboItem});
             this.accLevelComboBox.Location = new System.Drawing.Point(208, 86);
             this.accLevelComboBox.Name = "accLevelComboBox";
             this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
             this.accLevelComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.accLevelComboBox.TabIndex = 17;
             // 
+            // accLvl0ComboItem
+            // 
+            this.accLvl0ComboItem.Text = "Player";
+            // 
             // accLvl1ComboItem
             // 
-            this.accLvl1ComboItem.Text = "Player";
+            this.accLvl1ComboItem.Text = "Moderator";
             // 
             // accLvl2ComboItem
             // 
-            this.accLvl2ComboItem.Text = "Moderator";
-            // 
-            // accLvl3ComboItem
-            // 
-            this.accLvl3ComboItem.Text = "Game Master";
+            this.accLvl2ComboItem.Text = "Game Master";
             // 
             // usernameComboBox
             // 
@@ -253,15 +253,15 @@
             // 
             this.editAccountSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
-            // accLvl4ComboItem
+            // accLvl3ComboItem
             // 
-            this.accLvl4ComboItem.Text = "Administrator";
+            this.accLvl3ComboItem.Text = "Administrator";
             // 
             // EditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 263);
+            this.ClientSize = new System.Drawing.Size(498, 259);
             this.Controls.Add(this.passTextBox);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.accAddonComboBox);
@@ -276,6 +276,7 @@
             this.Controls.Add(this.okButton);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
@@ -298,9 +299,9 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx usernameComboBox;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
+        private DevComponents.Editors.ComboItem accLvl0ComboItem;
         private DevComponents.Editors.ComboItem accLvl1ComboItem;
         private DevComponents.Editors.ComboItem accLvl2ComboItem;
-        private DevComponents.Editors.ComboItem accLvl3ComboItem;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accAddonComboBox;
         private DevComponents.Editors.ComboItem vanillaComboItem;
@@ -309,6 +310,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX passTextBox;
         private DevComponents.DotNetBar.SuperTooltip editAccountSuperTooltip;
-        private DevComponents.Editors.ComboItem accLvl4ComboItem;
+        private DevComponents.Editors.ComboItem accLvl3ComboItem;
     }
 }

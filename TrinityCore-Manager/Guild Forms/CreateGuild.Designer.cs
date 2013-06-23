@@ -89,11 +89,13 @@
             this.leaderComboBox.Size = new System.Drawing.Size(232, 20);
             this.leaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.leaderComboBox.TabIndex = 3;
+            this.leaderComboBox.SelectedIndexChanged += new System.EventHandler(this.leaderComboBox_SelectedIndexChanged);
             // 
             // cancelButton
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(12, 150);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(85, 33);
@@ -105,6 +107,7 @@
             // 
             this.createButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.createButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.createButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.createButton.Location = new System.Drawing.Point(300, 150);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(85, 33);
@@ -116,9 +119,11 @@
             // 
             // CreateGuild
             // 
+            this.AcceptButton = this.createButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 195);
+            this.CancelButton = this.cancelButton;
+            this.ClientSize = new System.Drawing.Size(393, 191);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.leaderComboBox);
@@ -127,6 +132,7 @@
             this.Controls.Add(this.guildNameLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(413, 233);
