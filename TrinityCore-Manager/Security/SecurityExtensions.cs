@@ -13,20 +13,13 @@ namespace TrinityCore_Manager.Security
         public static string ToSHA1(this string str)
         {
 
-            byte[] keyArray = Encoding.UTF8.GetBytes(str);
-            
-            var enc = new SHA1Managed();
-            
-            byte[] encodedKey = enc.ComputeHash(enc.ComputeHash(keyArray));
-            
-            var sb = new StringBuilder(encodedKey.Length);
+            SHA1 sha1 = SHA1.Create();
 
-            foreach (byte b in encodedKey)
-            {
-                sb.Append(b.ToString("X2"));
-            }
+            byte[] buffer = Encoding.ASCII.GetBytes(str);
 
-            return sb.ToString();
+            sha1.ComputeHash(buffer);
+
+            return BitConverter.ToString(sha1.Hash).Replace("-", "");
 
         }
 

@@ -11,10 +11,11 @@ using DevComponents.DotNetBar;
 using TrinityCore_Manager.Database.Classes;
 using TrinityCore_Manager.TCM;
 using TrinityCore_Manager.Database.Enums;
+using TrinityCore_Manager.CustomForms;
 
 namespace TrinityCore_Manager
 {
-    public partial class EditAccount : DevComponents.DotNetBar.Office2007Form
+    public partial class EditAccount : TCMForm
     {
         public EditAccount()
         {
@@ -57,6 +58,32 @@ namespace TrinityCore_Manager
 
             switchButton.Value = selectedAccount.Locked == 1;
 
+        }
+
+        private async void okButton_Click(object sender, EventArgs e)
+        {
+
+            if (usernameComboBox.SelectedIndex == -1 || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
+                return;
+
+            Account selectedAccount = accounts.SingleOrDefault(p => p.Username == usernameComboBox.Items[usernameComboBox.SelectedIndex].ToString());
+
+            if (selectedAccount == null)
+                return;
+
+            StartLoading();
+
+            await TCManager.Instance.AuthDatabase.ModifyAccount(selectedAccount.Id, passTextBox.Text, (GMLevel)accLevelComboBox.SelectedIndex + 1, (Expansion)accAddonComboBox.SelectedIndex);
+
+            StopLoading();
+
+            this.Close();
+
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

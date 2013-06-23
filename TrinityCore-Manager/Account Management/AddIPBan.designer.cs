@@ -39,11 +39,8 @@
             this.ipBanSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.permanentBanCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.banTimeDateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.unbanTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unbanTimeInput)).BeginInit();
             this.SuspendLayout();
             // 
             // ipAddressBanLabel
@@ -53,7 +50,7 @@
             // 
             this.ipAddressBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ipAddressBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ipAddressBanLabel.Location = new System.Drawing.Point(36, 25);
+            this.ipAddressBanLabel.Location = new System.Drawing.Point(27, 15);
             this.ipAddressBanLabel.Name = "ipAddressBanLabel";
             this.ipAddressBanLabel.Size = new System.Drawing.Size(84, 26);
             this.ipAddressBanLabel.TabIndex = 0;
@@ -69,7 +66,7 @@
             this.ipAddressBanInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ipAddressBanInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.ipAddressBanInput.ButtonFreeText.Visible = true;
-            this.ipAddressBanInput.Location = new System.Drawing.Point(126, 31);
+            this.ipAddressBanInput.Location = new System.Drawing.Point(117, 21);
             this.ipAddressBanInput.Name = "ipAddressBanInput";
             this.ipAddressBanInput.Size = new System.Drawing.Size(224, 20);
             this.ipAddressBanInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -79,26 +76,24 @@
             // 
             this.banButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.banButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.banButton.Location = new System.Drawing.Point(351, 177);
+            this.banButton.Location = new System.Drawing.Point(300, 150);
             this.banButton.Name = "banButton";
             this.banButton.Size = new System.Drawing.Size(85, 33);
             this.banButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.banButton.TabIndex = 2;
             this.banButton.Text = "Ban!";
             this.banButton.TextColor = System.Drawing.Color.Tomato;
-            this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cancelButton.Location = new System.Drawing.Point(12, 177);
+            this.cancelButton.Location = new System.Drawing.Point(12, 150);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(85, 33);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // labelX1
             // 
@@ -107,7 +102,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(25, 116);
+            this.labelX1.Location = new System.Drawing.Point(16, 79);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(95, 26);
             this.labelX1.TabIndex = 4;
@@ -122,7 +117,7 @@
             this.banReasonTextBox.Border.Class = "TextBoxBorder";
             this.banReasonTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.banReasonTextBox.ForeColor = System.Drawing.Color.White;
-            this.banReasonTextBox.Location = new System.Drawing.Point(126, 122);
+            this.banReasonTextBox.Location = new System.Drawing.Point(117, 85);
             this.banReasonTextBox.Name = "banReasonTextBox";
             this.banReasonTextBox.Size = new System.Drawing.Size(224, 20);
             this.ipBanSuperTooltip.SetSuperTooltip(this.banReasonTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Reason for banning this Ip. It will get stored in the \'banreason\' column, in the " +
@@ -136,7 +131,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(49, 57);
+            this.labelX2.Location = new System.Drawing.Point(40, 47);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(71, 26);
             this.labelX2.TabIndex = 11;
@@ -152,13 +147,12 @@
             // 
             // 
             this.permanentBanCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.permanentBanCheckBox.Location = new System.Drawing.Point(356, 92);
+            this.permanentBanCheckBox.Location = new System.Drawing.Point(161, 120);
             this.permanentBanCheckBox.Name = "permanentBanCheckBox";
-            this.permanentBanCheckBox.Size = new System.Drawing.Size(80, 23);
+            this.permanentBanCheckBox.Size = new System.Drawing.Size(100, 23);
             this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.permanentBanCheckBox.TabIndex = 13;
-            this.permanentBanCheckBox.Text = "Permanent";
-            this.permanentBanCheckBox.CheckedChanged += new System.EventHandler(this.permanentBanCheckBox_CheckedChanged);
+            this.permanentBanCheckBox.Text = "Permanent Ban";
             // 
             // banTimeDateTimeInput
             // 
@@ -172,7 +166,7 @@
             this.banTimeDateTimeInput.CustomFormat = "yyyy-MM-dd hh:MM:ss";
             this.banTimeDateTimeInput.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.banTimeDateTimeInput.IsPopupCalendarOpen = false;
-            this.banTimeDateTimeInput.Location = new System.Drawing.Point(126, 63);
+            this.banTimeDateTimeInput.Location = new System.Drawing.Point(117, 53);
             // 
             // 
             // 
@@ -211,77 +205,11 @@
             this.banTimeDateTimeInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.banTimeDateTimeInput.TabIndex = 12;
             // 
-            // unbanTimeInput
-            // 
-            // 
-            // 
-            // 
-            this.unbanTimeInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.unbanTimeInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unbanTimeInput.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.unbanTimeInput.ButtonDropDown.Visible = true;
-            this.unbanTimeInput.CustomFormat = "yyyy-MM-dd hh:MM:ss";
-            this.unbanTimeInput.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
-            this.unbanTimeInput.IsPopupCalendarOpen = false;
-            this.unbanTimeInput.Location = new System.Drawing.Point(126, 93);
-            // 
-            // 
-            // 
-            this.unbanTimeInput.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.unbanTimeInput.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unbanTimeInput.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.unbanTimeInput.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.unbanTimeInput.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unbanTimeInput.MonthCalendar.DisplayMonth = new System.DateTime(2013, 6, 1, 0, 0, 0, 0);
-            this.unbanTimeInput.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.unbanTimeInput.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.unbanTimeInput.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.unbanTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.unbanTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.unbanTimeInput.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.unbanTimeInput.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unbanTimeInput.MonthCalendar.TodayButtonVisible = true;
-            this.unbanTimeInput.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.unbanTimeInput.Name = "unbanTimeInput";
-            this.unbanTimeInput.Size = new System.Drawing.Size(224, 20);
-            this.unbanTimeInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.unbanTimeInput.TabIndex = 15;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX3.Location = new System.Drawing.Point(25, 87);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(95, 26);
-            this.labelX3.TabIndex = 14;
-            this.labelX3.Text = "Unban Time:";
-            // 
             // AddIPBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 222);
-            this.Controls.Add(this.unbanTimeInput);
-            this.Controls.Add(this.labelX3);
+            this.ClientSize = new System.Drawing.Size(397, 195);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);
@@ -295,14 +223,13 @@
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(455, 261);
+            this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(455, 261);
+            this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AddIPBan";
             this.Text = "Add IP Ban";
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unbanTimeInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,7 +246,5 @@
         private DevComponents.DotNetBar.SuperTooltip ipBanSuperTooltip;
         private DevComponents.DotNetBar.Controls.CheckBoxX permanentBanCheckBox;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput banTimeDateTimeInput;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput unbanTimeInput;
-        private DevComponents.DotNetBar.LabelX labelX3;
     }
 }

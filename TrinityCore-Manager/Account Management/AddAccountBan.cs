@@ -76,9 +76,5 @@ namespace TrinityCore_Manager
         {
             this.Close();
         }
-
-        private void permanentBanCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

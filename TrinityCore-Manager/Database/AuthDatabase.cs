@@ -179,15 +179,32 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task ModifyAccount(int accountId, string password, GMLevel acctLevel, Expansion exp)
+        {
+
+            Account acct = await GetAccount(accountId);
+
+            if (acct == null)
+                return;
+
+            if (!string.IsNullOrEmpty(password))
+                await ExecuteNonQuery("UPDATE `account` SET sha_pass_hash = @password, expansion = @expansion, sessionkey = '', v = '', s = '' WHERE `id` = @id;", new MySqlParameter("@password", (acct.Username.ToUpper() + ":" + password.ToUpper()).ToSHA1()), new MySqlParameter("@expansion", (int)exp), new MySqlParameter("@id", accountId));
+            else
+                await ExecuteNonQuery("UPDATE `account` SET expansion = @expansion WHERE `id` = @id;", new MySqlParameter("@expansion", (int)exp), new MySqlParameter("@id", accountId));
+
+            await ExecuteNonQuery("UPDATE `account_access` SET gmlevel = @gmlevel WHERE `id` = @id;", new MySqlParameter("@gmlevel", (int)acctLevel), new MySqlParameter("@id", accountId));
+
+        }
+
         public async Task CleanupAccounts(DateTime date)
         {
             await ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `joindate` < @date;", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
             await ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `last_login` <> '0000-00-00 00:00:00';", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
         }
 
-        public async Task BanIp(string ip, int bandate, int unbandate, string bannedby, string banreason)
+        public async Task BanIp(string ip, DateTime bandate, DateTime unbandate, string bannedby, string banreason)
         {
-            await ExecuteNonQuery("INSERT INTO `ip_banned` (`ip`, `bandate`, `unbandate`, `bannedby`, `banreason`) VALUES (@ip, @bandate, @unbandate, @bannedby, @banreason)", new MySqlParameter("@ip", ip), new MySqlParameter("@bandate", bandate), new MySqlParameter("@unbandate", unbandate), new MySqlParameter("@bannedby", bannedby), new MySqlParameter("@banreason", banreason));
+            await ExecuteNonQuery("INSERT INTO `ip_banned` (`ip`, `bandate`, `unbandate`, `bannedby`, `banreason`) VALUES (@ip, @bandate, @unbandate, @bannedy, @banreason)", new MySqlParameter("@ip", ip), new MySqlParameter("@bandate", new MySqlDateTime(bandate)), new MySqlParameter("@unbandate", new MySqlDateTime(unbandate)), new MySqlParameter("@bannedby", bannedby), new MySqlParameter("@banreason", banreason));
         }
 
         public async Task RemoveAccountBan(int id)

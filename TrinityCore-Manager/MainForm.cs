@@ -195,86 +195,86 @@ namespace TrinityCore_Manager
 
         private void otherCommandsButton_Click(object sender, EventArgs e)
         {
-            using (OtherCommands otherCommands = new OtherCommands())
-                otherCommands.ShowDialog();
+            OtherCommands otherCommands = new OtherCommands();
+            otherCommands.ShowDialog();
         }
 
         private void addAccountButton_Click(object sender, EventArgs e)
         {
-            using (AddAccount addAccount = new AddAccount())
-                addAccount.ShowDialog();
+            AddAccount addAccount = new AddAccount();
+            addAccount.ShowDialog();
         }
 
         private void editAccountButton_Click(object sender, EventArgs e)
         {
-            using (EditAccount editAccount = new EditAccount())
-                editAccount.ShowDialog();
+            EditAccount editAccount = new EditAccount();
+            editAccount.ShowDialog();
         }
 
         private void addAccountBanButton_Click(object sender, EventArgs e)
         {
-            using (AddAccountBan addAccBan = new AddAccountBan())
-                addAccBan.ShowDialog();
+            AddAccountBan addAccBan = new AddAccountBan();
+            addAccBan.ShowDialog();
         }
 
         private void removeAccountBanButton_Click(object sender, EventArgs e)
         {
-            using (RemoveAccountBan removeAccBan = new RemoveAccountBan())
-                removeAccBan.ShowDialog();
+            RemoveAccountBan removeAccBan = new RemoveAccountBan();
+            removeAccBan.ShowDialog();
         }
 
         private void addIpBanButton_Click(object sender, EventArgs e)
         {
-            using (AddIPBan addIpBan = new AddIPBan())
-                addIpBan.ShowDialog();
+            AddIPBan addIpBan = new AddIPBan();
+            addIpBan.ShowDialog();
         }
 
         private void removeIpBanButton_Click(object sender, EventArgs e)
         {
-            using (RemoveIPBan removeIpBan = new RemoveIPBan())
-                removeIpBan.ShowDialog();
+            RemoveIPBan removeIpBan = new RemoveIPBan();
+            removeIpBan.ShowDialog();
         }
 
         private void accountCleanupButton_Click(object sender, EventArgs e)
         {
-            using (AccountCleanup accCleanup = new AccountCleanup())
-                accCleanup.ShowDialog();
+            AccountCleanup accCleanup = new AccountCleanup();
+            accCleanup.ShowDialog();
         }
 
         private void showPlayerInfoButton_Click(object sender, EventArgs e)
         {
-            using (PlayerInformation playerInfo = new PlayerInformation())
-                playerInfo.ShowDialog();
+            PlayerInformation playerInfo = new PlayerInformation();
+            playerInfo.ShowDialog();
         }
 
         private void setLevelButton_Click(object sender, EventArgs e)
         {
-            using (CharacterSetLevel setLevel = new CharacterSetLevel())
-                setLevel.ShowDialog();
+            CharacterSetLevel setLevel = new CharacterSetLevel();
+            setLevel.ShowDialog();
         }
 
         private void setReputationButton_Click(object sender, EventArgs e)
         {
-            using (CharacterSetReputation setReputation = new CharacterSetReputation())
-                setReputation.ShowDialog();
+            CharacterSetReputation setReputation = new CharacterSetReputation();
+            setReputation.ShowDialog();
         }
 
         private void setSkillLevelButton_Click(object sender, EventArgs e)
         {
-            using (CharacterSetSkillLevel setSkill = new CharacterSetSkillLevel())
-                setSkill.ShowDialog();
+            CharacterSetSkillLevel setSkill = new CharacterSetSkillLevel();
+            setSkill.ShowDialog();
         }
 
         private void createItemButton_Click(object sender, EventArgs e)
         {
-            using (CreateItem createItem = new CreateItem())
-                createItem.ShowDialog();
+            CreateItem createItem = new CreateItem();
+            createItem.ShowDialog();
         }
 
         private void createNpcButton_Click(object sender, EventArgs e)
         {
-            using (CreateNPC createNPC = new CreateNPC())
-                createNPC.ShowDialog();
+            CreateNPC createNPC = new CreateNPC();
+            createNPC.ShowDialog();
         }
 
         private void createVendorButton_Click(object sender, EventArgs e)
@@ -285,44 +285,44 @@ namespace TrinityCore_Manager
 
         private void findFirstUnusedGuidForNpcButton_Click(object sender, EventArgs e)
         {
-            using (FindGUID findGUID = new FindGUID())
-                findGUID.ShowDialog();
+            FindGUID findGUID = new FindGUID();
+            findGUID.ShowDialog();
         }
 
         private void findNpcButton_Click(object sender, EventArgs e)
         {
-            using (FindNPC findNPC = new FindNPC())
-                findNPC.ShowDialog();
+            FindNPC findNPC = new FindNPC();
+            findNPC.ShowDialog();
         }
 
         private void findItemButton_Click(object sender, EventArgs e)
         {
-            using (FindItem findItem = new FindItem())
-                findItem.ShowDialog();
+            FindItem findItem = new FindItem();
+            findItem.ShowDialog();
         }
 
         private void createGuildButton_Click(object sender, EventArgs e)
         {
-            using (CreateGuild createGuild = new CreateGuild())
-                createGuild.ShowDialog();
+            CreateGuild createGuild = new CreateGuild();
+            createGuild.ShowDialog();
         }
 
         private void editGuildButton_Click(object sender, EventArgs e)
         {
-            using (EditGuild editGuild = new EditGuild())
-                editGuild.ShowDialog();
+            EditGuild editGuild = new EditGuild();
+            editGuild.ShowDialog();
         }
 
         private void deleteGuildButton_Click(object sender, EventArgs e)
         {
-            using (DeleteGuild deleteGuild = new DeleteGuild())
-                deleteGuild.ShowDialog();
+            DeleteGuild deleteGuild = new DeleteGuild();
+            deleteGuild.ShowDialog();
         }
 
         private void sendMailButton_Click(object sender, EventArgs e)
         {
-            using (SendMail sendMail = new SendMail())
-                sendMail.ShowDialog();
+            SendMail sendMail = new SendMail();
+            sendMail.ShowDialog();
         }
 
         private void startEventButton_Click(object sender, EventArgs e)
@@ -333,14 +333,14 @@ namespace TrinityCore_Manager
 
         private void aboutButton_Click(object sender, EventArgs e)
         {
-            using (About about = new About())
-                about.ShowDialog();
+            About about = new About();
+            about.ShowDialog();
         }
 
         private void eventActiveButton_Click(object sender, EventArgs e)
         {
-            using (EventActiveList evActList = new EventActiveList())
-                evActList.ShowDialog();
+            EventActiveList evActList = new EventActiveList();
+            evActList.ShowDialog();
         }
 
         private void openConfigurationFileButton_Click(object sender, EventArgs e)
@@ -803,6 +803,7 @@ namespace TrinityCore_Manager
             {
                 if (inst.AuthClient.IsOnline)
                 {
+                    Console.WriteLine("on1");
                     inst.AuthClient.Stop();
                 }
             }
@@ -811,6 +812,7 @@ namespace TrinityCore_Manager
             {
                 if (inst.WorldClient.IsOnline)
                 {
+                    Console.WriteLine("on2");
                     inst.WorldClient.Stop();
                 }
             }

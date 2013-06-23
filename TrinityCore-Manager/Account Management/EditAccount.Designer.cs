@@ -88,6 +88,7 @@
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 11;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // okButton
             // 
@@ -100,6 +101,7 @@
             this.okButton.TabIndex = 10;
             this.okButton.Text = "Ok";
             this.okButton.TextColor = System.Drawing.Color.GreenYellow;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // accLevelComboBox
             // 
