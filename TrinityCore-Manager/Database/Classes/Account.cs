@@ -8,7 +8,6 @@ namespace TrinityCore_Manager.Database.Classes
 {
     class Account
     {
-
         public int Id { get; set; }
         public string Username { get; set; }
         public string Hash { get; set; }
@@ -21,7 +20,5 @@ namespace TrinityCore_Manager.Database.Classes
         public DateTime LastLogin { get; set; }
         public bool Online { get; set; }
         public int Exp { get; set; }
-
-
     }
 }

@@ -130,6 +130,7 @@
             this.factionComboBox.Size = new System.Drawing.Size(217, 20);
             this.factionComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.factionComboBox.TabIndex = 15;
+            this.factionComboBox.SelectedIndexChanged += new System.EventHandler(this.factionComboBox_SelectedIndexChanged);
             // 
             // repIntegerInput
             // 
@@ -152,6 +153,7 @@
             // 
             this.characterLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.characterLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.characterLabel.Location = new System.Drawing.Point(174, 12);
             this.characterLabel.Name = "characterLabel";
             this.characterLabel.Size = new System.Drawing.Size(217, 23);
@@ -164,6 +166,7 @@
             // 
             this.standingLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.standingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.standingLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.standingLabel.Location = new System.Drawing.Point(174, 106);
             this.standingLabel.Name = "standingLabel";
             this.standingLabel.Size = new System.Drawing.Size(217, 23);

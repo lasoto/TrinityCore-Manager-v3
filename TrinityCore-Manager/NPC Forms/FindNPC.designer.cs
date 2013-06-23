@@ -54,7 +54,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(287, 495);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
@@ -119,7 +119,7 @@
             this.itemFindDisplayIdTextBox.Size = new System.Drawing.Size(361, 20);
             this.itemFindDisplayIdTextBox.TabIndex = 11;
             // 
-            // FindNpc
+            // FindNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +136,7 @@
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(382, 560);
-            this.Name = "FindNpc";
+            this.Name = "FindNPC";
             this.Text = "Find NPC";
             this.ResumeLayout(false);
 

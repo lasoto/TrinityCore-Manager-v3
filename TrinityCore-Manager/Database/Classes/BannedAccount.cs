@@ -8,15 +8,10 @@ namespace TrinityCore_Manager.Database.Classes
 {
     class BannedAccount
     {
-
         public int Id { get; set; }
-
         public int BanDate { get; set; }
-
         public int UnbanDate { get; set; }
-
         public string BannedBy { get; set; }
-
         public bool Active { get; set; }
 
         public BannedAccount(int id, int banDate, int unbanDate, string bannedBy, bool active)
@@ -27,7 +22,5 @@ namespace TrinityCore_Manager.Database.Classes
             this.BannedBy = bannedBy;
             this.Active = active;
         }
-
-
     }
 }

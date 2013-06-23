@@ -20,6 +20,7 @@ using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Security;
 using TrinityCore_Manager.TC;
 using TrinityCore_Manager.TCM;
+using TrinityCore_Manager.NPC_Forms;
 
 namespace TrinityCore_Manager
 {
@@ -274,6 +275,12 @@ namespace TrinityCore_Manager
         {
             CreateNPC createNPC = new CreateNPC();
             createNPC.ShowDialog();
+        }
+
+        private void createVendorButton_Click(object sender, EventArgs e)
+        {
+            CreateNPCVendor cnv = new CreateNPCVendor();
+            cnv.ShowDialog();
         }
 
         private void findFirstUnusedGuidForNpcButton_Click(object sender, EventArgs e)

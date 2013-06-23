@@ -143,6 +143,7 @@
     </Compile>
     <Compile Include="Database\Classes\Account.cs" />
     <Compile Include="Database\Classes\BannedAccount.cs" />
+    <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +181,12 @@
     <Compile Include="Item Forms\FindItemFlagsExtra.Designer.cs">
       <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item Forms\ItemSpellControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Item Forms\ItemSpellControl.Designer.cs">
+      <DependentUpon>ItemSpellControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="NPC Forms\CreateNPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +198,12 @@
     <Compile Include="Database\MySqlDatabase.cs" />
     <Compile Include="Database\MySqlHelper.cs" />
     <Compile Include="Database\WorldDatabase.cs" />
+    <Compile Include="NPC Forms\CreateNPCVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPC Forms\CreateNPCVendor.Designer.cs">
+      <DependentUpon>CreateNPCVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="NPC Forms\DeleteGuild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,10 +391,10 @@
     <Compile Include="NPC Forms\FindUnitFlags2.Designer.cs">
       <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemStatsControl.cs">
+    <Compile Include="Item Forms\ItemStatsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ItemStatsControl.Designer.cs">
+    <Compile Include="Item Forms\ItemStatsControl.Designer.cs">
       <DependentUpon>ItemStatsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -428,6 +441,12 @@
     </Compile>
     <Compile Include="SetupWizard.Designer.cs">
       <DependentUpon>SetupWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSQLCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowSQLCode.Designer.cs">
+      <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </Compile>
     <Compile Include="TCM\TCAction.cs" />
     <Compile Include="TCM\TCManager.cs" />
@@ -499,8 +518,14 @@
     <EmbeddedResource Include="Item Forms\FindItemFlagsExtra.resx">
       <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Item Forms\ItemSpellControl.resx">
+      <DependentUpon>ItemSpellControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NPC Forms\CreateNPC.resx">
       <DependentUpon>CreateNPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPC Forms\CreateNPCVendor.resx">
+      <DependentUpon>CreateNPCVendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NPC Forms\DeleteGuild.resx">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
@@ -595,7 +620,7 @@
     <EmbeddedResource Include="NPC Forms\FindUnitFlags2.resx">
       <DependentUpon>FindUnitFlags2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemStatsControl.resx">
+    <EmbeddedResource Include="Item Forms\ItemStatsControl.resx">
       <DependentUpon>ItemStatsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -628,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetupWizard.resx">
       <DependentUpon>SetupWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowSQLCode.resx">
+      <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

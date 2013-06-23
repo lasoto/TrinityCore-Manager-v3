@@ -17,5 +17,10 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
+
+        private void factionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // This dropdown list should display ONLY factions from the characters.character_reputation table that account under this GUID has.
+        }
     }
 }

@@ -276,13 +276,11 @@
             this.itemDamageMinLabel = new DevComponents.DotNetBar.LabelX();
             this.itemStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemStatsGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
             this.addStatsButton = new DevComponents.DotNetBar.ButtonX();
             this.scalingStatValueIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemScalingStatsValueLabel = new DevComponents.DotNetBar.LabelX();
             this.scalingStatDistributionIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemScalingStatDistLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemStatsInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.resistsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemResistsInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.resistsArcaneIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -299,10 +297,27 @@
             this.itemResistsHolyLabel = new DevComponents.DotNetBar.LabelX();
             this.itemSocketWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemSocketGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.addSocketButton = new DevComponents.DotNetBar.ButtonX();
-            this.socketAmountIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.socket3CountIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.socket3ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem6 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.comboItem9 = new DevComponents.Editors.ComboItem();
+            this.comboItem10 = new DevComponents.Editors.ComboItem();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.socket2CountIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.socket2ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.comboItem4 = new DevComponents.Editors.ComboItem();
+            this.comboItem5 = new DevComponents.Editors.ComboItem();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.socket1CountIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemSocketAmountLabel = new DevComponents.DotNetBar.LabelX();
-            this.socketComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.socket1ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.noSocketComboItem = new DevComponents.Editors.ComboItem();
             this.metaSocketComboItem = new DevComponents.Editors.ComboItem();
             this.redSocketComboItem = new DevComponents.Editors.ComboItem();
@@ -320,26 +335,6 @@
             this.findSpellForItemButton = new DevComponents.DotNetBar.ButtonX();
             this.itemSpellGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.addSpellButton = new DevComponents.DotNetBar.ButtonX();
-            this.spellCategoryCooldownIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellCategoryCdLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellCategoryIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellCategoryLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellCooldownIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellCooldownLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellPpmIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellPpmRateLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellChargesIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellChargesLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellTriggerComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.onUseSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.onEquipSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.chanceOnHitSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.soulstoneSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.useWithNoDelaySpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.learnSpellIdSpellTriggerComboItem = new DevComponents.Editors.ComboItem();
-            this.itemTriggerSpellLabel = new DevComponents.DotNetBar.LabelX();
-            this.spellIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSpellLabel = new DevComponents.DotNetBar.LabelX();
             this.wizardPage1 = new DevComponents.DotNetBar.WizardPage();
             this.flagsCustomButton = new DevComponents.DotNetBar.ButtonX();
             this.flagsCustomIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -507,6 +502,8 @@
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.itemCreatorSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.saveFileAsSQLDialog = new System.Windows.Forms.SaveFileDialog();
+            this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
+            this.itemSpellControl1 = new TrinityCore_Manager.ItemSpellControl();
             this.itemDetailsWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemSubClassIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).BeginInit();
@@ -562,17 +559,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.resistsHolyIntegerInput)).BeginInit();
             this.itemSocketWizardPage.SuspendLayout();
             this.itemSocketGroupPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.socketAmountIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket3CountIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket2CountIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket1CountIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gemPropIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.socketBonusIntegerInput)).BeginInit();
             this.itemSpellWizardPage.SuspendLayout();
             this.itemSpellGroupPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spellCategoryCooldownIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellCategoryIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellCooldownIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellPpmIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellChargesIntegerInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellIntegerInput)).BeginInit();
             this.wizardPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flagsCustomIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scriptNameIntegerInput)).BeginInit();
@@ -3352,7 +3345,6 @@
             this.itemStatsWizardPage.Controls.Add(this.itemScalingStatsValueLabel);
             this.itemStatsWizardPage.Controls.Add(this.scalingStatDistributionIntegerInput);
             this.itemStatsWizardPage.Controls.Add(this.itemScalingStatDistLabel);
-            this.itemStatsWizardPage.Controls.Add(this.itemStatsInfoLabel);
             this.itemStatsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemStatsWizardPage.Name = "itemStatsWizardPage";
             this.itemStatsWizardPage.PageTitle = "Item Stats";
@@ -3380,7 +3372,7 @@
             this.itemStatsGroupPanel.Controls.Add(this.addStatsButton);
             this.itemStatsGroupPanel.Location = new System.Drawing.Point(250, 0);
             this.itemStatsGroupPanel.Name = "itemStatsGroupPanel";
-            this.itemStatsGroupPanel.Size = new System.Drawing.Size(644, 327);
+            this.itemStatsGroupPanel.Size = new System.Drawing.Size(644, 456);
             // 
             // 
             // 
@@ -3412,15 +3404,6 @@
             this.itemStatsGroupPanel.TabIndex = 25;
             this.itemStatsGroupPanel.Text = "Item Stats";
             // 
-            // itemStatsControl1
-            // 
-            this.itemStatsControl1.BackColor = System.Drawing.Color.Transparent;
-            this.itemStatsControl1.Location = new System.Drawing.Point(33, -6);
-            this.itemStatsControl1.Name = "itemStatsControl1";
-            this.itemStatsControl1.Size = new System.Drawing.Size(585, 56);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.itemStatsControl1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The type of stat to modify.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.itemStatsControl1.TabIndex = 4;
-            // 
             // addStatsButton
             // 
             this.addStatsButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -3442,7 +3425,7 @@
             this.scalingStatValueIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.scalingStatValueIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.scalingStatValueIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.scalingStatValueIntegerInput.Location = new System.Drawing.Point(496, 371);
+            this.scalingStatValueIntegerInput.Location = new System.Drawing.Point(504, 503);
             this.scalingStatValueIntegerInput.Name = "scalingStatValueIntegerInput";
             this.scalingStatValueIntegerInput.ShowUpDown = true;
             this.scalingStatValueIntegerInput.Size = new System.Drawing.Size(310, 20);
@@ -3456,7 +3439,7 @@
             // 
             this.itemScalingStatsValueLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemScalingStatsValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemScalingStatsValueLabel.Location = new System.Drawing.Point(348, 368);
+            this.itemScalingStatsValueLabel.Location = new System.Drawing.Point(356, 500);
             this.itemScalingStatsValueLabel.Name = "itemScalingStatsValueLabel";
             this.itemScalingStatsValueLabel.Size = new System.Drawing.Size(142, 23);
             this.itemScalingStatsValueLabel.TabIndex = 23;
@@ -3471,7 +3454,7 @@
             this.scalingStatDistributionIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.scalingStatDistributionIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.scalingStatDistributionIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.scalingStatDistributionIntegerInput.Location = new System.Drawing.Point(496, 333);
+            this.scalingStatDistributionIntegerInput.Location = new System.Drawing.Point(504, 465);
             this.scalingStatDistributionIntegerInput.Name = "scalingStatDistributionIntegerInput";
             this.scalingStatDistributionIntegerInput.ShowUpDown = true;
             this.scalingStatDistributionIntegerInput.Size = new System.Drawing.Size(310, 20);
@@ -3486,23 +3469,11 @@
             // 
             this.itemScalingStatDistLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemScalingStatDistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemScalingStatDistLabel.Location = new System.Drawing.Point(313, 330);
+            this.itemScalingStatDistLabel.Location = new System.Drawing.Point(321, 462);
             this.itemScalingStatDistLabel.Name = "itemScalingStatDistLabel";
             this.itemScalingStatDistLabel.Size = new System.Drawing.Size(177, 23);
             this.itemScalingStatDistLabel.TabIndex = 21;
             this.itemScalingStatDistLabel.Text = "Scaling Stats Distribution:";
-            // 
-            // itemStatsInfoLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemStatsInfoLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemStatsInfoLabel.Location = new System.Drawing.Point(302, 400);
-            this.itemStatsInfoLabel.Name = "itemStatsInfoLabel";
-            this.itemStatsInfoLabel.Size = new System.Drawing.Size(656, 129);
-            this.itemStatsInfoLabel.TabIndex = 0;
-            this.itemStatsInfoLabel.Text = resources.GetString("itemStatsInfoLabel.Text");
             // 
             // resistsWizardPage
             // 
@@ -3754,10 +3725,17 @@
             this.itemSocketGroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.itemSocketGroupPanel.CanvasColor = System.Drawing.SystemColors.Control;
             this.itemSocketGroupPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.itemSocketGroupPanel.Controls.Add(this.addSocketButton);
-            this.itemSocketGroupPanel.Controls.Add(this.socketAmountIntegerInput);
+            this.itemSocketGroupPanel.Controls.Add(this.socket3CountIntegerInput);
+            this.itemSocketGroupPanel.Controls.Add(this.labelX3);
+            this.itemSocketGroupPanel.Controls.Add(this.socket3ComboBox);
+            this.itemSocketGroupPanel.Controls.Add(this.labelX4);
+            this.itemSocketGroupPanel.Controls.Add(this.socket2CountIntegerInput);
+            this.itemSocketGroupPanel.Controls.Add(this.labelX1);
+            this.itemSocketGroupPanel.Controls.Add(this.socket2ComboBox);
+            this.itemSocketGroupPanel.Controls.Add(this.labelX2);
+            this.itemSocketGroupPanel.Controls.Add(this.socket1CountIntegerInput);
             this.itemSocketGroupPanel.Controls.Add(this.itemSocketAmountLabel);
-            this.itemSocketGroupPanel.Controls.Add(this.socketComboBox);
+            this.itemSocketGroupPanel.Controls.Add(this.socket1ComboBox);
             this.itemSocketGroupPanel.Controls.Add(this.itemSocketLabel);
             this.itemSocketGroupPanel.Location = new System.Drawing.Point(276, 15);
             this.itemSocketGroupPanel.Name = "itemSocketGroupPanel";
@@ -3793,32 +3771,193 @@
             this.itemSocketGroupPanel.TabIndex = 21;
             this.itemSocketGroupPanel.Text = "Sockets";
             // 
-            // addSocketButton
-            // 
-            this.addSocketButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.addSocketButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.addSocketButton.Image = ((System.Drawing.Image)(resources.GetObject("addSocketButton.Image")));
-            this.addSocketButton.Location = new System.Drawing.Point(310, 53);
-            this.addSocketButton.Name = "addSocketButton";
-            this.addSocketButton.Size = new System.Drawing.Size(32, 32);
-            this.addSocketButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.addSocketButton.TabIndex = 3;
-            // 
-            // socketAmountIntegerInput
+            // socket3CountIntegerInput
             // 
             // 
             // 
             // 
-            this.socketAmountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.socketAmountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.socketAmountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.socketAmountIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.socketAmountIntegerInput.Location = new System.Drawing.Point(468, 15);
-            this.socketAmountIntegerInput.Name = "socketAmountIntegerInput";
-            this.socketAmountIntegerInput.ShowUpDown = true;
-            this.socketAmountIntegerInput.Size = new System.Drawing.Size(154, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socketAmountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.socketAmountIntegerInput.TabIndex = 2;
+            this.socket3CountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.socket3CountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.socket3CountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.socket3CountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.socket3CountIntegerInput.Location = new System.Drawing.Point(468, 244);
+            this.socket3CountIntegerInput.Name = "socket3CountIntegerInput";
+            this.socket3CountIntegerInput.ShowUpDown = true;
+            this.socket3CountIntegerInput.Size = new System.Drawing.Size(154, 20);
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket3CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket3CountIntegerInput.TabIndex = 9;
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX3.Location = new System.Drawing.Point(254, 241);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(208, 23);
+            this.labelX3.TabIndex = 10;
+            this.labelX3.Text = "Number of this type of Sockets:";
+            // 
+            // socket3ComboBox
+            // 
+            this.socket3ComboBox.DisplayMember = "Text";
+            this.socket3ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.socket3ComboBox.ForeColor = System.Drawing.Color.White;
+            this.socket3ComboBox.FormattingEnabled = true;
+            this.socket3ComboBox.ItemHeight = 14;
+            this.socket3ComboBox.Items.AddRange(new object[] {
+            this.comboItem6,
+            this.comboItem7,
+            this.comboItem8,
+            this.comboItem9,
+            this.comboItem10});
+            this.socket3ComboBox.Location = new System.Drawing.Point(84, 244);
+            this.socket3ComboBox.Name = "socket3ComboBox";
+            this.socket3ComboBox.Size = new System.Drawing.Size(140, 20);
+            this.socket3ComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket3ComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The color of the socket that can be placed in this item.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket3ComboBox.TabIndex = 8;
+            // 
+            // comboItem6
+            // 
+            this.comboItem6.Text = "No Socket";
+            // 
+            // comboItem7
+            // 
+            this.comboItem7.ForeColor = System.Drawing.Color.Silver;
+            this.comboItem7.Text = "Meta Socket";
+            // 
+            // comboItem8
+            // 
+            this.comboItem8.ForeColor = System.Drawing.Color.Tomato;
+            this.comboItem8.Text = "Red Socket";
+            // 
+            // comboItem9
+            // 
+            this.comboItem9.ForeColor = System.Drawing.Color.Gold;
+            this.comboItem9.Text = "Yellow Socket";
+            // 
+            // comboItem10
+            // 
+            this.comboItem10.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.comboItem10.Text = "Blue Socket";
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX4.Location = new System.Drawing.Point(25, 241);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(53, 23);
+            this.labelX4.TabIndex = 7;
+            this.labelX4.Text = "Socket:";
+            // 
+            // socket2CountIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.socket2CountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.socket2CountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.socket2CountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.socket2CountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.socket2CountIntegerInput.Location = new System.Drawing.Point(468, 130);
+            this.socket2CountIntegerInput.Name = "socket2CountIntegerInput";
+            this.socket2CountIntegerInput.ShowUpDown = true;
+            this.socket2CountIntegerInput.Size = new System.Drawing.Size(154, 20);
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket2CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket2CountIntegerInput.TabIndex = 5;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX1.Location = new System.Drawing.Point(254, 127);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(208, 23);
+            this.labelX1.TabIndex = 6;
+            this.labelX1.Text = "Number of this type of Sockets:";
+            // 
+            // socket2ComboBox
+            // 
+            this.socket2ComboBox.DisplayMember = "Text";
+            this.socket2ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.socket2ComboBox.ForeColor = System.Drawing.Color.White;
+            this.socket2ComboBox.FormattingEnabled = true;
+            this.socket2ComboBox.ItemHeight = 14;
+            this.socket2ComboBox.Items.AddRange(new object[] {
+            this.comboItem1,
+            this.comboItem2,
+            this.comboItem3,
+            this.comboItem4,
+            this.comboItem5});
+            this.socket2ComboBox.Location = new System.Drawing.Point(84, 130);
+            this.socket2ComboBox.Name = "socket2ComboBox";
+            this.socket2ComboBox.Size = new System.Drawing.Size(140, 20);
+            this.socket2ComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket2ComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The color of the socket that can be placed in this item.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket2ComboBox.TabIndex = 4;
+            // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "No Socket";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.ForeColor = System.Drawing.Color.Silver;
+            this.comboItem2.Text = "Meta Socket";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.ForeColor = System.Drawing.Color.Tomato;
+            this.comboItem3.Text = "Red Socket";
+            // 
+            // comboItem4
+            // 
+            this.comboItem4.ForeColor = System.Drawing.Color.Gold;
+            this.comboItem4.Text = "Yellow Socket";
+            // 
+            // comboItem5
+            // 
+            this.comboItem5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.comboItem5.Text = "Blue Socket";
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX2.Location = new System.Drawing.Point(25, 127);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(53, 23);
+            this.labelX2.TabIndex = 3;
+            this.labelX2.Text = "Socket:";
+            // 
+            // socket1CountIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.socket1CountIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.socket1CountIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.socket1CountIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.socket1CountIntegerInput.ForeColor = System.Drawing.Color.White;
+            this.socket1CountIntegerInput.Location = new System.Drawing.Point(468, 15);
+            this.socket1CountIntegerInput.Name = "socket1CountIntegerInput";
+            this.socket1CountIntegerInput.ShowUpDown = true;
+            this.socket1CountIntegerInput.Size = new System.Drawing.Size(154, 20);
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket1CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket1CountIntegerInput.TabIndex = 2;
             // 
             // itemSocketAmountLabel
             // 
@@ -3833,25 +3972,25 @@
             this.itemSocketAmountLabel.TabIndex = 2;
             this.itemSocketAmountLabel.Text = "Number of this type of Sockets:";
             // 
-            // socketComboBox
+            // socket1ComboBox
             // 
-            this.socketComboBox.DisplayMember = "Text";
-            this.socketComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.socketComboBox.ForeColor = System.Drawing.Color.White;
-            this.socketComboBox.FormattingEnabled = true;
-            this.socketComboBox.ItemHeight = 14;
-            this.socketComboBox.Items.AddRange(new object[] {
+            this.socket1ComboBox.DisplayMember = "Text";
+            this.socket1ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.socket1ComboBox.ForeColor = System.Drawing.Color.White;
+            this.socket1ComboBox.FormattingEnabled = true;
+            this.socket1ComboBox.ItemHeight = 14;
+            this.socket1ComboBox.Items.AddRange(new object[] {
             this.noSocketComboItem,
             this.metaSocketComboItem,
             this.redSocketComboItem,
             this.yellowSocketComboItem,
             this.blueSocketComboItem});
-            this.socketComboBox.Location = new System.Drawing.Point(84, 15);
-            this.socketComboBox.Name = "socketComboBox";
-            this.socketComboBox.Size = new System.Drawing.Size(140, 20);
-            this.socketComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socketComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The color of the socket that can be placed in this item.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.socketComboBox.TabIndex = 1;
+            this.socket1ComboBox.Location = new System.Drawing.Point(84, 15);
+            this.socket1ComboBox.Name = "socket1ComboBox";
+            this.socket1ComboBox.Size = new System.Drawing.Size(140, 20);
+            this.socket1ComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket1ComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The color of the socket that can be placed in this item.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.socket1ComboBox.TabIndex = 1;
             // 
             // noSocketComboItem
             // 
@@ -3978,9 +4117,9 @@
             // 
             // 
             this.itemSocketInfoLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSocketInfoLabel.Location = new System.Drawing.Point(323, 453);
+            this.itemSocketInfoLabel.Location = new System.Drawing.Point(401, 453);
             this.itemSocketInfoLabel.Name = "itemSocketInfoLabel";
-            this.itemSocketInfoLabel.Size = new System.Drawing.Size(529, 67);
+            this.itemSocketInfoLabel.Size = new System.Drawing.Size(451, 67);
             this.itemSocketInfoLabel.TabIndex = 0;
             this.itemSocketInfoLabel.Text = resources.GetString("itemSocketInfoLabel.Text");
             // 
@@ -4015,7 +4154,7 @@
             // 
             this.findSpellForItemButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findSpellForItemButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.findSpellForItemButton.Location = new System.Drawing.Point(543, 431);
+            this.findSpellForItemButton.Location = new System.Drawing.Point(513, 425);
             this.findSpellForItemButton.Name = "findSpellForItemButton";
             this.findSpellForItemButton.Size = new System.Drawing.Size(89, 40);
             this.findSpellForItemButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -4028,24 +4167,11 @@
             this.itemSpellGroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.itemSpellGroupPanel.CanvasColor = System.Drawing.SystemColors.Control;
             this.itemSpellGroupPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.itemSpellGroupPanel.Controls.Add(this.itemSpellControl1);
             this.itemSpellGroupPanel.Controls.Add(this.addSpellButton);
-            this.itemSpellGroupPanel.Controls.Add(this.spellCategoryCooldownIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellCategoryCdLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellCategoryIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellCategoryLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellCooldownIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellCooldownLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellPpmIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellPpmRateLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellChargesIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellChargesLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellTriggerComboBox);
-            this.itemSpellGroupPanel.Controls.Add(this.itemTriggerSpellLabel);
-            this.itemSpellGroupPanel.Controls.Add(this.spellIntegerInput);
-            this.itemSpellGroupPanel.Controls.Add(this.itemSpellLabel);
             this.itemSpellGroupPanel.Location = new System.Drawing.Point(62, 3);
             this.itemSpellGroupPanel.Name = "itemSpellGroupPanel";
-            this.itemSpellGroupPanel.Size = new System.Drawing.Size(999, 422);
+            this.itemSpellGroupPanel.Size = new System.Drawing.Size(999, 416);
             // 
             // 
             // 
@@ -4082,246 +4208,12 @@
             this.addSpellButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.addSpellButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.addSpellButton.Image = ((System.Drawing.Image)(resources.GetObject("addSpellButton.Image")));
-            this.addSpellButton.Location = new System.Drawing.Point(506, 56);
+            this.addSpellButton.Location = new System.Drawing.Point(478, 56);
             this.addSpellButton.Name = "addSpellButton";
             this.addSpellButton.Size = new System.Drawing.Size(32, 32);
             this.addSpellButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.addSpellButton.TabIndex = 8;
-            // 
-            // spellCategoryCooldownIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellCategoryCooldownIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellCategoryCooldownIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellCategoryCooldownIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellCategoryCooldownIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellCategoryCooldownIntegerInput.Location = new System.Drawing.Point(924, 12);
-            this.spellCategoryCooldownIntegerInput.Name = "spellCategoryCooldownIntegerInput";
-            this.spellCategoryCooldownIntegerInput.ShowUpDown = true;
-            this.spellCategoryCooldownIntegerInput.Size = new System.Drawing.Size(65, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellCategoryCooldownIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The cooldown time in milliseconds that is applied to all other spells in the cate" +
-            "gory that the triggered spell is also in. Use -1 to use the default spell cooldo" +
-            "wn.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellCategoryCooldownIntegerInput.TabIndex = 7;
-            // 
-            // itemSpellCategoryCdLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellCategoryCdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellCategoryCdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellCategoryCdLabel.Location = new System.Drawing.Point(851, 3);
-            this.itemSpellCategoryCdLabel.Name = "itemSpellCategoryCdLabel";
-            this.itemSpellCategoryCdLabel.Size = new System.Drawing.Size(67, 39);
-            this.itemSpellCategoryCdLabel.TabIndex = 12;
-            this.itemSpellCategoryCdLabel.Text = "<div align=\"center\">Category<br/>Cooldown</div>";
-            // 
-            // spellCategoryIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellCategoryIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellCategoryIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellCategoryIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellCategoryIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellCategoryIntegerInput.Location = new System.Drawing.Point(778, 12);
-            this.spellCategoryIntegerInput.Name = "spellCategoryIntegerInput";
-            this.spellCategoryIntegerInput.ShowUpDown = true;
-            this.spellCategoryIntegerInput.Size = new System.Drawing.Size(67, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellCategoryIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The category that the spell is in.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellCategoryIntegerInput.TabIndex = 6;
-            // 
-            // itemSpellCategoryLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellCategoryLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellCategoryLabel.Location = new System.Drawing.Point(705, 9);
-            this.itemSpellCategoryLabel.Name = "itemSpellCategoryLabel";
-            this.itemSpellCategoryLabel.Size = new System.Drawing.Size(67, 23);
-            this.itemSpellCategoryLabel.TabIndex = 10;
-            this.itemSpellCategoryLabel.Text = "Category:";
-            // 
-            // spellCooldownIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellCooldownIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellCooldownIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellCooldownIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellCooldownIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellCooldownIntegerInput.Location = new System.Drawing.Point(631, 12);
-            this.spellCooldownIntegerInput.Name = "spellCooldownIntegerInput";
-            this.spellCooldownIntegerInput.ShowUpDown = true;
-            this.spellCooldownIntegerInput.Size = new System.Drawing.Size(68, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellCooldownIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("spellCooldownIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellCooldownIntegerInput.TabIndex = 5;
-            // 
-            // itemSpellCooldownLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellCooldownLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellCooldownLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellCooldownLabel.Location = new System.Drawing.Point(553, 9);
-            this.itemSpellCooldownLabel.Name = "itemSpellCooldownLabel";
-            this.itemSpellCooldownLabel.Size = new System.Drawing.Size(72, 23);
-            this.itemSpellCooldownLabel.TabIndex = 8;
-            this.itemSpellCooldownLabel.Text = "Cooldown:";
-            // 
-            // spellPpmIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellPpmIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellPpmIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellPpmIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellPpmIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellPpmIntegerInput.Location = new System.Drawing.Point(478, 12);
-            this.spellPpmIntegerInput.Name = "spellPpmIntegerInput";
-            this.spellPpmIntegerInput.ShowUpDown = true;
-            this.spellPpmIntegerInput.Size = new System.Drawing.Size(69, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellPpmIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The proc per minute rate controlling how often the spell is triggered (if #spellt" +
-            "rigger == 2).", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellPpmIntegerInput.TabIndex = 4;
-            // 
-            // itemSpellPpmRateLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellPpmRateLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellPpmRateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellPpmRateLabel.Location = new System.Drawing.Point(397, 9);
-            this.itemSpellPpmRateLabel.Name = "itemSpellPpmRateLabel";
-            this.itemSpellPpmRateLabel.Size = new System.Drawing.Size(75, 23);
-            this.itemSpellPpmRateLabel.TabIndex = 6;
-            this.itemSpellPpmRateLabel.Text = "Ppm Rate:";
-            // 
-            // spellChargesIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellChargesIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellChargesIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellChargesIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellChargesIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellChargesIntegerInput.Location = new System.Drawing.Point(330, 12);
-            this.spellChargesIntegerInput.Name = "spellChargesIntegerInput";
-            this.spellChargesIntegerInput.ShowUpDown = true;
-            this.spellChargesIntegerInput.Size = new System.Drawing.Size(61, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellChargesIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("spellChargesIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellChargesIntegerInput.TabIndex = 3;
-            // 
-            // itemSpellChargesLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellChargesLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellChargesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellChargesLabel.Location = new System.Drawing.Point(225, 9);
-            this.itemSpellChargesLabel.Name = "itemSpellChargesLabel";
-            this.itemSpellChargesLabel.Size = new System.Drawing.Size(99, 23);
-            this.itemSpellChargesLabel.TabIndex = 4;
-            this.itemSpellChargesLabel.Text = "Spell Charges:";
-            // 
-            // spellTriggerComboBox
-            // 
-            this.spellTriggerComboBox.DisplayMember = "Text";
-            this.spellTriggerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.spellTriggerComboBox.ForeColor = System.Drawing.Color.White;
-            this.spellTriggerComboBox.FormattingEnabled = true;
-            this.spellTriggerComboBox.ItemHeight = 14;
-            this.spellTriggerComboBox.Items.AddRange(new object[] {
-            this.onUseSpellTriggerComboItem,
-            this.onEquipSpellTriggerComboItem,
-            this.chanceOnHitSpellTriggerComboItem,
-            this.soulstoneSpellTriggerComboItem,
-            this.useWithNoDelaySpellTriggerComboItem,
-            this.learnSpellIdSpellTriggerComboItem});
-            this.spellTriggerComboBox.Location = new System.Drawing.Point(171, 12);
-            this.spellTriggerComboBox.Name = "spellTriggerComboBox";
-            this.spellTriggerComboBox.Size = new System.Drawing.Size(48, 20);
-            this.spellTriggerComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellTriggerComboBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The type of trigger for the spell", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellTriggerComboBox.TabIndex = 2;
-            // 
-            // onUseSpellTriggerComboItem
-            // 
-            this.onUseSpellTriggerComboItem.Text = "On Use";
-            // 
-            // onEquipSpellTriggerComboItem
-            // 
-            this.onEquipSpellTriggerComboItem.Text = "On Equip";
-            // 
-            // chanceOnHitSpellTriggerComboItem
-            // 
-            this.chanceOnHitSpellTriggerComboItem.Text = "Chance On Hit";
-            // 
-            // soulstoneSpellTriggerComboItem
-            // 
-            this.soulstoneSpellTriggerComboItem.Text = "Soulstone";
-            // 
-            // useWithNoDelaySpellTriggerComboItem
-            // 
-            this.useWithNoDelaySpellTriggerComboItem.Text = "Use With No Delay";
-            // 
-            // learnSpellIdSpellTriggerComboItem
-            // 
-            this.learnSpellIdSpellTriggerComboItem.Text = "Learn Spell ID";
-            // 
-            // itemTriggerSpellLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemTriggerSpellLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemTriggerSpellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemTriggerSpellLabel.Location = new System.Drawing.Point(110, 9);
-            this.itemTriggerSpellLabel.Name = "itemTriggerSpellLabel";
-            this.itemTriggerSpellLabel.Size = new System.Drawing.Size(55, 23);
-            this.itemTriggerSpellLabel.TabIndex = 2;
-            this.itemTriggerSpellLabel.Text = "Trigger:";
-            // 
-            // spellIntegerInput
-            // 
-            // 
-            // 
-            // 
-            this.spellIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.spellIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.spellIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.spellIntegerInput.ForeColor = System.Drawing.Color.White;
-            this.spellIntegerInput.Location = new System.Drawing.Point(53, 12);
-            this.spellIntegerInput.Name = "spellIntegerInput";
-            this.spellIntegerInput.ShowUpDown = true;
-            this.spellIntegerInput.Size = new System.Drawing.Size(51, 20);
-            this.itemCreatorSuperTooltip.SetSuperTooltip(this.spellIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The spell ID of the spell that the item can cast or trigger.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.spellIntegerInput.TabIndex = 1;
-            // 
-            // itemSpellLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemSpellLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSpellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSpellLabel.Location = new System.Drawing.Point(7, 9);
-            this.itemSpellLabel.Name = "itemSpellLabel";
-            this.itemSpellLabel.Size = new System.Drawing.Size(40, 23);
-            this.itemSpellLabel.TabIndex = 0;
-            this.itemSpellLabel.Text = "Spell:";
+            this.addSpellButton.Click += new System.EventHandler(this.addSpellButton_Click);
             // 
             // wizardPage1
             // 
@@ -4408,6 +4300,7 @@
             this.flagsCustomButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.flagsCustomButton.TabIndex = 49;
             this.flagsCustomButton.Text = "Find Item Flags Custom";
+            this.flagsCustomButton.Click += new System.EventHandler(this.flagsCustomButton_Click);
             // 
             // flagsCustomIntegerInput
             // 
@@ -5626,6 +5519,7 @@
             this.saveAsSqlCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.saveAsSqlCheckBox.TabIndex = 2;
             this.saveAsSqlCheckBox.Text = "Save as SQL file";
+            this.saveAsSqlCheckBox.CheckedChanged += new System.EventHandler(this.saveAsSqlCheckBox_CheckedChanged);
             // 
             // importToDBCheckBox
             // 
@@ -5644,6 +5538,7 @@
             this.importToDBCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.importToDBCheckBox.TabIndex = 1;
             this.importToDBCheckBox.Text = "Import to Database";
+            this.importToDBCheckBox.CheckedChanged += new System.EventHandler(this.importToDBCheckBox_CheckedChanged);
             // 
             // eightHasteRatingCombotItem
             // 
@@ -5735,6 +5630,22 @@
             // 
             this.saveFileAsSQLDialog.Filter = "SQL File | *.sql";
             // 
+            // itemStatsControl1
+            // 
+            this.itemStatsControl1.BackColor = System.Drawing.Color.Transparent;
+            this.itemStatsControl1.Location = new System.Drawing.Point(30, 3);
+            this.itemStatsControl1.Name = "itemStatsControl1";
+            this.itemStatsControl1.Size = new System.Drawing.Size(585, 30);
+            this.itemStatsControl1.TabIndex = 4;
+            // 
+            // itemSpellControl1
+            // 
+            this.itemSpellControl1.BackColor = System.Drawing.Color.Transparent;
+            this.itemSpellControl1.Location = new System.Drawing.Point(3, 3);
+            this.itemSpellControl1.Name = "itemSpellControl1";
+            this.itemSpellControl1.Size = new System.Drawing.Size(995, 30);
+            this.itemSpellControl1.TabIndex = 9;
+            // 
             // CreateItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5806,17 +5717,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.resistsHolyIntegerInput)).EndInit();
             this.itemSocketWizardPage.ResumeLayout(false);
             this.itemSocketGroupPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.socketAmountIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket3CountIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket2CountIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socket1CountIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gemPropIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.socketBonusIntegerInput)).EndInit();
             this.itemSpellWizardPage.ResumeLayout(false);
             this.itemSpellGroupPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spellCategoryCooldownIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellCategoryIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellCooldownIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellPpmIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellChargesIntegerInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spellIntegerInput)).EndInit();
             this.wizardPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flagsCustomIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scriptNameIntegerInput)).EndInit();
@@ -5918,7 +5825,6 @@
         private DevComponents.Editors.IntegerInput damageMinIntegerInput;
         private DevComponents.DotNetBar.LabelX itemDamageInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemStatsWizardPage;
-        private DevComponents.DotNetBar.LabelX itemStatsInfoLabel;
         private DevComponents.DotNetBar.WizardPage resistsWizardPage;
         private DevComponents.DotNetBar.LabelX itemResistsHolyLabel;
         private DevComponents.DotNetBar.LabelX itemResistsArcaneLabel;
@@ -6122,33 +6028,12 @@
         private DevComponents.DotNetBar.ButtonX findGemPropButton;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Controls.GroupPanel itemSocketGroupPanel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx socketComboBox;
-        private DevComponents.Editors.IntegerInput socketAmountIntegerInput;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx socket1ComboBox;
+        private DevComponents.Editors.IntegerInput socket1CountIntegerInput;
         private DevComponents.DotNetBar.LabelX itemSocketAmountLabel;
-        private DevComponents.DotNetBar.ButtonX addSocketButton;
         private DevComponents.DotNetBar.WizardPage itemSpellWizardPage;
         private DevComponents.DotNetBar.Controls.GroupPanel itemSpellGroupPanel;
-        private DevComponents.DotNetBar.LabelX itemSpellLabel;
-        private DevComponents.Editors.IntegerInput spellIntegerInput;
         private DevComponents.DotNetBar.ButtonX findSpellForItemButton;
-        private DevComponents.DotNetBar.LabelX itemTriggerSpellLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx spellTriggerComboBox;
-        private DevComponents.Editors.ComboItem onUseSpellTriggerComboItem;
-        private DevComponents.Editors.ComboItem onEquipSpellTriggerComboItem;
-        private DevComponents.Editors.ComboItem chanceOnHitSpellTriggerComboItem;
-        private DevComponents.Editors.ComboItem soulstoneSpellTriggerComboItem;
-        private DevComponents.Editors.ComboItem useWithNoDelaySpellTriggerComboItem;
-        private DevComponents.Editors.ComboItem learnSpellIdSpellTriggerComboItem;
-        private DevComponents.DotNetBar.LabelX itemSpellChargesLabel;
-        private DevComponents.Editors.IntegerInput spellChargesIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSpellPpmRateLabel;
-        private DevComponents.Editors.IntegerInput spellPpmIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSpellCooldownLabel;
-        private DevComponents.Editors.IntegerInput spellCooldownIntegerInput;
-        private DevComponents.Editors.IntegerInput spellCategoryIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSpellCategoryLabel;
-        private DevComponents.Editors.IntegerInput spellCategoryCooldownIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSpellCategoryCdLabel;
         private DevComponents.DotNetBar.ButtonX addSpellButton;
         private DevComponents.Editors.ComboItem questItemComboItem;
         private DevComponents.Editors.ComboItem questItem1ComboItem;
@@ -6311,7 +6196,6 @@
         private DevComponents.Editors.IntegerInput reqRepFactionIntegerInput;
         private DevComponents.DotNetBar.ButtonX findFactionButton;
         private DevComponents.Editors.IntegerInput itemSubClassIntegerInput;
-        private ItemStatsControl itemStatsControl1;
         private System.Windows.Forms.SaveFileDialog saveFileAsSQLDialog;
         private DevComponents.DotNetBar.Controls.TextBoxX flagsTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX flagsExtraTextBox;
@@ -6319,6 +6203,26 @@
         private DevComponents.DotNetBar.ButtonX findFlagsExtraButton;
         private DevComponents.Editors.IntegerInput flagsCustomIntegerInput;
         private DevComponents.DotNetBar.ButtonX flagsCustomButton;
+        private DevComponents.Editors.IntegerInput socket3CountIntegerInput;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx socket3ComboBox;
+        private DevComponents.Editors.ComboItem comboItem6;
+        private DevComponents.Editors.ComboItem comboItem7;
+        private DevComponents.Editors.ComboItem comboItem8;
+        private DevComponents.Editors.ComboItem comboItem9;
+        private DevComponents.Editors.ComboItem comboItem10;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.Editors.IntegerInput socket2CountIntegerInput;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx socket2ComboBox;
+        private DevComponents.Editors.ComboItem comboItem1;
+        private DevComponents.Editors.ComboItem comboItem2;
+        private DevComponents.Editors.ComboItem comboItem3;
+        private DevComponents.Editors.ComboItem comboItem4;
+        private DevComponents.Editors.ComboItem comboItem5;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private ItemStatsControl itemStatsControl1;
+        private ItemSpellControl itemSpellControl1;
 
 
     }

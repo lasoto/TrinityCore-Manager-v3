@@ -250,11 +250,11 @@
             // 
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX15.Location = new System.Drawing.Point(154, 12);
+            this.labelX15.Location = new System.Drawing.Point(168, 12);
             this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(93, 23);
+            this.labelX15.Size = new System.Drawing.Size(119, 23);
             this.labelX15.TabIndex = 16;
-            this.labelX15.Text = "Player Name:";
+            this.labelX15.Text = "Character Name:";
             // 
             // nameLabel
             // 
@@ -263,9 +263,10 @@
             // 
             this.nameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.nameLabel.Location = new System.Drawing.Point(253, 12);
+            this.nameLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.nameLabel.Location = new System.Drawing.Point(293, 12);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(366, 23);
+            this.nameLabel.Size = new System.Drawing.Size(355, 23);
             this.nameLabel.TabIndex = 31;
             // 
             // lastLoginLabel
@@ -275,6 +276,7 @@
             // 
             this.lastLoginLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lastLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lastLoginLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.lastLoginLabel.Location = new System.Drawing.Point(88, 50);
             this.lastLoginLabel.Name = "lastLoginLabel";
             this.lastLoginLabel.Size = new System.Drawing.Size(258, 23);
@@ -287,6 +289,7 @@
             // 
             this.lastIpLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lastIpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lastIpLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.lastIpLabel.Location = new System.Drawing.Point(88, 91);
             this.lastIpLabel.Name = "lastIpLabel";
             this.lastIpLabel.Size = new System.Drawing.Size(258, 23);
@@ -299,6 +302,7 @@
             // 
             this.emailLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.emailLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.emailLabel.Location = new System.Drawing.Point(88, 135);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(258, 23);
@@ -311,6 +315,7 @@
             // 
             this.raceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.raceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.raceLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.raceLabel.Location = new System.Drawing.Point(88, 180);
             this.raceLabel.Name = "raceLabel";
             this.raceLabel.Size = new System.Drawing.Size(258, 23);
@@ -323,6 +328,7 @@
             // 
             this.classLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.classLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.classLabel.Location = new System.Drawing.Point(88, 227);
             this.classLabel.Name = "classLabel";
             this.classLabel.Size = new System.Drawing.Size(258, 23);
@@ -335,6 +341,7 @@
             // 
             this.mapLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.mapLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.mapLabel.Location = new System.Drawing.Point(88, 272);
             this.mapLabel.Name = "mapLabel";
             this.mapLabel.Size = new System.Drawing.Size(258, 23);
@@ -347,6 +354,7 @@
             // 
             this.moneyLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.moneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.moneyLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.moneyLabel.Location = new System.Drawing.Point(88, 320);
             this.moneyLabel.Name = "moneyLabel";
             this.moneyLabel.Size = new System.Drawing.Size(258, 23);
@@ -359,6 +367,7 @@
             // 
             this.accountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.accountLabel.Location = new System.Drawing.Point(454, 50);
             this.accountLabel.Name = "accountLabel";
             this.accountLabel.Size = new System.Drawing.Size(319, 23);
@@ -371,6 +380,7 @@
             // 
             this.accountIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountIdLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.accountIdLabel.Location = new System.Drawing.Point(454, 91);
             this.accountIdLabel.Name = "accountIdLabel";
             this.accountIdLabel.Size = new System.Drawing.Size(319, 23);
@@ -383,6 +393,7 @@
             // 
             this.gmLevelLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.gmLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.gmLevelLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.gmLevelLabel.Location = new System.Drawing.Point(454, 135);
             this.gmLevelLabel.Name = "gmLevelLabel";
             this.gmLevelLabel.Size = new System.Drawing.Size(319, 23);
@@ -395,6 +406,7 @@
             // 
             this.playedTimeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.playedTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.playedTimeLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.playedTimeLabel.Location = new System.Drawing.Point(454, 180);
             this.playedTimeLabel.Name = "playedTimeLabel";
             this.playedTimeLabel.Size = new System.Drawing.Size(319, 23);
@@ -407,6 +419,7 @@
             // 
             this.levelLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.levelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.levelLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.levelLabel.Location = new System.Drawing.Point(454, 227);
             this.levelLabel.Name = "levelLabel";
             this.levelLabel.Size = new System.Drawing.Size(319, 23);
@@ -419,6 +432,7 @@
             // 
             this.areaLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.areaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.areaLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.areaLabel.Location = new System.Drawing.Point(454, 272);
             this.areaLabel.Name = "areaLabel";
             this.areaLabel.Size = new System.Drawing.Size(319, 23);
@@ -431,6 +445,7 @@
             // 
             this.phaseLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.phaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.phaseLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.phaseLabel.Location = new System.Drawing.Point(454, 320);
             this.phaseLabel.Name = "phaseLabel";
             this.phaseLabel.Size = new System.Drawing.Size(319, 23);
@@ -480,6 +495,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "PlayerInformation";
             this.Text = "Player Information";
+            this.Load += new System.EventHandler(this.PlayerInformation_Load);
             this.ResumeLayout(false);
 
         }

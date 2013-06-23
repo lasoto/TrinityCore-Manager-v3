@@ -17,5 +17,10 @@ namespace TrinityCore_Manager.Database_Management
         {
             InitializeComponent();
         }
+
+        private void backupButton_Click(object sender, EventArgs e)
+        {
+            //BACKUP CAN OCCUR BOTH IF THE SERVER IS ONLINE AND OFFLINE
+        }
     }
 }

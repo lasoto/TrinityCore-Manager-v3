@@ -3872,6 +3872,7 @@
             this.saveAsSqlCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.saveAsSqlCheckBox.TabIndex = 2;
             this.saveAsSqlCheckBox.Text = "Save as SQL file";
+            this.saveAsSqlCheckBox.CheckedChanged += new System.EventHandler(this.saveAsSqlCheckBox_CheckedChanged);
             // 
             // importToDBCheckBox
             // 
@@ -3890,6 +3891,7 @@
             this.importToDBCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.importToDBCheckBox.TabIndex = 1;
             this.importToDBCheckBox.Text = "Import to Database";
+            this.importToDBCheckBox.CheckedChanged += new System.EventHandler(this.importToDBCheckBox_CheckedChanged);
             // 
             // npcSuperTooltip
             // 

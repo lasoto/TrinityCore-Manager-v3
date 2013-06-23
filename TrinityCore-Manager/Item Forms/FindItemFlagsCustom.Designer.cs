@@ -47,6 +47,7 @@
             this.checkAllButton.TabIndex = 39;
             this.checkAllButton.Text = "Check All";
             this.checkAllButton.TextColor = System.Drawing.Color.Green;
+            this.checkAllButton.Click += new System.EventHandler(this.checkAllButton_Click);
             // 
             // okButton
             // 
@@ -58,6 +59,7 @@
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.okButton.TabIndex = 38;
             this.okButton.Text = "Ok";
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // followLootRulesCheckBox
             // 

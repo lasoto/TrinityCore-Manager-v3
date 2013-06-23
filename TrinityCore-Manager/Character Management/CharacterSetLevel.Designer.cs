@@ -127,6 +127,7 @@
             // 
             this.charLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.charLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.charLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.charLabel.Location = new System.Drawing.Point(209, 46);
             this.charLabel.Name = "charLabel";
             this.charLabel.Size = new System.Drawing.Size(230, 23);
@@ -139,6 +140,7 @@
             // 
             this.currLevelLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.currLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.currLevelLabel.ForeColor = System.Drawing.Color.Chartreuse;
             this.currLevelLabel.Location = new System.Drawing.Point(209, 91);
             this.currLevelLabel.Name = "currLevelLabel";
             this.currLevelLabel.Size = new System.Drawing.Size(89, 23);

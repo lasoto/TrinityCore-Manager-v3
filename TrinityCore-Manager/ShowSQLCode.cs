@@ -11,16 +11,11 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class PlayerInformation : DevComponents.DotNetBar.Office2007Form
+    public partial class ShowSQLCode : DevComponents.DotNetBar.Office2007Form
     {
-        public PlayerInformation()
+        public ShowSQLCode()
         {
             InitializeComponent();
-        }
-
-        private void PlayerInformation_Load(object sender, EventArgs e)
-        {
-            // I've made PlayerInformation class for you to use with this. I would love to do it, but I don't know how to.
         }
     }
 }

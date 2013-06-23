@@ -1584,17 +1584,6 @@ Skill Level: Set the level of Req Skill you want.</value>
         Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="itemStatsInfoLabel.Text" xml:space="preserve">
-    <value>Stat Type: This is a bonus once the item is equipped.
-
-Value: How much of the Stat Type is being added. 
-Leave blank for no bonus. Can also be a negative amount.
-
-ScalingStatDistribution : Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear)
-use like static stats
-
-ScalingStatValue: Final (level 80) value of the scaling-stat.</value>
-  </data>
   <data name="itemResistsInfoLabel.Text" xml:space="preserve">
     <value>Holy: How much holy resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.
 
@@ -1608,46 +1597,8 @@ Shadow: How much shadow resist will be added once the item is equipped. Leave bl
 
 Arcane: How much arcane resist will be added once the item is equipped. Leave blank for none. Can be a negative amount.</value>
   </data>
-  <data name="addSocketButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="itemSocketInfoLabel.Text" xml:space="preserve">
-    <value>Socket: Select what color socket you want on your item. If you do not want a socket, select the no symbol.
+    <value>Socket: Select what color socket you want on your item.
 
 Socket Bonus: This bonus will become active when certain criteria are met - usually when 
 all sockets are filled with gems that match the colors of the sockets.</value>
@@ -1689,12 +1640,6 @@ all sockets are filled with gems that match the colors of the sockets.</value>
         Rbo1eCR74BLghLXPYKyDFdjESBIVOC+0xyvPE/eFE1oHsuaAOqGpt2mgqYdpgTxGc/6Hpxz3M0XkmPqZ
         Fij8FIEDEfg3EcXG5EMiukYAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="spellCooldownIntegerInput.SuperTooltip" xml:space="preserve">
-    <value>The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown. Note: this is not the "internal cooldown" of procs commonly found on items such as trinkets with "Chance on hit" effects.</value>
-  </data>
-  <data name="spellChargesIntegerInput.SuperTooltip" xml:space="preserve">
-    <value>The number of times that the item can cast the spell. If 0, then infinite charges are possible. If negative, then after the number of charges is depleted, the item is deleted as well. If positive, then the item is not deleted after all the charges are spent.</value>
   </data>
   <data name="flagsCustomIntegerInput.SuperTooltip" xml:space="preserve">
     <value>1 - ITEM_FLAGS_CU_DURATION_REAL_TIME

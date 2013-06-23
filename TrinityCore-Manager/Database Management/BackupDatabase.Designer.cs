@@ -35,15 +35,15 @@
             this.charCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.authCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.integerInput1 = new DevComponents.Editors.IntegerInput();
-            this.integerInput2 = new DevComponents.Editors.IntegerInput();
-            this.integerInput3 = new DevComponents.Editors.IntegerInput();
+            this.daysIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.hoursIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.minIntegerInput = new DevComponents.Editors.IntegerInput();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -70,6 +70,7 @@
             this.backupButton.TabIndex = 9;
             this.backupButton.Text = "Backup";
             this.backupButton.TextColor = System.Drawing.Color.Chartreuse;
+            this.backupButton.Click += new System.EventHandler(this.backupButton_Click);
             // 
             // worldCheckBox
             // 
@@ -123,47 +124,50 @@
             this.labelX2.TabIndex = 17;
             this.labelX2.Text = "Backup Every:";
             // 
-            // integerInput1
+            // daysIntegerInput
             // 
             // 
             // 
             // 
-            this.integerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput1.Location = new System.Drawing.Point(155, 101);
-            this.integerInput1.Name = "integerInput1";
-            this.integerInput1.ShowUpDown = true;
-            this.integerInput1.Size = new System.Drawing.Size(88, 20);
-            this.integerInput1.TabIndex = 18;
+            this.daysIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.daysIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.daysIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.daysIntegerInput.Location = new System.Drawing.Point(155, 101);
+            this.daysIntegerInput.MinValue = 0;
+            this.daysIntegerInput.Name = "daysIntegerInput";
+            this.daysIntegerInput.ShowUpDown = true;
+            this.daysIntegerInput.Size = new System.Drawing.Size(88, 20);
+            this.daysIntegerInput.TabIndex = 18;
             // 
-            // integerInput2
-            // 
-            // 
-            // 
-            // 
-            this.integerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput2.Location = new System.Drawing.Point(262, 101);
-            this.integerInput2.Name = "integerInput2";
-            this.integerInput2.ShowUpDown = true;
-            this.integerInput2.Size = new System.Drawing.Size(88, 20);
-            this.integerInput2.TabIndex = 19;
-            // 
-            // integerInput3
+            // hoursIntegerInput
             // 
             // 
             // 
             // 
-            this.integerInput3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput3.Location = new System.Drawing.Point(368, 101);
-            this.integerInput3.Name = "integerInput3";
-            this.integerInput3.ShowUpDown = true;
-            this.integerInput3.Size = new System.Drawing.Size(90, 20);
-            this.integerInput3.TabIndex = 20;
+            this.hoursIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.hoursIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.hoursIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.hoursIntegerInput.Location = new System.Drawing.Point(262, 101);
+            this.hoursIntegerInput.MinValue = 0;
+            this.hoursIntegerInput.Name = "hoursIntegerInput";
+            this.hoursIntegerInput.ShowUpDown = true;
+            this.hoursIntegerInput.Size = new System.Drawing.Size(88, 20);
+            this.hoursIntegerInput.TabIndex = 19;
+            // 
+            // minIntegerInput
+            // 
+            // 
+            // 
+            // 
+            this.minIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.minIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.minIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.minIntegerInput.Location = new System.Drawing.Point(368, 101);
+            this.minIntegerInput.MinValue = 0;
+            this.minIntegerInput.Name = "minIntegerInput";
+            this.minIntegerInput.ShowUpDown = true;
+            this.minIntegerInput.Size = new System.Drawing.Size(90, 20);
+            this.minIntegerInput.TabIndex = 20;
             // 
             // labelX3
             // 
@@ -212,9 +216,9 @@
             this.Controls.Add(this.labelX5);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.integerInput3);
-            this.Controls.Add(this.integerInput2);
-            this.Controls.Add(this.integerInput1);
+            this.Controls.Add(this.minIntegerInput);
+            this.Controls.Add(this.hoursIntegerInput);
+            this.Controls.Add(this.daysIntegerInput);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.worldCheckBox);
             this.Controls.Add(this.charCheckBox);
@@ -230,9 +234,9 @@
             this.MinimumSize = new System.Drawing.Size(510, 243);
             this.Name = "BackupDatabase";
             this.Text = "Backup Database";
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,9 +249,9 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX charCheckBox;
         private DevComponents.DotNetBar.Controls.CheckBoxX authCheckBox;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.Editors.IntegerInput integerInput1;
-        private DevComponents.Editors.IntegerInput integerInput2;
-        private DevComponents.Editors.IntegerInput integerInput3;
+        private DevComponents.Editors.IntegerInput daysIntegerInput;
+        private DevComponents.Editors.IntegerInput hoursIntegerInput;
+        private DevComponents.Editors.IntegerInput minIntegerInput;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX5;
