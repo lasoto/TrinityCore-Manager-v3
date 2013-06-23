@@ -29,44 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccountBan));
-            this.accountAddBanLabel = new DevComponents.DotNetBar.LabelX();
-            this.accListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accBanSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.banButton = new DevComponents.DotNetBar.ButtonX();
-            this.cancelButton = new DevComponents.DotNetBar.ButtonX();
+            this.permanentBanCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.banTimeDateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.banReasonTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.accBanSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.banTimeDateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.permanentBanCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.cancelButton = new DevComponents.DotNetBar.ButtonX();
+            this.accListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.accountAddBanLabel = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).BeginInit();
             this.SuspendLayout();
             // 
-            // accountAddBanLabel
+            // accBanSuperTooltip
             // 
-            // 
-            // 
-            // 
-            this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.accountAddBanLabel.Location = new System.Drawing.Point(44, 10);
-            this.accountAddBanLabel.Name = "accountAddBanLabel";
-            this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
-            this.accountAddBanLabel.TabIndex = 0;
-            this.accountAddBanLabel.Text = "Account:";
-            // 
-            // accListComboBox
-            // 
-            this.accListComboBox.DisplayMember = "Text";
-            this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accListComboBox.ForeColor = System.Drawing.Color.White;
-            this.accListComboBox.FormattingEnabled = true;
-            this.accListComboBox.ItemHeight = 14;
-            this.accListComboBox.Location = new System.Drawing.Point(116, 12);
-            this.accListComboBox.Name = "accListComboBox";
-            this.accListComboBox.Size = new System.Drawing.Size(224, 20);
-            this.accListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accListComboBox.TabIndex = 1;
+            this.accBanSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // banButton
             // 
@@ -81,63 +59,19 @@
             this.banButton.TextColor = System.Drawing.Color.Tomato;
             this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
-            // cancelButton
-            // 
-            this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cancelButton.Location = new System.Drawing.Point(12, 150);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(103, 33);
-            this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cancelButton.TabIndex = 3;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
-            // banReasonTextBox
-            // 
-            this.banReasonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.banReasonTextBox.Border.Class = "TextBoxBorder";
-            this.banReasonTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.banReasonTextBox.ForeColor = System.Drawing.Color.White;
-            this.banReasonTextBox.Location = new System.Drawing.Point(116, 79);
-            this.banReasonTextBox.Name = "banReasonTextBox";
-            this.banReasonTextBox.Size = new System.Drawing.Size(224, 20);
-            this.accBanSuperTooltip.SetSuperTooltip(this.banReasonTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Reason for banning this Account. It will get stored in the \'banreason\' column, in" +
-            " the \'account_banned\' table.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.banReasonTextBox.TabIndex = 7;
-            // 
-            // labelX1
+            // permanentBanCheckBox
             // 
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(16, 74);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(94, 26);
-            this.labelX1.TabIndex = 6;
-            this.labelX1.Text = "Ban Reason:";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(34, 41);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(76, 26);
-            this.labelX2.TabIndex = 8;
-            this.labelX2.Text = "Ban Time:";
-            // 
-            // accBanSuperTooltip
-            // 
-            this.accBanSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.permanentBanCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.permanentBanCheckBox.Location = new System.Drawing.Point(152, 115);
+            this.permanentBanCheckBox.Name = "permanentBanCheckBox";
+            this.permanentBanCheckBox.Size = new System.Drawing.Size(100, 23);
+            this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.permanentBanCheckBox.TabIndex = 10;
+            this.permanentBanCheckBox.Text = "Permanent Ban";
+            this.permanentBanCheckBox.CheckedChanged += new System.EventHandler(this.permanentBanCheckBox_CheckedChanged);
             // 
             // banTimeDateTimeInput
             // 
@@ -190,25 +124,93 @@
             this.banTimeDateTimeInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.banTimeDateTimeInput.TabIndex = 9;
             // 
-            // permanentBanCheckBox
+            // labelX2
             // 
             // 
             // 
             // 
-            this.permanentBanCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.permanentBanCheckBox.Location = new System.Drawing.Point(152, 115);
-            this.permanentBanCheckBox.Name = "permanentBanCheckBox";
-            this.permanentBanCheckBox.Size = new System.Drawing.Size(100, 23);
-            this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.permanentBanCheckBox.TabIndex = 10;
-            this.permanentBanCheckBox.Text = "Permanent Ban";
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX2.Location = new System.Drawing.Point(34, 41);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(76, 26);
+            this.labelX2.TabIndex = 8;
+            this.labelX2.Text = "Ban Time:";
+            // 
+            // banReasonTextBox
+            // 
+            this.banReasonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.banReasonTextBox.Border.Class = "TextBoxBorder";
+            this.banReasonTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.banReasonTextBox.ForeColor = System.Drawing.Color.White;
+            this.banReasonTextBox.Location = new System.Drawing.Point(116, 79);
+            this.banReasonTextBox.Name = "banReasonTextBox";
+            this.banReasonTextBox.Size = new System.Drawing.Size(224, 20);
+            this.accBanSuperTooltip.SetSuperTooltip(this.banReasonTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Reason for banning this Account. It will get stored in the \'banreason\' column, in" +
+            " the \'account_banned\' table.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.banReasonTextBox.TabIndex = 7;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX1.Location = new System.Drawing.Point(16, 74);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(94, 26);
+            this.labelX1.TabIndex = 6;
+            this.labelX1.Text = "Ban Reason:";
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.Location = new System.Drawing.Point(12, 150);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(103, 33);
+            this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cancelButton.TabIndex = 3;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // accListComboBox
+            // 
+            this.accListComboBox.DisplayMember = "Text";
+            this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.accListComboBox.ForeColor = System.Drawing.Color.White;
+            this.accListComboBox.FormattingEnabled = true;
+            this.accListComboBox.ItemHeight = 14;
+            this.accListComboBox.Location = new System.Drawing.Point(116, 12);
+            this.accListComboBox.Name = "accListComboBox";
+            this.accListComboBox.Size = new System.Drawing.Size(224, 20);
+            this.accListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.accListComboBox.TabIndex = 1;
+            // 
+            // accountAddBanLabel
+            // 
+            // 
+            // 
+            // 
+            this.accountAddBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountAddBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.accountAddBanLabel.Location = new System.Drawing.Point(44, 10);
+            this.accountAddBanLabel.Name = "accountAddBanLabel";
+            this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
+            this.accountAddBanLabel.TabIndex = 0;
+            this.accountAddBanLabel.Text = "Account:";
             // 
             // AddAccountBan
             // 
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 195);
+            this.ClientSize = new System.Drawing.Size(397, 194);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);

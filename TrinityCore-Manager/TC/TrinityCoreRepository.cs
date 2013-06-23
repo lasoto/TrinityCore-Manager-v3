@@ -60,7 +60,7 @@ namespace TrinityCore_Manager.TC
 
                 using (var repo = new Repository(gitDir))
                 {
-                    repo.Network.Fetch(repo.Head.Remote, TagFetchMode.All, null, null, null, thandler);
+                    repo.Fetch(repo.Head.Remote.Name, TagFetchMode.Auto, null, null, null, thandler);
                 }
 
             });

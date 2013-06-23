@@ -62,7 +62,7 @@ namespace TrinityCore_Manager.Database
                 int locked = row["locked"] != DBNull.Value ? (int)((byte)row["locked"]) : 0;
                 string lockCountry = row["lock_country"] != DBNull.Value ? (string)row["lock_country"] : String.Empty;
                 DateTime lastLogin = row["last_login"] != DBNull.Value && ((MySqlDateTime)row["last_login"]).IsValidDateTime ? ((MySqlDateTime)row["last_login"]).GetDateTime() : DateTime.Now;
-                bool online = row["online"] != DBNull.Value && (int)((byte)row["online"]) == 1;
+                bool online = row["online"] != DBNull.Value && (int)((sbyte)row["online"]) == 1;
                 int exp = row["expansion"] != DBNull.Value ? (int)((byte)row["expansion"]) : 0;
 
                 var acct = new Account();
@@ -93,9 +93,9 @@ namespace TrinityCore_Manager.Database
             await ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `last_login` <> '0000-00-00 00:00:00';", new MySqlParameter("@date", date.ToString("yyyy-MM-dd HH:mm:ss")));
         }
 
-        public async Task BanIp(string ip, DateTime bandate, DateTime unbandate, string bannedby, string banreason)
+        public async Task BanIp(string ip, int bandate, int unbandate, string bannedby, string banreason)
         {
-            await ExecuteNonQuery("INSERT INTO `ip_banned` (`ip`, `bandate`, `unbandate`, `bannedby`, `banreason`) VALUES (@ip, @bandate, @unbandate, @bannedy, @banreason)", new MySqlParameter("@ip", ip), new MySqlParameter("@bandate", new MySqlDateTime(bandate)), new MySqlParameter("@unbandate", new MySqlDateTime(unbandate)), new MySqlParameter("@bannedby", bannedby), new MySqlParameter("@banreason", banreason));
+            await ExecuteNonQuery("INSERT INTO `ip_banned` (`ip`, `bandate`, `unbandate`, `bannedby`, `banreason`) VALUES (@ip, @bandate, @unbandate, @bannedby, @banreason)", new MySqlParameter("@ip", ip), new MySqlParameter("@bandate", bandate), new MySqlParameter("@unbandate", unbandate), new MySqlParameter("@bannedby", bannedby), new MySqlParameter("@banreason", banreason));
         }
 
         public async Task RemoveAccountBan(int id)
