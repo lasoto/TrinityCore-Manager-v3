@@ -17,9 +17,49 @@ namespace TrinityCore_Manager
 {
     public partial class EditGuild : TCMForm
     {
+
+
+        private List<Guild> _guilds;
+
         public EditGuild()
         {
             InitializeComponent();
+        }
+
+        private async void EditGuild_Load(object sender, EventArgs e)
+        {
+
+            StartLoading();
+          
+            _guilds = await TCManager.Instance.CharDatabase.GetGuilds();
+
+            foreach (Guild guild in _guilds)
+            {
+                guildNameComboBox.Items.Add(guild.Name);
+            }
+
+            List<string> chars = await TCManager.Instance.CharDatabase.GetCharNamesNotInGuild();
+
+            StopLoading();
+
+        }
+
+        private void guildNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (guildNameComboBox.SelectedIndex == -1)
+                return;
+
+            if (_guilds == null)
+                return;
+
+            Guild selectedGuild = _guilds.SingleOrDefault(p => p.Name == guildNameComboBox.Items[guildNameComboBox.SelectedIndex].ToString());
+
+            if (selectedGuild == null)
+                return;
+
+
+
         }
         /*
          private List<Guild> guilds;

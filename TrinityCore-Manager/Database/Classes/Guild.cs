@@ -8,17 +8,17 @@ namespace TrinityCore_Manager.Database.Classes
 {
     class Guild
     {
-        public int guildid { get; set; }
-        public string name { get; set; }
-        public string leaderguid { get; set; }
+        public int Guildid { get; set; }
+        public string Name { get; set; }
+        public int Leaderguid { get; set; }
         public byte EmblemStyle { get; set; }
         public byte EmblemColor { get; set; }
         public byte BorderStyle { get; set; }
         public byte BorderColor { get; set; }
-        public byte BackgroungColor { get; set; }
-        public string info { get; set; }
-        public string motd { get; set; }
-        public int createdate { get; set; }
-        public string BankMoney { get; set; }
+        public byte BackgroundColor { get; set; }
+        public string Info { get; set; }
+        public string Motd { get; set; }
+        public DateTime CreateDate { get; set; }
+        public long BankMoney { get; set; }
     }
 }

@@ -8,24 +8,77 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.TCM;
+using TrinityCore_Manager.CustomForms;
+using TrinityCore_Manager.Database.Classes;
 
 namespace TrinityCore_Manager
 {
-    public partial class CreateGuild : DevComponents.DotNetBar.Office2007Form
+    public partial class CreateGuild : TCMForm
     {
         public CreateGuild()
         {
             InitializeComponent();
         }
 
-        private void leaderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private async void CreateGuild_Load(object sender, EventArgs e)
         {
-            // This ComboBox should list only characters that are not in any guild
+
+            StartLoading();
+
+            List<string> chars = await TCManager.Instance.CharDatabase.GetCharNamesNotInGuild();
+
+            StopLoading();
+
+            foreach (string character in chars)
+            {
+                leaderComboBox.Items.Add(character);
+            }
+
+            if (leaderComboBox.Items.Count > 0)
+                leaderComboBox.SelectedIndex = 0;
+
         }
 
-        private void createButton_Click(object sender, EventArgs e)
+        private async void createButton_Click(object sender, EventArgs e)
         {
-            
+
+            string guildName = nameTextBox.Text;
+
+            if (string.IsNullOrEmpty(guildName))
+            {
+
+                MessageBoxEx.Show(this, "Guild name cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            if (leaderComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "A guild leader must be selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            StartLoading();
+
+            string guildLeader = leaderComboBox.Items[leaderComboBox.SelectedIndex].ToString();
+
+            await TCManager.Instance.CharDatabase.CreateGuild(guildName, leaderComboBox.Items[leaderComboBox.SelectedIndex].ToString());
+
+            StopLoading();
+
+            this.Close();
+
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

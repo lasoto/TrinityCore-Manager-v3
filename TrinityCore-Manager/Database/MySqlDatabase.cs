@@ -99,6 +99,39 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task<object> ExecuteScalar(string query, params MySqlParameter[] mParams)
+        {
+
+            return await Task.Run(() =>
+            {
+
+                using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+                {
+
+                    conn.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+
+                        foreach (var param in mParams)
+                        {
+                            cmd.Parameters.Add(param);
+                        }
+
+                        object returnVal = cmd.ExecuteScalar();
+
+                        conn.Close();
+
+                        return returnVal;
+
+                    }
+
+                }
+
+            });
+
+        }
+
         #endregion
 
     }

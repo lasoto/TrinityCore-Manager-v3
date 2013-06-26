@@ -122,6 +122,7 @@
             this.guildNameComboBox.Size = new System.Drawing.Size(177, 20);
             this.guildNameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.guildNameComboBox.TabIndex = 11;
+            this.guildNameComboBox.SelectedIndexChanged += new System.EventHandler(this.guildNameComboBox_SelectedIndexChanged);
             // 
             // guildListView
             // 
@@ -220,7 +221,6 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.guildLeaderComboBox);
             this.Controls.Add(this.leaderNameLabel);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -230,6 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(574, 631);
             this.Name = "EditGuild";
             this.Text = "Edit Guild";
+            this.Load += new System.EventHandler(this.EditGuild_Load);
             this.ResumeLayout(false);
 
         }

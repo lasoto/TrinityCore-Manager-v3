@@ -46,6 +46,20 @@
             this.stopServerButton = new DevComponents.DotNetBar.ButtonItem();
             this.openConfigurationFileButton = new DevComponents.DotNetBar.ButtonItem();
             this.otherCommandsButton = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
+            this.progressRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.progressPanelItemContainer = new DevComponents.DotNetBar.ItemContainer();
+            this.compileProgressBar = new DevComponents.DotNetBar.ProgressBarItem();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.compilerItemContainer = new DevComponents.DotNetBar.ItemContainer();
+            this.platformLabel = new DevComponents.DotNetBar.LabelItem();
+            this.platformComboBox = new DevComponents.DotNetBar.ComboBoxItem();
+            this.x86ComboItem = new DevComponents.Editors.ComboItem();
+            this.x64ComboItem = new DevComponents.Editors.ComboItem();
+            this.compileTrinityCoreButton = new DevComponents.DotNetBar.ButtonItem();
+            this.trinityCoreRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.setTrunkLocationButton = new DevComponents.DotNetBar.ButtonItem();
+            this.downloadUpdateButton = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.communicationsRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.communicationsItemContainer = new DevComponents.DotNetBar.ItemContainer();
@@ -67,20 +81,6 @@
             this.deleteGuildButton = new DevComponents.DotNetBar.ButtonItem();
             this.mailRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.sendMailButton = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
-            this.progressRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.progressPanelItemContainer = new DevComponents.DotNetBar.ItemContainer();
-            this.compileProgressBar = new DevComponents.DotNetBar.ProgressBarItem();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.compilerItemContainer = new DevComponents.DotNetBar.ItemContainer();
-            this.platformLabel = new DevComponents.DotNetBar.LabelItem();
-            this.platformComboBox = new DevComponents.DotNetBar.ComboBoxItem();
-            this.x86ComboItem = new DevComponents.Editors.ComboItem();
-            this.x64ComboItem = new DevComponents.Editors.ComboItem();
-            this.compileTrinityCoreButton = new DevComponents.DotNetBar.ButtonItem();
-            this.trinityCoreRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.setTrunkLocationButton = new DevComponents.DotNetBar.ButtonItem();
-            this.downloadUpdateButton = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.accountCleanupRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.accountCleanupButton = new DevComponents.DotNetBar.ButtonItem();
@@ -159,9 +159,9 @@
             this.outputTabItem = new DevComponents.DotNetBar.TabItem(this.components);
             this.mainRibbonControl.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.otherRibbonPanel.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
@@ -181,14 +181,14 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -253,6 +253,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // playerManagementRibbonBar
             // 
@@ -446,308 +447,6 @@
             this.otherCommandsButton.SubItemsExpandWidth = 14;
             this.otherCommandsButton.Text = "<div align=\"center\">Other<br/>Commands</div>";
             this.otherCommandsButton.Click += new System.EventHandler(this.otherCommandsButton_Click);
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.communicationsRibbonBar);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1127, 139);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // communicationsRibbonBar
-            // 
-            this.communicationsRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.communicationsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.communicationsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.communicationsRibbonBar.ContainerControlProcessDialogKey = true;
-            this.communicationsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.communicationsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.communicationsItemContainer,
-            this.communicationsItemContainer2,
-            this.sendMessageButton});
-            this.communicationsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.communicationsRibbonBar.Location = new System.Drawing.Point(3, 0);
-            this.communicationsRibbonBar.Name = "communicationsRibbonBar";
-            this.communicationsRibbonBar.Size = new System.Drawing.Size(1106, 136);
-            this.communicationsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.communicationsRibbonBar.TabIndex = 0;
-            this.communicationsRibbonBar.Text = "Communications Panel";
-            // 
-            // 
-            // 
-            this.communicationsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.communicationsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // communicationsItemContainer
-            // 
-            // 
-            // 
-            // 
-            this.communicationsItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.communicationsItemContainer.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.communicationsItemContainer.Name = "communicationsItemContainer";
-            this.communicationsItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.serverAnnouncementCheckBox,
-            this.serverNotificationCheckBox,
-            this.sendMessageToPlayerCheckBox,
-            this.gmAnnouncementCheckBox});
-            // 
-            // 
-            // 
-            this.communicationsItemContainer.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.communicationsItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // serverAnnouncementCheckBox
-            // 
-            this.serverAnnouncementCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.serverAnnouncementCheckBox.Name = "serverAnnouncementCheckBox";
-            this.serverAnnouncementCheckBox.Text = "Server Announcement";
-            // 
-            // serverNotificationCheckBox
-            // 
-            this.serverNotificationCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.serverNotificationCheckBox.Name = "serverNotificationCheckBox";
-            this.serverNotificationCheckBox.Text = "Server Notification";
-            // 
-            // sendMessageToPlayerCheckBox
-            // 
-            this.sendMessageToPlayerCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.sendMessageToPlayerCheckBox.Name = "sendMessageToPlayerCheckBox";
-            this.sendMessageToPlayerCheckBox.Text = "Send Message To Player";
-            // 
-            // gmAnnouncementCheckBox
-            // 
-            this.gmAnnouncementCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.gmAnnouncementCheckBox.Name = "gmAnnouncementCheckBox";
-            this.gmAnnouncementCheckBox.Text = "Announcement to GM\'s";
-            // 
-            // communicationsItemContainer2
-            // 
-            // 
-            // 
-            // 
-            this.communicationsItemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.communicationsItemContainer2.Name = "communicationsItemContainer2";
-            this.communicationsItemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.communicationsTextBox});
-            // 
-            // 
-            // 
-            this.communicationsItemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.communicationsItemContainer2.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // communicationsTextBox
-            // 
-            this.communicationsTextBox.Name = "communicationsTextBox";
-            this.communicationsTextBox.TextBoxWidth = 790;
-            this.communicationsTextBox.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // sendMessageButton
-            // 
-            this.sendMessageButton.HotForeColor = System.Drawing.Color.Chartreuse;
-            this.sendMessageButton.Name = "sendMessageButton";
-            this.sendMessageButton.Text = "Send Message";
-            // 
-            // otherRibbonPanel
-            // 
-            this.otherRibbonPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.otherRibbonPanel.Controls.Add(this.eventsRibbonBar);
-            this.otherRibbonPanel.Controls.Add(this.guildRibbonBar);
-            this.otherRibbonPanel.Controls.Add(this.mailRibbonBar);
-            this.otherRibbonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherRibbonPanel.Location = new System.Drawing.Point(0, 53);
-            this.otherRibbonPanel.Name = "otherRibbonPanel";
-            this.otherRibbonPanel.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.otherRibbonPanel.Size = new System.Drawing.Size(1127, 139);
-            // 
-            // 
-            // 
-            this.otherRibbonPanel.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.otherRibbonPanel.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.otherRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.otherRibbonPanel.TabIndex = 7;
-            this.otherRibbonPanel.Visible = false;
-            // 
-            // eventsRibbonBar
-            // 
-            this.eventsRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.eventsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.eventsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.eventsRibbonBar.ContainerControlProcessDialogKey = true;
-            this.eventsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.eventsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.eventActiveButton,
-            this.startEventButton,
-            this.stopEventButton});
-            this.eventsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.eventsRibbonBar.Location = new System.Drawing.Point(279, 0);
-            this.eventsRibbonBar.Name = "eventsRibbonBar";
-            this.eventsRibbonBar.Size = new System.Drawing.Size(218, 136);
-            this.eventsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.eventsRibbonBar.TabIndex = 2;
-            this.eventsRibbonBar.Text = "Events";
-            // 
-            // 
-            // 
-            this.eventsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.eventsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // eventActiveButton
-            // 
-            this.eventActiveButton.Name = "eventActiveButton";
-            this.eventActiveButton.SubItemsExpandWidth = 14;
-            this.eventActiveButton.Text = "Event Active List";
-            this.eventActiveButton.Click += new System.EventHandler(this.eventActiveButton_Click);
-            // 
-            // startEventButton
-            // 
-            this.startEventButton.Name = "startEventButton";
-            this.startEventButton.SubItemsExpandWidth = 14;
-            this.startEventButton.Text = "Start Event";
-            this.startEventButton.Click += new System.EventHandler(this.startEventButton_Click);
-            // 
-            // stopEventButton
-            // 
-            this.stopEventButton.HotForeColor = System.Drawing.Color.Tomato;
-            this.stopEventButton.Name = "stopEventButton";
-            this.stopEventButton.SubItemsExpandWidth = 14;
-            this.stopEventButton.Text = "Stop Event";
-            // 
-            // guildRibbonBar
-            // 
-            this.guildRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.guildRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.guildRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.guildRibbonBar.ContainerControlProcessDialogKey = true;
-            this.guildRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guildRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.createGuildButton,
-            this.editGuildButton,
-            this.deleteGuildButton});
-            this.guildRibbonBar.ItemSpacing = 10;
-            this.guildRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.guildRibbonBar.Location = new System.Drawing.Point(63, 0);
-            this.guildRibbonBar.Name = "guildRibbonBar";
-            this.guildRibbonBar.Size = new System.Drawing.Size(216, 136);
-            this.guildRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.guildRibbonBar.TabIndex = 1;
-            this.guildRibbonBar.Text = "Guild";
-            // 
-            // 
-            // 
-            this.guildRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.guildRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // createGuildButton
-            // 
-            this.createGuildButton.ForeColor = System.Drawing.Color.Chartreuse;
-            this.createGuildButton.Name = "createGuildButton";
-            this.createGuildButton.SubItemsExpandWidth = 14;
-            this.createGuildButton.Text = "Create Guild";
-            this.createGuildButton.Click += new System.EventHandler(this.createGuildButton_Click);
-            // 
-            // editGuildButton
-            // 
-            this.editGuildButton.ForeColor = System.Drawing.Color.Teal;
-            this.editGuildButton.Name = "editGuildButton";
-            this.editGuildButton.SubItemsExpandWidth = 14;
-            this.editGuildButton.Text = "Edit Guild";
-            this.editGuildButton.Click += new System.EventHandler(this.editGuildButton_Click);
-            // 
-            // deleteGuildButton
-            // 
-            this.deleteGuildButton.HotForeColor = System.Drawing.Color.Tomato;
-            this.deleteGuildButton.Name = "deleteGuildButton";
-            this.deleteGuildButton.Text = "Delete Guild";
-            this.deleteGuildButton.Click += new System.EventHandler(this.deleteGuildButton_Click);
-            // 
-            // mailRibbonBar
-            // 
-            this.mailRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.mailRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.mailRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mailRibbonBar.ContainerControlProcessDialogKey = true;
-            this.mailRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mailRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sendMailButton});
-            this.mailRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.mailRibbonBar.Location = new System.Drawing.Point(3, 0);
-            this.mailRibbonBar.Name = "mailRibbonBar";
-            this.mailRibbonBar.Size = new System.Drawing.Size(60, 136);
-            this.mailRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.mailRibbonBar.TabIndex = 0;
-            this.mailRibbonBar.Text = "Mail";
-            // 
-            // 
-            // 
-            this.mailRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.mailRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // sendMailButton
-            // 
-            this.sendMailButton.Name = "sendMailButton";
-            this.sendMailButton.SubItemsExpandWidth = 14;
-            this.sendMailButton.Text = "Send Mail";
-            this.sendMailButton.Click += new System.EventHandler(this.sendMailButton_Click);
             // 
             // ribbonPanel6
             // 
@@ -960,6 +659,307 @@
             this.downloadUpdateButton.SubItemsExpandWidth = 14;
             this.downloadUpdateButton.Text = "Download/Update";
             this.downloadUpdateButton.Click += new System.EventHandler(this.downloadUpdateButton_Click);
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.communicationsRibbonBar);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1127, 139);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // communicationsRibbonBar
+            // 
+            this.communicationsRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.communicationsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.communicationsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.communicationsRibbonBar.ContainerControlProcessDialogKey = true;
+            this.communicationsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.communicationsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.communicationsItemContainer,
+            this.communicationsItemContainer2,
+            this.sendMessageButton});
+            this.communicationsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.communicationsRibbonBar.Location = new System.Drawing.Point(3, 0);
+            this.communicationsRibbonBar.Name = "communicationsRibbonBar";
+            this.communicationsRibbonBar.Size = new System.Drawing.Size(1106, 136);
+            this.communicationsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.communicationsRibbonBar.TabIndex = 0;
+            this.communicationsRibbonBar.Text = "Communications Panel";
+            // 
+            // 
+            // 
+            this.communicationsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.communicationsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // communicationsItemContainer
+            // 
+            // 
+            // 
+            // 
+            this.communicationsItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.communicationsItemContainer.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.communicationsItemContainer.Name = "communicationsItemContainer";
+            this.communicationsItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.serverAnnouncementCheckBox,
+            this.serverNotificationCheckBox,
+            this.sendMessageToPlayerCheckBox,
+            this.gmAnnouncementCheckBox});
+            // 
+            // 
+            // 
+            this.communicationsItemContainer.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.communicationsItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // serverAnnouncementCheckBox
+            // 
+            this.serverAnnouncementCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.serverAnnouncementCheckBox.Name = "serverAnnouncementCheckBox";
+            this.serverAnnouncementCheckBox.Text = "Server Announcement";
+            // 
+            // serverNotificationCheckBox
+            // 
+            this.serverNotificationCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.serverNotificationCheckBox.Name = "serverNotificationCheckBox";
+            this.serverNotificationCheckBox.Text = "Server Notification";
+            // 
+            // sendMessageToPlayerCheckBox
+            // 
+            this.sendMessageToPlayerCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.sendMessageToPlayerCheckBox.Name = "sendMessageToPlayerCheckBox";
+            this.sendMessageToPlayerCheckBox.Text = "Send Message To Player";
+            // 
+            // gmAnnouncementCheckBox
+            // 
+            this.gmAnnouncementCheckBox.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.gmAnnouncementCheckBox.Name = "gmAnnouncementCheckBox";
+            this.gmAnnouncementCheckBox.Text = "Announcement to GM\'s";
+            // 
+            // communicationsItemContainer2
+            // 
+            // 
+            // 
+            // 
+            this.communicationsItemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.communicationsItemContainer2.Name = "communicationsItemContainer2";
+            this.communicationsItemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.communicationsTextBox});
+            // 
+            // 
+            // 
+            this.communicationsItemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.communicationsItemContainer2.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // communicationsTextBox
+            // 
+            this.communicationsTextBox.Name = "communicationsTextBox";
+            this.communicationsTextBox.TextBoxWidth = 790;
+            this.communicationsTextBox.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // sendMessageButton
+            // 
+            this.sendMessageButton.HotForeColor = System.Drawing.Color.Chartreuse;
+            this.sendMessageButton.Name = "sendMessageButton";
+            this.sendMessageButton.Text = "Send Message";
+            // 
+            // otherRibbonPanel
+            // 
+            this.otherRibbonPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.otherRibbonPanel.Controls.Add(this.eventsRibbonBar);
+            this.otherRibbonPanel.Controls.Add(this.guildRibbonBar);
+            this.otherRibbonPanel.Controls.Add(this.mailRibbonBar);
+            this.otherRibbonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherRibbonPanel.Location = new System.Drawing.Point(0, 53);
+            this.otherRibbonPanel.Name = "otherRibbonPanel";
+            this.otherRibbonPanel.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.otherRibbonPanel.Size = new System.Drawing.Size(1127, 139);
+            // 
+            // 
+            // 
+            this.otherRibbonPanel.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.otherRibbonPanel.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.otherRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherRibbonPanel.TabIndex = 7;
+            // 
+            // eventsRibbonBar
+            // 
+            this.eventsRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.eventsRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.eventsRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.eventsRibbonBar.ContainerControlProcessDialogKey = true;
+            this.eventsRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.eventsRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.eventActiveButton,
+            this.startEventButton,
+            this.stopEventButton});
+            this.eventsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.eventsRibbonBar.Location = new System.Drawing.Point(279, 0);
+            this.eventsRibbonBar.Name = "eventsRibbonBar";
+            this.eventsRibbonBar.Size = new System.Drawing.Size(218, 136);
+            this.eventsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.eventsRibbonBar.TabIndex = 2;
+            this.eventsRibbonBar.Text = "Events";
+            // 
+            // 
+            // 
+            this.eventsRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.eventsRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // eventActiveButton
+            // 
+            this.eventActiveButton.Name = "eventActiveButton";
+            this.eventActiveButton.SubItemsExpandWidth = 14;
+            this.eventActiveButton.Text = "Event Active List";
+            this.eventActiveButton.Click += new System.EventHandler(this.eventActiveButton_Click);
+            // 
+            // startEventButton
+            // 
+            this.startEventButton.Name = "startEventButton";
+            this.startEventButton.SubItemsExpandWidth = 14;
+            this.startEventButton.Text = "Start Event";
+            this.startEventButton.Click += new System.EventHandler(this.startEventButton_Click);
+            // 
+            // stopEventButton
+            // 
+            this.stopEventButton.HotForeColor = System.Drawing.Color.Tomato;
+            this.stopEventButton.Name = "stopEventButton";
+            this.stopEventButton.SubItemsExpandWidth = 14;
+            this.stopEventButton.Text = "Stop Event";
+            // 
+            // guildRibbonBar
+            // 
+            this.guildRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.guildRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.guildRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.guildRibbonBar.ContainerControlProcessDialogKey = true;
+            this.guildRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guildRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.createGuildButton,
+            this.editGuildButton,
+            this.deleteGuildButton});
+            this.guildRibbonBar.ItemSpacing = 10;
+            this.guildRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.guildRibbonBar.Location = new System.Drawing.Point(63, 0);
+            this.guildRibbonBar.Name = "guildRibbonBar";
+            this.guildRibbonBar.Size = new System.Drawing.Size(216, 136);
+            this.guildRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.guildRibbonBar.TabIndex = 1;
+            this.guildRibbonBar.Text = "Guild";
+            // 
+            // 
+            // 
+            this.guildRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.guildRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // createGuildButton
+            // 
+            this.createGuildButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.createGuildButton.Name = "createGuildButton";
+            this.createGuildButton.SubItemsExpandWidth = 14;
+            this.createGuildButton.Text = "Create Guild";
+            this.createGuildButton.Click += new System.EventHandler(this.createGuildButton_Click);
+            // 
+            // editGuildButton
+            // 
+            this.editGuildButton.ForeColor = System.Drawing.Color.Teal;
+            this.editGuildButton.Name = "editGuildButton";
+            this.editGuildButton.SubItemsExpandWidth = 14;
+            this.editGuildButton.Text = "Edit Guild";
+            this.editGuildButton.Click += new System.EventHandler(this.editGuildButton_Click);
+            // 
+            // deleteGuildButton
+            // 
+            this.deleteGuildButton.HotForeColor = System.Drawing.Color.Tomato;
+            this.deleteGuildButton.Name = "deleteGuildButton";
+            this.deleteGuildButton.Text = "Delete Guild";
+            this.deleteGuildButton.Click += new System.EventHandler(this.deleteGuildButton_Click);
+            // 
+            // mailRibbonBar
+            // 
+            this.mailRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mailRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mailRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mailRibbonBar.ContainerControlProcessDialogKey = true;
+            this.mailRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mailRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sendMailButton});
+            this.mailRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.mailRibbonBar.Location = new System.Drawing.Point(3, 0);
+            this.mailRibbonBar.Name = "mailRibbonBar";
+            this.mailRibbonBar.Size = new System.Drawing.Size(60, 136);
+            this.mailRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mailRibbonBar.TabIndex = 0;
+            this.mailRibbonBar.Text = "Mail";
+            // 
+            // 
+            // 
+            this.mailRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mailRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // sendMailButton
+            // 
+            this.sendMailButton.Name = "sendMailButton";
+            this.sendMailButton.SubItemsExpandWidth = 14;
+            this.sendMailButton.Text = "Send Mail";
+            this.sendMailButton.Click += new System.EventHandler(this.sendMailButton_Click);
             // 
             // ribbonPanel3
             // 
@@ -1734,7 +1734,6 @@
             // 
             // serverManagementTab
             // 
-            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
@@ -1777,6 +1776,7 @@
             // 
             // otherTab
             // 
+            this.otherTab.Checked = true;
             this.otherTab.Name = "otherTab";
             this.otherTab.Panel = this.otherRibbonPanel;
             this.otherTab.Text = "Other";
@@ -1972,9 +1972,9 @@
             this.mainRibbonControl.ResumeLayout(false);
             this.mainRibbonControl.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.otherRibbonPanel.ResumeLayout(false);
-            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);

@@ -81,6 +81,7 @@
             // 
             this.leaderComboBox.DisplayMember = "Text";
             this.leaderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.leaderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.leaderComboBox.ForeColor = System.Drawing.Color.White;
             this.leaderComboBox.FormattingEnabled = true;
             this.leaderComboBox.ItemHeight = 14;
@@ -89,7 +90,6 @@
             this.leaderComboBox.Size = new System.Drawing.Size(232, 20);
             this.leaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.leaderComboBox.TabIndex = 3;
-            this.leaderComboBox.SelectedIndexChanged += new System.EventHandler(this.leaderComboBox_SelectedIndexChanged);
             // 
             // cancelButton
             // 
@@ -102,6 +102,7 @@
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // createButton
             // 
@@ -130,7 +131,6 @@
             this.Controls.Add(this.leaderNameLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.guildNameLabel);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -140,6 +140,7 @@
             this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "CreateGuild";
             this.Text = "Create Guild";
+            this.Load += new System.EventHandler(this.CreateGuild_Load);
             this.ResumeLayout(false);
 
         }

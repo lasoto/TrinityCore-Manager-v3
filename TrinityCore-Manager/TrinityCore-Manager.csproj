@@ -145,10 +145,13 @@
     <Compile Include="Database\Classes\BannedAccount.cs" />
     <Compile Include="Database\Classes\Character.cs" />
     <Compile Include="Database\Classes\Guild.cs" />
+    <Compile Include="Database\Classes\GuildMember.cs" />
     <Compile Include="Database\Classes\IPBan.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
+    <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
     <Compile Include="Database\Enums\GMLevel.cs" />
+    <Compile Include="Database\Enums\GuildRanks.cs" />
     <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
       <SubType>Form</SubType>
     </Compile>
