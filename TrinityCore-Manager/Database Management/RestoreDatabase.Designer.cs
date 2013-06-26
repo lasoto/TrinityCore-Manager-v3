@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 149);
+            this.ClientSize = new System.Drawing.Size(490, 144);
             this.Controls.Add(this.worldCheckBox);
             this.Controls.Add(this.charCheckBox);
             this.Controls.Add(this.authCheckBox);
@@ -150,6 +150,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 187);
             this.Name = "RestoreDatabase";
             this.Text = "Restore Database";
+            this.Load += new System.EventHandler(this.RestoreDatabase_Load);
             this.ResumeLayout(false);
 
         }

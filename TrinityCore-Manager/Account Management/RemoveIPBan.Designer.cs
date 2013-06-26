@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveIPBan));
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
-            this.banButton = new DevComponents.DotNetBar.ButtonX();
-            this.ipAddressBanInput = new DevComponents.Editors.IpAddressInput();
+            this.removeBanButton = new DevComponents.DotNetBar.ButtonX();
             this.ipAddressBanLabel = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).BeginInit();
+            this.ipAddressComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -47,34 +46,18 @@
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
             // 
-            // banButton
+            // removeBanButton
             // 
-            this.banButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.banButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.banButton.Location = new System.Drawing.Point(300, 150);
-            this.banButton.Name = "banButton";
-            this.banButton.Size = new System.Drawing.Size(85, 33);
-            this.banButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.banButton.TabIndex = 6;
-            this.banButton.Text = "Remove";
-            this.banButton.TextColor = System.Drawing.Color.Chartreuse;
-            this.banButton.Click += new System.EventHandler(this.banButton_Click);
-            // 
-            // ipAddressBanInput
-            // 
-            this.ipAddressBanInput.AutoOverwrite = true;
-            // 
-            // 
-            // 
-            this.ipAddressBanInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.ipAddressBanInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ipAddressBanInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.ipAddressBanInput.ButtonFreeText.Visible = true;
-            this.ipAddressBanInput.Location = new System.Drawing.Point(160, 65);
-            this.ipAddressBanInput.Name = "ipAddressBanInput";
-            this.ipAddressBanInput.Size = new System.Drawing.Size(127, 20);
-            this.ipAddressBanInput.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ipAddressBanInput.TabIndex = 5;
+            this.removeBanButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.removeBanButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.removeBanButton.Location = new System.Drawing.Point(300, 150);
+            this.removeBanButton.Name = "removeBanButton";
+            this.removeBanButton.Size = new System.Drawing.Size(85, 33);
+            this.removeBanButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.removeBanButton.TabIndex = 6;
+            this.removeBanButton.Text = "Remove";
+            this.removeBanButton.TextColor = System.Drawing.Color.Chartreuse;
+            this.removeBanButton.Click += new System.EventHandler(this.removeBanButton_Click);
             // 
             // ipAddressBanLabel
             // 
@@ -83,20 +66,32 @@
             // 
             this.ipAddressBanLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ipAddressBanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ipAddressBanLabel.Location = new System.Drawing.Point(70, 59);
+            this.ipAddressBanLabel.Location = new System.Drawing.Point(59, 55);
             this.ipAddressBanLabel.Name = "ipAddressBanLabel";
             this.ipAddressBanLabel.Size = new System.Drawing.Size(84, 26);
             this.ipAddressBanLabel.TabIndex = 4;
             this.ipAddressBanLabel.Text = "IP Address:";
             // 
+            // ipAddressComboBox
+            // 
+            this.ipAddressComboBox.DisplayMember = "Text";
+            this.ipAddressComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ipAddressComboBox.FormattingEnabled = true;
+            this.ipAddressComboBox.ItemHeight = 14;
+            this.ipAddressComboBox.Location = new System.Drawing.Point(150, 59);
+            this.ipAddressComboBox.Name = "ipAddressComboBox";
+            this.ipAddressComboBox.Size = new System.Drawing.Size(171, 20);
+            this.ipAddressComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ipAddressComboBox.TabIndex = 8;
+            // 
             // RemoveIPBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 195);
+            this.ClientSize = new System.Drawing.Size(393, 190);
+            this.Controls.Add(this.ipAddressComboBox);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.banButton);
-            this.Controls.Add(this.ipAddressBanInput);
+            this.Controls.Add(this.removeBanButton);
             this.Controls.Add(this.ipAddressBanLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -108,7 +103,7 @@
             this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "RemoveIPBan";
             this.Text = "Remove IP Ban";
-            ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).EndInit();
+            this.Load += new System.EventHandler(this.RemoveIPBan_Load);
             this.ResumeLayout(false);
 
         }
@@ -116,8 +111,8 @@
         #endregion
 
         private DevComponents.DotNetBar.ButtonX cancelButton;
-        private DevComponents.DotNetBar.ButtonX banButton;
-        private DevComponents.Editors.IpAddressInput ipAddressBanInput;
+        private DevComponents.DotNetBar.ButtonX removeBanButton;
         private DevComponents.DotNetBar.LabelX ipAddressBanLabel;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ipAddressComboBox;
     }
 }

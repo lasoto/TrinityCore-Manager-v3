@@ -83,6 +83,7 @@
             this.banButton.TabIndex = 2;
             this.banButton.Text = "Ban!";
             this.banButton.TextColor = System.Drawing.Color.Tomato;
+            this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // cancelButton
             // 
@@ -94,6 +95,7 @@
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // labelX1
             // 
@@ -102,7 +104,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(16, 79);
+            this.labelX1.Location = new System.Drawing.Point(17, 79);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(95, 26);
             this.labelX1.TabIndex = 4;
@@ -131,11 +133,11 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(40, 47);
+            this.labelX2.Location = new System.Drawing.Point(19, 47);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(71, 26);
+            this.labelX2.Size = new System.Drawing.Size(95, 26);
             this.labelX2.TabIndex = 11;
-            this.labelX2.Text = "Ban Time:";
+            this.labelX2.Text = "Unban Time:";
             // 
             // ipBanSuperTooltip
             // 
@@ -153,6 +155,7 @@
             this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.permanentBanCheckBox.TabIndex = 13;
             this.permanentBanCheckBox.Text = "Permanent Ban";
+            this.permanentBanCheckBox.CheckedChanged += new System.EventHandler(this.permanentBanCheckBox_CheckedChanged);
             // 
             // banTimeDateTimeInput
             // 
@@ -209,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 195);
+            this.ClientSize = new System.Drawing.Size(393, 190);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);
@@ -229,6 +232,7 @@
             this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AddIPBan";
             this.Text = "Add IP Ban";
+            this.Load += new System.EventHandler(this.AddIPBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).EndInit();
             this.ResumeLayout(false);

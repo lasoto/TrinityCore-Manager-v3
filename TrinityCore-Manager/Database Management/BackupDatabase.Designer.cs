@@ -41,6 +41,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.scheduleBackupsCheckbox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).BeginInit();
@@ -132,6 +133,7 @@
             this.daysIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.daysIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.daysIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.daysIntegerInput.Enabled = false;
             this.daysIntegerInput.Location = new System.Drawing.Point(155, 101);
             this.daysIntegerInput.MinValue = 0;
             this.daysIntegerInput.Name = "daysIntegerInput";
@@ -147,6 +149,7 @@
             this.hoursIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.hoursIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.hoursIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.hoursIntegerInput.Enabled = false;
             this.hoursIntegerInput.Location = new System.Drawing.Point(262, 101);
             this.hoursIntegerInput.MinValue = 0;
             this.hoursIntegerInput.Name = "hoursIntegerInput";
@@ -162,6 +165,7 @@
             this.minIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
             this.minIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.minIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.minIntegerInput.Enabled = false;
             this.minIntegerInput.Location = new System.Drawing.Point(368, 101);
             this.minIntegerInput.MinValue = 0;
             this.minIntegerInput.Name = "minIntegerInput";
@@ -208,11 +212,26 @@
             this.labelX5.TabIndex = 23;
             this.labelX5.Text = "Minutes";
             // 
+            // scheduleBackupsCheckbox
+            // 
+            // 
+            // 
+            // 
+            this.scheduleBackupsCheckbox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.scheduleBackupsCheckbox.Location = new System.Drawing.Point(202, 43);
+            this.scheduleBackupsCheckbox.Name = "scheduleBackupsCheckbox";
+            this.scheduleBackupsCheckbox.Size = new System.Drawing.Size(133, 23);
+            this.scheduleBackupsCheckbox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.scheduleBackupsCheckbox.TabIndex = 24;
+            this.scheduleBackupsCheckbox.Text = "Schedule Backups";
+            this.scheduleBackupsCheckbox.CheckedChanged += new System.EventHandler(this.scheduleBackupsCheckbox_CheckedChanged);
+            // 
             // BackupDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 205);
+            this.ClientSize = new System.Drawing.Size(490, 200);
+            this.Controls.Add(this.scheduleBackupsCheckbox);
             this.Controls.Add(this.labelX5);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
@@ -235,6 +254,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 243);
             this.Name = "BackupDatabase";
             this.Text = "Backup Database";
+            this.Load += new System.EventHandler(this.BackupDatabase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).EndInit();
@@ -256,5 +276,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.Controls.CheckBoxX scheduleBackupsCheckbox;
     }
 }

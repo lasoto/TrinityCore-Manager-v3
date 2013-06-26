@@ -214,5 +214,65 @@ namespace TrinityCore_Manager.Properties {
                 this["TrunkLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int TCMTheme {
+            get {
+                return ((int)(this["TCMTheme"]));
+            }
+            set {
+                this["TCMTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool BackupScheduleEnabled {
+            get {
+                return ((bool)(this["BackupScheduleEnabled"]));
+            }
+            set {
+                this["BackupScheduleEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int BackupDays {
+            get {
+                return ((int)(this["BackupDays"]));
+            }
+            set {
+                this["BackupDays"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int BackupHours {
+            get {
+                return ((int)(this["BackupHours"]));
+            }
+            set {
+                this["BackupHours"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int BackupMinutes {
+            get {
+                return ((int)(this["BackupMinutes"]));
+            }
+            set {
+                this["BackupMinutes"] = value;
+            }
+        }
     }
 }

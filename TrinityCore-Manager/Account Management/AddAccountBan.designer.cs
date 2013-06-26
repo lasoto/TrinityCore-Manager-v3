@@ -59,6 +59,7 @@
             // 
             this.accListComboBox.DisplayMember = "Text";
             this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.accListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accListComboBox.ForeColor = System.Drawing.Color.White;
             this.accListComboBox.FormattingEnabled = true;
             this.accListComboBox.ItemHeight = 14;
@@ -95,7 +96,7 @@
             // 
             // banReasonTextBox
             // 
-            this.banReasonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.banReasonTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -202,13 +203,14 @@
             this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.permanentBanCheckBox.TabIndex = 10;
             this.permanentBanCheckBox.Text = "Permanent Ban";
+            this.permanentBanCheckBox.CheckedChanged += new System.EventHandler(this.permanentBanCheckBox_CheckedChanged);
             // 
             // AddAccountBan
             // 
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 191);
+            this.ClientSize = new System.Drawing.Size(393, 190);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);

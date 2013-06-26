@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccount));
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.applicationButton2 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer5 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer6 = new DevComponents.DotNetBar.ItemContainer();
@@ -62,11 +60,6 @@
             this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
             this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2012Dark;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // applicationButton2
             // 
@@ -394,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(498, 259);
+            this.ClientSize = new System.Drawing.Size(498, 258);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
@@ -422,7 +415,6 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.ApplicationButton applicationButton2;
         private DevComponents.DotNetBar.ItemContainer itemContainer5;
         private DevComponents.DotNetBar.ItemContainer itemContainer6;

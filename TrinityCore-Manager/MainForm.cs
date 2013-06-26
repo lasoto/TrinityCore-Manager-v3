@@ -14,7 +14,9 @@ using DevComponents.DotNetBar;
 using Microsoft.Win32;
 using TrinityCore_Manager.Clients;
 using TrinityCore_Manager.Compile_Forms;
+using TrinityCore_Manager.Database.Classes;
 using TrinityCore_Manager.Misc;
+using TrinityCore_Manager.Misc.Enums;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Security;
@@ -45,8 +47,41 @@ namespace TrinityCore_Manager
 
             SetInitial();
             CheckSettings();
+            InitStyle();
             Init();
 
+        }
+
+        private void InitStyle()
+        {
+            switch ((TCMTheme)Settings.Default.TCMTheme)
+            {
+
+                case TCMTheme.Dark:
+
+                    StyleManager.Style = eStyle.VisualStudio2012Dark;
+
+                    break;
+
+                case TCMTheme.Blue:
+
+                    StyleManager.Style = eStyle.VisualStudio2010Blue;
+
+                    break;
+
+                case TCMTheme.Light:
+
+                    StyleManager.Style = eStyle.VisualStudio2012Light;
+
+                    break;
+
+                case TCMTheme.Black:
+
+                    StyleManager.Style = eStyle.Office2010Black;
+
+                    break;
+
+            }
         }
 
         private void SetInitial()
@@ -761,15 +796,25 @@ namespace TrinityCore_Manager
 
         }
 
-        private void executeCommandButton_Click(object sender, EventArgs e)
+        private async void executeCommandButton_Click(object sender, EventArgs e)
         {
 
-            if (TCManager.Instance.Online)
+            if (string.IsNullOrEmpty(executeCommandTextBox.Text))
             {
-                if (Settings.Default.ServerType == (int)ServerType.RemoteAccess)
-                    TCManager.Instance.RAClient.SendMessage(executeCommandTextBox.Text);
-                else
-                    TCManager.Instance.WorldClient.SendMessage(executeCommandTextBox.Text);
+
+                MessageBoxEx.Show(this, "You must enter a command to execute!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            try
+            {
+                await TCAction.ExecuteCommand(executeCommandTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -803,7 +848,6 @@ namespace TrinityCore_Manager
             {
                 if (inst.AuthClient.IsOnline)
                 {
-                    Console.WriteLine("on1");
                     inst.AuthClient.Stop();
                 }
             }
@@ -812,7 +856,6 @@ namespace TrinityCore_Manager
             {
                 if (inst.WorldClient.IsOnline)
                 {
-                    Console.WriteLine("on2");
                     inst.WorldClient.Stop();
                 }
             }
@@ -826,8 +869,54 @@ namespace TrinityCore_Manager
             }
         }
 
-        private void platformComboBox_Click(object sender, EventArgs e)
+        private void settingsButton_Click(object sender, EventArgs e)
         {
+            using (TCMSettings settings = new TCMSettings())
+            {
+                settings.FormClosing += settings_FormClosing;
+                settings.ShowDialog();
+            }
+        }
+
+        void settings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InitStyle();
+        }
+
+        private async void refreshListPlayerManagementButton_Click(object sender, EventArgs e)
+        {
+
+            playerManagementComboBox.Items.Clear();
+
+            List<Account> onlineAccounts = await TCManager.Instance.AuthDatabase.GetOnlineAccounts();
+
+            foreach (Account onlineAccount in onlineAccounts)
+            {
+                playerManagementComboBox.Items.Add(onlineAccount.Username);
+            }
+
+        }
+
+        private async void kickPlayerButton_Click(object sender, EventArgs e)
+        {
+
+            if (playerManagementComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "You must first select a character to kick!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            try
+            {
+                await TCAction.KickPlayer(playerManagementComboBox.Items[playerManagementComboBox.SelectedIndex].ToString(), String.Empty);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

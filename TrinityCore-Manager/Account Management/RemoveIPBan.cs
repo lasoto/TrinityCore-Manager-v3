@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.Database.Classes;
 using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
@@ -19,22 +20,35 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private async void banButton_Click(object sender, EventArgs e)
+        private async void RemoveIPBan_Load(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(ipAddressBanInput.Value))
+            List<IPBan> ipBans = await TCManager.Instance.AuthDatabase.GetIPBans();
+
+            foreach (var ipBan in ipBans)
+            {
+                ipAddressComboBox.Items.Add(ipBan);
+            }
+
+        }
+
+        private async void removeBanButton_Click(object sender, EventArgs e)
+        {
+
+            if (ipAddressComboBox.SelectedIndex == -1)
             {
 
-                MessageBoxEx.Show(this, "IP Address required!", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, "You must select an ip address to unban!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
 
             }
 
-            await TCManager.Instance.AuthDatabase.RemoveIpBan(ipAddressBanInput.Value);
+            await TCAction.UnbanIPAddress(ipAddressComboBox.Items[ipAddressComboBox.SelectedIndex].ToString());
 
-            this.Close();
-        
         }
+
+
+
     }
 }

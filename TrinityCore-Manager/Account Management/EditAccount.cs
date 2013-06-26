@@ -73,7 +73,9 @@ namespace TrinityCore_Manager
 
             StartLoading();
 
-            await TCManager.Instance.AuthDatabase.ModifyAccount(selectedAccount.Id, passTextBox.Text, (GMLevel)accLevelComboBox.SelectedIndex + 1, (Expansion)accAddonComboBox.SelectedIndex);
+            await TCAction.SetPlayerPassword(selectedAccount.Username, passTextBox.Text);
+            await TCAction.SetPlayerExpansion(selectedAccount.Username, (Expansion)accAddonComboBox.SelectedIndex);
+            await TCAction.SetGMLevel(selectedAccount.Username, (GMLevel)accLevelComboBox.SelectedIndex + 1, -1);
 
             StopLoading();
 

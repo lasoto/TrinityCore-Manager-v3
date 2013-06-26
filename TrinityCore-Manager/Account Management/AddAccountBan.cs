@@ -49,22 +49,13 @@ namespace TrinityCore_Manager
 
             }
 
-            if (!TCManager.Instance.Online)
-            {
-
-                MessageBoxEx.Show(this, "Currently offline!", "Offline", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return;
-
-            }
-
             string username = accListComboBox.Items[accListComboBox.SelectedIndex].ToString();
             int unix = (int)banTimeDateTimeInput.Value.ToUnixTimestamp();
             string reason = banReasonTextBox.Text;
 
             StartLoading();
 
-            await TCAction.BanAccount(username, unix, reason);
+            await TCAction.BanAccount(username, unix, "Admin", reason);
 
             StopLoading();
 
@@ -75,6 +66,11 @@ namespace TrinityCore_Manager
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void permanentBanCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            banTimeDateTimeInput.Enabled = !permanentBanCheckBox.Checked;
         }
     }
 }

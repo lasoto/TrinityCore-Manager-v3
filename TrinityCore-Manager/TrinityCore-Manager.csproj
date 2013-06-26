@@ -145,6 +145,7 @@
     <Compile Include="Database\Classes\BannedAccount.cs" />
     <Compile Include="Database\Classes\Character.cs" />
     <Compile Include="Database\Classes\Guild.cs" />
+    <Compile Include="Database\Classes\IPBan.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
     <Compile Include="Database\Enums\GMLevel.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="Item Forms\ItemSpellControl.Designer.cs">
       <DependentUpon>ItemSpellControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misc\Enums\TCMTheme.cs" />
     <Compile Include="NPC Forms\CreateNPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +454,12 @@
     <Compile Include="ShowSQLCode.Designer.cs">
       <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="TCMSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMSettings.Designer.cs">
+      <DependentUpon>TCMSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="TCM\TCAction.cs" />
     <Compile Include="TCM\TCManager.cs" />
     <Compile Include="TCM\TCMClient.cs" />
@@ -660,6 +668,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowSQLCode.resx">
       <DependentUpon>ShowSQLCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMSettings.resx">
+      <DependentUpon>TCMSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
