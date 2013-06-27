@@ -19,13 +19,18 @@ namespace TrinityCore_Manager.Database
         {
         }
 
-        public async Task AddGuildMember(int guildid, int guid, GuildRanks ranks)
+        public async Task AddGuildMember(int guildid, int guid, int rid)
         {
 
             await ExecuteNonQuery("INSERT INTO `guild_member` (guildid, guid, rank, pnote, offnote) VALUES (@guildid, @guid, @rank, @pnote, @offnote);",
-                new MySqlParameter("@guildid", guildid), new MySqlParameter("@guid", guid), new MySqlParameter("@rank", (int)ranks), new MySqlParameter("@pnote", String.Empty),
+                new MySqlParameter("@guildid", guildid), new MySqlParameter("@guid", guid), new MySqlParameter("@rank", rid), new MySqlParameter("@pnote", String.Empty),
                 new MySqlParameter("@offnote", String.Empty));
 
+        }
+
+        public async Task RemoveGuildMember(int guid)
+        {
+            await ExecuteNonQuery("DELETE FROM `guild_member` WHERE guid = @guid", new MySqlParameter("@guid", guid));
         }
 
         public async Task CreateGuild(string name, int leaderguid)
@@ -41,7 +46,7 @@ namespace TrinityCore_Manager.Database
                 max = Convert.ToInt32((uint)newGuid);
 
             await ExecuteNonQuery("INSERT INTO `guild` (`guildid`, `name`, `leaderguid`, `info`, `motd`, `createdate`) VALUES (@guildid, @name, @leaderguid, @info, @motd, @createdate);",
-                new MySqlParameter("@guildid", ++max), new MySqlParameter("@name", name), new MySqlParameter("@leaderguid", leaderguid), new MySqlParameter("@info", ""), 
+                new MySqlParameter("@guildid", ++max), new MySqlParameter("@name", name), new MySqlParameter("@leaderguid", leaderguid), new MySqlParameter("@info", ""),
                 new MySqlParameter("@motd", "No message set."),
                 new MySqlParameter("@createdate", DateTime.Now.ToUnixTimestamp()));
 
@@ -69,6 +74,36 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task RemoveGuild(int guildid)
+        {
+            await ExecuteNonQuery("DELETE FROM `guild` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_member` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_rank` WHERE guildid = @guildid;", new MySqlParameter(@"guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_eventlog` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_item` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_right` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_tab` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_eventlog` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+        }
+
+        public async Task DeleteGuild(int guildid)
+        {
+            await ExecuteNonQuery("DELETE FROM `guild` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_member` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_rank` WHERE guildid = @guildid;", new MySqlParameter(@"guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_eventlog` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_item` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_right` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_bank_tab` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+            await ExecuteNonQuery("DELETE FROM `guild_eventlog` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+        }
+
+        public async Task UpdateGuildRank(int guildid, int memberId, int rank)
+        {
+            await ExecuteNonQuery("UPDATE `guild_member` SET rank = @rank WHERE guid = @guid;", new MySqlParameter("@rank", rank), new MySqlParameter("@guid", memberId));
+            await ExecuteNonQuery("UPDATE `guild` SET leaderguid = @leaderguid WHERE guildid = @guildid;", new MySqlParameter("@leaderguid", memberId), new MySqlParameter("@guildid", guildid));
+        }
+
         public async Task CreateGuild(string name, string leaderName)
         {
 
@@ -86,9 +121,9 @@ namespace TrinityCore_Manager.Database
 
             Guild guild = new Guild();
 
-            guild.Guildid = (int)row["guildid"];
+            guild.Guildid = Convert.ToInt32((uint)row["guildid"]);
             guild.Name = (string)row["name"];
-            guild.Leaderguid = (int)row["leaderguid"];
+            guild.Leaderguid = Convert.ToInt32((uint)row["leaderguid"]);
             guild.EmblemStyle = (byte)row["EmblemStyle"];
             guild.EmblemColor = (byte)row["EmblemColor"];
             guild.BorderStyle = (byte)row["BorderStyle"];
@@ -96,8 +131,8 @@ namespace TrinityCore_Manager.Database
             guild.BackgroundColor = (byte)row["BackgroundColor"];
             guild.Info = (string)row["info"];
             guild.Motd = (string)row["motd"];
-            guild.CreateDate = Convert.ToInt64((int)row["createdate"]).ToDateTime();
-            guild.BankMoney = (long)row["BankMoney"];
+            guild.CreateDate = Convert.ToInt64((uint)row["createdate"]).ToDateTime();
+            guild.BankMoney = Convert.ToInt64((UInt64)row["BankMoney"]);
 
             return guild;
 
@@ -149,8 +184,8 @@ namespace TrinityCore_Manager.Database
             GuildMember member = new GuildMember();
 
             member.GuildId = Convert.ToInt32((uint)row["guildid"]);
-            member.Guid = (int)row["guid"];
-            member.Rank = (int)row["rank"];
+            member.Guid = Convert.ToInt32((uint)row["guid"]);
+            member.Rank = Convert.ToInt32((byte)row["rank"]);
             member.Offnote = (string)row["offnote"];
             member.PNote = (string)row["pnote"];
 
@@ -177,7 +212,7 @@ namespace TrinityCore_Manager.Database
         public async Task<GuildMember> GetGuildMember(int guid)
         {
 
-            DataTable dt = await ExecuteQuery("SELECT * FROM `guild_member` WHERE guid = @guid", new MySqlParameter("@guid", guid));
+            DataTable dt = await ExecuteQuery("SELECT * FROM `guild_member` WHERE guid = @guid;", new MySqlParameter("@guid", guid));
 
             if (dt.Rows.Count == 0)
                 return null;
@@ -197,6 +232,57 @@ namespace TrinityCore_Manager.Database
             int guid = (int)dt.Rows[0]["guid"];
 
             return await GetGuildMember(guid);
+
+        }
+
+        public async Task<string> GetCharacterName(int guid)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `name` FROM `characters` WHERE guid = @guid;", new MySqlParameter("@guid", guid));
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return (string)dt.Rows[0]["name"];
+
+        }
+
+        public async Task<int> GetCharacterGuid(string charName)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `guid` FROM `characters` WHERE name = @name;", new MySqlParameter("@name", charName));
+
+            if (dt.Rows.Count == 0)
+                return -1;
+
+            return Convert.ToInt32((uint)dt.Rows[0]["guid"]);
+
+        }
+
+        private MemberRank BuildMemberRank(DataRow row)
+        {
+
+            MemberRank rank = new MemberRank();
+            rank.RankId = (byte)row["rid"];
+            rank.RankName = (string)row["rname"];
+
+            return rank;
+
+        }
+
+        public async Task<List<MemberRank>> GetMemberRanks(int guildid)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `rid`, `rname` FROM `guild_rank` WHERE guildid = @guildid;", new MySqlParameter("@guildid", guildid));
+
+            List<MemberRank> ranks = new List<MemberRank>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                ranks.Add(BuildMemberRank(row));
+            }
+
+            return ranks;
 
         }
 
