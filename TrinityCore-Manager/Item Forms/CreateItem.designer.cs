@@ -618,7 +618,7 @@
             this.itemDetailsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemDetailsWizardPage.Name = "itemDetailsWizardPage";
             this.itemDetailsWizardPage.PageTitle = "Item Details";
-            this.itemDetailsWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemDetailsWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -1101,7 +1101,7 @@
             this.createWeaponWizardPage.InteriorPage = false;
             this.createWeaponWizardPage.Location = new System.Drawing.Point(0, 0);
             this.createWeaponWizardPage.Name = "createWeaponWizardPage";
-            this.createWeaponWizardPage.Size = new System.Drawing.Size(1143, 615);
+            this.createWeaponWizardPage.Size = new System.Drawing.Size(1143, 616);
             // 
             // 
             // 
@@ -1124,7 +1124,7 @@
             this.mysqlTestingConnectionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.mysqlTestingConnectionLabel.BackColor = System.Drawing.Color.Transparent;
             this.mysqlTestingConnectionLabel.ForeColor = System.Drawing.Color.Black;
-            this.mysqlTestingConnectionLabel.Location = new System.Drawing.Point(611, 461);
+            this.mysqlTestingConnectionLabel.Location = new System.Drawing.Point(611, 462);
             this.mysqlTestingConnectionLabel.Name = "mysqlTestingConnectionLabel";
             this.mysqlTestingConnectionLabel.Size = new System.Drawing.Size(174, 14);
             this.mysqlTestingConnectionLabel.TabIndex = 4;
@@ -1165,7 +1165,7 @@
             this.itemCreatorDescLabel.ForeColor = System.Drawing.Color.Black;
             this.itemCreatorDescLabel.Location = new System.Drawing.Point(210, 100);
             this.itemCreatorDescLabel.Name = "itemCreatorDescLabel";
-            this.itemCreatorDescLabel.Size = new System.Drawing.Size(918, 483);
+            this.itemCreatorDescLabel.Size = new System.Drawing.Size(918, 484);
             this.itemCreatorDescLabel.TabIndex = 1;
             this.itemCreatorDescLabel.Text = "This wizard will guide you through the process of creating custom items for your " +
     "server.\r\n\r\nIt is easy, simple and absolutely painless.";
@@ -1175,7 +1175,7 @@
             this.itemCreatorMiniMssgLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.itemCreatorMiniMssgLabel.BackColor = System.Drawing.Color.Transparent;
             this.itemCreatorMiniMssgLabel.ForeColor = System.Drawing.Color.Black;
-            this.itemCreatorMiniMssgLabel.Location = new System.Drawing.Point(210, 592);
+            this.itemCreatorMiniMssgLabel.Location = new System.Drawing.Point(210, 593);
             this.itemCreatorMiniMssgLabel.Name = "itemCreatorMiniMssgLabel";
             this.itemCreatorMiniMssgLabel.Size = new System.Drawing.Size(120, 13);
             this.itemCreatorMiniMssgLabel.TabIndex = 2;
@@ -1225,7 +1225,7 @@
             this.itemCreatorWizard.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemCreatorWizard.Location = new System.Drawing.Point(0, 0);
             this.itemCreatorWizard.Name = "itemCreatorWizard";
-            this.itemCreatorWizard.Size = new System.Drawing.Size(1143, 661);
+            this.itemCreatorWizard.Size = new System.Drawing.Size(1143, 662);
             this.itemCreatorWizard.TabIndex = 3;
             this.itemCreatorWizard.WizardPages.AddRange(new DevComponents.DotNetBar.WizardPage[] {
             this.createWeaponWizardPage,
@@ -1274,7 +1274,7 @@
             this.itemTypeWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemTypeWizardPage.Name = "itemTypeWizardPage";
             this.itemTypeWizardPage.PageTitle = "Item Type";
-            this.itemTypeWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemTypeWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -1798,7 +1798,7 @@
             this.itemWeaponStatsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemWeaponStatsWizardPage.Name = "itemWeaponStatsWizardPage";
             this.itemWeaponStatsWizardPage.PageTitle = "Item Weapon Stats";
-            this.itemWeaponStatsWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemWeaponStatsWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -2216,7 +2216,7 @@
             this.itemRequirementsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemRequirementsWizardPage.Name = "itemRequirementsWizardPage";
             this.itemRequirementsWizardPage.PageTitle = "Item Requirements";
-            this.itemRequirementsWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemRequirementsWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -3066,7 +3066,7 @@
             this.itemDamageWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemDamageWizardPage.Name = "itemDamageWizardPage";
             this.itemDamageWizardPage.PageTitle = "Item Damage";
-            this.itemDamageWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemDamageWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -3346,7 +3346,7 @@
             this.itemStatsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemStatsWizardPage.Name = "itemStatsWizardPage";
             this.itemStatsWizardPage.PageTitle = "Item Stats";
-            this.itemStatsWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemStatsWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -3504,7 +3504,7 @@
             this.resistsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.resistsWizardPage.Name = "resistsWizardPage";
             this.resistsWizardPage.PageTitle = "Item Resists";
-            this.resistsWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.resistsWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -3711,7 +3711,7 @@
             this.itemSocketWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemSocketWizardPage.Name = "itemSocketWizardPage";
             this.itemSocketWizardPage.PageTitle = "Item Sockets";
-            this.itemSocketWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemSocketWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -4141,7 +4141,7 @@
             this.itemSpellWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemSpellWizardPage.Name = "itemSpellWizardPage";
             this.itemSpellWizardPage.PageTitle = "Item Spell";
-            this.itemSpellWizardPage.Size = new System.Drawing.Size(1129, 531);
+            this.itemSpellWizardPage.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -4289,7 +4289,7 @@
             this.wizardPage1.Location = new System.Drawing.Point(7, 72);
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.PageTitle = "Item Other";
-            this.wizardPage1.Size = new System.Drawing.Size(1129, 531);
+            this.wizardPage1.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -5504,7 +5504,7 @@
             this.wizardPage2.Location = new System.Drawing.Point(7, 72);
             this.wizardPage2.Name = "wizardPage2";
             this.wizardPage2.PageTitle = "Item Done!";
-            this.wizardPage2.Size = new System.Drawing.Size(1129, 531);
+            this.wizardPage2.Size = new System.Drawing.Size(1129, 532);
             // 
             // 
             // 
@@ -5643,9 +5643,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 661);
+            this.ClientSize = new System.Drawing.Size(1143, 662);
             this.Controls.Add(this.itemCreatorWizard);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

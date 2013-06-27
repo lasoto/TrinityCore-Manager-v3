@@ -147,6 +147,7 @@
     <Compile Include="Database\Classes\Guild.cs" />
     <Compile Include="Database\Classes\GuildMember.cs" />
     <Compile Include="Database\Classes\IPBan.cs" />
+    <Compile Include="Database\Classes\MemberRank.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
@@ -213,10 +214,10 @@
     <Compile Include="NPC Forms\CreateNPCVendor.Designer.cs">
       <DependentUpon>CreateNPCVendor.cs</DependentUpon>
     </Compile>
-    <Compile Include="NPC Forms\DeleteGuild.cs">
+    <Compile Include="Guild Forms\DeleteGuild.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NPC Forms\DeleteGuild.Designer.cs">
+    <Compile Include="Guild Forms\DeleteGuild.Designer.cs">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
     </Compile>
     <Compile Include="Account Management\EditAccount.cs">
@@ -542,7 +543,7 @@
     <EmbeddedResource Include="NPC Forms\CreateNPCVendor.resx">
       <DependentUpon>CreateNPCVendor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NPC Forms\DeleteGuild.resx">
+    <EmbeddedResource Include="Guild Forms\DeleteGuild.resx">
       <DependentUpon>DeleteGuild.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account Management\EditAccount.resx">

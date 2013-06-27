@@ -32,7 +32,7 @@ namespace TrinityCore_Manager.Database
 
         #region Helper Methods
 
-        public async Task ExecuteNonQuery(string nonQuery, params MySqlParameter[] mParams)
+        protected async Task ExecuteNonQuery(string nonQuery, params MySqlParameter[] mParams)
         {
 
             await Task.Run(() =>
@@ -63,7 +63,7 @@ namespace TrinityCore_Manager.Database
 
         }
 
-        public async Task<DataTable> ExecuteQuery(string query, params MySqlParameter[] mParams)
+        protected async Task<DataTable> ExecuteQuery(string query, params MySqlParameter[] mParams)
         {
 
             return await Task.Run(() =>
@@ -99,7 +99,7 @@ namespace TrinityCore_Manager.Database
 
         }
 
-        public async Task<object> ExecuteScalar(string query, params MySqlParameter[] mParams)
+        protected async Task<object> ExecuteScalar(string query, params MySqlParameter[] mParams)
         {
 
             return await Task.Run(() =>
