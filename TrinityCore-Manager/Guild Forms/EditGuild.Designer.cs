@@ -42,8 +42,6 @@
             this.uninviteButton = new DevComponents.DotNetBar.ButtonX();
             this.playerListLabel = new DevComponents.DotNetBar.LabelX();
             this.playerListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.ranksComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -84,7 +82,6 @@
             this.guildLeaderComboBox.Size = new System.Drawing.Size(177, 20);
             this.guildLeaderComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.guildLeaderComboBox.TabIndex = 7;
-            this.guildLeaderComboBox.SelectedIndexChanged += new System.EventHandler(this.guildLeaderComboBox_SelectedIndexChanged);
             // 
             // leaderNameLabel
             // 
@@ -97,7 +94,7 @@
             this.leaderNameLabel.Name = "leaderNameLabel";
             this.leaderNameLabel.Size = new System.Drawing.Size(92, 23);
             this.leaderNameLabel.TabIndex = 6;
-            this.leaderNameLabel.Text = "Guild Master:";
+            this.leaderNameLabel.Text = "Guild Leader:";
             // 
             // guildNameLabel
             // 
@@ -106,11 +103,11 @@
             // 
             this.guildNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.guildNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.guildNameLabel.Location = new System.Drawing.Point(156, 9);
+            this.guildNameLabel.Location = new System.Drawing.Point(113, 9);
             this.guildNameLabel.Name = "guildNameLabel";
-            this.guildNameLabel.Size = new System.Drawing.Size(43, 23);
+            this.guildNameLabel.Size = new System.Drawing.Size(86, 23);
             this.guildNameLabel.TabIndex = 10;
-            this.guildNameLabel.Text = "Guild:";
+            this.guildNameLabel.Text = "Guild Name:";
             // 
             // guildNameComboBox
             // 
@@ -139,10 +136,9 @@
             this.guildRankColumnHeader,
             this.guildMemberColumnHeader});
             this.guildListView.ForeColor = System.Drawing.Color.White;
-            this.guildListView.FullRowSelect = true;
-            this.guildListView.Location = new System.Drawing.Point(12, 157);
+            this.guildListView.Location = new System.Drawing.Point(12, 119);
             this.guildListView.Name = "guildListView";
-            this.guildListView.Size = new System.Drawing.Size(534, 369);
+            this.guildListView.Size = new System.Drawing.Size(534, 407);
             this.guildListView.TabIndex = 12;
             this.guildListView.UseCompatibleStateImageBehavior = false;
             this.guildListView.View = System.Windows.Forms.View.Details;
@@ -161,13 +157,13 @@
             // 
             this.inviteButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.inviteButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.inviteButton.Location = new System.Drawing.Point(391, 83);
+            this.inviteButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.inviteButton.Location = new System.Drawing.Point(388, 80);
             this.inviteButton.Name = "inviteButton";
-            this.inviteButton.Size = new System.Drawing.Size(78, 65);
+            this.inviteButton.Size = new System.Drawing.Size(78, 33);
             this.inviteButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.inviteButton.TabIndex = 13;
             this.inviteButton.Text = "Invite";
-            this.inviteButton.Click += new System.EventHandler(this.inviteButton_Click);
             // 
             // uninviteButton
             // 
@@ -179,7 +175,6 @@
             this.uninviteButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.uninviteButton.TabIndex = 14;
             this.uninviteButton.Text = "Uninvite from guild";
-            this.uninviteButton.Click += new System.EventHandler(this.uninviteButton_Click);
             // 
             // playerListLabel
             // 
@@ -188,9 +183,9 @@
             // 
             this.playerListLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.playerListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.playerListLabel.Location = new System.Drawing.Point(30, 83);
+            this.playerListLabel.Location = new System.Drawing.Point(27, 83);
             this.playerListLabel.Name = "playerListLabel";
-            this.playerListLabel.Size = new System.Drawing.Size(169, 23);
+            this.playerListLabel.Size = new System.Drawing.Size(172, 23);
             this.playerListLabel.TabIndex = 15;
             this.playerListLabel.Text = "Invite new player to guild:";
             // 
@@ -208,33 +203,6 @@
             this.playerListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.playerListComboBox.TabIndex = 16;
             // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(154, 125);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(45, 23);
-            this.labelX1.TabIndex = 17;
-            this.labelX1.Text = "Rank:";
-            // 
-            // ranksComboBox
-            // 
-            this.ranksComboBox.DisplayMember = "Text";
-            this.ranksComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ranksComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ranksComboBox.ForeColor = System.Drawing.Color.White;
-            this.ranksComboBox.FormattingEnabled = true;
-            this.ranksComboBox.ItemHeight = 14;
-            this.ranksComboBox.Location = new System.Drawing.Point(205, 128);
-            this.ranksComboBox.Name = "ranksComboBox";
-            this.ranksComboBox.Size = new System.Drawing.Size(177, 20);
-            this.ranksComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ranksComboBox.TabIndex = 18;
-            // 
             // EditGuild
             // 
             this.AcceptButton = this.okButton;
@@ -242,8 +210,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(554, 589);
-            this.Controls.Add(this.ranksComboBox);
-            this.Controls.Add(this.labelX1);
             this.Controls.Add(this.playerListComboBox);
             this.Controls.Add(this.playerListLabel);
             this.Controls.Add(this.uninviteButton);
@@ -284,7 +250,5 @@
         private DevComponents.DotNetBar.ButtonX uninviteButton;
         private DevComponents.DotNetBar.LabelX playerListLabel;
         private DevComponents.DotNetBar.Controls.ComboBoxEx playerListComboBox;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx ranksComboBox;
     }
 }

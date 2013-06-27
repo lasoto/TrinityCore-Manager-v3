@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNPC));
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.npcCreateWizard = new DevComponents.DotNetBar.Wizard();
             this.npcWizardPage1 = new DevComponents.DotNetBar.WizardPage();
             this.mysqlTestingConnectionLabel = new System.Windows.Forms.Label();
@@ -382,6 +384,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.armorModDoubleInput)).BeginInit();
             this.npcDoneWizardPage.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2012Dark;
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // npcCreateWizard
             // 
@@ -3900,6 +3907,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 662);
             this.Controls.Add(this.npcCreateWizard);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -3989,6 +3997,7 @@
 
         #endregion
 
+        private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Wizard npcCreateWizard;
         private DevComponents.DotNetBar.WizardPage npcWizardPage1;
         private System.Windows.Forms.Label welcomeLabel1;
