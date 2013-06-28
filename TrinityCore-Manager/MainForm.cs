@@ -24,6 +24,7 @@ using TrinityCore_Manager.Security;
 using TrinityCore_Manager.TC;
 using TrinityCore_Manager.TCM;
 using TrinityCore_Manager.NPC_Forms;
+using TrinityCore_Manager.Extensions;
 
 namespace TrinityCore_Manager
 {
@@ -41,6 +42,8 @@ namespace TrinityCore_Manager
 
         private CancellationTokenSource _compilerCTS;
 
+        private System.Windows.Forms.Timer _bTimeLeftTimer;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -49,6 +52,7 @@ namespace TrinityCore_Manager
             SetInitial();
             CheckSettings();
             InitStyle();
+            InitBackupTimer();
             Init();
 
         }
@@ -108,10 +112,53 @@ namespace TrinityCore_Manager
 
         }
 
-        private void ConnectRA()
+        private void InitBackupTimer()
         {
 
-            _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
+            if (Settings.Default.BackupScheduleAuth || Settings.Default.BackupScheduleChar || Settings.Default.BackupScheduleWorld)
+            {
+
+                TCManager.Instance.ScheduleBackups();
+
+                if (_bTimeLeftTimer != null)
+                {
+                    _bTimeLeftTimer.Enabled = false;
+                    _bTimeLeftTimer.Dispose();
+                }
+
+                nextBackupLabel.Visible = true;
+
+                _bTimeLeftTimer = new System.Windows.Forms.Timer();
+                _bTimeLeftTimer.Interval = (int)TimeSpan.FromSeconds(1).TotalMilliseconds;
+                _bTimeLeftTimer.Tick += _bTimeLeftTimer_Tick;
+
+
+                _bTimeLeftTimer.Start();
+
+            }
+            else
+            {
+                nextBackupLabel.Visible = false;
+            }
+
+        }
+
+        void _bTimeLeftTimer_Tick(object sender, EventArgs e)
+        {
+
+            DateTimeOffset dto = TCManager.Instance.BackupNext;
+
+            TimeSpan ts = dto - DateTime.Now;
+
+            nextBackupLabel.Text = String.Format("Next backup: {0}", ts.ToReadableString());
+
+        }
+
+        private void ConnectRA()
+        {
+           
+
+               _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
 
             try
             {
@@ -930,7 +977,18 @@ namespace TrinityCore_Manager
         private void backupDbButton_Click(object sender, EventArgs e)
         {
             using (BackupDatabase backup = new BackupDatabase())
+            {
+
+                backup.FormClosing += backup_FormClosing;
+
                 backup.ShowDialog();
+            
+            }
+        }
+
+        void backup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InitBackupTimer();
         }
 
         private void restoreDbButton_Click(object sender, EventArgs e)

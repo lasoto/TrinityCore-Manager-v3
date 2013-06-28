@@ -57,8 +57,44 @@ namespace TrinityCore_Manager.TCM
             }
         }
 
+        public DateTimeOffset BackupNext
+        {
+            get
+            {
+
+                TriggerKey key = null;
+
+                if (_triggers.ContainsKey("auth"))
+                    key = _triggers["auth"];
+                else if (_triggers.ContainsKey("char"))
+                    key = _triggers["char"];
+                else if (_triggers.ContainsKey("world"))
+                    key = _triggers["world"];
+                else
+                    return DateTime.Now;
+
+                if (key == null)
+                    return DateTime.Now;
+
+                ITrigger trigger = _scheduler.GetTrigger(key);
+
+                if (trigger == null)
+                    return DateTime.Now;
+
+                DateTimeOffset? dton = trigger.GetNextFireTimeUtc();
+
+                if (dton == null)
+                    return DateTime.Now;
+
+                DateTimeOffset dto = dton.Value;
+
+                return dto;
+
+            }
+        }
+
         private IScheduler _scheduler;
-        private List<TriggerKey> _triggers;
+        private Dictionary<string, TriggerKey> _triggers;
 
         public TCManager()
         {
@@ -69,7 +105,7 @@ namespace TrinityCore_Manager.TCM
             CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBCharName);
             WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBWorldName);
 
-            _triggers = new List<TriggerKey>();
+            _triggers = new Dictionary<string, TriggerKey>();
 
         }
 
@@ -106,7 +142,7 @@ namespace TrinityCore_Manager.TCM
             if (!_triggers.Any())
                 return;
 
-            _scheduler.UnscheduleJobs(_triggers);
+            _scheduler.UnscheduleJobs(_triggers.Values.ToList());
             _scheduler.Clear();
             _scheduler.Shutdown();
         
@@ -131,7 +167,7 @@ namespace TrinityCore_Manager.TCM
 
             _scheduler.ScheduleJob(job, trigger);
 
-            _triggers.Add(trigger.Key);
+            _triggers.Add(name, trigger.Key);
 
         }
 

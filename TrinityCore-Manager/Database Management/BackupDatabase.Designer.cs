@@ -66,7 +66,7 @@
             // 
             this.backupButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.backupButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.backupButton.Location = new System.Drawing.Point(166, 182);
+            this.backupButton.Location = new System.Drawing.Point(155, 183);
             this.backupButton.Name = "backupButton";
             this.backupButton.Size = new System.Drawing.Size(89, 37);
             this.backupButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -220,7 +220,7 @@
             // 
             // 
             this.scheduleBackupsCheckbox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.scheduleBackupsCheckbox.Location = new System.Drawing.Point(202, 43);
+            this.scheduleBackupsCheckbox.Location = new System.Drawing.Point(217, 43);
             this.scheduleBackupsCheckbox.Name = "scheduleBackupsCheckbox";
             this.scheduleBackupsCheckbox.Size = new System.Drawing.Size(133, 23);
             this.scheduleBackupsCheckbox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -246,12 +246,12 @@
             // 
             this.saveButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.saveButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.saveButton.Location = new System.Drawing.Point(261, 182);
+            this.saveButton.Location = new System.Drawing.Point(250, 183);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(89, 37);
+            this.saveButton.Size = new System.Drawing.Size(88, 37);
             this.saveButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.saveButton.TabIndex = 26;
-            this.saveButton.Text = "Start Scheduler!";
+            this.saveButton.Text = "Save";
             this.saveButton.TextColor = System.Drawing.Color.Chartreuse;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -259,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 231);
+            this.ClientSize = new System.Drawing.Size(490, 232);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.backupProgressBar);
             this.Controls.Add(this.scheduleBackupsCheckbox);
@@ -275,7 +275,6 @@
             this.Controls.Add(this.authCheckBox);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.backupButton);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -285,6 +284,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 274);
             this.Name = "BackupDatabase";
             this.Text = "Backup Database";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BackupDatabase_FormClosing);
             this.Load += new System.EventHandler(this.BackupDatabase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).EndInit();

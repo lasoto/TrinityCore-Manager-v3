@@ -229,7 +229,7 @@ namespace TrinityCore_Manager.Database
             if (dt.Rows.Count == 0)
                 return null;
 
-            int guid = (int)dt.Rows[0]["guid"];
+            int guid = Convert.ToInt32((uint)dt.Rows[0]["guid"]);
 
             return await GetGuildMember(guid);
 

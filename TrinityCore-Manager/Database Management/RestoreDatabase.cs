@@ -35,6 +35,13 @@ namespace TrinityCore_Manager.Database_Management
             if (!Directory.Exists(TCManager.BackupLocation))
                 Directory.CreateDirectory(TCManager.BackupLocation);
 
+            Init();
+
+        }
+
+        private void Init()
+        {
+
             string[] files = Directory.GetFiles(TCManager.BackupLocation);
 
             const string format = "MM-dd-yy-hh-mm-ss";
@@ -100,6 +107,8 @@ namespace TrinityCore_Manager.Database_Management
                 _backups.Add(new Backup() { FileName = fileName, BackupType = bType, BackedUpOn = dt });
 
             }
+
+            restoreListComboBox.Items.Clear();
 
             _backups.Sort((x, y) => y.CompareTo(x));
 
@@ -255,6 +264,48 @@ namespace TrinityCore_Manager.Database_Management
             Character,
             World,
             Error
+        }
+
+        private void deleteBackupButton_Click(object sender, EventArgs e)
+        {
+
+            if (restoreListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No backup selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            string selected = restoreListComboBox.Items[restoreListComboBox.SelectedIndex].ToString();
+
+            var backup = _backups.FirstOrDefault(p => p.BackupText == selected);
+
+            if (backup == null)
+            {
+
+                MessageBoxEx.Show(this, "An error has occurred!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            string fName = Path.Combine(TCManager.BackupLocation, backup.FileName);
+
+            if (!File.Exists(fName))
+            {
+
+                MessageBoxEx.Show(this, "Could not find backup file!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            File.Delete(fName);
+
+            Init();
+
         }
 
     }

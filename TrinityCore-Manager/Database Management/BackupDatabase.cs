@@ -19,6 +19,10 @@ namespace TrinityCore_Manager.Database_Management
     public partial class BackupDatabase : DevComponents.DotNetBar.Office2007Form
     {
 
+        private bool _busy;
+
+        private CancellationTokenSource _cts;
+
         public BackupDatabase()
         {
             InitializeComponent();
@@ -80,21 +84,29 @@ namespace TrinityCore_Manager.Database_Management
             backupProgressBar.Visible = true;
             backupProgressBar.TextVisible = true;
 
-            CancellationTokenSource cts = new CancellationTokenSource();
+            _busy = true;
 
-            if (auth)
+            _cts = new CancellationTokenSource();
+
+            try
             {
-                await TCManager.Instance.AuthDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-auth.sql", DateTime.Now.ToString(format))), progress, cts.Token);
+                if (auth)
+                {
+                    await TCManager.Instance.AuthDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-auth.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                }
+
+                if (characters)
+                {
+                    await TCManager.Instance.CharDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-char.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                }
+
+                if (world)
+                {
+                    await TCManager.Instance.WorldDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-world.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                }
             }
-
-            if (characters)
+            catch (Exception)
             {
-                await TCManager.Instance.CharDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-char.sql", DateTime.Now.ToString(format))), progress, cts.Token);
-            }
-
-            if (world)
-            {
-                await TCManager.Instance.WorldDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-world.sql", DateTime.Now.ToString(format))), progress, cts.Token);
             }
 
             backupProgressBar.TextVisible = false;
@@ -103,6 +115,8 @@ namespace TrinityCore_Manager.Database_Management
 
             backupButton.Enabled = true;
             saveButton.Enabled = true;
+
+            _busy = false;
 
             MessageBoxEx.Show(this, "Finished!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -122,6 +136,19 @@ namespace TrinityCore_Manager.Database_Management
 
             if (scheduleBackupsCheckbox.Checked)
             {
+
+                int total = daysIntegerInput.Value;
+                total += hoursIntegerInput.Value;
+                total += minIntegerInput.Value;
+
+                if (total <= 0)
+                {
+
+                    MessageBoxEx.Show(this, "Interval cannot be less than or equal to zero!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+
+                }
 
                 set.BackupDays = daysIntegerInput.Value;
                 set.BackupHours = hoursIntegerInput.Value;
@@ -152,6 +179,23 @@ namespace TrinityCore_Manager.Database_Management
 
             this.Close();
 
+        }
+
+        private void BackupDatabase_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_busy)
+            {
+
+                if (MessageBoxEx.Show(this, "Still backing up database! Do you want to stop the backup?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    _cts.Cancel();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+            }
         }
 
     }

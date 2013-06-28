@@ -40,7 +40,19 @@ namespace TrinityCore_Manager.Database
                     backup.ExportInfo.ZipOutputFile = false;
 
                     backup.Export();
-                    backup.ExportProgressChanged += (sender, e) => progress.Report(e.PercentageCompleted);
+
+                    backup.ExportProgressChanged += (sender, e) =>
+                    {
+
+                        progress.Report(e.PercentageCompleted);
+
+                        if (token.IsCancellationRequested)
+                        {
+                            Thread.CurrentThread.Abort();
+                        }
+
+                    };
+
                     backup.ExportCompleted += (sender, e) => tcs.SetResult(true);
 
                     tcs.Task.Wait();

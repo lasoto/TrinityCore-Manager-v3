@@ -63,7 +63,18 @@ namespace TrinityCore_Manager
             if (_guilds == null)
                 return;
 
-            await TCManager.Instance.CharDatabase.DeleteGuild(guildComboBox.SelectedIndex);
+            Guild guild = _guilds.SingleOrDefault(p => p.Name.Equals(guildComboBox.Items[guildComboBox.SelectedIndex].ToString()));
+
+            if (guild == null)
+            {
+
+                MessageBoxEx.Show(this, "Could not find guild in database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            await TCManager.Instance.CharDatabase.DeleteGuild(guild.Guildid);
             await RefreshGuilds();
         }
    

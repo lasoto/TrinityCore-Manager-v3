@@ -103,7 +103,7 @@ namespace TrinityCore_Manager
 
         }
 
-        private async Task RefreshMembers()
+        private async Task RefreshMembers(bool refreshLeaders = true)
         {
 
             if (guildNameComboBox.SelectedIndex == -1)
@@ -125,7 +125,9 @@ namespace TrinityCore_Manager
                 return;
 
             guildListView.Items.Clear();
-            guildLeaderComboBox.Items.Clear();
+
+            if (refreshLeaders)
+                guildLeaderComboBox.Items.Clear();
 
             List<MemberRank> ranks = await TCManager.Instance.CharDatabase.GetMemberRanks(selectedGuild.Guildid);
             List<GuildMember> members = await TCManager.Instance.CharDatabase.GetGuildMembers(selectedGuild.Guildid);
@@ -152,7 +154,9 @@ namespace TrinityCore_Manager
 
 
                 guildListView.Items.Add(new ListViewItem(new[] { rankName, memberName }));
-                guildLeaderComboBox.Items.Add(memberName);
+
+                if (refreshLeaders)
+                    guildLeaderComboBox.Items.Add(memberName);
 
             }
 
@@ -234,21 +238,21 @@ namespace TrinityCore_Manager
 
             }
 
-            if (members.Count(p => p.Rank == gmRank.RankId) > 0)
-            {
-
-                MessageBoxEx.Show(this, "You cannot have more than 1 Guild Master!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return;
-
-            }
-
             MemberRank selectedRank = ranks.SingleOrDefault(p => p.RankName == ranksComboBox.Items[ranksComboBox.SelectedIndex].ToString());
 
             if (selectedRank == null)
             {
 
                 MessageBoxEx.Show(this, "An error has occurred", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            if (members.Count(p => p.Rank == gmRank.RankId) > 0 && selectedRank.RankId == gmRank.RankId)
+            {
+
+                MessageBoxEx.Show(this, "You cannot have more than 1 Guild Master!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
 
@@ -346,7 +350,9 @@ namespace TrinityCore_Manager
 
             }
 
+            await RefreshNewPlayersToAdd();
             await RefreshMembers();
+            await RefreshRanks();
 
             StopLoading();
 
@@ -421,10 +427,10 @@ namespace TrinityCore_Manager
             {
                 await TCManager.Instance.CharDatabase.UpdateGuildRank(selectedGuild.Guildid, gm.Guid, officerRank.RankId);
             }
- 
+
             await TCManager.Instance.CharDatabase.UpdateGuildRank(selectedGuild.Guildid, guid, gmRank.RankId);
 
-            await RefreshMembers();
+            await RefreshMembers(false);
 
             StopLoading();
 

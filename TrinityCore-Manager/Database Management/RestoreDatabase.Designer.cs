@@ -33,13 +33,14 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.restoreListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.restoreProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.deleteBackupButton = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // restoreButton
             // 
             this.restoreButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.restoreButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.restoreButton.Location = new System.Drawing.Point(207, 97);
+            this.restoreButton.Location = new System.Drawing.Point(206, 120);
             this.restoreButton.Name = "restoreButton";
             this.restoreButton.Size = new System.Drawing.Size(89, 37);
             this.restoreButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -81,30 +82,42 @@
             // 
             // 
             this.restoreProgressBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.restoreProgressBar.Location = new System.Drawing.Point(61, 64);
+            this.restoreProgressBar.Location = new System.Drawing.Point(61, 91);
             this.restoreProgressBar.Name = "restoreProgressBar";
             this.restoreProgressBar.ProgressType = DevComponents.DotNetBar.eProgressItemType.Marquee;
             this.restoreProgressBar.Size = new System.Drawing.Size(364, 23);
             this.restoreProgressBar.TabIndex = 11;
             this.restoreProgressBar.Visible = false;
             // 
+            // deleteBackupButton
+            // 
+            this.deleteBackupButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.deleteBackupButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.deleteBackupButton.Location = new System.Drawing.Point(206, 50);
+            this.deleteBackupButton.Name = "deleteBackupButton";
+            this.deleteBackupButton.Size = new System.Drawing.Size(89, 23);
+            this.deleteBackupButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.deleteBackupButton.TabIndex = 12;
+            this.deleteBackupButton.Text = "Delete Backup";
+            this.deleteBackupButton.Click += new System.EventHandler(this.deleteBackupButton_Click);
+            // 
             // RestoreDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 144);
+            this.ClientSize = new System.Drawing.Size(490, 165);
+            this.Controls.Add(this.deleteBackupButton);
             this.Controls.Add(this.restoreProgressBar);
             this.Controls.Add(this.restoreListComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.restoreButton);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(510, 187);
+            this.MaximumSize = new System.Drawing.Size(510, 207);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(510, 187);
+            this.MinimumSize = new System.Drawing.Size(510, 207);
             this.Name = "RestoreDatabase";
             this.Text = "Restore Database";
             this.Load += new System.EventHandler(this.RestoreDatabase_Load);
@@ -118,5 +131,6 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx restoreListComboBox;
         private DevComponents.DotNetBar.Controls.ProgressBarX restoreProgressBar;
+        private DevComponents.DotNetBar.ButtonX deleteBackupButton;
     }
 }
