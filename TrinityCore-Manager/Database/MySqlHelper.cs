@@ -15,21 +15,67 @@ namespace TrinityCore_Manager.Database
         public static async Task BackupDatabase(this MySqlDatabase db, string outputFile, IProgress<int> progress, CancellationToken token)
         {
 
-            using (var backup = new MySqlBackup(db.ConnectionString))
+            await Task.Run(() =>
             {
 
-                var tcs = new TaskCompletionSource<bool>();
+                using (var backup = new MySqlBackup(db.ConnectionString))
+                {
 
-                backup.ExportInfo.FileName = outputFile;
-                backup.ExportInfo.AsynchronousMode = true;
-                
-                backup.Export();
-                backup.ExportProgressChanged += (sender, e) => progress.Report(e.PercentageCompleted);
-                backup.ExportCompleted += (sender, e) => tcs.SetResult(true);
+                    var tcs = new TaskCompletionSource<bool>();
 
-                await tcs.Task;
+                    backup.ExportInfo.FileName = outputFile;
+                    backup.ExportInfo.AddCreateDatabase = true;
+                    backup.ExportInfo.AsynchronousMode = true;
+                    backup.ExportInfo.AutoCloseConnection = true;
+                    backup.ExportInfo.CalculateTotalRowsFromDatabase = true;
+                    backup.ExportInfo.ExportEvents = true;
+                    backup.ExportInfo.ExportFunctions = true;
+                    backup.ExportInfo.ExportRows = true;
+                    backup.ExportInfo.ExportStoredProcedures = true;
+                    backup.ExportInfo.ExportTableStructure = true;
+                    backup.ExportInfo.ExportTriggers = true;
+                    backup.ExportInfo.ExportViews = true;
+                    backup.ExportInfo.MaxSqlLength = 10000000;
+                    backup.ExportInfo.ExportRows = true;
+                    backup.ExportInfo.ZipOutputFile = false;
 
-            }
+                    backup.Export();
+                    backup.ExportProgressChanged += (sender, e) => progress.Report(e.PercentageCompleted);
+                    backup.ExportCompleted += (sender, e) => tcs.SetResult(true);
+
+                    tcs.Task.Wait();
+
+                }
+
+            });
+
+        }
+
+        public static async Task RestoreDatabase(this MySqlDatabase db, string inputFile, IProgress<int> progress, CancellationToken token)
+        {
+
+            await Task.Run(() =>
+            {
+
+                using (var backup = new MySqlBackup(db.ConnectionString))
+                {
+
+                    var tcs = new TaskCompletionSource<bool>();
+
+                    backup.ImportInfo.FileName = inputFile;
+                    backup.ImportInfo.AsynchronousMode = true;
+                    backup.ImportInfo.AutoCloseConnection = true;
+                    backup.ImportInfo.IgnoreSqlError = true;
+
+                    backup.Import();
+                    backup.ImportProgressChanged += (sender, e) => progress.Report(e.PercentageCompleted);
+                    backup.ImportCompleted += (sender, e) => tcs.SetResult(true);
+
+                    tcs.Task.Wait();
+
+                }
+
+            });
 
         }
 
@@ -41,23 +87,28 @@ namespace TrinityCore_Manager.Database
         public static async Task ExecuteScript(this MySqlDatabase db, string sql)
         {
 
-            using (var conn = new MySqlConnection(db.ConnectionString))
+            await Task.Run(() =>
             {
 
-                var script = new MySqlScript(conn, sql);
+                using (var conn = new MySqlConnection(db.ConnectionString))
+                {
 
-                var tcs = new TaskCompletionSource<bool>();
+                    var script = new MySqlScript(conn, sql);
 
-                script.ScriptCompleted += (sender, e) => tcs.SetResult(true);
-                script.Error += (sender, e) => tcs.SetResult(true);
+                    var tcs = new TaskCompletionSource<bool>();
 
-                script.Execute();
+                    script.ScriptCompleted += (sender, e) => tcs.SetResult(true);
+                    script.Error += (sender, e) => tcs.SetResult(true);
 
-                await tcs.Task;
+                    script.Execute();
 
-                conn.Close();
+                    tcs.Task.Wait();
 
-            }
+                    conn.Close();
+
+                }
+
+            });
 
         }
 

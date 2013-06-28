@@ -42,6 +42,8 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.scheduleBackupsCheckbox = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.backupProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.saveButton = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).BeginInit();
@@ -64,7 +66,7 @@
             // 
             this.backupButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.backupButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.backupButton.Location = new System.Drawing.Point(202, 156);
+            this.backupButton.Location = new System.Drawing.Point(166, 182);
             this.backupButton.Name = "backupButton";
             this.backupButton.Size = new System.Drawing.Size(89, 37);
             this.backupButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -226,11 +228,40 @@
             this.scheduleBackupsCheckbox.Text = "Schedule Backups";
             this.scheduleBackupsCheckbox.CheckedChanged += new System.EventHandler(this.scheduleBackupsCheckbox_CheckedChanged);
             // 
+            // backupProgressBar
+            // 
+            // 
+            // 
+            // 
+            this.backupProgressBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.backupProgressBar.Location = new System.Drawing.Point(45, 141);
+            this.backupProgressBar.Name = "backupProgressBar";
+            this.backupProgressBar.ProgressType = DevComponents.DotNetBar.eProgressItemType.Marquee;
+            this.backupProgressBar.Size = new System.Drawing.Size(413, 23);
+            this.backupProgressBar.TabIndex = 25;
+            this.backupProgressBar.TextVisible = true;
+            this.backupProgressBar.Visible = false;
+            // 
+            // saveButton
+            // 
+            this.saveButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.saveButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.saveButton.Location = new System.Drawing.Point(261, 182);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(89, 37);
+            this.saveButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.saveButton.TabIndex = 26;
+            this.saveButton.Text = "Start Scheduler!";
+            this.saveButton.TextColor = System.Drawing.Color.Chartreuse;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // BackupDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 200);
+            this.ClientSize = new System.Drawing.Size(490, 231);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.backupProgressBar);
             this.Controls.Add(this.scheduleBackupsCheckbox);
             this.Controls.Add(this.labelX5);
             this.Controls.Add(this.labelX4);
@@ -249,9 +280,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(510, 243);
+            this.MaximumSize = new System.Drawing.Size(510, 274);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(510, 243);
+            this.MinimumSize = new System.Drawing.Size(510, 274);
             this.Name = "BackupDatabase";
             this.Text = "Backup Database";
             this.Load += new System.EventHandler(this.BackupDatabase_Load);
@@ -277,5 +308,7 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.CheckBoxX scheduleBackupsCheckbox;
+        private DevComponents.DotNetBar.Controls.ProgressBarX backupProgressBar;
+        private DevComponents.DotNetBar.ButtonX saveButton;
     }
 }

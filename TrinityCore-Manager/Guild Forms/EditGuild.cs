@@ -421,8 +421,7 @@ namespace TrinityCore_Manager
             {
                 await TCManager.Instance.CharDatabase.UpdateGuildRank(selectedGuild.Guildid, gm.Guid, officerRank.RankId);
             }
-
-            //await TCManager.Instance.CharDatabase.UpdateGuildRank(selectedGuild.Guildid, 
+ 
             await TCManager.Instance.CharDatabase.UpdateGuildRank(selectedGuild.Guildid, guid, gmRank.RankId);
 
             await RefreshMembers();

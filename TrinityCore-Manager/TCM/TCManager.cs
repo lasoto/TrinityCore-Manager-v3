@@ -1,4 +1,11 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using Quartz;
+using Quartz.Impl;
 using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
@@ -40,6 +47,8 @@ namespace TrinityCore_Manager.TCM
         public CharDatabase CharDatabase { get; set; }
         public WorldDatabase WorldDatabase { get; set; }
 
+        public static readonly string BackupLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TCM", "Backups");
+
         public bool Online
         {
             get
@@ -47,6 +56,9 @@ namespace TrinityCore_Manager.TCM
                 return ((ServerType)Settings.Default.ServerType) == ServerType.Local ? AuthClient != null && AuthClient.IsOnline && WorldClient != null && WorldClient.IsOnline : RAClient != null && RAClient.IsOnline;
             }
         }
+
+        private IScheduler _scheduler;
+        private List<TriggerKey> _triggers;
 
         public TCManager()
         {
@@ -57,7 +69,90 @@ namespace TrinityCore_Manager.TCM
             CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBCharName);
             WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBWorldName);
 
+            _triggers = new List<TriggerKey>();
+
+        }
+
+        public void ScheduleBackups()
+        {
+
+            StopScheduledBackups();
+
+            ISchedulerFactory schedFact = new StdSchedulerFactory();
+
+            _scheduler = schedFact.GetScheduler();
+            _scheduler.Start();
+
+            Settings.Default.Reload();
+
+            int total = (int)TimeSpan.FromDays(Settings.Default.BackupDays).TotalMinutes;
+            total += (int)TimeSpan.FromHours(Settings.Default.BackupHours).TotalMinutes;
+            total += Settings.Default.BackupMinutes;
+
+            if (Settings.Default.BackupScheduleAuth)
+                CreateBackup("auth", AuthDatabase, total);
+
+            if (Settings.Default.BackupScheduleChar)
+                CreateBackup("char", CharDatabase, total);
+
+            if (Settings.Default.BackupScheduleWorld)
+                CreateBackup("world", WorldDatabase, total);
+
+        }
+
+        public void StopScheduledBackups()
+        {
+
+            if (!_triggers.Any())
+                return;
+
+            _scheduler.UnscheduleJobs(_triggers);
+            _scheduler.Clear();
+            _scheduler.Shutdown();
+        
+            _triggers.Clear();
+        
+        }
+
+        private void CreateBackup(string name, MySqlDatabase db, int intervalInMins)
+        {
+
+            IJobDetail job = JobBuilder.Create<BackupDBJob>()
+                        .WithIdentity("backupjob_" + name, "backup")
+                        .Build();
+
+            ITrigger trigger = TriggerBuilder.Create()
+                .WithIdentity("backupjob_" + name, "backup")
+                .StartAt(DateBuilder.FutureDate(intervalInMins, IntervalUnit.Minute))
+                .WithSimpleSchedule(x => x.RepeatForever().WithIntervalInMinutes(intervalInMins)).Build();
+
+            job.JobDataMap["backupname"] = name;
+            job.JobDataMap["backupdb"] = db;
+
+            _scheduler.ScheduleJob(job, trigger);
+
+            _triggers.Add(trigger.Key);
+
+        }
+
+        private class BackupDBJob : IJob
+        {
+            public async void Execute(IJobExecutionContext context)
+            {
+
+                const string format = "MM-dd-yy-hh-mm-ss";
+
+                var map = context.JobDetail.JobDataMap;
+
+                string file = Path.Combine(BackupLocation, String.Format("{0}-{1}.sql", DateTime.Now.ToString(format), map["backupname"]));
+
+                var db = (MySqlDatabase)map["backupdb"];
+
+                await db.BackupDatabase(file, new Progress<int>(), new CancellationToken());
+
+            }
         }
 
     }
+
 }

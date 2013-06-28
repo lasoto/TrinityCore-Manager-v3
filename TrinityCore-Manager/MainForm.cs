@@ -15,6 +15,7 @@ using Microsoft.Win32;
 using TrinityCore_Manager.Clients;
 using TrinityCore_Manager.Compile_Forms;
 using TrinityCore_Manager.Database.Classes;
+using TrinityCore_Manager.Database_Management;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Misc.Enums;
 using TrinityCore_Manager.Properties;
@@ -842,6 +843,7 @@ namespace TrinityCore_Manager
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             var inst = TCManager.Instance;
 
             if (inst.AuthClient != null)
@@ -867,6 +869,11 @@ namespace TrinityCore_Manager
                     inst.RAClient.Stop();
                 }
             }
+
+            TCManager.Instance.StopScheduledBackups();
+
+            Application.Exit();
+
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -918,6 +925,18 @@ namespace TrinityCore_Manager
                 MessageBoxEx.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void backupDbButton_Click(object sender, EventArgs e)
+        {
+            using (BackupDatabase backup = new BackupDatabase())
+                backup.ShowDialog();
+        }
+
+        private void restoreDbButton_Click(object sender, EventArgs e)
+        {
+            using (RestoreDatabase restore = new RestoreDatabase())
+                restore.ShowDialog();
         }
     }
 }

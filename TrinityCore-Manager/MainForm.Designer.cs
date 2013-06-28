@@ -181,14 +181,14 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
-            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
+            this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -253,6 +253,7 @@
             // 
             this.otherRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.otherRibbonPanel.TabIndex = 7;
+            this.otherRibbonPanel.Visible = false;
             // 
             // eventsRibbonBar
             // 
@@ -646,7 +647,6 @@
             // 
             this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel7.TabIndex = 8;
-            this.ribbonPanel7.Visible = false;
             // 
             // databaseCleanupRibbonBar
             // 
@@ -724,12 +724,14 @@
             this.backupDbButton.Name = "backupDbButton";
             this.backupDbButton.SubItemsExpandWidth = 14;
             this.backupDbButton.Text = "Backup DB";
+            this.backupDbButton.Click += new System.EventHandler(this.backupDbButton_Click);
             // 
             // restoreDbButton
             // 
             this.restoreDbButton.Name = "restoreDbButton";
             this.restoreDbButton.SubItemsExpandWidth = 14;
             this.restoreDbButton.Text = "Restore DB";
+            this.restoreDbButton.Click += new System.EventHandler(this.restoreDbButton_Click);
             // 
             // ribbonPanel4
             // 
@@ -1758,6 +1760,7 @@
             // 
             // databaseManagementRibbonTab
             // 
+            this.databaseManagementRibbonTab.Checked = true;
             this.databaseManagementRibbonTab.Name = "databaseManagementRibbonTab";
             this.databaseManagementRibbonTab.Panel = this.ribbonPanel7;
             this.databaseManagementRibbonTab.Text = "Database Management";
@@ -1776,7 +1779,6 @@
             // 
             // otherTab
             // 
-            this.otherTab.Checked = true;
             this.otherTab.Name = "otherTab";
             this.otherTab.Panel = this.otherRibbonPanel;
             this.otherTab.Text = "Other";
