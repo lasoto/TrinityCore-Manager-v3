@@ -64,17 +64,17 @@ namespace TrinityCore_Manager.Database_Management
             bool characters = charCheckBox.Checked;
             bool world = worldCheckBox.Checked;
 
-            Progress<int> progress = new Progress<int>(prog =>
-            {
+            //Progress<int> progress = new Progress<int>(prog =>
+            //{
 
-                if (backupProgressBar.ProgressType == eProgressItemType.Marquee)
-                    backupProgressBar.ProgressType = eProgressItemType.Standard;
+            //    if (backupProgressBar.ProgressType == eProgressItemType.Marquee)
+            //        backupProgressBar.ProgressType = eProgressItemType.Standard;
 
-                backupProgressBar.Value = prog;
-                backupProgressBar.Text = prog + "%";
+            //    backupProgressBar.Value = prog;
+            //    backupProgressBar.Text = prog + "%";
 
 
-            });
+            //});
 
             string format = "MM-dd-yy-hh-mm-ss";
 
@@ -82,27 +82,30 @@ namespace TrinityCore_Manager.Database_Management
             saveButton.Enabled = false;
 
             backupProgressBar.Visible = true;
+            backupProgressBar.Text = "Exporting...";
             backupProgressBar.TextVisible = true;
 
             _busy = true;
 
             _cts = new CancellationTokenSource();
 
+            string nowStr = DateTime.Now.ToString(format);
+
             try
             {
                 if (auth)
                 {
-                    await TCManager.Instance.AuthDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-auth.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                    await TCManager.Instance.AuthDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-auth.sql", nowStr)), _cts.Token);
                 }
 
                 if (characters)
                 {
-                    await TCManager.Instance.CharDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-char.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                    await TCManager.Instance.CharDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-char.sql", nowStr)), _cts.Token);
                 }
 
                 if (world)
                 {
-                    await TCManager.Instance.WorldDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-world.sql", DateTime.Now.ToString(format))), progress, _cts.Token);
+                    await TCManager.Instance.WorldDatabase.BackupDatabase(Path.Combine(TCManager.BackupLocation, String.Format("{0}-world.sql", nowStr)), _cts.Token);
                 }
             }
             catch (Exception)
@@ -173,7 +176,7 @@ namespace TrinityCore_Manager.Database_Management
                 set.Save();
 
                 TCManager.Instance.StopScheduledBackups();
-            
+
             }
 
 

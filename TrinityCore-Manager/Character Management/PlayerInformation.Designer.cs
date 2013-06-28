@@ -455,7 +455,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 362);
+            this.ClientSize = new System.Drawing.Size(780, 358);
             this.Controls.Add(this.phaseLabel);
             this.Controls.Add(this.areaLabel);
             this.Controls.Add(this.levelLabel);
@@ -486,7 +486,6 @@
             this.Controls.Add(this.labelX13);
             this.Controls.Add(this.labelX14);
             this.Controls.Add(this.labelX15);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

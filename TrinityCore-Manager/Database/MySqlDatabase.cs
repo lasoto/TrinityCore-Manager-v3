@@ -11,10 +11,22 @@ namespace TrinityCore_Manager.Database
     abstract class MySqlDatabase
     {
 
+        public string Host { get; set; }
+        public int Port { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string DatabaseName { get; set; }
+
         public string ConnectionString { get; private set; }
 
         protected MySqlDatabase(string serverHost, int port, string username, string password, string dbName)
         {
+
+            Host = serverHost;
+            Port = port;
+            Username = username;
+            Password = password;
+            DatabaseName = dbName;
 
             var connStr = new MySqlConnectionStringBuilder();
             connStr.Server = serverHost;
@@ -28,7 +40,7 @@ namespace TrinityCore_Manager.Database
             ConnectionString = connStr.ToString();
 
         }
-        
+
 
         #region Helper Methods
 

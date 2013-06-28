@@ -208,24 +208,28 @@ namespace TrinityCore_Manager.Database_Management
 
             CancellationTokenSource cts = new CancellationTokenSource();
 
+            string structFName = Path.Combine(TCManager.BackupLocation, String.Format("{0}-{1}.sql", Path.GetFileNameWithoutExtension(fName), "structure"));
+
             switch (backup.BackupType)
             {
 
                 case BackupType.Auth:
 
-                    await TCManager.Instance.AuthDatabase.RestoreDatabase(fName, progress, cts.Token);
+                    //await TCManager.Instance.AuthDatabase.Restore(structFName, progress, cts.Token);
+                    await TCManager.Instance.AuthDatabase.Restore(fName, progress, cts.Token);
                     
                     break;
 
                 case BackupType.Character:
 
-                    await TCManager.Instance.CharDatabase.RestoreDatabase(fName, progress, cts.Token);
+                    await TCManager.Instance.CharDatabase.Restore(fName, progress, cts.Token);
 
                     break;
 
                 case BackupType.World:
 
-                    await TCManager.Instance.WorldDatabase.RestoreDatabase(fName, progress, cts.Token);
+                    await TCManager.Instance.WorldDatabase.Restore(structFName, progress, cts.Token);
+                    await TCManager.Instance.WorldDatabase.Restore(fName, progress, cts.Token);
 
                     break;
 

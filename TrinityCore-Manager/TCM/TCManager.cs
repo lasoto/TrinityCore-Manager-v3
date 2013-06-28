@@ -10,6 +10,8 @@ using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Security;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace TrinityCore_Manager.TCM
 {
@@ -48,6 +50,7 @@ namespace TrinityCore_Manager.TCM
         public WorldDatabase WorldDatabase { get; set; }
 
         public static readonly string BackupLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TCM", "Backups");
+        public static readonly string MySQLDumpLocation = Path.Combine(Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName), "bin", "mysqldump.exe");
 
         public bool Online
         {
@@ -184,7 +187,7 @@ namespace TrinityCore_Manager.TCM
 
                 var db = (MySqlDatabase)map["backupdb"];
 
-                await db.BackupDatabase(file, new Progress<int>(), new CancellationToken());
+                await db.BackupDatabase(file, new CancellationToken());
 
             }
         }

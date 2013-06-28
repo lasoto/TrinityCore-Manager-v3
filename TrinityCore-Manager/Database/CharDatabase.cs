@@ -286,6 +286,25 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        //private PlayerInformation BuildPlayerInfo(DataRow row)
+        //{
+
+
+
+        //}
+
+        //public async Task<PlayerInformation> GetPlayerInfo(string playerName)
+        //{
+
+        //    DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `gender`, `level`, `xp,`, `money`, `position_x`, `positio FROM `characters` WHERE name = @name", new MySqlParameter("@name", playerName));
+
+        //    if (dt.Rows.Count == 0)
+        //        return null;
+
+
+
+        //}
+
         public async Task<List<string>> GetCharNamesNotInGuild()
         {
 

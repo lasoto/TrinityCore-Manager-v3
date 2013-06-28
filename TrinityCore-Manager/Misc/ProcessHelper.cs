@@ -104,9 +104,6 @@ namespace TrinityCore_Manager.Misc
         public static Process StartProcess(string exeLoc, string workingDir, string arguments = "")
         {
 
-            if (!File.Exists(exeLoc))
-                return null;
-
             var psi = new ProcessStartInfo(exeLoc);
 
             psi.WorkingDirectory = workingDir;
