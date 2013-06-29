@@ -54,12 +54,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\MySqlBackup.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\Dependencies\ObjectListView.dll</HintPath>
+    </Reference>
     <Reference Include="Quartz">
       <HintPath>..\packages\Quartz.2.1.2\lib\net40\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -157,6 +164,7 @@
     <Compile Include="Database\Classes\MemberRank.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
+    <Compile Include="Database\Classes\TCItem.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
     <Compile Include="Database\Enums\GMLevel.cs" />
     <Compile Include="Database\Enums\GuildRanks.cs" />
@@ -205,6 +213,7 @@
       <DependentUpon>ItemSpellControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\Enums\TCMTheme.cs" />
+    <Compile Include="Misc\WoWItem.cs" />
     <Compile Include="NPC Forms\CreateNPC.cs">
       <SubType>Form</SubType>
     </Compile>

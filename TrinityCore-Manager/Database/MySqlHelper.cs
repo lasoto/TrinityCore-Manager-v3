@@ -33,7 +33,7 @@ namespace TrinityCore_Manager.Database
                 
                 StreamWriter writer = new StreamWriter(outputFile);
 
-                string line = null;
+                string line;
 
                 while ((line = reader.ReadLine()) != null)
                 {

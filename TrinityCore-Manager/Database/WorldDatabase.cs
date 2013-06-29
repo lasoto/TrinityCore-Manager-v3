@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace TrinityCore_Manager.Database
 {
@@ -11,6 +13,22 @@ namespace TrinityCore_Manager.Database
 
         public WorldDatabase(string serverHost, int port, string username, string password, string dbName) : base(serverHost, port, username, password, dbName)
         {
+        }
+
+        public async Task<Dictionary<int, string>> SearchForItem(string searchQuery, int page)
+        {
+
+            Dictionary<int, string> items = new Dictionary<int, string>();
+
+            DataTable dt = await ExecuteQuery(String.Format("SELECT `entry`, `name` FROM `item_template` WHERE name LIKE @search LIMIT 10 OFFSET {0}", page * 10), new MySqlParameter("@search", "%" + searchQuery + "%"));
+
+            foreach (DataRow row in dt.Rows)
+            {
+                items.Add(Convert.ToInt32((uint)row["entry"]), (string)row["name"]);
+            }
+
+            return items;
+
         }
 
         public async Task CleanWorld()

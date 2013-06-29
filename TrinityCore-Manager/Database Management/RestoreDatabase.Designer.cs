@@ -56,7 +56,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(61, 21);
+            this.labelX2.Location = new System.Drawing.Point(61, 12);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(92, 23);
             this.labelX2.TabIndex = 9;
@@ -67,12 +67,13 @@
             this.restoreListComboBox.DisplayMember = "Text";
             this.restoreListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.restoreListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.restoreListComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restoreListComboBox.ForeColor = System.Drawing.Color.White;
             this.restoreListComboBox.FormattingEnabled = true;
-            this.restoreListComboBox.ItemHeight = 14;
-            this.restoreListComboBox.Location = new System.Drawing.Point(159, 24);
+            this.restoreListComboBox.ItemHeight = 16;
+            this.restoreListComboBox.Location = new System.Drawing.Point(159, 15);
             this.restoreListComboBox.Name = "restoreListComboBox";
-            this.restoreListComboBox.Size = new System.Drawing.Size(266, 20);
+            this.restoreListComboBox.Size = new System.Drawing.Size(292, 22);
             this.restoreListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.restoreListComboBox.TabIndex = 10;
             // 
@@ -93,7 +94,7 @@
             // 
             this.deleteBackupButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.deleteBackupButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.deleteBackupButton.Location = new System.Drawing.Point(206, 50);
+            this.deleteBackupButton.Location = new System.Drawing.Point(206, 43);
             this.deleteBackupButton.Name = "deleteBackupButton";
             this.deleteBackupButton.Size = new System.Drawing.Size(89, 23);
             this.deleteBackupButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -105,12 +106,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 165);
+            this.ClientSize = new System.Drawing.Size(490, 164);
             this.Controls.Add(this.deleteBackupButton);
             this.Controls.Add(this.restoreProgressBar);
             this.Controls.Add(this.restoreListComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.restoreButton);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

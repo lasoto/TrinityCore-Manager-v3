@@ -64,6 +64,15 @@ namespace TrinityCore_Manager.Database_Management
             bool characters = charCheckBox.Checked;
             bool world = worldCheckBox.Checked;
 
+            if (!auth && !characters && !world)
+            {
+
+                MessageBoxEx.Show(this, "You must select a database to backup!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
             //Progress<int> progress = new Progress<int>(prog =>
             //{
 
