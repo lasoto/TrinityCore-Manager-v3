@@ -25,7 +25,13 @@
         UnbanIP,
 
         [TCCommand("kick", 1)]
-        KickPlayer
+        KickPlayer,
+
+        [TCCommand("server plimit", 1)]
+        SetPlayerLimit,
+
+        [TCCommand("server set motd", 1)]
+        SetMOTD
     
     }
 }

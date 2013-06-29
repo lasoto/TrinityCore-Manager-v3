@@ -121,54 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="authServerLabel.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAD///8B////Af///wH///8B////AQAAFTUAAD55CQlWlwgIVZkAAD59AAAaN////wH///8B////Af//
-        /wH///8B////Af///wH///8BAAAbLQoMabciJsD/PUPx/1Rd//9VXv//PUPv/x8iwP8JCmS9AAAKN///
-        /wH///8B////Af///wH///8BAAAmSRIZm/kZIfv/Hijy/zhC+P9ETf//SVL//0dQ/v8lMPn/Ehz7/xAW
-        oP8AAB1X////Af///wH///8BAAAoJRAWnv8PF///AgzG/yMptv8YGou7DA2PiQ8Qlo8cHaLRJiu1/xAa
-        zf8HEPz/DBKj/wAACS////8B////AQsPc8UQGeb/AACp/wAHr/8dJNL/BQOQh////wH///8B////AQwM
-        cFsmK5H9CA62/wQN4/8IC2rR////AQEBPy8QFbH/AgWr/xYdh/8PFan/AAC2/wEI3f8BAmyH////Af//
-        /wH///8BBgZZUx8kfv8BBq7/ChCt/wEBITsHC2p7DROn/wAAbv8WG3GzEBdskQAElf8ACKj/BQ3I/wMG
-        Uof///8B////Af///wERFl3DDBBk/wQJnP8EB0uHCw+DnQsPiP8BBFP/AAJbc////wEDDIqZBAuk/wAH
-        uv8MFMX/CAw4i////wH///8BBwxsewsPTP8CB4v/BgpmpQoPi50FCZn/BAeC/wYHVoX///8B////AQgM
-        rpkJEb7/AAbI/xAZvv8IDSSL////AQEEX2sCCG//AQax/wYJc6UIDIyBDRK5/w0Qov8MDn/B////Af//
-        /wH///8BDQ/elxUbxv8EDM//GCC+/wwQLnsABDulAgiS/wwRxP8FCWaLAQJ3OSkuxf8wMsD/Iia1/wAA
-        J0n///8B////Af///wEWGP+ZNDrZ/x8l2v8+Rbv/ODyR/yAkwf8pL83/AQJRQ////wEiJ7PVWmDu/01Q
-        1f8eIZ3xAAA0R////wH///8B////ARoZ6ItOUtf/RUrf/0ZK2P9ZXvX/ICWn2////wH///8BAAF/N05V
-        4f+HjP//bHDz/zc7u/8HCWW3AAAoewAAJXEBBWqlYWXa/2pu9P+Bhv//TlXm/wAAZzv///8B////Af//
-        /wEDBpBjZGnp/6yw//+ssf//gYX0/2Zr2/9latD/foPf/56h/P+qr///ZWrr/wMFfmn///8B////Af//
-        /wH///8B////AQAAlEVBRM7NkZX1/8bJ///Z3P//1tj//8bJ//+Slvb/QEPLzwAAiUf///8B////Af//
-        /wH///8B////Af///wH///8B////AQAApk8jJb6NPkLKrz1Byq8iJb2NAACjUf///wH///8B////Af//
-        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
-        //8AAP//AAD//w==
-</value>
-  </data>
-  <data name="worldServerLabel.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAD///8B////Af///wH///8B////AQAAFTUAAD55CQlWlwgIVZkAAD59AAAaN////wH///8B////Af//
-        /wH///8B////Af///wH///8BAAAbLQoMabciJsD/PUPx/1Rd//9VXv//PUPv/x8iwP8JCmS9AAAKN///
-        /wH///8B////Af///wH///8BAAAmSRIZm/kZIfv/Hijy/zhC+P9ETf//SVL//0dQ/v8lMPn/Ehz7/xAW
-        oP8AAB1X////Af///wH///8BAAAoJRAWnv8PF///AgzG/yMptv8YGou7DA2PiQ8Qlo8cHaLRJiu1/xAa
-        zf8HEPz/DBKj/wAACS////8B////AQsPc8UQGeb/AACp/wAHr/8dJNL/BQOQh////wH///8B////AQwM
-        cFsmK5H9CA62/wQN4/8IC2rR////AQEBPy8QFbH/AgWr/xYdh/8PFan/AAC2/wEI3f8BAmyH////Af//
-        /wH///8BBgZZUx8kfv8BBq7/ChCt/wEBITsHC2p7DROn/wAAbv8WG3GzEBdskQAElf8ACKj/BQ3I/wMG
-        Uof///8B////Af///wERFl3DDBBk/wQJnP8EB0uHCw+DnQsPiP8BBFP/AAJbc////wEDDIqZBAuk/wAH
-        uv8MFMX/CAw4i////wH///8BBwxsewsPTP8CB4v/BgpmpQoPi50FCZn/BAeC/wYHVoX///8B////AQgM
-        rpkJEb7/AAbI/xAZvv8IDSSL////AQEEX2sCCG//AQax/wYJc6UIDIyBDRK5/w0Qov8MDn/B////Af//
-        /wH///8BDQ/elxUbxv8EDM//GCC+/wwQLnsABDulAgiS/wwRxP8FCWaLAQJ3OSkuxf8wMsD/Iia1/wAA
-        J0n///8B////Af///wEWGP+ZNDrZ/x8l2v8+Rbv/ODyR/yAkwf8pL83/AQJRQ////wEiJ7PVWmDu/01Q
-        1f8eIZ3xAAA0R////wH///8B////ARoZ6ItOUtf/RUrf/0ZK2P9ZXvX/ICWn2////wH///8BAAF/N05V
-        4f+HjP//bHDz/zc7u/8HCWW3AAAoewAAJXEBBWqlYWXa/2pu9P+Bhv//TlXm/wAAZzv///8B////Af//
-        /wEDBpBjZGnp/6yw//+ssf//gYX0/2Zr2/9latD/foPf/56h/P+qr///ZWrr/wMFfmn///8B////Af//
-        /wH///8B////AQAAlEVBRM7NkZX1/8bJ///Z3P//1tj//8bJ//+Slvb/QEPLzwAAiUf///8B////Af//
-        /wH///8B////Af///wH///8B////AQAApk8jJb6NPkLKrz1Byq8iJb2NAACjUf///wH///8B////Af//
-        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
-        //8AAP//AAD//w==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABABILAAASCwAAAAAAAAAA

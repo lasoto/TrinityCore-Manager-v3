@@ -250,6 +250,15 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task<int> GetPlayersOnlineCount()
+        {
+
+            object online = await ExecuteScalar("SELECT COUNT(*) FROM `account` WHERE `online` = 1");
+
+            return online != null ? Convert.ToInt32(online) : 0;
+
+        }
+
         public async Task CleanupAccounts(DateTime date)
         {
             await ExecuteNonQuery("DELETE FROM `auth`.`account` WHERE `last_login` < @date AND `joindate` < @date;", new MySqlParameter("@date", new MySqlDateTime(date)));

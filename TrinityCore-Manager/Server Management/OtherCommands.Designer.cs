@@ -142,17 +142,20 @@
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.okButton.TabIndex = 6;
             this.okButton.Text = "Submit";
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(12, 277);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(98, 39);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // otherServerCommandsSuperTooltip
             // 
@@ -160,11 +163,10 @@
             // 
             // OtherCommands
             // 
-            this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(780, 328);
+            this.ClientSize = new System.Drawing.Size(776, 324);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.switchButton);
@@ -173,7 +175,6 @@
             this.Controls.Add(this.playerLimitLabel);
             this.Controls.Add(this.motdTextBox);
             this.Controls.Add(this.setMotdLabel);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,6 +184,7 @@
             this.MinimumSize = new System.Drawing.Size(796, 366);
             this.Name = "OtherCommands";
             this.Text = "Other Server Commands";
+            this.Load += new System.EventHandler(this.OtherCommands_Load);
             ((System.ComponentModel.ISupportInitialize)(this.serverLimitIntegerInput)).EndInit();
             this.ResumeLayout(false);
 

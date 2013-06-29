@@ -108,6 +108,8 @@
     <Compile Include="Account Management\AddIPBan.designer.cs">
       <DependentUpon>AddIPBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Attributes\CharacterClassInfoAttribute.cs" />
+    <Compile Include="Attributes\CharacterRaceInfoAttribute.cs" />
     <Compile Include="Character Management\CharacterSetLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +167,8 @@
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Classes\TCItem.cs" />
+    <Compile Include="Database\Enums\CharacterClass.cs" />
+    <Compile Include="Database\Enums\CharacterRace.cs" />
     <Compile Include="Database\Enums\Expansion.cs" />
     <Compile Include="Database\Enums\GMLevel.cs" />
     <Compile Include="Database\Enums\GuildRanks.cs" />
@@ -709,6 +713,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TrinityCore Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_fail_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_fail_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_success_16.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

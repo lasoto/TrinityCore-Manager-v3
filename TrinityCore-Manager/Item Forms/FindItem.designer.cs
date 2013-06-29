@@ -47,6 +47,7 @@
             // 
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(285, 495);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
@@ -138,7 +139,7 @@
             this.nameColumn.AspectName = "ItemName";
             this.nameColumn.CellPadding = null;
             this.nameColumn.Text = "Item Name";
-            this.nameColumn.Width = 187;
+            this.nameColumn.Width = 282;
             // 
             // searchButton
             // 
@@ -181,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(444, 520);
+            this.ClientSize = new System.Drawing.Size(444, 521);
             this.Controls.Add(this.prevPageButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.searchButton);
@@ -190,7 +191,6 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.itemFindDisplayIdTextBox);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

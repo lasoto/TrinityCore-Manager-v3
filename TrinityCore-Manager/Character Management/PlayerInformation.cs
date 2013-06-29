@@ -8,19 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
     public partial class PlayerInformation : DevComponents.DotNetBar.Office2007Form
     {
-        public PlayerInformation()
+
+        public PlayerInformation(string charName)
         {
             InitializeComponent();
         }
 
-        private void PlayerInformation_Load(object sender, EventArgs e)
+        private async void PlayerInformation_Load(object sender, EventArgs e)
         {
-            // I've made PlayerInformation class for you to use with this. I would love to do it, but I don't know how to.
+
+            
+
         }
+
     }
 }

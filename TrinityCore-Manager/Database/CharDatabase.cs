@@ -247,6 +247,27 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        private TCCharacter BuildCharacter(DataRow row)
+        {
+
+            TCCharacter character = new TCCharacter();
+
+
+            return character;
+
+        }
+
+        public async Task<List<TCCharacter>> GetCharacters()
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `level`, `money`, `online` FROM `characters`");
+
+            foreach (DataRow row in dt.Rows)
+            {
+            }
+
+        }
+
         public async Task<int> GetCharacterGuid(string charName)
         {
 

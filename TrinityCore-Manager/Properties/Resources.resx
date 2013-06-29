@@ -140,14 +140,11 @@ all blizzard ranged weapons have RangedModRange100</value>
   <data name="SpellCatCdDesc" xml:space="preserve">
     <value>The cooldown time in milliseconds that is applied to all other spells in the category that the triggered spell is also in. Use -1 to use the default spell cooldown.</value>
   </data>
-  <data name="AreaDesc" xml:space="preserve">
-    <value>The zone ID that this item can be used in.</value>
+  <data name="ReqLevelDesc" xml:space="preserve">
+    <value>Required level the player has to be to use this item.</value>
   </data>
   <data name="SocketColorDesc" xml:space="preserve">
     <value>The color of the socket that can be placed in this item.</value>
-  </data>
-  <data name="SellGoldDesc" xml:space="preserve">
-    <value>The price that the vendor will pay you for the item when you sell it and if it is possible to be sold, in copper. Put in 0 if the item cannot be sold to a vendor.</value>
   </data>
   <data name="RandomPropDesc" xml:space="preserve">
     <value>The number in this field points to item_enchantment_template.entry and ties in an item's chance at having a random property attached to it when it shows up for the first time. This field and the RandomSuffix field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.</value>
@@ -167,9 +164,6 @@ all blizzard ranged weapons have RangedModRange100</value>
   <data name="ReqDisenchSkillDesc" xml:space="preserve">
     <value>The required proficiency in disenchanting that the player needs to have to be able to disenchant this item.</value>
   </data>
-  <data name="ReqLevelDesc" xml:space="preserve">
-    <value>Required level the player has to be to use this item.</value>
-  </data>
   <data name="SpellIdDesc" xml:space="preserve">
     <value>The spell ID of the spell that the item can cast or trigger.</value>
   </data>
@@ -179,24 +173,24 @@ all blizzard ranged weapons have RangedModRange100</value>
   <data name="ReqSpellDesc" xml:space="preserve">
     <value>The required spell that the player needs to have to use this item</value>
   </data>
+  <data name="PageMatDesc" xml:space="preserve">
+    <value>The background texture that appears in the page text window. PageTextMaterial.dbc</value>
+  </data>
   <data name="ContainerSlotsDesc" xml:space="preserve">
     <value>If the item is a bag, this field controls the number of slots the bag has.</value>
-  </data>
-  <data name="ReqRepFactionDesc" xml:space="preserve">
-    <value>The faction template ID (from Faction.dbc) of the faction that the player has to have a certain ranking with. If this value is 0, the faction of the seller of the item is used.</value>
   </data>
   <data name="ScalingStatDistDesc" xml:space="preserve">
     <value>Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear)
 use like static stats</value>
+  </data>
+  <data name="AllowConnDesc" xml:space="preserve">
+    <value>Sets whether the world accepts new client connections. Even if the server is online.</value>
   </data>
   <data name="MapDesc" xml:space="preserve">
     <value>The map ID that this item can be used in.</value>
   </data>
   <data name="ItemSetDesc" xml:space="preserve">
     <value>The ID of the item set that this item belongs to. To save you some time, you CAN NOT make up new item sets. Item sets are defined in ItemSet.dbc</value>
-  </data>
-  <data name="ReqSkillRankDesc" xml:space="preserve">
-    <value>The required skill rank the player needs to have to use this item.</value>
   </data>
   <data name="MaxMoneyLootDesc" xml:space="preserve">
     <value>If the item is a container that can contain money, then this field defines the maximum coinage held in this container, in copper.</value>
@@ -207,8 +201,8 @@ use like static stats</value>
   <data name="AmmoTypeDesc" xml:space="preserve">
     <value>The type of ammunition the item uses</value>
   </data>
-  <data name="PageMatDesc" xml:space="preserve">
-    <value>The background texture that appears in the page text window. PageTextMaterial.dbc</value>
+  <data name="ReqRepFactionDesc" xml:space="preserve">
+    <value>The faction template ID (from Faction.dbc) of the faction that the player has to have a certain ranking with. If this value is 0, the faction of the seller of the item is used.</value>
   </data>
   <data name="DelayDesc" xml:space="preserve">
     <value>The time in milliseconds between successive hits.</value>
@@ -219,11 +213,12 @@ use like static stats</value>
   <data name="SpellCdDesc" xml:space="preserve">
     <value>The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown. Note: this is not the "internal cooldown" of procs commonly found on items such as trinkets with "Chance on hit" effects.</value>
   </data>
-  <data name="MatDesc" xml:space="preserve">
-    <value>The material that the item is made of. The value here affects the sound that the item makes when moved. Use -1 for consumable items like food, reagents, etc.</value>
+  <data name="SellGoldDesc" xml:space="preserve">
+    <value>The price that the vendor will pay you for the item when you sell it and if it is possible to be sold, in copper. Put in 0 if the item cannot be sold to a vendor.</value>
   </data>
-  <data name="StartQuestDesc" xml:space="preserve">
-    <value>The ID of the quest that this item will start if right-clicked. See quest_template.id</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="agt_action_fail_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agt_action_fail_16.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FoodTypeDesc" xml:space="preserve">
     <value>If this item is a food type item, this field defines what type of food it is for hunters who want to feed their pets. It controls in what diet this food item falls in.
@@ -244,8 +239,8 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
   <data name="ScalingStatValueDesc" xml:space="preserve">
     <value>Final (level 80) value of the scaling-stat</value>
   </data>
-  <data name="LockIdDesc" xml:space="preserve">
-    <value>The lock entry ID that this item (which serves as a key) is tied to. This field is used in key-door mechanics. See Lock.dbc</value>
+  <data name="ReqSkillRankDesc" xml:space="preserve">
+    <value>The required skill rank the player needs to have to use this item.</value>
   </data>
   <data name="SpellTriggerDesc" xml:space="preserve">
     <value>The type of trigger for the spell.</value>
@@ -254,11 +249,17 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
     <value>When an item has entries in stat_type, this must be updated to display those entries
 (Unknown how this works)</value>
   </data>
+  <data name="MatDesc" xml:space="preserve">
+    <value>The material that the item is made of. The value here affects the sound that the item makes when moved. Use -1 for consumable items like food, reagents, etc.</value>
+  </data>
   <data name="LanguageIdDesc" xml:space="preserve">
     <value>The language that the item text is written in. Languages.dbc</value>
   </data>
   <data name="RandomArmorDmgModDesc" xml:space="preserve">
     <value>No description for this field, visit trinitycore website for more info.</value>
+  </data>
+  <data name="LockIdDesc" xml:space="preserve">
+    <value>The lock entry ID that this item (which serves as a key) is tied to. This field is used in key-door mechanics. See Lock.dbc</value>
   </data>
   <data name="ScriptNameDesc" xml:space="preserve">
     <value>he name of the script that the item should use. There is no 'internalitemhandler' or 'internalitemhanler' script so trinity will ignore any such values in this field.</value>
@@ -266,14 +267,16 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
   <data name="FlagsDesc" xml:space="preserve">
     <value>Bitmask field that contains flags that the item has on it. As all other such fields, just add the flags together to combine them. Possible flags are listed below</value>
   </data>
-  <data name="AllowConnDesc" xml:space="preserve">
-    <value>Sets whether the world accepts new client connections. Even if the server is online.</value>
+  <data name="StartQuestDesc" xml:space="preserve">
+    <value>The ID of the quest that this item will start if right-clicked. See quest_template.id</value>
   </data>
   <data name="TotemCatDesc" xml:space="preserve">
     <value>Corresponds to the ID in TotemCategory.dbc.</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TrinityCore Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TrinityCore Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AreaDesc" xml:space="preserve">
+    <value>The zone ID that this item can be used in.</value>
+  </data>
+  <data name="agt_action_success_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agt_action_success_16.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

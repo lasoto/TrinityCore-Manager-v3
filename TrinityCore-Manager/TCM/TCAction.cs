@@ -107,6 +107,26 @@ namespace TrinityCore_Manager.TCM
 
         }
 
+        public static async Task SetPlayerLimit(int limit)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SetPlayerLimit.BuildCommand(limit.ToString()));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SetServerMotd(string motd)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SetMOTD.BuildCommand(motd));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
         private static TCMClient GetClient()
         {
 

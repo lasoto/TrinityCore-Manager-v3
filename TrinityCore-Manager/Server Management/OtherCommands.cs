@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.TCM;
+using System.Text.RegularExpressions;
 
 namespace TrinityCore_Manager
 {
@@ -16,6 +18,29 @@ namespace TrinityCore_Manager
         public OtherCommands()
         {
             InitializeComponent();
+        }
+
+        private void OtherCommands_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void okButton_Click(object sender, EventArgs e)
+        {
+
+            if (serverLimitIntegerInput.Value > 0)
+                await TCAction.SetPlayerLimit(serverLimitIntegerInput.Value);
+
+            if (!string.IsNullOrEmpty(motdTextBox.Text))
+            {
+                await TCAction.SetServerMotd(Regex.Replace(motdTextBox.Text, "\r\n", "\\r\\n"));
+            }
+
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TrinityCore_Manager
         private CancellationTokenSource _compilerCTS;
 
         private System.Windows.Forms.Timer _bTimeLeftTimer;
+        private System.Windows.Forms.Timer _checkPlayersOnlineTimer;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -109,6 +110,30 @@ namespace TrinityCore_Manager
                 ConnectRA();
 
             }
+
+            _checkPlayersOnlineTimer = new System.Windows.Forms.Timer();
+            _checkPlayersOnlineTimer.Interval = (int)TimeSpan.FromSeconds(15).TotalMilliseconds;
+            _checkPlayersOnlineTimer.Tick += _checkPlayersOnlineTimer_Tick;
+
+            _checkPlayersOnlineTimer.Start();
+
+        }
+
+        async void _checkPlayersOnlineTimer_Tick(object sender, EventArgs e)
+        {
+
+            if (!TCManager.Instance.Online)
+            {
+
+                playersOnlineLabel.Text = "Players Online: 0";
+                
+                return;
+           
+            }
+
+            int online = await TCManager.Instance.AuthDatabase.GetPlayersOnlineCount();
+
+            playersOnlineLabel.Text = "Players Online: " + online;
 
         }
 
@@ -185,12 +210,22 @@ namespace TrinityCore_Manager
 
         void _raClient_TCDisconnected(object sender, EventArgs e)
         {
+
             consoleTextBox.AppendText("Disconnected!" + Environment.NewLine);
+
+            authServerLabel.Image = Resources.agt_action_fail_16;
+            worldServerLabel.Image = Resources.agt_action_fail_16;
+
         }
 
         void _raClient_TCConnected(object sender, EventArgs e)
         {
+
             consoleTextBox.AppendText("Connected!" + Environment.NewLine);
+
+            authServerLabel.Image = Resources.agt_action_success_16;
+            worldServerLabel.Image = Resources.agt_action_success_16;
+
         }
 
         private void CheckSettings(bool exit = false)
@@ -754,6 +789,8 @@ namespace TrinityCore_Manager
 
             }
 
+            consoleTextBox.Text = String.Empty;
+
             var authClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"));
             var worldClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"));
 
@@ -778,6 +815,9 @@ namespace TrinityCore_Manager
             worldProc.ErrorDataReceived += worldProc_DataReceived;
             worldProc.OutputDataReceived += worldProc_OutputDataReceived;
 
+            authServerLabel.Image = Resources.agt_action_success_16;
+            worldServerLabel.Image = Resources.agt_action_success_16;
+
         }
 
         void worldProc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -796,7 +836,9 @@ namespace TrinityCore_Manager
             Invoke((MethodInvoker)delegate
             {
                 if (e.Data != null && !IsDisposed)
+                {
                     consoleTextBox.AppendText(e.Data + Environment.NewLine);
+                }
             });
         }
 
@@ -809,8 +851,12 @@ namespace TrinityCore_Manager
             {
                 Invoke((MethodInvoker)delegate
                 {
+
                     stopServerButton.Enabled = false;
                     startServerButton.Enabled = true;
+
+                    worldServerLabel.Image = Resources.agt_action_fail_16;
+
                 });
             }
 
@@ -825,9 +871,14 @@ namespace TrinityCore_Manager
             {
                 Invoke((MethodInvoker)delegate
                 {
+
                     stopServerButton.Enabled = false;
                     startServerButton.Enabled = true;
+
+                    authServerLabel.Image = Resources.agt_action_fail_16;
+
                 });
+
             }
 
         }
@@ -849,6 +900,8 @@ namespace TrinityCore_Manager
 
             authClient.Stop();
             worldClient.Stop();
+
+            consoleTextBox.Text = String.Empty;
 
         }
 

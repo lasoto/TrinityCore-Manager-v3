@@ -28,7 +28,7 @@ namespace TrinityCore_Manager
             _atPage = 0;
 
             InitializeComponent();
-        
+
         }
 
         private void FindItem_Load(object sender, EventArgs e)
@@ -41,7 +41,30 @@ namespace TrinityCore_Manager
 
                 SearchedItem item = (SearchedItem)row;
 
+                if (item == null)
+                    return WoWItem.UnknownImage;
+
                 return item.ItemImage;
+
+            };
+            findItemListView.CellToolTipGetter = delegate(OLVColumn col, object row)
+            {
+
+                SearchedItem item = (SearchedItem)row;
+
+                var wowItem = item.Item;
+
+                if (wowItem == null)
+                    return "";
+
+                string name = (string)wowItem.Data["name"];
+                string desc = (string)wowItem.Data["description"];
+                string reqLevel = (string)wowItem.Data["requiredLevel"];
+                int itemLevel = (int)wowItem.Data["itemLevel"];
+                string durability = (string)wowItem.Data["maxDurability"];
+                string text = String.Format("Name: {0}\r\nDescription: {1}\r\nRequired Level: {2}\r\nItem Level: {3}\r\nItem Durability: {4}", name, desc == String.Empty ? "None" : desc, reqLevel, itemLevel, durability);
+
+                return text;
 
             };
         }
@@ -52,7 +75,7 @@ namespace TrinityCore_Manager
             _atPage = 0;
 
             await StartSearch(_atPage);
-        
+
         }
 
         private async Task StartSearch(int page)
@@ -80,12 +103,12 @@ namespace TrinityCore_Manager
 
                     Image itemIcon = await wowItem.GetIconTaskAsync();
 
-                    searchedItems.Add(new SearchedItem() { ItemImage = itemIcon, ItemId = wowItem.ItemId, ItemName = item.Value });
+                    searchedItems.Add(new SearchedItem() { Item = wowItem, ItemImage = itemIcon, ItemId = wowItem.ItemId, ItemName = item.Value });
 
                 }
                 catch (Exception)
                 {
-                    searchedItems.Add(new SearchedItem() { ItemImage = WoWItem.UnknownImage, ItemId = item.Key, ItemName = item.Value });
+                    searchedItems.Add(new SearchedItem() { Item = null, ItemImage = WoWItem.UnknownImage, ItemId = item.Key, ItemName = item.Value });
                 }
 
             }
@@ -100,6 +123,7 @@ namespace TrinityCore_Manager
         class SearchedItem
         {
 
+            public WoWItem Item { get; set; }
             public Image ItemImage { get; set; }
             public int ItemId { get; set; }
             public string ItemName { get; set; }
@@ -135,7 +159,18 @@ namespace TrinityCore_Manager
 
         private async void nextButton_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(itemFindDisplayIdTextBox.Text))
+            {
+
+                MessageBoxEx.Show(this, "You must first enter in a search query!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
             await StartSearch(++_atPage);
+        
         }
 
         private async void prevPageButton_Click(object sender, EventArgs e)
@@ -145,7 +180,7 @@ namespace TrinityCore_Manager
                 return;
 
             await StartSearch(--_atPage);
-        
+
         }
 
         private void okButton_Click(object sender, EventArgs e)
