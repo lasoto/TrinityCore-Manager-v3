@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibGit2Sharp;
 using LibGit2Sharp.Handlers;
+using TrinityCore_Manager.Misc;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager.TC
 {
@@ -32,7 +36,7 @@ namespace TrinityCore_Manager.TC
                 var chandler = new CheckoutProgressHandler((path, completedSteps, totalSteps) =>
 
                     progress.Report(((double)completedSteps / totalSteps) * 100)
-                
+
                 );
 
                 using (var repo = Repository.Clone(TrinityCoreGit, cloneTo, false, true, thandler, chandler))
@@ -43,27 +47,48 @@ namespace TrinityCore_Manager.TC
 
         }
 
-        public static async Task Fetch(string gitDir, IProgress<double> progress)
+        public static async Task Pull(string gitDir, IProgress<string> progress)
         {
 
             await Task.Run(() =>
             {
 
-                var thandler = new TransferProgressHandler(h =>
-                {
+                string args = String.Format("/c \"{0}\" pull -v --progress", GetGitLocation());
 
-                    progress.Report(((double)h.ReceivedObjects / h.TotalObjects) * 100);
+                Process pullProc = ProcessHelper.StartProcess("cmd.exe", gitDir, args);
 
-                    return 0;
+                pullProc.BeginErrorReadLine();
+                pullProc.BeginOutputReadLine();
 
-                });
+                pullProc.ErrorDataReceived += (sender, e) => progress.Report(e.Data);
+                pullProc.OutputDataReceived += (sender, e) => progress.Report(e.Data);
 
-                using (var repo = new Repository(gitDir))
-                {
-                    repo.Network.Fetch(repo.Head.Remote, TagFetchMode.All, null, null, null, thandler);
-                }
+                pullProc.WaitForExit();
 
             });
+
+        }
+
+        private static string GetGitLocation()
+        {
+
+            string git;
+
+            if (Environment.Is64BitOperatingSystem)
+            {
+                git = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Git",
+                "bin", "git.exe");
+            }
+            else
+            {
+                git = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Git", "bin",
+                "git.exe");
+            }
+
+            if (!File.Exists(git))
+                return String.Empty;
+
+            return git;
 
         }
 

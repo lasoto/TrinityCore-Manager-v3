@@ -156,9 +156,9 @@ namespace TrinityCore_Manager
 
         private void ConnectRA()
         {
-           
 
-               _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
+
+            _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
 
             try
             {
@@ -631,23 +631,23 @@ namespace TrinityCore_Manager
 
             _isCloning = true;
 
-            compileProgressBar.ProgressType = eProgressItemType.Marquee;
             compileProgressBar.Visible = true;
+            compileProgressBar.ProgressType = eProgressItemType.Marquee;
 
             downloadUpdateButton.Enabled = false;
 
-            var progress = new Progress<double>(prog => Invoke((MethodInvoker)delegate
-                                                {
-
-                                                    if (compileProgressBar.ProgressType == eProgressItemType.Marquee)
-                                                        compileProgressBar.ProgressType = eProgressItemType.Standard;
-
-                                                    compileProgressBar.Value = Convert.ToInt32(prog);
-
-                                                }));
-
             if (new DirectoryInfo(Settings.Default.TrunkLocation).GetFiles().Length == 0)
             {
+
+                var progress = new Progress<double>(prog => Invoke((MethodInvoker)delegate
+                {
+
+                    if (compileProgressBar.ProgressType == eProgressItemType.Marquee)
+                        compileProgressBar.ProgressType = eProgressItemType.Standard;
+
+                    compileProgressBar.Value = Convert.ToInt32(prog);
+
+                }));
 
                 await TrinityCoreRepository.Clone(Settings.Default.TrunkLocation, progress).ContinueWith(task =>
                 {
@@ -670,7 +670,15 @@ namespace TrinityCore_Manager
             else
             {
 
-                await TrinityCoreRepository.Fetch(Settings.Default.TrunkLocation, progress).ContinueWith(task =>
+                outputTextBox.Text = String.Empty;
+                consoleTabControl.SelectedTab = outputTabItem;
+
+                var progress = new Progress<string>(prog => Invoke((MethodInvoker)delegate
+                {
+                    outputTextBox.AppendText(prog + Environment.NewLine);
+                }));
+
+                await TrinityCoreRepository.Pull(Settings.Default.TrunkLocation, progress).ContinueWith(task =>
                 {
 
                     Invoke((MethodInvoker)delegate
@@ -982,7 +990,7 @@ namespace TrinityCore_Manager
                 backup.FormClosing += backup_FormClosing;
 
                 backup.ShowDialog();
-            
+
             }
         }
 
