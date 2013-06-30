@@ -137,7 +137,6 @@
             // 
             this.findItemButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findItemButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.findItemButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.findItemButton.Location = new System.Drawing.Point(346, 125);
             this.findItemButton.Name = "findItemButton";
             this.findItemButton.Size = new System.Drawing.Size(75, 23);
@@ -312,7 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(781, 595);
+            this.ClientSize = new System.Drawing.Size(777, 590);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.copperIntegerInput);

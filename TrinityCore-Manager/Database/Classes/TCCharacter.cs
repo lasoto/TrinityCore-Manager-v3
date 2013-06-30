@@ -15,6 +15,9 @@ namespace TrinityCore_Manager.Database.Classes
         public string Name { get; set; }
         public CharacterRace Race { get; set; }
         public CharacterClass Class { get;  set; }
+        public int Level { get; set; }
+        public int Money { get; set; }
+        public bool Online { get; set; }
 
     }
 }

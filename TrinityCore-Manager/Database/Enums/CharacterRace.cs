@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrinityCore_Manager.Attributes;
+using TrinityCore_Manager.Extensions;
 
 namespace TrinityCore_Manager.Database.Enums
 {
+
     public enum CharacterRace
     {
 
@@ -41,4 +43,52 @@ namespace TrinityCore_Manager.Database.Enums
         Draenei
 
     }
+
+    public static class CharacterRaceHelper
+    {
+
+        public static CharacterRace GetCharacterRace(int id)
+        {
+
+            var vals = Enum.GetValues(typeof(CharacterRace));
+
+            foreach (var val in vals)
+            {
+
+                CharacterRace race = (CharacterRace)val;
+
+                if (race.GetCharacterRaceId() == id)
+                    return race;
+
+            }
+
+            return CharacterRace.Human;
+            
+        }
+
+    }
+
+    public static class CharacterRaceExtensions
+    {
+
+        public static int GetCharacterRaceId(this CharacterRace race)
+        {
+
+            var attrib = race.GetAttribute<CharacterRaceInfoAttribute>();
+
+            return attrib.Id;
+
+        }
+
+        public static int GetCharacterRaceBitmask(this CharacterRace race)
+        {
+
+            var attrib = race.GetAttribute<CharacterRaceInfoAttribute>();
+
+            return attrib.BitmaskValue;
+
+        }
+
+    }
+
 }

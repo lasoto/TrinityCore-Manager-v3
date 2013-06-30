@@ -251,7 +251,14 @@ namespace TrinityCore_Manager.Database
         {
 
             TCCharacter character = new TCCharacter();
-
+            character.Guid = Convert.ToInt32(row["guid"]);
+            character.Account = Convert.ToInt32(row["account"]);
+            character.Name = (string)row["name"];
+            character.Race = CharacterRaceHelper.GetCharacterRace(Convert.ToInt32(row["race"]));
+            character.Class = CharacterClassHelper.GetCharacterClass(Convert.ToInt32(row["class"]));
+            character.Level = Convert.ToInt32(row["level"]);
+            character.Money = Convert.ToInt32(row["money"]);
+            character.Online = Convert.ToBoolean(row["online"]);
 
             return character;
 
@@ -262,9 +269,14 @@ namespace TrinityCore_Manager.Database
 
             DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `level`, `money`, `online` FROM `characters`");
 
+            List<TCCharacter> characters = new List<TCCharacter>();
+
             foreach (DataRow row in dt.Rows)
             {
+                characters.Add(BuildCharacter(row));
             }
+
+            return characters;
 
         }
 

@@ -126,9 +126,9 @@ namespace TrinityCore_Manager
             {
 
                 playersOnlineLabel.Text = "Players Online: 0";
-                
+
                 return;
-           
+
             }
 
             int online = await TCManager.Instance.AuthDatabase.GetPlayersOnlineCount();
@@ -361,8 +361,19 @@ namespace TrinityCore_Manager
 
         private void showPlayerInfoButton_Click(object sender, EventArgs e)
         {
-            PlayerInformation playerInfo = new PlayerInformation();
-            playerInfo.ShowDialog();
+
+            if (characterListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            using (PlayerInformation playerInfo = new PlayerInformation(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString()))
+                playerInfo.ShowDialog();
+
         }
 
         private void setLevelButton_Click(object sender, EventArgs e)

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrinityCore_Manager.Attributes;
+using TrinityCore_Manager.Extensions;
 
 namespace TrinityCore_Manager.Database.Enums
 {
+
     public enum CharacterClass
     {
 
@@ -41,4 +43,52 @@ namespace TrinityCore_Manager.Database.Enums
         Druid
 
     }
+
+    public static class CharacterClassHelper
+    {
+
+        public static CharacterClass GetCharacterClass(int id)
+        {
+
+            var vals = Enum.GetValues(typeof(CharacterRace));
+
+            foreach (var val in vals)
+            {
+
+                CharacterClass cl = (CharacterClass)val;
+
+                if (cl.GetCharacterClassId() == id)
+                    return cl;
+
+            }
+
+            return CharacterClass.Mage;
+
+        }
+
+    }
+
+    public static class CharacterClassExtensions
+    {
+
+        public static int GetCharacterClassId(this CharacterClass cl)
+        {
+
+            var attrib = cl.GetAttribute<CharacterClassInfoAttribute>();
+
+            return attrib.Id;
+
+        }
+
+        public static int GetCharacterClassBitmask(this CharacterClass cl)
+        {
+
+            var attrib = cl.GetAttribute<CharacterRaceInfoAttribute>();
+
+            return attrib.BitmaskValue;
+
+        }
+
+    }
+
 }
