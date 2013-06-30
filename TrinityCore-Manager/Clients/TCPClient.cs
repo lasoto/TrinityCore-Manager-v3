@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TrinityCore_Manager.TCM;
 
@@ -57,9 +58,6 @@ namespace TrinityCore_Manager.Clients
         {
 
             if (_client == null)
-                return;
-
-            if (!_client.Connected || !IsConnected)
                 return;
 
             IsConnected = false;
@@ -137,17 +135,18 @@ namespace TrinityCore_Manager.Clients
             try
             {
 
-                string str = Encoding.ASCII.GetString(_buffer, 0, read);
+                string str = Encoding.UTF8.GetString(_buffer, 0, read);
 
-                string[] ex = str.Split('\n');
+                string[] ex = Regex.Split(str, "\r\n");
 
                 var stream = _client.GetStream();
+                
 
                 if (string.IsNullOrEmpty(str) || read == 0)
                 {
                     stream.BeginRead(_buffer, 0, _buffer.Length, Receive, stream);
                 }
-                else if (ex.Length > 0 && str.EndsWith("\n"))
+                else if (ex.Length > 0)
                 {
 
                     for (int i = 0; i < ex.Length; i++)
@@ -169,7 +168,7 @@ namespace TrinityCore_Manager.Clients
                 else //need more data
                 {
 
-                    byte[] tmp = Encoding.ASCII.GetBytes(str);
+                    byte[] tmp = Encoding.UTF8.GetBytes(str);
 
                     _buffer = new byte[read + 1024];
                     Array.Copy(tmp, 0, _buffer, 0, tmp.Length);
@@ -199,10 +198,10 @@ namespace TrinityCore_Manager.Clients
                 if (_client == null)
                     return;
 
-                if (!_client.Connected && IsConnected)
+                if (!_client.Connected || !IsConnected)
                     return;
 
-                byte[] msg = Encoding.ASCII.GetBytes(message);
+                byte[] msg = Encoding.UTF8.GetBytes(message + "\r\n");
 
                 var stream = _client.GetStream();
 

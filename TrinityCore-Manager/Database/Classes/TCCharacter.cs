@@ -18,6 +18,10 @@ namespace TrinityCore_Manager.Database.Classes
         public int Level { get; set; }
         public int Money { get; set; }
         public bool Online { get; set; }
+        public int TotalTime { get; set; }
+        public int TotalKills { get; set; }
+        public int ArenaPoints { get; set; }
+        public int TotalHonorsPoints { get; set; }
 
     }
 }

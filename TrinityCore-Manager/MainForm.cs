@@ -35,8 +35,6 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private TCPClient _raClient;
-
         private bool _isCloning;
         private bool _isCompiling;
 
@@ -182,20 +180,23 @@ namespace TrinityCore_Manager
         private void ConnectRA()
         {
 
+            TCManager manager = TCManager.Instance;
 
-            _raClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
+            manager.RAClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
+
+            TCPClient client = (TCPClient)manager.RAClient;
 
             try
             {
-                _raClient.Connect();
-                _raClient.TCConnected += _raClient_TCConnected;
-                _raClient.TCDisconnected += _raClient_TCDisconnected;
-                _raClient.TCMessageReceived += _raClient_TCMessageReceived;
+                client.Connect();
+                client.TCConnected += _raClient_TCConnected;
+                client.TCDisconnected += _raClient_TCDisconnected;
+                client.TCMessageReceived += _raClient_TCMessageReceived;
             }
             catch (Exception ex)
             {
 
-                _raClient.Dispose();
+                client.Dispose();
 
                 MessageBoxEx.Show(this, "Could not connect to RA! (" + ex.Message + ")", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -205,26 +206,54 @@ namespace TrinityCore_Manager
 
         void _raClient_TCMessageReceived(object sender, MessageReceivedEventArgs e)
         {
-            consoleTextBox.AppendText(e.Message + Environment.NewLine);
+            Invoke((MethodInvoker)delegate
+            {
+                consoleTextBox.AppendText(e.Message + Environment.NewLine);
+            });
         }
 
         void _raClient_TCDisconnected(object sender, EventArgs e)
         {
 
-            consoleTextBox.AppendText("Disconnected!" + Environment.NewLine);
+            Invoke((MethodInvoker)delegate
+            {
 
-            authServerLabel.Image = Resources.agt_action_fail_16;
-            worldServerLabel.Image = Resources.agt_action_fail_16;
+                consoleTextBox.AppendText("Disconnected!" + Environment.NewLine);
+
+                authServerLabel.Image = Resources.agt_action_fail_16;
+                worldServerLabel.Image = Resources.agt_action_fail_16;
+
+            });
 
         }
 
-        void _raClient_TCConnected(object sender, EventArgs e)
+        async void _raClient_TCConnected(object sender, EventArgs e)
         {
 
-            consoleTextBox.AppendText("Connected!" + Environment.NewLine);
+            Invoke((MethodInvoker)delegate
+            {
 
-            authServerLabel.Image = Resources.agt_action_success_16;
-            worldServerLabel.Image = Resources.agt_action_success_16;
+                consoleTextBox.AppendText("Connected!" + Environment.NewLine);
+
+                authServerLabel.Image = Resources.agt_action_success_16;
+                worldServerLabel.Image = Resources.agt_action_success_16;
+
+            });
+
+            AuthenticateRA();
+
+        }
+
+        private async void AuthenticateRA()
+        {
+
+            TCPClient client = (TCPClient)TCManager.Instance.RAClient;
+
+            if (client == null)
+                return;
+
+            //await client.SendMessage(Settings.Default.RAUsername);
+            //await client.SendMessage(Settings.Default.RAPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString());
 
         }
 
@@ -930,7 +959,11 @@ namespace TrinityCore_Manager
 
             try
             {
+
                 await TCAction.ExecuteCommand(executeCommandTextBox.Text);
+
+                executeCommandTextBox.Text = String.Empty;
+
             }
             catch (Exception ex)
             {
@@ -1067,6 +1100,24 @@ namespace TrinityCore_Manager
         {
             using (RestoreDatabase restore = new RestoreDatabase())
                 restore.ShowDialog();
+        }
+
+        private async void refreshListCharacterManagementButton_Click(object sender, EventArgs e)
+        {
+
+            characterListComboBox.Items.Clear();
+
+            List<int> guids = await TCManager.Instance.CharDatabase.GetOnlineCharacterGuids();
+
+            foreach (int guid in guids)
+            {
+
+                string name = await TCManager.Instance.CharDatabase.GetCharacterName(guid);
+
+                characterListComboBox.Items.Add(name);
+
+            }
+
         }
     }
 }

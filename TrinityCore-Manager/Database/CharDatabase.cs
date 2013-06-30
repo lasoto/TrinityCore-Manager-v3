@@ -259,6 +259,10 @@ namespace TrinityCore_Manager.Database
             character.Level = Convert.ToInt32(row["level"]);
             character.Money = Convert.ToInt32(row["money"]);
             character.Online = Convert.ToBoolean(row["online"]);
+            character.TotalTime = Convert.ToInt32(row["totaltime"]);
+            character.TotalKills = Convert.ToInt32(row["totalKills"]);
+            character.ArenaPoints = Convert.ToInt32(row["arenaPoints"]);
+            character.TotalHonorsPoints = Convert.ToInt32(row["totalHonorPoints"]);
 
             return character;
 
@@ -267,7 +271,7 @@ namespace TrinityCore_Manager.Database
         public async Task<List<TCCharacter>> GetCharacters()
         {
 
-            DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `level`, `money`, `online` FROM `characters`");
+            DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `level`, `money`, `online`, `totaltime`, `totalKills`, `arenaPoints`, `totalHonorPoints` FROM `characters`");
 
             List<TCCharacter> characters = new List<TCCharacter>();
 
@@ -277,6 +281,34 @@ namespace TrinityCore_Manager.Database
             }
 
             return characters;
+
+        }
+
+        public async Task<TCCharacter> GetCharacter(int guid)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `guid`, `account`, `name`, `race`, `class`, `level`, `money`, `online`, `totaltime`, `totalKills` ,`arenaPoints`, `totalHonorPoints` FROM `characters` WHERE guid = @guid", new MySqlParameter("@guid", guid));
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return BuildCharacter(dt.Rows[0]);
+
+        }
+
+        public async Task<List<int>> GetOnlineCharacterGuids()
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT `guid` FROM `characters` WHERE online = 1");
+
+            List<int> guids = new List<int>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                guids.Add(Convert.ToInt32(row["guid"]));
+            }
+
+            return guids;
 
         }
 

@@ -12,34 +12,34 @@ namespace TrinityCore_Manager.Database.Enums
     public enum CharacterClass
     {
 
-        [CharacterClassInfo(1, 1)]
+        [CharacterClassInfo("Warrior", 1, 1)]
         Warrior,
 
-        [CharacterClassInfo(2, 2)]
+        [CharacterClassInfo("Paladin", 2, 2)]
         Paladin,
 
-        [CharacterClassInfo(3, 4)]
+        [CharacterClassInfo("Hunter", 3, 4)]
         Hunter,
 
-        [CharacterClassInfo(4, 8)]
+        [CharacterClassInfo("Rogue", 4, 8)]
         Rogue,
 
-        [CharacterClassInfo(5, 16)]
+        [CharacterClassInfo("Priest", 5, 16)]
         Priest,
 
-        [CharacterClassInfo(6, 32)]
+        [CharacterClassInfo("Death Knight", 6, 32)]
         DeathKnight,
 
-        [CharacterClassInfo(7, 64)]
+        [CharacterClassInfo("Shaman", 7, 64)]
         Shaman,
 
-        [CharacterClassInfo(8, 128)]
+        [CharacterClassInfo("Mage", 8, 128)]
         Mage,
 
-        [CharacterClassInfo(9, 256)]
+        [CharacterClassInfo("Warlock", 9, 256)]
         Warlock,
 
-        [CharacterClassInfo(11, 1024)]
+        [CharacterClassInfo("Druid", 11, 1024)]
         Druid
 
     }
@@ -70,6 +70,15 @@ namespace TrinityCore_Manager.Database.Enums
 
     public static class CharacterClassExtensions
     {
+
+        public static string GetCharacterClassName(this CharacterClass cl)
+        {
+
+            var attrib = cl.GetAttribute<CharacterClassInfoAttribute>();
+
+            return attrib.Name;
+
+        }
 
         public static int GetCharacterClassId(this CharacterClass cl)
         {

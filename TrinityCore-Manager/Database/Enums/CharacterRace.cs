@@ -12,34 +12,34 @@ namespace TrinityCore_Manager.Database.Enums
     public enum CharacterRace
     {
 
-        [CharacterRaceInfo(1, 1)]
+        [CharacterRaceInfo("Human", 1, 1)]
         Human,
 
-        [CharacterRaceInfo(2, 2)]
+        [CharacterRaceInfo("Orc", 2, 2)]
         Orc,
 
-        [CharacterRaceInfo(3, 4)]
+        [CharacterRaceInfo("Dwarf", 3, 4)]
         Dwarf,
 
-        [CharacterRaceInfo(4, 8)]
+        [CharacterRaceInfo("Night Elf", 4, 8)]
         NightElf,
 
-        [CharacterRaceInfo(5, 16)]
-        Scourge,
+        [CharacterRaceInfo("Undead", 5, 16)]
+        Undead,
 
-        [CharacterRaceInfo(6, 32)]
+        [CharacterRaceInfo("Tauren", 6, 32)]
         Tauren,
 
-        [CharacterRaceInfo(7, 64)]
+        [CharacterRaceInfo("Gnome", 7, 64)]
         Gnome,
 
-        [CharacterRaceInfo(8, 128)]
+        [CharacterRaceInfo("Troll", 8, 128)]
         Troll,
 
-        [CharacterRaceInfo(10, 512)]
+        [CharacterRaceInfo("Blood Elf", 10, 512)]
         BloodElf,
 
-        [CharacterRaceInfo(11, 1024)]
+        [CharacterRaceInfo("Draenei", 11, 1024)]
         Draenei
 
     }
@@ -70,6 +70,15 @@ namespace TrinityCore_Manager.Database.Enums
 
     public static class CharacterRaceExtensions
     {
+
+        public static string GetCharacterRaceName(this CharacterRace race)
+        {
+
+            var attrib = race.GetAttribute<CharacterRaceInfoAttribute>();
+
+            return attrib.Name;
+
+        }
 
         public static int GetCharacterRaceId(this CharacterRace race)
         {

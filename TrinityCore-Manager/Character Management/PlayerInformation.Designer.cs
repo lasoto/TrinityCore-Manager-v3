@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerInformation));
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -50,15 +48,17 @@
             this.emailLabel = new DevComponents.DotNetBar.LabelX();
             this.raceLabel = new DevComponents.DotNetBar.LabelX();
             this.classLabel = new DevComponents.DotNetBar.LabelX();
-            this.mapLabel = new DevComponents.DotNetBar.LabelX();
             this.moneyLabel = new DevComponents.DotNetBar.LabelX();
             this.accountLabel = new DevComponents.DotNetBar.LabelX();
             this.accountIdLabel = new DevComponents.DotNetBar.LabelX();
             this.gmLevelLabel = new DevComponents.DotNetBar.LabelX();
             this.playedTimeLabel = new DevComponents.DotNetBar.LabelX();
             this.levelLabel = new DevComponents.DotNetBar.LabelX();
-            this.areaLabel = new DevComponents.DotNetBar.LabelX();
-            this.phaseLabel = new DevComponents.DotNetBar.LabelX();
+            this.arenaPointsLabel = new DevComponents.DotNetBar.LabelX();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
+            this.honorPointsLabel = new DevComponents.DotNetBar.LabelX();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.totalKillsLabel = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -68,11 +68,11 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(387, 320);
+            this.labelX1.Location = new System.Drawing.Point(352, 274);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(61, 23);
+            this.labelX1.Size = new System.Drawing.Size(96, 23);
             this.labelX1.TabIndex = 30;
-            this.labelX1.Text = "Phase:";
+            this.labelX1.Text = "Arena Points:";
             // 
             // labelX2
             // 
@@ -81,37 +81,11 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(29, 320);
+            this.labelX2.Location = new System.Drawing.Point(29, 274);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(58, 23);
             this.labelX2.TabIndex = 29;
             this.labelX2.Text = "Money:";
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX3.Location = new System.Drawing.Point(401, 272);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(47, 23);
-            this.labelX3.TabIndex = 28;
-            this.labelX3.Text = "Area:";
-            // 
-            // labelX4
-            // 
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX4.Location = new System.Drawing.Point(43, 272);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(44, 23);
-            this.labelX4.TabIndex = 27;
-            this.labelX4.Text = "Map:";
             // 
             // labelX5
             // 
@@ -334,19 +308,6 @@
             this.classLabel.Size = new System.Drawing.Size(258, 23);
             this.classLabel.TabIndex = 36;
             // 
-            // mapLabel
-            // 
-            // 
-            // 
-            // 
-            this.mapLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.mapLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.mapLabel.Location = new System.Drawing.Point(88, 272);
-            this.mapLabel.Name = "mapLabel";
-            this.mapLabel.Size = new System.Drawing.Size(258, 23);
-            this.mapLabel.TabIndex = 37;
-            // 
             // moneyLabel
             // 
             // 
@@ -355,7 +316,7 @@
             this.moneyLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.moneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.moneyLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.moneyLabel.Location = new System.Drawing.Point(88, 320);
+            this.moneyLabel.Location = new System.Drawing.Point(88, 274);
             this.moneyLabel.Name = "moneyLabel";
             this.moneyLabel.Size = new System.Drawing.Size(258, 23);
             this.moneyLabel.TabIndex = 38;
@@ -425,46 +386,87 @@
             this.levelLabel.Size = new System.Drawing.Size(319, 23);
             this.levelLabel.TabIndex = 43;
             // 
-            // areaLabel
+            // arenaPointsLabel
             // 
             // 
             // 
             // 
-            this.areaLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.areaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.areaLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.areaLabel.Location = new System.Drawing.Point(454, 272);
-            this.areaLabel.Name = "areaLabel";
-            this.areaLabel.Size = new System.Drawing.Size(319, 23);
-            this.areaLabel.TabIndex = 44;
+            this.arenaPointsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.arenaPointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.arenaPointsLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.arenaPointsLabel.Location = new System.Drawing.Point(454, 274);
+            this.arenaPointsLabel.Name = "arenaPointsLabel";
+            this.arenaPointsLabel.Size = new System.Drawing.Size(319, 23);
+            this.arenaPointsLabel.TabIndex = 45;
             // 
-            // phaseLabel
-            // 
-            // 
+            // labelX16
             // 
             // 
-            this.phaseLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.phaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.phaseLabel.ForeColor = System.Drawing.Color.Chartreuse;
-            this.phaseLabel.Location = new System.Drawing.Point(454, 320);
-            this.phaseLabel.Name = "phaseLabel";
-            this.phaseLabel.Size = new System.Drawing.Size(319, 23);
-            this.phaseLabel.TabIndex = 45;
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX16.Location = new System.Drawing.Point(352, 320);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(96, 23);
+            this.labelX16.TabIndex = 46;
+            this.labelX16.Text = "Honor Points:";
+            // 
+            // honorPointsLabel
+            // 
+            // 
+            // 
+            // 
+            this.honorPointsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.honorPointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.honorPointsLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.honorPointsLabel.Location = new System.Drawing.Point(454, 320);
+            this.honorPointsLabel.Name = "honorPointsLabel";
+            this.honorPointsLabel.Size = new System.Drawing.Size(319, 23);
+            this.honorPointsLabel.TabIndex = 47;
+            // 
+            // labelX17
+            // 
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelX17.Location = new System.Drawing.Point(11, 320);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(76, 23);
+            this.labelX17.TabIndex = 48;
+            this.labelX17.Text = "Total Kills:";
+            // 
+            // totalKillsLabel
+            // 
+            // 
+            // 
+            // 
+            this.totalKillsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.totalKillsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.totalKillsLabel.ForeColor = System.Drawing.Color.Chartreuse;
+            this.totalKillsLabel.Location = new System.Drawing.Point(88, 320);
+            this.totalKillsLabel.Name = "totalKillsLabel";
+            this.totalKillsLabel.Size = new System.Drawing.Size(258, 23);
+            this.totalKillsLabel.TabIndex = 49;
             // 
             // PlayerInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 358);
-            this.Controls.Add(this.phaseLabel);
-            this.Controls.Add(this.areaLabel);
+            this.Controls.Add(this.totalKillsLabel);
+            this.Controls.Add(this.labelX17);
+            this.Controls.Add(this.honorPointsLabel);
+            this.Controls.Add(this.labelX16);
+            this.Controls.Add(this.arenaPointsLabel);
             this.Controls.Add(this.levelLabel);
             this.Controls.Add(this.playedTimeLabel);
             this.Controls.Add(this.gmLevelLabel);
             this.Controls.Add(this.accountIdLabel);
             this.Controls.Add(this.accountLabel);
             this.Controls.Add(this.moneyLabel);
-            this.Controls.Add(this.mapLabel);
             this.Controls.Add(this.classLabel);
             this.Controls.Add(this.raceLabel);
             this.Controls.Add(this.emailLabel);
@@ -473,8 +475,6 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX5);
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.labelX7);
@@ -504,8 +504,6 @@
 
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX7;
@@ -523,15 +521,17 @@
         private DevComponents.DotNetBar.LabelX emailLabel;
         private DevComponents.DotNetBar.LabelX raceLabel;
         private DevComponents.DotNetBar.LabelX classLabel;
-        private DevComponents.DotNetBar.LabelX mapLabel;
         private DevComponents.DotNetBar.LabelX moneyLabel;
         private DevComponents.DotNetBar.LabelX accountLabel;
         private DevComponents.DotNetBar.LabelX accountIdLabel;
         private DevComponents.DotNetBar.LabelX gmLevelLabel;
         private DevComponents.DotNetBar.LabelX playedTimeLabel;
         private DevComponents.DotNetBar.LabelX levelLabel;
-        private DevComponents.DotNetBar.LabelX areaLabel;
-        private DevComponents.DotNetBar.LabelX phaseLabel;
+        private DevComponents.DotNetBar.LabelX arenaPointsLabel;
+        private DevComponents.DotNetBar.LabelX labelX16;
+        private DevComponents.DotNetBar.LabelX honorPointsLabel;
+        private DevComponents.DotNetBar.LabelX labelX17;
+        private DevComponents.DotNetBar.LabelX totalKillsLabel;
 
     }
 }

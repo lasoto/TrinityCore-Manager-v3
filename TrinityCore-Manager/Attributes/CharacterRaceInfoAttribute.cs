@@ -10,11 +10,13 @@ namespace TrinityCore_Manager.Attributes
     public class CharacterRaceInfoAttribute : Attribute
     {
 
+        public string Name { get; set; }
         public int Id { get; set; }
         public int BitmaskValue { get; set; }
 
-        public CharacterRaceInfoAttribute(int id, int bitmaskVal)
+        public CharacterRaceInfoAttribute(string name, int id, int bitmaskVal)
         {
+            Name = name;
             Id = id;
             BitmaskValue = bitmaskVal;
         }
