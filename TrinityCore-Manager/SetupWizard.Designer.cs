@@ -523,6 +523,7 @@
             this.portIntegerInput.Size = new System.Drawing.Size(80, 20);
             this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3443", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.portIntegerInput.TabIndex = 2;
+            this.portIntegerInput.Value = 3443;
             // 
             // portLabelX
             // 

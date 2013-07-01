@@ -108,6 +108,10 @@ namespace TrinityCore_Manager
                 ConnectRA();
 
             }
+            else
+            {
+                connectRAButton.Enabled = false;
+            }
 
             _checkPlayersOnlineTimer = new System.Windows.Forms.Timer();
             _checkPlayersOnlineTimer.Interval = (int)TimeSpan.FromSeconds(15).TotalMilliseconds;
@@ -181,6 +185,11 @@ namespace TrinityCore_Manager
         {
 
             TCManager manager = TCManager.Instance;
+
+            if (manager.RAClient != null)
+            {
+                ((TCPClient)manager.RAClient).Dispose();
+            }
 
             manager.RAClient = new TCPClient(Settings.Default.RAHost, Settings.Default.RAPort);
 
@@ -1117,6 +1126,27 @@ namespace TrinityCore_Manager
                 characterListComboBox.Items.Add(name);
 
             }
+
+        }
+
+        private void connectRAButton_Click(object sender, EventArgs e)
+        {
+
+            if ((ServerType)Settings.Default.ServerType == ServerType.Local)
+            {
+
+                MessageBoxEx.Show(this, "RA is not enabled!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            TCPClient client = (TCPClient)TCManager.Instance.RAClient;
+
+            if (client != null)
+                client.Disconnect();
+
+            ConnectRA();
 
         }
     }

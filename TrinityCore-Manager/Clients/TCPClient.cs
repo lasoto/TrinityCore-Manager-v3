@@ -140,7 +140,7 @@ namespace TrinityCore_Manager.Clients
                 string[] ex = Regex.Split(str, "\r\n");
 
                 var stream = _client.GetStream();
-                
+
 
                 if (string.IsNullOrEmpty(str) || read == 0)
                 {
@@ -270,7 +270,8 @@ namespace TrinityCore_Manager.Clients
 
             if (disposing)
             {
-                _client.Close();
+                if (_client != null)
+                    _client.Close();
             }
 
             _client = null;

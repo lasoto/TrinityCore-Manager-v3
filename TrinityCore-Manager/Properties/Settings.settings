@@ -42,7 +42,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RAPort" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">3443</Value>
     </Setting>
     <Setting Name="RAAutoConnect" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
