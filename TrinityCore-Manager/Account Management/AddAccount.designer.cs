@@ -53,12 +53,13 @@
             this.accLvl0ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
-            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
             this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
             this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
+            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // applicationButton2
@@ -291,7 +292,8 @@
             this.accLvl0ComboItem,
             this.accLvl1ComboItem,
             this.accLvl2ComboItem,
-            this.accLvl3ComboItem});
+            this.accLvl3ComboItem,
+            this.accLvl4ComboItem});
             this.accLevelComboBox.Location = new System.Drawing.Point(207, 111);
             this.accLevelComboBox.Name = "accLevelComboBox";
             this.accLevelComboBox.Size = new System.Drawing.Size(216, 20);
@@ -310,9 +312,9 @@
             // 
             this.accLvl2ComboItem.Text = "Game Master";
             // 
-            // accLvl3ComboItem
+            // accLvl4ComboItem
             // 
-            this.accLvl3ComboItem.Text = "Administrator";
+            this.accLvl4ComboItem.Text = "Administrator";
             // 
             // passwordTextBox
             // 
@@ -381,13 +383,17 @@
             this.accountUsernameLabel.TabIndex = 4;
             this.accountUsernameLabel.Text = "Account Username:";
             // 
+            // accLvl3ComboItem
+            // 
+            this.accLvl3ComboItem.Text = "Head Game Master";
+            // 
             // AddAccount
             // 
             this.AcceptButton = this.createButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(498, 258);
+            this.ClientSize = new System.Drawing.Size(498, 259);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
@@ -398,7 +404,6 @@
             this.Controls.Add(this.accountUsernameLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -444,6 +449,7 @@
         private DevComponents.Editors.ComboItem accLvl0ComboItem;
         private DevComponents.Editors.ComboItem accLvl1ComboItem;
         private DevComponents.Editors.ComboItem accLvl2ComboItem;
+        private DevComponents.Editors.ComboItem accLvl4ComboItem;
         private DevComponents.Editors.ComboItem accLvl3ComboItem;
     }
 }

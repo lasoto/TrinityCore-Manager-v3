@@ -72,7 +72,7 @@ namespace TrinityCore_Manager.Database
             int locked = row["locked"] != DBNull.Value ? ((byte)row["locked"]) : 0;
             string lockCountry = row["lock_country"] != DBNull.Value ? (string)row["lock_country"] : String.Empty;
             DateTime lastLogin = row["last_login"] != DBNull.Value && ((MySqlDateTime)row["last_login"]).IsValidDateTime ? ((MySqlDateTime)row["last_login"]).GetDateTime() : DateTime.Now;
-            bool online = row["online"] != DBNull.Value && ((sbyte)row["online"]) == 1;
+            bool online = row["online"] != DBNull.Value && Convert.ToBoolean(row["online"]);
             int exp = row["expansion"] != DBNull.Value ? ((byte)row["expansion"]) : 0;
 
             var acct = new Account();
@@ -219,6 +219,16 @@ namespace TrinityCore_Manager.Database
 
             await ExecuteNonQuery("UPDATE `account` SET expansion = @expansion, sessionkey = '', v = '', s = '' WHERE `id` = @id;", new MySqlParameter("@expansion", (int)exp), new MySqlParameter("@id", accountId));
         
+        }
+
+        public async Task SetAccountLock(int accountId, bool locked)
+        {
+
+            if (await GetAccount(accountId) == null)
+                return;
+
+            await ExecuteNonQuery("UPDATE `account` SET locked = @locked WHERE `id` = @id", new MySqlParameter("@locked", locked), new MySqlParameter("@id", accountId));
+
         }
 
         public async Task ChangeAccountExpansion(string username, Expansion exp)

@@ -180,6 +180,7 @@
     </Compile>
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Extensions\UIExtensions.cs" />
     <Compile Include="Guild Forms\CreateGuild.cs">
       <SubType>Form</SubType>
     </Compile>

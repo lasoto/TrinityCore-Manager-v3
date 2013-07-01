@@ -143,6 +143,7 @@
             this.otherTab = new DevComponents.DotNetBar.RibbonTabItem();
             this.setupWizardButton = new DevComponents.DotNetBar.ButtonItem();
             this.settingsButton = new DevComponents.DotNetBar.ButtonItem();
+            this.connectRAButton = new DevComponents.DotNetBar.ButtonItem();
             this.aboutButton = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
@@ -154,12 +155,11 @@
             this.nextBackupLabel = new DevComponents.DotNetBar.LabelItem();
             this.consoleTabControl = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.consoleTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.consoleTabItem = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.outputTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.outputTabItem = new DevComponents.DotNetBar.TabItem(this.components);
-            this.connectRAButton = new DevComponents.DotNetBar.ButtonItem();
+            this.consoleTextBox = new System.Windows.Forms.RichTextBox();
             this.mainRibbonControl.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -1803,6 +1803,12 @@
             this.settingsButton.Text = "Settings";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
+            // connectRAButton
+            // 
+            this.connectRAButton.Name = "connectRAButton";
+            this.connectRAButton.Text = "Connect to RA";
+            this.connectRAButton.Click += new System.EventHandler(this.connectRAButton_Click);
+            // 
             // aboutButton
             // 
             this.aboutButton.Name = "aboutButton";
@@ -1906,27 +1912,6 @@
             this.tabControlPanel1.TabIndex = 3;
             this.tabControlPanel1.TabItem = this.consoleTabItem;
             // 
-            // consoleTextBox
-            // 
-            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.consoleTextBox.Border.Class = "TextBoxBorder";
-            this.consoleTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.consoleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleTextBox.ForeColor = System.Drawing.Color.White;
-            this.consoleTextBox.Location = new System.Drawing.Point(1, 1);
-            this.consoleTextBox.Multiline = true;
-            this.consoleTextBox.Name = "consoleTextBox";
-            this.consoleTextBox.ReadOnly = true;
-            this.consoleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.consoleTextBox.Size = new System.Drawing.Size(1125, 494);
-            this.consoleTextBox.TabIndex = 4;
-            this.consoleTextBox.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            this.consoleTextBox.WatermarkColor = System.Drawing.SystemColors.Control;
-            this.consoleTextBox.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // consoleTabItem
             // 
             this.consoleTabItem.AttachedControl = this.tabControlPanel1;
@@ -1977,11 +1962,16 @@
             this.outputTabItem.Name = "outputTabItem";
             this.outputTabItem.Text = "Output";
             // 
-            // connectRAButton
+            // consoleTextBox
             // 
-            this.connectRAButton.Name = "connectRAButton";
-            this.connectRAButton.Text = "Connect to RA";
-            this.connectRAButton.Click += new System.EventHandler(this.connectRAButton_Click);
+            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.consoleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleTextBox.ForeColor = System.Drawing.Color.White;
+            this.consoleTextBox.Location = new System.Drawing.Point(1, 1);
+            this.consoleTextBox.Name = "consoleTextBox";
+            this.consoleTextBox.Size = new System.Drawing.Size(1125, 494);
+            this.consoleTextBox.TabIndex = 0;
+            this.consoleTextBox.Text = "";
             // 
             // MainForm
             // 
@@ -2145,12 +2135,12 @@
         private DevComponents.DotNetBar.RibbonBar backupRestoreRibbonBar;
         private DevComponents.DotNetBar.ButtonItem backupDbButton;
         private DevComponents.DotNetBar.ButtonItem restoreDbButton;
-        private DevComponents.DotNetBar.Controls.TextBoxX consoleTextBox;
         private DevComponents.DotNetBar.RibbonBar databaseCleanupRibbonBar;
         private DevComponents.DotNetBar.ButtonItem cleanWorldButton;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
         private DevComponents.DotNetBar.LabelItem nextBackupLabel;
         private DevComponents.DotNetBar.ButtonItem connectRAButton;
+        private System.Windows.Forms.RichTextBox consoleTextBox;
     }
 }
 

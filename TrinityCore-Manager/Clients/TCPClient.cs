@@ -87,11 +87,6 @@ namespace TrinityCore_Manager.Clients
                 if (_client.Connected)
                 {
 
-                    IsConnected = true;
-
-                    if (TCConnected != null)
-                        TCConnected(this, EventArgs.Empty);
-
                     var stream = _client.GetStream();
 
                     stream.BeginRead(_buffer, 0, _buffer.Length, Receive, stream);
@@ -134,6 +129,16 @@ namespace TrinityCore_Manager.Clients
 
             try
             {
+
+                if (!IsConnected)
+                {
+
+                    IsConnected = true;
+
+                    if (TCConnected != null)
+                        TCConnected(this, EventArgs.Empty);
+
+                }
 
                 string str = Encoding.UTF8.GetString(_buffer, 0, read);
 

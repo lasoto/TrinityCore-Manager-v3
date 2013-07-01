@@ -11,6 +11,7 @@ namespace TrinityCore_Manager.Database.Enums
         Player = 0,
         Moderator = 1,
         GM = 2,
-        Admin = 3
+        HeadGM = 3,
+        Admin = 4
     }
 }

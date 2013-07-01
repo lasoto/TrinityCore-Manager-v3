@@ -42,7 +42,7 @@ namespace TrinityCore_Manager
             }
 
             folderTextBox.Text = settings.ServerFolder;
-            
+
             hostTextBox.Text = settings.RAHost;
             portIntegerInput.Value = settings.RAPort;
             usernameTextBox.Text = settings.RAUsername;
@@ -189,12 +189,10 @@ namespace TrinityCore_Manager
                         }
                         else
                         {
-
                             MessageBoxEx.Show(this, "Could not connect to MySQL!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                            mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.True;
-
                         }
+
+                        mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.True;
 
                     }
 

@@ -69,6 +69,7 @@ namespace TrinityCore_Manager
 
             }
 
+            nameLabel.Text = character.Name;
             lastLoginLabel.Text = account.LastLogin.ToString();
             lastIpLabel.Text = account.LastIp;
             emailLabel.Text = account.Email;
@@ -107,6 +108,12 @@ namespace TrinityCore_Manager
                 case GMLevel.GM:
 
                     gmLevelLabel.Text = "Game Master";
+
+                    break;
+
+                case GMLevel.HeadGM:
+
+                    gmLevelLabel.Text = "Head Game Master";
 
                     break;
 

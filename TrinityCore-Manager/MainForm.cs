@@ -103,6 +103,7 @@ namespace TrinityCore_Manager
 
                 startServerButton.Enabled = false;
                 openConfigurationFileButton.Enabled = false;
+                connectRAButton.Enabled = true;
 
                 //if (Settings.Default.RAAutoConnect)
                 ConnectRA();
@@ -110,6 +111,8 @@ namespace TrinityCore_Manager
             }
             else
             {
+                startServerButton.Enabled = true;
+                openConfigurationFileButton.Enabled = true;
                 connectRAButton.Enabled = false;
             }
 
@@ -218,6 +221,7 @@ namespace TrinityCore_Manager
             Invoke((MethodInvoker)delegate
             {
                 consoleTextBox.AppendText(e.Message + Environment.NewLine);
+                consoleTextBox.ScrollToBottom();
             });
         }
 
@@ -228,6 +232,7 @@ namespace TrinityCore_Manager
             {
 
                 consoleTextBox.AppendText("Disconnected!" + Environment.NewLine);
+                consoleTextBox.ScrollToBottom();
 
                 authServerLabel.Image = Resources.agt_action_fail_16;
                 worldServerLabel.Image = Resources.agt_action_fail_16;
@@ -249,11 +254,11 @@ namespace TrinityCore_Manager
 
             });
 
-            AuthenticateRA();
+            await AuthenticateRA();
 
         }
 
-        private async void AuthenticateRA()
+        private async Task AuthenticateRA()
         {
 
             TCPClient client = (TCPClient)TCManager.Instance.RAClient;
@@ -261,8 +266,8 @@ namespace TrinityCore_Manager
             if (client == null)
                 return;
 
-            //await client.SendMessage(Settings.Default.RAUsername);
-            //await client.SendMessage(Settings.Default.RAPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString());
+            await client.SendMessage(Settings.Default.RAUsername);
+            await client.SendMessage(Settings.Default.RAPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString());
 
         }
 
@@ -876,6 +881,7 @@ namespace TrinityCore_Manager
                 if (e.Data != null && !IsDisposed)
                 {
                     consoleTextBox.AppendText(e.Data + Environment.NewLine);
+                    consoleTextBox.ScrollToBottom();
                 }
             });
         }
@@ -887,6 +893,7 @@ namespace TrinityCore_Manager
                 if (e.Data != null && !IsDisposed)
                 {
                     consoleTextBox.AppendText(e.Data + Environment.NewLine);
+                    consoleTextBox.ScrollToBottom();
                 }
             });
         }
@@ -968,6 +975,15 @@ namespace TrinityCore_Manager
 
             try
             {
+
+                consoleTextBox.SelectionStart = consoleTextBox.TextLength;
+                consoleTextBox.SelectionLength = 0;
+
+                consoleTextBox.SelectionColor = Color.Chartreuse;
+                consoleTextBox.AppendText(String.Format("Console: {0}: ", executeCommandTextBox.Text + Environment.NewLine));
+                consoleTextBox.SelectionColor = consoleTextBox.ForeColor;
+                
+                consoleTextBox.ScrollToBottom();
 
                 await TCAction.ExecuteCommand(executeCommandTextBox.Text);
 
