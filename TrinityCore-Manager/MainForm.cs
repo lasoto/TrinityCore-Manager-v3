@@ -1165,5 +1165,59 @@ namespace TrinityCore_Manager
             ConnectRA();
 
         }
+
+        private async void sendMessageButton_Click(object sender, EventArgs e)
+        {
+
+            if (serverAnnouncementCheckBox.Checked)
+            {
+                await TCAction.AnnounceToServer(communicationsTextBox.Text);
+            }
+            else if (serverNotificationCheckBox.Checked)
+            {
+                await TCAction.NotifiyServer(communicationsTextBox.Text);
+            }
+            else if (sendMessageToPlayerCheckBox.Checked)
+            {
+                //TODO
+            }
+            else if (gmAnnouncementCheckBox.Checked)
+            {
+                await TCAction.NotifyGMs(communicationsTextBox.Text);
+            }
+
+        }
+
+        private async void revivePlayerButton_Click(object sender, EventArgs e)
+        {
+
+            if (characterListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            await TCAction.RevivePlayer(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
+
+        }
+
+        private async void forceRenameButton_Click(object sender, EventArgs e)
+        {
+
+            if (characterListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            await TCAction.ForceCharRename(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
+
+        }
     }
 }

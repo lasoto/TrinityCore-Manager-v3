@@ -155,11 +155,11 @@
             this.nextBackupLabel = new DevComponents.DotNetBar.LabelItem();
             this.consoleTabControl = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.consoleTextBox = new System.Windows.Forms.RichTextBox();
             this.consoleTabItem = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.outputTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.outputTabItem = new DevComponents.DotNetBar.TabItem(this.components);
-            this.consoleTextBox = new System.Windows.Forms.RichTextBox();
             this.mainRibbonControl.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -184,12 +184,12 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -257,6 +257,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // playerManagementRibbonBar
             // 
@@ -907,6 +908,7 @@
             this.sendMessageButton.HotForeColor = System.Drawing.Color.Chartreuse;
             this.sendMessageButton.Name = "sendMessageButton";
             this.sendMessageButton.Text = "Send Message";
+            this.sendMessageButton.Click += new System.EventHandler(this.sendMessageButton_Click);
             // 
             // ribbonPanel3
             // 
@@ -1145,7 +1147,6 @@
             // 
             this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // characterEditorRibbonBar
             // 
@@ -1208,11 +1209,13 @@
             // 
             this.revivePlayerButton.Name = "revivePlayerButton";
             this.revivePlayerButton.Text = "Revive Player";
+            this.revivePlayerButton.Click += new System.EventHandler(this.revivePlayerButton_Click);
             // 
             // forceRenameButton
             // 
             this.forceRenameButton.Name = "forceRenameButton";
             this.forceRenameButton.Text = "Force Rename";
+            this.forceRenameButton.Click += new System.EventHandler(this.forceRenameButton_Click);
             // 
             // banCharacterButton
             // 
@@ -1744,7 +1747,6 @@
             // 
             // serverManagementTab
             // 
-            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
@@ -1763,6 +1765,7 @@
             // 
             // characterManagementTab
             // 
+            this.characterManagementTab.Checked = true;
             this.characterManagementTab.Name = "characterManagementTab";
             this.characterManagementTab.Panel = this.ribbonPanel4;
             this.characterManagementTab.Text = "Character Management";
@@ -1912,6 +1915,17 @@
             this.tabControlPanel1.TabIndex = 3;
             this.tabControlPanel1.TabItem = this.consoleTabItem;
             // 
+            // consoleTextBox
+            // 
+            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.consoleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleTextBox.ForeColor = System.Drawing.Color.White;
+            this.consoleTextBox.Location = new System.Drawing.Point(1, 1);
+            this.consoleTextBox.Name = "consoleTextBox";
+            this.consoleTextBox.Size = new System.Drawing.Size(1125, 494);
+            this.consoleTextBox.TabIndex = 0;
+            this.consoleTextBox.Text = "";
+            // 
             // consoleTabItem
             // 
             this.consoleTabItem.AttachedControl = this.tabControlPanel1;
@@ -1961,17 +1975,6 @@
             this.outputTabItem.AttachedControl = this.tabControlPanel2;
             this.outputTabItem.Name = "outputTabItem";
             this.outputTabItem.Text = "Output";
-            // 
-            // consoleTextBox
-            // 
-            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.consoleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleTextBox.ForeColor = System.Drawing.Color.White;
-            this.consoleTextBox.Location = new System.Drawing.Point(1, 1);
-            this.consoleTextBox.Name = "consoleTextBox";
-            this.consoleTextBox.Size = new System.Drawing.Size(1125, 494);
-            this.consoleTextBox.TabIndex = 0;
-            this.consoleTextBox.Text = "";
             // 
             // MainForm
             // 

@@ -5,7 +5,7 @@
 
         [TCCommand("account create", 2)]
         CreateAccount,
-    
+
         [TCCommand("ban account", 3)]
         BanAccount,
 
@@ -31,7 +31,25 @@
         SetPlayerLimit,
 
         [TCCommand("server set motd", 1)]
-        SetMOTD
-    
+        SetMOTD,
+
+        [TCCommand("announce", 1)]
+        ServerAnnouncement,
+
+        [TCCommand("notify", 1)]
+        ServerNotification,
+
+        [TCCommand("send message", 2)]
+        SendPlayerMessage,
+
+        [TCCommand("gmnotify", 1)]
+        NotifyGMs,
+
+        [TCCommand("revive", 1)]
+        RevivePlayer,
+
+        [TCCommand("character rename", 1)]
+        ForceCharRename
+
     }
 }

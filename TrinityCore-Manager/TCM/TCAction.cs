@@ -127,6 +127,61 @@ namespace TrinityCore_Manager.TCM
 
         }
 
+        public static async Task AnnounceToServer(string message)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.ServerAnnouncement.BuildCommand(message));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task NotifiyServer(string notification)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.ServerNotification.BuildCommand(notification));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SendMessageToPlayer(string playerName, string message)
+        {
+            //TODO
+        }
+
+        public static async Task NotifyGMs(string message)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.NotifyGMs.BuildCommand(message));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task RevivePlayer(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.RevivePlayer.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task ForceCharRename(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.ForceCharRename.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
         private static TCMClient GetClient()
         {
 
