@@ -976,14 +976,7 @@ namespace TrinityCore_Manager
             try
             {
 
-                consoleTextBox.SelectionStart = consoleTextBox.TextLength;
-                consoleTextBox.SelectionLength = 0;
-
-                consoleTextBox.SelectionColor = Color.Chartreuse;
-                consoleTextBox.AppendText(String.Format("Console: {0}: ", executeCommandTextBox.Text + Environment.NewLine));
-                consoleTextBox.SelectionColor = consoleTextBox.ForeColor;
-                
-                consoleTextBox.ScrollToBottom();
+                AddMessage(String.Format("Console: {0}: ", executeCommandTextBox.Text + Environment.NewLine), Color.Chartreuse);
 
                 await TCAction.ExecuteCommand(executeCommandTextBox.Text);
 
@@ -995,6 +988,18 @@ namespace TrinityCore_Manager
                 MessageBoxEx.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void AddMessage(string message, Color color)
+        {
+            consoleTextBox.SelectionStart = consoleTextBox.TextLength;
+            consoleTextBox.SelectionLength = 0;
+
+            consoleTextBox.SelectionColor = color;
+            consoleTextBox.AppendText(message);
+            consoleTextBox.SelectionColor = consoleTextBox.ForeColor;
+
+            consoleTextBox.ScrollToBottom();
         }
 
         private void executeCommandTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -1171,20 +1176,33 @@ namespace TrinityCore_Manager
 
             if (serverAnnouncementCheckBox.Checked)
             {
+
+                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                    AddMessage(String.Format("Server Announcement: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
+
                 await TCAction.AnnounceToServer(communicationsTextBox.Text);
+
             }
             else if (serverNotificationCheckBox.Checked)
             {
+
+                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                    AddMessage(String.Format("Notification: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
+
                 await TCAction.NotifiyServer(communicationsTextBox.Text);
-            }
-            else if (sendMessageToPlayerCheckBox.Checked)
-            {
-                //TODO
+
             }
             else if (gmAnnouncementCheckBox.Checked)
             {
+
+                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                    AddMessage(String.Format("GM Notification: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
+
                 await TCAction.NotifyGMs(communicationsTextBox.Text);
+
             }
+
+            communicationsTextBox.Text = String.Empty;
 
         }
 
@@ -1217,6 +1235,30 @@ namespace TrinityCore_Manager
             }
 
             await TCAction.ForceCharRename(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
+
+        }
+
+        private void communicationsTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                sendMessageButton.RaiseClick();
+            }
+        }
+
+        private async void banCharacterButton_Click(object sender, EventArgs e)
+        {
+
+            if (characterListComboBox.SelectedIndex == -1)
+            {
+
+                MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
+            await TCAction.BanCharacter(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
 
         }
     }

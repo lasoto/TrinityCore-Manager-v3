@@ -49,7 +49,10 @@
         RevivePlayer,
 
         [TCCommand("character rename", 1)]
-        ForceCharRename
+        ForceCharRename,
+
+        [TCCommand("ban character", 3)]
+        BanCharacter
 
     }
 }

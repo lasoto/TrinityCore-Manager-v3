@@ -39,42 +39,41 @@
             this.dodgeComboItem = new DevComponents.Editors.ComboItem();
             this.parryComboItem = new DevComponents.Editors.ComboItem();
             this.blockComboItem = new DevComponents.Editors.ComboItem();
-            this.expertiseComboItem = new DevComponents.Editors.ComboItem();
-            this.resilienceComboItem = new DevComponents.Editors.ComboItem();
-            this.healingBonusComboItem = new DevComponents.Editors.ComboItem();
-            this.damageBonusComboItem = new DevComponents.Editors.ComboItem();
-            this.manaperfivesecComboItem = new DevComponents.Editors.ComboItem();
-            this.blockValueComboItem = new DevComponents.Editors.ComboItem();
-            this.healthRegenComboItem = new DevComponents.Editors.ComboItem();
-            this.spellPenetrationComboItem = new DevComponents.Editors.ComboItem();
-            this.armorPenetrationComboItem = new DevComponents.Editors.ComboItem();
-            this.attackPowerComboItem = new DevComponents.Editors.ComboItem();
+            this.hitMeleeComboItem = new DevComponents.Editors.ComboItem();
+            this.hitRangedComboItem = new DevComponents.Editors.ComboItem();
+            this.critMeleeComboItem = new DevComponents.Editors.ComboItem();
+            this.critRangedComboItem = new DevComponents.Editors.ComboItem();
+            this.hitTakenMeleeComboItem = new DevComponents.Editors.ComboItem();
+            this.hitTakenRangedComboItem = new DevComponents.Editors.ComboItem();
+            this.hitTakenSpellComboItem = new DevComponents.Editors.ComboItem();
+            this.critTakenMeleeComboItem = new DevComponents.Editors.ComboItem();
+            this.critTakenRangedComboItem = new DevComponents.Editors.ComboItem();
+            this.critTakenSpellComboItem = new DevComponents.Editors.ComboItem();
+            this.hasteMeleeComboItem = new DevComponents.Editors.ComboItem();
+            this.hasteRangedComboItem = new DevComponents.Editors.ComboItem();
+            this.hasteSpellComboItem = new DevComponents.Editors.ComboItem();
             this.hitRatingComboItem = new DevComponents.Editors.ComboItem();
-            this.hitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.hitCritRatingComboItem = new DevComponents.Editors.ComboItem();
-            this.hitCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.hitHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHitComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeCritComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.meleeHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedAttackPwrComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHitComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedCritComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.rangedHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHitComboItem = new DevComponents.Editors.ComboItem();
-            this.spellCritComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHitAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.spellCritAvoidComboItem = new DevComponents.Editors.ComboItem();
-            this.spellHasteComboItem = new DevComponents.Editors.ComboItem();
-            this.spellPowerComboItem = new DevComponents.Editors.ComboItem();
-            this.feralAttackPwrComboItem = new DevComponents.Editors.ComboItem();
+            this.critRatingComboItem = new DevComponents.Editors.ComboItem();
+            this.hitTakenComboItem = new DevComponents.Editors.ComboItem();
+            this.critTakenComboItem = new DevComponents.Editors.ComboItem();
+            this.resilienceRatingComboItem = new DevComponents.Editors.ComboItem();
+            this.hasteRatingComboItem = new DevComponents.Editors.ComboItem();
+            this.expertiseRatingComboItem = new DevComponents.Editors.ComboItem();
+            this.attackPowerComboItem = new DevComponents.Editors.ComboItem();
+            this.rangedAttackPowerComboItem = new DevComponents.Editors.ComboItem();
+            this.feralAttackPowerComboItem = new DevComponents.Editors.ComboItem();
+            this.spellHealingDoneComboItem = new DevComponents.Editors.ComboItem();
+            this.spellDamageDoneComboItem = new DevComponents.Editors.ComboItem();
+            this.manaRegenComboItem = new DevComponents.Editors.ComboItem();
+            this.armorPenetrationComboItem = new DevComponents.Editors.ComboItem();
+            this.manaComboItem = new DevComponents.Editors.ComboItem();
             this.itemStatTypeLabel1 = new DevComponents.DotNetBar.LabelX();
             this.itemStatValueLabel1 = new DevComponents.DotNetBar.LabelX();
             this.itemStatsValueIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.spellPowerComboItem = new DevComponents.Editors.ComboItem();
+            this.healthRegenComboItem = new DevComponents.Editors.ComboItem();
+            this.spellPenetrationComboItem = new DevComponents.Editors.ComboItem();
+            this.blockValueComboItem = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemStatsValueIntegerInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +86,7 @@
             this.statTypeComboBox.FormattingEnabled = true;
             this.statTypeComboBox.ItemHeight = 14;
             this.statTypeComboBox.Items.AddRange(new object[] {
+            this.manaComboItem,
             this.healthComboItem,
             this.agilityComboItem,
             this.strengthComboItem,
@@ -97,39 +97,37 @@
             this.dodgeComboItem,
             this.parryComboItem,
             this.blockComboItem,
-            this.expertiseComboItem,
-            this.resilienceComboItem,
-            this.healingBonusComboItem,
-            this.damageBonusComboItem,
-            this.manaperfivesecComboItem,
-            this.blockValueComboItem,
+            this.hitMeleeComboItem,
+            this.hitRangedComboItem,
+            this.critMeleeComboItem,
+            this.critRangedComboItem,
+            this.hitTakenMeleeComboItem,
+            this.hitTakenRangedComboItem,
+            this.hitTakenSpellComboItem,
+            this.critTakenMeleeComboItem,
+            this.critTakenRangedComboItem,
+            this.critTakenSpellComboItem,
+            this.hasteMeleeComboItem,
+            this.hasteRangedComboItem,
+            this.hasteSpellComboItem,
+            this.hitRatingComboItem,
+            this.critRatingComboItem,
+            this.hitTakenComboItem,
+            this.critTakenComboItem,
+            this.resilienceRatingComboItem,
+            this.hasteRatingComboItem,
+            this.expertiseRatingComboItem,
+            this.attackPowerComboItem,
+            this.rangedAttackPowerComboItem,
+            this.feralAttackPowerComboItem,
+            this.spellHealingDoneComboItem,
+            this.spellDamageDoneComboItem,
+            this.manaRegenComboItem,
+            this.armorPenetrationComboItem,
+            this.spellPowerComboItem,
             this.healthRegenComboItem,
             this.spellPenetrationComboItem,
-            this.armorPenetrationComboItem,
-            this.attackPowerComboItem,
-            this.hitRatingComboItem,
-            this.hitAvoidComboItem,
-            this.hitCritRatingComboItem,
-            this.hitCritAvoidComboItem,
-            this.hitHasteComboItem,
-            this.meleeHitComboItem,
-            this.meleeCritComboItem,
-            this.meleeHitAvoidComboItem,
-            this.meleeCritAvoidComboItem,
-            this.meleeHasteComboItem,
-            this.rangedAttackPwrComboItem,
-            this.rangedHitComboItem,
-            this.rangedCritComboItem,
-            this.rangedHitAvoidComboItem,
-            this.rangedCritAvoidComboItem,
-            this.rangedHasteComboItem,
-            this.spellHitComboItem,
-            this.spellCritComboItem,
-            this.spellHitAvoidComboItem,
-            this.spellCritAvoidComboItem,
-            this.spellHasteComboItem,
-            this.spellPowerComboItem,
-            this.feralAttackPwrComboItem});
+            this.blockValueComboItem});
             this.statTypeComboBox.Location = new System.Drawing.Point(75, 3);
             this.statTypeComboBox.Name = "statTypeComboBox";
             this.statTypeComboBox.Size = new System.Drawing.Size(310, 20);
@@ -162,151 +160,131 @@
             // 
             // defenseComboItem
             // 
-            this.defenseComboItem.Text = "Defense";
+            this.defenseComboItem.Text = "Defense Skill Rating";
             // 
             // dodgeComboItem
             // 
-            this.dodgeComboItem.Text = "Dodge";
+            this.dodgeComboItem.Text = "Dodge Rating";
             // 
             // parryComboItem
             // 
-            this.parryComboItem.Text = "Parry";
+            this.parryComboItem.Text = "Parry Rating";
             // 
             // blockComboItem
             // 
-            this.blockComboItem.Text = "Block";
+            this.blockComboItem.Text = "Block Rating";
             // 
-            // expertiseComboItem
+            // hitMeleeComboItem
             // 
-            this.expertiseComboItem.Text = "Expertise";
+            this.hitMeleeComboItem.Text = "Hit Melee Rating";
             // 
-            // resilienceComboItem
+            // hitRangedComboItem
             // 
-            this.resilienceComboItem.Text = "Resilience";
+            this.hitRangedComboItem.Text = "Hit Ranged Rating";
             // 
-            // healingBonusComboItem
+            // critMeleeComboItem
             // 
-            this.healingBonusComboItem.Text = "Healing Bonus";
+            this.critMeleeComboItem.Text = "Crit Melee Rating";
             // 
-            // damageBonusComboItem
+            // critRangedComboItem
             // 
-            this.damageBonusComboItem.Text = "Damage Bonus";
+            this.critRangedComboItem.Text = "Crit Ranged Rating";
             // 
-            // manaperfivesecComboItem
+            // hitTakenMeleeComboItem
             // 
-            this.manaperfivesecComboItem.Text = "Mana Per 5 Sec";
+            this.hitTakenMeleeComboItem.Text = "Hit Taken Melee Rating";
             // 
-            // blockValueComboItem
+            // hitTakenRangedComboItem
             // 
-            this.blockValueComboItem.Text = "Block Value";
+            this.hitTakenRangedComboItem.Text = "Hit Taken Ranged Rating";
             // 
-            // healthRegenComboItem
+            // hitTakenSpellComboItem
             // 
-            this.healthRegenComboItem.Text = "Health Regeneration";
+            this.hitTakenSpellComboItem.Text = "Hit Taken Spell Rating";
             // 
-            // spellPenetrationComboItem
+            // critTakenMeleeComboItem
             // 
-            this.spellPenetrationComboItem.Text = "Spell Penetration";
+            this.critTakenMeleeComboItem.Text = "Crit Taken Melee Rating";
             // 
-            // armorPenetrationComboItem
+            // critTakenRangedComboItem
             // 
-            this.armorPenetrationComboItem.Text = "Armor Penetration";
+            this.critTakenRangedComboItem.Text = "Crit Taken Ranged Rating";
             // 
-            // attackPowerComboItem
+            // critTakenSpellComboItem
             // 
-            this.attackPowerComboItem.Text = "Attack Power";
+            this.critTakenSpellComboItem.Text = "Crit Taken Spell Rating";
+            // 
+            // hasteMeleeComboItem
+            // 
+            this.hasteMeleeComboItem.Text = "Haste Melee Rating";
+            // 
+            // hasteRangedComboItem
+            // 
+            this.hasteRangedComboItem.Text = "Haste Ranged Rating";
+            // 
+            // hasteSpellComboItem
+            // 
+            this.hasteSpellComboItem.Text = "Haste Spell Rating";
             // 
             // hitRatingComboItem
             // 
             this.hitRatingComboItem.Text = "Hit Rating";
             // 
-            // hitAvoidComboItem
+            // critRatingComboItem
             // 
-            this.hitAvoidComboItem.Text = "Hit Avoidance";
+            this.critRatingComboItem.Text = "Crit Rating";
             // 
-            // hitCritRatingComboItem
+            // hitTakenComboItem
             // 
-            this.hitCritRatingComboItem.Text = "Hit Crit Rating";
+            this.hitTakenComboItem.Text = "Hit Taken Rating";
             // 
-            // hitCritAvoidComboItem
+            // critTakenComboItem
             // 
-            this.hitCritAvoidComboItem.Text = "Hit Crit Avoidance";
+            this.critTakenComboItem.Text = "Crit Taken Rating";
             // 
-            // hitHasteComboItem
+            // resilienceRatingComboItem
             // 
-            this.hitHasteComboItem.Text = "Hit Haste Rating";
+            this.resilienceRatingComboItem.Text = "Resilience Rating";
             // 
-            // meleeHitComboItem
+            // hasteRatingComboItem
             // 
-            this.meleeHitComboItem.Text = "Melee Hit Rating";
+            this.hasteRatingComboItem.Text = "Haste Rating";
             // 
-            // meleeCritComboItem
+            // expertiseRatingComboItem
             // 
-            this.meleeCritComboItem.Text = "Melee Crit Rating";
+            this.expertiseRatingComboItem.Text = "Expertise Rating";
             // 
-            // meleeHitAvoidComboItem
+            // attackPowerComboItem
             // 
-            this.meleeHitAvoidComboItem.Text = "Melee Hit Avoidance";
+            this.attackPowerComboItem.Text = "Attack Power";
             // 
-            // meleeCritAvoidComboItem
+            // rangedAttackPowerComboItem
             // 
-            this.meleeCritAvoidComboItem.Text = "Melee Crit Avoidance";
+            this.rangedAttackPowerComboItem.Text = "Ranged Attack Power";
             // 
-            // meleeHasteComboItem
+            // feralAttackPowerComboItem
             // 
-            this.meleeHasteComboItem.Text = "Melee Haste Rating";
+            this.feralAttackPowerComboItem.Text = "Feral Attack Power (Not used as of v3.3)";
             // 
-            // rangedAttackPwrComboItem
+            // spellHealingDoneComboItem
             // 
-            this.rangedAttackPwrComboItem.Text = "Ranged Attack Power";
+            this.spellHealingDoneComboItem.Text = "Spell Healing Done";
             // 
-            // rangedHitComboItem
+            // spellDamageDoneComboItem
             // 
-            this.rangedHitComboItem.Text = "Ranged Hit Rating";
+            this.spellDamageDoneComboItem.Text = "Spell Damage Done";
             // 
-            // rangedCritComboItem
+            // manaRegenComboItem
             // 
-            this.rangedCritComboItem.Text = "Ranged Crit Rating";
+            this.manaRegenComboItem.Text = "Mana Regen";
             // 
-            // rangedHitAvoidComboItem
+            // armorPenetrationComboItem
             // 
-            this.rangedHitAvoidComboItem.Text = "Ranged Hit Avoidance";
+            this.armorPenetrationComboItem.Text = "Armor Penetration";
             // 
-            // rangedCritAvoidComboItem
+            // manaComboItem
             // 
-            this.rangedCritAvoidComboItem.Text = "Ranged Crit Avoidance";
-            // 
-            // rangedHasteComboItem
-            // 
-            this.rangedHasteComboItem.Text = "Ranged Haste Rating";
-            // 
-            // spellHitComboItem
-            // 
-            this.spellHitComboItem.Text = "Spell Hit Rating";
-            // 
-            // spellCritComboItem
-            // 
-            this.spellCritComboItem.Text = "Spell Crit Rating";
-            // 
-            // spellHitAvoidComboItem
-            // 
-            this.spellHitAvoidComboItem.Text = "Spell Hit Avoidance";
-            // 
-            // spellCritAvoidComboItem
-            // 
-            this.spellCritAvoidComboItem.Text = "Spell Crit Avoidance";
-            // 
-            // spellHasteComboItem
-            // 
-            this.spellHasteComboItem.Text = "Spell Haste Rating";
-            // 
-            // spellPowerComboItem
-            // 
-            this.spellPowerComboItem.Text = "Spell Power";
-            // 
-            // feralAttackPwrComboItem
-            // 
-            this.feralAttackPwrComboItem.Text = "Feral Attack Power";
+            this.manaComboItem.Text = "Mana";
             // 
             // itemStatTypeLabel1
             // 
@@ -349,6 +327,22 @@
             this.itemStatsValueIntegerInput.Size = new System.Drawing.Size(108, 20);
             this.itemStatsValueIntegerInput.TabIndex = 6;
             // 
+            // spellPowerComboItem
+            // 
+            this.spellPowerComboItem.Text = "Spell Power";
+            // 
+            // healthRegenComboItem
+            // 
+            this.healthRegenComboItem.Text = "Health Regen";
+            // 
+            // spellPenetrationComboItem
+            // 
+            this.spellPenetrationComboItem.Text = "Spell Penetration";
+            // 
+            // blockValueComboItem
+            // 
+            this.blockValueComboItem.Text = "Block Value";
+            // 
             // ItemStatsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,41 +372,40 @@
         private DevComponents.Editors.ComboItem dodgeComboItem;
         private DevComponents.Editors.ComboItem parryComboItem;
         private DevComponents.Editors.ComboItem blockComboItem;
-        private DevComponents.Editors.ComboItem expertiseComboItem;
-        private DevComponents.Editors.ComboItem resilienceComboItem;
-        private DevComponents.Editors.ComboItem healingBonusComboItem;
-        private DevComponents.Editors.ComboItem damageBonusComboItem;
-        private DevComponents.Editors.ComboItem manaperfivesecComboItem;
-        private DevComponents.Editors.ComboItem blockValueComboItem;
-        private DevComponents.Editors.ComboItem healthRegenComboItem;
-        private DevComponents.Editors.ComboItem spellPenetrationComboItem;
-        private DevComponents.Editors.ComboItem armorPenetrationComboItem;
-        private DevComponents.Editors.ComboItem attackPowerComboItem;
+        private DevComponents.Editors.ComboItem hitMeleeComboItem;
+        private DevComponents.Editors.ComboItem hitRangedComboItem;
+        private DevComponents.Editors.ComboItem critMeleeComboItem;
+        private DevComponents.Editors.ComboItem critRangedComboItem;
+        private DevComponents.Editors.ComboItem hitTakenMeleeComboItem;
+        private DevComponents.Editors.ComboItem hitTakenRangedComboItem;
+        private DevComponents.Editors.ComboItem hitTakenSpellComboItem;
+        private DevComponents.Editors.ComboItem critTakenMeleeComboItem;
+        private DevComponents.Editors.ComboItem critTakenRangedComboItem;
+        private DevComponents.Editors.ComboItem critTakenSpellComboItem;
+        private DevComponents.Editors.ComboItem hasteMeleeComboItem;
+        private DevComponents.Editors.ComboItem hasteRangedComboItem;
+        private DevComponents.Editors.ComboItem hasteSpellComboItem;
         private DevComponents.Editors.ComboItem hitRatingComboItem;
-        private DevComponents.Editors.ComboItem hitAvoidComboItem;
-        private DevComponents.Editors.ComboItem hitCritRatingComboItem;
-        private DevComponents.Editors.ComboItem hitCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem hitHasteComboItem;
-        private DevComponents.Editors.ComboItem meleeHitComboItem;
-        private DevComponents.Editors.ComboItem meleeCritComboItem;
-        private DevComponents.Editors.ComboItem meleeHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem meleeCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem meleeHasteComboItem;
-        private DevComponents.Editors.ComboItem rangedAttackPwrComboItem;
-        private DevComponents.Editors.ComboItem rangedHitComboItem;
-        private DevComponents.Editors.ComboItem rangedCritComboItem;
-        private DevComponents.Editors.ComboItem rangedHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem rangedCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem rangedHasteComboItem;
-        private DevComponents.Editors.ComboItem spellHitComboItem;
-        private DevComponents.Editors.ComboItem spellCritComboItem;
-        private DevComponents.Editors.ComboItem spellHitAvoidComboItem;
-        private DevComponents.Editors.ComboItem spellCritAvoidComboItem;
-        private DevComponents.Editors.ComboItem spellHasteComboItem;
-        private DevComponents.Editors.ComboItem spellPowerComboItem;
-        private DevComponents.Editors.ComboItem feralAttackPwrComboItem;
+        private DevComponents.Editors.ComboItem critRatingComboItem;
+        private DevComponents.Editors.ComboItem hitTakenComboItem;
+        private DevComponents.Editors.ComboItem critTakenComboItem;
+        private DevComponents.Editors.ComboItem resilienceRatingComboItem;
+        private DevComponents.Editors.ComboItem hasteRatingComboItem;
+        private DevComponents.Editors.ComboItem expertiseRatingComboItem;
+        private DevComponents.Editors.ComboItem attackPowerComboItem;
+        private DevComponents.Editors.ComboItem rangedAttackPowerComboItem;
+        private DevComponents.Editors.ComboItem feralAttackPowerComboItem;
+        private DevComponents.Editors.ComboItem spellHealingDoneComboItem;
+        private DevComponents.Editors.ComboItem spellDamageDoneComboItem;
+        private DevComponents.Editors.ComboItem manaRegenComboItem;
+        private DevComponents.Editors.ComboItem armorPenetrationComboItem;
         private DevComponents.DotNetBar.LabelX itemStatTypeLabel1;
         private DevComponents.DotNetBar.LabelX itemStatValueLabel1;
         private DevComponents.Editors.IntegerInput itemStatsValueIntegerInput;
+        private DevComponents.Editors.ComboItem manaComboItem;
+        private DevComponents.Editors.ComboItem spellPowerComboItem;
+        private DevComponents.Editors.ComboItem healthRegenComboItem;
+        private DevComponents.Editors.ComboItem spellPenetrationComboItem;
+        private DevComponents.Editors.ComboItem blockValueComboItem;
     }
 }

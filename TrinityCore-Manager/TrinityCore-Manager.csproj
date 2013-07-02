@@ -167,11 +167,36 @@
     <Compile Include="Database\Classes\PlayerInformation.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Classes\TCItem.cs" />
-    <Compile Include="Database\Enums\CharacterClass.cs" />
-    <Compile Include="Database\Enums\CharacterRace.cs" />
-    <Compile Include="Database\Enums\Expansion.cs" />
-    <Compile Include="Database\Enums\GMLevel.cs" />
-    <Compile Include="Database\Enums\GuildRanks.cs" />
+    <Compile Include="Database\Enums\Creature Enums\CreatureRank.cs" />
+    <Compile Include="Database\Enums\Character Enums\CharacterClass.cs" />
+    <Compile Include="Database\Enums\Character Enums\CharacterRace.cs" />
+    <Compile Include="Database\Enums\Conditions Enums\ConditionTypeOrReference.cs" />
+    <Compile Include="Database\Enums\Creature Enums\CreatureFamily.cs" />
+    <Compile Include="Database\Enums\Creature Enums\CreatureType.cs" />
+    <Compile Include="Database\Enums\Account Enums\Expansion.cs" />
+    <Compile Include="Database\Enums\Creature Enums\Faction.cs" />
+    <Compile Include="Database\Enums\Account Enums\GMLevel.cs" />
+    <Compile Include="Database\Enums\Character Enums\GuildRanks.cs" />
+    <Compile Include="Database\Enums\Item Enums\FoodType.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemBonding.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemClass.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemDamageType.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemInventoryType.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemMaterial.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemPageMaterial.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemQuality.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemRequiredReputationRank.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemSheath.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemSpellTrigger.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemStatType.cs" />
+    <Compile Include="Database\Enums\Item Enums\Language.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartAction.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartEvent.cs" />
+    <Compile Include="Database\Enums\Conditions Enums\SourceTypeOrReferenceId.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartReactState.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartSourceType.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartSummonType.cs" />
+    <Compile Include="Database\Enums\SmartAI Enums\SmartTargetType.cs" />
     <Compile Include="Events Forms\ConvertDaysToMinutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -724,6 +749,7 @@
   <ItemGroup>
     <None Include="Resources\agt_action_success_16.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

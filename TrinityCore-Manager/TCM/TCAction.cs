@@ -147,7 +147,7 @@ namespace TrinityCore_Manager.TCM
 
         }
 
-        public static async Task SendMessageToPlayer(string playerName, string message)
+        public static void SendMessageToPlayer(string playerName, string message)
         {
             //TODO
         }
@@ -179,6 +179,15 @@ namespace TrinityCore_Manager.TCM
                 await GetClient().SendMessage(TCCommand.ForceCharRename.BuildCommand(playerName));
             else
                 throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task BanCharacter(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.BanCharacter.BuildCommand(playerName));
+            //TODO: else
 
         }
 
