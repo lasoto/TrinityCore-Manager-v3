@@ -36,9 +36,9 @@
             this.flagsTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.itemSubClassIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemDetailsLink = new System.Windows.Forms.LinkLabel();
-            this.itemFlagsExtraLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemFlagsLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemSubClassLabel = new DevComponents.DotNetBar.LabelX();
+            this.label6 = new DevComponents.DotNetBar.LabelX();
+            this.label5 = new DevComponents.DotNetBar.LabelX();
+            this.label4 = new DevComponents.DotNetBar.LabelX();
             this.itemClassComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.consumableComboItem = new DevComponents.Editors.ComboItem();
             this.containerComboItem = new DevComponents.Editors.ComboItem();
@@ -57,7 +57,7 @@
             this.permanentOBSOLETEComboItem = new DevComponents.Editors.ComboItem();
             this.miscellaneousComboItem = new DevComponents.Editors.ComboItem();
             this.glyphComboItem = new DevComponents.Editors.ComboItem();
-            this.itemClassLabel = new DevComponents.DotNetBar.LabelX();
+            this.label3 = new DevComponents.DotNetBar.LabelX();
             this.itemEntryIdIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemDisplayIdIntegerInput = new DevComponents.Editors.IntegerInput();
             this.itemQualityComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -72,11 +72,11 @@
             this.itemDescriptionTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.itemNameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.findDisplayIdButton = new DevComponents.DotNetBar.ButtonX();
-            this.itemEntryIdLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemDisplayIdLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemQualityLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemDescriptionLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemNameLabel = new DevComponents.DotNetBar.LabelX();
+            this.label9 = new DevComponents.DotNetBar.LabelX();
+            this.label8 = new DevComponents.DotNetBar.LabelX();
+            this.label7 = new DevComponents.DotNetBar.LabelX();
+            this.label2 = new DevComponents.DotNetBar.LabelX();
+            this.label1 = new DevComponents.DotNetBar.LabelX();
             this.createWeaponWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.mysqlTestingConnectionLabel = new System.Windows.Forms.Label();
             this.mysqlConnectionWizardBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
@@ -90,14 +90,14 @@
             this.stackableIntegerInput = new DevComponents.Editors.IntegerInput();
             this.maxCountIntegerInput = new DevComponents.Editors.IntegerInput();
             this.statsCountIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemStatsCountLabel = new DevComponents.DotNetBar.LabelX();
+            this.label20 = new DevComponents.DotNetBar.LabelX();
             this.buyCountIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemBuyCountLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemContainerSlotsLabel = new DevComponents.DotNetBar.LabelX();
-            this.stackableLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemMaxCountLabel = new DevComponents.DotNetBar.LabelX();
-            this.copperLabel = new DevComponents.DotNetBar.LabelX();
-            this.silverLabel = new DevComponents.DotNetBar.LabelX();
+            this.label19 = new DevComponents.DotNetBar.LabelX();
+            this.label18 = new DevComponents.DotNetBar.LabelX();
+            this.label15 = new DevComponents.DotNetBar.LabelX();
+            this.label17 = new DevComponents.DotNetBar.LabelX();
+            this.label14 = new DevComponents.DotNetBar.LabelX();
+            this.label13 = new DevComponents.DotNetBar.LabelX();
             this.inventoryTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.nonEquipableInvTypeComboItem = new DevComponents.Editors.ComboItem();
             this.headInvTypeComboItem = new DevComponents.Editors.ComboItem();
@@ -128,27 +128,27 @@
             this.rangedRightInvTypeComboItem = new DevComponents.Editors.ComboItem();
             this.quiverInvTypeComboItem = new DevComponents.Editors.ComboItem();
             this.relicInvTypeComboItem = new DevComponents.Editors.ComboItem();
-            this.goldLabel = new DevComponents.DotNetBar.LabelX();
+            this.label12 = new DevComponents.DotNetBar.LabelX();
             this.buyCopperIntegerInput = new DevComponents.Editors.IntegerInput();
             this.sellSilverIntegerInput = new DevComponents.Editors.IntegerInput();
             this.buySilverIntegerInput = new DevComponents.Editors.IntegerInput();
             this.sellGoldIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemInventoryTypeLabel = new DevComponents.DotNetBar.LabelX();
+            this.label16 = new DevComponents.DotNetBar.LabelX();
             this.buyGoldIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.sellPriceLabel = new DevComponents.DotNetBar.LabelX();
-            this.buyPriceLabel = new DevComponents.DotNetBar.LabelX();
+            this.label11 = new DevComponents.DotNetBar.LabelX();
+            this.label10 = new DevComponents.DotNetBar.LabelX();
             this.itemWeaponStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.findItemSetButton = new DevComponents.DotNetBar.ButtonX();
             this.itemSetIntegerInput = new DevComponents.Editors.IntegerInput();
             this.rangedModDamageIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemRangedModDamageLabel = new DevComponents.DotNetBar.LabelX();
+            this.label30 = new DevComponents.DotNetBar.LabelX();
             this.delayIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemDelayLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemArmorLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemBlockLabel = new DevComponents.DotNetBar.LabelX();
+            this.label29 = new DevComponents.DotNetBar.LabelX();
+            this.label28 = new DevComponents.DotNetBar.LabelX();
+            this.label27 = new DevComponents.DotNetBar.LabelX();
             this.armorIntegerInput = new DevComponents.Editors.IntegerInput();
             this.blockIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSetLabel = new DevComponents.DotNetBar.LabelX();
+            this.label25 = new DevComponents.DotNetBar.LabelX();
             this.bindsComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.noneComboItem = new DevComponents.Editors.ComboItem();
             this.onPickupComboItem = new DevComponents.Editors.ComboItem();
@@ -156,9 +156,9 @@
             this.onUseComboItem = new DevComponents.Editors.ComboItem();
             this.questItemComboItem = new DevComponents.Editors.ComboItem();
             this.questItem1ComboItem = new DevComponents.Editors.ComboItem();
-            this.itemBindsLabel = new DevComponents.DotNetBar.LabelX();
+            this.label24 = new DevComponents.DotNetBar.LabelX();
             this.durabilityIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemDurabilityLabel = new DevComponents.DotNetBar.LabelX();
+            this.label23 = new DevComponents.DotNetBar.LabelX();
             this.ammoTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.noammoComboItem = new DevComponents.Editors.ComboItem();
             this.itemArrowsComboItem = new DevComponents.Editors.ComboItem();
@@ -172,18 +172,19 @@
             this.enchantersRodSheathComboItem = new DevComponents.Editors.ComboItem();
             this.offHandSheathComboItem = new DevComponents.Editors.ComboItem();
             this.itemWeaponStatsInfoLabel = new DevComponents.DotNetBar.LabelX();
-            this.ammoTypeLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemSheathLabel = new DevComponents.DotNetBar.LabelX();
+            this.label22 = new DevComponents.DotNetBar.LabelX();
+            this.label21 = new DevComponents.DotNetBar.LabelX();
             this.itemRequirementsWizardPage = new DevComponents.DotNetBar.WizardPage();
+            this.findSkillButton = new DevComponents.DotNetBar.ButtonX();
             this.findFactionButton = new DevComponents.DotNetBar.ButtonX();
             this.reqRepFactionIntegerInput = new DevComponents.Editors.IntegerInput();
             this.reqDisenchantSkillIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemReqDisenchantSkillLabel = new DevComponents.DotNetBar.LabelX();
+            this.label39 = new DevComponents.DotNetBar.LabelX();
             this.reqHonorRankIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemReqHonorRankLabel = new DevComponents.DotNetBar.LabelX();
+            this.label38 = new DevComponents.DotNetBar.LabelX();
             this.findReqSpellButton = new DevComponents.DotNetBar.ButtonX();
             this.reqSpellIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemReqSpellLabel = new DevComponents.DotNetBar.LabelX();
+            this.label37 = new DevComponents.DotNetBar.LabelX();
             this.itemReqInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.reqAllClassesCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -218,7 +219,7 @@
             this.honoredComboItem = new DevComponents.Editors.ComboItem();
             this.reveredComboItem = new DevComponents.Editors.ComboItem();
             this.exaltedComboItem = new DevComponents.Editors.ComboItem();
-            this.itemRequiredRepRankLabel = new DevComponents.DotNetBar.LabelX();
+            this.label35 = new DevComponents.DotNetBar.LabelX();
             this.reqSkillRankIntegerInput = new DevComponents.Editors.IntegerInput();
             this.levelReqIntegerInput = new DevComponents.Editors.IntegerInput();
             this.reqLevelIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -238,13 +239,13 @@
             this.skinningComboItem = new DevComponents.Editors.ComboItem();
             this.jewelcraftingComboItem = new DevComponents.Editors.ComboItem();
             this.inscriptionComboItem = new DevComponents.Editors.ComboItem();
-            this.itemSkillReqLabel = new DevComponents.DotNetBar.LabelX();
-            this.allowedRaceLabel = new DevComponents.DotNetBar.LabelX();
-            this.allowedClassLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemLvlReqLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemSkillRankReqLabel = new DevComponents.DotNetBar.LabelX();
-            this.repItemReqLabel = new DevComponents.DotNetBar.LabelX();
-            this.requiredLevelItemLabel = new DevComponents.DotNetBar.LabelX();
+            this.label34 = new DevComponents.DotNetBar.LabelX();
+            this.label41 = new DevComponents.DotNetBar.LabelX();
+            this.label40 = new DevComponents.DotNetBar.LabelX();
+            this.label33 = new DevComponents.DotNetBar.LabelX();
+            this.label36 = new DevComponents.DotNetBar.LabelX();
+            this.label32 = new DevComponents.DotNetBar.LabelX();
+            this.label31 = new DevComponents.DotNetBar.LabelX();
             this.itemDamageWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.damageTypeComboBox2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem31 = new DevComponents.Editors.ComboItem();
@@ -267,20 +268,20 @@
             this.damageMaxIntegerInput2 = new DevComponents.Editors.IntegerInput();
             this.damageMinIntegerInput2 = new DevComponents.Editors.IntegerInput();
             this.damageMinIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemDamageTypeLabel2 = new DevComponents.DotNetBar.LabelX();
-            this.itemDamageMaxLabel2 = new DevComponents.DotNetBar.LabelX();
-            this.itemDamageTypeLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemDamageMaxLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemDamageMinLabel2 = new DevComponents.DotNetBar.LabelX();
-            this.itemDamageMinLabel = new DevComponents.DotNetBar.LabelX();
+            this.label47 = new DevComponents.DotNetBar.LabelX();
+            this.label46 = new DevComponents.DotNetBar.LabelX();
+            this.label44 = new DevComponents.DotNetBar.LabelX();
+            this.label43 = new DevComponents.DotNetBar.LabelX();
+            this.label45 = new DevComponents.DotNetBar.LabelX();
+            this.label42 = new DevComponents.DotNetBar.LabelX();
             this.itemStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemStatsGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.itemStatsControl1 = new TrinityCore_Manager.ItemStatsControl();
             this.addStatsButton = new DevComponents.DotNetBar.ButtonX();
             this.scalingStatValueIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemScalingStatsValueLabel = new DevComponents.DotNetBar.LabelX();
+            this.label49 = new DevComponents.DotNetBar.LabelX();
             this.scalingStatDistributionIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemScalingStatDistLabel = new DevComponents.DotNetBar.LabelX();
+            this.label48 = new DevComponents.DotNetBar.LabelX();
             this.resistsWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemResistsInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.resistsArcaneIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -289,47 +290,47 @@
             this.resistsShadowIntegerInput = new DevComponents.Editors.IntegerInput();
             this.resistsNatureIntegerInput = new DevComponents.Editors.IntegerInput();
             this.resistsHolyIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemResistsArcaneLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemResistsFrostLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemResistsFireLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemResistsShadowLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemResistsNatureLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemResistsHolyLabel = new DevComponents.DotNetBar.LabelX();
+            this.label54 = new DevComponents.DotNetBar.LabelX();
+            this.label53 = new DevComponents.DotNetBar.LabelX();
+            this.label51 = new DevComponents.DotNetBar.LabelX();
+            this.label55 = new DevComponents.DotNetBar.LabelX();
+            this.label52 = new DevComponents.DotNetBar.LabelX();
+            this.label50 = new DevComponents.DotNetBar.LabelX();
             this.itemSocketWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.itemSocketGroupPanel = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.socket3CountIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.label61 = new DevComponents.DotNetBar.LabelX();
             this.socket3ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem6 = new DevComponents.Editors.ComboItem();
             this.comboItem7 = new DevComponents.Editors.ComboItem();
             this.comboItem8 = new DevComponents.Editors.ComboItem();
             this.comboItem9 = new DevComponents.Editors.ComboItem();
             this.comboItem10 = new DevComponents.Editors.ComboItem();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.label60 = new DevComponents.DotNetBar.LabelX();
             this.socket2CountIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.label59 = new DevComponents.DotNetBar.LabelX();
             this.socket2ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.comboItem5 = new DevComponents.Editors.ComboItem();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.label58 = new DevComponents.DotNetBar.LabelX();
             this.socket1CountIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSocketAmountLabel = new DevComponents.DotNetBar.LabelX();
+            this.label57 = new DevComponents.DotNetBar.LabelX();
             this.socket1ComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.noSocketComboItem = new DevComponents.Editors.ComboItem();
             this.metaSocketComboItem = new DevComponents.Editors.ComboItem();
             this.redSocketComboItem = new DevComponents.Editors.ComboItem();
             this.yellowSocketComboItem = new DevComponents.Editors.ComboItem();
             this.blueSocketComboItem = new DevComponents.Editors.ComboItem();
-            this.itemSocketLabel = new DevComponents.DotNetBar.LabelX();
+            this.label56 = new DevComponents.DotNetBar.LabelX();
             this.findGemPropButton = new DevComponents.DotNetBar.ButtonX();
             this.gemPropIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemGemPropLabel = new DevComponents.DotNetBar.LabelX();
+            this.label63 = new DevComponents.DotNetBar.LabelX();
             this.findSocketBonusButton = new DevComponents.DotNetBar.ButtonX();
             this.socketBonusIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemSocketBonusLabel = new DevComponents.DotNetBar.LabelX();
+            this.label62 = new DevComponents.DotNetBar.LabelX();
             this.itemSocketInfoLabel = new DevComponents.DotNetBar.LabelX();
             this.itemSpellWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.findSpellForItemButton = new DevComponents.DotNetBar.ButtonX();
@@ -340,17 +341,17 @@
             this.flagsCustomButton = new DevComponents.DotNetBar.ButtonX();
             this.flagsCustomIntegerInput = new DevComponents.Editors.IntegerInput();
             this.scriptNameIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherFlagsCustomLabel = new DevComponents.DotNetBar.LabelX();
+            this.label87 = new DevComponents.DotNetBar.LabelX();
             this.WDBVerifiedIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherWDBVerified = new DevComponents.DotNetBar.LabelX();
+            this.label86 = new DevComponents.DotNetBar.LabelX();
             this.holidayIdIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherHolidayIdLabel = new DevComponents.DotNetBar.LabelX();
+            this.label85 = new DevComponents.DotNetBar.LabelX();
             this.limitCategoryIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherItemLimitCategoryLabel = new DevComponents.DotNetBar.LabelX();
+            this.labe85 = new DevComponents.DotNetBar.LabelX();
             this.maxMoneyLootIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherMaxMoneyLootLabel = new DevComponents.DotNetBar.LabelX();
+            this.label84 = new DevComponents.DotNetBar.LabelX();
             this.minMoneyLootIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherMinMoneyLootLabel = new DevComponents.DotNetBar.LabelX();
+            this.labe83 = new DevComponents.DotNetBar.LabelX();
             this.foodTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.meatFoodTypeComboItem = new DevComponents.Editors.ComboItem();
             this.fishFoodTypeComboItem = new DevComponents.Editors.ComboItem();
@@ -360,27 +361,27 @@
             this.fruitFoodTypeComboItem = new DevComponents.Editors.ComboItem();
             this.rawMeatFoodTypeComboItem = new DevComponents.Editors.ComboItem();
             this.rawFishFoodTypeComboItem = new DevComponents.Editors.ComboItem();
-            this.itemOtherFoodTypeLabel = new DevComponents.DotNetBar.LabelX();
+            this.label82 = new DevComponents.DotNetBar.LabelX();
             this.randomArmorDmgModIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherArmorDmgModLabel = new DevComponents.DotNetBar.LabelX();
+            this.label81 = new DevComponents.DotNetBar.LabelX();
             this.randomSuffixIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherRandomSuffixLabel = new DevComponents.DotNetBar.LabelX();
+            this.label80 = new DevComponents.DotNetBar.LabelX();
             this.randomPropIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherRandomPropLabel = new DevComponents.DotNetBar.LabelX();
+            this.label79 = new DevComponents.DotNetBar.LabelX();
             this.disenchantIdIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherDisenchantIdLabel = new DevComponents.DotNetBar.LabelX();
+            this.label78 = new DevComponents.DotNetBar.LabelX();
             this.lockIdIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherLockIdLabel = new DevComponents.DotNetBar.LabelX();
+            this.label75 = new DevComponents.DotNetBar.LabelX();
             this.findStartQuestButton = new DevComponents.DotNetBar.ButtonX();
             this.startQuestIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherStartQuestLabel = new DevComponents.DotNetBar.LabelX();
-            this.itemOtherScriptNameLabel = new DevComponents.DotNetBar.LabelX();
+            this.labe77 = new DevComponents.DotNetBar.LabelX();
+            this.label76 = new DevComponents.DotNetBar.LabelX();
             this.findMapButton = new DevComponents.DotNetBar.ButtonX();
             this.mapIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherMapLabel = new DevComponents.DotNetBar.LabelX();
+            this.label74 = new DevComponents.DotNetBar.LabelX();
             this.findAreaButton = new DevComponents.DotNetBar.ButtonX();
             this.areaIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherAreaLabel = new DevComponents.DotNetBar.LabelX();
+            this.label73 = new DevComponents.DotNetBar.LabelX();
             this.totemCategoryComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.skinningKnifeOLDTotemCategoryComboItem = new DevComponents.Editors.ComboItem();
             this.earthTotemTotemCategoryComboItem = new DevComponents.Editors.ComboItem();
@@ -414,7 +415,7 @@
             this.flintAndTinderTotemCategoryComboItem = new DevComponents.Editors.ComboItem();
             this.runedCobaltRodTotemCategoryComboItem = new DevComponents.Editors.ComboItem();
             this.runedTitaniumRodTotemCategoryComboItem = new DevComponents.Editors.ComboItem();
-            this.itemOtherTotemCatLabel = new DevComponents.DotNetBar.LabelX();
+            this.label72 = new DevComponents.DotNetBar.LabelX();
             this.bagFamilyComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.noneBagFamilyComboItem = new DevComponents.Editors.ComboItem();
             this.arrowsBagFamilyComboItem = new DevComponents.Editors.ComboItem();
@@ -431,9 +432,9 @@
             this.vanityPetsBagFamilyComboItem = new DevComponents.Editors.ComboItem();
             this.currencyTokensBagFamilyComboItem = new DevComponents.Editors.ComboItem();
             this.questItemsBagFamilyComboItem = new DevComponents.Editors.ComboItem();
-            this.itemBagFamilyLabel = new DevComponents.DotNetBar.LabelX();
+            this.label71 = new DevComponents.DotNetBar.LabelX();
             this.durationIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherDurationLabel = new DevComponents.DotNetBar.LabelX();
+            this.label70 = new DevComponents.DotNetBar.LabelX();
             this.pageMatComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.parchmentPageMatComboItem = new DevComponents.Editors.ComboItem();
             this.stonePageMatComboItem = new DevComponents.Editors.ComboItem();
@@ -442,7 +443,7 @@
             this.bronzePageMatComboItem = new DevComponents.Editors.ComboItem();
             this.valentinePageMatComboItem = new DevComponents.Editors.ComboItem();
             this.illidanPageMatComboItem = new DevComponents.Editors.ComboItem();
-            this.itemOtherPageMatLabel = new DevComponents.DotNetBar.LabelX();
+            this.label68 = new DevComponents.DotNetBar.LabelX();
             this.languageIdComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.universalComboItem = new DevComponents.Editors.ComboItem();
             this.orcishComboItem = new DevComponents.Editors.ComboItem();
@@ -463,9 +464,9 @@
             this.gnomishBinaryComboItem = new DevComponents.Editors.ComboItem();
             this.goblinBinaryComboItem = new DevComponents.Editors.ComboItem();
             this.addonComboItem = new DevComponents.Editors.ComboItem();
-            this.itemOtherLangIdLabel = new DevComponents.DotNetBar.LabelX();
+            this.labe69 = new DevComponents.DotNetBar.LabelX();
             this.pageTextIntegerInput = new DevComponents.Editors.IntegerInput();
-            this.itemOtherPageTxtLabel = new DevComponents.DotNetBar.LabelX();
+            this.label67 = new DevComponents.DotNetBar.LabelX();
             this.materialComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.consumableMatComboItem = new DevComponents.Editors.ComboItem();
             this.notDefinedMatComboItem = new DevComponents.Editors.ComboItem();
@@ -477,7 +478,7 @@
             this.plateMatComboItem = new DevComponents.Editors.ComboItem();
             this.clothMatComboItem = new DevComponents.Editors.ComboItem();
             this.leatherMatComboItem = new DevComponents.Editors.ComboItem();
-            this.itemOtherMaterialLabel = new DevComponents.DotNetBar.LabelX();
+            this.label65 = new DevComponents.DotNetBar.LabelX();
             this.wizardPage2 = new DevComponents.DotNetBar.WizardPage();
             this.saveAsSqlCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.importToDBCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -598,22 +599,22 @@
             this.itemDetailsWizardPage.Controls.Add(this.flagsTextBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemSubClassIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemDetailsLink);
-            this.itemDetailsWizardPage.Controls.Add(this.itemFlagsExtraLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemFlagsLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemSubClassLabel);
+            this.itemDetailsWizardPage.Controls.Add(this.label6);
+            this.itemDetailsWizardPage.Controls.Add(this.label5);
+            this.itemDetailsWizardPage.Controls.Add(this.label4);
             this.itemDetailsWizardPage.Controls.Add(this.itemClassComboBox);
-            this.itemDetailsWizardPage.Controls.Add(this.itemClassLabel);
+            this.itemDetailsWizardPage.Controls.Add(this.label3);
             this.itemDetailsWizardPage.Controls.Add(this.itemEntryIdIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemDisplayIdIntegerInput);
             this.itemDetailsWizardPage.Controls.Add(this.itemQualityComboBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemDescriptionTextBox);
             this.itemDetailsWizardPage.Controls.Add(this.itemNameTextBox);
             this.itemDetailsWizardPage.Controls.Add(this.findDisplayIdButton);
-            this.itemDetailsWizardPage.Controls.Add(this.itemEntryIdLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemDisplayIdLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemQualityLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemDescriptionLabel);
-            this.itemDetailsWizardPage.Controls.Add(this.itemNameLabel);
+            this.itemDetailsWizardPage.Controls.Add(this.label9);
+            this.itemDetailsWizardPage.Controls.Add(this.label8);
+            this.itemDetailsWizardPage.Controls.Add(this.label7);
+            this.itemDetailsWizardPage.Controls.Add(this.label2);
+            this.itemDetailsWizardPage.Controls.Add(this.label1);
             this.itemDetailsWizardPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.itemDetailsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemDetailsWizardPage.Name = "itemDetailsWizardPage";
@@ -725,44 +726,44 @@
             this.itemDetailsLink.VisitedLinkColor = System.Drawing.Color.Chartreuse;
             this.itemDetailsLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.itemDetailsLink_LinkClicked);
             // 
-            // itemFlagsExtraLabel
+            // label6
             // 
             // 
             // 
             // 
-            this.itemFlagsExtraLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemFlagsExtraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemFlagsExtraLabel.Location = new System.Drawing.Point(354, 186);
-            this.itemFlagsExtraLabel.Name = "itemFlagsExtraLabel";
-            this.itemFlagsExtraLabel.Size = new System.Drawing.Size(81, 20);
-            this.itemFlagsExtraLabel.TabIndex = 16;
-            this.itemFlagsExtraLabel.Text = "Flags Extra:";
+            this.label6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label6.Location = new System.Drawing.Point(354, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Flags Extra:";
             // 
-            // itemFlagsLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemFlagsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemFlagsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemFlagsLabel.Location = new System.Drawing.Point(390, 147);
-            this.itemFlagsLabel.Name = "itemFlagsLabel";
-            this.itemFlagsLabel.Size = new System.Drawing.Size(45, 20);
-            this.itemFlagsLabel.TabIndex = 14;
-            this.itemFlagsLabel.Text = "Flags:";
-            // 
-            // itemSubClassLabel
+            // label5
             // 
             // 
             // 
             // 
-            this.itemSubClassLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSubClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSubClassLabel.Location = new System.Drawing.Point(361, 110);
-            this.itemSubClassLabel.Name = "itemSubClassLabel";
-            this.itemSubClassLabel.Size = new System.Drawing.Size(74, 20);
-            this.itemSubClassLabel.TabIndex = 12;
-            this.itemSubClassLabel.Text = "Sub Class:";
+            this.label5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label5.Location = new System.Drawing.Point(390, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Flags:";
+            // 
+            // label4
+            // 
+            // 
+            // 
+            // 
+            this.label4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.Location = new System.Drawing.Point(361, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Sub Class:";
             // 
             // itemClassComboBox
             // 
@@ -868,18 +869,18 @@
             // 
             this.glyphComboItem.Text = "Glyph";
             // 
-            // itemClassLabel
+            // label3
             // 
             // 
             // 
             // 
-            this.itemClassLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemClassLabel.Location = new System.Drawing.Point(390, 72);
-            this.itemClassLabel.Name = "itemClassLabel";
-            this.itemClassLabel.Size = new System.Drawing.Size(45, 20);
-            this.itemClassLabel.TabIndex = 10;
-            this.itemClassLabel.Text = "Class:";
+            this.label3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Location = new System.Drawing.Point(390, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Class:";
             // 
             // itemEntryIdIntegerInput
             // 
@@ -1022,70 +1023,70 @@
             this.findDisplayIdButton.Text = "Find Item Display ID";
             this.findDisplayIdButton.Click += new System.EventHandler(this.findDisplayIdButton_Click);
             // 
-            // itemEntryIdLabel
+            // label9
             // 
             // 
             // 
             // 
-            this.itemEntryIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemEntryIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemEntryIdLabel.Location = new System.Drawing.Point(373, 300);
-            this.itemEntryIdLabel.Name = "itemEntryIdLabel";
-            this.itemEntryIdLabel.Size = new System.Drawing.Size(62, 20);
-            this.itemEntryIdLabel.TabIndex = 0;
-            this.itemEntryIdLabel.Text = "Entry ID:";
+            this.label9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label9.Location = new System.Drawing.Point(373, 300);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Entry ID:";
             // 
-            // itemDisplayIdLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemDisplayIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDisplayIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDisplayIdLabel.Location = new System.Drawing.Point(361, 262);
-            this.itemDisplayIdLabel.Name = "itemDisplayIdLabel";
-            this.itemDisplayIdLabel.Size = new System.Drawing.Size(74, 19);
-            this.itemDisplayIdLabel.TabIndex = 0;
-            this.itemDisplayIdLabel.Text = "Display ID:";
-            // 
-            // itemQualityLabel
+            // label8
             // 
             // 
             // 
             // 
-            this.itemQualityLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemQualityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemQualityLabel.Location = new System.Drawing.Point(380, 224);
-            this.itemQualityLabel.Name = "itemQualityLabel";
-            this.itemQualityLabel.Size = new System.Drawing.Size(55, 20);
-            this.itemQualityLabel.TabIndex = 0;
-            this.itemQualityLabel.Text = "Quality:";
+            this.label8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label8.Location = new System.Drawing.Point(361, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Display ID:";
             // 
-            // itemDescriptionLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemDescriptionLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDescriptionLabel.Location = new System.Drawing.Point(354, 36);
-            this.itemDescriptionLabel.Name = "itemDescriptionLabel";
-            this.itemDescriptionLabel.Size = new System.Drawing.Size(81, 20);
-            this.itemDescriptionLabel.TabIndex = 0;
-            this.itemDescriptionLabel.Text = "Description:";
-            // 
-            // itemNameLabel
+            // label7
             // 
             // 
             // 
             // 
-            this.itemNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemNameLabel.Location = new System.Drawing.Point(387, 1);
-            this.itemNameLabel.Name = "itemNameLabel";
-            this.itemNameLabel.Size = new System.Drawing.Size(48, 20);
-            this.itemNameLabel.TabIndex = 0;
-            this.itemNameLabel.Text = "Name:";
+            this.label7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label7.Location = new System.Drawing.Point(380, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Quality:";
+            // 
+            // label2
+            // 
+            // 
+            // 
+            // 
+            this.label2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.Location = new System.Drawing.Point(354, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Description:";
+            // 
+            // label1
+            // 
+            // 
+            // 
+            // 
+            this.label1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.Location = new System.Drawing.Point(387, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
             // 
             // createWeaponWizardPage
             // 
@@ -1253,24 +1254,24 @@
             this.itemTypeWizardPage.Controls.Add(this.stackableIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.maxCountIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.statsCountIntegerInput);
-            this.itemTypeWizardPage.Controls.Add(this.itemStatsCountLabel);
+            this.itemTypeWizardPage.Controls.Add(this.label20);
             this.itemTypeWizardPage.Controls.Add(this.buyCountIntegerInput);
-            this.itemTypeWizardPage.Controls.Add(this.itemBuyCountLabel);
-            this.itemTypeWizardPage.Controls.Add(this.itemContainerSlotsLabel);
-            this.itemTypeWizardPage.Controls.Add(this.stackableLabel);
-            this.itemTypeWizardPage.Controls.Add(this.itemMaxCountLabel);
-            this.itemTypeWizardPage.Controls.Add(this.copperLabel);
-            this.itemTypeWizardPage.Controls.Add(this.silverLabel);
+            this.itemTypeWizardPage.Controls.Add(this.label19);
+            this.itemTypeWizardPage.Controls.Add(this.label18);
+            this.itemTypeWizardPage.Controls.Add(this.label15);
+            this.itemTypeWizardPage.Controls.Add(this.label17);
+            this.itemTypeWizardPage.Controls.Add(this.label14);
+            this.itemTypeWizardPage.Controls.Add(this.label13);
             this.itemTypeWizardPage.Controls.Add(this.inventoryTypeComboBox);
-            this.itemTypeWizardPage.Controls.Add(this.goldLabel);
+            this.itemTypeWizardPage.Controls.Add(this.label12);
             this.itemTypeWizardPage.Controls.Add(this.buyCopperIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.sellSilverIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.buySilverIntegerInput);
             this.itemTypeWizardPage.Controls.Add(this.sellGoldIntegerInput);
-            this.itemTypeWizardPage.Controls.Add(this.itemInventoryTypeLabel);
+            this.itemTypeWizardPage.Controls.Add(this.label16);
             this.itemTypeWizardPage.Controls.Add(this.buyGoldIntegerInput);
-            this.itemTypeWizardPage.Controls.Add(this.sellPriceLabel);
-            this.itemTypeWizardPage.Controls.Add(this.buyPriceLabel);
+            this.itemTypeWizardPage.Controls.Add(this.label11);
+            this.itemTypeWizardPage.Controls.Add(this.label10);
             this.itemTypeWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemTypeWizardPage.Name = "itemTypeWizardPage";
             this.itemTypeWizardPage.PageTitle = "Item Type";
@@ -1369,18 +1370,18 @@
             "ies\r\n(Unknown how this works)", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.statsCountIntegerInput.TabIndex = 12;
             // 
-            // itemStatsCountLabel
+            // label20
             // 
             // 
             // 
             // 
-            this.itemStatsCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemStatsCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemStatsCountLabel.Location = new System.Drawing.Point(574, 393);
-            this.itemStatsCountLabel.Name = "itemStatsCountLabel";
-            this.itemStatsCountLabel.Size = new System.Drawing.Size(88, 23);
-            this.itemStatsCountLabel.TabIndex = 26;
-            this.itemStatsCountLabel.Text = "Stats Count:";
+            this.label20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label20.Location = new System.Drawing.Point(574, 393);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(88, 23);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "Stats Count:";
             // 
             // buyCountIntegerInput
             // 
@@ -1398,83 +1399,83 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.buyCountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("buyCountIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.buyCountIntegerInput.TabIndex = 11;
             // 
-            // itemBuyCountLabel
+            // label19
             // 
             // 
             // 
             // 
-            this.itemBuyCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemBuyCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemBuyCountLabel.Location = new System.Drawing.Point(293, 393);
-            this.itemBuyCountLabel.Name = "itemBuyCountLabel";
-            this.itemBuyCountLabel.Size = new System.Drawing.Size(82, 23);
-            this.itemBuyCountLabel.TabIndex = 24;
-            this.itemBuyCountLabel.Text = "Buy Count:";
+            this.label19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label19.Location = new System.Drawing.Point(293, 393);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(82, 23);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Buy Count:";
             // 
-            // itemContainerSlotsLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemContainerSlotsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainerSlotsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemContainerSlotsLabel.Location = new System.Drawing.Point(552, 316);
-            this.itemContainerSlotsLabel.Name = "itemContainerSlotsLabel";
-            this.itemContainerSlotsLabel.Size = new System.Drawing.Size(110, 23);
-            this.itemContainerSlotsLabel.TabIndex = 22;
-            this.itemContainerSlotsLabel.Text = "Container Slots:";
-            // 
-            // stackableLabel
+            // label18
             // 
             // 
             // 
             // 
-            this.stackableLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.stackableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.stackableLabel.Location = new System.Drawing.Point(300, 254);
-            this.stackableLabel.Name = "stackableLabel";
-            this.stackableLabel.Size = new System.Drawing.Size(75, 23);
-            this.stackableLabel.TabIndex = 20;
-            this.stackableLabel.Text = "Stackable:";
+            this.label18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label18.Location = new System.Drawing.Point(552, 316);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(110, 23);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Container Slots:";
             // 
-            // itemMaxCountLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemMaxCountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemMaxCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemMaxCountLabel.Location = new System.Drawing.Point(293, 319);
-            this.itemMaxCountLabel.Name = "itemMaxCountLabel";
-            this.itemMaxCountLabel.Size = new System.Drawing.Size(82, 23);
-            this.itemMaxCountLabel.TabIndex = 18;
-            this.itemMaxCountLabel.Text = "Max Count:";
-            // 
-            // copperLabel
+            // label15
             // 
             // 
             // 
             // 
-            this.copperLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.copperLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.copperLabel.Location = new System.Drawing.Point(732, 74);
-            this.copperLabel.Name = "copperLabel";
-            this.copperLabel.Size = new System.Drawing.Size(54, 24);
-            this.copperLabel.TabIndex = 7;
-            this.copperLabel.Text = "Copper";
+            this.label15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label15.Location = new System.Drawing.Point(300, 254);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 23);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Stackable:";
             // 
-            // silverLabel
-            // 
-            // 
+            // label17
             // 
             // 
-            this.silverLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.silverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.silverLabel.Location = new System.Drawing.Point(558, 74);
-            this.silverLabel.Name = "silverLabel";
-            this.silverLabel.Size = new System.Drawing.Size(40, 24);
-            this.silverLabel.TabIndex = 8;
-            this.silverLabel.Text = "Silver";
+            // 
+            // 
+            this.label17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label17.Location = new System.Drawing.Point(293, 319);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 23);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Max Count:";
+            // 
+            // label14
+            // 
+            // 
+            // 
+            // 
+            this.label14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label14.Location = new System.Drawing.Point(732, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 24);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Copper";
+            // 
+            // label13
+            // 
+            // 
+            // 
+            // 
+            this.label13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label13.Location = new System.Drawing.Point(558, 74);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 24);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Silver";
             // 
             // inventoryTypeComboBox
             // 
@@ -1637,18 +1638,18 @@
             // 
             this.relicInvTypeComboItem.Text = "Relic";
             // 
-            // goldLabel
+            // label12
             // 
             // 
             // 
             // 
-            this.goldLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.goldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.goldLabel.Location = new System.Drawing.Point(387, 74);
-            this.goldLabel.Name = "goldLabel";
-            this.goldLabel.Size = new System.Drawing.Size(40, 24);
-            this.goldLabel.TabIndex = 9;
-            this.goldLabel.Text = "Gold";
+            this.label12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label12.Location = new System.Drawing.Point(387, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 24);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Gold";
             // 
             // buyCopperIntegerInput
             // 
@@ -1713,18 +1714,18 @@
             ".\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.sellGoldIntegerInput.TabIndex = 4;
             // 
-            // itemInventoryTypeLabel
+            // label16
             // 
             // 
             // 
             // 
-            this.itemInventoryTypeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemInventoryTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemInventoryTypeLabel.Location = new System.Drawing.Point(552, 254);
-            this.itemInventoryTypeLabel.Name = "itemInventoryTypeLabel";
-            this.itemInventoryTypeLabel.Size = new System.Drawing.Size(106, 23);
-            this.itemInventoryTypeLabel.TabIndex = 0;
-            this.itemInventoryTypeLabel.Text = "Inventory Type:";
+            this.label16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label16.Location = new System.Drawing.Point(552, 254);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 23);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Inventory Type:";
             // 
             // buyGoldIntegerInput
             // 
@@ -1742,31 +1743,31 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.buyGoldIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The price required to pay to buy this item from a vendor, in copper.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.buyGoldIntegerInput.TabIndex = 1;
             // 
-            // sellPriceLabel
+            // label11
             // 
             // 
             // 
             // 
-            this.sellPriceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.sellPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.sellPriceLabel.Location = new System.Drawing.Point(280, 163);
-            this.sellPriceLabel.Name = "sellPriceLabel";
-            this.sellPriceLabel.Size = new System.Drawing.Size(71, 28);
-            this.sellPriceLabel.TabIndex = 10;
-            this.sellPriceLabel.Text = "Sell Price:";
+            this.label11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label11.Location = new System.Drawing.Point(280, 163);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 28);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Sell Price:";
             // 
-            // buyPriceLabel
-            // 
-            // 
+            // label10
             // 
             // 
-            this.buyPriceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.buyPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buyPriceLabel.Location = new System.Drawing.Point(280, 96);
-            this.buyPriceLabel.Name = "buyPriceLabel";
-            this.buyPriceLabel.Size = new System.Drawing.Size(71, 28);
-            this.buyPriceLabel.TabIndex = 11;
-            this.buyPriceLabel.Text = "Buy Price:";
+            // 
+            // 
+            this.label10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label10.Location = new System.Drawing.Point(280, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 28);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Buy Price:";
             // 
             // itemWeaponStatsWizardPage
             // 
@@ -1778,23 +1779,23 @@
             this.itemWeaponStatsWizardPage.Controls.Add(this.findItemSetButton);
             this.itemWeaponStatsWizardPage.Controls.Add(this.itemSetIntegerInput);
             this.itemWeaponStatsWizardPage.Controls.Add(this.rangedModDamageIntegerInput);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemRangedModDamageLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label30);
             this.itemWeaponStatsWizardPage.Controls.Add(this.delayIntegerInput);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemDelayLabel);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemArmorLabel);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemBlockLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label29);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label28);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label27);
             this.itemWeaponStatsWizardPage.Controls.Add(this.armorIntegerInput);
             this.itemWeaponStatsWizardPage.Controls.Add(this.blockIntegerInput);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemSetLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label25);
             this.itemWeaponStatsWizardPage.Controls.Add(this.bindsComboBox);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemBindsLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label24);
             this.itemWeaponStatsWizardPage.Controls.Add(this.durabilityIntegerInput);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemDurabilityLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label23);
             this.itemWeaponStatsWizardPage.Controls.Add(this.ammoTypeComboBox);
             this.itemWeaponStatsWizardPage.Controls.Add(this.sheathComboBox);
             this.itemWeaponStatsWizardPage.Controls.Add(this.itemWeaponStatsInfoLabel);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.ammoTypeLabel);
-            this.itemWeaponStatsWizardPage.Controls.Add(this.itemSheathLabel);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label22);
+            this.itemWeaponStatsWizardPage.Controls.Add(this.label21);
             this.itemWeaponStatsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemWeaponStatsWizardPage.Name = "itemWeaponStatsWizardPage";
             this.itemWeaponStatsWizardPage.PageTitle = "Item Weapon Stats";
@@ -1859,18 +1860,18 @@
             "nd 0.4 yards,\r\nall blizzard ranged weapons have RangedModRange100", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.rangedModDamageIntegerInput.TabIndex = 10;
             // 
-            // itemRangedModDamageLabel
+            // label30
             // 
             // 
             // 
             // 
-            this.itemRangedModDamageLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemRangedModDamageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemRangedModDamageLabel.Location = new System.Drawing.Point(388, 214);
-            this.itemRangedModDamageLabel.Name = "itemRangedModDamageLabel";
-            this.itemRangedModDamageLabel.Size = new System.Drawing.Size(153, 23);
-            this.itemRangedModDamageLabel.TabIndex = 17;
-            this.itemRangedModDamageLabel.Text = "Ranged Mod Damage:";
+            this.label30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label30.Location = new System.Drawing.Point(388, 214);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(153, 23);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Ranged Mod Damage:";
             // 
             // delayIntegerInput
             // 
@@ -1888,44 +1889,44 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.delayIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The time in milliseconds between successive hits.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.delayIntegerInput.TabIndex = 8;
             // 
-            // itemDelayLabel
+            // label29
             // 
             // 
             // 
             // 
-            this.itemDelayLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDelayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDelayLabel.Location = new System.Drawing.Point(307, 163);
-            this.itemDelayLabel.Name = "itemDelayLabel";
-            this.itemDelayLabel.Size = new System.Drawing.Size(46, 23);
-            this.itemDelayLabel.TabIndex = 15;
-            this.itemDelayLabel.Text = "Delay:";
+            this.label29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label29.Location = new System.Drawing.Point(307, 163);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 23);
+            this.label29.TabIndex = 15;
+            this.label29.Text = "Delay:";
             // 
-            // itemArmorLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemArmorLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemArmorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemArmorLabel.Location = new System.Drawing.Point(608, 163);
-            this.itemArmorLabel.Name = "itemArmorLabel";
-            this.itemArmorLabel.Size = new System.Drawing.Size(47, 23);
-            this.itemArmorLabel.TabIndex = 11;
-            this.itemArmorLabel.Text = "Armor:";
-            // 
-            // itemBlockLabel
+            // label28
             // 
             // 
             // 
             // 
-            this.itemBlockLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemBlockLabel.Location = new System.Drawing.Point(611, 108);
-            this.itemBlockLabel.Name = "itemBlockLabel";
-            this.itemBlockLabel.Size = new System.Drawing.Size(47, 23);
-            this.itemBlockLabel.TabIndex = 12;
-            this.itemBlockLabel.Text = "Block:";
+            this.label28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label28.Location = new System.Drawing.Point(608, 163);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 23);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "Armor:";
+            // 
+            // label27
+            // 
+            // 
+            // 
+            // 
+            this.label27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label27.Location = new System.Drawing.Point(611, 108);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(47, 23);
+            this.label27.TabIndex = 12;
+            this.label27.Text = "Block:";
             // 
             // armorIntegerInput
             // 
@@ -1959,18 +1960,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.blockIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "If the item is a shield, the block chance of the shield.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.blockIntegerInput.TabIndex = 7;
             // 
-            // itemSetLabel
+            // label25
             // 
             // 
             // 
             // 
-            this.itemSetLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSetLabel.Location = new System.Drawing.Point(289, 108);
-            this.itemSetLabel.Name = "itemSetLabel";
-            this.itemSetLabel.Size = new System.Drawing.Size(64, 23);
-            this.itemSetLabel.TabIndex = 9;
-            this.itemSetLabel.Text = "Item Set:";
+            this.label25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label25.Location = new System.Drawing.Point(289, 108);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 23);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Item Set:";
             // 
             // bindsComboBox
             // 
@@ -2018,18 +2019,18 @@
             // 
             this.questItem1ComboItem.Text = "Quest Item 1";
             // 
-            // itemBindsLabel
+            // label24
             // 
             // 
             // 
             // 
-            this.itemBindsLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemBindsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemBindsLabel.Location = new System.Drawing.Point(611, 59);
-            this.itemBindsLabel.Name = "itemBindsLabel";
-            this.itemBindsLabel.Size = new System.Drawing.Size(44, 23);
-            this.itemBindsLabel.TabIndex = 7;
-            this.itemBindsLabel.Text = "Binds:";
+            this.label24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label24.Location = new System.Drawing.Point(611, 59);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(44, 23);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "Binds:";
             // 
             // durabilityIntegerInput
             // 
@@ -2047,18 +2048,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.durabilityIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The maximum durability of this item.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.durabilityIntegerInput.TabIndex = 3;
             // 
-            // itemDurabilityLabel
+            // label23
             // 
             // 
             // 
             // 
-            this.itemDurabilityLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDurabilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDurabilityLabel.Location = new System.Drawing.Point(285, 59);
-            this.itemDurabilityLabel.Name = "itemDurabilityLabel";
-            this.itemDurabilityLabel.Size = new System.Drawing.Size(68, 23);
-            this.itemDurabilityLabel.TabIndex = 5;
-            this.itemDurabilityLabel.Text = "Durability:";
+            this.label23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label23.Location = new System.Drawing.Point(285, 59);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(68, 23);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Durability:";
             // 
             // ammoTypeComboBox
             // 
@@ -2156,31 +2157,31 @@
             this.itemWeaponStatsInfoLabel.TabIndex = 0;
             this.itemWeaponStatsInfoLabel.Text = resources.GetString("itemWeaponStatsInfoLabel.Text");
             // 
-            // ammoTypeLabel
+            // label22
             // 
             // 
             // 
             // 
-            this.ammoTypeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ammoTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ammoTypeLabel.Location = new System.Drawing.Point(565, 13);
-            this.ammoTypeLabel.Name = "ammoTypeLabel";
-            this.ammoTypeLabel.Size = new System.Drawing.Size(90, 23);
-            this.ammoTypeLabel.TabIndex = 0;
-            this.ammoTypeLabel.Text = "Ammo Type:";
+            this.label22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label22.Location = new System.Drawing.Point(565, 13);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(90, 23);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Ammo Type:";
             // 
-            // itemSheathLabel
-            // 
-            // 
+            // label21
             // 
             // 
-            this.itemSheathLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSheathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSheathLabel.Location = new System.Drawing.Point(297, 13);
-            this.itemSheathLabel.Name = "itemSheathLabel";
-            this.itemSheathLabel.Size = new System.Drawing.Size(56, 23);
-            this.itemSheathLabel.TabIndex = 0;
-            this.itemSheathLabel.Text = "Sheath:";
+            // 
+            // 
+            this.label21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label21.Location = new System.Drawing.Point(297, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 23);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Sheath:";
             // 
             // itemRequirementsWizardPage
             // 
@@ -2189,30 +2190,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemRequirementsWizardPage.AntiAlias = false;
             this.itemRequirementsWizardPage.BackColor = System.Drawing.Color.Transparent;
+            this.itemRequirementsWizardPage.Controls.Add(this.findSkillButton);
             this.itemRequirementsWizardPage.Controls.Add(this.findFactionButton);
             this.itemRequirementsWizardPage.Controls.Add(this.reqRepFactionIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqDisenchantSkillIntegerInput);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemReqDisenchantSkillLabel);
+            this.itemRequirementsWizardPage.Controls.Add(this.label39);
             this.itemRequirementsWizardPage.Controls.Add(this.reqHonorRankIntegerInput);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemReqHonorRankLabel);
+            this.itemRequirementsWizardPage.Controls.Add(this.label38);
             this.itemRequirementsWizardPage.Controls.Add(this.findReqSpellButton);
             this.itemRequirementsWizardPage.Controls.Add(this.reqSpellIntegerInput);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemReqSpellLabel);
+            this.itemRequirementsWizardPage.Controls.Add(this.label37);
             this.itemRequirementsWizardPage.Controls.Add(this.itemReqInfoLabel);
             this.itemRequirementsWizardPage.Controls.Add(this.splitContainer1);
             this.itemRequirementsWizardPage.Controls.Add(this.reqReputationRankComboBox);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemRequiredRepRankLabel);
+            this.itemRequirementsWizardPage.Controls.Add(this.label35);
             this.itemRequirementsWizardPage.Controls.Add(this.reqSkillRankIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.levelReqIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqLevelIntegerInput);
             this.itemRequirementsWizardPage.Controls.Add(this.reqSkillComboBox);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemSkillReqLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.allowedRaceLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.allowedClassLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemLvlReqLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.itemSkillRankReqLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.repItemReqLabel);
-            this.itemRequirementsWizardPage.Controls.Add(this.requiredLevelItemLabel);
+            this.itemRequirementsWizardPage.Controls.Add(this.label34);
+            this.itemRequirementsWizardPage.Controls.Add(this.label41);
+            this.itemRequirementsWizardPage.Controls.Add(this.label40);
+            this.itemRequirementsWizardPage.Controls.Add(this.label33);
+            this.itemRequirementsWizardPage.Controls.Add(this.label36);
+            this.itemRequirementsWizardPage.Controls.Add(this.label32);
+            this.itemRequirementsWizardPage.Controls.Add(this.label31);
             this.itemRequirementsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemRequirementsWizardPage.Name = "itemRequirementsWizardPage";
             this.itemRequirementsWizardPage.PageTitle = "Item Requirements";
@@ -2231,13 +2233,25 @@
             this.itemRequirementsWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemRequirementsWizardPage.TabIndex = 0;
             // 
+            // findSkillButton
+            // 
+            this.findSkillButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.findSkillButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.findSkillButton.Location = new System.Drawing.Point(876, 26);
+            this.findSkillButton.Name = "findSkillButton";
+            this.findSkillButton.Size = new System.Drawing.Size(88, 29);
+            this.findSkillButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.findSkillButton.TabIndex = 28;
+            this.findSkillButton.Text = "Find Skill";
+            this.findSkillButton.Click += new System.EventHandler(this.findSkillButton_Click);
+            // 
             // findFactionButton
             // 
             this.findFactionButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.findFactionButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.findFactionButton.Location = new System.Drawing.Point(510, 27);
+            this.findFactionButton.Location = new System.Drawing.Point(519, 25);
             this.findFactionButton.Name = "findFactionButton";
-            this.findFactionButton.Size = new System.Drawing.Size(75, 23);
+            this.findFactionButton.Size = new System.Drawing.Size(88, 29);
             this.findFactionButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.findFactionButton.TabIndex = 4;
             this.findFactionButton.Text = "Find Faction";
@@ -2281,18 +2295,18 @@
             "e to disenchant this item.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.reqDisenchantSkillIntegerInput.TabIndex = 11;
             // 
-            // itemReqDisenchantSkillLabel
+            // label39
             // 
             // 
             // 
             // 
-            this.itemReqDisenchantSkillLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemReqDisenchantSkillLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemReqDisenchantSkillLabel.Location = new System.Drawing.Point(568, 117);
-            this.itemReqDisenchantSkillLabel.Name = "itemReqDisenchantSkillLabel";
-            this.itemReqDisenchantSkillLabel.Size = new System.Drawing.Size(114, 39);
-            this.itemReqDisenchantSkillLabel.TabIndex = 27;
-            this.itemReqDisenchantSkillLabel.Text = "<div align=\"center\">Required<br/>Disenchant Skill</div>";
+            this.label39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label39.Location = new System.Drawing.Point(568, 117);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(114, 39);
+            this.label39.TabIndex = 27;
+            this.label39.Text = "<div align=\"center\">Required<br/>Disenchant Skill</div>";
             // 
             // reqHonorRankIntegerInput
             // 
@@ -2311,18 +2325,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.reqHonorRankIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The honor rank the player needs to have to use this item.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.reqHonorRankIntegerInput.TabIndex = 8;
             // 
-            // itemReqHonorRankLabel
+            // label38
             // 
             // 
             // 
             // 
-            this.itemReqHonorRankLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemReqHonorRankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemReqHonorRankLabel.Location = new System.Drawing.Point(160, 88);
-            this.itemReqHonorRankLabel.Name = "itemReqHonorRankLabel";
-            this.itemReqHonorRankLabel.Size = new System.Drawing.Size(151, 23);
-            this.itemReqHonorRankLabel.TabIndex = 25;
-            this.itemReqHonorRankLabel.Text = "Required Honor Rank:";
+            this.label38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label38.Location = new System.Drawing.Point(160, 88);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(151, 23);
+            this.label38.TabIndex = 25;
+            this.label38.Text = "Required Honor Rank:";
             // 
             // findReqSpellButton
             // 
@@ -2353,18 +2367,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.reqSpellIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The required spell that the player needs to have to use this item.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.reqSpellIntegerInput.TabIndex = 9;
             // 
-            // itemReqSpellLabel
+            // label37
             // 
             // 
             // 
             // 
-            this.itemReqSpellLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemReqSpellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemReqSpellLabel.Location = new System.Drawing.Point(578, 88);
-            this.itemReqSpellLabel.Name = "itemReqSpellLabel";
-            this.itemReqSpellLabel.Size = new System.Drawing.Size(104, 23);
-            this.itemReqSpellLabel.TabIndex = 22;
-            this.itemReqSpellLabel.Text = "Required Spell:";
+            this.label37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label37.Location = new System.Drawing.Point(578, 88);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(104, 23);
+            this.label37.TabIndex = 22;
+            this.label37.Text = "Required Spell:";
             // 
             // itemReqInfoLabel
             // 
@@ -2797,18 +2811,18 @@
             // 
             this.exaltedComboItem.Text = "comboItem45";
             // 
-            // itemRequiredRepRankLabel
+            // label35
             // 
             // 
             // 
             // 
-            this.itemRequiredRepRankLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemRequiredRepRankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemRequiredRepRankLabel.Location = new System.Drawing.Point(193, 56);
-            this.itemRequiredRepRankLabel.Name = "itemRequiredRepRankLabel";
-            this.itemRequiredRepRankLabel.Size = new System.Drawing.Size(118, 23);
-            this.itemRequiredRepRankLabel.TabIndex = 0;
-            this.itemRequiredRepRankLabel.Text = "Reputation Rank:";
+            this.label35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label35.Location = new System.Drawing.Point(193, 56);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(118, 23);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Reputation Rank:";
             // 
             // reqSkillRankIntegerInput
             // 
@@ -2952,96 +2966,96 @@
             // 
             this.inscriptionComboItem.Text = "Inscription";
             // 
-            // itemSkillReqLabel
+            // label34
             // 
             // 
             // 
             // 
-            this.itemSkillReqLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSkillReqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSkillReqLabel.Location = new System.Drawing.Point(646, 27);
-            this.itemSkillReqLabel.Name = "itemSkillReqLabel";
-            this.itemSkillReqLabel.Size = new System.Drawing.Size(36, 23);
-            this.itemSkillReqLabel.TabIndex = 0;
-            this.itemSkillReqLabel.Text = "Skill:";
+            this.label34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label34.Location = new System.Drawing.Point(646, 27);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(36, 23);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Skill:";
             // 
-            // allowedRaceLabel
-            // 
-            // 
-            // 
-            // 
-            this.allowedRaceLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.allowedRaceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.allowedRaceLabel.Location = new System.Drawing.Point(713, 154);
-            this.allowedRaceLabel.Name = "allowedRaceLabel";
-            this.allowedRaceLabel.Size = new System.Drawing.Size(97, 23);
-            this.allowedRaceLabel.TabIndex = 0;
-            this.allowedRaceLabel.Text = "Allowed Race:";
-            // 
-            // allowedClassLabel
+            // label41
             // 
             // 
             // 
             // 
-            this.allowedClassLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.allowedClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.allowedClassLabel.Location = new System.Drawing.Point(317, 154);
-            this.allowedClassLabel.Name = "allowedClassLabel";
-            this.allowedClassLabel.Size = new System.Drawing.Size(100, 23);
-            this.allowedClassLabel.TabIndex = 0;
-            this.allowedClassLabel.Text = "Allowed Class:";
+            this.label41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label41.Location = new System.Drawing.Point(713, 154);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(97, 23);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Allowed Race:";
             // 
-            // itemLvlReqLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemLvlReqLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemLvlReqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemLvlReqLabel.Location = new System.Drawing.Point(607, -2);
-            this.itemLvlReqLabel.Name = "itemLvlReqLabel";
-            this.itemLvlReqLabel.Size = new System.Drawing.Size(75, 23);
-            this.itemLvlReqLabel.TabIndex = 0;
-            this.itemLvlReqLabel.Text = "Item Level:";
-            // 
-            // itemSkillRankReqLabel
+            // label40
             // 
             // 
             // 
             // 
-            this.itemSkillRankReqLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSkillRankReqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSkillRankReqLabel.Location = new System.Drawing.Point(607, 56);
-            this.itemSkillRankReqLabel.Name = "itemSkillRankReqLabel";
-            this.itemSkillRankReqLabel.Size = new System.Drawing.Size(75, 23);
-            this.itemSkillRankReqLabel.TabIndex = 0;
-            this.itemSkillRankReqLabel.Text = "Skill Rank:";
+            this.label40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label40.Location = new System.Drawing.Point(317, 154);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(100, 23);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Allowed Class:";
             // 
-            // repItemReqLabel
-            // 
-            // 
-            // 
-            // 
-            this.repItemReqLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.repItemReqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.repItemReqLabel.Location = new System.Drawing.Point(231, 27);
-            this.repItemReqLabel.Name = "repItemReqLabel";
-            this.repItemReqLabel.Size = new System.Drawing.Size(80, 23);
-            this.repItemReqLabel.TabIndex = 0;
-            this.repItemReqLabel.Text = "Reputation:";
-            // 
-            // requiredLevelItemLabel
+            // label33
             // 
             // 
             // 
             // 
-            this.requiredLevelItemLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.requiredLevelItemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.requiredLevelItemLabel.Location = new System.Drawing.Point(205, -2);
-            this.requiredLevelItemLabel.Name = "requiredLevelItemLabel";
-            this.requiredLevelItemLabel.Size = new System.Drawing.Size(106, 23);
-            this.requiredLevelItemLabel.TabIndex = 0;
-            this.requiredLevelItemLabel.Text = "Required Level:";
+            this.label33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label33.Location = new System.Drawing.Point(607, -2);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(75, 23);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Item Level:";
+            // 
+            // label36
+            // 
+            // 
+            // 
+            // 
+            this.label36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label36.Location = new System.Drawing.Point(607, 56);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(75, 23);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Skill Rank:";
+            // 
+            // label32
+            // 
+            // 
+            // 
+            // 
+            this.label32.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label32.Location = new System.Drawing.Point(231, 27);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(80, 23);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Reputation:";
+            // 
+            // label31
+            // 
+            // 
+            // 
+            // 
+            this.label31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label31.Location = new System.Drawing.Point(205, -2);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(106, 23);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Required Level:";
             // 
             // itemDamageWizardPage
             // 
@@ -3057,12 +3071,12 @@
             this.itemDamageWizardPage.Controls.Add(this.damageMaxIntegerInput2);
             this.itemDamageWizardPage.Controls.Add(this.damageMinIntegerInput2);
             this.itemDamageWizardPage.Controls.Add(this.damageMinIntegerInput);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageTypeLabel2);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageMaxLabel2);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageTypeLabel);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageMaxLabel);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageMinLabel2);
-            this.itemDamageWizardPage.Controls.Add(this.itemDamageMinLabel);
+            this.itemDamageWizardPage.Controls.Add(this.label47);
+            this.itemDamageWizardPage.Controls.Add(this.label46);
+            this.itemDamageWizardPage.Controls.Add(this.label44);
+            this.itemDamageWizardPage.Controls.Add(this.label43);
+            this.itemDamageWizardPage.Controls.Add(this.label45);
+            this.itemDamageWizardPage.Controls.Add(this.label42);
             this.itemDamageWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemDamageWizardPage.Name = "itemDamageWizardPage";
             this.itemDamageWizardPage.PageTitle = "Item Damage";
@@ -3253,83 +3267,83 @@
             this.damageMinIntegerInput.Size = new System.Drawing.Size(128, 20);
             this.damageMinIntegerInput.TabIndex = 1;
             // 
-            // itemDamageTypeLabel2
+            // label47
             // 
             // 
             // 
             // 
-            this.itemDamageTypeLabel2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageTypeLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageTypeLabel2.Location = new System.Drawing.Point(715, 166);
-            this.itemDamageTypeLabel2.Name = "itemDamageTypeLabel2";
-            this.itemDamageTypeLabel2.Size = new System.Drawing.Size(40, 23);
-            this.itemDamageTypeLabel2.TabIndex = 0;
-            this.itemDamageTypeLabel2.Text = "Type:";
+            this.label47.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label47.Location = new System.Drawing.Point(715, 166);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(40, 23);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "Type:";
             // 
-            // itemDamageMaxLabel2
-            // 
-            // 
-            // 
-            // 
-            this.itemDamageMaxLabel2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageMaxLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageMaxLabel2.Location = new System.Drawing.Point(514, 166);
-            this.itemDamageMaxLabel2.Name = "itemDamageMaxLabel2";
-            this.itemDamageMaxLabel2.Size = new System.Drawing.Size(37, 23);
-            this.itemDamageMaxLabel2.TabIndex = 0;
-            this.itemDamageMaxLabel2.Text = "Max:";
-            // 
-            // itemDamageTypeLabel
+            // label46
             // 
             // 
             // 
             // 
-            this.itemDamageTypeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageTypeLabel.Location = new System.Drawing.Point(715, 78);
-            this.itemDamageTypeLabel.Name = "itemDamageTypeLabel";
-            this.itemDamageTypeLabel.Size = new System.Drawing.Size(40, 23);
-            this.itemDamageTypeLabel.TabIndex = 0;
-            this.itemDamageTypeLabel.Text = "Type:";
+            this.label46.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label46.Location = new System.Drawing.Point(514, 166);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(37, 23);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "Max:";
             // 
-            // itemDamageMaxLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemDamageMaxLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageMaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageMaxLabel.Location = new System.Drawing.Point(514, 78);
-            this.itemDamageMaxLabel.Name = "itemDamageMaxLabel";
-            this.itemDamageMaxLabel.Size = new System.Drawing.Size(37, 23);
-            this.itemDamageMaxLabel.TabIndex = 0;
-            this.itemDamageMaxLabel.Text = "Max:";
-            // 
-            // itemDamageMinLabel2
+            // label44
             // 
             // 
             // 
             // 
-            this.itemDamageMinLabel2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageMinLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageMinLabel2.Location = new System.Drawing.Point(271, 166);
-            this.itemDamageMinLabel2.Name = "itemDamageMinLabel2";
-            this.itemDamageMinLabel2.Size = new System.Drawing.Size(91, 23);
-            this.itemDamageMinLabel2.TabIndex = 0;
-            this.itemDamageMinLabel2.Text = "Damage Min:";
+            this.label44.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label44.Location = new System.Drawing.Point(715, 78);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(40, 23);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "Type:";
             // 
-            // itemDamageMinLabel
-            // 
-            // 
+            // label43
             // 
             // 
-            this.itemDamageMinLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemDamageMinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemDamageMinLabel.Location = new System.Drawing.Point(271, 78);
-            this.itemDamageMinLabel.Name = "itemDamageMinLabel";
-            this.itemDamageMinLabel.Size = new System.Drawing.Size(91, 23);
-            this.itemDamageMinLabel.TabIndex = 0;
-            this.itemDamageMinLabel.Text = "Damage Min:";
+            // 
+            // 
+            this.label43.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label43.Location = new System.Drawing.Point(514, 78);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(37, 23);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Max:";
+            // 
+            // label45
+            // 
+            // 
+            // 
+            // 
+            this.label45.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label45.Location = new System.Drawing.Point(271, 166);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(91, 23);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "Damage Min:";
+            // 
+            // label42
+            // 
+            // 
+            // 
+            // 
+            this.label42.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label42.Location = new System.Drawing.Point(271, 78);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(91, 23);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "Damage Min:";
             // 
             // itemStatsWizardPage
             // 
@@ -3340,9 +3354,9 @@
             this.itemStatsWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.itemStatsWizardPage.Controls.Add(this.itemStatsGroupPanel);
             this.itemStatsWizardPage.Controls.Add(this.scalingStatValueIntegerInput);
-            this.itemStatsWizardPage.Controls.Add(this.itemScalingStatsValueLabel);
+            this.itemStatsWizardPage.Controls.Add(this.label49);
             this.itemStatsWizardPage.Controls.Add(this.scalingStatDistributionIntegerInput);
-            this.itemStatsWizardPage.Controls.Add(this.itemScalingStatDistLabel);
+            this.itemStatsWizardPage.Controls.Add(this.label48);
             this.itemStatsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemStatsWizardPage.Name = "itemStatsWizardPage";
             this.itemStatsWizardPage.PageTitle = "Item Stats";
@@ -3438,18 +3452,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.scalingStatValueIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Final (level 80) value of the scaling-stat\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.scalingStatValueIntegerInput.TabIndex = 5;
             // 
-            // itemScalingStatsValueLabel
+            // label49
             // 
             // 
             // 
             // 
-            this.itemScalingStatsValueLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemScalingStatsValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemScalingStatsValueLabel.Location = new System.Drawing.Point(356, 500);
-            this.itemScalingStatsValueLabel.Name = "itemScalingStatsValueLabel";
-            this.itemScalingStatsValueLabel.Size = new System.Drawing.Size(142, 23);
-            this.itemScalingStatsValueLabel.TabIndex = 23;
-            this.itemScalingStatsValueLabel.Text = "Scaling Stats Value:";
+            this.label49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label49.Location = new System.Drawing.Point(356, 500);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(142, 23);
+            this.label49.TabIndex = 23;
+            this.label49.Text = "Scaling Stats Value:";
             // 
             // scalingStatDistributionIntegerInput
             // 
@@ -3468,18 +3482,18 @@
             "(mainly heirloom leveling gear)\r\nuse like static stats\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.scalingStatDistributionIntegerInput.TabIndex = 4;
             // 
-            // itemScalingStatDistLabel
+            // label48
             // 
             // 
             // 
             // 
-            this.itemScalingStatDistLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemScalingStatDistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemScalingStatDistLabel.Location = new System.Drawing.Point(321, 462);
-            this.itemScalingStatDistLabel.Name = "itemScalingStatDistLabel";
-            this.itemScalingStatDistLabel.Size = new System.Drawing.Size(177, 23);
-            this.itemScalingStatDistLabel.TabIndex = 21;
-            this.itemScalingStatDistLabel.Text = "Scaling Stats Distribution:";
+            this.label48.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label48.Location = new System.Drawing.Point(321, 462);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(177, 23);
+            this.label48.TabIndex = 21;
+            this.label48.Text = "Scaling Stats Distribution:";
             // 
             // resistsWizardPage
             // 
@@ -3495,12 +3509,12 @@
             this.resistsWizardPage.Controls.Add(this.resistsShadowIntegerInput);
             this.resistsWizardPage.Controls.Add(this.resistsNatureIntegerInput);
             this.resistsWizardPage.Controls.Add(this.resistsHolyIntegerInput);
-            this.resistsWizardPage.Controls.Add(this.itemResistsArcaneLabel);
-            this.resistsWizardPage.Controls.Add(this.itemResistsFrostLabel);
-            this.resistsWizardPage.Controls.Add(this.itemResistsFireLabel);
-            this.resistsWizardPage.Controls.Add(this.itemResistsShadowLabel);
-            this.resistsWizardPage.Controls.Add(this.itemResistsNatureLabel);
-            this.resistsWizardPage.Controls.Add(this.itemResistsHolyLabel);
+            this.resistsWizardPage.Controls.Add(this.label54);
+            this.resistsWizardPage.Controls.Add(this.label53);
+            this.resistsWizardPage.Controls.Add(this.label51);
+            this.resistsWizardPage.Controls.Add(this.label55);
+            this.resistsWizardPage.Controls.Add(this.label52);
+            this.resistsWizardPage.Controls.Add(this.label50);
             this.resistsWizardPage.Location = new System.Drawing.Point(7, 72);
             this.resistsWizardPage.Name = "resistsWizardPage";
             this.resistsWizardPage.PageTitle = "Item Resists";
@@ -3615,83 +3629,83 @@
             this.resistsHolyIntegerInput.Size = new System.Drawing.Size(141, 20);
             this.resistsHolyIntegerInput.TabIndex = 1;
             // 
-            // itemResistsArcaneLabel
+            // label54
             // 
             // 
             // 
             // 
-            this.itemResistsArcaneLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsArcaneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsArcaneLabel.Location = new System.Drawing.Point(571, 185);
-            this.itemResistsArcaneLabel.Name = "itemResistsArcaneLabel";
-            this.itemResistsArcaneLabel.Size = new System.Drawing.Size(54, 23);
-            this.itemResistsArcaneLabel.TabIndex = 0;
-            this.itemResistsArcaneLabel.Text = "Arcane:";
+            this.label54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label54.Location = new System.Drawing.Point(571, 185);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(54, 23);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "Arcane:";
             // 
-            // itemResistsFrostLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemResistsFrostLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsFrostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsFrostLabel.Location = new System.Drawing.Point(584, 117);
-            this.itemResistsFrostLabel.Name = "itemResistsFrostLabel";
-            this.itemResistsFrostLabel.Size = new System.Drawing.Size(41, 23);
-            this.itemResistsFrostLabel.TabIndex = 0;
-            this.itemResistsFrostLabel.Text = "Frost:";
-            // 
-            // itemResistsFireLabel
+            // label53
             // 
             // 
             // 
             // 
-            this.itemResistsFireLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsFireLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsFireLabel.Location = new System.Drawing.Point(592, 57);
-            this.itemResistsFireLabel.Name = "itemResistsFireLabel";
-            this.itemResistsFireLabel.Size = new System.Drawing.Size(33, 23);
-            this.itemResistsFireLabel.TabIndex = 0;
-            this.itemResistsFireLabel.Text = "Fire:";
+            this.label53.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label53.Location = new System.Drawing.Point(584, 117);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(41, 23);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "Frost:";
             // 
-            // itemResistsShadowLabel
-            // 
-            // 
-            // 
-            // 
-            this.itemResistsShadowLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsShadowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsShadowLabel.Location = new System.Drawing.Point(344, 185);
-            this.itemResistsShadowLabel.Name = "itemResistsShadowLabel";
-            this.itemResistsShadowLabel.Size = new System.Drawing.Size(59, 23);
-            this.itemResistsShadowLabel.TabIndex = 0;
-            this.itemResistsShadowLabel.Text = "Shadow:";
-            // 
-            // itemResistsNatureLabel
+            // label51
             // 
             // 
             // 
             // 
-            this.itemResistsNatureLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsNatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsNatureLabel.Location = new System.Drawing.Point(351, 117);
-            this.itemResistsNatureLabel.Name = "itemResistsNatureLabel";
-            this.itemResistsNatureLabel.Size = new System.Drawing.Size(52, 23);
-            this.itemResistsNatureLabel.TabIndex = 0;
-            this.itemResistsNatureLabel.Text = "Nature:";
+            this.label51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label51.Location = new System.Drawing.Point(592, 57);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(33, 23);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "Fire:";
             // 
-            // itemResistsHolyLabel
-            // 
-            // 
+            // label55
             // 
             // 
-            this.itemResistsHolyLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemResistsHolyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemResistsHolyLabel.Location = new System.Drawing.Point(363, 57);
-            this.itemResistsHolyLabel.Name = "itemResistsHolyLabel";
-            this.itemResistsHolyLabel.Size = new System.Drawing.Size(40, 23);
-            this.itemResistsHolyLabel.TabIndex = 0;
-            this.itemResistsHolyLabel.Text = "Holy:";
+            // 
+            // 
+            this.label55.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label55.Location = new System.Drawing.Point(344, 185);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(59, 23);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "Shadow:";
+            // 
+            // label52
+            // 
+            // 
+            // 
+            // 
+            this.label52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label52.Location = new System.Drawing.Point(351, 117);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(52, 23);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Nature:";
+            // 
+            // label50
+            // 
+            // 
+            // 
+            // 
+            this.label50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label50.Location = new System.Drawing.Point(363, 57);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(40, 23);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Holy:";
             // 
             // itemSocketWizardPage
             // 
@@ -3703,10 +3717,10 @@
             this.itemSocketWizardPage.Controls.Add(this.itemSocketGroupPanel);
             this.itemSocketWizardPage.Controls.Add(this.findGemPropButton);
             this.itemSocketWizardPage.Controls.Add(this.gemPropIntegerInput);
-            this.itemSocketWizardPage.Controls.Add(this.itemGemPropLabel);
+            this.itemSocketWizardPage.Controls.Add(this.label63);
             this.itemSocketWizardPage.Controls.Add(this.findSocketBonusButton);
             this.itemSocketWizardPage.Controls.Add(this.socketBonusIntegerInput);
-            this.itemSocketWizardPage.Controls.Add(this.itemSocketBonusLabel);
+            this.itemSocketWizardPage.Controls.Add(this.label62);
             this.itemSocketWizardPage.Controls.Add(this.itemSocketInfoLabel);
             this.itemSocketWizardPage.Location = new System.Drawing.Point(7, 72);
             this.itemSocketWizardPage.Name = "itemSocketWizardPage";
@@ -3732,17 +3746,17 @@
             this.itemSocketGroupPanel.CanvasColor = System.Drawing.SystemColors.Control;
             this.itemSocketGroupPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.itemSocketGroupPanel.Controls.Add(this.socket3CountIntegerInput);
-            this.itemSocketGroupPanel.Controls.Add(this.labelX3);
+            this.itemSocketGroupPanel.Controls.Add(this.label61);
             this.itemSocketGroupPanel.Controls.Add(this.socket3ComboBox);
-            this.itemSocketGroupPanel.Controls.Add(this.labelX4);
+            this.itemSocketGroupPanel.Controls.Add(this.label60);
             this.itemSocketGroupPanel.Controls.Add(this.socket2CountIntegerInput);
-            this.itemSocketGroupPanel.Controls.Add(this.labelX1);
+            this.itemSocketGroupPanel.Controls.Add(this.label59);
             this.itemSocketGroupPanel.Controls.Add(this.socket2ComboBox);
-            this.itemSocketGroupPanel.Controls.Add(this.labelX2);
+            this.itemSocketGroupPanel.Controls.Add(this.label58);
             this.itemSocketGroupPanel.Controls.Add(this.socket1CountIntegerInput);
-            this.itemSocketGroupPanel.Controls.Add(this.itemSocketAmountLabel);
+            this.itemSocketGroupPanel.Controls.Add(this.label57);
             this.itemSocketGroupPanel.Controls.Add(this.socket1ComboBox);
-            this.itemSocketGroupPanel.Controls.Add(this.itemSocketLabel);
+            this.itemSocketGroupPanel.Controls.Add(this.label56);
             this.itemSocketGroupPanel.Location = new System.Drawing.Point(276, 15);
             this.itemSocketGroupPanel.Name = "itemSocketGroupPanel";
             this.itemSocketGroupPanel.Size = new System.Drawing.Size(644, 324);
@@ -3793,18 +3807,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket3CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.socket3CountIntegerInput.TabIndex = 9;
             // 
-            // labelX3
+            // label61
             // 
             // 
             // 
             // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX3.Location = new System.Drawing.Point(254, 241);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(208, 23);
-            this.labelX3.TabIndex = 10;
-            this.labelX3.Text = "Number of this type of Sockets:";
+            this.label61.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label61.Location = new System.Drawing.Point(254, 241);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(208, 23);
+            this.label61.TabIndex = 10;
+            this.label61.Text = "Number of this type of Sockets:";
             // 
             // socket3ComboBox
             // 
@@ -3850,18 +3864,18 @@
             this.comboItem10.ForeColor = System.Drawing.Color.RoyalBlue;
             this.comboItem10.Text = "Blue Socket";
             // 
-            // labelX4
+            // label60
             // 
             // 
             // 
             // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX4.Location = new System.Drawing.Point(25, 241);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(53, 23);
-            this.labelX4.TabIndex = 7;
-            this.labelX4.Text = "Socket:";
+            this.label60.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label60.Location = new System.Drawing.Point(25, 241);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(53, 23);
+            this.label60.TabIndex = 7;
+            this.label60.Text = "Socket:";
             // 
             // socket2CountIntegerInput
             // 
@@ -3879,18 +3893,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket2CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.socket2CountIntegerInput.TabIndex = 5;
             // 
-            // labelX1
+            // label59
             // 
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX1.Location = new System.Drawing.Point(254, 127);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(208, 23);
-            this.labelX1.TabIndex = 6;
-            this.labelX1.Text = "Number of this type of Sockets:";
+            this.label59.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label59.Location = new System.Drawing.Point(254, 127);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(208, 23);
+            this.label59.TabIndex = 6;
+            this.label59.Text = "Number of this type of Sockets:";
             // 
             // socket2ComboBox
             // 
@@ -3936,18 +3950,18 @@
             this.comboItem5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.comboItem5.Text = "Blue Socket";
             // 
-            // labelX2
+            // label58
             // 
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labelX2.Location = new System.Drawing.Point(25, 127);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(53, 23);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "Socket:";
+            this.label58.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label58.Location = new System.Drawing.Point(25, 127);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(53, 23);
+            this.label58.TabIndex = 3;
+            this.label58.Text = "Socket:";
             // 
             // socket1CountIntegerInput
             // 
@@ -3965,18 +3979,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.socket1CountIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Ammount of Gems of SocketColor1", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.socket1CountIntegerInput.TabIndex = 2;
             // 
-            // itemSocketAmountLabel
+            // label57
             // 
             // 
             // 
             // 
-            this.itemSocketAmountLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSocketAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSocketAmountLabel.Location = new System.Drawing.Point(254, 12);
-            this.itemSocketAmountLabel.Name = "itemSocketAmountLabel";
-            this.itemSocketAmountLabel.Size = new System.Drawing.Size(208, 23);
-            this.itemSocketAmountLabel.TabIndex = 2;
-            this.itemSocketAmountLabel.Text = "Number of this type of Sockets:";
+            this.label57.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label57.Location = new System.Drawing.Point(254, 12);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(208, 23);
+            this.label57.TabIndex = 2;
+            this.label57.Text = "Number of this type of Sockets:";
             // 
             // socket1ComboBox
             // 
@@ -4022,18 +4036,18 @@
             this.blueSocketComboItem.ForeColor = System.Drawing.Color.RoyalBlue;
             this.blueSocketComboItem.Text = "Blue Socket";
             // 
-            // itemSocketLabel
+            // label56
             // 
             // 
             // 
             // 
-            this.itemSocketLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSocketLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSocketLabel.Location = new System.Drawing.Point(25, 12);
-            this.itemSocketLabel.Name = "itemSocketLabel";
-            this.itemSocketLabel.Size = new System.Drawing.Size(53, 23);
-            this.itemSocketLabel.TabIndex = 0;
-            this.itemSocketLabel.Text = "Socket:";
+            this.label56.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label56.Location = new System.Drawing.Point(25, 12);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(53, 23);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "Socket:";
             // 
             // findGemPropButton
             // 
@@ -4063,18 +4077,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.gemPropIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The value here corresponds to the ID in GemProperties.dbc.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.gemPropIntegerInput.TabIndex = 6;
             // 
-            // itemGemPropLabel
+            // label63
             // 
             // 
             // 
             // 
-            this.itemGemPropLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemGemPropLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemGemPropLabel.Location = new System.Drawing.Point(658, 369);
-            this.itemGemPropLabel.Name = "itemGemPropLabel";
-            this.itemGemPropLabel.Size = new System.Drawing.Size(113, 23);
-            this.itemGemPropLabel.TabIndex = 18;
-            this.itemGemPropLabel.Text = "Gem Properties:";
+            this.label63.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label63.Location = new System.Drawing.Point(658, 369);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(113, 23);
+            this.label63.TabIndex = 18;
+            this.label63.Text = "Gem Properties:";
             // 
             // findSocketBonusButton
             // 
@@ -4104,18 +4118,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.socketBonusIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "commonly used socket bonus IDs", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.socketBonusIntegerInput.TabIndex = 4;
             // 
-            // itemSocketBonusLabel
+            // label62
             // 
             // 
             // 
             // 
-            this.itemSocketBonusLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSocketBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemSocketBonusLabel.Location = new System.Drawing.Point(292, 369);
-            this.itemSocketBonusLabel.Name = "itemSocketBonusLabel";
-            this.itemSocketBonusLabel.Size = new System.Drawing.Size(103, 23);
-            this.itemSocketBonusLabel.TabIndex = 0;
-            this.itemSocketBonusLabel.Text = "Socket Bonus:";
+            this.label62.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label62.Location = new System.Drawing.Point(292, 369);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(103, 23);
+            this.label62.TabIndex = 0;
+            this.label62.Text = "Socket Bonus:";
             // 
             // itemSocketInfoLabel
             // 
@@ -4239,53 +4253,53 @@
             this.wizardPage1.Controls.Add(this.flagsCustomButton);
             this.wizardPage1.Controls.Add(this.flagsCustomIntegerInput);
             this.wizardPage1.Controls.Add(this.scriptNameIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherFlagsCustomLabel);
+            this.wizardPage1.Controls.Add(this.label87);
             this.wizardPage1.Controls.Add(this.WDBVerifiedIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherWDBVerified);
+            this.wizardPage1.Controls.Add(this.label86);
             this.wizardPage1.Controls.Add(this.holidayIdIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherHolidayIdLabel);
+            this.wizardPage1.Controls.Add(this.label85);
             this.wizardPage1.Controls.Add(this.limitCategoryIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherItemLimitCategoryLabel);
+            this.wizardPage1.Controls.Add(this.labe85);
             this.wizardPage1.Controls.Add(this.maxMoneyLootIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherMaxMoneyLootLabel);
+            this.wizardPage1.Controls.Add(this.label84);
             this.wizardPage1.Controls.Add(this.minMoneyLootIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherMinMoneyLootLabel);
+            this.wizardPage1.Controls.Add(this.labe83);
             this.wizardPage1.Controls.Add(this.foodTypeComboBox);
-            this.wizardPage1.Controls.Add(this.itemOtherFoodTypeLabel);
+            this.wizardPage1.Controls.Add(this.label82);
             this.wizardPage1.Controls.Add(this.randomArmorDmgModIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherArmorDmgModLabel);
+            this.wizardPage1.Controls.Add(this.label81);
             this.wizardPage1.Controls.Add(this.randomSuffixIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherRandomSuffixLabel);
+            this.wizardPage1.Controls.Add(this.label80);
             this.wizardPage1.Controls.Add(this.randomPropIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherRandomPropLabel);
+            this.wizardPage1.Controls.Add(this.label79);
             this.wizardPage1.Controls.Add(this.disenchantIdIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherDisenchantIdLabel);
+            this.wizardPage1.Controls.Add(this.label78);
             this.wizardPage1.Controls.Add(this.lockIdIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherLockIdLabel);
+            this.wizardPage1.Controls.Add(this.label75);
             this.wizardPage1.Controls.Add(this.findStartQuestButton);
             this.wizardPage1.Controls.Add(this.startQuestIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherStartQuestLabel);
-            this.wizardPage1.Controls.Add(this.itemOtherScriptNameLabel);
+            this.wizardPage1.Controls.Add(this.labe77);
+            this.wizardPage1.Controls.Add(this.label76);
             this.wizardPage1.Controls.Add(this.findMapButton);
             this.wizardPage1.Controls.Add(this.mapIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherMapLabel);
+            this.wizardPage1.Controls.Add(this.label74);
             this.wizardPage1.Controls.Add(this.findAreaButton);
             this.wizardPage1.Controls.Add(this.areaIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherAreaLabel);
+            this.wizardPage1.Controls.Add(this.label73);
             this.wizardPage1.Controls.Add(this.totemCategoryComboBox);
-            this.wizardPage1.Controls.Add(this.itemOtherTotemCatLabel);
+            this.wizardPage1.Controls.Add(this.label72);
             this.wizardPage1.Controls.Add(this.bagFamilyComboBox);
-            this.wizardPage1.Controls.Add(this.itemBagFamilyLabel);
+            this.wizardPage1.Controls.Add(this.label71);
             this.wizardPage1.Controls.Add(this.durationIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherDurationLabel);
+            this.wizardPage1.Controls.Add(this.label70);
             this.wizardPage1.Controls.Add(this.pageMatComboBox);
-            this.wizardPage1.Controls.Add(this.itemOtherPageMatLabel);
+            this.wizardPage1.Controls.Add(this.label68);
             this.wizardPage1.Controls.Add(this.languageIdComboBox);
-            this.wizardPage1.Controls.Add(this.itemOtherLangIdLabel);
+            this.wizardPage1.Controls.Add(this.labe69);
             this.wizardPage1.Controls.Add(this.pageTextIntegerInput);
-            this.wizardPage1.Controls.Add(this.itemOtherPageTxtLabel);
+            this.wizardPage1.Controls.Add(this.label67);
             this.wizardPage1.Controls.Add(this.materialComboBox);
-            this.wizardPage1.Controls.Add(this.itemOtherMaterialLabel);
+            this.wizardPage1.Controls.Add(this.label65);
             this.wizardPage1.Location = new System.Drawing.Point(7, 72);
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.PageTitle = "Item Other";
@@ -4350,18 +4364,18 @@
             "field.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.scriptNameIntegerInput.TabIndex = 12;
             // 
-            // itemOtherFlagsCustomLabel
+            // label87
             // 
             // 
             // 
             // 
-            this.itemOtherFlagsCustomLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherFlagsCustomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherFlagsCustomLabel.Location = new System.Drawing.Point(664, 449);
-            this.itemOtherFlagsCustomLabel.Name = "itemOtherFlagsCustomLabel";
-            this.itemOtherFlagsCustomLabel.Size = new System.Drawing.Size(103, 23);
-            this.itemOtherFlagsCustomLabel.TabIndex = 47;
-            this.itemOtherFlagsCustomLabel.Text = "Flags Custom:";
+            this.label87.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label87.Location = new System.Drawing.Point(664, 449);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(103, 23);
+            this.label87.TabIndex = 47;
+            this.label87.Text = "Flags Custom:";
             // 
             // WDBVerifiedIntegerInput
             // 
@@ -4378,18 +4392,18 @@
             this.WDBVerifiedIntegerInput.Size = new System.Drawing.Size(113, 20);
             this.WDBVerifiedIntegerInput.TabIndex = 25;
             // 
-            // itemOtherWDBVerified
+            // label86
             // 
             // 
             // 
             // 
-            this.itemOtherWDBVerified.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherWDBVerified.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherWDBVerified.Location = new System.Drawing.Point(427, 449);
-            this.itemOtherWDBVerified.Name = "itemOtherWDBVerified";
-            this.itemOtherWDBVerified.Size = new System.Drawing.Size(96, 23);
-            this.itemOtherWDBVerified.TabIndex = 45;
-            this.itemOtherWDBVerified.Text = "WDB Verified:";
+            this.label86.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label86.Location = new System.Drawing.Point(427, 449);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(96, 23);
+            this.label86.TabIndex = 45;
+            this.label86.Text = "WDB Verified:";
             // 
             // holidayIdIntegerInput
             // 
@@ -4406,18 +4420,18 @@
             this.holidayIdIntegerInput.Size = new System.Drawing.Size(132, 20);
             this.holidayIdIntegerInput.TabIndex = 24;
             // 
-            // itemOtherHolidayIdLabel
+            // label85
             // 
             // 
             // 
             // 
-            this.itemOtherHolidayIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherHolidayIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherHolidayIdLabel.Location = new System.Drawing.Point(186, 449);
-            this.itemOtherHolidayIdLabel.Name = "itemOtherHolidayIdLabel";
-            this.itemOtherHolidayIdLabel.Size = new System.Drawing.Size(78, 23);
-            this.itemOtherHolidayIdLabel.TabIndex = 43;
-            this.itemOtherHolidayIdLabel.Text = "Holiday ID:";
+            this.label85.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label85.Location = new System.Drawing.Point(186, 449);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(78, 23);
+            this.label85.TabIndex = 43;
+            this.label85.Text = "Holiday ID:";
             // 
             // limitCategoryIntegerInput
             // 
@@ -4434,18 +4448,18 @@
             this.limitCategoryIntegerInput.Size = new System.Drawing.Size(131, 20);
             this.limitCategoryIntegerInput.TabIndex = 23;
             // 
-            // itemOtherItemLimitCategoryLabel
+            // labe85
             // 
             // 
             // 
             // 
-            this.itemOtherItemLimitCategoryLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherItemLimitCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherItemLimitCategoryLabel.Location = new System.Drawing.Point(797, 353);
-            this.itemOtherItemLimitCategoryLabel.Name = "itemOtherItemLimitCategoryLabel";
-            this.itemOtherItemLimitCategoryLabel.Size = new System.Drawing.Size(79, 37);
-            this.itemOtherItemLimitCategoryLabel.TabIndex = 41;
-            this.itemOtherItemLimitCategoryLabel.Text = "<div align=\"center\">ItemLimit<br/>Category</div>";
+            this.labe85.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labe85.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labe85.Location = new System.Drawing.Point(797, 353);
+            this.labe85.Name = "labe85";
+            this.labe85.Size = new System.Drawing.Size(79, 37);
+            this.labe85.TabIndex = 41;
+            this.labe85.Text = "<div align=\"center\">ItemLimit<br/>Category</div>";
             // 
             // maxMoneyLootIntegerInput
             // 
@@ -4464,18 +4478,18 @@
             "ximum coinage held in this container, in copper.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.maxMoneyLootIntegerInput.TabIndex = 22;
             // 
-            // itemOtherMaxMoneyLootLabel
+            // label84
             // 
             // 
             // 
             // 
-            this.itemOtherMaxMoneyLootLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherMaxMoneyLootLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherMaxMoneyLootLabel.Location = new System.Drawing.Point(521, 360);
-            this.itemOtherMaxMoneyLootLabel.Name = "itemOtherMaxMoneyLootLabel";
-            this.itemOtherMaxMoneyLootLabel.Size = new System.Drawing.Size(117, 23);
-            this.itemOtherMaxMoneyLootLabel.TabIndex = 39;
-            this.itemOtherMaxMoneyLootLabel.Text = "Max Money Loot:";
+            this.label84.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label84.Location = new System.Drawing.Point(521, 360);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(117, 23);
+            this.label84.TabIndex = 39;
+            this.label84.Text = "Max Money Loot:";
             // 
             // minMoneyLootIntegerInput
             // 
@@ -4494,18 +4508,18 @@
             "nimum coinage held in this container, in copper.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.minMoneyLootIntegerInput.TabIndex = 21;
             // 
-            // itemOtherMinMoneyLootLabel
+            // labe83
             // 
             // 
             // 
             // 
-            this.itemOtherMinMoneyLootLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherMinMoneyLootLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherMinMoneyLootLabel.Location = new System.Drawing.Point(275, 360);
-            this.itemOtherMinMoneyLootLabel.Name = "itemOtherMinMoneyLootLabel";
-            this.itemOtherMinMoneyLootLabel.Size = new System.Drawing.Size(113, 23);
-            this.itemOtherMinMoneyLootLabel.TabIndex = 37;
-            this.itemOtherMinMoneyLootLabel.Text = "Min Money Loot:";
+            this.labe83.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labe83.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labe83.Location = new System.Drawing.Point(275, 360);
+            this.labe83.Name = "labe83";
+            this.labe83.Size = new System.Drawing.Size(113, 23);
+            this.labe83.TabIndex = 37;
+            this.labe83.Text = "Min Money Loot:";
             // 
             // foodTypeComboBox
             // 
@@ -4562,18 +4576,18 @@
             // 
             this.rawFishFoodTypeComboItem.Text = "Raw Fish";
             // 
-            // itemOtherFoodTypeLabel
+            // label82
             // 
             // 
             // 
             // 
-            this.itemOtherFoodTypeLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherFoodTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherFoodTypeLabel.Location = new System.Drawing.Point(53, 360);
-            this.itemOtherFoodTypeLabel.Name = "itemOtherFoodTypeLabel";
-            this.itemOtherFoodTypeLabel.Size = new System.Drawing.Size(78, 23);
-            this.itemOtherFoodTypeLabel.TabIndex = 35;
-            this.itemOtherFoodTypeLabel.Text = "Food Type:";
+            this.label82.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label82.Location = new System.Drawing.Point(53, 360);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(78, 23);
+            this.label82.TabIndex = 35;
+            this.label82.Text = "Food Type:";
             // 
             // randomArmorDmgModIntegerInput
             // 
@@ -4590,18 +4604,18 @@
             this.randomArmorDmgModIntegerInput.Size = new System.Drawing.Size(131, 20);
             this.randomArmorDmgModIntegerInput.TabIndex = 19;
             // 
-            // itemOtherArmorDmgModLabel
+            // label81
             // 
             // 
             // 
             // 
-            this.itemOtherArmorDmgModLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherArmorDmgModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherArmorDmgModLabel.Location = new System.Drawing.Point(787, 259);
-            this.itemOtherArmorDmgModLabel.Name = "itemOtherArmorDmgModLabel";
-            this.itemOtherArmorDmgModLabel.Size = new System.Drawing.Size(105, 48);
-            this.itemOtherArmorDmgModLabel.TabIndex = 33;
-            this.itemOtherArmorDmgModLabel.Text = "<div align=\"center\">Random Armor<br/>Damage Modifier</div>";
+            this.label81.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label81.Location = new System.Drawing.Point(787, 259);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(105, 48);
+            this.label81.TabIndex = 33;
+            this.label81.Text = "<div align=\"center\">Random Armor<br/>Damage Modifier</div>";
             // 
             // randomSuffixIntegerInput
             // 
@@ -4619,18 +4633,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.randomSuffixIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("randomSuffixIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.randomSuffixIntegerInput.TabIndex = 18;
             // 
-            // itemOtherRandomSuffixLabel
+            // label80
             // 
             // 
             // 
             // 
-            this.itemOtherRandomSuffixLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherRandomSuffixLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherRandomSuffixLabel.Location = new System.Drawing.Point(533, 271);
-            this.itemOtherRandomSuffixLabel.Name = "itemOtherRandomSuffixLabel";
-            this.itemOtherRandomSuffixLabel.Size = new System.Drawing.Size(105, 23);
-            this.itemOtherRandomSuffixLabel.TabIndex = 31;
-            this.itemOtherRandomSuffixLabel.Text = "Random Suffix:";
+            this.label80.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label80.Location = new System.Drawing.Point(533, 271);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(105, 23);
+            this.label80.TabIndex = 31;
+            this.label80.Text = "Random Suffix:";
             // 
             // randomPropIntegerInput
             // 
@@ -4648,18 +4662,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.randomPropIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("randomPropIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.randomPropIntegerInput.TabIndex = 17;
             // 
-            // itemOtherRandomPropLabel
+            // label79
             // 
             // 
             // 
             // 
-            this.itemOtherRandomPropLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherRandomPropLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherRandomPropLabel.Location = new System.Drawing.Point(277, 271);
-            this.itemOtherRandomPropLabel.Name = "itemOtherRandomPropLabel";
-            this.itemOtherRandomPropLabel.Size = new System.Drawing.Size(124, 23);
-            this.itemOtherRandomPropLabel.TabIndex = 29;
-            this.itemOtherRandomPropLabel.Text = "Random Property:";
+            this.label79.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label79.Location = new System.Drawing.Point(277, 271);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(124, 23);
+            this.label79.TabIndex = 29;
+            this.label79.Text = "Random Property:";
             // 
             // disenchantIdIntegerInput
             // 
@@ -4677,18 +4691,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.disenchantIdIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The disenchant loot template ID. See disenchant_loot_template.entry\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.disenchantIdIntegerInput.TabIndex = 16;
             // 
-            // itemOtherDisenchantIdLabel
+            // label78
             // 
             // 
             // 
             // 
-            this.itemOtherDisenchantIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherDisenchantIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherDisenchantIdLabel.Location = new System.Drawing.Point(32, 271);
-            this.itemOtherDisenchantIdLabel.Name = "itemOtherDisenchantIdLabel";
-            this.itemOtherDisenchantIdLabel.Size = new System.Drawing.Size(101, 23);
-            this.itemOtherDisenchantIdLabel.TabIndex = 27;
-            this.itemOtherDisenchantIdLabel.Text = "Disenchant ID:";
+            this.label78.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label78.Location = new System.Drawing.Point(32, 271);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(101, 23);
+            this.label78.TabIndex = 27;
+            this.label78.Text = "Disenchant ID:";
             // 
             // lockIdIntegerInput
             // 
@@ -4708,18 +4722,18 @@
             "s used in key-door mechanics. See Lock.dbc", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.lockIdIntegerInput.TabIndex = 15;
             // 
-            // itemOtherLockIdLabel
+            // label75
             // 
             // 
             // 
             // 
-            this.itemOtherLockIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherLockIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherLockIdLabel.Location = new System.Drawing.Point(833, 179);
-            this.itemOtherLockIdLabel.Name = "itemOtherLockIdLabel";
-            this.itemOtherLockIdLabel.Size = new System.Drawing.Size(59, 23);
-            this.itemOtherLockIdLabel.TabIndex = 25;
-            this.itemOtherLockIdLabel.Text = "Lock ID:";
+            this.label75.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label75.Location = new System.Drawing.Point(833, 179);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(59, 23);
+            this.label75.TabIndex = 25;
+            this.label75.Text = "Lock ID:";
             // 
             // findStartQuestButton
             // 
@@ -4751,31 +4765,31 @@
             "e.id", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.startQuestIntegerInput.TabIndex = 13;
             // 
-            // itemOtherStartQuestLabel
+            // labe77
             // 
             // 
             // 
             // 
-            this.itemOtherStartQuestLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherStartQuestLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherStartQuestLabel.Location = new System.Drawing.Point(553, 179);
-            this.itemOtherStartQuestLabel.Name = "itemOtherStartQuestLabel";
-            this.itemOtherStartQuestLabel.Size = new System.Drawing.Size(85, 23);
-            this.itemOtherStartQuestLabel.TabIndex = 22;
-            this.itemOtherStartQuestLabel.Text = "Start Quest:";
+            this.labe77.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labe77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labe77.Location = new System.Drawing.Point(553, 179);
+            this.labe77.Name = "labe77";
+            this.labe77.Size = new System.Drawing.Size(85, 23);
+            this.labe77.TabIndex = 22;
+            this.labe77.Text = "Start Quest:";
             // 
-            // itemOtherScriptNameLabel
-            // 
-            // 
+            // label76
             // 
             // 
-            this.itemOtherScriptNameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherScriptNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherScriptNameLabel.Location = new System.Drawing.Point(280, 179);
-            this.itemOtherScriptNameLabel.Name = "itemOtherScriptNameLabel";
-            this.itemOtherScriptNameLabel.Size = new System.Drawing.Size(88, 23);
-            this.itemOtherScriptNameLabel.TabIndex = 20;
-            this.itemOtherScriptNameLabel.Text = "Script Name:";
+            // 
+            // 
+            this.label76.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label76.Location = new System.Drawing.Point(280, 179);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(88, 23);
+            this.label76.TabIndex = 20;
+            this.label76.Text = "Script Name:";
             // 
             // findMapButton
             // 
@@ -4806,18 +4820,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.mapIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The map ID that this item can be used in.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.mapIntegerInput.TabIndex = 10;
             // 
-            // itemOtherMapLabel
+            // label74
             // 
             // 
             // 
             // 
-            this.itemOtherMapLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherMapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherMapLabel.Location = new System.Drawing.Point(96, 179);
-            this.itemOtherMapLabel.Name = "itemOtherMapLabel";
-            this.itemOtherMapLabel.Size = new System.Drawing.Size(37, 23);
-            this.itemOtherMapLabel.TabIndex = 17;
-            this.itemOtherMapLabel.Text = "Map:";
+            this.label74.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label74.Location = new System.Drawing.Point(96, 179);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(37, 23);
+            this.label74.TabIndex = 17;
+            this.label74.Text = "Map:";
             // 
             // findAreaButton
             // 
@@ -4848,18 +4862,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.areaIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The zone ID that this item can be used in.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.areaIntegerInput.TabIndex = 8;
             // 
-            // itemOtherAreaLabel
+            // label73
             // 
             // 
             // 
             // 
-            this.itemOtherAreaLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherAreaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherAreaLabel.Location = new System.Drawing.Point(853, 93);
-            this.itemOtherAreaLabel.Name = "itemOtherAreaLabel";
-            this.itemOtherAreaLabel.Size = new System.Drawing.Size(37, 23);
-            this.itemOtherAreaLabel.TabIndex = 14;
-            this.itemOtherAreaLabel.Text = "Area:";
+            this.label73.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label73.Location = new System.Drawing.Point(853, 93);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(37, 23);
+            this.label73.TabIndex = 14;
+            this.label73.Text = "Area:";
             // 
             // totemCategoryComboBox
             // 
@@ -5039,18 +5053,18 @@
             // 
             this.runedTitaniumRodTotemCategoryComboItem.Text = "Runed Titanium Rod";
             // 
-            // itemOtherTotemCatLabel
+            // label72
             // 
             // 
             // 
             // 
-            this.itemOtherTotemCatLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherTotemCatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherTotemCatLabel.Location = new System.Drawing.Point(521, 93);
-            this.itemOtherTotemCatLabel.Name = "itemOtherTotemCatLabel";
-            this.itemOtherTotemCatLabel.Size = new System.Drawing.Size(115, 23);
-            this.itemOtherTotemCatLabel.TabIndex = 12;
-            this.itemOtherTotemCatLabel.Text = "Totem Category:";
+            this.label72.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label72.Location = new System.Drawing.Point(521, 93);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(115, 23);
+            this.label72.TabIndex = 12;
+            this.label72.Text = "Totem Category:";
             // 
             // bagFamilyComboBox
             // 
@@ -5144,18 +5158,18 @@
             // 
             this.questItemsBagFamilyComboItem.Text = "Quest Items";
             // 
-            // itemBagFamilyLabel
+            // label71
             // 
             // 
             // 
             // 
-            this.itemBagFamilyLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemBagFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemBagFamilyLabel.Location = new System.Drawing.Point(288, 93);
-            this.itemBagFamilyLabel.Name = "itemBagFamilyLabel";
-            this.itemBagFamilyLabel.Size = new System.Drawing.Size(82, 23);
-            this.itemBagFamilyLabel.TabIndex = 10;
-            this.itemBagFamilyLabel.Text = "Bag Family:";
+            this.label71.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label71.Location = new System.Drawing.Point(288, 93);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(82, 23);
+            this.label71.TabIndex = 10;
+            this.label71.Text = "Bag Family:";
             // 
             // durationIntegerInput
             // 
@@ -5174,18 +5188,18 @@
             "ingame time. If negative, it is the duration measured in real time.\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.durationIntegerInput.TabIndex = 5;
             // 
-            // itemOtherDurationLabel
+            // label70
             // 
             // 
             // 
             // 
-            this.itemOtherDurationLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherDurationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherDurationLabel.Location = new System.Drawing.Point(68, 93);
-            this.itemOtherDurationLabel.Name = "itemOtherDurationLabel";
-            this.itemOtherDurationLabel.Size = new System.Drawing.Size(63, 23);
-            this.itemOtherDurationLabel.TabIndex = 8;
-            this.itemOtherDurationLabel.Text = "Duration:";
+            this.label70.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label70.Location = new System.Drawing.Point(68, 93);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(63, 23);
+            this.label70.TabIndex = 8;
+            this.label70.Text = "Duration:";
             // 
             // pageMatComboBox
             // 
@@ -5238,18 +5252,18 @@
             // 
             this.illidanPageMatComboItem.Text = "Illidan";
             // 
-            // itemOtherPageMatLabel
+            // label68
             // 
             // 
             // 
             // 
-            this.itemOtherPageMatLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherPageMatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherPageMatLabel.Location = new System.Drawing.Point(538, 12);
-            this.itemOtherPageMatLabel.Name = "itemOtherPageMatLabel";
-            this.itemOtherPageMatLabel.Size = new System.Drawing.Size(98, 23);
-            this.itemOtherPageMatLabel.TabIndex = 6;
-            this.itemOtherPageMatLabel.Text = "Page Material:";
+            this.label68.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label68.Location = new System.Drawing.Point(538, 12);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(98, 23);
+            this.label68.TabIndex = 6;
+            this.label68.Text = "Page Material:";
             // 
             // languageIdComboBox
             // 
@@ -5361,18 +5375,18 @@
             // 
             this.addonComboItem.Text = "Addon";
             // 
-            // itemOtherLangIdLabel
+            // labe69
             // 
             // 
             // 
             // 
-            this.itemOtherLangIdLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherLangIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherLangIdLabel.Location = new System.Drawing.Point(797, 12);
-            this.itemOtherLangIdLabel.Name = "itemOtherLangIdLabel";
-            this.itemOtherLangIdLabel.Size = new System.Drawing.Size(93, 23);
-            this.itemOtherLangIdLabel.TabIndex = 4;
-            this.itemOtherLangIdLabel.Text = "Language ID:";
+            this.labe69.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labe69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labe69.Location = new System.Drawing.Point(797, 12);
+            this.labe69.Name = "labe69";
+            this.labe69.Size = new System.Drawing.Size(93, 23);
+            this.labe69.TabIndex = 4;
+            this.labe69.Text = "Language ID:";
             // 
             // pageTextIntegerInput
             // 
@@ -5390,18 +5404,18 @@
             this.itemCreatorSuperTooltip.SetSuperTooltip(this.pageTextIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("pageTextIntegerInput.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.pageTextIntegerInput.TabIndex = 2;
             // 
-            // itemOtherPageTxtLabel
+            // label67
             // 
             // 
             // 
             // 
-            this.itemOtherPageTxtLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherPageTxtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherPageTxtLabel.Location = new System.Drawing.Point(288, 12);
-            this.itemOtherPageTxtLabel.Name = "itemOtherPageTxtLabel";
-            this.itemOtherPageTxtLabel.Size = new System.Drawing.Size(78, 23);
-            this.itemOtherPageTxtLabel.TabIndex = 2;
-            this.itemOtherPageTxtLabel.Text = "Page Text:";
+            this.label67.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label67.Location = new System.Drawing.Point(288, 12);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(78, 23);
+            this.label67.TabIndex = 2;
+            this.label67.Text = "Page Text:";
             // 
             // materialComboBox
             // 
@@ -5479,18 +5493,18 @@
             this.leatherMatComboItem.Text = "Leather";
             this.leatherMatComboItem.Value = "";
             // 
-            // itemOtherMaterialLabel
+            // label65
             // 
             // 
             // 
             // 
-            this.itemOtherMaterialLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemOtherMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.itemOtherMaterialLabel.Location = new System.Drawing.Point(72, 12);
-            this.itemOtherMaterialLabel.Name = "itemOtherMaterialLabel";
-            this.itemOtherMaterialLabel.Size = new System.Drawing.Size(59, 23);
-            this.itemOtherMaterialLabel.TabIndex = 0;
-            this.itemOtherMaterialLabel.Text = "Material:";
+            this.label65.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label65.Location = new System.Drawing.Point(72, 12);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(59, 23);
+            this.label65.TabIndex = 0;
+            this.label65.Text = "Material:";
             // 
             // wizardPage2
             // 
@@ -5750,11 +5764,11 @@
         private System.Windows.Forms.Label itemCreatorDescLabel;
         private System.Windows.Forms.Label itemCreatorMiniMssgLabel;
         private DevComponents.DotNetBar.Wizard itemCreatorWizard;
-        private DevComponents.DotNetBar.LabelX itemQualityLabel;
-        private DevComponents.DotNetBar.LabelX itemDescriptionLabel;
-        private DevComponents.DotNetBar.LabelX itemNameLabel;
-        private DevComponents.DotNetBar.LabelX itemEntryIdLabel;
-        private DevComponents.DotNetBar.LabelX itemDisplayIdLabel;
+        private DevComponents.DotNetBar.LabelX label7;
+        private DevComponents.DotNetBar.LabelX label2;
+        private DevComponents.DotNetBar.LabelX label1;
+        private DevComponents.DotNetBar.LabelX label9;
+        private DevComponents.DotNetBar.LabelX label8;
         private DevComponents.DotNetBar.ButtonX findDisplayIdButton;
         private DevComponents.DotNetBar.Controls.TextBoxX itemDescriptionTextBox;
         private DevComponents.DotNetBar.Controls.TextBoxX itemNameTextBox;
@@ -5762,25 +5776,25 @@
         private DevComponents.Editors.IntegerInput itemEntryIdIntegerInput;
         private DevComponents.Editors.IntegerInput itemDisplayIdIntegerInput;
         private DevComponents.DotNetBar.WizardPage itemTypeWizardPage;
-        private DevComponents.DotNetBar.LabelX itemInventoryTypeLabel;
+        private DevComponents.DotNetBar.LabelX label16;
         private DevComponents.DotNetBar.WizardPage itemWeaponStatsWizardPage;
-        private DevComponents.DotNetBar.LabelX ammoTypeLabel;
-        private DevComponents.DotNetBar.LabelX itemSheathLabel;
+        private DevComponents.DotNetBar.LabelX label22;
+        private DevComponents.DotNetBar.LabelX label21;
         private DevComponents.DotNetBar.LabelX itemWeaponStatsInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemRequirementsWizardPage;
-        private DevComponents.DotNetBar.LabelX requiredLevelItemLabel;
-        private DevComponents.DotNetBar.LabelX itemSkillReqLabel;
-        private DevComponents.DotNetBar.LabelX allowedRaceLabel;
-        private DevComponents.DotNetBar.LabelX allowedClassLabel;
-        private DevComponents.DotNetBar.LabelX itemLvlReqLabel;
-        private DevComponents.DotNetBar.LabelX itemSkillRankReqLabel;
-        private DevComponents.DotNetBar.LabelX repItemReqLabel;
+        private DevComponents.DotNetBar.LabelX label31;
+        private DevComponents.DotNetBar.LabelX label34;
+        private DevComponents.DotNetBar.LabelX label41;
+        private DevComponents.DotNetBar.LabelX label40;
+        private DevComponents.DotNetBar.LabelX label33;
+        private DevComponents.DotNetBar.LabelX label36;
+        private DevComponents.DotNetBar.LabelX label32;
         private DevComponents.DotNetBar.Controls.ComboBoxEx reqSkillComboBox;
         private DevComponents.Editors.IntegerInput reqLevelIntegerInput;
         private DevComponents.Editors.IntegerInput levelReqIntegerInput;
         private DevComponents.Editors.IntegerInput reqSkillRankIntegerInput;
         private DevComponents.DotNetBar.Controls.ComboBoxEx reqReputationRankComboBox;
-        private DevComponents.DotNetBar.LabelX itemRequiredRepRankLabel;
+        private DevComponents.DotNetBar.LabelX label35;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevComponents.DotNetBar.Controls.CheckBoxX reqRogueCheckBox;
         private DevComponents.DotNetBar.Controls.CheckBoxX reqAllClassesCheckBox;
@@ -5806,12 +5820,12 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX reqGnomeCheckBox;
         private DevComponents.DotNetBar.LabelX itemReqInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemDamageWizardPage;
-        private DevComponents.DotNetBar.LabelX itemDamageMinLabel;
-        private DevComponents.DotNetBar.LabelX itemDamageTypeLabel;
-        private DevComponents.DotNetBar.LabelX itemDamageMaxLabel;
-        private DevComponents.DotNetBar.LabelX itemDamageMinLabel2;
-        private DevComponents.DotNetBar.LabelX itemDamageMaxLabel2;
-        private DevComponents.DotNetBar.LabelX itemDamageTypeLabel2;
+        private DevComponents.DotNetBar.LabelX label42;
+        private DevComponents.DotNetBar.LabelX label44;
+        private DevComponents.DotNetBar.LabelX label43;
+        private DevComponents.DotNetBar.LabelX label45;
+        private DevComponents.DotNetBar.LabelX label46;
+        private DevComponents.DotNetBar.LabelX label47;
         private DevComponents.Editors.IntegerInput damageMaxIntegerInput;
         private DevComponents.Editors.IntegerInput damageMaxIntegerInput2;
         private DevComponents.Editors.IntegerInput damageMinIntegerInput2;
@@ -5819,12 +5833,12 @@
         private DevComponents.DotNetBar.LabelX itemDamageInfoLabel;
         private DevComponents.DotNetBar.WizardPage itemStatsWizardPage;
         private DevComponents.DotNetBar.WizardPage resistsWizardPage;
-        private DevComponents.DotNetBar.LabelX itemResistsHolyLabel;
-        private DevComponents.DotNetBar.LabelX itemResistsArcaneLabel;
-        private DevComponents.DotNetBar.LabelX itemResistsFrostLabel;
-        private DevComponents.DotNetBar.LabelX itemResistsFireLabel;
-        private DevComponents.DotNetBar.LabelX itemResistsShadowLabel;
-        private DevComponents.DotNetBar.LabelX itemResistsNatureLabel;
+        private DevComponents.DotNetBar.LabelX label50;
+        private DevComponents.DotNetBar.LabelX label54;
+        private DevComponents.DotNetBar.LabelX label53;
+        private DevComponents.DotNetBar.LabelX label51;
+        private DevComponents.DotNetBar.LabelX label55;
+        private DevComponents.DotNetBar.LabelX label52;
         private DevComponents.Editors.IntegerInput resistsArcaneIntegerInput;
         private DevComponents.Editors.IntegerInput resistsFrostIntegerInput;
         private DevComponents.Editors.IntegerInput resistsFireIntegerInput;
@@ -5907,9 +5921,9 @@
         private DevComponents.Editors.ComboItem comboItem37;
         private DevComponents.Editors.ComboItem selectFactionStandingComboItem;
         private DevComponents.Editors.ComboItem selectProfessionComboItem;
-        private DevComponents.DotNetBar.LabelX itemSocketLabel;
-        private DevComponents.DotNetBar.LabelX itemSocketBonusLabel;
-        private DevComponents.DotNetBar.LabelX itemClassLabel;
+        private DevComponents.DotNetBar.LabelX label56;
+        private DevComponents.DotNetBar.LabelX label62;
+        private DevComponents.DotNetBar.LabelX label3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx itemClassComboBox;
         private DevComponents.Editors.ComboItem consumableComboItem;
         private DevComponents.Editors.ComboItem containerComboItem;
@@ -5928,23 +5942,23 @@
         private DevComponents.Editors.ComboItem permanentOBSOLETEComboItem;
         private DevComponents.Editors.ComboItem miscellaneousComboItem;
         private DevComponents.Editors.ComboItem glyphComboItem;
-        private DevComponents.DotNetBar.LabelX itemSubClassLabel;
-        private DevComponents.DotNetBar.LabelX itemFlagsLabel;
+        private DevComponents.DotNetBar.LabelX label4;
+        private DevComponents.DotNetBar.LabelX label5;
         private DevComponents.Editors.ComboItem bindToAccountComboItem;
-        private DevComponents.DotNetBar.LabelX itemFlagsExtraLabel;
+        private DevComponents.DotNetBar.LabelX label6;
         private System.Windows.Forms.LinkLabel itemDetailsLink;
-        private DevComponents.DotNetBar.LabelX copperLabel;
-        private DevComponents.DotNetBar.LabelX silverLabel;
-        private DevComponents.DotNetBar.LabelX goldLabel;
+        private DevComponents.DotNetBar.LabelX label14;
+        private DevComponents.DotNetBar.LabelX label13;
+        private DevComponents.DotNetBar.LabelX label12;
         private DevComponents.Editors.IntegerInput buyCopperIntegerInput;
         private DevComponents.Editors.IntegerInput sellSilverIntegerInput;
         private DevComponents.Editors.IntegerInput buySilverIntegerInput;
         private DevComponents.Editors.IntegerInput sellGoldIntegerInput;
         private DevComponents.Editors.IntegerInput buyGoldIntegerInput;
-        private DevComponents.DotNetBar.LabelX sellPriceLabel;
-        private DevComponents.DotNetBar.LabelX buyPriceLabel;
-        private DevComponents.DotNetBar.LabelX itemMaxCountLabel;
-        private DevComponents.DotNetBar.LabelX stackableLabel;
+        private DevComponents.DotNetBar.LabelX label11;
+        private DevComponents.DotNetBar.LabelX label10;
+        private DevComponents.DotNetBar.LabelX label17;
+        private DevComponents.DotNetBar.LabelX label15;
         private DevComponents.Editors.ComboItem cloakInvTypeComboItem;
         private DevComponents.Editors.ComboItem twoHandInvTypeComboItem;
         private DevComponents.Editors.ComboItem bagInvTypeComboItem;
@@ -5958,14 +5972,14 @@
         private DevComponents.Editors.ComboItem rangedRightInvTypeComboItem;
         private DevComponents.Editors.ComboItem quiverInvTypeComboItem;
         private DevComponents.Editors.ComboItem relicInvTypeComboItem;
-        private DevComponents.DotNetBar.LabelX itemContainerSlotsLabel;
+        private DevComponents.DotNetBar.LabelX label18;
         private DevComponents.Editors.IntegerInput durabilityIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemDurabilityLabel;
-        private DevComponents.DotNetBar.LabelX itemBuyCountLabel;
+        private DevComponents.DotNetBar.LabelX label23;
+        private DevComponents.DotNetBar.LabelX label19;
         private DevComponents.Editors.IntegerInput buyCountIntegerInput;
         private DevComponents.Editors.IntegerInput statsCountIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemStatsCountLabel;
-        private DevComponents.DotNetBar.LabelX itemBindsLabel;
+        private DevComponents.DotNetBar.LabelX label20;
+        private DevComponents.DotNetBar.LabelX label24;
         private DevComponents.DotNetBar.Controls.ComboBoxEx bindsComboBox;
         private DevComponents.Editors.ComboItem noneComboItem;
         private DevComponents.Editors.ComboItem onPickupComboItem;
@@ -5975,26 +5989,26 @@
         private DevComponents.Editors.IntegerInput containerSlotsIntegerInput;
         private DevComponents.Editors.IntegerInput stackableIntegerInput;
         private DevComponents.Editors.IntegerInput maxCountIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSetLabel;
+        private DevComponents.DotNetBar.LabelX label25;
         private DevComponents.Editors.IntegerInput armorIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemArmorLabel;
-        private DevComponents.DotNetBar.LabelX itemBlockLabel;
+        private DevComponents.DotNetBar.LabelX label28;
+        private DevComponents.DotNetBar.LabelX label27;
         private DevComponents.Editors.IntegerInput blockIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemDelayLabel;
+        private DevComponents.DotNetBar.LabelX label29;
         private DevComponents.Editors.IntegerInput delayIntegerInput;
         private DevComponents.Editors.IntegerInput rangedModDamageIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemRangedModDamageLabel;
+        private DevComponents.DotNetBar.LabelX label30;
         private DevComponents.Editors.IntegerInput reqSpellIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemReqSpellLabel;
+        private DevComponents.DotNetBar.LabelX label37;
         private DevComponents.DotNetBar.ButtonX findReqSpellButton;
         private DevComponents.Editors.IntegerInput reqHonorRankIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemReqHonorRankLabel;
-        private DevComponents.DotNetBar.LabelX itemReqDisenchantSkillLabel;
+        private DevComponents.DotNetBar.LabelX label38;
+        private DevComponents.DotNetBar.LabelX label39;
         private DevComponents.Editors.IntegerInput reqDisenchantSkillIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemScalingStatDistLabel;
+        private DevComponents.DotNetBar.LabelX label48;
         private DevComponents.Editors.IntegerInput scalingStatDistributionIntegerInput;
         private DevComponents.Editors.IntegerInput scalingStatValueIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemScalingStatsValueLabel;
+        private DevComponents.DotNetBar.LabelX label49;
         private DevComponents.DotNetBar.ButtonX findSocketBonusButton;
         private DevComponents.Editors.IntegerInput socketBonusIntegerInput;
         private DevComponents.Editors.ComboItem eightHasteRatingCombotItem;
@@ -6017,12 +6031,12 @@
         private DevComponents.Editors.ComboItem eightStrengthComboItem;
         private DevComponents.Editors.ComboItem socketBonusNoneComboItem;
         private DevComponents.Editors.IntegerInput gemPropIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemGemPropLabel;
+        private DevComponents.DotNetBar.LabelX label63;
         private DevComponents.DotNetBar.ButtonX findGemPropButton;
         private DevComponents.DotNetBar.Controls.GroupPanel itemSocketGroupPanel;
         private DevComponents.DotNetBar.Controls.ComboBoxEx socket1ComboBox;
         private DevComponents.Editors.IntegerInput socket1CountIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemSocketAmountLabel;
+        private DevComponents.DotNetBar.LabelX label57;
         private DevComponents.DotNetBar.WizardPage itemSpellWizardPage;
         private DevComponents.DotNetBar.Controls.GroupPanel itemSpellGroupPanel;
         private DevComponents.DotNetBar.ButtonX findSpellForItemButton;
@@ -6030,7 +6044,7 @@
         private DevComponents.Editors.ComboItem questItemComboItem;
         private DevComponents.Editors.ComboItem questItem1ComboItem;
         private DevComponents.DotNetBar.WizardPage wizardPage1;
-        private DevComponents.DotNetBar.LabelX itemOtherMaterialLabel;
+        private DevComponents.DotNetBar.LabelX label65;
         private DevComponents.DotNetBar.Controls.ComboBoxEx materialComboBox;
         private DevComponents.Editors.ComboItem noneSheathComboItem;
         private DevComponents.Editors.ComboItem enchantersRodSheathComboItem;
@@ -6046,7 +6060,7 @@
         private DevComponents.Editors.ComboItem clothMatComboItem;
         private DevComponents.Editors.ComboItem leatherMatComboItem;
         private DevComponents.Editors.IntegerInput pageTextIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherPageTxtLabel;
+        private DevComponents.DotNetBar.LabelX label67;
         private DevComponents.DotNetBar.Controls.ComboBoxEx languageIdComboBox;
         private DevComponents.Editors.ComboItem universalComboItem;
         private DevComponents.Editors.ComboItem orcishComboItem;
@@ -6057,7 +6071,7 @@
         private DevComponents.Editors.ComboItem demonicComboItem;
         private DevComponents.Editors.ComboItem titanComboItem;
         private DevComponents.Editors.ComboItem thalassianComboItem;
-        private DevComponents.DotNetBar.LabelX itemOtherLangIdLabel;
+        private DevComponents.DotNetBar.LabelX labe69;
         private DevComponents.Editors.ComboItem draconicComboItem;
         private DevComponents.Editors.ComboItem kalimagComboItem;
         private DevComponents.Editors.ComboItem gnomishComboItem;
@@ -6068,7 +6082,7 @@
         private DevComponents.Editors.ComboItem gnomishBinaryComboItem;
         private DevComponents.Editors.ComboItem goblinBinaryComboItem;
         private DevComponents.Editors.ComboItem addonComboItem;
-        private DevComponents.DotNetBar.LabelX itemOtherPageMatLabel;
+        private DevComponents.DotNetBar.LabelX label68;
         private DevComponents.Editors.ComboItem noSocketComboItem;
         private DevComponents.Editors.ComboItem metaSocketComboItem;
         private DevComponents.Editors.ComboItem redSocketComboItem;
@@ -6082,10 +6096,10 @@
         private DevComponents.Editors.ComboItem bronzePageMatComboItem;
         private DevComponents.Editors.ComboItem valentinePageMatComboItem;
         private DevComponents.Editors.ComboItem illidanPageMatComboItem;
-        private DevComponents.DotNetBar.LabelX itemOtherDurationLabel;
+        private DevComponents.DotNetBar.LabelX label70;
         private DevComponents.Editors.IntegerInput durationIntegerInput;
         private DevComponents.DotNetBar.Controls.ComboBoxEx bagFamilyComboBox;
-        private DevComponents.DotNetBar.LabelX itemBagFamilyLabel;
+        private DevComponents.DotNetBar.LabelX label71;
         private DevComponents.Editors.ComboItem noneBagFamilyComboItem;
         private DevComponents.Editors.ComboItem arrowsBagFamilyComboItem;
         private DevComponents.Editors.ComboItem bulletsBagFamilyComboItem;
@@ -6134,28 +6148,28 @@
         private DevComponents.Editors.ComboItem flintAndTinderTotemCategoryComboItem;
         private DevComponents.Editors.ComboItem runedCobaltRodTotemCategoryComboItem;
         private DevComponents.Editors.ComboItem runedTitaniumRodTotemCategoryComboItem;
-        private DevComponents.DotNetBar.LabelX itemOtherTotemCatLabel;
+        private DevComponents.DotNetBar.LabelX label72;
         private DevComponents.Editors.IntegerInput areaIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherAreaLabel;
+        private DevComponents.DotNetBar.LabelX label73;
         private DevComponents.DotNetBar.ButtonX findAreaButton;
-        private DevComponents.DotNetBar.LabelX itemOtherMapLabel;
+        private DevComponents.DotNetBar.LabelX label74;
         private DevComponents.Editors.IntegerInput mapIntegerInput;
         private DevComponents.DotNetBar.ButtonX findMapButton;
-        private DevComponents.DotNetBar.LabelX itemOtherScriptNameLabel;
-        private DevComponents.DotNetBar.LabelX itemOtherStartQuestLabel;
+        private DevComponents.DotNetBar.LabelX label76;
+        private DevComponents.DotNetBar.LabelX labe77;
         private DevComponents.DotNetBar.ButtonX findStartQuestButton;
         private DevComponents.Editors.IntegerInput startQuestIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherLockIdLabel;
+        private DevComponents.DotNetBar.LabelX label75;
         private DevComponents.Editors.IntegerInput lockIdIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherDisenchantIdLabel;
+        private DevComponents.DotNetBar.LabelX label78;
         private DevComponents.Editors.IntegerInput disenchantIdIntegerInput;
         private DevComponents.Editors.IntegerInput randomPropIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherRandomPropLabel;
-        private DevComponents.DotNetBar.LabelX itemOtherRandomSuffixLabel;
+        private DevComponents.DotNetBar.LabelX label79;
+        private DevComponents.DotNetBar.LabelX label80;
         private DevComponents.Editors.IntegerInput randomSuffixIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherArmorDmgModLabel;
+        private DevComponents.DotNetBar.LabelX label81;
         private DevComponents.Editors.IntegerInput randomArmorDmgModIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherFoodTypeLabel;
+        private DevComponents.DotNetBar.LabelX label82;
         private DevComponents.DotNetBar.Controls.ComboBoxEx foodTypeComboBox;
         private DevComponents.Editors.ComboItem meatFoodTypeComboItem;
         private DevComponents.Editors.ComboItem fishFoodTypeComboItem;
@@ -6165,17 +6179,17 @@
         private DevComponents.Editors.ComboItem fruitFoodTypeComboItem;
         private DevComponents.Editors.ComboItem rawMeatFoodTypeComboItem;
         private DevComponents.Editors.ComboItem rawFishFoodTypeComboItem;
-        private DevComponents.DotNetBar.LabelX itemOtherMinMoneyLootLabel;
+        private DevComponents.DotNetBar.LabelX labe83;
         private DevComponents.Editors.IntegerInput minMoneyLootIntegerInput;
         private DevComponents.Editors.IntegerInput maxMoneyLootIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherMaxMoneyLootLabel;
-        private DevComponents.DotNetBar.LabelX itemOtherItemLimitCategoryLabel;
+        private DevComponents.DotNetBar.LabelX label84;
+        private DevComponents.DotNetBar.LabelX labe85;
         private DevComponents.Editors.IntegerInput limitCategoryIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherHolidayIdLabel;
+        private DevComponents.DotNetBar.LabelX label85;
         private DevComponents.Editors.IntegerInput holidayIdIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherWDBVerified;
+        private DevComponents.DotNetBar.LabelX label86;
         private DevComponents.Editors.IntegerInput WDBVerifiedIntegerInput;
-        private DevComponents.DotNetBar.LabelX itemOtherFlagsCustomLabel;
+        private DevComponents.DotNetBar.LabelX label87;
         private DevComponents.DotNetBar.SuperTooltip itemCreatorSuperTooltip;
         private DevComponents.DotNetBar.WizardPage wizardPage2;
         private DevComponents.DotNetBar.Controls.CheckBoxX importToDBCheckBox;
@@ -6196,25 +6210,26 @@
         private DevComponents.Editors.IntegerInput flagsCustomIntegerInput;
         private DevComponents.DotNetBar.ButtonX flagsCustomButton;
         private DevComponents.Editors.IntegerInput socket3CountIntegerInput;
-        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.LabelX label61;
         private DevComponents.DotNetBar.Controls.ComboBoxEx socket3ComboBox;
         private DevComponents.Editors.ComboItem comboItem6;
         private DevComponents.Editors.ComboItem comboItem7;
         private DevComponents.Editors.ComboItem comboItem8;
         private DevComponents.Editors.ComboItem comboItem9;
         private DevComponents.Editors.ComboItem comboItem10;
-        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX label60;
         private DevComponents.Editors.IntegerInput socket2CountIntegerInput;
-        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.LabelX label59;
         private DevComponents.DotNetBar.Controls.ComboBoxEx socket2ComboBox;
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
         private DevComponents.Editors.ComboItem comboItem5;
-        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX label58;
         private ItemStatsControl itemStatsControl1;
         private ItemSpellControl itemSpellControl1;
+        private DevComponents.DotNetBar.ButtonX findSkillButton;
 
 
     }

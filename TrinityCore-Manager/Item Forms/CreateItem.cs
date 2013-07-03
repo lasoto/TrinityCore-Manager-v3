@@ -78,6 +78,12 @@ namespace TrinityCore_Manager
             Faction.ShowDialog();
         }
 
+        private void findSkillButton_Click(object sender, EventArgs e)
+        {
+            FindSkill Skill = new FindSkill();
+            Skill.ShowDialog();
+        }
+
         private void findReqSpellButton_Click(object sender, EventArgs e)
         {
             FindItemRequiredSpell RequiredSpell = new FindItemRequiredSpell();
@@ -110,8 +116,17 @@ namespace TrinityCore_Manager
 
         private void findMapButton_Click(object sender, EventArgs e)
         {
-            FindItemMap ItemMap = new FindItemMap();
-            ItemMap.ShowDialog();
+            using (FindItemMap ItemMap = new FindItemMap(mapIntegerInput.Value != 0 ? mapIntegerInput.Value : -1))
+            {
+
+                ItemMap.FormClosing += (s, args) =>
+                {
+                    mapIntegerInput.Value = ItemMap.IdSelected;
+                };
+
+                ItemMap.ShowDialog();
+
+            }
         }
 
         private void findStartQuestButton_Click(object sender, EventArgs e)

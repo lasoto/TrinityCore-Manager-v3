@@ -165,6 +165,7 @@
     <Compile Include="Database\Classes\IPBan.cs" />
     <Compile Include="Database\Classes\MemberRank.cs" />
     <Compile Include="Database\Classes\PlayerInformation.cs" />
+    <Compile Include="Database\Classes\SerializedItem.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Classes\TCItem.cs" />
     <Compile Include="Database\Enums\Creature Enums\CreatureRank.cs" />
@@ -235,6 +236,12 @@
     </Compile>
     <Compile Include="Item Forms\FindItemFlagsExtra.Designer.cs">
       <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item Forms\FindSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item Forms\FindSkill.Designer.cs">
+      <DependentUpon>FindSkill.cs</DependentUpon>
     </Compile>
     <Compile Include="Item Forms\ItemSpellControl.cs">
       <SubType>UserControl</SubType>
@@ -580,6 +587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Item Forms\FindItemFlagsExtra.resx">
       <DependentUpon>FindItemFlagsExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item Forms\FindSkill.resx">
+      <DependentUpon>FindSkill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item Forms\ItemSpellControl.resx">
       <DependentUpon>ItemSpellControl.cs</DependentUpon>

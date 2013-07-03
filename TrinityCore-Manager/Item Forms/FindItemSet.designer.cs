@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindItemSet));
             this.searchLabel = new DevComponents.DotNetBar.LabelX();
             this.searchTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.itemSetListView = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.itemSetIdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.itemSetNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.okButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
+            this.itemSetListView = new BrightIdeasSoftware.FastObjectListView();
+            this.idColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.nameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            ((System.ComponentModel.ISupportInitialize)(this.itemSetListView)).BeginInit();
             this.SuspendLayout();
             // 
             // searchLabel
@@ -65,36 +66,6 @@
             this.searchTextBox.Size = new System.Drawing.Size(361, 20);
             this.searchTextBox.TabIndex = 1;
             // 
-            // itemSetListView
-            // 
-            this.itemSetListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.itemSetListView.Border.Class = "ListViewBorder";
-            this.itemSetListView.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSetListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.itemSetIdColumnHeader,
-            this.itemSetNameColumnHeader});
-            this.itemSetListView.ForeColor = System.Drawing.Color.White;
-            this.itemSetListView.Location = new System.Drawing.Point(0, 50);
-            this.itemSetListView.Name = "itemSetListView";
-            this.itemSetListView.Size = new System.Drawing.Size(361, 437);
-            this.itemSetListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.itemSetListView.TabIndex = 0;
-            this.itemSetListView.UseCompatibleStateImageBehavior = false;
-            this.itemSetListView.View = System.Windows.Forms.View.Details;
-            // 
-            // itemSetIdColumnHeader
-            // 
-            this.itemSetIdColumnHeader.Text = "Item Set ID";
-            this.itemSetIdColumnHeader.Width = 79;
-            // 
-            // itemSetNameColumnHeader
-            // 
-            this.itemSetNameColumnHeader.Text = "Item Name";
-            this.itemSetNameColumnHeader.Width = 254;
-            // 
             // okButton
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -119,6 +90,39 @@
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             // 
+            // itemSetListView
+            // 
+            this.itemSetListView.AllColumns.Add(this.idColumn);
+            this.itemSetListView.AllColumns.Add(this.nameColumn);
+            this.itemSetListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.itemSetListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idColumn,
+            this.nameColumn});
+            this.itemSetListView.ForeColor = System.Drawing.Color.White;
+            this.itemSetListView.FullRowSelect = true;
+            this.itemSetListView.Location = new System.Drawing.Point(0, 50);
+            this.itemSetListView.Name = "itemSetListView";
+            this.itemSetListView.ShowGroups = false;
+            this.itemSetListView.Size = new System.Drawing.Size(361, 437);
+            this.itemSetListView.TabIndex = 5;
+            this.itemSetListView.UseCompatibleStateImageBehavior = false;
+            this.itemSetListView.View = System.Windows.Forms.View.Details;
+            this.itemSetListView.VirtualMode = true;
+            // 
+            // idColumn
+            // 
+            this.idColumn.AspectName = "Id";
+            this.idColumn.CellPadding = null;
+            this.idColumn.Text = "Set ID";
+            this.idColumn.Width = 75;
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.AspectName = "Name";
+            this.nameColumn.CellPadding = null;
+            this.nameColumn.Text = "Set Name";
+            this.nameColumn.Width = 278;
+            // 
             // FindItemSet
             // 
             this.AcceptButton = this.okButton;
@@ -127,9 +131,9 @@
             this.AutoScroll = true;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(362, 518);
+            this.Controls.Add(this.itemSetListView);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.itemSetListView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
             this.DoubleBuffered = true;
@@ -142,6 +146,7 @@
             this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindItemSet";
             this.Text = "Find Item Set";
+            ((System.ComponentModel.ISupportInitialize)(this.itemSetListView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,10 +155,10 @@
 
         private DevComponents.DotNetBar.LabelX searchLabel;
         private DevComponents.DotNetBar.Controls.TextBoxX searchTextBox;
-        private DevComponents.DotNetBar.Controls.ListViewEx itemSetListView;
-        private System.Windows.Forms.ColumnHeader itemSetIdColumnHeader;
-        private System.Windows.Forms.ColumnHeader itemSetNameColumnHeader;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
+        private BrightIdeasSoftware.FastObjectListView itemSetListView;
+        private BrightIdeasSoftware.OLVColumn idColumn;
+        private BrightIdeasSoftware.OLVColumn nameColumn;
     }
 }

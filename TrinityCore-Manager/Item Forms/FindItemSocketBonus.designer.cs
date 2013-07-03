@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindItemSocketBonus));
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.okButton = new DevComponents.DotNetBar.ButtonX();
-            this.itemSocketBonusListView = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.spellItemEnchantmentIdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.spellItemEnchantmentNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.searchLabel = new DevComponents.DotNetBar.LabelX();
+            this.fastObjectListView1 = new BrightIdeasSoftware.FastObjectListView();
+            this.idColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.nameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -61,36 +62,6 @@
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.okButton.TabIndex = 8;
             this.okButton.Text = "Ok";
-            // 
-            // itemSocketBonusListView
-            // 
-            this.itemSocketBonusListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.itemSocketBonusListView.Border.Class = "ListViewBorder";
-            this.itemSocketBonusListView.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemSocketBonusListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.spellItemEnchantmentIdColumnHeader,
-            this.spellItemEnchantmentNameColumnHeader});
-            this.itemSocketBonusListView.ForeColor = System.Drawing.Color.White;
-            this.itemSocketBonusListView.Location = new System.Drawing.Point(0, 49);
-            this.itemSocketBonusListView.Name = "itemSocketBonusListView";
-            this.itemSocketBonusListView.Size = new System.Drawing.Size(361, 437);
-            this.itemSocketBonusListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.itemSocketBonusListView.TabIndex = 5;
-            this.itemSocketBonusListView.UseCompatibleStateImageBehavior = false;
-            this.itemSocketBonusListView.View = System.Windows.Forms.View.Details;
-            // 
-            // spellItemEnchantmentIdColumnHeader
-            // 
-            this.spellItemEnchantmentIdColumnHeader.Text = "Spell ID";
-            this.spellItemEnchantmentIdColumnHeader.Width = 68;
-            // 
-            // spellItemEnchantmentNameColumnHeader
-            // 
-            this.spellItemEnchantmentNameColumnHeader.Text = "Spell Name Name";
-            this.spellItemEnchantmentNameColumnHeader.Width = 283;
             // 
             // searchTextBox
             // 
@@ -119,16 +90,49 @@
             this.searchLabel.TabIndex = 6;
             this.searchLabel.Text = "Search";
             // 
+            // fastObjectListView1
+            // 
+            this.fastObjectListView1.AllColumns.Add(this.idColumn);
+            this.fastObjectListView1.AllColumns.Add(this.nameColumn);
+            this.fastObjectListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.fastObjectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idColumn,
+            this.nameColumn});
+            this.fastObjectListView1.ForeColor = System.Drawing.Color.White;
+            this.fastObjectListView1.FullRowSelect = true;
+            this.fastObjectListView1.Location = new System.Drawing.Point(0, 49);
+            this.fastObjectListView1.Name = "fastObjectListView1";
+            this.fastObjectListView1.ShowGroups = false;
+            this.fastObjectListView1.Size = new System.Drawing.Size(361, 437);
+            this.fastObjectListView1.TabIndex = 10;
+            this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
+            this.fastObjectListView1.View = System.Windows.Forms.View.Details;
+            this.fastObjectListView1.VirtualMode = true;
+            // 
+            // idColumn
+            // 
+            this.idColumn.AspectName = "Id";
+            this.idColumn.CellPadding = null;
+            this.idColumn.Text = "Spell ID";
+            this.idColumn.Width = 75;
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.AspectName = "Name";
+            this.nameColumn.CellPadding = null;
+            this.nameColumn.Text = "Spell Name";
+            this.nameColumn.Width = 277;
+            // 
             // FindItemSocketBonus
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(366, 522);
+            this.ClientSize = new System.Drawing.Size(362, 518);
+            this.Controls.Add(this.fastObjectListView1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.itemSocketBonusListView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
             this.DoubleBuffered = true;
@@ -141,6 +145,7 @@
             this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindItemSocketBonus";
             this.Text = "Find Item Socket Bonus";
+            ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,10 +154,10 @@
 
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
-        private DevComponents.DotNetBar.Controls.ListViewEx itemSocketBonusListView;
-        private System.Windows.Forms.ColumnHeader spellItemEnchantmentIdColumnHeader;
-        private System.Windows.Forms.ColumnHeader spellItemEnchantmentNameColumnHeader;
         private DevComponents.DotNetBar.Controls.TextBoxX searchTextBox;
         private DevComponents.DotNetBar.LabelX searchLabel;
+        private BrightIdeasSoftware.FastObjectListView fastObjectListView1;
+        private BrightIdeasSoftware.OLVColumn idColumn;
+        private BrightIdeasSoftware.OLVColumn nameColumn;
     }
 }
