@@ -168,6 +168,7 @@
     <Compile Include="Database\Classes\SerializedItem.cs" />
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Classes\TCItem.cs" />
+    <Compile Include="Database\Classes\TCCreature.cs" />
     <Compile Include="Database\Enums\Creature Enums\CreatureRank.cs" />
     <Compile Include="Database\Enums\Character Enums\CharacterClass.cs" />
     <Compile Include="Database\Enums\Character Enums\CharacterRace.cs" />

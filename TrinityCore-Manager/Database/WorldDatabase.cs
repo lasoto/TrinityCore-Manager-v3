@@ -9,6 +9,7 @@ using TrinityCore_Manager.Database.Classes;
 using TrinityCoreManager.Database.Enums.Item_Enums;
 using TrinityCore_Manager.Database.Enums;
 using TrinityCore_Manager.Database.Enums.Item_Enums;
+using TrinityCore_Manager.Database.Enums.Creature_Enums;
 
 namespace TrinityCore_Manager.Database
 {
@@ -186,7 +187,109 @@ namespace TrinityCore_Manager.Database
         public async Task<TCItem> GetItem(int id)
         {
 
-            DataTable dt = await ExecuteQuery("SELECT * FROM `item_template` WHERE entry = @entry", new MySqlParameter("@entry", id));
+            DataTable dt = await ExecuteQuery("SELECT * FROM `item_template` WHERE entry = @entry;", new MySqlParameter("@entry", id));
+
+            return BuildItem(row);
+
+        }
+
+        public TCCreature BuildCreature(DataRow row)
+        {
+
+            TCCreature creature = new TCCreature();
+            creature.Entry = Convert.ToInt32(row["entry"]);
+            creature.Difficulty_entry_1 = Convert.ToInt32(row["difficulty_entry_1"]);
+            creature.Difficulty_entry_2 = Convert.ToInt32(row["difficulty_entry_2"]);
+            creature.Difficulty_entry_3 = Convert.ToInt32(row["difficulty_entry_3"]);
+            creature.KillCredit1 = Convert.ToInt32(row["killcredit1"]);
+            creature.KillCredit2 = Convert.ToInt32(row["killcredit2"]);
+            creature.Modelid1 = Convert.ToInt32(row["modelid1"]);
+            creature.Modelid2 = Convert.ToInt32(row["modelid2"]);
+            creature.Modelid3 = Convert.ToInt32(row["modelid3"]);
+            creature.Modelid4 = Convert.ToInt32(row["modelid4"]);
+            creature.Name = (string)(row["name"]);
+            creature.Subname = (string)(row["subname"]);
+            creature.IconName = (string)(row["iconname"]);
+            creature.Gossip_menu_id = Convert.ToInt32(row["gossip_menu_id"]);
+            creature.Minlevel = Convert.ToInt32(row["minlevel"]);
+            creature.Maxlevel = Convert.ToInt32(row["maxlevel"]);
+            creature.Exp = Convert.ToInt32(row["exp"]);
+            creature.Faction_A = Convert.ToInt32(row["faction_a"]);
+            creature.Faction_H = Convert.ToInt32(row["faction_h"]);
+            creature.Npcflag = Convert.ToInt32(row["npcflag"]);
+            creature.Speed_walk = Convert.ToDouble(row["speed_walk"]);
+            creature.Speed_run = Convert.ToDouble(row["speed_run"]);
+            creature.Scale = Convert.ToDouble(row["scale"]);
+            creature.Rank = (CreatureRank)Convert.ToInt32(row["rank"]);
+            creature.Mindmg = Convert.ToInt32(row["mindmg"]);
+            creature.Maxdmg = Convert.ToInt32(row["maxdmg"]);
+            creature.Dmgschool = Convert.ToInt32(row["dmgschool"]);
+            creature.Attackpower = Convert.ToInt32(row["attackpower"]);
+            creature.Dmg_multiplier = Convert.ToDouble(row["dmg_multiplier"]);
+            creature.Baseattacktime = Convert.ToInt32(row["baseattacktime"]);
+            creature.Rangeattacktime = Convert.ToInt32(row["rangeattacktime"]);
+            creature.Unit_class = Convert.ToInt32(row["unit_class"]);
+            creature.Unit_flags = Convert.ToInt32(row["unit_flags"]);
+            creature.Unit_flags2 = Convert.ToInt32(row["unit_flags2"]);
+            creature.Dynamicflags = Convert.ToInt32(row["dynamicflags"]);
+            creature.Family = (CreatureFamily)Convert.ToInt32(row["family"]);
+            creature.Trainer_type = Convert.ToInt32(row["trainer_type"]);
+            creature.Trainer_spell = Convert.ToInt32(row["trainer_spell"]);
+            creature.Trainer_class = Convert.ToInt32(row["trainer_class"]);
+            creature.Trainer_race = Convert.ToInt32(row["trainer_race"]);
+            creature.Minrangedmg = Convert.ToDouble(row["minrangedmg"]);
+            creature.Maxrangedmg = Convert.ToDouble(row["maxrangedmg"]);
+            creature.Rangedattackpower = Convert.ToInt32(row["rangedattackpower"]);
+            creature.Type = (CreatureType)Convert.ToInt32(row["type"]);
+            creature.Type_flags = Convert.ToInt32(row["type_flags"]);
+            creature.Lootid = Convert.ToInt32(row["lootid"]);
+            creature.Pickpocketloot = Convert.ToInt32(row["pickpocketloot"]);
+            creature.Skinloot = Convert.ToInt32(row["skinloot"]);
+            creature.Resistance1 = Convert.ToInt32(row["resistance1"]);
+            creature.Resistance2 = Convert.ToInt32(row["resistance2"]);
+            creature.Resistance3 = Convert.ToInt32(row["resistance3"]);
+            creature.Resistance4 = Convert.ToInt32(row["resistance4"]);
+            creature.Resistance5 = Convert.ToInt32(row["resistance5"]);
+            creature.Resistance6 = Convert.ToInt32(row["resistance6"]);
+            creature.Spell1 = Convert.ToInt32(row["spell1"]);
+            creature.Spell2 = Convert.ToInt32(row["spell2"]);
+            creature.Spell3 = Convert.ToInt32(row["spell3"]);
+            creature.Spell4 = Convert.ToInt32(row["spell4"]);
+            creature.Spell5 = Convert.ToInt32(row["spell5"]);
+            creature.Spell6 = Convert.ToInt32(row["spell6"]);
+            creature.Spell7 = Convert.ToInt32(row["spell7"]);
+            creature.Spell8 = Convert.ToInt32(row["spell8"]);
+            creature.PetSpellDataId = Convert.ToInt32(row["petspelldataid"]);
+            creature.VehicleId = Convert.ToInt32(row["vehicleid"]);
+            creature.Mingold = Convert.ToInt32(row["mingold"]);
+            creature.Maxgold = Convert.ToInt32(row["maxgold"]);
+            creature.AIName = (string)(row["ainame"]);
+            creature.MovementType = Convert.ToInt32(row["movementtype"]);
+            creature.InhabitType = Convert.ToInt32(row["inhabittype"]);
+            creature.HoverHeight = Convert.ToDouble(row["hoverheight"]);
+            creature.Health_mod = Convert.ToDouble(row["health_mod"]);
+            creature.Mana_mod = Convert.ToDouble(row["mana_mod"]);
+            creature.Armor_mod = Convert.ToDouble(row["armor_mod"]);
+            creature.RacialLeader = Convert.ToInt32(row["racialleader"]);
+            creature.QuestItem1 = Convert.ToInt32(row["questitem1"]);
+            creature.QuestItem2 = Convert.ToInt32(row["questitem2"]);
+            creature.QuestItem3 = Convert.ToInt32(row["questitem3"]);
+            creature.QuestItem4 = Convert.ToInt32(row["questitem4"]);
+            creature.QuestItem5 = Convert.ToInt32(row["questitem5"]);
+            creature.QuestItem6 = Convert.ToInt32(row["questitem6"]);
+            creature.MovementId = Convert.ToInt32(row["movementid"]);
+            creature.RegenHealth = Convert.ToInt32(row["regenhealth"]);
+            creature.Mechanic_immune_mask = Convert.ToInt32(row["mechanic_immune_mask"]);
+            creature.Flags_extra = Convert.ToInt32(row["flags_extra"]);
+            creature.ScriptName = (string)(row["scriptname"]);
+            creature.WDBVerified = Convert.ToInt32(row["wdbverified"]);
+
+        }
+
+        public async Task<TCItem> GetCreature(int id)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT * FROM `creature_template` WHERE entry = @entry;", new MySqlParameter("@entry", id));
 
             return BuildItem(row);
 
