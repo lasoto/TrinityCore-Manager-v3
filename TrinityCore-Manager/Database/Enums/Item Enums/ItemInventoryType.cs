@@ -13,7 +13,7 @@ namespace TrinityCoreManager.Database.Enums.Item_Enums
 			Head = 1,
 			Neck = 2,
 			Shoulder = 3,
-			BodyShirt = 4,
+			Shirt = 4,
 			Chest = 5,
 			Waist = 6,
 			Legs = 7,

@@ -179,6 +179,7 @@
     <Compile Include="Database\Enums\Account Enums\GMLevel.cs" />
     <Compile Include="Database\Enums\Character Enums\GuildRanks.cs" />
     <Compile Include="Database\Enums\Item Enums\FoodType.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemAmmoType.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemBonding.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemClass.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemDamageType.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Database\Enums\Item Enums\ItemQuality.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemRequiredReputationRank.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemSheath.cs" />
+    <Compile Include="Database\Enums\Item Enums\ItemSocketColor.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemSpellTrigger.cs" />
     <Compile Include="Database\Enums\Item Enums\ItemStatType.cs" />
     <Compile Include="Database\Enums\Item Enums\Language.cs" />

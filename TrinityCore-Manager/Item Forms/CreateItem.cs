@@ -10,14 +10,58 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Diagnostics;
 using TrinityCore_Manager.Item_Forms;
+using TrinityCore_Manager.CustomForms;
+using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
-    public partial class CreateItem : DevComponents.DotNetBar.Office2007Form
+    public partial class CreateItem : TCMForm
     {
+
+        private int _itemId = -1;
+
         public CreateItem()
         {
             InitializeComponent();
+        }
+
+        public CreateItem(int id)
+        {
+
+            _itemId = id;
+
+            InitializeComponent();
+
+        }
+
+        private void CreateItem_Load(object sender, EventArgs e)
+        {
+
+            Init();
+
+        }
+
+        private async void Init()
+        {
+
+            if (_itemId == -1)
+            {
+
+                itemClassComboBox.SelectedIndex = 0;
+
+            }
+            else
+            {
+
+                loadingLabel.Visible = true;
+                loadingProgressBar.Visible = true;
+
+                createWeaponWizardPage.NextButtonEnabled = eWizardButtonState.False;
+
+                //await TCManager.Instance.WorldDatabase
+
+            }
+
         }
 
         private void itemDetailsLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -301,5 +345,291 @@ namespace TrinityCore_Manager
             * 
             */
         }
+
+        private void itemCreatorWizard_WizardPageChanging(object sender, WizardCancelPageChangeEventArgs e)
+        {
+
+            if (e.OldPage == itemDetailsWizardPage)
+            {
+
+                //if (string.IsNullOrEmpty(itemNameTextBox.Text) || string.IsNullOrEmpty(
+
+            }
+
+        }
+
+        private void itemCreatorWizard_FinishButtonClick(object sender, CancelEventArgs e)
+        {
+
+            string name = itemNameTextBox.Text;
+            string desc = itemDescriptionTextBox.Text;
+            int itemClass = itemClassComboBox.SelectedIndex;
+
+        }
+
+        private void itemClassComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            itemSubClassComboBox.Items.Clear();
+
+            string[] toAdd = null;
+
+            switch (itemClassComboBox.SelectedIndex)
+            {
+
+                case 0: // Consumable
+
+                    toAdd = new string[]  {
+                        "Consumable",
+                        "Potion",
+                        "Elixir",
+                        "Flask",
+                        "Scroll",
+                        "Food & Drink",
+                        "Item Enhancement",
+                        "Bandage",
+                        "Other"
+                    };
+
+                    break;
+
+                case 1: //Container
+
+                    toAdd = new string[] { 
+                        "Bag",
+                        "Soul Bag",
+                        "Herb Bag",
+                        "Enchanting Bag",
+                        "Engineering Bag",
+                        "Gem Bag",
+                        "Mining Bag",
+                        "Leatherworking Bag",
+                        "Inscription Bag"
+                    };
+
+                    break;
+
+                case 2:
+
+                    toAdd = new string[] {
+                        "Axe (One handed)",
+                        "Axe (Two handed)",
+                        "Bow",
+                        "Gun",
+                        "Mace (One handed)",
+                        "Mace (Two handed)",
+                        "Polearm",
+                        "Sword (One handed)",
+                        "Sword (Two handed)",
+                        "Obsolete",
+                        "Staff",
+                        "Exotic",
+                        "Exotic",
+                        "Fist Weapon",
+                        "Miscellaneous",
+                        "Dagger",
+                        "Thrown",
+                        "Spear",
+                        "Crowwbow",
+                        "Wand",
+                        "Fishing Pole",
+                    };
+
+                    break;
+
+                case 3:
+
+                    toAdd = new string[] {
+                        "Red",
+                        "Blue",
+                        "Yellow",
+                        "Purple",
+                        "Green",
+                        "Orange",
+                        "Meta",
+                        "Simple",
+                        "Prismatic"
+                    };
+
+                    break;
+
+                case 4:
+
+                    toAdd = new string[] {
+                        "Miscellaneous",
+                        "Cloth",
+                        "Leather",
+                        "Mail",
+                        "Plate",
+                        "Buckler (OBSOLETE)",
+                        "Shield",
+                        "Libram",
+                        "Idol",
+                        "Totem",
+                        "Sigil"
+                    };
+
+                    break;
+
+                case 5:
+
+                    toAdd = new string[] {
+                        "Reagent"
+                    };
+
+                    break;
+
+                case 6:
+
+                    toAdd = new string[] {
+                        "Wand (OBSOLETE)",
+                        "Bolt (OBSOLETE)",
+                        "Arrow",
+                        "Bullet",
+                        "Thrown (OBSOLETE)",
+
+                    };
+
+                    break;
+
+                case 7:
+
+                    toAdd = new string[] {
+                        "Trade Goods",
+                        "Parts",
+                        "Explosives",
+                        "Devices",
+                        "Jewelcrafting",
+                        "Cloth",
+                        "Leather",
+                        "Metal & Stone",
+                        "Meat",
+                        "Herb",
+                        "Elemental",
+                        "Other",
+                        "Enchanting",
+                        "Materials",
+                        "Armor Enchantment",
+                        "Weapon Enchantment",
+                    };
+
+                    break;
+
+                case 8:
+
+                    toAdd = new string[] {
+                        "Generic (OBSOLETE)"
+                    };
+
+                    break;
+
+                case 9:
+
+                    toAdd = new string[] {
+                        "Book",
+                        "Leatherworking",
+                        "Tailoring",
+                        "Engineering",
+                        "Blacksmithing",
+                        "Cooking",
+                        "Alchemy",
+                        "First Aid",
+                        "Enchanting",
+                        "Fishing",
+                        "Jewelcrafting"
+                    };
+
+                    break;
+
+                case 10:
+
+                    toAdd = new string[] {
+                        "Money (OBSOLETE)"
+                    };
+
+                    break;
+
+                case 11:
+
+                    toAdd = new string[] {
+                        "Quiver (OBSOLETE)",
+                        "Quiver (OBSOLETE)",
+                        "Quiver",
+                        "Ammo Pouch",
+                    };
+
+                    break;
+
+                 case 12:
+
+                    toAdd = new string[] {
+                        "Quest"
+                    };
+
+                    break;
+
+                case 13:
+
+                    toAdd = new string[] {
+                        "Key",
+                        "Lockpick"
+                    };
+
+                    break;
+
+                case 14:
+
+                    toAdd = new string[] {
+                        "Permanent"
+                    };
+
+                    break;
+
+                case 15:
+
+                    toAdd = new string[] {
+                        "Junk",
+                        "Reagent",
+                        "Pet",
+                        "Holiday",
+                        "Other",
+                        "Mount"
+                    };
+
+                    break;
+
+                case 16:
+
+                    toAdd = new string[] {
+                        "Warrior",
+                        "Paladin",
+                        "Hunter",
+                        "Rogue",
+                        "Priest",
+                        "Death Knight",
+                        "Shaman",
+                        "Mage",
+                        "Warlock",
+                        "Druid"
+                    };
+
+                    break;
+
+                default:
+
+                    toAdd = new string[0];
+
+                    break;
+
+            }
+
+            itemSubClassComboBox.Items.AddRange(toAdd);
+
+            if (itemSubClassComboBox.Items.Count > 0)
+                itemSubClassComboBox.SelectedIndex = 0;
+
+        }
+
+
     }
 }
