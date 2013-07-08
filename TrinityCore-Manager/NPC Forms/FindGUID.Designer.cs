@@ -137,6 +137,7 @@
             this.guidListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.numberComboHeader});
             this.guidListView.ForeColor = System.Drawing.Color.White;
+            this.guidListView.FullRowSelect = true;
             this.guidListView.Location = new System.Drawing.Point(12, 89);
             this.guidListView.Name = "guidListView";
             this.guidListView.Size = new System.Drawing.Size(373, 275);
@@ -155,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(397, 427);
+            this.ClientSize = new System.Drawing.Size(393, 423);
             this.Controls.Add(this.guidListView);
             this.Controls.Add(this.guidIntegerInput);
             this.Controls.Add(this.labelX1);
@@ -163,7 +164,6 @@
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.tableComboBox);
             this.Controls.Add(this.tableLabel);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

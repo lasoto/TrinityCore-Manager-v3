@@ -25,6 +25,7 @@ using TrinityCore_Manager.TC;
 using TrinityCore_Manager.TCM;
 using TrinityCore_Manager.NPC_Forms;
 using TrinityCore_Manager.Extensions;
+using TrinityCore_Manager.SmartAI;
 
 namespace TrinityCore_Manager
 {
@@ -1260,6 +1261,23 @@ namespace TrinityCore_Manager
 
             await TCAction.BanCharacter(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
 
+        }
+
+        private void reportBugButton_Click(object sender, EventArgs e)
+        {
+            ReportBug report = new ReportBug();
+            report.ShowDialog();
+        }
+
+        private void mainRibbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createSAIButton_Click(object sender, EventArgs e)
+        {
+            CreateSmartAI sai = new CreateSmartAI();
+            sai.ShowDialog();
         }
     }
 }

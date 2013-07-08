@@ -68,26 +68,26 @@ namespace TrinityCore_Manager.Database
             item.Stackable = Convert.ToInt32(row["stackable"]);
             item.ContainerSlots = Convert.ToInt32(row["containerslots"]);
             item.StatsCount = Convert.ToInt32(row["statscount"]);
-            item.stat_type1 = (ItemStatType)Convert.ToInt32(row["stat_type1"]);
-            item.stat_value1 = Convert.ToInt32(row["stat_value1"]);
-            item.stat_type2 = (ItemStatType)Convert.ToInt32(row["stat_type2"]);
-            item.stat_value2 = Convert.ToInt32(row["stat_value2"]);
-            item.stat_type3 = (ItemStatType)Convert.ToInt32(row["stat_type3"]);
-            item.stat_value3 = Convert.ToInt32(row["stat_value3"]);
-            item.stat_type4 = (ItemStatType)Convert.ToInt32(row["stat_type4"]);
-            item.stat_value4 = Convert.ToInt32(row["stat_value4"]);
-            item.stat_type5 = (ItemStatType)Convert.ToInt32(row["stat_type5"]);
-            item.stat_value5 = Convert.ToInt32(row["stat_value5"]);
-            item.stat_type6 = (ItemStatType)Convert.ToInt32(row["stat_type6"]);
-            item.stat_value6 = Convert.ToInt32(row["stat_value6"]);
-            item.stat_type7 = (ItemStatType)Convert.ToInt32(row["stat_type7"]);
-            item.stat_value7 = Convert.ToInt32(row["stat_value7"]);
-            item.stat_type8 = (ItemStatType)Convert.ToInt32(row["stat_type8"]);
-            item.stat_value8 = Convert.ToInt32(row["stat_value8"]);
-            item.stat_type9 = (ItemStatType)Convert.ToInt32(row["stat_type9"]);
-            item.stat_value9 = Convert.ToInt32(row["stat_value9"]);
-            item.stat_type10 = (ItemStatType)Convert.ToInt32(row["stat_type10"]);
-            item.stat_value10 = Convert.ToInt32(row["stat_value10"]);
+            item.Stat_type1 = (ItemStatType)Convert.ToInt32(row["stat_type1"]);
+            item.Stat_value1 = Convert.ToInt32(row["stat_value1"]);
+            item.Stat_type2 = (ItemStatType)Convert.ToInt32(row["stat_type2"]);
+            item.Stat_value2 = Convert.ToInt32(row["stat_value2"]);
+            item.Stat_type3 = (ItemStatType)Convert.ToInt32(row["stat_type3"]);
+            item.Stat_value3 = Convert.ToInt32(row["stat_value3"]);
+            item.Stat_type4 = (ItemStatType)Convert.ToInt32(row["stat_type4"]);
+            item.Stat_value4 = Convert.ToInt32(row["stat_value4"]);
+            item.Stat_type5 = (ItemStatType)Convert.ToInt32(row["stat_type5"]);
+            item.Stat_value5 = Convert.ToInt32(row["stat_value5"]);
+            item.Stat_type6 = (ItemStatType)Convert.ToInt32(row["stat_type6"]);
+            item.Stat_value6 = Convert.ToInt32(row["stat_value6"]);
+            item.Stat_type7 = (ItemStatType)Convert.ToInt32(row["stat_type7"]);
+            item.Stat_value7 = Convert.ToInt32(row["stat_value7"]);
+            item.Stat_type8 = (ItemStatType)Convert.ToInt32(row["stat_type8"]);
+            item.Stat_value8 = Convert.ToInt32(row["stat_value8"]);
+            item.Stat_type9 = (ItemStatType)Convert.ToInt32(row["stat_type9"]);
+            item.Stat_value9 = Convert.ToInt32(row["stat_value9"]);
+            item.Stat_type10 = (ItemStatType)Convert.ToInt32(row["stat_type10"]);
+            item.Stat_value10 = Convert.ToInt32(row["stat_value10"]);
             item.ScalingStatDistribution = Convert.ToInt32(row["scalingstatdistribution"]);
             item.ScalingStatValue = Convert.ToInt32(row["scalingstatvalue"]);
             item.Dmg_min1 = Convert.ToInt32(row["dmg_min1"]);
@@ -189,6 +189,11 @@ namespace TrinityCore_Manager.Database
 
             DataTable dt = await ExecuteQuery("SELECT * FROM `item_template` WHERE entry = @entry;", new MySqlParameter("@entry", id));
 
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow row = dt.Rows[0];
+
             return BuildItem(row);
 
         }
@@ -284,16 +289,40 @@ namespace TrinityCore_Manager.Database
             creature.ScriptName = (string)(row["scriptname"]);
             creature.WDBVerified = Convert.ToInt32(row["wdbverified"]);
 
+            return creature;
         }
 
-        public async Task<TCItem> GetCreature(int id)
+        //public async Task<TCItem> GetCreature(int id)
+        //{
+
+        //    DataTable dt = await ExecuteQuery("SELECT * FROM `creature_template` WHERE entry = @entry;", new MySqlParameter("@entry", id));
+
+        //    return BuildCreature(row);
+
+        //}
+
+        public TCVendor BuildVendor(DataRow row)
         {
 
-            DataTable dt = await ExecuteQuery("SELECT * FROM `creature_template` WHERE entry = @entry;", new MySqlParameter("@entry", id));
+            TCVendor vendor = new TCVendor();
+            vendor.Entry = Convert.ToInt32(row["entry"]);
+            vendor.Slot = Convert.ToInt32(row["slot"]);
+            vendor.Item = Convert.ToInt32(row["item"]);
+            vendor.Maxcount = Convert.ToInt32(row["maxcount"]);
+            vendor.Incrtime = Convert.ToInt32(row["incrtime"]);
+            vendor.ExtendedCost = Convert.ToInt32(row["extendedcost"]);
 
-            return BuildItem(row);
-
+            return vendor;
         }
+
+        //public async Task<TCItem> GetVendor(int id)
+        //{
+
+        //    DataTable dt = await ExecuteQuery("SELECT * FROM `npc_vendor` WHERE entry = @entry;", new MySqlParameter("@entry", id));
+
+        //    return BuildVendor(row);
+
+        //}
 
         public async Task CleanWorld()
         {

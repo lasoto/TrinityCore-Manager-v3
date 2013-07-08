@@ -68,7 +68,7 @@
             // 
             // 
             this.flyingCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.flyingCheckBox.Location = new System.Drawing.Point(220, 272);
+            this.flyingCheckBox.Location = new System.Drawing.Point(223, 245);
             this.flyingCheckBox.Name = "flyingCheckBox";
             this.flyingCheckBox.Size = new System.Drawing.Size(77, 23);
             this.flyingCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -81,7 +81,7 @@
             // 
             // 
             this.waterCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.waterCheckBox.Location = new System.Drawing.Point(220, 243);
+            this.waterCheckBox.Location = new System.Drawing.Point(223, 216);
             this.waterCheckBox.Name = "waterCheckBox";
             this.waterCheckBox.Size = new System.Drawing.Size(77, 23);
             this.waterCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -94,7 +94,7 @@
             // 
             // 
             this.groundCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groundCheckBox.Location = new System.Drawing.Point(220, 214);
+            this.groundCheckBox.Location = new System.Drawing.Point(223, 187);
             this.groundCheckBox.Name = "groundCheckBox";
             this.groundCheckBox.Size = new System.Drawing.Size(77, 23);
             this.groundCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -106,13 +106,12 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 553);
+            this.ClientSize = new System.Drawing.Size(551, 549);
             this.Controls.Add(this.flyingCheckBox);
             this.Controls.Add(this.waterCheckBox);
             this.Controls.Add(this.groundCheckBox);
             this.Controls.Add(this.checkAllButton);
             this.Controls.Add(this.okButton);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

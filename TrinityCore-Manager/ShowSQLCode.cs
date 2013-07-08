@@ -17,5 +17,12 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
+
+        private void copyToClipboardButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(sqlCodeTextBox.Text))
+                Clipboard.SetText(sqlCodeTextBox.Text);
+        }
+      
     }
 }

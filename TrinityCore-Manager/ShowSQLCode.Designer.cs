@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowSQLCode));
             this.sqlCodeTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.copyToClipboardButton = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // sqlCodeTextBox
@@ -42,18 +43,32 @@
             this.sqlCodeTextBox.Border.Class = "TextBoxBorder";
             this.sqlCodeTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.sqlCodeTextBox.ForeColor = System.Drawing.Color.Chartreuse;
-            this.sqlCodeTextBox.Location = new System.Drawing.Point(12, 12);
+            this.sqlCodeTextBox.Location = new System.Drawing.Point(12, 0);
             this.sqlCodeTextBox.Multiline = true;
             this.sqlCodeTextBox.Name = "sqlCodeTextBox";
             this.sqlCodeTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sqlCodeTextBox.Size = new System.Drawing.Size(730, 673);
+            this.sqlCodeTextBox.Size = new System.Drawing.Size(715, 654);
             this.sqlCodeTextBox.TabIndex = 0;
+            // 
+            // copyToClipboardButton
+            // 
+            this.copyToClipboardButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.copyToClipboardButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.copyToClipboardButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.copyToClipboardButton.Location = new System.Drawing.Point(279, 660);
+            this.copyToClipboardButton.Name = "copyToClipboardButton";
+            this.copyToClipboardButton.Size = new System.Drawing.Size(141, 31);
+            this.copyToClipboardButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.copyToClipboardButton.TabIndex = 1;
+            this.copyToClipboardButton.Text = "Copy to Clipboard";
+            this.copyToClipboardButton.Click += new System.EventHandler(this.copyToClipboardButton_Click);
             // 
             // ShowSQLCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 697);
+            this.ClientSize = new System.Drawing.Size(750, 693);
+            this.Controls.Add(this.copyToClipboardButton);
             this.Controls.Add(this.sqlCodeTextBox);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -72,5 +87,6 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.TextBoxX sqlCodeTextBox;
+        private DevComponents.DotNetBar.ButtonX copyToClipboardButton;
     }
 }

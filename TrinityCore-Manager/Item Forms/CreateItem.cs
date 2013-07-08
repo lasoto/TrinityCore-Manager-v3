@@ -12,11 +12,14 @@ using System.Diagnostics;
 using TrinityCore_Manager.Item_Forms;
 using TrinityCore_Manager.CustomForms;
 using TrinityCore_Manager.TCM;
+using TrinityCore_Manager.Database.Classes;
 
 namespace TrinityCore_Manager
 {
     public partial class CreateItem : TCMForm
     {
+
+        private TCItem _item;
 
         private int _itemId = -1;
 
@@ -34,17 +37,15 @@ namespace TrinityCore_Manager
 
         }
 
-        private void CreateItem_Load(object sender, EventArgs e)
+        private async void CreateItem_Load(object sender, EventArgs e)
         {
-
             Init();
-
         }
 
         private async void Init()
         {
 
-            if (_itemId == -1)
+            if (_item == null)
             {
 
                 itemClassComboBox.SelectedIndex = 0;
@@ -53,14 +54,30 @@ namespace TrinityCore_Manager
             else
             {
 
+                StartLoading();
+
                 loadingLabel.Visible = true;
                 loadingProgressBar.Visible = true;
 
                 createWeaponWizardPage.NextButtonEnabled = eWizardButtonState.False;
 
-                //await TCManager.Instance.WorldDatabase
+                _item = await TCManager.Instance.WorldDatabase.GetItem(_itemId);
+
+                Populate();
+
+                StopLoading();
 
             }
+
+        }
+
+        private void Populate()
+        {
+
+            if (_item == null)
+                return;
+
+
 
         }
 
@@ -560,7 +577,7 @@ namespace TrinityCore_Manager
 
                     break;
 
-                 case 12:
+                case 12:
 
                     toAdd = new string[] {
                         "Quest"

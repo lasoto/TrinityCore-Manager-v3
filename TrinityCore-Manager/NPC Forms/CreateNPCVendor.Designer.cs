@@ -320,27 +320,27 @@
             // slotColumnHeader
             // 
             this.slotColumnHeader.Text = "Slot";
-            this.slotColumnHeader.Width = 85;
+            this.slotColumnHeader.Width = 94;
             // 
             // itemColumnHeader
             // 
             this.itemColumnHeader.Text = "Item";
-            this.itemColumnHeader.Width = 94;
+            this.itemColumnHeader.Width = 112;
             // 
             // maxCountColumnHeader
             // 
             this.maxCountColumnHeader.Text = "Max Count";
-            this.maxCountColumnHeader.Width = 136;
+            this.maxCountColumnHeader.Width = 129;
             // 
             // incrTimeColumnHeader
             // 
             this.incrTimeColumnHeader.Text = "Increment Time";
-            this.incrTimeColumnHeader.Width = 205;
+            this.incrTimeColumnHeader.Width = 233;
             // 
             // extendedCostColumnHeader
             // 
             this.extendedCostColumnHeader.Text = "Extended Cost";
-            this.extendedCostColumnHeader.Width = 187;
+            this.extendedCostColumnHeader.Width = 224;
             // 
             // cancelButton
             // 
@@ -384,7 +384,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(924, 718);
+            this.ClientSize = new System.Drawing.Size(920, 714);
             this.Controls.Add(this.showCodeButton);
             this.Controls.Add(this.importButton);
             this.Controls.Add(this.cancelButton);
@@ -406,7 +406,6 @@
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

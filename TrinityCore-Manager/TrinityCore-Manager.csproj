@@ -136,6 +136,12 @@
     <Compile Include="Compile Forms\SetTrunkLocation.Designer.cs">
       <DependentUpon>SetTrunkLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SmartAI\CreateSmartAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartAI\CreateSmartAI.Designer.cs">
+      <DependentUpon>CreateSmartAI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomForms\InputForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,7 @@
     <Compile Include="Database\Classes\TCCharacter.cs" />
     <Compile Include="Database\Classes\TCItem.cs" />
     <Compile Include="Database\Classes\TCCreature.cs" />
+    <Compile Include="Database\Classes\TCVendor.cs" />
     <Compile Include="Database\Enums\Creature Enums\CreatureRank.cs" />
     <Compile Include="Database\Enums\Character Enums\CharacterClass.cs" />
     <Compile Include="Database\Enums\Character Enums\CharacterRace.cs" />
@@ -473,6 +480,12 @@
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
     <Compile Include="Misc\ServerType.cs" />
+    <Compile Include="ReportBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBug.Designer.cs">
+      <DependentUpon>ReportBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Server Management\OtherCommands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,6 +573,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compile Forms\SetTrunkLocation.resx">
       <DependentUpon>SetTrunkLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartAI\CreateSmartAI.resx">
+      <DependentUpon>CreateSmartAI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
@@ -701,6 +717,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBug.resx">
+      <DependentUpon>ReportBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Server Management\OtherCommands.resx">
       <DependentUpon>OtherCommands.cs</DependentUpon>

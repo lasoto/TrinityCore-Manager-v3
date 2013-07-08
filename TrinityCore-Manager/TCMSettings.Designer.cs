@@ -32,10 +32,10 @@ namespace TrinityCore_Manager
             this.themeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.darkItem = new DevComponents.Editors.ComboItem();
             this.blueItem = new DevComponents.Editors.ComboItem();
-            this.okButton = new DevComponents.DotNetBar.ButtonX();
-            this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.lightItem = new DevComponents.Editors.ComboItem();
             this.blackItem = new DevComponents.Editors.ComboItem();
+            this.okButton = new DevComponents.DotNetBar.ButtonX();
+            this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -78,6 +78,14 @@ namespace TrinityCore_Manager
             // 
             this.blueItem.Text = "Blue";
             // 
+            // lightItem
+            // 
+            this.lightItem.Text = "Light";
+            // 
+            // blackItem
+            // 
+            this.blackItem.Text = "Black";
+            // 
             // okButton
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -104,14 +112,6 @@ namespace TrinityCore_Manager
             this.cancelButton.TextColor = System.Drawing.Color.Tomato;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // lightItem
-            // 
-            this.lightItem.Text = "Light";
-            // 
-            // blackItem
-            // 
-            this.blackItem.Text = "Black";
-            // 
             // TCMSettings
             // 
             this.ClientSize = new System.Drawing.Size(513, 231);
@@ -119,11 +119,12 @@ namespace TrinityCore_Manager
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.themeComboBox);
             this.Controls.Add(this.labelX1);
-            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TCMSettings";
-            this.Text = "Settings";
+            this.Text = "Color Theme";
             this.Load += new System.EventHandler(this.TCMSettings_Load);
             this.ResumeLayout(false);
 

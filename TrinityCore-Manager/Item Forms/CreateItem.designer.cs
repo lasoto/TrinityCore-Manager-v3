@@ -138,6 +138,7 @@
             this.label11 = new DevComponents.DotNetBar.LabelX();
             this.label10 = new DevComponents.DotNetBar.LabelX();
             this.itemWeaponStatsWizardPage = new DevComponents.DotNetBar.WizardPage();
+            this.rangedModDmgDoubleInput = new DevComponents.Editors.DoubleInput();
             this.findItemSetButton = new DevComponents.DotNetBar.ButtonX();
             this.itemSetIntegerInput = new DevComponents.Editors.IntegerInput();
             this.label30 = new DevComponents.DotNetBar.LabelX();
@@ -337,6 +338,7 @@
             this.itemSpellControl1 = new TrinityCore_Manager.ItemSpellControl();
             this.addSpellButton = new DevComponents.DotNetBar.ButtonX();
             this.wizardPage1 = new DevComponents.DotNetBar.WizardPage();
+            this.findHolidayButton = new DevComponents.DotNetBar.ButtonX();
             this.flagsCustomButton = new DevComponents.DotNetBar.ButtonX();
             this.flagsCustomIntegerInput = new DevComponents.Editors.IntegerInput();
             this.scriptNameIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -502,8 +504,6 @@
             this.socketBonusNoneComboItem = new DevComponents.Editors.ComboItem();
             this.itemCreatorSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.saveFileAsSQLDialog = new System.Windows.Forms.SaveFileDialog();
-            this.rangedModDmgDoubleInput = new DevComponents.Editors.DoubleInput();
-            this.findHolidayButton = new DevComponents.DotNetBar.ButtonX();
             this.itemDetailsWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemEntryIdIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemDisplayIdIntegerInput)).BeginInit();
@@ -522,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sellGoldIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyGoldIntegerInput)).BeginInit();
             this.itemWeaponStatsWizardPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rangedModDmgDoubleInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemSetIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armorIntegerInput)).BeginInit();
@@ -583,7 +584,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.durationIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageTextIntegerInput)).BeginInit();
             this.wizardPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rangedModDmgDoubleInput)).BeginInit();
             this.SuspendLayout();
             // 
             // itemDetailsWizardPage
@@ -710,13 +710,13 @@
             this.itemDetailsLink.AutoSize = true;
             this.itemDetailsLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.itemDetailsLink.LinkColor = System.Drawing.Color.Orange;
-            this.itemDetailsLink.Location = new System.Drawing.Point(530, 521);
+            this.itemDetailsLink.Location = new System.Drawing.Point(471, 519);
             this.itemDetailsLink.Name = "itemDetailsLink";
-            this.itemDetailsLink.Size = new System.Drawing.Size(120, 13);
+            this.itemDetailsLink.Size = new System.Drawing.Size(211, 13);
             this.itemDetailsLink.TabIndex = 18;
             this.itemDetailsLink.TabStop = true;
             this.itemDetailsLink.Tag = "";
-            this.itemDetailsLink.Text = "For more info click here.";
+            this.itemDetailsLink.Text = "For more info on Item_Template, click here.\r\n";
             this.itemDetailsLink.VisitedLinkColor = System.Drawing.Color.Chartreuse;
             this.itemDetailsLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.itemDetailsLink_LinkClicked);
             // 
@@ -1812,6 +1812,21 @@
             // 
             this.itemWeaponStatsWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemWeaponStatsWizardPage.TabIndex = 8;
+            // 
+            // rangedModDmgDoubleInput
+            // 
+            // 
+            // 
+            // 
+            this.rangedModDmgDoubleInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.rangedModDmgDoubleInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rangedModDmgDoubleInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.rangedModDmgDoubleInput.Increment = 1D;
+            this.rangedModDmgDoubleInput.Location = new System.Drawing.Point(547, 217);
+            this.rangedModDmgDoubleInput.Name = "rangedModDmgDoubleInput";
+            this.rangedModDmgDoubleInput.ShowUpDown = true;
+            this.rangedModDmgDoubleInput.Size = new System.Drawing.Size(209, 20);
+            this.rangedModDmgDoubleInput.TabIndex = 18;
             // 
             // findItemSetButton
             // 
@@ -4301,6 +4316,17 @@
             this.wizardPage1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.wizardPage1.TabIndex = 10;
             // 
+            // findHolidayButton
+            // 
+            this.findHolidayButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.findHolidayButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.findHolidayButton.Location = new System.Drawing.Point(295, 478);
+            this.findHolidayButton.Name = "findHolidayButton";
+            this.findHolidayButton.Size = new System.Drawing.Size(75, 23);
+            this.findHolidayButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.findHolidayButton.TabIndex = 50;
+            this.findHolidayButton.Text = "Find Holiday";
+            // 
             // flagsCustomButton
             // 
             this.flagsCustomButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -5636,38 +5662,13 @@
             // 
             this.saveFileAsSQLDialog.Filter = "SQL File | *.sql";
             // 
-            // rangedModDmgDoubleInput
-            // 
-            // 
-            // 
-            // 
-            this.rangedModDmgDoubleInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.rangedModDmgDoubleInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rangedModDmgDoubleInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.rangedModDmgDoubleInput.Increment = 1D;
-            this.rangedModDmgDoubleInput.Location = new System.Drawing.Point(547, 217);
-            this.rangedModDmgDoubleInput.Name = "rangedModDmgDoubleInput";
-            this.rangedModDmgDoubleInput.ShowUpDown = true;
-            this.rangedModDmgDoubleInput.Size = new System.Drawing.Size(209, 20);
-            this.rangedModDmgDoubleInput.TabIndex = 18;
-            // 
-            // findHolidayButton
-            // 
-            this.findHolidayButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.findHolidayButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.findHolidayButton.Location = new System.Drawing.Point(295, 478);
-            this.findHolidayButton.Name = "findHolidayButton";
-            this.findHolidayButton.Size = new System.Drawing.Size(75, 23);
-            this.findHolidayButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.findHolidayButton.TabIndex = 50;
-            this.findHolidayButton.Text = "Find Holiday";
-            // 
             // CreateItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 662);
             this.Controls.Add(this.itemCreatorWizard);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -5696,6 +5697,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sellGoldIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyGoldIntegerInput)).EndInit();
             this.itemWeaponStatsWizardPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rangedModDmgDoubleInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemSetIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.armorIntegerInput)).EndInit();
@@ -5757,7 +5759,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.durationIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageTextIntegerInput)).EndInit();
             this.wizardPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rangedModDmgDoubleInput)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -39,26 +39,26 @@ namespace TrinityCore_Manager.Database.Classes
         public int Stackable { get; set; }
         public int ContainerSlots { get; set; }
         public int StatsCount { get; set; }
-        public ItemStatType stat_type1 { get; set; }
-        public int stat_value1 { get; set; }
-        public ItemStatType stat_type2 { get; set; }
-        public int stat_value2 { get; set; }
-        public ItemStatType stat_type3 { get; set; }
-        public int stat_value3 { get; set; }
-        public ItemStatType stat_type4 { get; set; }
-        public int stat_value4 { get; set; }
-        public ItemStatType stat_type5 { get; set; }
-        public int stat_value5 { get; set; }
-        public ItemStatType stat_type6 { get; set; }
-        public int stat_value6 { get; set; }
-        public ItemStatType stat_type7 { get; set; }
-        public int stat_value7 { get; set; }
-        public ItemStatType stat_type8 { get; set; }
-        public int stat_value8 { get; set; }
-        public ItemStatType stat_type9 { get; set; }
-        public int stat_value9 { get; set; }
-        public ItemStatType stat_type10 { get; set; }
-        public int stat_value10 { get; set; }
+        public ItemStatType Stat_type1 { get; set; }
+        public int Stat_value1 { get; set; }
+        public ItemStatType Stat_type2 { get; set; }
+        public int Stat_value2 { get; set; }
+        public ItemStatType Stat_type3 { get; set; }
+        public int Stat_value3 { get; set; }
+        public ItemStatType Stat_type4 { get; set; }
+        public int Stat_value4 { get; set; }
+        public ItemStatType Stat_type5 { get; set; }
+        public int Stat_value5 { get; set; }
+        public ItemStatType Stat_type6 { get; set; }
+        public int Stat_value6 { get; set; }
+        public ItemStatType Stat_type7 { get; set; }
+        public int Stat_value7 { get; set; }
+        public ItemStatType Stat_type8 { get; set; }
+        public int Stat_value8 { get; set; }
+        public ItemStatType Stat_type9 { get; set; }
+        public int Stat_value9 { get; set; }
+        public ItemStatType Stat_type10 { get; set; }
+        public int Stat_value10 { get; set; }
         public int ScalingStatDistribution { get; set; }
         public int ScalingStatValue { get; set; }
         public int Dmg_min1 { get; set; }
