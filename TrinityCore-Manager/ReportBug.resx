@@ -120,6 +120,11 @@
   <metadata name="reportBugSuperTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="enableSSLCheckBox.SuperTooltip" xml:space="preserve">
+    <value>Most of the mail service providers use SSL (Secure Socket Layer). Yahoo does not use SSL so you can uncheck this.
+
+For any custom mail service providers please consult with their SMTP info in order to find out whether or not they are using SSL.</value>
+  </data>
   <data name="smtpTextBox.SuperTooltip" xml:space="preserve">
     <value>For Gmail use: smtp.gmail.com
 

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using DevComponents.DotNetBar;
 using TrinityCore_Manager.CustomForms;
+using System.Net;
+using System.Collections.Specialized;
 
 namespace TrinityCore_Manager
 {
@@ -49,31 +51,25 @@ namespace TrinityCore_Manager
 
             }
 
-            if (string.IsNullOrEmpty(smtpTextBox.Text))
+            if (useUserSMTPCheckbox.Checked)
             {
+                if (string.IsNullOrEmpty(smtpTextBox.Text))
+                {
 
-                MessageBoxEx.Show(this, "No SMTP Server provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxEx.Show(this, "No SMTP Server provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
+                    return;
 
-            }
+                }
 
-            if (string.IsNullOrEmpty(usernameTextBox.Text))
-            {
+                if (string.IsNullOrEmpty(passwordTextBox.Text))
+                {
 
-                MessageBoxEx.Show(this, "No Username provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxEx.Show(this, "No Password provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
+                    return;
 
-            }
-
-            if (string.IsNullOrEmpty(passwordTextBox.Text))
-            {
-
-                MessageBoxEx.Show(this, "No Password provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return;
-
+                }
             }
 
             if (string.IsNullOrEmpty(messageTextBox.Text))
@@ -87,32 +83,76 @@ namespace TrinityCore_Manager
 
             StartLoading();
 
+            string error = "";
+
             await Task.Run(() =>
             {
 
-                MailMessage mail = new MailMessage();
+                    try
+                    {
 
-                mail.To.Add("hobbilis@live.com");
-                mail.To.Add("mitch528@gmail.com");
-                mail.Subject = subjectTextBox.Text;
-                mail.From = new System.Net.Mail.MailAddress(emailTextBox.Text);
-                mail.Body = messageTextBox.Text;
+                        if (useUserSMTPCheckbox.Checked)
+                        {
 
-                SmtpClient client = new SmtpClient(smtpTextBox.Text);
-                client.Port = 587;
-                client.Credentials = new System.Net.NetworkCredential(usernameTextBox.Text, passwordTextBox.Text);
-                client.EnableSsl = true;
-                client.Send(mail);
+                            using (MailMessage mail = new MailMessage())
+                            {
+
+                                mail.To.Add("hobbilis@live.com");
+                                mail.To.Add("mitch528@gmail.com");
+                                mail.Subject = subjectTextBox.Text;
+                                mail.From = new System.Net.Mail.MailAddress(emailTextBox.Text);
+                                mail.Body = messageTextBox.Text;
+
+                                using (SmtpClient client = new SmtpClient(smtpTextBox.Text))
+                                {
+                                    client.Port = enableSSLCheckBox.Checked ? 587 : 25;
+                                    client.Credentials = new NetworkCredential(emailTextBox.Text, passwordTextBox.Text);
+                                    client.EnableSsl = enableSSLCheckBox.Checked;
+                                    client.Send(mail);
+                                }
+
+                            }
+
+                        }
+                        else
+                        {
+
+                            using (WebClient client = new WebClient())
+                            {
+
+                                NameValueCollection nvc = new NameValueCollection();
+                                nvc["email"] = emailTextBox.Text;
+                                nvc["subject"] = subjectTextBox.Text;
+                                nvc["message"] = messageTextBox.Text;
+
+                                client.UploadValues("http://mitch528.com/api/TCMBugReport", "POST", nvc);
+
+                            }
+
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        error = ex.Message;
+                    }
 
             });
 
             StopLoading();
 
-            MessageBoxEx.Show(this, "E-mail has been sent. We'll get back to you as soon as possible!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (string.IsNullOrEmpty(error))
+            {
 
-            this.Close();
+                MessageBoxEx.Show(this, "E-mail has been sent. We'll get back to you as soon as possible!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                this.Close();
 
+            }
+            else
+            {
+                MessageBoxEx.Show(this, error, "Error Sending Email!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -132,6 +172,13 @@ namespace TrinityCore_Manager
         private void buttonX2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void useUserSMTPCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            smtpTextBox.Enabled = useUserSMTPCheckbox.Checked;
+            passwordTextBox.Enabled = useUserSMTPCheckbox.Checked;
+            enableSSLCheckBox.Enabled = useUserSMTPCheckbox.Checked;
         }
     }
 }
