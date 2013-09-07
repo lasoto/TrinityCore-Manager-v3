@@ -1,0 +1,8 @@
+- Work on Item/Weapon/NPC/etc. creators
+- Work on adding more TrinityCore console commands to the TCAction class
+- Work on the "Find" forms
+- Work on CreateSmartAI form
+- Fix/Add form themes/controls
+- Add more database methods 
+- Add a 3D viewer for Items/Weapons/NPCs
+- Add a Splash Screen on application startup

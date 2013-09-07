@@ -73,7 +73,9 @@ namespace TrinityCore_Manager.Misc
                 using (var client = new WebClient())
                 {
 
-                    byte[] data = await client.DownloadDataTaskAsync(IconBase56 + iconName + ".jpg");
+                    string fileName = IconBase56 + iconName + ".jpg";
+
+                    byte[] data = await client.DownloadDataTaskAsync(fileName);
 
                     using (var ms = new MemoryStream(data))
                     {
@@ -81,6 +83,8 @@ namespace TrinityCore_Manager.Misc
                         var image = Image.FromStream(ms);
 
                         _imageCache.Add(ItemId.ToString(), image, DateTime.Now.AddHours(1));
+
+                        File.Delete(fileName);
 
                         return image;
 
