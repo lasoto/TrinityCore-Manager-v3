@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using DevComponents.DotNetBar;
 using MySql.Data.MySqlClient;
 using TrinityCore_Manager.Database;
@@ -221,20 +222,17 @@ namespace TrinityCore_Manager
 
         private void browseButton_Click(object sender, EventArgs e)
         {
-
             using (var dialog = new FolderBrowserDialog())
             {
+                if (folderTextBox.Text.Length > 0 && Directory.Exists(folderTextBox.Text))
+                    dialog.SelectedPath = folderTextBox.Text;
+
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-
                     string path = dialog.SelectedPath;
-
                     folderTextBox.Text = path;
-
                 }
-
             }
-
         }
 
         private void downloadCreateDBButton_Click(object sender, EventArgs e)
