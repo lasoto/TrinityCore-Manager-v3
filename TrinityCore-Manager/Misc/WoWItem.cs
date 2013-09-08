@@ -84,8 +84,6 @@ namespace TrinityCore_Manager.Misc
 
                         _imageCache.Add(ItemId.ToString(), image, DateTime.Now.AddHours(1));
 
-                        File.Delete(fileName);
-
                         return image;
 
                     }
