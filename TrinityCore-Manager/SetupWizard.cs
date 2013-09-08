@@ -228,10 +228,7 @@ namespace TrinityCore_Manager
                     dialog.SelectedPath = folderTextBox.Text;
 
                 if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    string path = dialog.SelectedPath;
-                    folderTextBox.Text = path;
-                }
+                    folderTextBox.Text = dialog.SelectedPath;
             }
         }
 

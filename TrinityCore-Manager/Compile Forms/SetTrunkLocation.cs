@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using DevComponents.DotNetBar;
 using TrinityCore_Manager.CustomForms;
 using TrinityCore_Manager.Properties;
@@ -30,14 +31,14 @@ namespace TrinityCore_Manager.Compile_Forms
 
         private void browseButton_Click(object sender, EventArgs e)
         {
-
-            var fbd = new FolderBrowserDialog();
-
-            if (fbd.ShowDialog() == DialogResult.OK)
+            using (var dialog = new FolderBrowserDialog())
             {
-                trunkLocationTextBox.Text = fbd.SelectedPath;
-            }
+                if (trunkLocationTextBox.Text.Length > 0 && Directory.Exists(trunkLocationTextBox.Text))
+                    dialog.SelectedPath = trunkLocationTextBox.Text;
 
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    trunkLocationTextBox.Text = dialog.SelectedPath;
+            }
         }
 
         private void okButton_Click(object sender, EventArgs e)
