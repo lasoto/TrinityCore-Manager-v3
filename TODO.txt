@@ -7,3 +7,4 @@
 - Add a 3D viewer for Items/Weapons/NPCs
 - Add a Splash Screen on application startup
 - Implement downloading and executing the databases in setup form (page for it already exists, needs actual implementation)
+- Pressing 'Options' (the text) should also open the context menu
