@@ -215,9 +215,12 @@ namespace TrinityCore_Manager
                     }
 
                 }
-
             }
-
+            else if (e.PageChangeSource == eWizardPageChangeSource.BackButton)
+            {
+                if (e.OldPage == createDBsPage)
+                    e.NewPage = mysqlDetailsPage;
+            }
         }
 
         private void browseButton_Click(object sender, EventArgs e)
