@@ -65,7 +65,7 @@ namespace TrinityCore_Manager
 
                 int itemLevel = 0;
 
-                if (wowItem.Data["itemleve"] != null)
+                if (wowItem.Data["itemlevel"] != null)
                 {
                     itemLevel = (int)wowItem.Data["itemlevel"];
                 }
