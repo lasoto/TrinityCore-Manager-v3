@@ -92,7 +92,6 @@ namespace TrinityCore_Manager
         private void SetInitial()
         {
             platformComboBox.SelectedIndex = 0;
-            mainRibbonControl.SelectedRibbonTabItem = serverManagementTab;
         }
 
         private void Init()
@@ -859,36 +858,17 @@ namespace TrinityCore_Manager
             stopServerButton.Enabled = true;
             startServerButton.Enabled = false;
 
-            var authProc = authClient.UnderlyingProcess;
-            var worldProc = worldClient.UnderlyingProcess;
+            authClient.ClientExited += authProc_Exited;
+            worldClient.ClientExited += worldProc_Exited;
 
-            worldProc.Exited += worldProc_Exited;
-            authProc.Exited += authProc_Exited;
-
-            worldProc.BeginErrorReadLine();
-            worldProc.BeginOutputReadLine();
-
-            worldProc.ErrorDataReceived += worldProc_DataReceived;
-            worldProc.OutputDataReceived += worldProc_OutputDataReceived;
+            worldClient.DataReceived += WorldDataReceived;
 
             authServerLabel.Image = Resources.agt_action_success_16;
             worldServerLabel.Image = Resources.agt_action_success_16;
 
         }
 
-        void worldProc_OutputDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            Invoke((MethodInvoker)delegate
-            {
-                if (e.Data != null && !IsDisposed)
-                {
-                    consoleTextBox.AppendText(e.Data + Environment.NewLine);
-                    consoleTextBox.ScrollToBottom();
-                }
-            });
-        }
-
-        void worldProc_DataReceived(object sender, DataReceivedEventArgs e)
+        private void WorldDataReceived(object sender, ClientReceivedDataEventArgs e)
         {
             Invoke((MethodInvoker)delegate
             {
