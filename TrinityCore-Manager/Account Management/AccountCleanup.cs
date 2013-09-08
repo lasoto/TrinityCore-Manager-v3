@@ -31,7 +31,7 @@ namespace TrinityCore_Manager
 
             await database.CleanupAccounts(combined);
 
-            this.Close();
+            Close();
         
         }
     }

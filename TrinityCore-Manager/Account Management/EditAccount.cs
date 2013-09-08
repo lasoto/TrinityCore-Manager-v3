@@ -81,13 +81,13 @@ namespace TrinityCore_Manager
 
             StopLoading();
 
-            this.Close();
+            Close();
 
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

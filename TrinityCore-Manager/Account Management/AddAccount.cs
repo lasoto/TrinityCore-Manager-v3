@@ -47,7 +47,7 @@ namespace TrinityCore_Manager
 
                 if (task.Result)
                 {
-                    Invoke((MethodInvoker)this.Close);
+                    Invoke((MethodInvoker)Close);
                 }
                 else
                 {

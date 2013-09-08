@@ -146,7 +146,7 @@ namespace TrinityCore_Manager
 
                 MessageBoxEx.Show(this, "E-mail has been sent. We'll get back to you as soon as possible!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.Close();
+                Close();
 
             }
             else
@@ -171,7 +171,7 @@ namespace TrinityCore_Manager
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void useUserSMTPCheckbox_CheckedChanged(object sender, EventArgs e)

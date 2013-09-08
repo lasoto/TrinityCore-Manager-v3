@@ -189,7 +189,7 @@ namespace TrinityCore_Manager.Database_Management
             }
 
 
-            this.Close();
+            Close();
 
         }
 

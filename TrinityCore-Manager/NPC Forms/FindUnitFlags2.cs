@@ -108,7 +108,7 @@ namespace TrinityCore_Manager
 
             DialogResult = DialogResult.OK;
 
-            this.Close();
+            Close();
         }
 
         private void checkAllButton_Click(object sender, EventArgs e)

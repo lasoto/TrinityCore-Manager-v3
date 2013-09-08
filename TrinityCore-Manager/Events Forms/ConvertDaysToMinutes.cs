@@ -21,12 +21,12 @@ namespace TrinityCore_Manager
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void daysIntegerInput_ValueChanged(object sender, EventArgs e)

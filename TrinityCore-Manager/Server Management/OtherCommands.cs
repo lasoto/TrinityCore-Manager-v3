@@ -40,7 +40,7 @@ namespace TrinityCore_Manager
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

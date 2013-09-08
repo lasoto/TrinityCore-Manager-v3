@@ -92,6 +92,7 @@ namespace TrinityCore_Manager
         private void SetInitial()
         {
             platformComboBox.SelectedIndex = 0;
+            mainRibbonControl.SelectedRibbonTabItem = serverManagementTab;
         }
 
         private void Init()

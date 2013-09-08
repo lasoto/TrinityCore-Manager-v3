@@ -46,7 +46,7 @@ namespace TrinityCore_Manager
 
                 StopLoading();
 
-                this.Close();
+                Close();
 
                 return;
 
@@ -63,7 +63,7 @@ namespace TrinityCore_Manager
 
                 StopLoading();
 
-                this.Close();
+                Close();
 
                 return;
 

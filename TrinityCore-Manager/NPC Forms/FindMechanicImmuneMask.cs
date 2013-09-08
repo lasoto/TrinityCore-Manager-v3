@@ -226,7 +226,7 @@ namespace TrinityCore_Manager
 
             DialogResult = DialogResult.OK;
 
-            this.Close();
+            Close();
 
         }
 

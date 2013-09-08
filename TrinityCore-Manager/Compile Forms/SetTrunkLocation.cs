@@ -57,13 +57,13 @@ namespace TrinityCore_Manager.Compile_Forms
 
             DialogResult = DialogResult.OK;
 
-            this.Close();
+            Close();
 
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
     }

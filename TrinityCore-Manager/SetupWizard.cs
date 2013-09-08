@@ -280,18 +280,14 @@ namespace TrinityCore_Manager
 
             settings.Save();
 
-            this.Close();
+            Close();
 
         }
 
         private void wizard1_CancelButtonClick(object sender, CancelEventArgs e)
         {
-
             if (MessageBoxEx.Show(this, "Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-
+                Close();
         }
 
     }

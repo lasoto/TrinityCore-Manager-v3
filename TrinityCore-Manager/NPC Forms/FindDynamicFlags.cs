@@ -95,7 +95,7 @@ namespace TrinityCore_Manager
                 _flags += 128;
 
             DialogResult = DialogResult.OK;
-            this.Close();
+            Close();
         }
 
         private void checkAllButton_Click(object sender, EventArgs e)
