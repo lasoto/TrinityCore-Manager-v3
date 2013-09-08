@@ -173,24 +173,31 @@ all blizzard ranged weapons have RangedModRange100</value>
   <data name="ReqSpellDesc" xml:space="preserve">
     <value>The required spell that the player needs to have to use this item</value>
   </data>
-  <data name="PageMatDesc" xml:space="preserve">
-    <value>The background texture that appears in the page text window. PageTextMaterial.dbc</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Hobbilis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hobbilis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ContainerSlotsDesc" xml:space="preserve">
     <value>If the item is a bag, this field controls the number of slots the bag has.</value>
   </data>
+  <data name="ReqRepFactionDesc" xml:space="preserve">
+    <value>The faction template ID (from Faction.dbc) of the faction that the player has to have a certain ranking with. If this value is 0, the faction of the seller of the item is used.</value>
+  </data>
+  <data name="Mitch528" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mitch528.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ScalingStatDistDesc" xml:space="preserve">
     <value>Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear)
 use like static stats</value>
-  </data>
-  <data name="AllowConnDesc" xml:space="preserve">
-    <value>Sets whether the world accepts new client connections. Even if the server is online.</value>
   </data>
   <data name="MapDesc" xml:space="preserve">
     <value>The map ID that this item can be used in.</value>
   </data>
   <data name="ItemSetDesc" xml:space="preserve">
     <value>The ID of the item set that this item belongs to. To save you some time, you CAN NOT make up new item sets. Item sets are defined in ItemSet.dbc</value>
+  </data>
+  <data name="agt_action_success_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agt_action_success_16.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaxMoneyLootDesc" xml:space="preserve">
     <value>If the item is a container that can contain money, then this field defines the maximum coinage held in this container, in copper.</value>
@@ -201,8 +208,11 @@ use like static stats</value>
   <data name="AmmoTypeDesc" xml:space="preserve">
     <value>The type of ammunition the item uses</value>
   </data>
-  <data name="ReqRepFactionDesc" xml:space="preserve">
-    <value>The faction template ID (from Faction.dbc) of the faction that the player has to have a certain ranking with. If this value is 0, the faction of the seller of the item is used.</value>
+  <data name="PageMatDesc" xml:space="preserve">
+    <value>The background texture that appears in the page text window. PageTextMaterial.dbc</value>
+  </data>
+  <data name="StartQuestDesc" xml:space="preserve">
+    <value>The ID of the quest that this item will start if right-clicked. See quest_template.id</value>
   </data>
   <data name="DelayDesc" xml:space="preserve">
     <value>The time in milliseconds between successive hits.</value>
@@ -216,7 +226,6 @@ use like static stats</value>
   <data name="SellGoldDesc" xml:space="preserve">
     <value>The price that the vendor will pay you for the item when you sell it and if it is possible to be sold, in copper. Put in 0 if the item cannot be sold to a vendor.</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="agt_action_fail_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agt_action_fail_16.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,8 +276,8 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
   <data name="FlagsDesc" xml:space="preserve">
     <value>Bitmask field that contains flags that the item has on it. As all other such fields, just add the flags together to combine them. Possible flags are listed below</value>
   </data>
-  <data name="StartQuestDesc" xml:space="preserve">
-    <value>The ID of the quest that this item will start if right-clicked. See quest_template.id</value>
+  <data name="AllowConnDesc" xml:space="preserve">
+    <value>Sets whether the world accepts new client connections. Even if the server is online.</value>
   </data>
   <data name="TotemCatDesc" xml:space="preserve">
     <value>Corresponds to the ID in TotemCategory.dbc.</value>
@@ -276,7 +285,7 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
   <data name="AreaDesc" xml:space="preserve">
     <value>The zone ID that this item can be used in.</value>
   </data>
-  <data name="agt_action_success_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agt_action_success_16.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Discover-" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Discover-.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

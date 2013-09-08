@@ -549,12 +549,14 @@
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Account Management\AccountCleanup.resx">
       <DependentUpon>AccountCleanup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account Management\AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Account Management\AddAccountBan.resx">
       <DependentUpon>AddAccountBan.cs</DependentUpon>
@@ -597,6 +599,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Item Forms\CreateItem.resx">
       <DependentUpon>CreateItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Item Forms\FindItemFlags.resx">
       <DependentUpon>FindItemFlags.cs</DependentUpon>
@@ -615,6 +618,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NPC Forms\CreateNPC.resx">
       <DependentUpon>CreateNPC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NPC Forms\CreateNPCVendor.resx">
       <DependentUpon>CreateNPCVendor.cs</DependentUpon>
@@ -781,7 +785,15 @@
   <ItemGroup>
     <None Include="Resources\agt_action_success_16.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Mitch528.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hobbilis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discover-.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

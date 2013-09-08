@@ -153,6 +153,16 @@ namespace TrinityCore_Manager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Discover_ {
+            get {
+                object obj = ResourceManager.GetObject("Discover-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The disenchant loot template ID. See disenchant_loot_template.entry.
         /// </summary>
         internal static string DisenchantIdDesc {
@@ -186,6 +196,16 @@ namespace TrinityCore_Manager.Properties {
         internal static string FoodTypeDesc {
             get {
                 return ResourceManager.GetString("FoodTypeDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hobbilis {
+            get {
+                object obj = ResourceManager.GetObject("Hobbilis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -258,6 +278,16 @@ namespace TrinityCore_Manager.Properties {
         internal static string MinMoneyLootDesc {
             get {
                 return ResourceManager.GetString("MinMoneyLootDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mitch528 {
+            get {
+                object obj = ResourceManager.GetObject("Mitch528", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
