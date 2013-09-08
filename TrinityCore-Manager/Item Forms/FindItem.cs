@@ -62,7 +62,14 @@ namespace TrinityCore_Manager
                 string bonding = (string)wowItem.Data["bonding"];
                 string invtype = (string)wowItem.Data["inventorytype"];
                 string reqLevel = (string)wowItem.Data["requiredLevel"];
-                int itemLevel = (int)wowItem.Data["itemlevel"];
+
+                int itemLevel = 0;
+
+                if (wowItem.Data["itemleve"] != null)
+                {
+                    itemLevel = (int)wowItem.Data["itemlevel"];
+                }
+                
                 string durability = (string)wowItem.Data["maxdurability"];
                 string text = String.Format("Name: {0}\r\nDescription: {1}\r\nBonding: {2}\r\nInventory Type: {3}\r\nRequired Level: {4}\r\nItem Level: {5}\r\nMax Durability: {6}", name, desc == String.Empty ? "None" : desc, bonding, invtype, reqLevel, itemLevel, durability);
 
