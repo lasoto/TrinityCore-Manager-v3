@@ -154,7 +154,7 @@ namespace TrinityCore_Manager
                         connStr.Password = password;
                         connStr.Database = "mysql";
 
-                        mySqlConnectionProgressBar.Visible = true;
+                        mySqlConnectionProgressBar2.Visible = true;
 
                         mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.False;
                         e.Cancel = true;
@@ -182,7 +182,7 @@ namespace TrinityCore_Manager
                             }
                         });
 
-                        mySqlConnectionProgressBar.Visible = false;
+                        mySqlConnectionProgressBar2.Visible = false;
 
                         if (success)
                         {
@@ -236,8 +236,7 @@ namespace TrinityCore_Manager
         {
 
             createDBsPage.NextButtonEnabled = eWizardButtonState.False;
-            downloadProgressBar.Visible = true;
-
+            downloadProgressBar2.Visible = true;
         }
 
         private void wizard1_FinishButtonClick(object sender, CancelEventArgs e)
@@ -288,6 +287,11 @@ namespace TrinityCore_Manager
         {
             if (MessageBoxEx.Show(this, "Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Close();
+        }
+
+        private void mysqlDetailsPage_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

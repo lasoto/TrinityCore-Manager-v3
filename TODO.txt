@@ -6,3 +6,4 @@
 - Add more database methods 
 - Add a 3D viewer for Items/Weapons/NPCs
 - Add a Splash Screen on application startup
+- Using the 'Next' and 'Back' buttons in setup wizard often results in incorrect order

@@ -32,7 +32,6 @@ namespace TrinityCore_Manager
         }
 
         private int _id;
-        private List<SerializedItem> _items;
 
         private static readonly string Directory = Path.Combine(Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName), "xml");
 
