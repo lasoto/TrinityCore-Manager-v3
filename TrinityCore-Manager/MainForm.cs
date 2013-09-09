@@ -1043,7 +1043,7 @@ namespace TrinityCore_Manager
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            using (TCMSettings settings = new TCMSettings())
+            using (SettingsForm settings = new SettingsForm())
             {
                 settings.FormClosing += settings_FormClosing;
                 settings.ShowDialog();
@@ -1260,6 +1260,11 @@ namespace TrinityCore_Manager
         {
             CreateSmartAI sai = new CreateSmartAI();
             sai.ShowDialog();
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

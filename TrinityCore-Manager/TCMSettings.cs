@@ -11,9 +11,9 @@ using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
 {
-    public partial class TCMSettings : DevComponents.DotNetBar.OfficeForm
+    public partial class SettingsForm : DevComponents.DotNetBar.OfficeForm
     {
-        public TCMSettings()
+        public SettingsForm()
         {
             InitializeComponent();
         }
@@ -25,12 +25,9 @@ namespace TrinityCore_Manager
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            Settings.Default.TCMTheme = themeComboBox.SelectedIndex;
 
-            Settings set = Settings.Default;
-
-            set.TCMTheme = themeComboBox.SelectedIndex;
-
-            set.Save();
+            Settings.Default.Save();
 
             Close();
 

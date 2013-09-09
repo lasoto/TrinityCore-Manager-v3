@@ -1,6 +1,6 @@
 namespace TrinityCore_Manager
 {
-    partial class TCMSettings
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@ namespace TrinityCore_Manager
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(141, 33);
+            this.labelX1.Location = new System.Drawing.Point(6, 9);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(60, 23);
             this.labelX1.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace TrinityCore_Manager
             this.blueItem,
             this.lightItem,
             this.blackItem});
-            this.themeComboBox.Location = new System.Drawing.Point(207, 36);
+            this.themeComboBox.Location = new System.Drawing.Point(72, 12);
             this.themeComboBox.Name = "themeComboBox";
             this.themeComboBox.Size = new System.Drawing.Size(146, 20);
             this.themeComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -112,19 +112,20 @@ namespace TrinityCore_Manager
             this.cancelButton.TextColor = System.Drawing.Color.Tomato;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // TCMSettings
+            // SettingsForm
             // 
             this.ClientSize = new System.Drawing.Size(513, 231);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.themeComboBox);
             this.Controls.Add(this.labelX1);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TCMSettings";
-            this.Text = "Color Theme";
+            this.Name = "SettingsForm";
+            this.Text = "Settings";
             this.Load += new System.EventHandler(this.TCMSettings_Load);
             this.ResumeLayout(false);
 

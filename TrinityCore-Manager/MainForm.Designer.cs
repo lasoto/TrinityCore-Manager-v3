@@ -1846,6 +1846,7 @@
             this.connectRAButton,
             this.aboutButton});
             this.buttonItem1.Text = "Options";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
             // setupWizardButton
             // 
@@ -1858,7 +1859,7 @@
             // 
             this.settingsButton.Icon = ((System.Drawing.Icon)(resources.GetObject("settingsButton.Icon")));
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Text = "Color Theme";
+            this.settingsButton.Text = "Settings";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // reportBugButton
