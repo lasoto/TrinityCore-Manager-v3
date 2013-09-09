@@ -223,12 +223,20 @@ namespace TrinityCore_Manager.Database
 
         public async Task SetAccountLock(int accountId, bool locked)
         {
-
             if (await GetAccount(accountId) == null)
                 return;
 
             await ExecuteNonQuery("UPDATE `account` SET locked = @locked WHERE `id` = @id", new MySqlParameter("@locked", locked), new MySqlParameter("@id", accountId));
+        }
 
+        public async Task SetAccountLock(string username, bool locked)
+        {
+            Account account = await GetAccount(username);
+
+            if (account == null)
+                return;
+
+            await SetAccountLock(account.Id, locked);
         }
 
         public async Task ChangeAccountExpansion(string username, Expansion exp)

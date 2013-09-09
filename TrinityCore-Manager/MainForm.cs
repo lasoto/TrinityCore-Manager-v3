@@ -1165,7 +1165,6 @@ namespace TrinityCore_Manager
             }
 
             await TCAction.RevivePlayer(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
-
         }
 
         private async void forceRenameButton_Click(object sender, EventArgs e)

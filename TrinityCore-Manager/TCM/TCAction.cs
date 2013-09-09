@@ -30,28 +30,23 @@ namespace TrinityCore_Manager.TCM
 
         public static async Task BanAccount(string username, int bantime, string bannedBy, string reason)
         {
-
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.BanAccount.BuildCommand(username, bantime.ToString(), reason));
             else
                 await _tcm.AuthDatabase.BanAccount(username, Convert.ToInt32(DateTime.Now.ToUnixTimestamp()), bantime, bannedBy, reason);
-
         }
 
         public static async Task SetAccountLock(string accountName, AccountLockType lockType, bool locked)
         {
-
-            string lType;
+            string lType = "ip";
 
             if (lockType == AccountLockType.Country)
                 lType = "country";
-            else
-                lType = "ip";
 
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.AccountLock.BuildCommand(lType, locked ? "on" : "off"));
-            //TODO: else
-
+            else
+                await _tcm.AuthDatabase.SetAccountLock(accountName, locked);
         }
 
         public static async Task SetGMLevel(string username, GMLevel gmlevel, int realmid)
