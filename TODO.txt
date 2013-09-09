@@ -11,3 +11,4 @@
 - New icon for the 'Settings' option menu
 - Re-work all places where we use a combobox to store a lot of data (showing online characters in a combobox is not going to work out for big servers)
 - Pressing Escape in sub-forms should close them
+- Fix the WoWItem class exception when using the search item form

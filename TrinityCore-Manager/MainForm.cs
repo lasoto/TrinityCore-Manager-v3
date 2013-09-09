@@ -1042,7 +1042,7 @@ namespace TrinityCore_Manager
             InitStyle();
         }
 
-        private async void refreshListPlayerManagementButton_Click(object sender, EventArgs e)
+        private async void searchForCharacterButton_Click(object sender, EventArgs e)
         {
             if (CheckServerOnline())
                 return;
@@ -1205,11 +1205,6 @@ namespace TrinityCore_Manager
         {
             ReportBug report = new ReportBug();
             report.ShowDialog();
-        }
-
-        private void mainRibbonControl_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void createSAIButton_Click(object sender, EventArgs e)
