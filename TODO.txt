@@ -8,3 +8,6 @@
 - Add a Splash Screen on application startup
 - Implement downloading and executing the databases in setup form (page for it already exists, needs actual implementation)
 - Pressing 'Options' (the text) should also open the context menu
+- New icon for the 'Settings' option menu
+- Re-work all places where we use a combobox to store a lot of data (showing online characters in a combobox is not going to work out for big servers)
+- Pressing Escape in sub-forms should close them
