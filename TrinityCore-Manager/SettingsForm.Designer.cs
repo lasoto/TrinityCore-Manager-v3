@@ -126,7 +126,9 @@ namespace TrinityCore_Manager
             this.MinimizeBox = false;
             this.Name = "SettingsForm";
             this.Text = "Settings";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingsForm_FormClosed);
             this.Load += new System.EventHandler(this.TCMSettings_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettingsForm_KeyDown);
             this.ResumeLayout(false);
 
         }

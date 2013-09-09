@@ -23,18 +23,49 @@ namespace TrinityCore_Manager
             themeComboBox.SelectedIndex = Settings.Default.ColorTheme;
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void SaveSettings()
         {
             Settings.Default.ColorTheme = themeComboBox.SelectedIndex;
             Settings.Default.Save();
+        }
 
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
             Close();
-
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
+            PromptSaveSettingsOnClose();
             Close();
+        }
+
+        void PromptSaveSettingsOnClose()
+        {
+            //! If all settings remain the same there is no need to ask if the user is sure he wants to exit without saving.
+            if (Settings.Default.ColorTheme == themeComboBox.SelectedIndex)
+                return;
+
+            if (MessageBox.Show("Do you wish to save the edited settings?", "Save settings?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                SaveSettings();
+        }
+
+        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                PromptSaveSettingsOnClose();
+        }
+
+        private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    PromptSaveSettingsOnClose();
+                    Close();
+                    break;
+            }
         }
 
     }
