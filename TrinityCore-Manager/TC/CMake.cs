@@ -43,7 +43,7 @@ namespace TrinityCore_Manager.TC
                         args = String.Format("-G \"Visual Studio 10 \" \"{0}\"", sourceDir);
                 }
 
-                if (!string.IsNullOrEmpty(args))
+                if (!String.IsNullOrEmpty(args))
                 {
 
                     var proc = ProcessHelper.StartProcess(cmake, destDir, args);

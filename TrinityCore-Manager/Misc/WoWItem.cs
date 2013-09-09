@@ -67,7 +67,7 @@ namespace TrinityCore_Manager.Misc
 
                 string iconName = (string)Data["icon"];
 
-                if (string.IsNullOrEmpty(iconName))
+                if (String.IsNullOrEmpty(iconName))
                     throw new Exception("Icon not available!");
 
                 using (var client = new WebClient())

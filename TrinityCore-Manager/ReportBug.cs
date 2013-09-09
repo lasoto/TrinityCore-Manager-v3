@@ -24,7 +24,7 @@ namespace TrinityCore_Manager
 
         private async void sendButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(emailTextBox.Text))
+            if (String.IsNullOrEmpty(emailTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "No e-mail provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -42,7 +42,7 @@ namespace TrinityCore_Manager
 
             }
 
-            if (string.IsNullOrEmpty(subjectTextBox.Text))
+            if (String.IsNullOrEmpty(subjectTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "No subject provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -53,7 +53,7 @@ namespace TrinityCore_Manager
 
             if (useUserSMTPCheckbox.Checked)
             {
-                if (string.IsNullOrEmpty(smtpTextBox.Text))
+                if (String.IsNullOrEmpty(smtpTextBox.Text))
                 {
 
                     MessageBoxEx.Show(this, "No SMTP Server provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,7 +62,7 @@ namespace TrinityCore_Manager
 
                 }
 
-                if (string.IsNullOrEmpty(passwordTextBox.Text))
+                if (String.IsNullOrEmpty(passwordTextBox.Text))
                 {
 
                     MessageBoxEx.Show(this, "No Password provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -72,7 +72,7 @@ namespace TrinityCore_Manager
                 }
             }
 
-            if (string.IsNullOrEmpty(messageTextBox.Text))
+            if (String.IsNullOrEmpty(messageTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "No Message provided!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -141,7 +141,7 @@ namespace TrinityCore_Manager
 
             StopLoading();
 
-            if (string.IsNullOrEmpty(error))
+            if (String.IsNullOrEmpty(error))
             {
 
                 MessageBoxEx.Show(this, "E-mail has been sent. We'll get back to you as soon as possible!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

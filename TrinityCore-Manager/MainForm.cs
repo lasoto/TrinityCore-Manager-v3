@@ -278,8 +278,8 @@ namespace TrinityCore_Manager
 
             var set = Settings.Default;
 
-            if (string.IsNullOrEmpty(set.DBHost) || string.IsNullOrEmpty(set.DBUsername) || string.IsNullOrEmpty(set.DBPassword) || string.IsNullOrEmpty(set.DBAuthName) ||
-                string.IsNullOrEmpty(set.DBCharName) || string.IsNullOrEmpty(set.DBWorldName))
+            if (String.IsNullOrEmpty(set.DBHost) || String.IsNullOrEmpty(set.DBUsername) || String.IsNullOrEmpty(set.DBPassword) || String.IsNullOrEmpty(set.DBAuthName) ||
+                String.IsNullOrEmpty(set.DBCharName) || String.IsNullOrEmpty(set.DBWorldName))
             {
 
                 if (!exit)
@@ -299,7 +299,7 @@ namespace TrinityCore_Manager
             }
             else if ((ServerType)set.ServerType == ServerType.Local)
             {
-                if (string.IsNullOrEmpty(set.ServerFolder))
+                if (String.IsNullOrEmpty(set.ServerFolder))
                 {
                     if (!exit)
                     {
@@ -318,7 +318,7 @@ namespace TrinityCore_Manager
             }
             else if ((ServerType)set.ServerType == ServerType.RemoteAccess)
             {
-                if (string.IsNullOrEmpty(set.RAUsername) || string.IsNullOrEmpty(set.RAPassword))
+                if (String.IsNullOrEmpty(set.RAUsername) || String.IsNullOrEmpty(set.RAPassword))
                 {
                     if (!exit)
                     {
@@ -553,7 +553,7 @@ namespace TrinityCore_Manager
 
             }
 
-            if (string.IsNullOrEmpty(Settings.Default.TrunkLocation))
+            if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
             {
 
                 MessageBoxEx.Show(this, "You must first set the trunk location for TrinityCore!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -692,7 +692,7 @@ namespace TrinityCore_Manager
         private async void downloadUpdateButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(Settings.Default.TrunkLocation))
+            if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
             {
 
                 MessageBoxEx.Show(this, "Trunk location is requried!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -946,7 +946,7 @@ namespace TrinityCore_Manager
         private async void executeCommandButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(executeCommandTextBox.Text))
+            if (String.IsNullOrEmpty(executeCommandTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "You must enter a command to execute!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1159,7 +1159,7 @@ namespace TrinityCore_Manager
             if (serverAnnouncementCheckBox.Checked)
             {
 
-                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                if (!String.IsNullOrEmpty(communicationsTextBox.Text))
                     AddMessage(String.Format("Server Announcement: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
 
                 await TCAction.AnnounceToServer(communicationsTextBox.Text);
@@ -1168,7 +1168,7 @@ namespace TrinityCore_Manager
             else if (serverNotificationCheckBox.Checked)
             {
 
-                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                if (!String.IsNullOrEmpty(communicationsTextBox.Text))
                     AddMessage(String.Format("Notification: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
 
                 await TCAction.NotifiyServer(communicationsTextBox.Text);
@@ -1177,7 +1177,7 @@ namespace TrinityCore_Manager
             else if (gmAnnouncementCheckBox.Checked)
             {
 
-                if (!string.IsNullOrEmpty(communicationsTextBox.Text))
+                if (!String.IsNullOrEmpty(communicationsTextBox.Text))
                     AddMessage(String.Format("GM Notification: {0}", communicationsTextBox.Text + Environment.NewLine), Color.DodgerBlue);
 
                 await TCAction.NotifyGMs(communicationsTextBox.Text);

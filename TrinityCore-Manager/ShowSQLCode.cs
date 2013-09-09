@@ -20,7 +20,7 @@ namespace TrinityCore_Manager
 
         private void copyToClipboardButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(sqlCodeTextBox.Text))
+            if (!String.IsNullOrEmpty(sqlCodeTextBox.Text))
                 Clipboard.SetText(sqlCodeTextBox.Text);
         }
       

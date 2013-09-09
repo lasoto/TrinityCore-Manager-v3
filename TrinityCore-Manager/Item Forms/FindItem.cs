@@ -169,7 +169,7 @@ namespace TrinityCore_Manager
         private async void nextButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(itemFindDisplayIdTextBox.Text))
+            if (String.IsNullOrEmpty(itemFindDisplayIdTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "You must first enter in a search query!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

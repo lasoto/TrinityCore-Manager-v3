@@ -29,7 +29,7 @@ namespace TrinityCore_Manager
         private void createButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(usernameTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text) || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
+            if (String.IsNullOrEmpty(usernameTextBox.Text) || String.IsNullOrEmpty(passwordTextBox.Text) || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
             {
 
                 MessageBoxEx.Show(this, "All fields are requried to be filled in!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

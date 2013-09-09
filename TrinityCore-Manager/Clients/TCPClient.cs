@@ -147,7 +147,7 @@ namespace TrinityCore_Manager.Clients
                 var stream = _client.GetStream();
 
 
-                if (string.IsNullOrEmpty(str) || read == 0)
+                if (String.IsNullOrEmpty(str) || read == 0)
                 {
                     stream.BeginRead(_buffer, 0, _buffer.Length, Receive, stream);
                 }
@@ -157,7 +157,7 @@ namespace TrinityCore_Manager.Clients
                     for (int i = 0; i < ex.Length; i++)
                     {
 
-                        if (string.IsNullOrEmpty(ex[i]) || ex[i] == "\n")
+                        if (String.IsNullOrEmpty(ex[i]) || ex[i] == "\n")
                             continue;
 
                         if (TCMessageReceived != null)

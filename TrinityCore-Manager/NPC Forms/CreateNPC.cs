@@ -21,7 +21,7 @@ namespace TrinityCore_Manager
         private void unitFlagsButton_Click(object sender, EventArgs e)
         {
             FindUnitFlags fuf = new FindUnitFlags();
-            if (!string.IsNullOrEmpty(unitFlagsTextBox.Text))
+            if (!String.IsNullOrEmpty(unitFlagsTextBox.Text))
                 fuf.Flags = uint.Parse(unitFlagsTextBox.Text);
             if (fuf.ShowDialog() == DialogResult.OK)
             {
@@ -38,7 +38,7 @@ namespace TrinityCore_Manager
         private void unitFlags2Button_Click(object sender, EventArgs e)
         {
             FindUnitFlags2 fuf2 = new FindUnitFlags2();
-            if (!string.IsNullOrEmpty(unitFlags2TextBox.Text))
+            if (!String.IsNullOrEmpty(unitFlags2TextBox.Text))
                 fuf2.Flags = uint.Parse(unitFlags2TextBox.Text);
             if (fuf2.ShowDialog() == DialogResult.OK)
             {
@@ -67,7 +67,7 @@ namespace TrinityCore_Manager
         private void npcFlagButton_Click(object sender, EventArgs e)
         {
             FindNPCFlag fnf = new FindNPCFlag();
-            if (!string.IsNullOrEmpty(npcFlagTextBox.Text))
+            if (!String.IsNullOrEmpty(npcFlagTextBox.Text))
                 fnf.Flags = uint.Parse(npcFlagTextBox.Text);
             if (fnf.ShowDialog() == DialogResult.OK)
             {
@@ -84,7 +84,7 @@ namespace TrinityCore_Manager
         private void typeFlagsButton_Click(object sender, EventArgs e)
         {
             FindTypeFlags ftf = new FindTypeFlags();
-            if (!string.IsNullOrEmpty(typeFlagsTextBox.Text))
+            if (!String.IsNullOrEmpty(typeFlagsTextBox.Text))
                 ftf.Flags = uint.Parse(typeFlagsTextBox.Text);
             if (ftf.ShowDialog() == DialogResult.OK)
             {
@@ -113,7 +113,7 @@ namespace TrinityCore_Manager
         private void mechImmuneMaskButton_Click(object sender, EventArgs e)
         {
             FindMechanicImmuneMask fmim = new FindMechanicImmuneMask();
-            if (!string.IsNullOrEmpty(mechImmuneMaskTextBox.Text))
+            if (!String.IsNullOrEmpty(mechImmuneMaskTextBox.Text))
                 fmim.Flags = uint.Parse(mechImmuneMaskTextBox.Text);
             if (fmim.ShowDialog() == DialogResult.OK)
             {
@@ -130,7 +130,7 @@ namespace TrinityCore_Manager
         private void flagsExtraButton_Click(object sender, EventArgs e)
         {
             FindNPCFlagsExtra ffe = new FindNPCFlagsExtra();
-            if (!string.IsNullOrEmpty(flagsExtraTextBox.Text))
+            if (!String.IsNullOrEmpty(flagsExtraTextBox.Text))
                 ffe.Flags = uint.Parse(flagsExtraTextBox.Text);
             if (ffe.ShowDialog() == DialogResult.OK)
             {

@@ -34,7 +34,7 @@ namespace TrinityCore_Manager
             DateTime banTime = DateTime.Now;
             DateTime unbanTime = banTimeDateTimeInput.Value;
 
-            if (string.IsNullOrEmpty(ipa) || string.IsNullOrEmpty(reason) || banTimeDateTimeInput.IsEmpty)
+            if (String.IsNullOrEmpty(ipa) || String.IsNullOrEmpty(reason) || banTimeDateTimeInput.IsEmpty)
             {
 
                 MessageBoxEx.Show(this, "Everything must be filled out!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

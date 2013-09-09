@@ -45,7 +45,7 @@ namespace TrinityCore_Manager
 
             string guildName = nameTextBox.Text;
 
-            if (string.IsNullOrEmpty(guildName))
+            if (String.IsNullOrEmpty(guildName))
             {
 
                 MessageBoxEx.Show(this, "Guild name cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

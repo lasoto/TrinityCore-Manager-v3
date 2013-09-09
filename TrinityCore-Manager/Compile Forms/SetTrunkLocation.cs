@@ -44,7 +44,7 @@ namespace TrinityCore_Manager.Compile_Forms
         private void okButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(trunkLocationTextBox.Text))
+            if (String.IsNullOrEmpty(trunkLocationTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "Trunk location required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

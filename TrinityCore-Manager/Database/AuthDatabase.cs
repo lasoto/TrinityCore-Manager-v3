@@ -194,7 +194,7 @@ namespace TrinityCore_Manager.Database
             if (acct == null)
                 return;
 
-            if (!string.IsNullOrEmpty(password))
+            if (!String.IsNullOrEmpty(password))
                 await ExecuteNonQuery("UPDATE `account` SET sha_pass_hash = @password, sessionkey = '', v = '', s = '' WHERE `id` = @id;", new MySqlParameter("@password", (acct.Username.ToUpper() + ":" + password.ToUpper()).ToSHA1()),  new MySqlParameter("@id", accountId));
 
         }

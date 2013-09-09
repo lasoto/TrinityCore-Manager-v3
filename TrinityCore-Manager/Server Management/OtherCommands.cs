@@ -31,7 +31,7 @@ namespace TrinityCore_Manager
             if (serverLimitIntegerInput.Value > 0)
                 await TCAction.SetPlayerLimit(serverLimitIntegerInput.Value);
 
-            if (!string.IsNullOrEmpty(motdTextBox.Text))
+            if (!String.IsNullOrEmpty(motdTextBox.Text))
             {
                 await TCAction.SetServerMotd(Regex.Replace(motdTextBox.Text, "\r\n", "\\r\\n"));
             }

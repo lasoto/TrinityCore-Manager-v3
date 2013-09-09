@@ -57,7 +57,7 @@ namespace TrinityCore_Manager.Database_Management
 
                 string dtStr = Path.GetFileNameWithoutExtension(fileName);
 
-                if (string.IsNullOrEmpty(dtStr))
+                if (String.IsNullOrEmpty(dtStr))
                     continue;
 
                 Match mat = _dtRegex.Match(dtStr);

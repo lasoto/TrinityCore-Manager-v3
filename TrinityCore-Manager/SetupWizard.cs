@@ -97,7 +97,7 @@ namespace TrinityCore_Manager
                 else if (e.OldPage == trinitySFolderPage)
                 {
 
-                    if (string.IsNullOrEmpty(folderTextBox.Text))
+                    if (String.IsNullOrEmpty(folderTextBox.Text))
                     {
                         MessageBoxEx.Show(this, "You must select the folder for TrinityCore", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
@@ -132,7 +132,7 @@ namespace TrinityCore_Manager
                     int port = portIntegerInput.Value;
                     string username = usernameTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(port.ToString()))
+                    if (String.IsNullOrEmpty(host) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(port.ToString()))
                     {
                         MessageBoxEx.Show(this, "You must fill in all of the Remote Access details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
@@ -148,7 +148,7 @@ namespace TrinityCore_Manager
                     int port = MySQLIntegerInputX.Value;
                     string username = mySqlUsernameTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(port.ToString()))
+                    if (String.IsNullOrEmpty(host) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(port.ToString()))
                     {
                         MessageBoxEx.Show(this, "MySQL details required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
@@ -206,7 +206,7 @@ namespace TrinityCore_Manager
                 }
                 else if (e.OldPage == dbDetailsPage)
                 {
-                    if (string.IsNullOrEmpty(authDBTextBox.Text) || string.IsNullOrEmpty(charactersDBTextBox.Text) || string.IsNullOrEmpty(worldDBTextBox.Text))
+                    if (String.IsNullOrEmpty(authDBTextBox.Text) || String.IsNullOrEmpty(charactersDBTextBox.Text) || String.IsNullOrEmpty(worldDBTextBox.Text))
                     {
                         MessageBoxEx.Show(this, "Everything must be filled out!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;

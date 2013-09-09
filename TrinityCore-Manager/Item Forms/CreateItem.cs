@@ -90,7 +90,7 @@ namespace TrinityCore_Manager
         private void findFlagsButton_Click(object sender, EventArgs e)
         {
             FindItemFlags fif = new FindItemFlags();
-            if (!string.IsNullOrEmpty(flagsTextBox.Text))
+            if (!String.IsNullOrEmpty(flagsTextBox.Text))
                 fif.Flags = uint.Parse(flagsTextBox.Text);
             if (fif.ShowDialog() == DialogResult.OK)
             {
@@ -107,7 +107,7 @@ namespace TrinityCore_Manager
         private void findFlagsExtraButton_Click(object sender, EventArgs e)
         {
             FindItemFlagsExtra fife = new FindItemFlagsExtra();
-            if (!string.IsNullOrEmpty(flagsExtraTextBox.Text))
+            if (!String.IsNullOrEmpty(flagsExtraTextBox.Text))
                 fife.Flags = uint.Parse(flagsExtraTextBox.Text);
             if (fife.ShowDialog() == DialogResult.OK)
             {
@@ -369,7 +369,7 @@ namespace TrinityCore_Manager
             if (e.OldPage == itemDetailsWizardPage)
             {
 
-                //if (string.IsNullOrEmpty(itemNameTextBox.Text) || string.IsNullOrEmpty(
+                //if (String.IsNullOrEmpty(itemNameTextBox.Text) || String.IsNullOrEmpty(
 
             }
 
