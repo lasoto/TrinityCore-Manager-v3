@@ -20,20 +20,20 @@ namespace TrinityCore_Manager
 
         private void findEventButton_Click(object sender, EventArgs e)
         {
-            FindEvent fe = new FindEvent();
-            fe.ShowDialog();
+            using (FindEvent fe = new FindEvent())
+                fe.ShowDialog();
         }
 
         private void findHolidayButton_Click(object sender, EventArgs e)
         {
-            FindHoliday fh = new FindHoliday();
-            fh.ShowDialog();
+            using (FindHoliday fh = new FindHoliday())
+                fh.ShowDialog();
         }
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-            ConvertDaysToMinutes cdtm = new ConvertDaysToMinutes();
-            cdtm.ShowDialog();
+            using (ConvertDaysToMinutes cdtm = new ConvertDaysToMinutes())
+                cdtm.ShowDialog();
         }
     }
 }

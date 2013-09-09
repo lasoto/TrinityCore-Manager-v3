@@ -26,21 +26,25 @@ namespace TrinityCore_Manager.NPC_Forms
 
         private void findNpcButton_Click(object sender, EventArgs e)
         {
-            FindNPC fn = new FindNPC();
-            if (fn.ShowDialog() == DialogResult.OK)
+            using (FindNPC fn = new FindNPC())
             {
-                // FindNPC form uses ListView to list all of the NPC's that are in `creature` table. When FindNPC form loads, it should load all of the NPCs currently in that table.
-                // ListView uses 2 columns (NPC ID, NPC NAME). So once user clicks on a desired NPC from the list, this dialog here should return that value to the npcEntryIntegerInput
+                if (fn.ShowDialog() == DialogResult.OK)
+                {
+                    // FindNPC form uses ListView to list all of the NPC's that are in `creature` table. When FindNPC form loads, it should load all of the NPCs currently in that table.
+                    // ListView uses 2 columns (NPC ID, NPC NAME). So once user clicks on a desired NPC from the list, this dialog here should return that value to the npcEntryIntegerInput
+                }
             }
         }
 
         private void findItemButton_Click(object sender, EventArgs e)
         {
-            FindItem fi = new FindItem();
-            if (fi.ShowDialog() == DialogResult.OK)
+            using (FindItem fi = new FindItem())
             {
-                // FindItem form uses ListView to list all of the NPC's that are in `item_template` table. When FindItem form loads, it should load all of the item's currently in that table.
-                // ListView uses 2 columns (Item ID, Item NAME). So once user clicks on a desired Item from the list, this dialog here should return that value to the itemEntryIntegerInput
+                if (fi.ShowDialog() == DialogResult.OK)
+                {
+                    // FindItem form uses ListView to list all of the NPC's that are in `item_template` table. When FindItem form loads, it should load all of the item's currently in that table.
+                    // ListView uses 2 columns (Item ID, Item NAME). So once user clicks on a desired Item from the list, this dialog here should return that value to the itemEntryIntegerInput
+                }
             }
         }
 
@@ -64,8 +68,8 @@ namespace TrinityCore_Manager.NPC_Forms
              * 
              */
 
-            ShowSQLCode sqc = new ShowSQLCode();
-            sqc.ShowDialog();
+            using (ShowSQLCode sqc = new ShowSQLCode())
+                sqc.ShowDialog();
         }
     }
 }

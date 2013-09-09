@@ -123,56 +123,56 @@ namespace TrinityCore_Manager
 
         private void findDisplayIdButton_Click(object sender, EventArgs e)
         {
-            FindItemDisplayID DisplayID = new FindItemDisplayID();
-            DisplayID.ShowDialog();
+            using (FindItemDisplayID DisplayID = new FindItemDisplayID())
+                DisplayID.ShowDialog();
         }
 
         private void findItemSetButton_Click(object sender, EventArgs e)
         {
-            FindItemSet ItemSet = new FindItemSet();
-            ItemSet.ShowDialog();
+            using (FindItemSet ItemSet = new FindItemSet())
+                ItemSet.ShowDialog();
         }
 
         private void findFactionButton_Click(object sender, EventArgs e)
         {
-            FindFaction Faction = new FindFaction();
-            Faction.ShowDialog();
+            using (FindFaction Faction = new FindFaction())
+                Faction.ShowDialog();
         }
 
         private void findSkillButton_Click(object sender, EventArgs e)
         {
-            FindSkill Skill = new FindSkill();
-            Skill.ShowDialog();
+            using (FindSkill Skill = new FindSkill())
+                Skill.ShowDialog();
         }
 
         private void findReqSpellButton_Click(object sender, EventArgs e)
         {
-            FindItemRequiredSpell RequiredSpell = new FindItemRequiredSpell();
-            RequiredSpell.ShowDialog();
+            using (FindItemRequiredSpell RequiredSpell = new FindItemRequiredSpell())
+                RequiredSpell.ShowDialog();
         }
 
         private void findSocketBonusButton_Click(object sender, EventArgs e)
         {
-            FindItemSocketBonus SocketBonus = new FindItemSocketBonus();
-            SocketBonus.ShowDialog();
+            using (FindItemSocketBonus SocketBonus = new FindItemSocketBonus())
+                SocketBonus.ShowDialog();
         }
 
         private void findGemPropButton_Click(object sender, EventArgs e)
         {
-            FindItemGemProperties GemProperties = new FindItemGemProperties();
-            GemProperties.ShowDialog();
+            using (FindItemGemProperties GemProperties = new FindItemGemProperties())
+                GemProperties.ShowDialog();
         }
 
         private void findSpellForItemButton_Click(object sender, EventArgs e)
         {
-            FindSpell ItemSpell = new FindSpell();
-            ItemSpell.ShowDialog();
+            using (FindSpell ItemSpell = new FindSpell())
+                ItemSpell.ShowDialog();
         }
 
         private void findAreaButton_Click(object sender, EventArgs e)
         {
-            FindItemArea ItemArea = new FindItemArea();
-            ItemArea.ShowDialog();
+            using (FindItemArea ItemArea = new FindItemArea())
+                ItemArea.ShowDialog();
         }
 
         private void findMapButton_Click(object sender, EventArgs e)
@@ -192,16 +192,18 @@ namespace TrinityCore_Manager
 
         private void findStartQuestButton_Click(object sender, EventArgs e)
         {
-            FindItemQuest ItemQuest = new FindItemQuest();
-            ItemQuest.ShowDialog();
+            using (FindItemQuest ItemQuest = new FindItemQuest())
+                ItemQuest.ShowDialog();
         }
 
         private void flagsCustomButton_Click(object sender, EventArgs e)
         {
-            FindItemFlagsCustom fifc = new FindItemFlagsCustom();
-            if (fifc.ShowDialog() == DialogResult.OK)
+            using (FindItemFlagsCustom fifc = new FindItemFlagsCustom())
             {
-                flagsCustomIntegerInput.Value = fifc.Flags;
+                if (fifc.ShowDialog() == DialogResult.OK)
+                {
+                    flagsCustomIntegerInput.Value = fifc.Flags;
+                }
             }
         }
 

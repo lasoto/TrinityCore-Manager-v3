@@ -54,24 +54,26 @@ namespace TrinityCore_Manager
 
         private void factionAButton_Click(object sender, EventArgs e)
         {
-            FindFaction ff = new FindFaction();
-            ff.ShowDialog();
+            using (FindFaction ff = new FindFaction())
+                ff.ShowDialog();
         }
 
         private void factionHButton_Click(object sender, EventArgs e)
         {
-            FindFaction ff = new FindFaction();
-            ff.ShowDialog();
+            using (FindFaction ff = new FindFaction())
+                ff.ShowDialog();
         }
 
         private void npcFlagButton_Click(object sender, EventArgs e)
         {
-            FindNPCFlag fnf = new FindNPCFlag();
-            if (!String.IsNullOrEmpty(npcFlagTextBox.Text))
-                fnf.Flags = uint.Parse(npcFlagTextBox.Text);
-            if (fnf.ShowDialog() == DialogResult.OK)
+            using (FindNPCFlag fnf = new FindNPCFlag())
             {
-                npcFlagTextBox.Text = fnf.Flags.ToString();
+                if (!String.IsNullOrEmpty(npcFlagTextBox.Text))
+                    fnf.Flags = uint.Parse(npcFlagTextBox.Text);
+                if (fnf.ShowDialog() == DialogResult.OK)
+                {
+                    npcFlagTextBox.Text = fnf.Flags.ToString();
+                }
             }
         }
 
@@ -83,12 +85,14 @@ namespace TrinityCore_Manager
 
         private void typeFlagsButton_Click(object sender, EventArgs e)
         {
-            FindTypeFlags ftf = new FindTypeFlags();
-            if (!String.IsNullOrEmpty(typeFlagsTextBox.Text))
-                ftf.Flags = uint.Parse(typeFlagsTextBox.Text);
-            if (ftf.ShowDialog() == DialogResult.OK)
+            using (FindTypeFlags ftf = new FindTypeFlags())
             {
-                typeFlagsTextBox.Text = ftf.Flags.ToString();
+                if (!String.IsNullOrEmpty(typeFlagsTextBox.Text))
+                    ftf.Flags = uint.Parse(typeFlagsTextBox.Text);
+                if (ftf.ShowDialog() == DialogResult.OK)
+                {
+                    typeFlagsTextBox.Text = ftf.Flags.ToString();
+                }
             }
         }
 
@@ -100,24 +104,28 @@ namespace TrinityCore_Manager
 
         private void dynamicFlagsButton_Click(object sender, EventArgs e)
         {
-            FindDynamicFlags fdf = new FindDynamicFlags();
-
-            fdf.Flags = dynamicFlagsIntegerInput.Value;
-
-            if (fdf.ShowDialog() == DialogResult.OK)
+            using (FindDynamicFlags fdf = new FindDynamicFlags())
             {
-                dynamicFlagsIntegerInput.Value = fdf.Flags;
+
+                fdf.Flags = dynamicFlagsIntegerInput.Value;
+
+                if (fdf.ShowDialog() == DialogResult.OK)
+                {
+                    dynamicFlagsIntegerInput.Value = fdf.Flags;
+                }
             }
         }
 
         private void mechImmuneMaskButton_Click(object sender, EventArgs e)
         {
-            FindMechanicImmuneMask fmim = new FindMechanicImmuneMask();
-            if (!String.IsNullOrEmpty(mechImmuneMaskTextBox.Text))
-                fmim.Flags = uint.Parse(mechImmuneMaskTextBox.Text);
-            if (fmim.ShowDialog() == DialogResult.OK)
+            using (FindMechanicImmuneMask fmim = new FindMechanicImmuneMask())
             {
-                mechImmuneMaskTextBox.Text = fmim.Flags.ToString();
+                if (!String.IsNullOrEmpty(mechImmuneMaskTextBox.Text))
+                    fmim.Flags = uint.Parse(mechImmuneMaskTextBox.Text);
+                if (fmim.ShowDialog() == DialogResult.OK)
+                {
+                    mechImmuneMaskTextBox.Text = fmim.Flags.ToString();
+                }
             }
         }
 
@@ -129,12 +137,14 @@ namespace TrinityCore_Manager
 
         private void flagsExtraButton_Click(object sender, EventArgs e)
         {
-            FindNPCFlagsExtra ffe = new FindNPCFlagsExtra();
-            if (!String.IsNullOrEmpty(flagsExtraTextBox.Text))
-                ffe.Flags = uint.Parse(flagsExtraTextBox.Text);
-            if (ffe.ShowDialog() == DialogResult.OK)
+            using (FindNPCFlagsExtra ffe = new FindNPCFlagsExtra())
             {
-                flagsExtraTextBox.Text = ffe.Flags.ToString();
+                if (!String.IsNullOrEmpty(flagsExtraTextBox.Text))
+                    ffe.Flags = uint.Parse(flagsExtraTextBox.Text);
+                if (ffe.ShowDialog() == DialogResult.OK)
+                {
+                    flagsExtraTextBox.Text = ffe.Flags.ToString();
+                }
             }
         }
 
@@ -146,28 +156,30 @@ namespace TrinityCore_Manager
 
         private void findSpellButton_Click(object sender, EventArgs e)
         {
-            FindSpell fs = new FindSpell();
-            fs.ShowDialog();
+            using (FindSpell fs = new FindSpell())
+                fs.ShowDialog();
         }
 
         private void findRaceButton_Click(object sender, EventArgs e)
         {
-            FindRace fr = new FindRace();
-            fr.ShowDialog();
+            using (FindRace fr = new FindRace())
+                fr.ShowDialog();
         }
 
         private void findClassButton_Click(object sender, EventArgs e)
         {
-            FindClass fc = new FindClass();
-            fc.ShowDialog();
+            using (FindClass fc = new FindClass())
+                fc.ShowDialog();
         }
 
         private void findInhabitTypeButton_Click(object sender, EventArgs e)
         {
-            FindInhabitType fit = new FindInhabitType();
-            if (fit.ShowDialog() == DialogResult.OK)
+            using (FindInhabitType fit = new FindInhabitType())
             {
-                inhabitTypeIntegerInput.Value = fit.Flags;
+                if (fit.ShowDialog() == DialogResult.OK)
+                {
+                    inhabitTypeIntegerInput.Value = fit.Flags;
+                }
             }
         }
 
