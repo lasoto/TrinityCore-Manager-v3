@@ -37,9 +37,9 @@
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.3, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\Dependencies\Ionic.Zip.dll</HintPath>
@@ -135,6 +135,12 @@
     </Compile>
     <Compile Include="Compile Forms\SetTrunkLocation.Designer.cs">
       <DependentUpon>SetTrunkLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDatabaseForm.Designer.cs">
+      <DependentUpon>SearchDatabaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SmartAI\CreateSmartAI.cs">
       <SubType>Form</SubType>
@@ -575,6 +581,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compile Forms\SetTrunkLocation.resx">
       <DependentUpon>SetTrunkLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDatabaseForm.resx">
+      <DependentUpon>SearchDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SmartAI\CreateSmartAI.resx">
       <DependentUpon>CreateSmartAI.cs</DependentUpon>

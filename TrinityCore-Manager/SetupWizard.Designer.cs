@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupWizard));
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo1 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo2 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo3 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo4 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo5 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo6 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo7 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo8 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo9 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo10 = new DevComponents.DotNetBar.SuperTooltipInfo();
             this.wizard1 = new DevComponents.DotNetBar.Wizard();
             this.welcomePage = new DevComponents.DotNetBar.WizardPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,6 +72,9 @@
             this.downloadProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.downloadCreateDBButton = new DevComponents.DotNetBar.ButtonX();
             this.dbDetailsPage = new DevComponents.DotNetBar.WizardPage();
+            this.buttonXSearchForDbWorld = new DevComponents.DotNetBar.ButtonX();
+            this.buttonXSearchForDbCharacters = new DevComponents.DotNetBar.ButtonX();
+            this.buttonXSearchForDbAuth = new DevComponents.DotNetBar.ButtonX();
             this.worldDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.charactersDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.authDBTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -345,13 +338,13 @@
             // 
             // folderTextBox
             // 
-            this.folderTextBox.BackColor = System.Drawing.Color.Black;
+            this.folderTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.folderTextBox.Border.Class = "TextBoxBorder";
             this.folderTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.folderTextBox.ForeColor = System.Drawing.Color.White;
+            this.folderTextBox.ForeColor = System.Drawing.Color.Black;
             this.folderTextBox.Location = new System.Drawing.Point(165, 113);
             this.folderTextBox.Name = "folderTextBox";
             this.folderTextBox.ReadOnly = true;
@@ -423,61 +416,49 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.Color.Black;
+            this.passwordTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.passwordTextBox.Border.Class = "TextBoxBorder";
             this.passwordTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
+            this.passwordTextBox.ForeColor = System.Drawing.Color.Black;
             this.passwordTextBox.Location = new System.Drawing.Point(274, 177);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(210, 20);
-            superTooltipInfo1.BodyText = "Account password";
-            superTooltipInfo1.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo1.FooterVisible = false;
-            superTooltipInfo1.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, superTooltipInfo1);
+            this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account password", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.Black;
+            this.usernameTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.usernameTextBox.Border.Class = "TextBoxBorder";
             this.usernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.usernameTextBox.ForeColor = System.Drawing.Color.White;
+            this.usernameTextBox.ForeColor = System.Drawing.Color.Black;
             this.usernameTextBox.Location = new System.Drawing.Point(274, 137);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(208, 20);
-            superTooltipInfo2.BodyText = "Account username";
-            superTooltipInfo2.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo2.FooterVisible = false;
-            superTooltipInfo2.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.usernameTextBox, superTooltipInfo2);
+            this.setupSuperTooltip.SetSuperTooltip(this.usernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account username", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.usernameTextBox.TabIndex = 3;
             // 
             // hostTextBox
             // 
-            this.hostTextBox.BackColor = System.Drawing.Color.Black;
+            this.hostTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.hostTextBox.Border.Class = "TextBoxBorder";
             this.hostTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.hostTextBox.ForeColor = System.Drawing.Color.White;
+            this.hostTextBox.ForeColor = System.Drawing.Color.Black;
             this.hostTextBox.Location = new System.Drawing.Point(272, 42);
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(210, 20);
-            superTooltipInfo3.BodyText = "e.g. server.examplename.com";
-            superTooltipInfo3.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo3.FooterVisible = false;
-            superTooltipInfo3.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.hostTextBox, superTooltipInfo3);
+            this.setupSuperTooltip.SetSuperTooltip(this.hostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. server.examplename.com", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.hostTextBox.TabIndex = 1;
             // 
             // labelX2
@@ -547,11 +528,8 @@
             this.portIntegerInput.MinValue = 0;
             this.portIntegerInput.Name = "portIntegerInput";
             this.portIntegerInput.ShowUpDown = true;
-            superTooltipInfo4.BodyText = "Default: 3443";
-            superTooltipInfo4.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo4.FooterVisible = false;
-            superTooltipInfo4.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, superTooltipInfo4);
+            this.portIntegerInput.Size = new System.Drawing.Size(80, 20);
+            this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3443", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.portIntegerInput.TabIndex = 2;
             this.portIntegerInput.Value = 3443;
             // 
@@ -633,13 +611,13 @@
             // 
             // mySqlPassTextBox
             // 
-            this.mySqlPassTextBox.BackColor = System.Drawing.Color.Black;
+            this.mySqlPassTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.mySqlPassTextBox.Border.Class = "TextBoxBorder";
             this.mySqlPassTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mySqlPassTextBox.ForeColor = System.Drawing.Color.White;
+            this.mySqlPassTextBox.ForeColor = System.Drawing.Color.Black;
             this.mySqlPassTextBox.Location = new System.Drawing.Point(280, 183);
             this.mySqlPassTextBox.Name = "mySqlPassTextBox";
             this.mySqlPassTextBox.PasswordChar = '●';
@@ -649,38 +627,32 @@
             // 
             // mySqlUsernameTextBox
             // 
-            this.mySqlUsernameTextBox.BackColor = System.Drawing.Color.Black;
+            this.mySqlUsernameTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.mySqlUsernameTextBox.Border.Class = "TextBoxBorder";
             this.mySqlUsernameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mySqlUsernameTextBox.ForeColor = System.Drawing.Color.White;
+            this.mySqlUsernameTextBox.ForeColor = System.Drawing.Color.Black;
             this.mySqlUsernameTextBox.Location = new System.Drawing.Point(280, 143);
             this.mySqlUsernameTextBox.Name = "mySqlUsernameTextBox";
             this.mySqlUsernameTextBox.Size = new System.Drawing.Size(213, 20);
-            superTooltipInfo5.BodyText = "Default: root";
-            superTooltipInfo5.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            this.setupSuperTooltip.SetSuperTooltip(this.mySqlUsernameTextBox, superTooltipInfo5);
+            this.setupSuperTooltip.SetSuperTooltip(this.mySqlUsernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: root", null, null, DevComponents.DotNetBar.eTooltipColor.Blue));
             this.mySqlUsernameTextBox.TabIndex = 3;
             // 
             // mySqlHostTextBox
             // 
-            this.mySqlHostTextBox.BackColor = System.Drawing.Color.Black;
+            this.mySqlHostTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.mySqlHostTextBox.Border.Class = "TextBoxBorder";
             this.mySqlHostTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mySqlHostTextBox.ForeColor = System.Drawing.Color.White;
+            this.mySqlHostTextBox.ForeColor = System.Drawing.Color.Black;
             this.mySqlHostTextBox.Location = new System.Drawing.Point(280, 53);
             this.mySqlHostTextBox.Name = "mySqlHostTextBox";
             this.mySqlHostTextBox.Size = new System.Drawing.Size(213, 20);
-            superTooltipInfo6.BodyText = "Default: localhost";
-            superTooltipInfo6.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo6.FooterVisible = false;
-            superTooltipInfo6.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.mySqlHostTextBox, superTooltipInfo6);
+            this.setupSuperTooltip.SetSuperTooltip(this.mySqlHostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: localhost", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.mySqlHostTextBox.TabIndex = 1;
             // 
             // mySqlConnectionProgressBar
@@ -748,11 +720,8 @@
             this.MySQLIntegerInputX.MinValue = 0;
             this.MySQLIntegerInputX.Name = "MySQLIntegerInputX";
             this.MySQLIntegerInputX.ShowUpDown = true;
-            superTooltipInfo7.BodyText = "Default: 3306";
-            superTooltipInfo7.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo7.FooterVisible = false;
-            superTooltipInfo7.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.MySQLIntegerInputX, superTooltipInfo7);
+            this.MySQLIntegerInputX.Size = new System.Drawing.Size(80, 20);
+            this.setupSuperTooltip.SetSuperTooltip(this.MySQLIntegerInputX, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3306", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.MySQLIntegerInputX.TabIndex = 2;
             this.MySQLIntegerInputX.Value = 3306;
             // 
@@ -870,6 +839,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dbDetailsPage.AntiAlias = false;
             this.dbDetailsPage.BackColor = System.Drawing.Color.Transparent;
+            this.dbDetailsPage.Controls.Add(this.buttonXSearchForDbWorld);
+            this.dbDetailsPage.Controls.Add(this.buttonXSearchForDbCharacters);
+            this.dbDetailsPage.Controls.Add(this.buttonXSearchForDbAuth);
             this.dbDetailsPage.Controls.Add(this.worldDBTextBox);
             this.dbDetailsPage.Controls.Add(this.charactersDBTextBox);
             this.dbDetailsPage.Controls.Add(this.authDBTextBox);
@@ -894,61 +866,85 @@
             this.dbDetailsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dbDetailsPage.TabIndex = 13;
             // 
+            // buttonXSearchForDbWorld
+            // 
+            this.buttonXSearchForDbWorld.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonXSearchForDbWorld.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonXSearchForDbWorld.Location = new System.Drawing.Point(518, 152);
+            this.buttonXSearchForDbWorld.Name = "buttonXSearchForDbWorld";
+            this.buttonXSearchForDbWorld.Size = new System.Drawing.Size(21, 20);
+            this.buttonXSearchForDbWorld.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonXSearchForDbWorld.TabIndex = 42;
+            this.buttonXSearchForDbWorld.Text = "...";
+            this.buttonXSearchForDbWorld.Click += new System.EventHandler(this.buttonXSearchForDbWorld_Click);
+            // 
+            // buttonXSearchForDbCharacters
+            // 
+            this.buttonXSearchForDbCharacters.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonXSearchForDbCharacters.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonXSearchForDbCharacters.Location = new System.Drawing.Point(518, 112);
+            this.buttonXSearchForDbCharacters.Name = "buttonXSearchForDbCharacters";
+            this.buttonXSearchForDbCharacters.Size = new System.Drawing.Size(21, 20);
+            this.buttonXSearchForDbCharacters.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonXSearchForDbCharacters.TabIndex = 41;
+            this.buttonXSearchForDbCharacters.Text = "...";
+            this.buttonXSearchForDbCharacters.Click += new System.EventHandler(this.buttonXSearchForDbCharacters_Click);
+            // 
+            // buttonXSearchForDbAuth
+            // 
+            this.buttonXSearchForDbAuth.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonXSearchForDbAuth.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonXSearchForDbAuth.Location = new System.Drawing.Point(518, 71);
+            this.buttonXSearchForDbAuth.Name = "buttonXSearchForDbAuth";
+            this.buttonXSearchForDbAuth.Size = new System.Drawing.Size(21, 20);
+            this.buttonXSearchForDbAuth.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonXSearchForDbAuth.TabIndex = 40;
+            this.buttonXSearchForDbAuth.Text = "...";
+            this.buttonXSearchForDbAuth.Click += new System.EventHandler(this.buttonXSearchForDbAuth_Click);
+            // 
             // worldDBTextBox
             // 
-            this.worldDBTextBox.BackColor = System.Drawing.Color.Black;
+            this.worldDBTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.worldDBTextBox.Border.Class = "TextBoxBorder";
             this.worldDBTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.worldDBTextBox.ForeColor = System.Drawing.Color.White;
+            this.worldDBTextBox.ForeColor = System.Drawing.Color.Black;
             this.worldDBTextBox.Location = new System.Drawing.Point(264, 152);
             this.worldDBTextBox.Name = "worldDBTextBox";
-            this.worldDBTextBox.Size = new System.Drawing.Size(274, 20);
-            superTooltipInfo8.BodyText = "e.g. world";
-            superTooltipInfo8.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo8.FooterVisible = false;
-            superTooltipInfo8.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.worldDBTextBox, superTooltipInfo8);
+            this.worldDBTextBox.Size = new System.Drawing.Size(253, 20);
+            this.setupSuperTooltip.SetSuperTooltip(this.worldDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. world", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.worldDBTextBox.TabIndex = 39;
             // 
             // charactersDBTextBox
             // 
-            this.charactersDBTextBox.BackColor = System.Drawing.Color.Black;
+            this.charactersDBTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.charactersDBTextBox.Border.Class = "TextBoxBorder";
             this.charactersDBTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.charactersDBTextBox.ForeColor = System.Drawing.Color.White;
+            this.charactersDBTextBox.ForeColor = System.Drawing.Color.Black;
             this.charactersDBTextBox.Location = new System.Drawing.Point(264, 112);
             this.charactersDBTextBox.Name = "charactersDBTextBox";
-            this.charactersDBTextBox.Size = new System.Drawing.Size(274, 20);
-            superTooltipInfo9.BodyText = "e.g. characters";
-            superTooltipInfo9.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo9.FooterVisible = false;
-            superTooltipInfo9.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.charactersDBTextBox, superTooltipInfo9);
+            this.charactersDBTextBox.Size = new System.Drawing.Size(253, 20);
+            this.setupSuperTooltip.SetSuperTooltip(this.charactersDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. characters", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.charactersDBTextBox.TabIndex = 38;
             // 
             // authDBTextBox
             // 
-            this.authDBTextBox.BackColor = System.Drawing.Color.Black;
+            this.authDBTextBox.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.authDBTextBox.Border.Class = "TextBoxBorder";
             this.authDBTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.authDBTextBox.ForeColor = System.Drawing.Color.White;
+            this.authDBTextBox.ForeColor = System.Drawing.Color.Black;
             this.authDBTextBox.Location = new System.Drawing.Point(264, 71);
             this.authDBTextBox.Name = "authDBTextBox";
-            this.authDBTextBox.Size = new System.Drawing.Size(274, 20);
-            superTooltipInfo10.BodyText = "e.g. auth";
-            superTooltipInfo10.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
-            superTooltipInfo10.FooterVisible = false;
-            superTooltipInfo10.HeaderVisible = false;
-            this.setupSuperTooltip.SetSuperTooltip(this.authDBTextBox, superTooltipInfo10);
+            this.authDBTextBox.Size = new System.Drawing.Size(253, 20);
+            this.setupSuperTooltip.SetSuperTooltip(this.authDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. auth", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.authDBTextBox.TabIndex = 37;
             // 
             // MySQLWorldDBLabelX
@@ -1042,6 +1038,7 @@
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SetupWizard";
@@ -1102,9 +1099,6 @@
         private DevComponents.DotNetBar.LabelX MySQLPercentLabelX;
         private DevComponents.DotNetBar.ButtonX downloadCreateDBButton;
         private DevComponents.DotNetBar.WizardPage dbDetailsPage;
-        private DevComponents.DotNetBar.Controls.TextBoxX worldDBTextBox;
-        private DevComponents.DotNetBar.Controls.TextBoxX charactersDBTextBox;
-        private DevComponents.DotNetBar.Controls.TextBoxX authDBTextBox;
         private DevComponents.DotNetBar.LabelX MySQLWorldDBLabelX;
         private DevComponents.DotNetBar.LabelX MySQLCharDBLabelX;
         private DevComponents.DotNetBar.LabelX MySQLAuthDBLabelX;
@@ -1116,6 +1110,12 @@
         private DevComponents.DotNetBar.Controls.ProgressBarX downloadProgressBar;
         private DevComponents.DotNetBar.Controls.ProgressBarX mySqlConnectionProgressBar2;
         private DevComponents.DotNetBar.Controls.ProgressBarX downloadProgressBar2;
+        private DevComponents.DotNetBar.ButtonX buttonXSearchForDbWorld;
+        private DevComponents.DotNetBar.ButtonX buttonXSearchForDbCharacters;
+        private DevComponents.DotNetBar.ButtonX buttonXSearchForDbAuth;
+        public DevComponents.DotNetBar.Controls.TextBoxX worldDBTextBox;
+        public DevComponents.DotNetBar.Controls.TextBoxX charactersDBTextBox;
+        public DevComponents.DotNetBar.Controls.TextBoxX authDBTextBox;
 
     }
 }

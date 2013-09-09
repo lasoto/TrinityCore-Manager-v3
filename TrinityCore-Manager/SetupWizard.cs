@@ -1,10 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Generic;
 using DevComponents.DotNetBar;
 using MySql.Data.MySqlClient;
 using TrinityCore_Manager.Misc;
@@ -13,6 +15,13 @@ using TrinityCore_Manager.Security;
 
 namespace TrinityCore_Manager
 {
+    public enum Databases
+    {
+        DbWorld,
+        DbCharacters,
+        DbAuth,
+    };
+
     public partial class SetupWizard : DevComponents.DotNetBar.Office2007Form
     {
 
@@ -311,5 +320,60 @@ namespace TrinityCore_Manager
 
         }
 
+        private void buttonXSearchForDbAuth_Click(object sender, EventArgs e)
+        {
+            StartDatabaseForm(Databases.DbAuth);
+        }
+
+        private void buttonXSearchForDbCharacters_Click(object sender, EventArgs e)
+        {
+            StartDatabaseForm(Databases.DbCharacters);
+        }
+
+        private void buttonXSearchForDbWorld_Click(object sender, EventArgs e)
+        {
+            StartDatabaseForm(Databases.DbWorld);
+        }
+
+        private void StartDatabaseForm(Databases database)
+        {
+            var connStr = new MySqlConnectionStringBuilder();
+            connStr.Server = mySqlHostTextBox.Text;
+            connStr.Port = (uint)MySQLIntegerInputX.Value;
+            connStr.UserID = mySqlUsernameTextBox.Text;
+            connStr.Password = mySqlPassTextBox.Text;
+
+            var databaseNames = new List<string>();
+
+            try
+            {
+                using (var connection = new MySqlConnection(connStr.ToString()))
+                {
+                    connection.Open();
+                    var returnVal = new MySqlDataAdapter("SHOW DATABASES", connection);
+                    var dataTable = new DataTable();
+                    returnVal.Fill(dataTable);
+
+                    if (dataTable.Rows.Count <= 0)
+                    {
+                        MessageBox.Show("Your connection contains no databases!", "An error has occurred!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    foreach (DataRow row in dataTable.Rows)
+                        for (int i = 0; i < row.ItemArray.Length; i++)
+                            databaseNames.Add(row.ItemArray[i].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseNames.Count > 0)
+                    new SearchDatabaseForm(database, databaseNames).Show(this);
+            }
+        }
     }
 }
