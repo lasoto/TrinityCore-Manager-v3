@@ -36,6 +36,22 @@ namespace TrinityCore_Manager.TCM
 
         }
 
+        public static async Task SetAccountLock(string accountName, AccountLockType lockType, bool locked)
+        {
+
+            string lType;
+
+            if (lockType == AccountLockType.Country)
+                lType = "country";
+            else
+                lType = "ip";
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.AccountLock.BuildCommand(lType, locked ? "on" : "off"));
+            //TODO: else
+
+        }
+
         public static async Task SetGMLevel(string username, GMLevel gmlevel, int realmid)
         {
 
@@ -147,9 +163,60 @@ namespace TrinityCore_Manager.TCM
 
         }
 
-        public static void SendMessageToPlayer(string playerName, string message)
+        public static async Task SendMessageToPlayer(string playerName, string message)
         {
-            //TODO
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SendPlayerMessage.BuildCommand(playerName, message));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SendMail(string playerName, string subject, string text)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SendMail.BuildCommand(playerName, "\"" + subject + "\"", "\"" + text + "\""));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SendMoney(string playerName, string subject, string text, int money)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SendMoney.BuildCommand(playerName, "\"" + subject + "\"", "\"" + text + "\"", money.ToString()));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SendItems(string playerName, string subject, string text, params MailItem[] items)
+        {
+
+            if (_tcm.Online)
+            {
+
+                if (items.Length < 1)
+                    throw new Exception("At least one item is required!");
+
+                string[] cmdArgs = new string[items.Length];
+
+                for (int i = 0; i < items.Length; i++)
+                {
+                    cmdArgs[i] = items[i].ItemId + ":" + items[i].Count;
+                }
+
+                await GetClient().SendMessage(TCCommand.SendItems.BuildCommand(playerName, "\"" + subject + "\"", "\"" + text + "\"", string.Join(" ", cmdArgs)));
+
+            }
+            else
+            {
+                throw new Exception("Server is not online!");
+            }
+
         }
 
         public static async Task NotifyGMs(string message)
@@ -191,6 +258,174 @@ namespace TrinityCore_Manager.TCM
 
         }
 
+        public static async Task DeleteCharacter(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.DeleteCharacter.BuildCommand(playerName));
+            //TODO: else
+
+        }
+
+        public static async Task ModifyAccountLevel(string playerName, int newLevel)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.ModifyPlayerLevel.BuildCommand(playerName, newLevel.ToString()));
+            //TODO: else
+
+        }
+
+        public static async Task RenameCharacter(string oldName, string newName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.RenameCharacter.BuildCommand(oldName, newName));
+            //TODO: else
+
+        }
+
+        public static async Task CustomizeCharacter(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.CustomizeCharacter.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task MutePlayer(string playerName, int timeInMin, string reason = "")
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.MutePlayer.BuildCommand(playerName, timeInMin.ToString(), reason));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task UnmutePlayer(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.UnmutePlayer.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task UnstuckPlayer(string playerName, UnstuckLocation location)
+        {
+
+            string loc;
+
+            if (location == UnstuckLocation.Graveyard)
+                loc = "graveyard";
+            else if (location == UnstuckLocation.Inn)
+                loc = "inn";
+            else if (location == UnstuckLocation.StartZone)
+                loc = "startzone";
+            else
+                loc = String.Empty;
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.UnstuckPlayer.BuildCommand(playerName, loc));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task StopCombatForPlayer(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.StopCombatForPlayer.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task RepairCharacterItems(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.RepairCharacterItems.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online");
+
+        }
+
+        public static async Task SaveAllPlayers()
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SaveAll.BuildCommand());
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task CreateGuild(string guildName, string leaderName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.CreateGuild.BuildCommand("\"" + guildName + "\"", leaderName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task DeleteGuild(string guildName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.DeleteGuild.BuildCommand("\"" + guildName + "\""));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task InviteToGuild(string playerName, string guildName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.GuildInvite.BuildCommand(playerName, "\"" + guildName + "\""));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task UninviteFromGuild(string playerName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.GuildUninvite.BuildCommand(playerName));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task SetPlayerGuildRank(string playerName, int rank)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.SetGuildRank.BuildCommand(playerName, rank.ToString()));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
+        public static async Task RenameGuild(string oldGuildName, string newGuildName)
+        {
+
+            if (_tcm.Online)
+                await GetClient().SendMessage(TCCommand.RenameGuild.BuildCommand("\"" + oldGuildName + "\"", "\"" + newGuildName + "\""));
+            else
+                throw new Exception("Server is not online!");
+
+        }
+
         private static TCMClient GetClient()
         {
 
@@ -209,4 +444,27 @@ namespace TrinityCore_Manager.TCM
         }
 
     }
+
+    public class MailItem
+    {
+
+        public int ItemId { get; set; }
+
+        public int Count { get; set; }
+
+    }
+
+    public enum AccountLockType
+    {
+        Country,
+        Ip
+    }
+
+    public enum UnstuckLocation
+    {
+        Inn,
+        Graveyard,
+        StartZone
+    }
+
 }
