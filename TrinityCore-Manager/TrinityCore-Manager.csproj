@@ -534,9 +534,7 @@
     <Compile Include="ShowSQLCode.Designer.cs">
       <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="SettingsForm.cs" />
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>

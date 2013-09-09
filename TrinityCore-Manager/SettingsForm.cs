@@ -6,7 +6,7 @@ using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
 {
-    public partial class SettingsForm : OfficeForm
+    public partial class SettingsForm : Office2007Form
     {
         public SettingsForm()
         {
