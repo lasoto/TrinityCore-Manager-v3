@@ -931,6 +931,8 @@ namespace TrinityCore_Manager
 
         private async void executeCommandButton_Click(object sender, EventArgs e)
         {
+            if (CheckServerOnline())
+                return;
 
             if (String.IsNullOrEmpty(executeCommandTextBox.Text))
             {
@@ -1042,6 +1044,8 @@ namespace TrinityCore_Manager
 
         private async void refreshListPlayerManagementButton_Click(object sender, EventArgs e)
         {
+            if (CheckServerOnline())
+                return;
 
             playerManagementComboBox.Items.Clear();
 
@@ -1099,23 +1103,18 @@ namespace TrinityCore_Manager
 
         private async void refreshListCharacterManagementButton_Click(object sender, EventArgs e)
         {
+            if (CheckServerOnline())
+                return;
+
             characterListComboBox.Items.Clear();
             List<int> guids = await TCManager.Instance.CharDatabase.GetOnlineCharacterGuids();
 
             foreach (int guid in guids)
-            {
-
-                string name = await TCManager.Instance.CharDatabase.GetCharacterName(guid);
-
-                characterListComboBox.Items.Add(name);
-
-            }
-
+                characterListComboBox.Items.Add(TCManager.Instance.CharDatabase.GetCharacterName(guid));
         }
 
         private void connectRAButton_Click(object sender, EventArgs e)
         {
-
             if ((ServerType)Settings.Default.ServerType == ServerType.Local)
             {
                 MessageBoxEx.Show(this, "RA is not enabled!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1224,9 +1223,21 @@ namespace TrinityCore_Manager
             sai.ShowDialog();
         }
 
-        private void buttonItem1_Click(object sender, EventArgs e)
+        private bool CheckServerOnline(bool checkForAuthToo = false)
         {
+            if (TCManager.Instance.WorldClient == null || !TCManager.Instance.WorldClient.IsOnline)
+            {
+                MessageBoxEx.Show(this, "There is no worldserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
 
+            if (checkForAuthToo && (TCManager.Instance.AuthClient == null || !TCManager.Instance.AuthClient.IsOnline))
+            {
+                MessageBoxEx.Show(this, "There is no authserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+
+            return false;
         }
     }
 }

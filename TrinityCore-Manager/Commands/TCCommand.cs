@@ -2,7 +2,6 @@
 {
     public enum TCCommand
     {
-
         [TCCommand("account create", 2)]
         CreateAccount,
 
@@ -113,6 +112,5 @@
 
         [TCCommand("send items", 4)]
         SendItems
-
     }
 }
