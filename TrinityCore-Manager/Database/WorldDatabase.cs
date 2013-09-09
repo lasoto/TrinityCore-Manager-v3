@@ -23,15 +23,11 @@ namespace TrinityCore_Manager.Database
 
         public async Task<Dictionary<int, string>> SearchForItem(string searchQuery, int page)
         {
-
             Dictionary<int, string> items = new Dictionary<int, string>();
-
-            DataTable dt = await ExecuteQuery(String.Format("SELECT `entry`, `name` FROM `item_template` WHERE name LIKE @search LIMIT 10 OFFSET {0}", page * 10), new MySqlParameter("@search", "%" + searchQuery + "%"));
+            DataTable dt = await ExecuteQuery(String.Format("SELECT `entry`, `name` FROM `item_template` WHERE `name` LIKE @search LIMIT 10 OFFSET {0}", page * 10), new MySqlParameter("@search", "%" + searchQuery + "%"));
 
             foreach (DataRow row in dt.Rows)
-            {
                 items.Add(Convert.ToInt32((uint)row["entry"]), (string)row["name"]);
-            }
 
             return items;
 
@@ -39,7 +35,6 @@ namespace TrinityCore_Manager.Database
 
         public TCItem BuildItem(DataRow row)
         {
-
             TCItem item = new TCItem();
             item.Entry = Convert.ToInt32(row["entry"]);
             item.Class = Convert.ToInt32(row["class"]);

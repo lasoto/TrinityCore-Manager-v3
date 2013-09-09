@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateSmartAI));
             this.smartAISuperToolTip = new DevComponents.DotNetBar.SuperTooltip();
+            this.commentTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.targetTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem181 = new DevComponents.Editors.ComboItem();
             this.comboItem182 = new DevComponents.Editors.ComboItem();
@@ -238,6 +239,8 @@
             this.comboItem71 = new DevComponents.Editors.ComboItem();
             this.comboItem72 = new DevComponents.Editors.ComboItem();
             this.comboItem73 = new DevComponents.Editors.ComboItem();
+            this.comboItem206 = new DevComponents.Editors.ComboItem();
+            this.comboItem207 = new DevComponents.Editors.ComboItem();
             this.linkIntegerInput = new DevComponents.Editors.IntegerInput();
             this.idIntegerInput = new DevComponents.Editors.IntegerInput();
             this.targetOIntegerInput = new DevComponents.Editors.IntegerInput();
@@ -273,7 +276,6 @@
             this.ssTypeInstanceComboItem = new DevComponents.Editors.ComboItem();
             this.ssTypeTimedActionlistComboItem = new DevComponents.Editors.ComboItem();
             this.labelX26 = new DevComponents.DotNetBar.LabelX();
-            this.commentTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX25 = new DevComponents.DotNetBar.LabelX();
             this.labelX24 = new DevComponents.DotNetBar.LabelX();
             this.labelX23 = new DevComponents.DotNetBar.LabelX();
@@ -309,9 +311,6 @@
             this.linkColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventTypeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventPhaseMaskColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.removeButton = new DevComponents.DotNetBar.ButtonX();
-            this.refreshButton = new DevComponents.DotNetBar.ButtonX();
-            this.addButton = new DevComponents.DotNetBar.ButtonX();
             this.eventChanceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventFlagsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventParam1ColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -332,6 +331,14 @@
             this.targetZColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.targetOColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.commentColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.removeButton = new DevComponents.DotNetBar.ButtonX();
+            this.refreshButton = new DevComponents.DotNetBar.ButtonX();
+            this.addButton = new DevComponents.DotNetBar.ButtonX();
+            this.comboItem208 = new DevComponents.Editors.ComboItem();
+            this.comboItem209 = new DevComponents.Editors.ComboItem();
+            this.comboItem210 = new DevComponents.Editors.ComboItem();
+            this.comboItem211 = new DevComponents.Editors.ComboItem();
+            this.comboItem212 = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.linkIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.targetOIntegerInput)).BeginInit();
@@ -358,6 +365,23 @@
             // smartAISuperToolTip
             // 
             this.smartAISuperToolTip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
+            // commentTextBox
+            // 
+            this.commentTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.commentTextBox.Border.Class = "TextBoxBorder";
+            this.commentTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.commentTextBox.ForeColor = System.Drawing.Color.White;
+            this.commentTextBox.Location = new System.Drawing.Point(341, 320);
+            this.commentTextBox.Name = "commentTextBox";
+            this.commentTextBox.Size = new System.Drawing.Size(567, 20);
+            this.smartAISuperToolTip.SetSuperTooltip(this.commentTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Commenting on SAI uses a template which is the following: (with an example)\r\n\r\n\"C" +
+            "reature name - Event - Action\"\r\n\r\n\"Minion of Gurok - On spawn - Set Random Movem" +
+            "ent\"", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.commentTextBox.TabIndex = 27;
             // 
             // targetTypeComboBox
             // 
@@ -394,7 +418,9 @@
             this.comboItem202,
             this.comboItem203,
             this.comboItem204,
-            this.comboItem205});
+            this.comboItem205,
+            this.comboItem211,
+            this.comboItem212});
             this.targetTypeComboBox.Location = new System.Drawing.Point(341, 235);
             this.targetTypeComboBox.Name = "targetTypeComboBox";
             this.targetTypeComboBox.Size = new System.Drawing.Size(114, 20);
@@ -618,7 +644,10 @@
             this.comboItem177,
             this.comboItem178,
             this.comboItem179,
-            this.comboItem180});
+            this.comboItem180,
+            this.comboItem208,
+            this.comboItem209,
+            this.comboItem210});
             this.actionTypeComboBox.Location = new System.Drawing.Point(93, 179);
             this.actionTypeComboBox.Name = "actionTypeComboBox";
             this.actionTypeComboBox.Size = new System.Drawing.Size(114, 20);
@@ -1136,7 +1165,9 @@
             this.comboItem70,
             this.comboItem71,
             this.comboItem72,
-            this.comboItem73});
+            this.comboItem73,
+            this.comboItem206,
+            this.comboItem207});
             this.eventTypeComboBox.Location = new System.Drawing.Point(93, 68);
             this.eventTypeComboBox.Name = "eventTypeComboBox";
             this.eventTypeComboBox.Size = new System.Drawing.Size(114, 20);
@@ -1445,6 +1476,14 @@
             // comboItem73
             // 
             this.comboItem73.Text = "SMART_EVENT_ACTION_DONE";
+            // 
+            // comboItem206
+            // 
+            this.comboItem206.Text = "SMART_EVENT_ON_SPELLCLICK";
+            // 
+            // comboItem207
+            // 
+            this.comboItem207.Text = "SMART_EVENT_FRIENDLY_HEALTH_PCT";
             // 
             // linkIntegerInput
             // 
@@ -1850,23 +1889,6 @@
             this.labelX26.Size = new System.Drawing.Size(61, 23);
             this.labelX26.TabIndex = 80;
             this.labelX26.Text = "Comment:";
-            // 
-            // commentTextBox
-            // 
-            this.commentTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.commentTextBox.Border.Class = "TextBoxBorder";
-            this.commentTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.commentTextBox.ForeColor = System.Drawing.Color.White;
-            this.commentTextBox.Location = new System.Drawing.Point(341, 320);
-            this.commentTextBox.Name = "commentTextBox";
-            this.commentTextBox.Size = new System.Drawing.Size(567, 20);
-            this.smartAISuperToolTip.SetSuperTooltip(this.commentTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Commenting on SAI uses a template which is the following: (with an example)\r\n\r\n\"C" +
-            "reature name - Event - Action\"\r\n\r\n\"Minion of Gurok - On spawn - Set Random Movem" +
-            "ent\"", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.commentTextBox.TabIndex = 27;
             // 
             // labelX25
             // 
@@ -2302,39 +2324,6 @@
             this.eventPhaseMaskColumnHeader.Text = "Event Phase Mask";
             this.eventPhaseMaskColumnHeader.Width = 90;
             // 
-            // removeButton
-            // 
-            this.removeButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.removeButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.removeButton.Image = ((System.Drawing.Image)(resources.GetObject("removeButton.Image")));
-            this.removeButton.Location = new System.Drawing.Point(526, 351);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(32, 32);
-            this.removeButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.removeButton.TabIndex = 23;
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.refreshButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
-            this.refreshButton.Location = new System.Drawing.Point(438, 351);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(32, 32);
-            this.refreshButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.refreshButton.TabIndex = 22;
-            // 
-            // addButton
-            // 
-            this.addButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.addButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.addButton.Image = ((System.Drawing.Image)(resources.GetObject("addButton.Image")));
-            this.addButton.Location = new System.Drawing.Point(351, 351);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(32, 32);
-            this.addButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.addButton.TabIndex = 21;
-            // 
             // eventChanceColumnHeader
             // 
             this.eventChanceColumnHeader.Text = "Event Chance";
@@ -2415,11 +2404,64 @@
             // 
             this.commentColumnHeader.Text = "Comment";
             // 
+            // removeButton
+            // 
+            this.removeButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.removeButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.removeButton.Image = ((System.Drawing.Image)(resources.GetObject("removeButton.Image")));
+            this.removeButton.Location = new System.Drawing.Point(526, 351);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(32, 32);
+            this.removeButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.removeButton.TabIndex = 23;
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.refreshButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
+            this.refreshButton.Location = new System.Drawing.Point(438, 351);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(32, 32);
+            this.refreshButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.refreshButton.TabIndex = 22;
+            // 
+            // addButton
+            // 
+            this.addButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.addButton.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.addButton.Image = ((System.Drawing.Image)(resources.GetObject("addButton.Image")));
+            this.addButton.Location = new System.Drawing.Point(351, 351);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(32, 32);
+            this.addButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.addButton.TabIndex = 21;
+            // 
+            // comboItem208
+            // 
+            this.comboItem208.Text = "SMART_ACTION_SET_POWER";
+            // 
+            // comboItem209
+            // 
+            this.comboItem209.Text = "SMART_ACTION_ADD_POWER";
+            // 
+            // comboItem210
+            // 
+            this.comboItem210.Text = "SMART_ACTION_REMOVE_POWER";
+            // 
+            // comboItem211
+            // 
+            this.comboItem211.Text = "SMART_TARGET_CLOSEST_ENEMY";
+            // 
+            // comboItem212
+            // 
+            this.comboItem212.Text = "SMART_TARGET_CLOSEST_FRIENDLY";
+            // 
             // CreateSmartAI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 714);
+            this.ClientSize = new System.Drawing.Size(920, 713);
             this.Controls.Add(this.targetTypeComboBox);
             this.Controls.Add(this.actionTypeComboBox);
             this.Controls.Add(this.eventTypeComboBox);
@@ -2823,6 +2865,13 @@
         private System.Windows.Forms.ColumnHeader targetZColumnHeader;
         private System.Windows.Forms.ColumnHeader targetOColumnHeader;
         private System.Windows.Forms.ColumnHeader commentColumnHeader;
+        private DevComponents.Editors.ComboItem comboItem206;
+        private DevComponents.Editors.ComboItem comboItem207;
+        private DevComponents.Editors.ComboItem comboItem211;
+        private DevComponents.Editors.ComboItem comboItem212;
+        private DevComponents.Editors.ComboItem comboItem208;
+        private DevComponents.Editors.ComboItem comboItem209;
+        private DevComponents.Editors.ComboItem comboItem210;
 
     }
 }

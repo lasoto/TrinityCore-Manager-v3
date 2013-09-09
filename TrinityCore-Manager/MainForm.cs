@@ -1194,15 +1194,11 @@ namespace TrinityCore_Manager
         {
             if (characterListComboBox.SelectedIndex == -1)
             {
-
                 MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return;
-
             }
 
             await TCAction.BanCharacter(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString());
-
         }
 
         private void reportBugButton_Click(object sender, EventArgs e)

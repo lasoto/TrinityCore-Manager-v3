@@ -297,14 +297,12 @@ namespace TrinityCore_Manager.Database
 
         public async Task BanAccount(string username, int bandate, int unbandate, string bannedBy, string banReason)
         {
-
             Account account = await GetAccount(username);
 
             if (account == null)
                 return;
 
             await BanAccount(account.Id, bandate, unbandate, bannedBy, banReason);
-
         }
 
         public async Task RemoveAccountBan(int id)
