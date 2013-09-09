@@ -528,11 +528,11 @@
     <Compile Include="ShowSQLCode.Designer.cs">
       <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCMSettings.cs">
+    <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TCMSettings.Designer.cs">
-      <DependentUpon>TCMSettings.cs</DependentUpon>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TCM\TCAction.cs" />
     <Compile Include="TCM\TCManager.cs" />
@@ -756,8 +756,8 @@
     <EmbeddedResource Include="ShowSQLCode.resx">
       <DependentUpon>ShowSQLCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TCMSettings.resx">
-      <DependentUpon>TCMSettings.cs</DependentUpon>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
