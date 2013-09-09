@@ -1207,15 +1207,9 @@ namespace TrinityCore_Manager
 
         private bool CheckServerOnline(bool checkForAuthToo = false)
         {
-            if (TCManager.Instance.WorldClient == null || !TCManager.Instance.WorldClient.IsOnline)
+            if (TCManager.Instance.Online)
             {
-                MessageBoxEx.Show(this, "There is no worldserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
-            }
-
-            if (checkForAuthToo && (TCManager.Instance.AuthClient == null || !TCManager.Instance.AuthClient.IsOnline))
-            {
-                MessageBoxEx.Show(this, "There is no authserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, "There is no server running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
 
