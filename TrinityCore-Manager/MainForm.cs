@@ -519,8 +519,7 @@ namespace TrinityCore_Manager
 
         private void openConfigurationFileButton_Click(object sender, EventArgs e)
         {
-            string path = Path.Combine(Settings.Default.ServerFolder, "worldserver.conf");
-            Process.Start("notepad.exe", path);
+            Process.Start(Path.Combine(Settings.Default.ServerFolder, "worldserver.conf"));
         }
 
         private async void cleanWorldButton_Click(object sender, EventArgs e)

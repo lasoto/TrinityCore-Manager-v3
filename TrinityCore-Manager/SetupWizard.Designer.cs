@@ -154,7 +154,6 @@
             this.wizard1.FinishButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_FinishButtonClick);
             this.wizard1.CancelButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_CancelButtonClick);
             this.wizard1.WizardPageChanging += new DevComponents.DotNetBar.WizardCancelPageChangeEventHandler(this.wizard1_WizardPageChanging);
-            this.wizard1.Load += new System.EventHandler(this.wizard1_Load);
             // 
             // welcomePage
             // 
@@ -594,7 +593,6 @@
             // 
             this.mysqlDetailsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mysqlDetailsPage.TabIndex = 11;
-            this.mysqlDetailsPage.Click += new System.EventHandler(this.mysqlDetailsPage_Click);
             // 
             // mySqlConnectionProgressBar2
             // 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,15 +99,29 @@ namespace TrinityCore_Manager
 
                     if (string.IsNullOrEmpty(folderTextBox.Text))
                     {
-
                         MessageBoxEx.Show(this, "You must select the folder for TrinityCore", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         e.Cancel = true;
-
                     }
                     else
                     {
-                        e.NewPage = mysqlDetailsPage;
+                        string errorMessage = "";
+
+                        if (Directory.GetFiles(folderTextBox.Text, "worldserver.exe").FirstOrDefault() == null)
+                            errorMessage = "worldserver.exe!";
+                        else if (Directory.GetFiles(folderTextBox.Text, "authserver.exe").FirstOrDefault() == null)
+                            errorMessage = "authserver.exe!";
+                        else if (Directory.GetFiles(folderTextBox.Text, "worldserver.conf").FirstOrDefault() == null)
+                            errorMessage = "worldserver.conf!";
+                        else if (Directory.GetFiles(folderTextBox.Text, "authserver.conf").FirstOrDefault() == null)
+                            errorMessage = "authserver.conf!";
+
+                        if (errorMessage.Length > 0)
+                        {
+                            MessageBoxEx.Show(this, "The selected folder does not contain an instance of " + errorMessage + "<br />Please make sure you selected the folder containing the binaries, subdirectories do not count.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            e.Cancel = true;
+                        }
+                        else
+                            e.NewPage = mysqlDetailsPage;
                     }
 
                 }
@@ -249,7 +264,6 @@ namespace TrinityCore_Manager
 
         private void downloadCreateDBButton_Click(object sender, EventArgs e)
         {
-
             createDBsPage.NextButtonEnabled = eWizardButtonState.False;
             downloadProgressBar2.Visible = true;
         }
@@ -273,6 +287,7 @@ namespace TrinityCore_Manager
 
             if (mySqlPassTextBox.Text.Length > 0)
                 settings.DBPassword = mySqlPassTextBox.Text.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
+
             settings.DBAuthName = authDBTextBox.Text;
             settings.DBCharName = charactersDBTextBox.Text;
             settings.DBWorldName = worldDBTextBox.Text;
@@ -296,27 +311,14 @@ namespace TrinityCore_Manager
             }
 
             Result = true;
-
             settings.Save();
-
             Close();
-
         }
 
         private void wizard1_CancelButtonClick(object sender, CancelEventArgs e)
         {
             if (MessageBoxEx.Show(this, "Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Close();
-        }
-
-        private void mysqlDetailsPage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wizard1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonXSearchForDbAuth_Click(object sender, EventArgs e)
