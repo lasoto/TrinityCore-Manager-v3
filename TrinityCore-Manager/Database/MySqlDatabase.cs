@@ -90,9 +90,7 @@ namespace TrinityCore_Manager.Database
                     {
 
                         foreach (var param in mParams)
-                        {
                             cmd.Parameters.Add(param);
-                        }
 
                         var reader = cmd.ExecuteReader();
 

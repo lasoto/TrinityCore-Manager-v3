@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupWizard));
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo1 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo2 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo3 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo4 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo5 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo6 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo7 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo8 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo9 = new DevComponents.DotNetBar.SuperTooltipInfo();
+            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo10 = new DevComponents.DotNetBar.SuperTooltipInfo();
             this.wizard1 = new DevComponents.DotNetBar.Wizard();
             this.welcomePage = new DevComponents.DotNetBar.WizardPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +65,7 @@
             this.portLabelX = new DevComponents.DotNetBar.LabelX();
             this.hostLabelX = new DevComponents.DotNetBar.LabelX();
             this.mysqlDetailsPage = new DevComponents.DotNetBar.WizardPage();
+            this.mySqlConnectionProgressBar2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.mySqlPassTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mySqlUsernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.mySqlHostTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -66,6 +77,7 @@
             this.MySQLPortLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLHostLabelX = new DevComponents.DotNetBar.LabelX();
             this.createDBsPage = new DevComponents.DotNetBar.WizardPage();
+            this.downloadProgressBar2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.MySQLPercentLabelX = new DevComponents.DotNetBar.LabelX();
             this.downloadProgressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.downloadCreateDBButton = new DevComponents.DotNetBar.ButtonX();
@@ -79,8 +91,6 @@
             this.serverCompletedPage = new DevComponents.DotNetBar.WizardPage();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.setupSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.mySqlConnectionProgressBar2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.downloadProgressBar2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.wizard1.SuspendLayout();
             this.welcomePage.SuspendLayout();
             this.connectOptionPage.SuspendLayout();
@@ -151,6 +161,7 @@
             this.wizard1.FinishButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_FinishButtonClick);
             this.wizard1.CancelButtonClick += new System.ComponentModel.CancelEventHandler(this.wizard1_CancelButtonClick);
             this.wizard1.WizardPageChanging += new DevComponents.DotNetBar.WizardCancelPageChangeEventHandler(this.wizard1_WizardPageChanging);
+            this.wizard1.Load += new System.EventHandler(this.wizard1_Load);
             // 
             // welcomePage
             // 
@@ -421,8 +432,13 @@
             this.passwordTextBox.ForeColor = System.Drawing.Color.White;
             this.passwordTextBox.Location = new System.Drawing.Point(274, 177);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(210, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account password", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo1.BodyText = "Account password";
+            superTooltipInfo1.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo1.FooterVisible = false;
+            superTooltipInfo1.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.passwordTextBox, superTooltipInfo1);
             this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -438,7 +454,11 @@
             this.usernameTextBox.Location = new System.Drawing.Point(274, 137);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(208, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.usernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Account username", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo2.BodyText = "Account username";
+            superTooltipInfo2.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo2.FooterVisible = false;
+            superTooltipInfo2.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.usernameTextBox, superTooltipInfo2);
             this.usernameTextBox.TabIndex = 3;
             // 
             // hostTextBox
@@ -453,7 +473,11 @@
             this.hostTextBox.Location = new System.Drawing.Point(272, 42);
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(210, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.hostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. server.examplename.com", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo3.BodyText = "e.g. server.examplename.com";
+            superTooltipInfo3.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo3.FooterVisible = false;
+            superTooltipInfo3.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.hostTextBox, superTooltipInfo3);
             this.hostTextBox.TabIndex = 1;
             // 
             // labelX2
@@ -523,8 +547,11 @@
             this.portIntegerInput.MinValue = 0;
             this.portIntegerInput.Name = "portIntegerInput";
             this.portIntegerInput.ShowUpDown = true;
-            this.portIntegerInput.Size = new System.Drawing.Size(80, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3443", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo4.BodyText = "Default: 3443";
+            superTooltipInfo4.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo4.FooterVisible = false;
+            superTooltipInfo4.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.portIntegerInput, superTooltipInfo4);
             this.portIntegerInput.TabIndex = 2;
             this.portIntegerInput.Value = 3443;
             // 
@@ -591,6 +618,19 @@
             this.mysqlDetailsPage.TabIndex = 11;
             this.mysqlDetailsPage.Click += new System.EventHandler(this.mysqlDetailsPage_Click);
             // 
+            // mySqlConnectionProgressBar2
+            // 
+            // 
+            // 
+            // 
+            this.mySqlConnectionProgressBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mySqlConnectionProgressBar2.Location = new System.Drawing.Point(84, 223);
+            this.mySqlConnectionProgressBar2.Name = "mySqlConnectionProgressBar2";
+            this.mySqlConnectionProgressBar2.Size = new System.Drawing.Size(553, 36);
+            this.mySqlConnectionProgressBar2.TabIndex = 32;
+            this.mySqlConnectionProgressBar2.Text = "progressBarX1";
+            this.mySqlConnectionProgressBar2.Visible = false;
+            // 
             // mySqlPassTextBox
             // 
             this.mySqlPassTextBox.BackColor = System.Drawing.Color.Black;
@@ -602,6 +642,7 @@
             this.mySqlPassTextBox.ForeColor = System.Drawing.Color.White;
             this.mySqlPassTextBox.Location = new System.Drawing.Point(280, 183);
             this.mySqlPassTextBox.Name = "mySqlPassTextBox";
+            this.mySqlPassTextBox.PasswordChar = '●';
             this.mySqlPassTextBox.Size = new System.Drawing.Size(213, 20);
             this.mySqlPassTextBox.TabIndex = 4;
             this.mySqlPassTextBox.UseSystemPasswordChar = true;
@@ -618,7 +659,9 @@
             this.mySqlUsernameTextBox.Location = new System.Drawing.Point(280, 143);
             this.mySqlUsernameTextBox.Name = "mySqlUsernameTextBox";
             this.mySqlUsernameTextBox.Size = new System.Drawing.Size(213, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.mySqlUsernameTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: root", null, null, DevComponents.DotNetBar.eTooltipColor.Blue));
+            superTooltipInfo5.BodyText = "Default: root";
+            superTooltipInfo5.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            this.setupSuperTooltip.SetSuperTooltip(this.mySqlUsernameTextBox, superTooltipInfo5);
             this.mySqlUsernameTextBox.TabIndex = 3;
             // 
             // mySqlHostTextBox
@@ -633,7 +676,11 @@
             this.mySqlHostTextBox.Location = new System.Drawing.Point(280, 53);
             this.mySqlHostTextBox.Name = "mySqlHostTextBox";
             this.mySqlHostTextBox.Size = new System.Drawing.Size(213, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.mySqlHostTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: localhost", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo6.BodyText = "Default: localhost";
+            superTooltipInfo6.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo6.FooterVisible = false;
+            superTooltipInfo6.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.mySqlHostTextBox, superTooltipInfo6);
             this.mySqlHostTextBox.TabIndex = 1;
             // 
             // mySqlConnectionProgressBar
@@ -701,8 +748,11 @@
             this.MySQLIntegerInputX.MinValue = 0;
             this.MySQLIntegerInputX.Name = "MySQLIntegerInputX";
             this.MySQLIntegerInputX.ShowUpDown = true;
-            this.MySQLIntegerInputX.Size = new System.Drawing.Size(80, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.MySQLIntegerInputX, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Default: 3306", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo7.BodyText = "Default: 3306";
+            superTooltipInfo7.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo7.FooterVisible = false;
+            superTooltipInfo7.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.MySQLIntegerInputX, superTooltipInfo7);
             this.MySQLIntegerInputX.TabIndex = 2;
             this.MySQLIntegerInputX.Value = 3306;
             // 
@@ -760,6 +810,19 @@
             // 
             this.createDBsPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.createDBsPage.TabIndex = 12;
+            // 
+            // downloadProgressBar2
+            // 
+            // 
+            // 
+            // 
+            this.downloadProgressBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.downloadProgressBar2.Location = new System.Drawing.Point(78, 217);
+            this.downloadProgressBar2.Name = "downloadProgressBar2";
+            this.downloadProgressBar2.Size = new System.Drawing.Size(563, 42);
+            this.downloadProgressBar2.TabIndex = 6;
+            this.downloadProgressBar2.Text = "progressBarX1";
+            this.downloadProgressBar2.Visible = false;
             // 
             // MySQLPercentLabelX
             // 
@@ -843,7 +906,11 @@
             this.worldDBTextBox.Location = new System.Drawing.Point(264, 152);
             this.worldDBTextBox.Name = "worldDBTextBox";
             this.worldDBTextBox.Size = new System.Drawing.Size(274, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.worldDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. world", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo8.BodyText = "e.g. world";
+            superTooltipInfo8.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo8.FooterVisible = false;
+            superTooltipInfo8.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.worldDBTextBox, superTooltipInfo8);
             this.worldDBTextBox.TabIndex = 39;
             // 
             // charactersDBTextBox
@@ -858,7 +925,11 @@
             this.charactersDBTextBox.Location = new System.Drawing.Point(264, 112);
             this.charactersDBTextBox.Name = "charactersDBTextBox";
             this.charactersDBTextBox.Size = new System.Drawing.Size(274, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.charactersDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. characters", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo9.BodyText = "e.g. characters";
+            superTooltipInfo9.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo9.FooterVisible = false;
+            superTooltipInfo9.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.charactersDBTextBox, superTooltipInfo9);
             this.charactersDBTextBox.TabIndex = 38;
             // 
             // authDBTextBox
@@ -873,7 +944,11 @@
             this.authDBTextBox.Location = new System.Drawing.Point(264, 71);
             this.authDBTextBox.Name = "authDBTextBox";
             this.authDBTextBox.Size = new System.Drawing.Size(274, 20);
-            this.setupSuperTooltip.SetSuperTooltip(this.authDBTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "e.g. auth", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            superTooltipInfo10.BodyText = "e.g. auth";
+            superTooltipInfo10.Color = DevComponents.DotNetBar.eTooltipColor.Blue;
+            superTooltipInfo10.FooterVisible = false;
+            superTooltipInfo10.HeaderVisible = false;
+            this.setupSuperTooltip.SetSuperTooltip(this.authDBTextBox, superTooltipInfo10);
             this.authDBTextBox.TabIndex = 37;
             // 
             // MySQLWorldDBLabelX
@@ -957,32 +1032,6 @@
             // setupSuperTooltip
             // 
             this.setupSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            // 
-            // mySqlConnectionProgressBar2
-            // 
-            // 
-            // 
-            // 
-            this.mySqlConnectionProgressBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mySqlConnectionProgressBar2.Location = new System.Drawing.Point(84, 223);
-            this.mySqlConnectionProgressBar2.Name = "mySqlConnectionProgressBar2";
-            this.mySqlConnectionProgressBar2.Size = new System.Drawing.Size(553, 36);
-            this.mySqlConnectionProgressBar2.TabIndex = 32;
-            this.mySqlConnectionProgressBar2.Text = "progressBarX1";
-            this.mySqlConnectionProgressBar2.Visible = false;
-            // 
-            // downloadProgressBar2
-            // 
-            // 
-            // 
-            // 
-            this.downloadProgressBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.downloadProgressBar2.Location = new System.Drawing.Point(78, 217);
-            this.downloadProgressBar2.Name = "downloadProgressBar2";
-            this.downloadProgressBar2.Size = new System.Drawing.Size(563, 42);
-            this.downloadProgressBar2.TabIndex = 6;
-            this.downloadProgressBar2.Text = "progressBarX1";
-            this.downloadProgressBar2.Visible = false;
             // 
             // SetupWizard
             // 

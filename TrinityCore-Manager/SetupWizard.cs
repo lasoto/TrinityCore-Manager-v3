@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +7,6 @@ using System.Windows.Forms;
 using System.IO;
 using DevComponents.DotNetBar;
 using MySql.Data.MySqlClient;
-using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Security;
@@ -114,7 +109,7 @@ namespace TrinityCore_Manager
                     string username = usernameTextBox.Text;
                     string password = passwordTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(port.ToString()))
                     {
 
                         MessageBoxEx.Show(this, "You must fill in all of the Remote Access details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -293,6 +288,11 @@ namespace TrinityCore_Manager
         }
 
         private void mysqlDetailsPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wizard1_Load(object sender, EventArgs e)
         {
 
         }
