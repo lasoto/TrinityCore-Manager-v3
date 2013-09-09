@@ -64,9 +64,9 @@
             // 
             // 
             this.engineerlootCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.engineerlootCheckBox.Location = new System.Drawing.Point(12, 447);
+            this.engineerlootCheckBox.Location = new System.Drawing.Point(226, 99);
             this.engineerlootCheckBox.Name = "engineerlootCheckBox";
-            this.engineerlootCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.engineerlootCheckBox.Size = new System.Drawing.Size(127, 23);
             this.engineerlootCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.engineerlootCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes mob lootable by engineer", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.engineerlootCheckBox.TabIndex = 51;
@@ -78,9 +78,9 @@
             // 
             // 
             this.unk15CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk15CheckBox.Location = new System.Drawing.Point(12, 418);
+            this.unk15CheckBox.Location = new System.Drawing.Point(226, 70);
             this.unk15CheckBox.Name = "unk15CheckBox";
-            this.unk15CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk15CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk15CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.unk15CheckBox.TabIndex = 50;
             this.unk15CheckBox.Text = "UNK15";
@@ -91,9 +91,9 @@
             // 
             // 
             this.unk14CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk14CheckBox.Location = new System.Drawing.Point(12, 389);
+            this.unk14CheckBox.Location = new System.Drawing.Point(226, 41);
             this.unk14CheckBox.Name = "unk14CheckBox";
-            this.unk14CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk14CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk14CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk14CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Is using pet bar.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk14CheckBox.TabIndex = 49;
@@ -105,9 +105,9 @@
             // 
             // 
             this.aidPlayersCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.aidPlayersCheckBox.Location = new System.Drawing.Point(12, 360);
+            this.aidPlayersCheckBox.Location = new System.Drawing.Point(226, 12);
             this.aidPlayersCheckBox.Name = "aidPlayersCheckBox";
-            this.aidPlayersCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.aidPlayersCheckBox.Size = new System.Drawing.Size(127, 23);
             this.aidPlayersCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.aidPlayersCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Can aid any player in combat if in range?", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.aidPlayersCheckBox.TabIndex = 48;
@@ -121,7 +121,7 @@
             this.mountedCombatCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mountedCombatCheckBox.Location = new System.Drawing.Point(12, 331);
             this.mountedCombatCheckBox.Name = "mountedCombatCheckBox";
-            this.mountedCombatCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.mountedCombatCheckBox.Size = new System.Drawing.Size(127, 23);
             this.mountedCombatCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.mountedCombatCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Creature can remain mounted when entering combat", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.mountedCombatCheckBox.TabIndex = 47;
@@ -135,7 +135,7 @@
             this.unk11CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk11CheckBox.Location = new System.Drawing.Point(12, 302);
             this.unk11CheckBox.Name = "unk11CheckBox";
-            this.unk11CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk11CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk11CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk11CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Does not combatlog death.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk11CheckBox.TabIndex = 46;
@@ -149,7 +149,7 @@
             this.mininglootCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mininglootCheckBox.Location = new System.Drawing.Point(12, 273);
             this.mininglootCheckBox.Name = "mininglootCheckBox";
-            this.mininglootCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.mininglootCheckBox.Size = new System.Drawing.Size(127, 23);
             this.mininglootCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.mininglootCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes mob minable", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.mininglootCheckBox.TabIndex = 45;
@@ -163,7 +163,7 @@
             this.herblootCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.herblootCheckBox.Location = new System.Drawing.Point(12, 244);
             this.herblootCheckBox.Name = "herblootCheckBox";
-            this.herblootCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.herblootCheckBox.Size = new System.Drawing.Size(127, 23);
             this.herblootCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.herblootCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes mob herbable", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.herblootCheckBox.TabIndex = 44;
@@ -177,7 +177,7 @@
             this.deadInteractCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.deadInteractCheckBox.Location = new System.Drawing.Point(12, 215);
             this.deadInteractCheckBox.Name = "deadInteractCheckBox";
-            this.deadInteractCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.deadInteractCheckBox.Size = new System.Drawing.Size(127, 23);
             this.deadInteractCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.deadInteractCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Player can interact with the creature if its dead (not player dead)", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.deadInteractCheckBox.TabIndex = 43;
@@ -191,7 +191,7 @@
             this.unk7CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk7CheckBox.Location = new System.Drawing.Point(12, 186);
             this.unk7CheckBox.Name = "unk7CheckBox";
-            this.unk7CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk7CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk7CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk7CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Spell attackable.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk7CheckBox.TabIndex = 42;
@@ -205,7 +205,7 @@
             this.unk6CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk6CheckBox.Location = new System.Drawing.Point(12, 157);
             this.unk6CheckBox.Name = "unk6CheckBox";
-            this.unk6CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk6CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk6CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.unk6CheckBox.TabIndex = 41;
             this.unk6CheckBox.Text = "UNK6";
@@ -218,7 +218,7 @@
             this.unk5CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk5CheckBox.Location = new System.Drawing.Point(12, 128);
             this.unk5CheckBox.Name = "unk5CheckBox";
-            this.unk5CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk5CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk5CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk5CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Hides tooltip faction.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk5CheckBox.TabIndex = 40;
@@ -232,7 +232,7 @@
             this.unk4CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk4CheckBox.Location = new System.Drawing.Point(12, 99);
             this.unk4CheckBox.Name = "unk4CheckBox";
-            this.unk4CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk4CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk4CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk4CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Does not play wound animation on parry.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk4CheckBox.TabIndex = 39;
@@ -246,7 +246,7 @@
             this.unk3CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.unk3CheckBox.Location = new System.Drawing.Point(12, 70);
             this.unk3CheckBox.Name = "unk3CheckBox";
-            this.unk3CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk3CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk3CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk3CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Changes creature\'s visible level to \"??\" in the creature\'s portrait", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk3CheckBox.TabIndex = 38;
@@ -260,7 +260,7 @@
             this.ghostCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ghostCheckBox.Location = new System.Drawing.Point(12, 41);
             this.ghostCheckBox.Name = "ghostCheckBox";
-            this.ghostCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.ghostCheckBox.Size = new System.Drawing.Size(127, 23);
             this.ghostCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.ghostCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Creature are also visible for not alive player. Allow gossip interaction if npcfl" +
             "ag allow?", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
@@ -275,7 +275,7 @@
             this.tameableCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tameableCheckBox.Location = new System.Drawing.Point(12, 12);
             this.tameableCheckBox.Name = "tameableCheckBox";
-            this.tameableCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.tameableCheckBox.Size = new System.Drawing.Size(127, 23);
             this.tameableCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.tameableCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes the mob tameable (must also be a beast and have family set)", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.tameableCheckBox.TabIndex = 36;
@@ -287,9 +287,9 @@
             // 
             // 
             this.unk24CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk24CheckBox.Location = new System.Drawing.Point(311, 215);
+            this.unk24CheckBox.Location = new System.Drawing.Point(226, 331);
             this.unk24CheckBox.Name = "unk24CheckBox";
-            this.unk24CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk24CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk24CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk24CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Can only interact with its creator.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk24CheckBox.TabIndex = 59;
@@ -301,9 +301,9 @@
             // 
             // 
             this.unk23CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk23CheckBox.Location = new System.Drawing.Point(311, 186);
+            this.unk23CheckBox.Location = new System.Drawing.Point(226, 302);
             this.unk23CheckBox.Name = "unk23CheckBox";
-            this.unk23CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk23CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk23CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.unk23CheckBox.TabIndex = 58;
             this.unk23CheckBox.Text = "UNK23";
@@ -314,9 +314,9 @@
             // 
             // 
             this.unk22CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk22CheckBox.Location = new System.Drawing.Point(311, 157);
+            this.unk22CheckBox.Location = new System.Drawing.Point(226, 273);
             this.unk22CheckBox.Name = "unk22CheckBox";
-            this.unk22CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk22CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk22CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk22CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Does not play mounted animations.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk22CheckBox.TabIndex = 57;
@@ -328,9 +328,9 @@
             // 
             // 
             this.unk21CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk21CheckBox.Location = new System.Drawing.Point(311, 128);
+            this.unk21CheckBox.Location = new System.Drawing.Point(226, 244);
             this.unk21CheckBox.Name = "unk21CheckBox";
-            this.unk21CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk21CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk21CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk21CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Hides nameplate.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk21CheckBox.TabIndex = 56;
@@ -342,9 +342,9 @@
             // 
             // 
             this.unk20CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk20CheckBox.Location = new System.Drawing.Point(311, 99);
+            this.unk20CheckBox.Location = new System.Drawing.Point(226, 215);
             this.unk20CheckBox.Name = "unk20CheckBox";
-            this.unk20CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk20CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk20CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk20CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Does not collide with missiles.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk20CheckBox.TabIndex = 55;
@@ -356,9 +356,9 @@
             // 
             // 
             this.unk19CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk19CheckBox.Location = new System.Drawing.Point(311, 70);
+            this.unk19CheckBox.Location = new System.Drawing.Point(226, 186);
             this.unk19CheckBox.Name = "unk19CheckBox";
-            this.unk19CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk19CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk19CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk19CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Is siege weapon.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk19CheckBox.TabIndex = 54;
@@ -370,9 +370,9 @@
             // 
             // 
             this.unk18CheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.unk18CheckBox.Location = new System.Drawing.Point(311, 41);
+            this.unk18CheckBox.Location = new System.Drawing.Point(226, 157);
             this.unk18CheckBox.Name = "unk18CheckBox";
-            this.unk18CheckBox.Size = new System.Drawing.Size(232, 23);
+            this.unk18CheckBox.Size = new System.Drawing.Size(127, 23);
             this.unk18CheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.unk18CheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Collision related. (always using default collision box?)", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.unk18CheckBox.TabIndex = 53;
@@ -384,9 +384,9 @@
             // 
             // 
             this.exoticCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.exoticCheckBox.Location = new System.Drawing.Point(311, 12);
+            this.exoticCheckBox.Location = new System.Drawing.Point(226, 128);
             this.exoticCheckBox.Name = "exoticCheckBox";
-            this.exoticCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.exoticCheckBox.Size = new System.Drawing.Size(127, 23);
             this.exoticCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.typeFlagsSuperTooltip.SetSuperTooltip(this.exoticCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Tamable as an exotic pet. Normal tamable flag must also be set.", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.exoticCheckBox.TabIndex = 52;
@@ -400,7 +400,7 @@
             // 
             this.checkAllButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.checkAllButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.checkAllButton.Location = new System.Drawing.Point(12, 506);
+            this.checkAllButton.Location = new System.Drawing.Point(12, 360);
             this.checkAllButton.Name = "checkAllButton";
             this.checkAllButton.Size = new System.Drawing.Size(106, 35);
             this.checkAllButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -414,7 +414,7 @@
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(437, 506);
+            this.okButton.Location = new System.Drawing.Point(226, 360);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(106, 35);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -427,7 +427,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 553);
+            this.ClientSize = new System.Drawing.Size(354, 409);
             this.Controls.Add(this.checkAllButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.unk24CheckBox);
@@ -459,9 +459,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(571, 591);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(571, 591);
             this.Name = "FindTypeFlags";
             this.Text = "Find Type_Flags";
             this.ResumeLayout(false);

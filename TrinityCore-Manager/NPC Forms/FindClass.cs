@@ -17,5 +17,10 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
+
+        private void FindClass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

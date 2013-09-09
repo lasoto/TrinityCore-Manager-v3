@@ -69,7 +69,7 @@
             // 
             this.checkAllButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.checkAllButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.checkAllButton.Location = new System.Drawing.Point(12, 506);
+            this.checkAllButton.Location = new System.Drawing.Point(12, 488);
             this.checkAllButton.Name = "checkAllButton";
             this.checkAllButton.Size = new System.Drawing.Size(106, 35);
             this.checkAllButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -83,7 +83,7 @@
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(437, 506);
+            this.okButton.Location = new System.Drawing.Point(214, 488);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(106, 35);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -309,7 +309,7 @@
             // 
             // 
             this.enragedCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.enragedCheckBox.Location = new System.Drawing.Point(311, 418);
+            this.enragedCheckBox.Location = new System.Drawing.Point(195, 418);
             this.enragedCheckBox.Name = "enragedCheckBox";
             this.enragedCheckBox.Size = new System.Drawing.Size(232, 23);
             this.enragedCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -322,7 +322,7 @@
             // 
             // 
             this.sappedCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.sappedCheckBox.Location = new System.Drawing.Point(311, 389);
+            this.sappedCheckBox.Location = new System.Drawing.Point(195, 389);
             this.sappedCheckBox.Name = "sappedCheckBox";
             this.sappedCheckBox.Size = new System.Drawing.Size(232, 23);
             this.sappedCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -335,7 +335,7 @@
             // 
             // 
             this.immuneShieldCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.immuneShieldCheckBox.Location = new System.Drawing.Point(311, 360);
+            this.immuneShieldCheckBox.Location = new System.Drawing.Point(195, 360);
             this.immuneShieldCheckBox.Name = "immuneShieldCheckBox";
             this.immuneShieldCheckBox.Size = new System.Drawing.Size(232, 23);
             this.immuneShieldCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -349,7 +349,7 @@
             // 
             // 
             this.discoveryCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.discoveryCheckBox.Location = new System.Drawing.Point(311, 331);
+            this.discoveryCheckBox.Location = new System.Drawing.Point(195, 331);
             this.discoveryCheckBox.Name = "discoveryCheckBox";
             this.discoveryCheckBox.Size = new System.Drawing.Size(232, 23);
             this.discoveryCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -363,7 +363,7 @@
             // 
             // 
             this.dazeCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dazeCheckBox.Location = new System.Drawing.Point(311, 302);
+            this.dazeCheckBox.Location = new System.Drawing.Point(195, 302);
             this.dazeCheckBox.Name = "dazeCheckBox";
             this.dazeCheckBox.Size = new System.Drawing.Size(232, 23);
             this.dazeCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -376,7 +376,7 @@
             // 
             // 
             this.interruptCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.interruptCheckBox.Location = new System.Drawing.Point(311, 273);
+            this.interruptCheckBox.Location = new System.Drawing.Point(195, 273);
             this.interruptCheckBox.Name = "interruptCheckBox";
             this.interruptCheckBox.Size = new System.Drawing.Size(232, 23);
             this.interruptCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -389,7 +389,7 @@
             // 
             // 
             this.invulnCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.invulnCheckBox.Location = new System.Drawing.Point(311, 244);
+            this.invulnCheckBox.Location = new System.Drawing.Point(195, 244);
             this.invulnCheckBox.Name = "invulnCheckBox";
             this.invulnCheckBox.Size = new System.Drawing.Size(232, 23);
             this.invulnCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -403,7 +403,7 @@
             // 
             // 
             this.horrorCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.horrorCheckBox.Location = new System.Drawing.Point(311, 215);
+            this.horrorCheckBox.Location = new System.Drawing.Point(195, 215);
             this.horrorCheckBox.Name = "horrorCheckBox";
             this.horrorCheckBox.Size = new System.Drawing.Size(232, 23);
             this.horrorCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -417,7 +417,7 @@
             // 
             // 
             this.turnCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.turnCheckBox.Location = new System.Drawing.Point(311, 186);
+            this.turnCheckBox.Location = new System.Drawing.Point(195, 186);
             this.turnCheckBox.Name = "turnCheckBox";
             this.turnCheckBox.Size = new System.Drawing.Size(232, 23);
             this.turnCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -431,7 +431,7 @@
             // 
             // 
             this.infectedCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.infectedCheckBox.Location = new System.Drawing.Point(311, 157);
+            this.infectedCheckBox.Location = new System.Drawing.Point(195, 157);
             this.infectedCheckBox.Name = "infectedCheckBox";
             this.infectedCheckBox.Size = new System.Drawing.Size(232, 23);
             this.infectedCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -445,7 +445,7 @@
             // 
             // 
             this.mountCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mountCheckBox.Location = new System.Drawing.Point(311, 128);
+            this.mountCheckBox.Location = new System.Drawing.Point(195, 128);
             this.mountCheckBox.Name = "mountCheckBox";
             this.mountCheckBox.Size = new System.Drawing.Size(232, 23);
             this.mountCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -459,7 +459,7 @@
             // 
             // 
             this.shackleCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.shackleCheckBox.Location = new System.Drawing.Point(311, 99);
+            this.shackleCheckBox.Location = new System.Drawing.Point(195, 99);
             this.shackleCheckBox.Name = "shackleCheckBox";
             this.shackleCheckBox.Size = new System.Drawing.Size(232, 23);
             this.shackleCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -473,7 +473,7 @@
             // 
             // 
             this.shieldCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.shieldCheckBox.Location = new System.Drawing.Point(311, 70);
+            this.shieldCheckBox.Location = new System.Drawing.Point(195, 70);
             this.shieldCheckBox.Name = "shieldCheckBox";
             this.shieldCheckBox.Size = new System.Drawing.Size(232, 23);
             this.shieldCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -486,7 +486,7 @@
             // 
             // 
             this.banishCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.banishCheckBox.Location = new System.Drawing.Point(311, 41);
+            this.banishCheckBox.Location = new System.Drawing.Point(195, 41);
             this.banishCheckBox.Name = "banishCheckBox";
             this.banishCheckBox.Size = new System.Drawing.Size(232, 23);
             this.banishCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -499,7 +499,7 @@
             // 
             // 
             this.polymorphCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.polymorphCheckBox.Location = new System.Drawing.Point(311, 12);
+            this.polymorphCheckBox.Location = new System.Drawing.Point(195, 12);
             this.polymorphCheckBox.Name = "polymorphCheckBox";
             this.polymorphCheckBox.Size = new System.Drawing.Size(232, 23);
             this.polymorphCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -515,7 +515,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 553);
+            this.ClientSize = new System.Drawing.Size(332, 535);
             this.Controls.Add(this.enragedCheckBox);
             this.Controls.Add(this.sappedCheckBox);
             this.Controls.Add(this.immuneShieldCheckBox);
@@ -554,9 +554,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(571, 591);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(571, 591);
             this.Name = "FindMechanicImmuneMask";
             this.Text = "Find Mechanic_Immune_Mask";
             this.ResumeLayout(false);

@@ -47,7 +47,7 @@
             // 
             this.checkAllButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.checkAllButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.checkAllButton.Location = new System.Drawing.Point(12, 506);
+            this.checkAllButton.Location = new System.Drawing.Point(12, 157);
             this.checkAllButton.Name = "checkAllButton";
             this.checkAllButton.Size = new System.Drawing.Size(106, 35);
             this.checkAllButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -61,7 +61,7 @@
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(437, 506);
+            this.okButton.Location = new System.Drawing.Point(257, 157);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(106, 35);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -75,9 +75,9 @@
             // 
             // 
             this.tappedByAllThreatListCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tappedByAllThreatListCheckBox.Location = new System.Drawing.Point(180, 352);
+            this.tappedByAllThreatListCheckBox.Location = new System.Drawing.Point(166, 99);
             this.tappedByAllThreatListCheckBox.Name = "tappedByAllThreatListCheckBox";
-            this.tappedByAllThreatListCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.tappedByAllThreatListCheckBox.Size = new System.Drawing.Size(192, 23);
             this.tappedByAllThreatListCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.tappedByAllThreatListCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Lua_UnitIsTappedByAllThreatList", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.tappedByAllThreatListCheckBox.TabIndex = 46;
@@ -89,9 +89,9 @@
             // 
             // 
             this.referAFriendCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.referAFriendCheckBox.Location = new System.Drawing.Point(180, 323);
+            this.referAFriendCheckBox.Location = new System.Drawing.Point(166, 70);
             this.referAFriendCheckBox.Name = "referAFriendCheckBox";
-            this.referAFriendCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.referAFriendCheckBox.Size = new System.Drawing.Size(192, 23);
             this.referAFriendCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.referAFriendCheckBox.TabIndex = 45;
             this.referAFriendCheckBox.Text = "REFER_A_FRIEND";
@@ -102,9 +102,9 @@
             // 
             // 
             this.deadCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.deadCheckBox.Location = new System.Drawing.Point(180, 294);
+            this.deadCheckBox.Location = new System.Drawing.Point(166, 41);
             this.deadCheckBox.Name = "deadCheckBox";
-            this.deadCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.deadCheckBox.Size = new System.Drawing.Size(192, 23);
             this.deadCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.deadCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes the creature appear dead (this DOES NOT make the creatures name grey or not" +
             " attack players.)\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
@@ -117,9 +117,9 @@
             // 
             // 
             this.specialInfoCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.specialInfoCheckBox.Location = new System.Drawing.Point(180, 265);
+            this.specialInfoCheckBox.Location = new System.Drawing.Point(166, 12);
             this.specialInfoCheckBox.Name = "specialInfoCheckBox";
-            this.specialInfoCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.specialInfoCheckBox.Size = new System.Drawing.Size(192, 23);
             this.specialInfoCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.specialInfoCheckBox.TabIndex = 43;
             this.specialInfoCheckBox.Text = "SPECIAL_INFO";
@@ -130,9 +130,9 @@
             // 
             // 
             this.tappedByPlayerCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tappedByPlayerCheckBox.Location = new System.Drawing.Point(180, 236);
+            this.tappedByPlayerCheckBox.Location = new System.Drawing.Point(12, 128);
             this.tappedByPlayerCheckBox.Name = "tappedByPlayerCheckBox";
-            this.tappedByPlayerCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.tappedByPlayerCheckBox.Size = new System.Drawing.Size(135, 23);
             this.tappedByPlayerCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.tappedByPlayerCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Lua_UnitIsTappedByPlayer usually used by (PCV\'s) Player Controlled Vehicle\'s\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.tappedByPlayerCheckBox.TabIndex = 42;
@@ -144,9 +144,9 @@
             // 
             // 
             this.tappedCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tappedCheckBox.Location = new System.Drawing.Point(180, 207);
+            this.tappedCheckBox.Location = new System.Drawing.Point(12, 99);
             this.tappedCheckBox.Name = "tappedCheckBox";
-            this.tappedCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.tappedCheckBox.Size = new System.Drawing.Size(135, 23);
             this.tappedCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.tappedCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Makes creatures name appear grey (Lua_UnitIsTapped)\r\n", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.tappedCheckBox.TabIndex = 41;
@@ -158,9 +158,9 @@
             // 
             // 
             this.trackUnitCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.trackUnitCheckBox.Location = new System.Drawing.Point(180, 178);
+            this.trackUnitCheckBox.Location = new System.Drawing.Point(12, 70);
             this.trackUnitCheckBox.Name = "trackUnitCheckBox";
-            this.trackUnitCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.trackUnitCheckBox.Size = new System.Drawing.Size(135, 23);
             this.trackUnitCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.trackUnitCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Creature\'s location will be seen as a small dot in the minimap", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.trackUnitCheckBox.TabIndex = 40;
@@ -172,9 +172,9 @@
             // 
             // 
             this.lootableCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lootableCheckBox.Location = new System.Drawing.Point(180, 149);
+            this.lootableCheckBox.Location = new System.Drawing.Point(12, 41);
             this.lootableCheckBox.Name = "lootableCheckBox";
-            this.lootableCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.lootableCheckBox.Size = new System.Drawing.Size(135, 23);
             this.lootableCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.lootableCheckBox.TabIndex = 39;
             this.lootableCheckBox.Text = "LOOTABLE";
@@ -185,9 +185,9 @@
             // 
             // 
             this.noneCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.noneCheckBox.Location = new System.Drawing.Point(180, 120);
+            this.noneCheckBox.Location = new System.Drawing.Point(12, 12);
             this.noneCheckBox.Name = "noneCheckBox";
-            this.noneCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.noneCheckBox.Size = new System.Drawing.Size(135, 23);
             this.noneCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dynamicFlagsSuperTooltip.SetSuperTooltip(this.noneCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "", null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
             this.noneCheckBox.TabIndex = 38;
@@ -202,7 +202,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 553);
+            this.ClientSize = new System.Drawing.Size(375, 204);
             this.Controls.Add(this.tappedByAllThreatListCheckBox);
             this.Controls.Add(this.referAFriendCheckBox);
             this.Controls.Add(this.deadCheckBox);
@@ -219,9 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(571, 591);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(571, 591);
             this.Name = "FindDynamicFlags";
             this.Text = "Find DynamicFlags";
             this.ResumeLayout(false);

@@ -125,7 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(366, 522);
+            this.ClientSize = new System.Drawing.Size(362, 517);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.findClassListView);
@@ -141,6 +141,7 @@
             this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindClass";
             this.Text = "Find Class";
+            this.Load += new System.EventHandler(this.FindClass_Load);
             this.ResumeLayout(false);
 
         }

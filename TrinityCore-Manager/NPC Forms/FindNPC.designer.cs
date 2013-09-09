@@ -125,7 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(366, 522);
+            this.ClientSize = new System.Drawing.Size(362, 527);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.findNpcListView);
@@ -136,9 +136,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindNPC";
             this.Text = "Find NPC";
             this.ResumeLayout(false);
