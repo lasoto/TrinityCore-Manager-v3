@@ -56,6 +56,7 @@ namespace TrinityCore_Manager
             this.themeComboBox.DisplayMember = "Text";
             this.themeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.themeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.themeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.themeComboBox.ForeColor = System.Drawing.Color.Black;
             this.themeComboBox.FormattingEnabled = true;
             this.themeComboBox.ItemHeight = 14;
@@ -122,6 +123,7 @@ namespace TrinityCore_Manager
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SettingsForm";
