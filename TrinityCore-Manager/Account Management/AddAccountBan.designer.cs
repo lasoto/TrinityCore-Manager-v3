@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccountBan));
             this.accountAddBanLabel = new DevComponents.DotNetBar.LabelX();
-            this.accListComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.banButton = new DevComponents.DotNetBar.ButtonX();
             this.cancelButton = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -39,6 +38,8 @@
             this.banTimeDateTimeInput = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.permanentBanCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.banReasonTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.accountNameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.searchAccountButton = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,20 +55,6 @@
             this.accountAddBanLabel.Size = new System.Drawing.Size(66, 22);
             this.accountAddBanLabel.TabIndex = 0;
             this.accountAddBanLabel.Text = "Account:";
-            // 
-            // accListComboBox
-            // 
-            this.accListComboBox.DisplayMember = "Text";
-            this.accListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.accListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.accListComboBox.ForeColor = System.Drawing.Color.White;
-            this.accListComboBox.FormattingEnabled = true;
-            this.accListComboBox.ItemHeight = 14;
-            this.accListComboBox.Location = new System.Drawing.Point(116, 12);
-            this.accListComboBox.Name = "accListComboBox";
-            this.accListComboBox.Size = new System.Drawing.Size(224, 20);
-            this.accListComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.accListComboBox.TabIndex = 1;
             // 
             // banButton
             // 
@@ -203,12 +190,41 @@
             this.banReasonTextBox.Size = new System.Drawing.Size(224, 20);
             this.banReasonTextBox.TabIndex = 11;
             // 
+            // accountNameTextBox
+            // 
+            this.accountNameTextBox.BackColor = System.Drawing.Color.Black;
+            // 
+            // 
+            // 
+            this.accountNameTextBox.Border.Class = "TextBoxBorder";
+            this.accountNameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountNameTextBox.ForeColor = System.Drawing.Color.White;
+            this.accountNameTextBox.Location = new System.Drawing.Point(116, 10);
+            this.accountNameTextBox.Name = "accountNameTextBox";
+            this.accountNameTextBox.ReadOnly = true;
+            this.accountNameTextBox.Size = new System.Drawing.Size(149, 20);
+            this.accountNameTextBox.TabIndex = 12;
+            // 
+            // searchAccountButton
+            // 
+            this.searchAccountButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.searchAccountButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.searchAccountButton.Location = new System.Drawing.Point(271, 9);
+            this.searchAccountButton.Name = "searchAccountButton";
+            this.searchAccountButton.Size = new System.Drawing.Size(69, 23);
+            this.searchAccountButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.searchAccountButton.TabIndex = 13;
+            this.searchAccountButton.Text = "Search";
+            this.searchAccountButton.Click += new System.EventHandler(this.searchAccountButton_Click);
+            // 
             // AddAccountBan
             // 
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 191);
+            this.ClientSize = new System.Drawing.Size(393, 190);
+            this.Controls.Add(this.searchAccountButton);
+            this.Controls.Add(this.accountNameTextBox);
             this.Controls.Add(this.banReasonTextBox);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
@@ -216,7 +232,6 @@
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.banButton);
-            this.Controls.Add(this.accListComboBox);
             this.Controls.Add(this.accountAddBanLabel);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -237,7 +252,6 @@
         #endregion
 
         private DevComponents.DotNetBar.LabelX accountAddBanLabel;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx accListComboBox;
         private DevComponents.DotNetBar.ButtonX banButton;
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.LabelX labelX1;
@@ -246,5 +260,7 @@
         private DevComponents.Editors.DateTimeAdv.DateTimeInput banTimeDateTimeInput;
         private DevComponents.DotNetBar.Controls.CheckBoxX permanentBanCheckBox;
         private DevComponents.DotNetBar.Controls.TextBoxX banReasonTextBox;
+        private DevComponents.DotNetBar.Controls.TextBoxX accountNameTextBox;
+        private DevComponents.DotNetBar.ButtonX searchAccountButton;
     }
 }

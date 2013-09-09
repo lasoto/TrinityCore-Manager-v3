@@ -153,6 +153,22 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task<List<Account>> SearchForAccount(string like)
+        {
+
+            DataTable dt = await ExecuteQuery("SELECT * FROM `account` WHERE username LIKE %@username%", new MySqlParameter("@username", like));
+
+            var accts = new List<Account>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                accts.Add(BuildAccount(row));
+            }
+
+            return accts;
+
+        }
+
         public async Task<List<BannedAccount>> GetBannedAccounts()
         {
 

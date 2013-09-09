@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.Character_Management;
 using TrinityCore_Manager.CustomForms;
 using TrinityCore_Manager.Extensions;
 using TrinityCore_Manager.Misc;
@@ -24,23 +25,12 @@ namespace TrinityCore_Manager
 
         private async void AddAccountBan_Load(object sender, EventArgs e)
         {
-
-            var bannedAccts = await TCManager.Instance.AuthDatabase.GetAccounts();
-
-            foreach (var acct in bannedAccts)
-            {
-                accListComboBox.Items.Add(acct.Username);
-            }
-
-            if (accListComboBox.Items.Count > 0)
-                accListComboBox.SelectedIndex = 0;
-
         }
 
         private async void banButton_Click(object sender, EventArgs e)
         {
 
-            if (accListComboBox.SelectedIndex == -1)
+            if (String.IsNullOrEmpty(accountNameTextBox.Text))
             {
 
                 MessageBoxEx.Show(this, "No user selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -49,7 +39,7 @@ namespace TrinityCore_Manager
 
             }
 
-            string username = accListComboBox.Items[accListComboBox.SelectedIndex].ToString();
+            string username = accountNameTextBox.Text;
             int unix = (int)banTimeDateTimeInput.Value.ToUnixTimestamp();
             string reason = banReasonTextBox.Text;
 
@@ -71,6 +61,21 @@ namespace TrinityCore_Manager
         private void permanentBanCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             banTimeDateTimeInput.Enabled = !permanentBanCheckBox.Checked;
+        }
+
+        private void searchAccountButton_Click(object sender, EventArgs e)
+        {
+
+            using (SearchAccountForm saf = new SearchAccountForm())
+            {
+
+                if (saf.ShowDialog() == DialogResult.OK)
+                {
+                    accountNameTextBox.Text = saf.AccountName;
+                }
+
+            }
+
         }
     }
 }
