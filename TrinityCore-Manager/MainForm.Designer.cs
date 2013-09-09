@@ -188,14 +188,14 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
             this.mainRibbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainRibbonControl.ForeColor = System.Drawing.Color.White;
             this.mainRibbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -838,7 +838,7 @@
             this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1127, 139);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1127, 142);
             // 
             // 
             // 
@@ -852,7 +852,6 @@
             // 
             this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // characterEditorRibbonBar
             // 
@@ -880,7 +879,7 @@
             this.characterEditorRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.characterEditorRibbonBar.Location = new System.Drawing.Point(212, 0);
             this.characterEditorRibbonBar.Name = "characterEditorRibbonBar";
-            this.characterEditorRibbonBar.Size = new System.Drawing.Size(900, 137);
+            this.characterEditorRibbonBar.Size = new System.Drawing.Size(900, 140);
             this.characterEditorRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.characterEditorRibbonBar.TabIndex = 1;
             this.characterEditorRibbonBar.Text = "Character Editor Panel";
@@ -1021,7 +1020,7 @@
             this.characterListRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.characterListRibbonBar.Location = new System.Drawing.Point(3, 0);
             this.characterListRibbonBar.Name = "characterListRibbonBar";
-            this.characterListRibbonBar.Size = new System.Drawing.Size(209, 137);
+            this.characterListRibbonBar.Size = new System.Drawing.Size(209, 140);
             this.characterListRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.characterListRibbonBar.TabIndex = 0;
             this.characterListRibbonBar.Text = "Character List Panel";
@@ -1463,7 +1462,7 @@
             this.ribbonPanel3.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1127, 139);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1127, 142);
             // 
             // 
             // 
@@ -1497,7 +1496,7 @@
             this.accountCleanupRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.accountCleanupRibbonBar.Location = new System.Drawing.Point(556, 0);
             this.accountCleanupRibbonBar.Name = "accountCleanupRibbonBar";
-            this.accountCleanupRibbonBar.Size = new System.Drawing.Size(146, 137);
+            this.accountCleanupRibbonBar.Size = new System.Drawing.Size(146, 140);
             this.accountCleanupRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.accountCleanupRibbonBar.TabIndex = 3;
             this.accountCleanupRibbonBar.Text = "Account Cleanup";
@@ -1538,7 +1537,7 @@
             this.ipBanRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.ipBanRibbonBar.Location = new System.Drawing.Point(389, 0);
             this.ipBanRibbonBar.Name = "ipBanRibbonBar";
-            this.ipBanRibbonBar.Size = new System.Drawing.Size(167, 137);
+            this.ipBanRibbonBar.Size = new System.Drawing.Size(167, 140);
             this.ipBanRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ipBanRibbonBar.TabIndex = 2;
             this.ipBanRibbonBar.Text = "IP Ban Panel";
@@ -1587,7 +1586,7 @@
             this.accountBanRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.accountBanRibbonBar.Location = new System.Drawing.Point(161, 0);
             this.accountBanRibbonBar.Name = "accountBanRibbonBar";
-            this.accountBanRibbonBar.Size = new System.Drawing.Size(228, 137);
+            this.accountBanRibbonBar.Size = new System.Drawing.Size(228, 140);
             this.accountBanRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.accountBanRibbonBar.TabIndex = 1;
             this.accountBanRibbonBar.Text = "Account Ban Panel";
@@ -1636,7 +1635,7 @@
             this.accountEditorRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.accountEditorRibbonBar.Location = new System.Drawing.Point(3, 0);
             this.accountEditorRibbonBar.Name = "accountEditorRibbonBar";
-            this.accountEditorRibbonBar.Size = new System.Drawing.Size(158, 137);
+            this.accountEditorRibbonBar.Size = new System.Drawing.Size(158, 140);
             this.accountEditorRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.accountEditorRibbonBar.TabIndex = 0;
             this.accountEditorRibbonBar.Text = "Account Editor Panel";
@@ -1688,6 +1687,7 @@
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
             // 
             // communicationsRibbonBar
             // 
@@ -1795,7 +1795,6 @@
             // 
             // communicationRibbonTab
             // 
-            this.communicationRibbonTab.Checked = true;
             this.communicationRibbonTab.Name = "communicationRibbonTab";
             this.communicationRibbonTab.Panel = this.ribbonPanel2;
             this.communicationRibbonTab.Text = "Communications";
@@ -1808,6 +1807,7 @@
             // 
             // characterManagementTab
             // 
+            this.characterManagementTab.Checked = true;
             this.characterManagementTab.Name = "characterManagementTab";
             this.characterManagementTab.Panel = this.ribbonPanel4;
             this.characterManagementTab.Text = "Character Management";

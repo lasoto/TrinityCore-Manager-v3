@@ -152,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(502, 263);
+            this.ClientSize = new System.Drawing.Size(498, 258);
             this.Controls.Add(this.currentLevelLabel);
             this.Controls.Add(this.charNameLabel);
             this.Controls.Add(this.labelX1);
@@ -171,6 +171,7 @@
             this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "CharacterSetLevel";
             this.Text = "Character Set Level";
+            this.Load += new System.EventHandler(this.CharacterSetLevel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.levelIntegerInput)).EndInit();
             this.ResumeLayout(false);
 

@@ -406,15 +406,14 @@ namespace TrinityCore_Manager
 
         private void showPlayerInfoButton_Click(object sender, EventArgs e)
         {
-
             if (characterListComboBox.SelectedIndex == -1)
             {
-
                 MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return;
-
             }
+
+            if (CheckServerOnline())
+                return;
 
             using (PlayerInformation playerInfo = new PlayerInformation(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString()))
                 playerInfo.ShowDialog();
@@ -1103,6 +1102,8 @@ namespace TrinityCore_Manager
 
         private async void refreshListCharacterManagementButton_Click(object sender, EventArgs e)
         {
+            if (CheckServerOnline())
+                return;
 
             characterListComboBox.Items.Clear();
 
@@ -1121,11 +1122,15 @@ namespace TrinityCore_Manager
 
         private void connectRAButton_Click(object sender, EventArgs e)
         {
+
             if ((ServerType)Settings.Default.ServerType == ServerType.Local)
             {
                 MessageBoxEx.Show(this, "RA is not enabled!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (CheckServerOnline())
+                return;
 
             TCPClient client = (TCPClient)TCManager.Instance.RAClient;
 
@@ -1182,6 +1187,8 @@ namespace TrinityCore_Manager
 
         private async void forceRenameButton_Click(object sender, EventArgs e)
         {
+            if (CheckServerOnline())
+                return;
 
             if (characterListComboBox.SelectedIndex == -1)
             {
@@ -1206,7 +1213,6 @@ namespace TrinityCore_Manager
 
         private async void banCharacterButton_Click(object sender, EventArgs e)
         {
-
             if (characterListComboBox.SelectedIndex == -1)
             {
 
