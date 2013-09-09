@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class SearchDatabaseForm : Form
+    public partial class SearchDatabaseForm : Office2007Form
     {
         private Databases database;
         private List<string> databasesToList = new List<string>();

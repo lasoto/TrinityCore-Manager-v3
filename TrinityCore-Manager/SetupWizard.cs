@@ -212,6 +212,11 @@ namespace TrinityCore_Manager
                         MessageBoxEx.Show(this, "Everything must be filled out!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
                     }
+                    else if (authDBTextBox.Text == charactersDBTextBox.Text || authDBTextBox.Text == worldDBTextBox.Text || worldDBTextBox.Text == charactersDBTextBox.Text)
+                    {
+                        MessageBoxEx.Show(this, "Each database must be unique!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
                     else
                     {
                         try

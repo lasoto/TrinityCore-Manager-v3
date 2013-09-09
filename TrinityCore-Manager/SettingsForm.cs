@@ -1,12 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
-using TrinityCore_Manager.Misc.Enums;
 using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
