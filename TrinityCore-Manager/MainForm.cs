@@ -582,6 +582,15 @@ namespace TrinityCore_Manager
 
             bool x64 = platformComboBox.SelectedIndex == 1;
 
+            if (x64 && !Environment.Is64BitOperatingSystem)
+            {
+
+                MessageBoxEx.Show(this, "Your operating system is not 64 bit!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
             _compilerCTS = new CancellationTokenSource();
 
             var progress = new Progress<string>(prog => Invoke((MethodInvoker)delegate
