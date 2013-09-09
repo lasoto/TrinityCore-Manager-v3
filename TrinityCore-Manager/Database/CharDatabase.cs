@@ -21,7 +21,6 @@ namespace TrinityCore_Manager.Database
 
         public async Task AddGuildMember(int guildid, int guid, int rid)
         {
-
             await ExecuteNonQuery("INSERT INTO `guild_member` (guildid, guid, rank, pnote, offnote) VALUES (@guildid, @guid, @rank, @pnote, @offnote);",
                 new MySqlParameter("@guildid", guildid), new MySqlParameter("@guid", guid), new MySqlParameter("@rank", rid), new MySqlParameter("@pnote", String.Empty),
                 new MySqlParameter("@offnote", String.Empty));

@@ -111,16 +111,11 @@ namespace TrinityCore_Manager
 
                     if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(port.ToString()))
                     {
-
                         MessageBoxEx.Show(this, "You must fill in all of the Remote Access details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         e.Cancel = true;
-
                     }
                     else
-                    {
                         e.NewPage = mysqlDetailsPage;
-                    }
 
                 }
                 else if (e.OldPage == mysqlDetailsPage)
@@ -131,17 +126,13 @@ namespace TrinityCore_Manager
                     string username = mySqlUsernameTextBox.Text;
                     string password = mySqlPassTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(port.ToString()))
                     {
-
                         MessageBoxEx.Show(this, "MySQL details required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         e.Cancel = true;
-
                     }
                     else
                     {
-
                         var connStr = new MySqlConnectionStringBuilder();
                         connStr.Server = host;
                         connStr.Port = (uint)port;
@@ -191,24 +182,47 @@ namespace TrinityCore_Manager
                         mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.True;
 
                     }
-
                 }
                 else if (e.OldPage == dbDetailsPage)
                 {
-
-                    string authDB = authDBTextBox.Text;
-                    string charDB = charactersDBTextBox.Text;
-                    string worldDB = worldDBTextBox.Text;
-
-                    if (string.IsNullOrEmpty(authDB) || string.IsNullOrEmpty(charDB) || string.IsNullOrEmpty(worldDB))
+                    if (string.IsNullOrEmpty(authDBTextBox.Text) || string.IsNullOrEmpty(charactersDBTextBox.Text) || string.IsNullOrEmpty(worldDBTextBox.Text))
                     {
-
                         MessageBoxEx.Show(this, "Everything must be filled out!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         e.Cancel = true;
-
                     }
+                    else
+                    {
+                        try
+                        {
+                            var connStr = new MySqlConnectionStringBuilder();
+                            string host = mySqlHostTextBox.Text;
+                            int port = MySQLIntegerInputX.Value;
+                            string username = mySqlUsernameTextBox.Text;
+                            string password = mySqlPassTextBox.Text;
 
+                            connStr.Server = mySqlHostTextBox.Text;
+                            connStr.Port = (uint)MySQLIntegerInputX.Value;
+                            connStr.UserID = mySqlUsernameTextBox.Text;
+                            connStr.Password = mySqlPassTextBox.Text;
+
+                            connStr.Database = authDBTextBox.Text;
+                            using (var conn = new MySqlConnection(connStr.ToString()))
+                                conn.Open();
+
+                            connStr.Database = worldDBTextBox.Text;
+                            using (var conn = new MySqlConnection(connStr.ToString()))
+                                conn.Open();
+
+                            connStr.Database = charactersDBTextBox.Text;
+                            using (var conn = new MySqlConnection(connStr.ToString()))
+                                conn.Open();
+                        }
+                        catch (MySqlException ex)
+                        {
+                            MessageBox.Show(ex.Message, "Could not connect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            e.Cancel = true;
+                        }
+                    }
                 }
             }
             else if (e.PageChangeSource == eWizardPageChangeSource.BackButton)

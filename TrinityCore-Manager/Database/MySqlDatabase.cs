@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
@@ -21,7 +17,6 @@ namespace TrinityCore_Manager.Database
 
         protected MySqlDatabase(string serverHost, int port, string username, string password, string dbName)
         {
-
             Host = serverHost;
             Port = port;
             Username = username;
@@ -36,9 +31,7 @@ namespace TrinityCore_Manager.Database
             connStr.Database = dbName;
             connStr.AllowUserVariables = true;
             connStr.AllowZeroDateTime = true;
-
             ConnectionString = connStr.ToString();
-
         }
 
 

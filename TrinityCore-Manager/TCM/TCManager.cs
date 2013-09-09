@@ -10,7 +10,6 @@ using TrinityCore_Manager.Database;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.Security;
-using System.Reflection;
 using System.Diagnostics;
 
 namespace TrinityCore_Manager.TCM
@@ -104,9 +103,9 @@ namespace TrinityCore_Manager.TCM
 
             var set = Settings.Default;
 
-            AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBAuthName);
-            CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBCharName);
-            WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(Settings.Default.Entropy)).ToInsecureString(), set.DBWorldName);
+            AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBAuthName);
+            CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBCharName);
+            WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBWorldName);
 
             _triggers = new Dictionary<string, TriggerKey>();
 
