@@ -129,7 +129,7 @@ all blizzard ranged weapons have RangedModRange100</value>
     <value>Controls how the item is put away on the character (pressing the 'Z' hotkey).</value>
   </data>
   <data name="ReqSkillDesc" xml:space="preserve">
-    <value>The skill required to use this item. See SkillLine.dbc</value>
+    <value>The skill required to use this item. See SkillLineOffice2007Form</value>
   </data>
   <data name="DurationDesc" xml:space="preserve">
     <value>he duration of the item in seconds. If positive, it is the duration measured in ingame time. If negative, it is the duration measured in real time.</value>
@@ -280,7 +280,7 @@ NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that 
     <value>Sets whether the world accepts new client connections. Even if the server is online.</value>
   </data>
   <data name="TotemCatDesc" xml:space="preserve">
-    <value>Corresponds to the ID in TotemCategory.dbc.</value>
+    <value>Corresponds to the ID in TotemCategoryOffice2007Form.</value>
   </data>
   <data name="AreaDesc" xml:space="preserve">
     <value>The zone ID that this item can be used in.</value>

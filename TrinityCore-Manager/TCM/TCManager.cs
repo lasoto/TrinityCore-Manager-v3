@@ -100,15 +100,11 @@ namespace TrinityCore_Manager.TCM
 
         public TCManager()
         {
-
             var set = Settings.Default;
-
             AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBAuthName);
             CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBCharName);
             WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBWorldName);
-
             _triggers = new Dictionary<string, TriggerKey>();
-
         }
 
         public void ScheduleBackups()
