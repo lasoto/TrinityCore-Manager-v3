@@ -59,7 +59,7 @@ namespace TrinityCore_Manager
 
         private void InitStyle()
         {
-            switch ((TCMTheme)Settings.Default.TCMTheme)
+            switch ((TCMTheme)Settings.Default.ColorTheme)
             {
 
                 case TCMTheme.Dark:

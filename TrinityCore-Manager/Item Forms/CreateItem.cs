@@ -37,7 +37,7 @@ namespace TrinityCore_Manager
 
         }
 
-        private async void CreateItem_Load(object sender, EventArgs e)
+        private void CreateItem_Load(object sender, EventArgs e)
         {
             Init();
         }

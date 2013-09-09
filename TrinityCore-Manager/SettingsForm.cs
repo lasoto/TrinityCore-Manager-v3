@@ -20,13 +20,12 @@ namespace TrinityCore_Manager
 
         private void TCMSettings_Load(object sender, EventArgs e)
         {
-            themeComboBox.SelectedIndex = Settings.Default.TCMTheme;
+            themeComboBox.SelectedIndex = Settings.Default.ColorTheme;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            Settings.Default.TCMTheme = themeComboBox.SelectedIndex;
-
+            Settings.Default.ColorTheme = themeComboBox.SelectedIndex;
             Settings.Default.Save();
 
             Close();
