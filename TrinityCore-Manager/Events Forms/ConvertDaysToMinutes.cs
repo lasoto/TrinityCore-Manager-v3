@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class ConvertDaysToMinutes : DevComponents.DotNetBar.Office2007Form
+    public partial class ConvertDaysToMinutes : Office2007Form
     {
 
         public ConvertDaysToMinutes()

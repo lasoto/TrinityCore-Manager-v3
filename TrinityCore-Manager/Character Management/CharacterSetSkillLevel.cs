@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class CharacterSetSkillLevel : DevComponents.DotNetBar.Office2007Form
+    public partial class CharacterSetSkillLevel : Office2007Form
     {
         public CharacterSetSkillLevel()
         {

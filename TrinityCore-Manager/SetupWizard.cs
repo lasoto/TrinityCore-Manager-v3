@@ -23,7 +23,7 @@ namespace TrinityCore_Manager
         DbAuth,
     };
 
-    public partial class SetupWizard : DevComponents.DotNetBar.Office2007Form
+    public partial class SetupWizard : Office2007Form
     {
 
         public bool Result { get; set; }

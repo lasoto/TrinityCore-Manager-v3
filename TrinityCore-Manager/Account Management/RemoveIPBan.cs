@@ -13,7 +13,7 @@ using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
-    public partial class RemoveIPBan : DevComponents.DotNetBar.Office2007Form
+    public partial class RemoveIPBan : Office2007Form
     {
         public RemoveIPBan()
         {

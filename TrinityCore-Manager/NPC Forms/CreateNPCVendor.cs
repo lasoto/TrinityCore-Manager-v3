@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager.NPC_Forms
 {
-    public partial class CreateNPCVendor : DevComponents.DotNetBar.Office2007Form
+    public partial class CreateNPCVendor : Office2007Form
     {
         public CreateNPCVendor()
         {

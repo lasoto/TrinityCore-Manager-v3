@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class CreateNPC : DevComponents.DotNetBar.Office2007Form
+    public partial class CreateNPC : Office2007Form
     {
         public CreateNPC()
         {

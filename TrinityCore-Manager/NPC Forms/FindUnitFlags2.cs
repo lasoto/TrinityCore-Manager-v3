@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindUnitFlags2 : DevComponents.DotNetBar.Office2007Form
+    public partial class FindUnitFlags2 : Office2007Form
     {
 
         private uint _flags;

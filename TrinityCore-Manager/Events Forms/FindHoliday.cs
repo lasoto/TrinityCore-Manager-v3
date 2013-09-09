@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindHoliday : DevComponents.DotNetBar.Office2007Form
+    public partial class FindHoliday : Office2007Form
     {
         public FindHoliday()
         {

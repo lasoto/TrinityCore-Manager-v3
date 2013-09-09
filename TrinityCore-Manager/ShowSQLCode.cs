@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class ShowSQLCode : DevComponents.DotNetBar.Office2007Form
+    public partial class ShowSQLCode : Office2007Form
     {
         public ShowSQLCode()
         {

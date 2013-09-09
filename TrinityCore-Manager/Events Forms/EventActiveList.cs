@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class EventActiveList : DevComponents.DotNetBar.Office2007Form
+    public partial class EventActiveList : Office2007Form
     {
         public EventActiveList()
         {

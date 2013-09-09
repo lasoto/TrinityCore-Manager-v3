@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindItemGemProperties : DevComponents.DotNetBar.Office2007Form
+    public partial class FindItemGemProperties : Office2007Form
     {
         public FindItemGemProperties()
         {

@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindMechanicImmuneMask : DevComponents.DotNetBar.Office2007Form
+    public partial class FindMechanicImmuneMask : Office2007Form
     {
         private uint _flags;
 

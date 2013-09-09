@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 
 namespace TrinityCore_Manager
 {
-    public partial class OtherCommands : DevComponents.DotNetBar.Office2007Form
+    public partial class OtherCommands : Office2007Form
     {
         public OtherCommands()
         {

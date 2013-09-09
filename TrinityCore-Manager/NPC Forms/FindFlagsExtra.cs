@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindFlagsExtra : DevComponents.DotNetBar.Office2007Form
+    public partial class FindFlagsExtra : Office2007Form
     {
         public FindFlagsExtra()
         {

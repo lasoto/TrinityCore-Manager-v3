@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindItemSocketBonus : DevComponents.DotNetBar.Office2007Form
+    public partial class FindItemSocketBonus : Office2007Form
     {
         public FindItemSocketBonus()
         {

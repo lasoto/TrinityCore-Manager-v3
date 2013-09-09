@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class CharacterSetReputation : DevComponents.DotNetBar.Office2007Form
+    public partial class CharacterSetReputation : Office2007Form
     {
         public CharacterSetReputation()
         {

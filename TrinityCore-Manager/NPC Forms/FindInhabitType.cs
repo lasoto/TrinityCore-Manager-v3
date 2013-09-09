@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindInhabitType : DevComponents.DotNetBar.Office2007Form
+    public partial class FindInhabitType : Office2007Form
     {
         private int _flags;
 

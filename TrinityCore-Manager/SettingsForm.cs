@@ -11,7 +11,7 @@ using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
 {
-    public partial class SettingsForm : DevComponents.DotNetBar.OfficeForm
+    public partial class SettingsForm : OfficeForm
     {
         public SettingsForm()
         {

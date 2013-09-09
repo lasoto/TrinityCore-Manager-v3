@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager.Item_Forms
 {
-    public partial class FindItemFlagsCustom : DevComponents.DotNetBar.Office2007Form
+    public partial class FindItemFlagsCustom : Office2007Form
     {
 
         private int _flags;

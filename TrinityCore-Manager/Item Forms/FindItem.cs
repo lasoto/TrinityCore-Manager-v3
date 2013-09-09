@@ -17,7 +17,7 @@ using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindItem : DevComponents.DotNetBar.Office2007Form
+    public partial class FindItem : Office2007Form
     {
 
         private int _atPage;

@@ -17,7 +17,7 @@ using TrinityCore_Manager.Database;
 
 namespace TrinityCore_Manager.Database_Management
 {
-    public partial class RestoreDatabase : DevComponents.DotNetBar.Office2007Form
+    public partial class RestoreDatabase : Office2007Form
     {
 
         private readonly Regex _dtRegex = new Regex("[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}", RegexOptions.Compiled);

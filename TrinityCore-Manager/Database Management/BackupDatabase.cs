@@ -16,7 +16,7 @@ using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager.Database_Management
 {
-    public partial class BackupDatabase : DevComponents.DotNetBar.Office2007Form
+    public partial class BackupDatabase : Office2007Form
     {
 
         private bool _busy;

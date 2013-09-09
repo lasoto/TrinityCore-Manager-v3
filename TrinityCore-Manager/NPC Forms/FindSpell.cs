@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindSpell : DevComponents.DotNetBar.Office2007Form
+    public partial class FindSpell : Office2007Form
     {
         public FindSpell()
         {

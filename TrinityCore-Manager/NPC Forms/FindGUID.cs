@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindGUID : DevComponents.DotNetBar.Office2007Form
+    public partial class FindGUID : Office2007Form
     {
         public FindGUID()
         {

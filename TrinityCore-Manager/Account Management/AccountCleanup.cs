@@ -15,7 +15,7 @@ using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager
 {
-    public partial class AccountCleanup : DevComponents.DotNetBar.Office2007Form
+    public partial class AccountCleanup : Office2007Form
     {
         public AccountCleanup()
         {

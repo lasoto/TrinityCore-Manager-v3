@@ -11,7 +11,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class FindEvent : DevComponents.DotNetBar.Office2007Form
+    public partial class FindEvent : Office2007Form
     {
         public FindEvent()
         {

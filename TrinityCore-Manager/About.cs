@@ -6,7 +6,7 @@ using DevComponents.DotNetBar;
 
 namespace TrinityCore_Manager
 {
-    public partial class About : DevComponents.DotNetBar.Office2007Form
+    public partial class About : Office2007Form
     {
         public About()
         {
