@@ -171,6 +171,8 @@ namespace TrinityCore_Manager
                         mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.False;
                         e.Cancel = true;
 
+                        string mySqlException = "";
+
                         bool success = await Task.Run(() =>
                         {
                             using (var conn = new MySqlConnection(connStr.ToString()))
@@ -181,6 +183,11 @@ namespace TrinityCore_Manager
                                     conn.Close();
                                     return true;
 
+                                }
+                                catch (MySqlException ex)
+                                {
+                                    mySqlException = ex.Message;
+                                    return false;
                                 }
                                 catch (Exception)
                                 {
@@ -193,12 +200,13 @@ namespace TrinityCore_Manager
                         mySqlConnectionProgressBar2.Visible = false;
 
                         if (success)
-                        {
                             wizard1.SelectedPage = createDBsPage;
-                        }
                         else
                         {
-                            MessageBoxEx.Show(this, "Could not connect to MySQL!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (mySqlException.Length > 0)
+                                MessageBoxEx.Show(this, mySqlException, "Could not connect to MySQL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            else
+                                MessageBoxEx.Show(this, "Could not connect to MySQL!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         mysqlDetailsPage.NextButtonEnabled = eWizardButtonState.True;
