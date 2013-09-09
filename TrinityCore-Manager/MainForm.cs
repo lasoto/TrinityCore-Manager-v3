@@ -578,7 +578,7 @@ namespace TrinityCore_Manager
                     _compilerCTS.Cancel();
 
                 compileProgressBar.Visible = false;
-                compileTrinityCoreButton.Text = "Compile && Replace TC";
+                compileTrinityCoreButton.Text = "Compile & Replace TC";
 
                 return;
 
@@ -623,10 +623,8 @@ namespace TrinityCore_Manager
 
                         Invoke((MethodInvoker)delegate
                         {
-
                             compileProgressBar.Visible = false;
-                            compileTrinityCoreButton.Text = "Compile && Replace TC";
-
+                            compileTrinityCoreButton.Text = "Compile & Replace TC";
 
                             try
                             {

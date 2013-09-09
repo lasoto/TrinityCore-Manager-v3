@@ -27,6 +27,7 @@ namespace TrinityCore_Manager
     {
 
         public bool Result { get; set; }
+        private bool closedFromHand = false;
 
         public SetupWizard()
         {
@@ -317,8 +318,19 @@ namespace TrinityCore_Manager
 
         private void wizard1_CancelButtonClick(object sender, CancelEventArgs e)
         {
+            PromptToCloseWindow();
+        }
+
+        private bool PromptToCloseWindow()
+        {
             if (MessageBoxEx.Show(this, "Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                closedFromHand = true;
                 Close();
+                return true;
+            }
+
+            return false;
         }
 
         private void buttonXSearchForDbAuth_Click(object sender, EventArgs e)
@@ -377,6 +389,13 @@ namespace TrinityCore_Manager
                 if (databaseNames.Count > 0)
                     new SearchDatabaseForm(database, databaseNames).Show(this);
             }
+        }
+
+        private void SetupWizard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing && !closedFromHand)
+                if (!PromptToCloseWindow())
+                    e.Cancel = true;
         }
     }
 }

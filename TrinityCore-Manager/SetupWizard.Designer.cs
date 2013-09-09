@@ -1041,6 +1041,7 @@
             this.MinimizeBox = false;
             this.Name = "SetupWizard";
             this.Text = "Setup Wizard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SetupWizard_FormClosing);
             this.Load += new System.EventHandler(this.SetupWizard_Load);
             this.wizard1.ResumeLayout(false);
             this.welcomePage.ResumeLayout(false);
