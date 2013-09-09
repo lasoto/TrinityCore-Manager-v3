@@ -57,7 +57,7 @@ namespace TrinityCore_Manager
 
         }
 
-        private void InitStyle()
+        public void InitStyle()
         {
             switch ((TCMTheme)Settings.Default.ColorTheme)
             {
@@ -1031,15 +1031,7 @@ namespace TrinityCore_Manager
         private void settingsButton_Click(object sender, EventArgs e)
         {
             using (SettingsForm settings = new SettingsForm())
-            {
-                settings.FormClosing += settings_FormClosing;
-                settings.ShowDialog();
-            }
-        }
-
-        void settings_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            InitStyle();
+                settings.ShowDialog(this);
         }
 
         private async void searchForCharacterButton_Click(object sender, EventArgs e)
