@@ -1044,6 +1044,7 @@
             this.Text = "Setup Wizard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SetupWizard_FormClosing);
             this.Load += new System.EventHandler(this.SetupWizard_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SetupWizard_KeyDown);
             this.wizard1.ResumeLayout(false);
             this.welcomePage.ResumeLayout(false);
             this.connectOptionPage.ResumeLayout(false);

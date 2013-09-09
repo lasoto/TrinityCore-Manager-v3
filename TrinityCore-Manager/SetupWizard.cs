@@ -410,5 +410,16 @@ namespace TrinityCore_Manager
                 if (!PromptToCloseWindow())
                     e.Cancel = true;
         }
+
+        private void SetupWizard_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    PromptToCloseWindow();
+                    Close();
+                    break;
+            }
+        }
     }
 }
