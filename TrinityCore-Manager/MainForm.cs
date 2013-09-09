@@ -412,9 +412,6 @@ namespace TrinityCore_Manager
                 return;
             }
 
-            if (CheckServerOnline())
-                return;
-
             using (PlayerInformation playerInfo = new PlayerInformation(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString()))
                 playerInfo.ShowDialog();
 
@@ -1102,11 +1099,7 @@ namespace TrinityCore_Manager
 
         private async void refreshListCharacterManagementButton_Click(object sender, EventArgs e)
         {
-            if (CheckServerOnline())
-                return;
-
             characterListComboBox.Items.Clear();
-
             List<int> guids = await TCManager.Instance.CharDatabase.GetOnlineCharacterGuids();
 
             foreach (int guid in guids)
@@ -1129,9 +1122,6 @@ namespace TrinityCore_Manager
                 return;
             }
 
-            if (CheckServerOnline())
-                return;
-
             TCPClient client = (TCPClient)TCManager.Instance.RAClient;
 
             if (client != null)
@@ -1142,9 +1132,6 @@ namespace TrinityCore_Manager
 
         private async void sendMessageButton_Click(object sender, EventArgs e)
         {
-            if (CheckServerOnline())
-                return;
-
             if (serverAnnouncementCheckBox.Checked)
             {
                 if (!String.IsNullOrEmpty(communicationsTextBox.Text))
@@ -1172,9 +1159,6 @@ namespace TrinityCore_Manager
 
         private async void revivePlayerButton_Click(object sender, EventArgs e)
         {
-            if (CheckServerOnline())
-                return;
-
             if (characterListComboBox.SelectedIndex == -1)
             {
                 MessageBoxEx.Show(this, "No character selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1187,9 +1171,6 @@ namespace TrinityCore_Manager
 
         private async void forceRenameButton_Click(object sender, EventArgs e)
         {
-            if (CheckServerOnline())
-                return;
-
             if (characterListComboBox.SelectedIndex == -1)
             {
 
@@ -1246,23 +1227,6 @@ namespace TrinityCore_Manager
         private void buttonItem1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private bool CheckServerOnline(bool checkForAuthToo = false)
-        {
-            if (TCManager.Instance.WorldClient == null || !TCManager.Instance.WorldClient.IsOnline)
-            {
-                MessageBoxEx.Show(this, "There is no worldserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
-            }
-
-            if (checkForAuthToo && (TCManager.Instance.AuthClient == null || !TCManager.Instance.AuthClient.IsOnline))
-            {
-                MessageBoxEx.Show(this, "There is no authserver running!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
-            }
-
-            return false;
         }
     }
 }

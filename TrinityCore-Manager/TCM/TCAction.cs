@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
 using TrinityCore_Manager.Commands;
 using TrinityCore_Manager.Database.Enums;
 using TrinityCore_Manager.Extensions;
@@ -109,7 +111,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.KickPlayer.BuildCommand(player, reason));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -119,7 +121,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(command);
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -129,7 +131,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SetPlayerLimit.BuildCommand(limit.ToString()));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -139,7 +141,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SetMOTD.BuildCommand(motd));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -149,7 +151,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.ServerAnnouncement.BuildCommand(message));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -159,7 +161,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.ServerNotification.BuildCommand(notification));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -169,7 +171,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SendPlayerMessage.BuildCommand(playerName, message));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -179,7 +181,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SendMail.BuildCommand(playerName, "\"" + subject + "\"", "\"" + text + "\""));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -189,7 +191,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SendMoney.BuildCommand(playerName, "\"" + subject + "\"", "\"" + text + "\"", money.ToString()));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -214,7 +216,7 @@ namespace TrinityCore_Manager.TCM
             }
             else
             {
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -225,7 +227,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.NotifyGMs.BuildCommand(message));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -235,7 +237,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.RevivePlayer.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -245,7 +247,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.ForceCharRename.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -291,7 +293,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.CustomizeCharacter.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -301,7 +303,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.MutePlayer.BuildCommand(playerName, timeInMin.ToString(), reason));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -311,7 +313,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.UnmutePlayer.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -332,7 +334,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.UnstuckPlayer.BuildCommand(playerName, loc));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -342,7 +344,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.StopCombatForPlayer.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -362,7 +364,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SaveAll.BuildCommand());
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -372,7 +374,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.CreateGuild.BuildCommand("\"" + guildName + "\"", leaderName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -382,7 +384,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.DeleteGuild.BuildCommand("\"" + guildName + "\""));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -392,7 +394,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.GuildInvite.BuildCommand(playerName, "\"" + guildName + "\""));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -402,7 +404,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.GuildUninvite.BuildCommand(playerName));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -412,7 +414,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.SetGuildRank.BuildCommand(playerName, rank.ToString()));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -422,7 +424,7 @@ namespace TrinityCore_Manager.TCM
             if (_tcm.Online)
                 await GetClient().SendMessage(TCCommand.RenameGuild.BuildCommand("\"" + oldGuildName + "\"", "\"" + newGuildName + "\""));
             else
-                throw new Exception("Server is not online!");
+                MessageBoxEx.Show("The server is not online!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
