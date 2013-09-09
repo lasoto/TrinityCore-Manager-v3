@@ -116,9 +116,8 @@ namespace TrinityCore_Manager
                     string host = hostTextBox.Text;
                     int port = portIntegerInput.Value;
                     string username = usernameTextBox.Text;
-                    string password = passwordTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(port.ToString()))
+                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(port.ToString()))
                     {
                         MessageBoxEx.Show(this, "You must fill in all of the Remote Access details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
@@ -133,21 +132,23 @@ namespace TrinityCore_Manager
                     string host = mySqlHostTextBox.Text;
                     int port = MySQLIntegerInputX.Value;
                     string username = mySqlUsernameTextBox.Text;
-                    string password = mySqlPassTextBox.Text;
 
-                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(port.ToString()))
+                    if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(port.ToString()))
                     {
                         MessageBoxEx.Show(this, "MySQL details required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         e.Cancel = true;
                     }
                     else
                     {
+                        string password = mySqlPassTextBox.Text;
                         var connStr = new MySqlConnectionStringBuilder();
                         connStr.Server = host;
                         connStr.Port = (uint)port;
                         connStr.UserID = username;
-                        connStr.Password = password;
                         connStr.Database = "mysql";
+
+                        if (password.Length > 0)
+                            connStr.Password = password;
 
                         mySqlConnectionProgressBar2.Visible = true;
 
@@ -158,14 +159,10 @@ namespace TrinityCore_Manager
                         {
                             using (var conn = new MySqlConnection(connStr.ToString()))
                             {
-
                                 try
                                 {
-
                                     conn.Open();
-
                                     conn.Close();
-
                                     return true;
 
                                 }
@@ -204,15 +201,12 @@ namespace TrinityCore_Manager
                         try
                         {
                             var connStr = new MySqlConnectionStringBuilder();
-                            string host = mySqlHostTextBox.Text;
-                            int port = MySQLIntegerInputX.Value;
-                            string username = mySqlUsernameTextBox.Text;
-                            string password = mySqlPassTextBox.Text;
-
                             connStr.Server = mySqlHostTextBox.Text;
                             connStr.Port = (uint)MySQLIntegerInputX.Value;
                             connStr.UserID = mySqlUsernameTextBox.Text;
-                            connStr.Password = mySqlPassTextBox.Text;
+
+                            if (mySqlPassTextBox.Text.Length > 0)
+                                connStr.Password = mySqlPassTextBox.Text;
 
                             connStr.Database = authDBTextBox.Text;
                             using (var conn = new MySqlConnection(connStr.ToString()))
@@ -276,7 +270,9 @@ namespace TrinityCore_Manager
             settings.DBHost = mySqlHostTextBox.Text;
             settings.DBPort = MySQLIntegerInputX.Value;
             settings.DBUsername = mySqlUsernameTextBox.Text;
-            settings.DBPassword = mySqlPassTextBox.Text.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
+
+            if (mySqlPassTextBox.Text.Length > 0)
+                settings.DBPassword = mySqlPassTextBox.Text.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
             settings.DBAuthName = authDBTextBox.Text;
             settings.DBCharName = charactersDBTextBox.Text;
             settings.DBWorldName = worldDBTextBox.Text;
@@ -290,7 +286,10 @@ namespace TrinityCore_Manager
             {
                 settings.ServerType = (int)ServerType.RemoteAccess;
                 settings.RAUsername = usernameTextBox.Text;
-                settings.RAPassword = passwordTextBox.Text.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
+
+                if (mySqlPassTextBox.Text.Length > 0)
+                    settings.RAPassword = passwordTextBox.Text.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
+
                 settings.RAHost = hostTextBox.Text;
                 settings.RAPort = portIntegerInput.Value;
                 settings.RAAutoConnect = autoConnectCheckBox.Checked;
@@ -341,7 +340,9 @@ namespace TrinityCore_Manager
             connStr.Server = mySqlHostTextBox.Text;
             connStr.Port = (uint)MySQLIntegerInputX.Value;
             connStr.UserID = mySqlUsernameTextBox.Text;
-            connStr.Password = mySqlPassTextBox.Text;
+
+            if (mySqlPassTextBox.Text.Length > 0)
+                connStr.Password = mySqlPassTextBox.Text;
 
             var databaseNames = new List<string>();
 
