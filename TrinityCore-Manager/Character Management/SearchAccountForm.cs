@@ -10,9 +10,8 @@ using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager.Character_Management
 {
-    public partial class SearchAccountForm : DevComponents.DotNetBar.Office2007Form
+    public partial class SearchAccountForm : Office2007Form
     {
-
         public string AccountName { get; private set; }
         
         public SearchAccountForm()

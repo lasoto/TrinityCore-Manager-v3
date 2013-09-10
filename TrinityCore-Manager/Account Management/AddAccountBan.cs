@@ -65,17 +65,9 @@ namespace TrinityCore_Manager
 
         private void searchAccountButton_Click(object sender, EventArgs e)
         {
-
             using (SearchAccountForm saf = new SearchAccountForm())
-            {
-
                 if (saf.ShowDialog() == DialogResult.OK)
-                {
                     accountNameTextBox.Text = saf.AccountName;
-                }
-
-            }
-
         }
 
         private void AddAccountBan_KeyDown(object sender, KeyEventArgs e)

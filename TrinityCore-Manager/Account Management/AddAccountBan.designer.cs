@@ -202,19 +202,19 @@
             this.accountNameTextBox.Location = new System.Drawing.Point(116, 10);
             this.accountNameTextBox.Name = "accountNameTextBox";
             this.accountNameTextBox.ReadOnly = true;
-            this.accountNameTextBox.Size = new System.Drawing.Size(149, 20);
+            this.accountNameTextBox.Size = new System.Drawing.Size(201, 20);
             this.accountNameTextBox.TabIndex = 12;
             // 
             // searchAccountButton
             // 
             this.searchAccountButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.searchAccountButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.searchAccountButton.Location = new System.Drawing.Point(271, 9);
+            this.searchAccountButton.Location = new System.Drawing.Point(319, 10);
             this.searchAccountButton.Name = "searchAccountButton";
-            this.searchAccountButton.Size = new System.Drawing.Size(69, 23);
+            this.searchAccountButton.Size = new System.Drawing.Size(21, 20);
             this.searchAccountButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.searchAccountButton.TabIndex = 13;
-            this.searchAccountButton.Text = "Search";
+            this.searchAccountButton.Text = "...";
             this.searchAccountButton.Click += new System.EventHandler(this.searchAccountButton_Click);
             // 
             // AddAccountBan
@@ -222,7 +222,7 @@
             this.AcceptButton = this.banButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 191);
+            this.ClientSize = new System.Drawing.Size(393, 190);
             this.Controls.Add(this.searchAccountButton);
             this.Controls.Add(this.accountNameTextBox);
             this.Controls.Add(this.banReasonTextBox);

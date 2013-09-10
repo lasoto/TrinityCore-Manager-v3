@@ -12,6 +12,7 @@ using TrinityCore_Manager.Database.Classes;
 using TrinityCore_Manager.TCM;
 using TrinityCore_Manager.Database.Enums;
 using TrinityCore_Manager.CustomForms;
+using TrinityCore_Manager.Character_Management;
 
 namespace TrinityCore_Manager
 {
@@ -22,67 +23,26 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private List<Account> accounts;
-
-        private async void EditAccount_Load(object sender, EventArgs e)
+      //private async void EditAccount_Load(object sender, EventArgs e)
+        private void EditAccount_Load(object sender, EventArgs e)
         {
-
-            accounts = await TCManager.Instance.AuthDatabase.GetAccounts();
-
-            foreach (Account account in accounts)
-            {
-                usernameComboBox.Items.Add(account.Username);
-            }
-
-        }
-
-        private async void usernameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-            if (usernameComboBox.SelectedIndex == -1)
-                return;
-
-            if (accounts == null)
-                return;
-
-            Account selectedAccount = accounts.SingleOrDefault(p => p.Username == usernameComboBox.Items[usernameComboBox.SelectedIndex].ToString());
-
-            if (selectedAccount == null)
-                return;
-
-            GMLevel level = await TCManager.Instance.AuthDatabase.GetAccountAccess(selectedAccount.Id);
-
-            accLevelComboBox.SelectedIndex = ((int)level) - 1;
-            accAddonComboBox.SelectedIndex = (int)selectedAccount.Exp;
-
-            switchButton.Value = selectedAccount.Locked == 1;
 
         }
 
         private async void okButton_Click(object sender, EventArgs e)
         {
-
-            if (usernameComboBox.SelectedIndex == -1 || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
-                return;
-
-            Account selectedAccount = accounts.SingleOrDefault(p => p.Username == usernameComboBox.Items[usernameComboBox.SelectedIndex].ToString());
+            Account selectedAccount = await TCManager.Instance.AuthDatabase.GetAccount(accountNameTextBox.Text);
 
             if (selectedAccount == null)
                 return;
 
             StartLoading();
-
             await TCManager.Instance.AuthDatabase.SetAccountLock(selectedAccount.Id, switchButton.Value);
-
             await TCAction.SetPlayerPassword(selectedAccount.Username, passTextBox.Text);
             await TCAction.SetPlayerExpansion(selectedAccount.Username, (Expansion)accAddonComboBox.SelectedIndex);
             await TCAction.SetGMLevel(selectedAccount.Username, (GMLevel)accLevelComboBox.SelectedIndex + 1, -1);
-
             StopLoading();
-
             Close();
-
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -98,6 +58,23 @@ namespace TrinityCore_Manager
                     Close();
                     break;
             }
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            using (SearchAccountForm saf = new SearchAccountForm())
+                if (saf.ShowDialog() == DialogResult.OK)
+                    accountNameTextBox.Text = saf.AccountName;
+        }
+
+        private async void accountNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Account selectedAccount = await TCManager.Instance.AuthDatabase.GetAccount(accountNameTextBox.Text);
+            GMLevel level = await TCManager.Instance.AuthDatabase.GetAccountAccess(selectedAccount.Id);
+
+            accLevelComboBox.SelectedIndex = ((int)level) - 1;
+            accAddonComboBox.SelectedIndex = (int)selectedAccount.Exp;
+            switchButton.Value = selectedAccount.Locked == 1;
         }
     }
 }

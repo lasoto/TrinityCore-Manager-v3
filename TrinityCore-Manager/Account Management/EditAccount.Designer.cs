@@ -39,7 +39,6 @@
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
-            this.usernameComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.switchButton = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -50,6 +49,8 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.passTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.editAccountSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            this.accountNameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // accountPermissionLabel
@@ -144,21 +145,6 @@
             // 
             this.accLvl4ComboItem.Text = "Administrator";
             // 
-            // usernameComboBox
-            // 
-            this.usernameComboBox.DisplayMember = "Text";
-            this.usernameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.usernameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.usernameComboBox.ForeColor = System.Drawing.Color.White;
-            this.usernameComboBox.FormattingEnabled = true;
-            this.usernameComboBox.ItemHeight = 14;
-            this.usernameComboBox.Location = new System.Drawing.Point(208, 22);
-            this.usernameComboBox.Name = "usernameComboBox";
-            this.usernameComboBox.Size = new System.Drawing.Size(216, 20);
-            this.usernameComboBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.usernameComboBox.TabIndex = 19;
-            this.usernameComboBox.SelectedIndexChanged += new System.EventHandler(this.usernameComboBox_SelectedIndexChanged);
-            // 
             // labelX1
             // 
             // 
@@ -178,7 +164,7 @@
             // 
             // 
             this.switchButton.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton.Location = new System.Drawing.Point(267, 153);
+            this.switchButton.Location = new System.Drawing.Point(208, 153);
             this.switchButton.Name = "switchButton";
             this.switchButton.OffText = "NO";
             this.switchButton.OffTextColor = System.Drawing.Color.Tomato;
@@ -263,18 +249,46 @@
             // 
             this.editAccountSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
+            // accountNameTextBox
+            // 
+            this.accountNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.accountNameTextBox.Border.Class = "TextBoxBorder";
+            this.accountNameTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.accountNameTextBox.ForeColor = System.Drawing.Color.White;
+            this.accountNameTextBox.Location = new System.Drawing.Point(209, 21);
+            this.accountNameTextBox.Name = "accountNameTextBox";
+            this.accountNameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.accountNameTextBox.TabIndex = 26;
+            this.accountNameTextBox.TextChanged += new System.EventHandler(this.accountNameTextBox_TextChanged);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(403, 21);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(21, 20);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 27;
+            this.buttonX1.Text = "...";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // EditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 259);
+            this.ClientSize = new System.Drawing.Size(498, 258);
+            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.accountNameTextBox);
             this.Controls.Add(this.passTextBox);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.switchButton);
             this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.usernameComboBox);
             this.Controls.Add(this.accLevelComboBox);
             this.Controls.Add(this.accountPermissionLabel);
             this.Controls.Add(this.accountUsernameLabel);
@@ -304,7 +318,6 @@
         private DevComponents.DotNetBar.ButtonX cancelButton;
         private DevComponents.DotNetBar.ButtonX okButton;
         private DevComponents.DotNetBar.Controls.ComboBoxEx accLevelComboBox;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx usernameComboBox;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton;
         private DevComponents.Editors.ComboItem accLvl0ComboItem;
@@ -320,5 +333,7 @@
         private DevComponents.DotNetBar.SuperTooltip editAccountSuperTooltip;
         private DevComponents.Editors.ComboItem accLvl4ComboItem;
         private DevComponents.Editors.ComboItem accLvl3ComboItem;
+        private DevComponents.DotNetBar.Controls.TextBoxX accountNameTextBox;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
