@@ -64,6 +64,7 @@ namespace TrinityCore_Manager.Character_Management
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(324, 20);
             this.searchTextBox.TabIndex = 1;
+            this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
             // accountsList
             // 

@@ -33,7 +33,7 @@ namespace TrinityCore_Manager.Character_Management
 
             foreach (var account in accounts)
             {
-                accountsList.Items.Add(new ListViewItem { Text = account.Username });
+                accountsList.Items.Add(account.Username);
             }
 
             searchProgress.Visible = false;
@@ -72,6 +72,14 @@ namespace TrinityCore_Manager.Character_Management
                 case Keys.Escape:
                     Close();
                     break;
+            }
+        }
+
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchButton.PerformClick();
             }
         }
     }
