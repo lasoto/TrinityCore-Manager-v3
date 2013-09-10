@@ -486,9 +486,11 @@
             this.Controls.Add(this.labelX13);
             this.Controls.Add(this.labelX14);
             this.Controls.Add(this.labelX15);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 400);
             this.MinimizeBox = false;
@@ -496,6 +498,7 @@
             this.Name = "PlayerInformation";
             this.Text = "Player Information";
             this.Load += new System.EventHandler(this.PlayerInformation_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PlayerInformation_KeyDown);
             this.ResumeLayout(false);
 
         }

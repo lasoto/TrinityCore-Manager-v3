@@ -35,5 +35,15 @@ namespace TrinityCore_Manager
             using (ConvertDaysToMinutes cdtm = new ConvertDaysToMinutes())
                 cdtm.ShowDialog();
         }
+
+        private void EventStart_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

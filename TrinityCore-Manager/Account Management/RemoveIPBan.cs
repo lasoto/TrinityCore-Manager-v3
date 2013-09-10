@@ -48,6 +48,16 @@ namespace TrinityCore_Manager
 
         }
 
+        private void RemoveIPBan_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
 
 
     }

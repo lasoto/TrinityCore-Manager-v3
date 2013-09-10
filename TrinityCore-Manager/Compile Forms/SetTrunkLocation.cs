@@ -66,5 +66,15 @@ namespace TrinityCore_Manager.Compile_Forms
             Close();
         }
 
+        private void SetTrunkLocation_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

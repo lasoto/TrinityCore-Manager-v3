@@ -53,13 +53,13 @@
             this.accLvl0ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.usernameTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.accountPermissionLabel = new DevComponents.DotNetBar.LabelX();
             this.accountPasswordLabel = new DevComponents.DotNetBar.LabelX();
             this.accountUsernameLabel = new DevComponents.DotNetBar.LabelX();
-            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // applicationButton2
@@ -312,6 +312,10 @@
             // 
             this.accLvl2ComboItem.Text = "Game Master";
             // 
+            // accLvl3ComboItem
+            // 
+            this.accLvl3ComboItem.Text = "Head Game Master";
+            // 
             // accLvl4ComboItem
             // 
             this.accLvl4ComboItem.Text = "Administrator";
@@ -383,10 +387,6 @@
             this.accountUsernameLabel.TabIndex = 4;
             this.accountUsernameLabel.Text = "Account Username:";
             // 
-            // accLvl3ComboItem
-            // 
-            this.accLvl3ComboItem.Text = "Head Game Master";
-            // 
             // AddAccount
             // 
             this.AcceptButton = this.createButton;
@@ -404,9 +404,11 @@
             this.Controls.Add(this.accountUsernameLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
             this.MinimizeBox = false;
@@ -414,6 +416,7 @@
             this.Name = "AddAccount";
             this.Text = "Add Account";
             this.Load += new System.EventHandler(this.AddAccount_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddAccount_KeyDown);
             this.ResumeLayout(false);
 
         }

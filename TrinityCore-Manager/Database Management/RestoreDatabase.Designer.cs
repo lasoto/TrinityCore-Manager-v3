@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 164);
+            this.ClientSize = new System.Drawing.Size(490, 165);
             this.Controls.Add(this.deleteBackupButton);
             this.Controls.Add(this.restoreProgressBar);
             this.Controls.Add(this.restoreListComboBox);
@@ -116,6 +116,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(510, 207);
             this.MinimizeBox = false;
@@ -123,6 +124,7 @@
             this.Name = "RestoreDatabase";
             this.Text = "Restore Database";
             this.Load += new System.EventHandler(this.RestoreDatabase_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RestoreDatabase_KeyDown);
             this.ResumeLayout(false);
 
         }

@@ -136,5 +136,15 @@ namespace TrinityCore_Manager
 
         }
 
+        private void PlayerInformation_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

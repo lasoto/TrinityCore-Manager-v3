@@ -345,7 +345,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 553);
+            this.ClientSize = new System.Drawing.Size(551, 549);
             this.Controls.Add(this.checkAllButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.bindOnPickupCheckBox);
@@ -372,12 +372,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(571, 591);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(571, 591);
             this.Name = "FindItemFlags";
             this.Text = "Find Item Flags";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindItemFlags_KeyDown);
             this.ResumeLayout(false);
 
         }

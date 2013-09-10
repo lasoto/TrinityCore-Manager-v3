@@ -77,5 +77,15 @@ namespace TrinityCore_Manager
             }
 
         }
+
+        private void AddAccountBan_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

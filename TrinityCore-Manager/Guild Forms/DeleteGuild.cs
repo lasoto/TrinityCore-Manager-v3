@@ -77,6 +77,16 @@ namespace TrinityCore_Manager
             await TCManager.Instance.CharDatabase.DeleteGuild(guild.Guildid);
             await RefreshGuilds();
         }
+
+        private void DeleteGuild_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
    
     }
 }

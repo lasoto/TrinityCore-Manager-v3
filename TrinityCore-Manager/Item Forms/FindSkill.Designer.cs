@@ -123,7 +123,7 @@
             this.itemFindDisplayIdTextBox.Size = new System.Drawing.Size(361, 20);
             this.itemFindDisplayIdTextBox.TabIndex = 17;
             // 
-            // ItemFindSkill
+            // FindSkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,12 +137,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(382, 560);
-            this.Name = "ItemFindSkill";
+            this.Name = "FindSkill";
             this.Text = "Item Find Skill";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindSkill_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.findSkillListView)).EndInit();
             this.ResumeLayout(false);
 

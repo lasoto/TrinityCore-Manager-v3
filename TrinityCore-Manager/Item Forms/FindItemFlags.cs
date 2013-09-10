@@ -185,5 +185,15 @@ namespace TrinityCore_Manager
             millableCheckBox.Checked = true;
             bindOnPickupCheckBox.Checked = true;
         }
+
+        private void FindItemFlags_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

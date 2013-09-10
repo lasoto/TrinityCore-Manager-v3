@@ -135,12 +135,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(382, 560);
             this.Name = "FindEvent";
             this.Text = "Find Event";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindEvent_KeyDown);
             this.ResumeLayout(false);
 
         }

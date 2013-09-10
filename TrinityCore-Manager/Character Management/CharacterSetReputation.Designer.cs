@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 263);
+            this.ClientSize = new System.Drawing.Size(498, 259);
             this.Controls.Add(this.standingLabel);
             this.Controls.Add(this.characterLabel);
             this.Controls.Add(this.repIntegerInput);
@@ -191,12 +191,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(518, 301);
             this.Name = "CharacterSetReputation";
             this.Text = "Character Set Reputation";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CharacterSetReputation_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.repIntegerInput)).EndInit();
             this.ResumeLayout(false);
 

@@ -89,5 +89,15 @@ namespace TrinityCore_Manager
         {
             Close();
         }
+
+        private void EditAccount_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

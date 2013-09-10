@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 262);
+            this.ClientSize = new System.Drawing.Size(382, 258);
             this.Controls.Add(this.copyToClipboardButton);
             this.Controls.Add(this.inMinutesLabel);
             this.Controls.Add(this.labelX1);
@@ -144,12 +144,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(402, 300);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(402, 300);
             this.Name = "ConvertDaysToMinutes";
             this.Text = "Convert Days To Minutes";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConvertDaysToMinutes_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

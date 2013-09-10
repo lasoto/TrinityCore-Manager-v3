@@ -275,9 +275,11 @@
             this.Controls.Add(this.authCheckBox);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.backupButton);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(510, 274);
             this.MinimizeBox = false;
@@ -286,6 +288,7 @@
             this.Text = "Backup Database";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BackupDatabase_FormClosing);
             this.Load += new System.EventHandler(this.BackupDatabase_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BackupDatabase_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.daysIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minIntegerInput)).EndInit();

@@ -136,9 +136,11 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.itemFindDisplayIdTextBox);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
@@ -146,6 +148,7 @@
             this.Name = "FindItemMap";
             this.Text = "Find Item Map";
             this.Load += new System.EventHandler(this.FindItemMap_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindItemMap_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.findMapListView)).EndInit();
             this.ResumeLayout(false);
 

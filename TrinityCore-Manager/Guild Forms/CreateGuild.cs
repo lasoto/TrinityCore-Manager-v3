@@ -80,5 +80,15 @@ namespace TrinityCore_Manager
             Close();
         }
 
+        private void CreateGuild_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 158);
+            this.ClientSize = new System.Drawing.Size(503, 154);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.browseButton);
@@ -112,6 +112,7 @@
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(523, 196);
             this.MinimizeBox = false;
@@ -122,6 +123,7 @@
             this.Text = "Set Trunk Location";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.SetTrunkLocationForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SetTrunkLocation_KeyDown);
             this.ResumeLayout(false);
 
         }

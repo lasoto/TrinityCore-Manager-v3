@@ -53,6 +53,16 @@ namespace TrinityCore_Manager.CustomForms
 
         }
 
+        private void InputForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
 
 
     }

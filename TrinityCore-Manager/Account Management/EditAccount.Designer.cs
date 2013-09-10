@@ -37,6 +37,7 @@
             this.accLvl0ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl1ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl2ComboItem = new DevComponents.Editors.ComboItem();
+            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.accLvl4ComboItem = new DevComponents.Editors.ComboItem();
             this.usernameComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -49,7 +50,6 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.passTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.editAccountSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.accLvl3ComboItem = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // accountPermissionLabel
@@ -135,6 +135,10 @@
             // accLvl2ComboItem
             // 
             this.accLvl2ComboItem.Text = "Game Master";
+            // 
+            // accLvl3ComboItem
+            // 
+            this.accLvl3ComboItem.Text = "Head Game Master";
             // 
             // accLvl4ComboItem
             // 
@@ -259,10 +263,6 @@
             // 
             this.editAccountSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
-            // accLvl3ComboItem
-            // 
-            this.accLvl3ComboItem.Text = "Head Game Master";
-            // 
             // EditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,9 +280,11 @@
             this.Controls.Add(this.accountUsernameLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(518, 301);
             this.MinimizeBox = false;
@@ -290,6 +292,7 @@
             this.Name = "EditAccount";
             this.Text = "Edit Account";
             this.Load += new System.EventHandler(this.EditAccount_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditAccount_KeyDown);
             this.ResumeLayout(false);
 
         }

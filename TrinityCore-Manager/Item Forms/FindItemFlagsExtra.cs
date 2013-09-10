@@ -80,5 +80,15 @@ namespace TrinityCore_Manager
             extendedCostCheckBox.Checked = true;
             needRollDisabledCheckBox.Checked = true;
         }
+
+        private void FindItemFlagsExtra_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

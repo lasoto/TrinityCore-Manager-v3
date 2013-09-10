@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 279);
+            this.ClientSize = new System.Drawing.Size(510, 275);
             this.Controls.Add(this.currentSkillLabel);
             this.Controls.Add(this.characterLabel);
             this.Controls.Add(this.skillIntegerInput);
@@ -189,12 +189,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(530, 317);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(530, 317);
             this.Name = "CharacterSetSkillLevel";
             this.Text = "Character Set Skill Level";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CharacterSetSkillLevel_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.skillIntegerInput)).EndInit();
             this.ResumeLayout(false);
 

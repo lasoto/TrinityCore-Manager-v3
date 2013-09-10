@@ -102,6 +102,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
@@ -109,6 +110,7 @@
             this.Name = "DeleteGuild";
             this.Text = "Delete Guild";
             this.Load += new System.EventHandler(this.DeleteGuild_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeleteGuild_KeyDown);
             this.ResumeLayout(false);
 
         }

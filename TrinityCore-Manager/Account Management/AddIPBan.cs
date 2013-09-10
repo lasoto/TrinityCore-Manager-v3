@@ -66,5 +66,15 @@ namespace TrinityCore_Manager
             banTimeDateTimeInput.Enabled = !permanentBanCheckBox.Checked;
         }
 
+        private void AddIPBan_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

@@ -308,5 +308,15 @@ namespace TrinityCore_Manager.Database_Management
 
         }
 
+        private void RestoreDatabase_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

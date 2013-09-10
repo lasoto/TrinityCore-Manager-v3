@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 202);
+            this.ClientSize = new System.Drawing.Size(393, 191);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.timeInput);
@@ -222,12 +222,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(413, 233);
             this.Name = "AccountCleanup";
             this.Text = "Database Account Cleanup";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AccountCleanup_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeInput)).EndInit();
             this.ResumeLayout(false);

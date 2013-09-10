@@ -18,5 +18,15 @@ namespace TrinityCore_Manager.Item_Forms
         {
             InitializeComponent();
         }
+
+        private void FindSkill_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

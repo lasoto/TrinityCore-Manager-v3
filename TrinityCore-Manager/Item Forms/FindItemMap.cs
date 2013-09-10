@@ -98,5 +98,15 @@ namespace TrinityCore_Manager
                 return ((SerializedItem)x).Name.ToLower().Contains(itemFindDisplayIdTextBox.Text.ToLower());
             });
         }
+
+        private void FindItemMap_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

@@ -57,6 +57,8 @@
             this.comboItem203 = new DevComponents.Editors.ComboItem();
             this.comboItem204 = new DevComponents.Editors.ComboItem();
             this.comboItem205 = new DevComponents.Editors.ComboItem();
+            this.comboItem211 = new DevComponents.Editors.ComboItem();
+            this.comboItem212 = new DevComponents.Editors.ComboItem();
             this.actionTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem74 = new DevComponents.Editors.ComboItem();
             this.comboItem75 = new DevComponents.Editors.ComboItem();
@@ -165,6 +167,9 @@
             this.comboItem178 = new DevComponents.Editors.ComboItem();
             this.comboItem179 = new DevComponents.Editors.ComboItem();
             this.comboItem180 = new DevComponents.Editors.ComboItem();
+            this.comboItem208 = new DevComponents.Editors.ComboItem();
+            this.comboItem209 = new DevComponents.Editors.ComboItem();
+            this.comboItem210 = new DevComponents.Editors.ComboItem();
             this.eventTypeComboBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
@@ -334,11 +339,6 @@
             this.removeButton = new DevComponents.DotNetBar.ButtonX();
             this.refreshButton = new DevComponents.DotNetBar.ButtonX();
             this.addButton = new DevComponents.DotNetBar.ButtonX();
-            this.comboItem208 = new DevComponents.Editors.ComboItem();
-            this.comboItem209 = new DevComponents.Editors.ComboItem();
-            this.comboItem210 = new DevComponents.Editors.ComboItem();
-            this.comboItem211 = new DevComponents.Editors.ComboItem();
-            this.comboItem212 = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.linkIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idIntegerInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.targetOIntegerInput)).BeginInit();
@@ -526,6 +526,14 @@
             // comboItem205
             // 
             this.comboItem205.Text = "SMART_TARGET_THREAT_LIST";
+            // 
+            // comboItem211
+            // 
+            this.comboItem211.Text = "SMART_TARGET_CLOSEST_ENEMY";
+            // 
+            // comboItem212
+            // 
+            this.comboItem212.Text = "SMART_TARGET_CLOSEST_FRIENDLY";
             // 
             // actionTypeComboBox
             // 
@@ -1081,6 +1089,18 @@
             // comboItem180
             // 
             this.comboItem180.Text = "SMART_ACTION_SUMMON_CREATURE_GROUP";
+            // 
+            // comboItem208
+            // 
+            this.comboItem208.Text = "SMART_ACTION_SET_POWER";
+            // 
+            // comboItem209
+            // 
+            this.comboItem209.Text = "SMART_ACTION_ADD_POWER";
+            // 
+            // comboItem210
+            // 
+            this.comboItem210.Text = "SMART_ACTION_REMOVE_POWER";
             // 
             // eventTypeComboBox
             // 
@@ -2437,31 +2457,11 @@
             this.addButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.addButton.TabIndex = 21;
             // 
-            // comboItem208
-            // 
-            this.comboItem208.Text = "SMART_ACTION_SET_POWER";
-            // 
-            // comboItem209
-            // 
-            this.comboItem209.Text = "SMART_ACTION_ADD_POWER";
-            // 
-            // comboItem210
-            // 
-            this.comboItem210.Text = "SMART_ACTION_REMOVE_POWER";
-            // 
-            // comboItem211
-            // 
-            this.comboItem211.Text = "SMART_TARGET_CLOSEST_ENEMY";
-            // 
-            // comboItem212
-            // 
-            this.comboItem212.Text = "SMART_TARGET_CLOSEST_FRIENDLY";
-            // 
             // CreateSmartAI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 713);
+            this.ClientSize = new System.Drawing.Size(920, 714);
             this.Controls.Add(this.targetTypeComboBox);
             this.Controls.Add(this.actionTypeComboBox);
             this.Controls.Add(this.eventTypeComboBox);
@@ -2527,6 +2527,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(940, 756);
             this.MinimizeBox = false;
@@ -2534,6 +2535,7 @@
             this.Name = "CreateSmartAI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create SmartAI";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CreateSmartAI_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.linkIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.targetOIntegerInput)).EndInit();

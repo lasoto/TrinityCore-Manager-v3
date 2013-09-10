@@ -68,5 +68,15 @@ namespace TrinityCore_Manager.Item_Forms
             ignoreQuestStatusCheckBox.Checked = true;
             followLootRulesCheckBox.Checked = true;
         }
+
+        private void FindItemFlagsCustom_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

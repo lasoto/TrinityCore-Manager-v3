@@ -41,5 +41,15 @@ namespace TrinityCore_Manager
             StopLoading();
 
         }
+
+        private void RemoveAccountBan_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

@@ -52,9 +52,11 @@
             this.ClientSize = new System.Drawing.Size(465, 168);
             this.Controls.Add(this.textBoxX1);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "InputForm";
             this.Text = "InputForm";
             this.Load += new System.EventHandler(this.InputForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputForm_KeyDown);
             this.ResumeLayout(false);
 
         }

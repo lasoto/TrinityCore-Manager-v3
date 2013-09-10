@@ -210,5 +210,15 @@ namespace TrinityCore_Manager.Database_Management
             }
         }
 
+        private void BackupDatabase_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

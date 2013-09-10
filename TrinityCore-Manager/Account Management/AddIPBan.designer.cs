@@ -212,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 190);
+            this.ClientSize = new System.Drawing.Size(393, 191);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);
@@ -226,6 +226,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(413, 233);
             this.MinimizeBox = false;
@@ -233,6 +234,7 @@
             this.Name = "AddIPBan";
             this.Text = "Add IP Ban";
             this.Load += new System.EventHandler(this.AddIPBan_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddIPBan_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressBanInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banTimeDateTimeInput)).EndInit();
             this.ResumeLayout(false);

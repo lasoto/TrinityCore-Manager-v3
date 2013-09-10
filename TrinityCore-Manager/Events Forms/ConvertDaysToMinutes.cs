@@ -40,5 +40,15 @@ namespace TrinityCore_Manager
                 Clipboard.SetText(inMinutesLabel.Text);
         }
 
+        private void ConvertDaysToMinutes_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

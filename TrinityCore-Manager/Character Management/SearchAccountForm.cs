@@ -65,5 +65,15 @@ namespace TrinityCore_Manager.Character_Management
         {
             Close();
         }
+
+        private void SearchAccountForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

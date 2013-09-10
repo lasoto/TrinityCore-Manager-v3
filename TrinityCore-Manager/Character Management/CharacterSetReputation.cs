@@ -22,5 +22,15 @@ namespace TrinityCore_Manager
         {
             // This dropdown list should display ONLY factions from the characters.character_reputation table that account under this GUID has.
         }
+
+        private void CharacterSetReputation_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

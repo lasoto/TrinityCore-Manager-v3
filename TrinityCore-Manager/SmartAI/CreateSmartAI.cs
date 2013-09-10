@@ -24,5 +24,15 @@ namespace TrinityCore_Manager.SmartAI
         {
             Process.Start("http://collab.kpsn.org/display/tc/smart_scripts");
         }
+
+        private void CreateSmartAI_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }
