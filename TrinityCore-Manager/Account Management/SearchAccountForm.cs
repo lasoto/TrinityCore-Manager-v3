@@ -76,9 +76,7 @@ namespace TrinityCore_Manager.Character_Management
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
                 SearchButton.PerformClick();
-            }
         }
     }
 }
