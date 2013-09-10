@@ -412,7 +412,7 @@ namespace TrinityCore_Manager
                 return;
             }
 
-            using (PlayerInformation playerInfo = new PlayerInformation(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString()))
+            using (PlayerInformationForm playerInfo = new PlayerInformationForm(characterListComboBox.Items[characterListComboBox.SelectedIndex].ToString()))
                 playerInfo.ShowDialog();
 
         }

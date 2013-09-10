@@ -16,12 +16,12 @@ using TrinityCore_Manager.Extensions;
 
 namespace TrinityCore_Manager
 {
-    public partial class PlayerInformation : TCMForm
+    public partial class PlayerInformationForm : TCMForm
     {
 
         private string _charName;
 
-        public PlayerInformation(string charName)
+        public PlayerInformationForm(string charName)
         {
 
             _charName = charName;

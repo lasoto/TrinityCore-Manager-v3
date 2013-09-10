@@ -13,4 +13,3 @@
 - Fix the WoWItem class exception when using the search item form
 - Hide password fields in forms lik Add Account
 - Figure out why the console stops logging the worldserver's actions (on W7 (?only?)) after a short period of time
-- Create a new class for comboboxes which is derived from

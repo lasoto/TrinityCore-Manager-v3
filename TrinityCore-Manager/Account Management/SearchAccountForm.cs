@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using TrinityCore_Manager.TCM;
@@ -28,14 +23,12 @@ namespace TrinityCore_Manager.Character_Management
         {
             accountsList.Items.Clear();
             searchProgress.Visible = true;
-
             var accounts = await TCManager.Instance.AuthDatabase.SearchForAccount(searchTextBox.Text);
 
             foreach (var account in accounts)
                 accountsList.Items.Add(account.Username);
 
             searchProgress.Visible = false;
-
         }
 
         private void okButton_Click(object sender, EventArgs e)

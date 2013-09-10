@@ -149,7 +149,7 @@
             // 
             // 
             this.permanentBanCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.permanentBanCheckBox.Location = new System.Drawing.Point(161, 120);
+            this.permanentBanCheckBox.Location = new System.Drawing.Point(245, 111);
             this.permanentBanCheckBox.Name = "permanentBanCheckBox";
             this.permanentBanCheckBox.Size = new System.Drawing.Size(100, 23);
             this.permanentBanCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -212,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 191);
+            this.ClientSize = new System.Drawing.Size(393, 190);
             this.Controls.Add(this.permanentBanCheckBox);
             this.Controls.Add(this.banTimeDateTimeInput);
             this.Controls.Add(this.labelX2);

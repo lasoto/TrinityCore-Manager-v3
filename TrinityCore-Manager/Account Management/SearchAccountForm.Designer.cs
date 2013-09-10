@@ -45,7 +45,7 @@ namespace TrinityCore_Manager.Character_Management
             // 
             this.nameLabel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(14, 22);
+            this.nameLabel.Location = new System.Drawing.Point(12, 19);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(60, 20);
             this.nameLabel.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace TrinityCore_Manager.Character_Management
             this.searchTextBox.ForeColor = System.Drawing.Color.White;
             this.searchTextBox.Location = new System.Drawing.Point(63, 22);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(182, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(186, 20);
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
@@ -75,6 +75,7 @@ namespace TrinityCore_Manager.Character_Management
             this.accountsList.Border.Class = "ListViewBorder";
             this.accountsList.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.accountsList.ForeColor = System.Drawing.Color.White;
+            this.accountsList.FullRowSelect = true;
             this.accountsList.Location = new System.Drawing.Point(12, 48);
             this.accountsList.Name = "accountsList";
             this.accountsList.Size = new System.Drawing.Size(312, 153);
@@ -88,7 +89,7 @@ namespace TrinityCore_Manager.Character_Management
             this.SearchButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.SearchButton.Location = new System.Drawing.Point(251, 22);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(75, 20);
+            this.SearchButton.Size = new System.Drawing.Size(73, 20);
             this.SearchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SearchButton.TabIndex = 3;
             this.SearchButton.Text = "Search";
@@ -100,7 +101,7 @@ namespace TrinityCore_Manager.Character_Management
             // 
             // 
             this.searchProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.searchProgress.Location = new System.Drawing.Point(144, 207);
+            this.searchProgress.Location = new System.Drawing.Point(143, 207);
             this.searchProgress.Name = "searchProgress";
             this.searchProgress.ProgressColor = System.Drawing.Color.White;
             this.searchProgress.Size = new System.Drawing.Size(46, 32);
@@ -134,7 +135,7 @@ namespace TrinityCore_Manager.Character_Management
             // 
             // SearchAccountForm
             // 
-            this.ClientSize = new System.Drawing.Size(344, 248);
+            this.ClientSize = new System.Drawing.Size(339, 244);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.searchProgress);
@@ -150,7 +151,7 @@ namespace TrinityCore_Manager.Character_Management
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SearchAccountForm";
-            this.Text = "Search for Account";
+            this.Text = "Search for an account";
             this.Load += new System.EventHandler(this.SearchAccountForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAccountForm_KeyDown);
             this.ResumeLayout(false);
