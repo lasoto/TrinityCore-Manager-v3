@@ -40,6 +40,7 @@
             this.searchButton = new DevComponents.DotNetBar.ButtonX();
             this.nextButton = new DevComponents.DotNetBar.ButtonX();
             this.prevPageButton = new DevComponents.DotNetBar.ButtonX();
+            this.labelXPageOfPages = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.findItemListView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@
             // 
             // 
             this.loadingProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.loadingProgress.Location = new System.Drawing.Point(1, 495);
+            this.loadingProgress.Location = new System.Drawing.Point(-1, 495);
             this.loadingProgress.Name = "loadingProgress";
             this.loadingProgress.ProgressColor = System.Drawing.Color.White;
             this.loadingProgress.Size = new System.Drawing.Size(41, 23);
@@ -125,7 +126,7 @@
             this.imageColumn.CellPadding = null;
             this.imageColumn.ImageAspectName = "";
             this.imageColumn.Text = "";
-            this.imageColumn.Width = 84;
+            this.imageColumn.Width = 68;
             // 
             // idColumn
             // 
@@ -145,9 +146,9 @@
             // 
             this.searchButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.searchButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.searchButton.Location = new System.Drawing.Point(366, 15);
+            this.searchButton.Location = new System.Drawing.Point(366, 17);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(75, 20);
             this.searchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.searchButton.TabIndex = 23;
             this.searchButton.Text = "Search";
@@ -157,32 +158,45 @@
             // 
             this.nextButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.nextButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.nextButton.Location = new System.Drawing.Point(168, 495);
+            this.nextButton.Location = new System.Drawing.Point(120, 495);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(93, 23);
+            this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.nextButton.TabIndex = 24;
-            this.nextButton.Text = "Next Page -->";
+            this.nextButton.Text = "Next -->";
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // prevPageButton
             // 
             this.prevPageButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.prevPageButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.prevPageButton.Location = new System.Drawing.Point(69, 495);
+            this.prevPageButton.Location = new System.Drawing.Point(39, 495);
             this.prevPageButton.Name = "prevPageButton";
-            this.prevPageButton.Size = new System.Drawing.Size(93, 23);
+            this.prevPageButton.Size = new System.Drawing.Size(75, 23);
             this.prevPageButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.prevPageButton.TabIndex = 25;
-            this.prevPageButton.Text = "<-- Previous Page";
+            this.prevPageButton.Text = "<-- Previous";
             this.prevPageButton.Click += new System.EventHandler(this.prevPageButton_Click);
+            // 
+            // labelXPageOfPages
+            // 
+            // 
+            // 
+            // 
+            this.labelXPageOfPages.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelXPageOfPages.Location = new System.Drawing.Point(199, 495);
+            this.labelXPageOfPages.Name = "labelXPageOfPages";
+            this.labelXPageOfPages.Size = new System.Drawing.Size(84, 23);
+            this.labelXPageOfPages.TabIndex = 26;
+            this.labelXPageOfPages.Text = "Page 0 of 0";
             // 
             // FindItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(444, 521);
+            this.ClientSize = new System.Drawing.Size(444, 520);
+            this.Controls.Add(this.labelXPageOfPages);
             this.Controls.Add(this.prevPageButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.searchButton);
@@ -222,5 +236,6 @@
         private DevComponents.DotNetBar.ButtonX searchButton;
         private DevComponents.DotNetBar.ButtonX nextButton;
         private DevComponents.DotNetBar.ButtonX prevPageButton;
+        private DevComponents.DotNetBar.LabelX labelXPageOfPages;
     }
 }

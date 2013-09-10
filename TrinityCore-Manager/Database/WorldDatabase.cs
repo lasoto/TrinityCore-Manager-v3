@@ -33,6 +33,17 @@ namespace TrinityCore_Manager.Database
 
         }
 
+        public async Task<int> GetTotalPagesForItem(string searchQuery)
+        {
+            int totalPages = 0;
+            DataTable dt = await ExecuteQuery("SELECT COUNT(*) / 10 FROM `item_template` WHERE `name` LIKE @search", new MySqlParameter("@search", "%" + searchQuery + "%"));
+
+            foreach (DataRow row in dt.Rows)
+                totalPages = (int)Math.Ceiling((double)Convert.ToInt32(dt.Rows[0]["COUNT(*) / 10"]));
+
+            return totalPages;
+        }
+
         public TCItem BuildItem(DataRow row)
         {
             TCItem item = new TCItem();
