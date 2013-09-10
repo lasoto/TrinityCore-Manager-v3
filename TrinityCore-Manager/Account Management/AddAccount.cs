@@ -28,7 +28,6 @@ namespace TrinityCore_Manager
 
         private void createButton_Click(object sender, EventArgs e)
         {
-
             if (String.IsNullOrEmpty(usernameTextBox.Text) || String.IsNullOrEmpty(passwordTextBox.Text) || accLevelComboBox.SelectedIndex == -1 || accAddonComboBox.SelectedIndex == -1)
             {
 

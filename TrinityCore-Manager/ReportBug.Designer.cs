@@ -109,6 +109,7 @@
             this.passwordTextBox.ForeColor = System.Drawing.Color.White;
             this.passwordTextBox.Location = new System.Drawing.Point(231, 54);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(270, 20);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.UseSystemPasswordChar = true;

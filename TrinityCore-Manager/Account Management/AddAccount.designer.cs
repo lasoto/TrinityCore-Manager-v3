@@ -331,6 +331,7 @@
             this.passwordTextBox.ForeColor = System.Drawing.Color.White;
             this.passwordTextBox.Location = new System.Drawing.Point(207, 76);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(216, 20);
             this.passwordTextBox.TabIndex = 8;
             // 
@@ -393,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(498, 258);
+            this.ClientSize = new System.Drawing.Size(498, 259);
             this.Controls.Add(this.accAddonComboBox);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.accLevelComboBox);
