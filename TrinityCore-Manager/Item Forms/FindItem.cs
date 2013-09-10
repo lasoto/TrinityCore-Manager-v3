@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using DevComponents.DotNetBar;
+using TrinityCore_Manager.Item_Forms;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.TCM;
 
@@ -12,8 +13,8 @@ namespace TrinityCore_Manager
 {
     public partial class FindItem : Office2007Form
     {
-        private int atPage = 0;
-        private int totalPages = 0;
+        public int atPage = 0;
+        public int totalPages = 0;
 
         public FindItem()
         {
@@ -34,7 +35,6 @@ namespace TrinityCore_Manager
                     return WoWItem.UnknownImage;
 
                 return item.ItemImage;
-
             };
 
             findItemListView.CellToolTipGetter = delegate(OLVColumn col, object row)
@@ -80,10 +80,9 @@ namespace TrinityCore_Manager
             Dictionary<int, string> items = await TCManager.Instance.WorldDatabase.SearchForItem(itemFindDisplayIdTextBox.Text, page);
 
             if (totalPages <= 0)
-            {
                 totalPages = await TCManager.Instance.WorldDatabase.GetTotalPagesForItem(itemFindDisplayIdTextBox.Text);
-                labelXPageOfPages.Text = "Page " + (atPage + 1).ToString() + " of " + (totalPages + 1).ToString(); //! +1 because we don't want page 0
-            }
+
+            labelXPageOfPages.Text = "Page " + (page + 1).ToString() + " of " + (totalPages + 1).ToString(); //! +1 because we don't want page 0
 
             findItemListView.Items.Clear();
 
@@ -91,7 +90,6 @@ namespace TrinityCore_Manager
 
             foreach (var item in items)
             {
-
                 try
                 {
                     WoWItem wowItem = await WoWItem.GetItem(item.Key);
@@ -140,7 +138,6 @@ namespace TrinityCore_Manager
         private async void nextButton_Click(object sender, EventArgs e)
         {
             await StartSearch(++atPage);
-            labelXPageOfPages.Text = "Page " + (atPage + 1).ToString() + " of " + (totalPages + 1).ToString(); //! +1 because we don't want page 0
         }
 
         private async void prevPageButton_Click(object sender, EventArgs e)
@@ -149,7 +146,6 @@ namespace TrinityCore_Manager
                 return;
 
             await StartSearch(--atPage);
-            labelXPageOfPages.Text = "Page " + (atPage + 1).ToString() + " of " + (totalPages + 1).ToString(); //! +1 because we don't want page 0
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -171,6 +167,13 @@ namespace TrinityCore_Manager
                     Close();
                     break;
             }
+        }
+
+        private async void buttonX1_Click(object sender, EventArgs e)
+        {
+            using (GoToPageForm pageForm = new GoToPageForm())
+                if (pageForm.ShowDialog(this) == DialogResult.OK)
+                    await StartSearch(Convert.ToInt32(pageForm.textBoxXNewPage.Text));
         }
     }
 }

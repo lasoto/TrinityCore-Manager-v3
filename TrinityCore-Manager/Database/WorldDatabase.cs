@@ -30,7 +30,6 @@ namespace TrinityCore_Manager.Database
                 items.Add(Convert.ToInt32((uint)row["entry"]), (string)row["name"]);
 
             return items;
-
         }
 
         public async Task<int> GetTotalPagesForItem(string searchQuery)

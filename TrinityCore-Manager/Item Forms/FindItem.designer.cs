@@ -41,6 +41,7 @@
             this.nextButton = new DevComponents.DotNetBar.ButtonX();
             this.prevPageButton = new DevComponents.DotNetBar.ButtonX();
             this.labelXPageOfPages = new DevComponents.DotNetBar.LabelX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.findItemListView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.cancelButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cancelButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(285, 495);
+            this.cancelButton.Location = new System.Drawing.Point(296, 495);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -61,7 +62,7 @@
             // 
             this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.okButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.okButton.Location = new System.Drawing.Point(366, 495);
+            this.okButton.Location = new System.Drawing.Point(376, 495);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -78,9 +79,9 @@
             this.itemFindDisplayIdTextBox.Border.Class = "TextBoxBorder";
             this.itemFindDisplayIdTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemFindDisplayIdTextBox.ForeColor = System.Drawing.Color.White;
-            this.itemFindDisplayIdTextBox.Location = new System.Drawing.Point(1, 17);
+            this.itemFindDisplayIdTextBox.Location = new System.Drawing.Point(8, 12);
             this.itemFindDisplayIdTextBox.Name = "itemFindDisplayIdTextBox";
-            this.itemFindDisplayIdTextBox.Size = new System.Drawing.Size(361, 20);
+            this.itemFindDisplayIdTextBox.Size = new System.Drawing.Size(366, 20);
             this.itemFindDisplayIdTextBox.TabIndex = 16;
             this.itemFindDisplayIdTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.itemFindDisplayIdTextBox_KeyUp);
             // 
@@ -90,7 +91,7 @@
             // 
             // 
             this.loadingProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.loadingProgress.Location = new System.Drawing.Point(-1, 495);
+            this.loadingProgress.Location = new System.Drawing.Point(6, 495);
             this.loadingProgress.Name = "loadingProgress";
             this.loadingProgress.ProgressColor = System.Drawing.Color.White;
             this.loadingProgress.Size = new System.Drawing.Size(41, 23);
@@ -110,7 +111,7 @@
             this.nameColumn});
             this.findItemListView.ForeColor = System.Drawing.Color.White;
             this.findItemListView.FullRowSelect = true;
-            this.findItemListView.Location = new System.Drawing.Point(1, 43);
+            this.findItemListView.Location = new System.Drawing.Point(8, 38);
             this.findItemListView.MultiSelect = false;
             this.findItemListView.Name = "findItemListView";
             this.findItemListView.ShowGroups = false;
@@ -126,7 +127,7 @@
             this.imageColumn.CellPadding = null;
             this.imageColumn.ImageAspectName = "";
             this.imageColumn.Text = "";
-            this.imageColumn.Width = 68;
+            this.imageColumn.Width = 55;
             // 
             // idColumn
             // 
@@ -140,13 +141,13 @@
             this.nameColumn.AspectName = "ItemName";
             this.nameColumn.CellPadding = null;
             this.nameColumn.Text = "Item Name";
-            this.nameColumn.Width = 282;
+            this.nameColumn.Width = 300;
             // 
             // searchButton
             // 
             this.searchButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.searchButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.searchButton.Location = new System.Drawing.Point(366, 17);
+            this.searchButton.Location = new System.Drawing.Point(376, 12);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 20);
             this.searchButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -158,9 +159,9 @@
             // 
             this.nextButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.nextButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.nextButton.Location = new System.Drawing.Point(120, 495);
+            this.nextButton.Location = new System.Drawing.Point(137, 495);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.Size = new System.Drawing.Size(64, 23);
             this.nextButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.nextButton.TabIndex = 24;
             this.nextButton.Text = "Next -->";
@@ -170,12 +171,12 @@
             // 
             this.prevPageButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.prevPageButton.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.prevPageButton.Location = new System.Drawing.Point(39, 495);
+            this.prevPageButton.Location = new System.Drawing.Point(46, 495);
             this.prevPageButton.Name = "prevPageButton";
-            this.prevPageButton.Size = new System.Drawing.Size(75, 23);
+            this.prevPageButton.Size = new System.Drawing.Size(64, 23);
             this.prevPageButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.prevPageButton.TabIndex = 25;
-            this.prevPageButton.Text = "<-- Previous";
+            this.prevPageButton.Text = "<-- Prev";
             this.prevPageButton.Click += new System.EventHandler(this.prevPageButton_Click);
             // 
             // labelXPageOfPages
@@ -184,18 +185,31 @@
             // 
             // 
             this.labelXPageOfPages.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelXPageOfPages.Location = new System.Drawing.Point(199, 495);
+            this.labelXPageOfPages.Location = new System.Drawing.Point(206, 497);
             this.labelXPageOfPages.Name = "labelXPageOfPages";
-            this.labelXPageOfPages.Size = new System.Drawing.Size(84, 23);
+            this.labelXPageOfPages.Size = new System.Drawing.Size(84, 19);
             this.labelXPageOfPages.TabIndex = 26;
             this.labelXPageOfPages.Text = "Page 0 of 0";
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(113, 495);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(21, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 27;
+            this.buttonX1.Text = "...";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // FindItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(444, 520);
+            this.ClientSize = new System.Drawing.Size(461, 524);
+            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.labelXPageOfPages);
             this.Controls.Add(this.prevPageButton);
             this.Controls.Add(this.nextButton);
@@ -211,9 +225,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(464, 563);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(464, 563);
             this.Name = "FindItem";
             this.Text = "Find Item";
             this.Load += new System.EventHandler(this.FindItem_Load);
@@ -237,5 +249,6 @@
         private DevComponents.DotNetBar.ButtonX nextButton;
         private DevComponents.DotNetBar.ButtonX prevPageButton;
         private DevComponents.DotNetBar.LabelX labelXPageOfPages;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
