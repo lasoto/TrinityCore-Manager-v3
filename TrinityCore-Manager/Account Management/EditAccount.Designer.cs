@@ -260,6 +260,7 @@
             this.accountNameTextBox.ForeColor = System.Drawing.Color.White;
             this.accountNameTextBox.Location = new System.Drawing.Point(209, 21);
             this.accountNameTextBox.Name = "accountNameTextBox";
+            this.accountNameTextBox.ReadOnly = true;
             this.accountNameTextBox.Size = new System.Drawing.Size(192, 20);
             this.accountNameTextBox.TabIndex = 26;
             this.accountNameTextBox.TextChanged += new System.EventHandler(this.accountNameTextBox_TextChanged);

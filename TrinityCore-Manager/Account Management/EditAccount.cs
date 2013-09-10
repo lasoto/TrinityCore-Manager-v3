@@ -69,12 +69,18 @@ namespace TrinityCore_Manager
 
         private async void accountNameTextBox_TextChanged(object sender, EventArgs e)
         {
+
             Account selectedAccount = await TCManager.Instance.AuthDatabase.GetAccount(accountNameTextBox.Text);
+
+            if (selectedAccount == null)
+                return;
+
             GMLevel level = await TCManager.Instance.AuthDatabase.GetAccountAccess(selectedAccount.Id);
 
             accLevelComboBox.SelectedIndex = ((int)level) - 1;
             accAddonComboBox.SelectedIndex = (int)selectedAccount.Exp;
             switchButton.Value = selectedAccount.Locked == 1;
+        
         }
     }
 }

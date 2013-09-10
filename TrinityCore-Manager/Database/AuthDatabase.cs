@@ -156,7 +156,7 @@ namespace TrinityCore_Manager.Database
         public async Task<List<Account>> SearchForAccount(string like)
         {
 
-            DataTable dt = await ExecuteQuery("SELECT * FROM `account` WHERE username LIKE '%@username%'", new MySqlParameter("@username", like));
+            DataTable dt = await ExecuteQuery("SELECT * FROM `account` WHERE username LIKE '%" + like + "%'");
 
             var accts = new List<Account>();
 
