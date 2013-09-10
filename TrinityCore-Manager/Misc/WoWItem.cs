@@ -94,7 +94,6 @@ namespace TrinityCore_Manager.Misc
             catch (Exception)
             {
                 return Properties.Resources.questionmark;
-                //return Image.FromFile(Path.Combine(ImageFolder, "questionmark.png"));
             }
 
         }

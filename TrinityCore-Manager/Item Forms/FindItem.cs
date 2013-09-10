@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using DevComponents.DotNetBar;
-using DevComponents.DotNetBar.Controls;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.TCM;
 
@@ -20,15 +13,12 @@ namespace TrinityCore_Manager
     public partial class FindItem : Office2007Form
     {
 
-        private int _atPage;
+        private int _atPage = 0;
 
         public FindItem()
         {
-
             _atPage = 0;
-
             InitializeComponent();
-
         }
 
         private void FindItem_Load(object sender, EventArgs e)
@@ -38,7 +28,6 @@ namespace TrinityCore_Manager
             imageColumn.Renderer = new CustomItemRenderer();
             imageColumn.AspectGetter = delegate(object row)
             {
-
                 SearchedItem item = (SearchedItem)row;
 
                 if (item == null)
@@ -47,6 +36,7 @@ namespace TrinityCore_Manager
                 return item.ItemImage;
 
             };
+
             findItemListView.CellToolTipGetter = delegate(OLVColumn col, object row)
             {
 
@@ -74,7 +64,6 @@ namespace TrinityCore_Manager
                 string text = String.Format("Name: {0}\r\nDescription: {1}\r\nBonding: {2}\r\nInventory Type: {3}\r\nRequired Level: {4}\r\nItem Level: {5}\r\nMax Durability: {6}", name, desc == String.Empty ? "None" : desc, bonding, invtype, reqLevel, itemLevel, durability);
 
                 return text;
-
             };
         }
 

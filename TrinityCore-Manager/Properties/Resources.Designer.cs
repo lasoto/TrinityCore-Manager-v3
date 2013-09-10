@@ -157,7 +157,7 @@ namespace TrinityCore_Manager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Discover_ {
             get {
-                object obj = ResourceManager.GetObject("Discover-", resourceCulture);
+                object obj = ResourceManager.GetObject("Discover_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
