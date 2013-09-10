@@ -80,8 +80,6 @@ namespace TrinityCore_Manager
             int silver = (character.Money % 10000) / 100;
             int copper = (character.Money % 10000) % 100;
 
-            Console.WriteLine(character.Money);
-
             moneyLabel.Text = String.Format("{0} Gold {1} Silver {2} Copper", gold, silver, copper);
             totalKillsLabel.Text = character.TotalKills.ToString();
             accountLabel.Text = account.Username;
