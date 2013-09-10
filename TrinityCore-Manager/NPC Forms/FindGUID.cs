@@ -113,5 +113,15 @@ namespace TrinityCore_Manager
         {
 
         }
+
+        private void FindGUID_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

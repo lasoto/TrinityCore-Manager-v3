@@ -180,5 +180,15 @@ namespace TrinityCore_Manager
             passwordTextBox.Enabled = useUserSMTPCheckbox.Checked;
             enableSSLCheckBox.Enabled = useUserSMTPCheckbox.Checked;
         }
+
+        private void ReportBug_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

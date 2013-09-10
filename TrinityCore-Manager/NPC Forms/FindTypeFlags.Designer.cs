@@ -458,10 +458,12 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindTypeFlags";
             this.Text = "Find Type_Flags";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindTypeFlags_KeyDown);
             this.ResumeLayout(false);
 
         }

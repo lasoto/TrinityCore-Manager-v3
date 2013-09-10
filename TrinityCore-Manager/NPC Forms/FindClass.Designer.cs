@@ -135,6 +135,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(382, 560);
             this.MinimizeBox = false;
@@ -142,6 +143,7 @@
             this.Name = "FindClass";
             this.Text = "Find Class";
             this.Load += new System.EventHandler(this.FindClass_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindClass_KeyDown);
             this.ResumeLayout(false);
 
         }

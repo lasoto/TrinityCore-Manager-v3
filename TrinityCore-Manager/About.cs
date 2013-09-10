@@ -39,5 +39,15 @@ namespace TrinityCore_Manager
                 MessageBox.Show("The webpage could not be opened!", "An error has occurred!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void About_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

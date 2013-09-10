@@ -135,10 +135,12 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindNPC";
             this.Text = "Find NPC";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindNPC_KeyDown);
             this.ResumeLayout(false);
 
         }

@@ -213,5 +213,15 @@ namespace TrinityCore_Manager
             spellclickCheckBox.Checked = true;
             mailboxCheckBox.Checked = true;
         }
+
+        private void FindNPCFlag_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

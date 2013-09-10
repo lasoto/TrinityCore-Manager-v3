@@ -71,5 +71,15 @@ namespace TrinityCore_Manager.NPC_Forms
             using (ShowSQLCode sqc = new ShowSQLCode())
                 sqc.ShowDialog();
         }
+
+        private void CreateNPCVendor_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

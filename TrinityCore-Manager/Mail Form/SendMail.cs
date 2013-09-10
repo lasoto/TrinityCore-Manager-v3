@@ -23,5 +23,15 @@ namespace TrinityCore_Manager
             FindItem fi = new FindItem();
             fi.ShowDialog();  
         }
+
+        private void SendMail_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

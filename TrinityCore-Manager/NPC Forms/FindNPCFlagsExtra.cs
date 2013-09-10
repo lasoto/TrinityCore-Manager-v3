@@ -158,5 +158,15 @@ namespace TrinityCore_Manager
             allDiminishCheckBox.Checked = true;
             dungeonBossCheckBox.Checked = true;
         }
+
+        private void FindNPCFlagsExtra_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
    }
 }

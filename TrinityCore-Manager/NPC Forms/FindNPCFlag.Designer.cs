@@ -451,10 +451,12 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindNPCFlag";
             this.Text = "Find NPCFlag";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindNPCFlag_KeyDown);
             this.ResumeLayout(false);
 
         }

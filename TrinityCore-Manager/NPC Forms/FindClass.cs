@@ -22,5 +22,15 @@ namespace TrinityCore_Manager
         {
 
         }
+
+        private void FindClass_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

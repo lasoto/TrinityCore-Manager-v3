@@ -226,7 +226,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 234);
+            this.ClientSize = new System.Drawing.Size(381, 248);
             this.Controls.Add(this.checkAllButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.allowCheatSpellsCheckBox);
@@ -244,10 +244,12 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindUnitFlags2";
             this.Text = "Find Unit_Flags2";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindUnitFlags2_KeyDown);
             this.ResumeLayout(false);
 
         }

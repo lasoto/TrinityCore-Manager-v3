@@ -17,5 +17,15 @@ namespace TrinityCore_Manager
         {
             InitializeComponent();
         }
+
+        private void FindFlagsExtra_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
    }
 }

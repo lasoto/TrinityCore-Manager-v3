@@ -23,6 +23,16 @@ namespace TrinityCore_Manager
             if (!String.IsNullOrEmpty(sqlCodeTextBox.Text))
                 Clipboard.SetText(sqlCodeTextBox.Text);
         }
+
+        private void ShowSQLCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
       
     }
 }

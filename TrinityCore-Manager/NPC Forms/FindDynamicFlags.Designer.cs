@@ -218,10 +218,12 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindDynamicFlags";
             this.Text = "Find DynamicFlags";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindDynamicFlags_KeyDown);
             this.ResumeLayout(false);
 
         }

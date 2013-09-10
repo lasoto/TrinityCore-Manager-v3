@@ -66,5 +66,15 @@ namespace TrinityCore_Manager
             waterCheckBox.Checked = true;
             flyingCheckBox.Checked = true;
         }
+
+        private void FindInhabitType_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

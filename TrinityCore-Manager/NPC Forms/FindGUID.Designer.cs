@@ -240,11 +240,13 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindGUID";
             this.Text = "Find GUID";
             this.Load += new System.EventHandler(this.FindGUID_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FindGUID_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.guidIntegerInput)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

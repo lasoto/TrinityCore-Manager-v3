@@ -335,12 +335,14 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(797, 633);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(797, 633);
             this.Name = "SendMail";
             this.Text = "Send Mail";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SendMail_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.itemIdIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldIntegerInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.silverIntegerInput)).EndInit();

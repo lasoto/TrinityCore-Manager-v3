@@ -126,5 +126,15 @@ namespace TrinityCore_Manager
             allowCheatSpellsCheckBox.Checked = true;
         }
 
+        private void FindUnitFlags2_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
+
     }
 }

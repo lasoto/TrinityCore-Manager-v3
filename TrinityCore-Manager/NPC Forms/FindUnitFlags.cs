@@ -270,5 +270,15 @@ namespace TrinityCore_Manager
             sheatheCheckBox.Checked = true;
             unk31CheckBox.Checked = true;
         }
+
+        private void FindUnitFlags_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

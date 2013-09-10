@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportBug));
             this.reportBugSuperTooltip = new DevComponents.DotNetBar.SuperTooltip();
-            this.useUserSMTPCheckbox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.enableSSLCheckBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.smtpTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.useUserSMTPCheckbox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.passwordTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.smtpTextBox = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.sendButton = new DevComponents.DotNetBar.ButtonX();
@@ -49,6 +49,36 @@
             // reportBugSuperTooltip
             // 
             this.reportBugSuperTooltip.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
+            // enableSSLCheckBox
+            // 
+            // 
+            // 
+            // 
+            this.enableSSLCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.enableSSLCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.enableSSLCheckBox.Location = new System.Drawing.Point(507, 135);
+            this.enableSSLCheckBox.Name = "enableSSLCheckBox";
+            this.enableSSLCheckBox.Size = new System.Drawing.Size(111, 23);
+            this.enableSSLCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.reportBugSuperTooltip.SetSuperTooltip(this.enableSSLCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("enableSSLCheckBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.enableSSLCheckBox.TabIndex = 5;
+            this.enableSSLCheckBox.Text = "Enable SSL?";
+            // 
+            // smtpTextBox
+            // 
+            this.smtpTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            // 
+            // 
+            // 
+            this.smtpTextBox.Border.Class = "TextBoxBorder";
+            this.smtpTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.smtpTextBox.ForeColor = System.Drawing.Color.White;
+            this.smtpTextBox.Location = new System.Drawing.Point(231, 137);
+            this.smtpTextBox.Name = "smtpTextBox";
+            this.smtpTextBox.Size = new System.Drawing.Size(270, 20);
+            this.reportBugSuperTooltip.SetSuperTooltip(this.smtpTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("smtpTextBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
+            this.smtpTextBox.TabIndex = 4;
             // 
             // useUserSMTPCheckbox
             // 
@@ -67,21 +97,6 @@
             this.useUserSMTPCheckbox.TabIndex = 6;
             this.useUserSMTPCheckbox.Text = "Use Your SMTP Server";
             this.useUserSMTPCheckbox.CheckedChanged += new System.EventHandler(this.useUserSMTPCheckbox_CheckedChanged);
-            // 
-            // enableSSLCheckBox
-            // 
-            // 
-            // 
-            // 
-            this.enableSSLCheckBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.enableSSLCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.enableSSLCheckBox.Location = new System.Drawing.Point(507, 135);
-            this.enableSSLCheckBox.Name = "enableSSLCheckBox";
-            this.enableSSLCheckBox.Size = new System.Drawing.Size(111, 23);
-            this.enableSSLCheckBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.reportBugSuperTooltip.SetSuperTooltip(this.enableSSLCheckBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("enableSSLCheckBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.enableSSLCheckBox.TabIndex = 5;
-            this.enableSSLCheckBox.Text = "Enable SSL?";
             // 
             // passwordTextBox
             // 
@@ -110,21 +125,6 @@
             this.labelX6.Size = new System.Drawing.Size(79, 23);
             this.labelX6.TabIndex = 14;
             this.labelX6.Text = "Password";
-            // 
-            // smtpTextBox
-            // 
-            this.smtpTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            // 
-            // 
-            // 
-            this.smtpTextBox.Border.Class = "TextBoxBorder";
-            this.smtpTextBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.smtpTextBox.ForeColor = System.Drawing.Color.White;
-            this.smtpTextBox.Location = new System.Drawing.Point(231, 137);
-            this.smtpTextBox.Name = "smtpTextBox";
-            this.smtpTextBox.Size = new System.Drawing.Size(270, 20);
-            this.reportBugSuperTooltip.SetSuperTooltip(this.smtpTextBox, new DevComponents.DotNetBar.SuperTooltipInfo("", "", resources.GetString("smtpTextBox.SuperTooltip"), null, null, DevComponents.DotNetBar.eTooltipColor.Blue, false, false, new System.Drawing.Size(0, 0)));
-            this.smtpTextBox.TabIndex = 4;
             // 
             // labelX4
             // 
@@ -271,14 +271,17 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.emailTextBox);
+            this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReportBug";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report a Bug";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ReportBug_KeyDown);
             this.ResumeLayout(false);
 
         }

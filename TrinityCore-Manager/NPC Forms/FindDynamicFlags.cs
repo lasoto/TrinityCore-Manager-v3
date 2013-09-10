@@ -110,5 +110,15 @@ namespace TrinityCore_Manager
             referAFriendCheckBox.Checked = true;
             tappedByAllThreatListCheckBox.Checked = true;
         }
+
+        private void FindDynamicFlags_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

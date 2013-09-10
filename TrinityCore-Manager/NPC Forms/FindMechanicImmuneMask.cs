@@ -264,5 +264,15 @@ namespace TrinityCore_Manager
             sappedCheckBox.Checked = true;
             enragedCheckBox.Checked = true;
         }
+
+        private void FindMechanicImmuneMask_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }

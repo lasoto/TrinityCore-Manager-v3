@@ -213,5 +213,15 @@ namespace TrinityCore_Manager
             unk23CheckBox.Checked = true;
             unk24CheckBox.Checked = true;
         }
+
+        private void FindTypeFlags_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
+        }
     }
 }
