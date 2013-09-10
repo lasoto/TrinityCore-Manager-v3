@@ -23,7 +23,8 @@ namespace TrinityCore_Manager
             InitializeComponent();
         }
 
-        private async void AddAccountBan_Load(object sender, EventArgs e)
+      //private async void AddAccountBan_Load(object sender, EventArgs e)
+        private void AddAccountBan_Load(object sender, EventArgs e)
         {
         }
 

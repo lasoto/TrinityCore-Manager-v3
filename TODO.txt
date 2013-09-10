@@ -10,7 +10,7 @@
 - Pressing 'Options' (the text) should also open the context menu
 - New icon for the 'Settings' option menu
 - Re-work all places where we use a combobox to store a lot of data (showing online characters in a combobox is not going to work out for big servers)
-- Pressing Escape in sub-forms should close them
 - Fix the WoWItem class exception when using the search item form
 - Hide password fields in forms lik Add Account
 - Figure out why the console stops logging the worldserver's actions (on W7 (?only?)) after a short period of time
+- Create a new class for comboboxes which is derived from
