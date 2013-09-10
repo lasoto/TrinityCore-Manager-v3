@@ -19,7 +19,7 @@ namespace TrinityCore_Manager.Misc
 
         public static readonly string ImageFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "imgs");
 
-        public static Image UnknownImage = Image.FromFile(Path.Combine(ImageFolder, "questionmark.png"));
+        public static Image UnknownImage = Properties.Resources.questionmark;
 
         public int Quantity { get; set; }
 
@@ -93,7 +93,8 @@ namespace TrinityCore_Manager.Misc
             }
             catch (Exception)
             {
-                return Image.FromFile(Path.Combine(ImageFolder, "questionmark.png"));
+                return Properties.Resources.questionmark;
+                //return Image.FromFile(Path.Combine(ImageFolder, "questionmark.png"));
             }
 
         }
