@@ -18,7 +18,8 @@ namespace TrinityCore_Manager.Item_Forms
 
         private void GoToPageForm_Load(object sender, EventArgs e)
         {
-            textBoxXNewPage.Text = ((FindItem)Owner).atPage.ToString();
+            int atPage = ((FindItem)Owner).atPage;
+            textBoxXNewPage.Text = atPage.ToString();
         }
 
         private void GoToPageForm_KeyDown(object sender, KeyEventArgs e)
@@ -35,7 +36,7 @@ namespace TrinityCore_Manager.Item_Forms
         {
             if (Convert.ToInt32(textBoxXNewPage.Text) > ((FindItem)Owner).totalPages)
             {
-                MessageBoxEx.Show(this, "The page is higher than the total pages!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, String.Format("The given page ({0}) does not exit. Total pages: {1}.", textBoxXNewPage.Text, ((FindItem)Owner).totalPages), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
