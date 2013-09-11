@@ -68,6 +68,9 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\Dependencies\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -148,6 +151,12 @@
     </Compile>
     <Compile Include="Item Forms\GoToPageForm.Designer.cs">
       <DependentUpon>GoToPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm2.Designer.cs">
+      <DependentUpon>MainForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\ComboBoxNonEditable.cs">
       <SubType>Component</SubType>
@@ -603,6 +612,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Item Forms\GoToPageForm.resx">
       <DependentUpon>GoToPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm2.resx">
+      <DependentUpon>MainForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchDatabaseForm.resx">
       <DependentUpon>SearchDatabaseForm.cs</DependentUpon>
