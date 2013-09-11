@@ -361,8 +361,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(293, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Please locate your TrinityCore server folder (the folder containing the executabl" +
-    "es).";
+            this.labelX1.Text = "Please locate your TrinityCore server folder (the folder containing the executables).";
             // 
             // raDetailsPage
             // 

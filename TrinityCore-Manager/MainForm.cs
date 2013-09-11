@@ -1224,5 +1224,10 @@ namespace TrinityCore_Manager
 
             return false;
         }
+
+        private void consoleTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

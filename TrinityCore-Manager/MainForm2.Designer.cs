@@ -43,6 +43,12 @@
             this.outputTabPage = new System.Windows.Forms.TabPage();
             this.ribbonTextBox1 = new System.Windows.Forms.RibbonTextBox();
             this.execCmdButton = new System.Windows.Forms.RibbonButton();
+            this.ribbonTabAccountManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabCharacterManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabDatabaseManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabCreateEdit = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabOther = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanelPlayerManagement = new System.Windows.Forms.RibbonPanel();
             this.mainTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,12 +72,18 @@
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.homeRibbonTab);
             this.ribbon1.Tabs.Add(this.ribbonTab1);
+            this.ribbon1.Tabs.Add(this.ribbonTabAccountManagement);
+            this.ribbon1.Tabs.Add(this.ribbonTabCharacterManagement);
+            this.ribbon1.Tabs.Add(this.ribbonTabDatabaseManagement);
+            this.ribbon1.Tabs.Add(this.ribbonTabCreateEdit);
+            this.ribbon1.Tabs.Add(this.ribbonTabOther);
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
             this.ribbon1.Text = "ribbon1";
             // 
             // homeRibbonTab
             // 
             this.homeRibbonTab.Panels.Add(this.ribbonPanel1);
+            this.homeRibbonTab.Panels.Add(this.ribbonPanelPlayerManagement);
             this.homeRibbonTab.Text = "Server Management";
             // 
             // ribbonPanel1
@@ -102,7 +114,7 @@
             this.openConfigButton.Image = ((System.Drawing.Image)(resources.GetObject("openConfigButton.Image")));
             this.openConfigButton.MinimumSize = new System.Drawing.Size(150, 0);
             this.openConfigButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("openConfigButton.SmallImage")));
-            this.openConfigButton.Text = "Open Config FIle";
+            this.openConfigButton.Text = "Open Config File";
             // 
             // ribbonTab1
             // 
@@ -172,6 +184,30 @@
             this.execCmdButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("execCmdButton.SmallImage")));
             this.execCmdButton.Text = "Execute Command";
             // 
+            // ribbonTabAccountManagement
+            // 
+            this.ribbonTabAccountManagement.Text = "Account Management";
+            // 
+            // ribbonTabCharacterManagement
+            // 
+            this.ribbonTabCharacterManagement.Text = "Character Management";
+            // 
+            // ribbonTabDatabaseManagement
+            // 
+            this.ribbonTabDatabaseManagement.Text = "Database Management";
+            // 
+            // ribbonTabCreateEdit
+            // 
+            this.ribbonTabCreateEdit.Text = "Create / Edit";
+            // 
+            // ribbonTabOther
+            // 
+            this.ribbonTabOther.Text = "Other";
+            // 
+            // ribbonPanelPlayerManagement
+            // 
+            this.ribbonPanelPlayerManagement.Text = "Player Management Panel";
+            // 
             // MainForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +215,7 @@
             this.ClientSize = new System.Drawing.Size(1121, 705);
             this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.ribbon1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm2";
             this.Text = "MainForm2";
             this.mainTabControl.ResumeLayout(false);
@@ -202,5 +239,11 @@
         private System.Windows.Forms.RibbonTab ribbonTab1;
         private System.Windows.Forms.RibbonTextBox ribbonTextBox1;
         private System.Windows.Forms.RibbonButton execCmdButton;
+        private System.Windows.Forms.RibbonTab ribbonTabAccountManagement;
+        private System.Windows.Forms.RibbonTab ribbonTabCharacterManagement;
+        private System.Windows.Forms.RibbonTab ribbonTabDatabaseManagement;
+        private System.Windows.Forms.RibbonTab ribbonTabCreateEdit;
+        private System.Windows.Forms.RibbonTab ribbonTabOther;
+        private System.Windows.Forms.RibbonPanel ribbonPanelPlayerManagement;
     }
 }

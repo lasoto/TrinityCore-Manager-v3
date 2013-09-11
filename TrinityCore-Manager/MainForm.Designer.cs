@@ -188,11 +188,11 @@
             // 
             this.mainRibbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.mainRibbonControl.CaptionVisible = true;
+            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel1);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel4);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel7);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel3);
-            this.mainRibbonControl.Controls.Add(this.ribbonPanel2);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel5);
             this.mainRibbonControl.Controls.Add(this.ribbonPanel6);
             this.mainRibbonControl.Controls.Add(this.otherRibbonPanel);
@@ -210,6 +210,7 @@
             this.mainRibbonControl.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.mainRibbonControl.Location = new System.Drawing.Point(5, 1);
             this.mainRibbonControl.Name = "mainRibbonControl";
+            this.mainRibbonControl.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.mainRibbonControl.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1});
             this.mainRibbonControl.Size = new System.Drawing.Size(1127, 195);
@@ -243,7 +244,7 @@
             this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1127, 142);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1127, 139);
             // 
             // 
             // 
@@ -257,6 +258,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // playerManagementRibbonBar
             // 
@@ -278,7 +280,7 @@
             this.playerManagementRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.playerManagementRibbonBar.Location = new System.Drawing.Point(803, 0);
             this.playerManagementRibbonBar.Name = "playerManagementRibbonBar";
-            this.playerManagementRibbonBar.Size = new System.Drawing.Size(306, 140);
+            this.playerManagementRibbonBar.Size = new System.Drawing.Size(306, 137);
             this.playerManagementRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.playerManagementRibbonBar.TabIndex = 2;
             this.playerManagementRibbonBar.Text = "Player Management Panel";
@@ -343,7 +345,7 @@
             this.serverCommandsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.serverCommandsRibbonBar.Location = new System.Drawing.Point(297, 0);
             this.serverCommandsRibbonBar.Name = "serverCommandsRibbonBar";
-            this.serverCommandsRibbonBar.Size = new System.Drawing.Size(506, 140);
+            this.serverCommandsRibbonBar.Size = new System.Drawing.Size(506, 137);
             this.serverCommandsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.serverCommandsRibbonBar.TabIndex = 1;
             this.serverCommandsRibbonBar.Text = "Server Commands Panel";
@@ -407,7 +409,7 @@
             this.serverRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.serverRibbonBar.Location = new System.Drawing.Point(3, 0);
             this.serverRibbonBar.Name = "serverRibbonBar";
-            this.serverRibbonBar.Size = new System.Drawing.Size(294, 140);
+            this.serverRibbonBar.Size = new System.Drawing.Size(294, 137);
             this.serverRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.serverRibbonBar.TabIndex = 0;
             this.serverRibbonBar.Text = "Server Panel";
@@ -1016,7 +1018,7 @@
             this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1127, 142);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1127, 139);
             // 
             // 
             // 
@@ -1030,7 +1032,6 @@
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // communicationsRibbonBar
             // 
@@ -1052,7 +1053,7 @@
             this.communicationsRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.communicationsRibbonBar.Location = new System.Drawing.Point(3, 0);
             this.communicationsRibbonBar.Name = "communicationsRibbonBar";
-            this.communicationsRibbonBar.Size = new System.Drawing.Size(1106, 140);
+            this.communicationsRibbonBar.Size = new System.Drawing.Size(1106, 137);
             this.communicationsRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.communicationsRibbonBar.TabIndex = 0;
             this.communicationsRibbonBar.Text = "Communications Panel";
@@ -1788,13 +1789,13 @@
             // 
             // serverManagementTab
             // 
-            this.serverManagementTab.Checked = true;
             this.serverManagementTab.Name = "serverManagementTab";
             this.serverManagementTab.Panel = this.ribbonPanel1;
             this.serverManagementTab.Text = "Server Management";
             // 
             // communicationRibbonTab
             // 
+            this.communicationRibbonTab.Checked = true;
             this.communicationRibbonTab.Name = "communicationRibbonTab";
             this.communicationRibbonTab.Panel = this.ribbonPanel2;
             this.communicationRibbonTab.Text = "Communications";
@@ -1988,6 +1989,7 @@
             this.consoleTextBox.Size = new System.Drawing.Size(1125, 494);
             this.consoleTextBox.TabIndex = 0;
             this.consoleTextBox.Text = "";
+            this.consoleTextBox.TextChanged += new System.EventHandler(this.consoleTextBox_TextChanged);
             // 
             // consoleTabItem
             // 
@@ -2050,7 +2052,7 @@
             this.Controls.Add(this.mainRibbonControl);
             this.EnableGlass = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1137, 744);
+            this.MinimumSize = new System.Drawing.Size(1137, 736);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrinityCore Manager v3.0";
