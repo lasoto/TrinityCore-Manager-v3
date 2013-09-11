@@ -35,7 +35,13 @@
             this.startButton = new System.Windows.Forms.RibbonButton();
             this.stopButton = new System.Windows.Forms.RibbonButton();
             this.openConfigButton = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanelPlayerManagement = new System.Windows.Forms.RibbonPanel();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabAccountManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabCharacterManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabDatabaseManagement = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabCreateEdit = new System.Windows.Forms.RibbonTab();
+            this.ribbonTabOther = new System.Windows.Forms.RibbonTab();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.mainTabControl = new System.Windows.Forms.TabControl();
@@ -43,12 +49,10 @@
             this.outputTabPage = new System.Windows.Forms.TabPage();
             this.ribbonTextBox1 = new System.Windows.Forms.RibbonTextBox();
             this.execCmdButton = new System.Windows.Forms.RibbonButton();
-            this.ribbonTabAccountManagement = new System.Windows.Forms.RibbonTab();
-            this.ribbonTabCharacterManagement = new System.Windows.Forms.RibbonTab();
-            this.ribbonTabDatabaseManagement = new System.Windows.Forms.RibbonTab();
-            this.ribbonTabCreateEdit = new System.Windows.Forms.RibbonTab();
-            this.ribbonTabOther = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanelPlayerManagement = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButtonSelectPlayer = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanelServerCommands = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButtonExecuteCommand = new System.Windows.Forms.RibbonButton();
+            this.ribbonTextBox2 = new System.Windows.Forms.RibbonTextBox();
             this.mainTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +88,7 @@
             // 
             this.homeRibbonTab.Panels.Add(this.ribbonPanel1);
             this.homeRibbonTab.Panels.Add(this.ribbonPanelPlayerManagement);
+            this.homeRibbonTab.Panels.Add(this.ribbonPanelServerCommands);
             this.homeRibbonTab.Text = "Server Management";
             // 
             // ribbonPanel1
@@ -116,9 +121,34 @@
             this.openConfigButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("openConfigButton.SmallImage")));
             this.openConfigButton.Text = "Open Config File";
             // 
+            // ribbonPanelPlayerManagement
+            // 
+            this.ribbonPanelPlayerManagement.Items.Add(this.ribbonButtonSelectPlayer);
+            this.ribbonPanelPlayerManagement.Text = "Player Management Panel";
+            // 
             // ribbonTab1
             // 
             this.ribbonTab1.Text = "Communications";
+            // 
+            // ribbonTabAccountManagement
+            // 
+            this.ribbonTabAccountManagement.Text = "Account Management";
+            // 
+            // ribbonTabCharacterManagement
+            // 
+            this.ribbonTabCharacterManagement.Text = "Character Management";
+            // 
+            // ribbonTabDatabaseManagement
+            // 
+            this.ribbonTabDatabaseManagement.Text = "Database Management";
+            // 
+            // ribbonTabCreateEdit
+            // 
+            this.ribbonTabCreateEdit.Text = "Create / Edit";
+            // 
+            // ribbonTabOther
+            // 
+            this.ribbonTabOther.Text = "Other";
             // 
             // tabPage2
             // 
@@ -184,29 +214,28 @@
             this.execCmdButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("execCmdButton.SmallImage")));
             this.execCmdButton.Text = "Execute Command";
             // 
-            // ribbonTabAccountManagement
+            // ribbonButtonSelectPlayer
             // 
-            this.ribbonTabAccountManagement.Text = "Account Management";
+            this.ribbonButtonSelectPlayer.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonSelectPlayer.Image")));
+            this.ribbonButtonSelectPlayer.MinimumSize = new System.Drawing.Size(105, 0);
+            this.ribbonButtonSelectPlayer.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonSelectPlayer.SmallImage")));
+            this.ribbonButtonSelectPlayer.Text = "Select player";
             // 
-            // ribbonTabCharacterManagement
+            // ribbonPanelServerCommands
             // 
-            this.ribbonTabCharacterManagement.Text = "Character Management";
+            this.ribbonPanelServerCommands.Items.Add(this.ribbonButtonExecuteCommand);
+            this.ribbonPanelServerCommands.Text = "Server Commands Panel";
             // 
-            // ribbonTabDatabaseManagement
+            // ribbonButtonExecuteCommand
             // 
-            this.ribbonTabDatabaseManagement.Text = "Database Management";
+            this.ribbonButtonExecuteCommand.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonExecuteCommand.Image")));
+            this.ribbonButtonExecuteCommand.MinimumSize = new System.Drawing.Size(150, 0);
+            this.ribbonButtonExecuteCommand.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonExecuteCommand.SmallImage")));
+            this.ribbonButtonExecuteCommand.Text = "Execute Command";
             // 
-            // ribbonTabCreateEdit
+            // ribbonTextBox2
             // 
-            this.ribbonTabCreateEdit.Text = "Create / Edit";
-            // 
-            // ribbonTabOther
-            // 
-            this.ribbonTabOther.Text = "Other";
-            // 
-            // ribbonPanelPlayerManagement
-            // 
-            this.ribbonPanelPlayerManagement.Text = "Player Management Panel";
+            this.ribbonTextBox2.TextBoxText = "";
             // 
             // MainForm2
             // 
@@ -245,5 +274,9 @@
         private System.Windows.Forms.RibbonTab ribbonTabCreateEdit;
         private System.Windows.Forms.RibbonTab ribbonTabOther;
         private System.Windows.Forms.RibbonPanel ribbonPanelPlayerManagement;
+        private System.Windows.Forms.RibbonButton ribbonButtonSelectPlayer;
+        private System.Windows.Forms.RibbonPanel ribbonPanelServerCommands;
+        private System.Windows.Forms.RibbonButton ribbonButtonExecuteCommand;
+        private System.Windows.Forms.RibbonTextBox ribbonTextBox2;
     }
 }
