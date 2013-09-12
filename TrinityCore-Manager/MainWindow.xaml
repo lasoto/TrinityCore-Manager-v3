@@ -19,9 +19,9 @@
 
         <ribbon:Ribbon Margin="0,0,-2,10" HorizontalAlignment="Right" Width="1131" Grid.RowSpan="2">
 
-            <ribbon:RibbonTab x:Name="HomeTab" 
-                              Header="Home">
-                <ribbon:RibbonGroup x:Name="HomeGroup1" Header="Server Management">
+            <ribbon:RibbonTab x:Name="SMTab" 
+                              Header="Server Management">
+                <ribbon:RibbonGroup x:Name="HomeGroup1" Header="Server Panel">
 
                     <ribbon:RibbonGroup.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -33,10 +33,45 @@
                                          Label="Start Server" Foreground="Green"/>
                     <ribbon:RibbonButton x:Name="StopServerButton"
                                          Label="Stop Server" Foreground="Red"/>
+                    <ribbon:RibbonButton x:Name="OpenConfigButton"
+                                         Label="Open Configuration File" Foreground="Teal"/>
                 </ribbon:RibbonGroup>
+
+
+                <ribbon:RibbonGroup x:Name="HomeGroup2">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="500" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300"/>
+                    <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command"/>
+
+                </ribbon:RibbonGroup>
+
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="CommTab" 
+                              Header="Communications">
+
+                <ribbon:RibbonGroup x:Name="CommGroup1">
+
+                    <ribbon:RibbonRadioButton x:Name="AnnRadioButton" Label="Server Announcement"/>
+                    <ribbon:RibbonRadioButton x:Name="SNotifRadioButton" Label="Server Notification"/>
+                    <ribbon:RibbonRadioButton x:Name="AGMRadioButton" Label="Announcement to GMs"/>
+                    
+                    <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="700"/>
+                    <ribbon:RibbonButton x:Name="SendMessageButton" Label="Send Message"/>
+
+                </ribbon:RibbonGroup>
+
             </ribbon:RibbonTab>
 
         </ribbon:Ribbon>
+
         <ListBox HorizontalAlignment="Left" Height="245" Margin="239,244,0,0" VerticalAlignment="Top" Width="338"
                  ItemsSource="{Binding TheAccounts}">
 
