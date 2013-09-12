@@ -63,7 +63,17 @@
                     <ribbon:RibbonRadioButton x:Name="SNotifRadioButton" Label="Server Notification"/>
                     <ribbon:RibbonRadioButton x:Name="AGMRadioButton" Label="Announcement to GMs"/>
 
-                    <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="700"/>
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="CommGroup2">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center"  MaxWidth="700" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="500"/>
                     <ribbon:RibbonButton x:Name="SendMessageButton" Label="Send Message"/>
 
                 </ribbon:RibbonGroup>
@@ -157,15 +167,15 @@
                             <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
-                    
+
                     <ribbon:RibbonButton x:Name="CleanWorldButton" Label="Clean World"/>
 
                 </ribbon:RibbonGroup>
 
             </ribbon:RibbonTab>
-            
+
             <ribbon:RibbonTab x:Name="CreateEditTab" Header="Create / Edit">
-                
+
                 <ribbon:RibbonGroup x:Name="ItemGroup" Header="Item">
 
                     <ribbon:RibbonGroup.ItemsPanel>
@@ -173,12 +183,12 @@
                             <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
-                    
+
                     <ribbon:RibbonButton x:Name="CreateItemButton" Label="Create"/>
                     <ribbon:RibbonButton x:Name="EditItemButton" Label="Edit"/>
-                    
+
                 </ribbon:RibbonGroup>
-                
+
                 <ribbon:RibbonGroup x:Name="NPCGroup" Header="NPC">
 
                     <ribbon:RibbonGroup.ItemsPanel>
@@ -191,7 +201,7 @@
                     <ribbon:RibbonButton x:Name="EditNPCButton" Label="Edit"/>
 
                 </ribbon:RibbonGroup>
-                
+
                 <ribbon:RibbonGroup x:Name="VendorGroup" Header="Vendor">
 
                     <ribbon:RibbonGroup.ItemsPanel>
@@ -199,12 +209,12 @@
                             <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
-                    
+
                     <ribbon:RibbonButton x:Name="CreateVendorButton" Label="Create"/>
                     <ribbon:RibbonButton x:Name="EditVendorButton" Label="Edit"/>
 
                 </ribbon:RibbonGroup>
-                
+
                 <ribbon:RibbonGroup x:Name="IDSearchGroup" Header="Search">
 
                     <ribbon:RibbonGroup.ItemsPanel>
@@ -212,12 +222,12 @@
                             <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
-                    
+
                     <ribbon:RibbonButton x:Name="FindNPCGuidButton" Label="Find Unused NPC GUID"/>
                     <ribbon:RibbonButton x:Name="FindNPCButton" Label="Find NPC"/>
-                    
+
                 </ribbon:RibbonGroup>
-                
+
                 <ribbon:RibbonGroup x:Name="SmartAIGroup" Header="SmartAI">
 
                     <ribbon:RibbonGroup.ItemsPanel>
@@ -225,12 +235,12 @@
                             <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
-                    
+
                     <ribbon:RibbonButton x:Name="CreateSmartAIButton" Label="Create"/>
                     <ribbon:RibbonButton x:Name="EditSmartAIButton" Label="Edit"/>
 
                 </ribbon:RibbonGroup>
-                
+
             </ribbon:RibbonTab>
 
         </ribbon:Ribbon>
