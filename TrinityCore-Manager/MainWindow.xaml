@@ -13,7 +13,9 @@
     </i:Interaction.Behaviors>
 
     <Window.Resources>
+        <converter:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
         <converter:InverseBooleanConverter x:Key="InverseBoolConverter"/>
+        <converter:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
         <BitmapImage x:Key="OffImage" UriSource="Resources/agt_action_fail_16.png" />
         <BitmapImage x:Key="OnImage" UriSource="Resources/agt_action_success_16.png" />
     </Window.Resources>
@@ -278,7 +280,10 @@
                     <TextBlock>Auth Server</TextBlock>
                 </StatusBarItem>
                 <StatusBarItem Grid.Column="1">
-                    <Image Source="{StaticResource OffImage}" Width="16" Height="16"/>
+                    <Image Source="{StaticResource OffImage}" Width="16" Height="16" Visibility="{Binding AuthOnline, Converter={StaticResource InverseBoolVisibility}}"/>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="1">
+                    <Image Source="{StaticResource OnImage}" Width="16" Height="16" Visibility="{Binding AuthOnline, Converter={StaticResource BoolVisibilityConverter}}"/>
                 </StatusBarItem>
                 <StatusBarItem Grid.Column="2">
                 </StatusBarItem>
@@ -286,7 +291,10 @@
                     <TextBlock>World Server</TextBlock>
                 </StatusBarItem>
                 <StatusBarItem Grid.Column="4">
-                    <Image Source="{StaticResource OffImage}" Width="16" Height="16"/>
+                    <Image Source="{StaticResource OffImage}" Width="16" Height="16" Visibility="{Binding WorldOnline, Converter={StaticResource InverseBoolVisibility}}"/>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="4">
+                    <Image Source="{StaticResource OnImage}" Width="16" Height="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}"/>
                 </StatusBarItem>
 
             </StatusBar>

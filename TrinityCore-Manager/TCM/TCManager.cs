@@ -55,8 +55,7 @@ namespace TrinityCore_Manager.TCM
         {
             get
             {
-                return false;
-                //return ((ServerType)Settings.Default.ServerType) == ServerType.Local ? AuthClient != null && AuthClient.IsOnline && WorldClient != null && WorldClient.IsOnline : RAClient != null && RAClient.IsOnline;
+                return ((ServerType)Settings.Default.ServerType) == ServerType.Local ? AuthClient != null && AuthClient.IsOnline && WorldClient != null && WorldClient.IsOnline : RAClient != null && RAClient.IsOnline;
             }
         }
 
@@ -105,36 +104,36 @@ namespace TrinityCore_Manager.TCM
             AuthDatabase = new Database.AuthDatabase("localhost", 3306, "root", "ascent", "auth");
             CharDatabase = new Database.CharDatabase("localhost", 3306, "root", "ascent", "char");
             WorldDatabase = new Database.WorldDatabase("localhost", 3306, "root", "ascent", "world");
-            //AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBAuthName);
-            //CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBCharName);
-            //WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBWorldName);
+            AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBAuthName);
+            CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBCharName);
+            WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBWorldName);
             _triggers = new Dictionary<string, TriggerKey>();
         }
 
         public void ScheduleBackups()
         {
 
-            //StopScheduledBackups();
+            StopScheduledBackups();
 
-            //ISchedulerFactory schedFact = new StdSchedulerFactory();
+            ISchedulerFactory schedFact = new StdSchedulerFactory();
 
-            //_scheduler = schedFact.GetScheduler();
-            //_scheduler.Start();
+            _scheduler = schedFact.GetScheduler();
+            _scheduler.Start();
 
-            //Settings.Default.Reload();
+            Settings.Default.Reload();
 
-            //int total = (int)TimeSpan.FromDays(Settings.Default.BackupDays).TotalMinutes;
-            //total += (int)TimeSpan.FromHours(Settings.Default.BackupHours).TotalMinutes;
-            //total += Settings.Default.BackupMinutes;
+            int total = (int)TimeSpan.FromDays(Settings.Default.BackupDays).TotalMinutes;
+            total += (int)TimeSpan.FromHours(Settings.Default.BackupHours).TotalMinutes;
+            total += Settings.Default.BackupMinutes;
 
-            //if (Settings.Default.BackupScheduleAuth)
-            //    CreateBackup("auth", AuthDatabase, total);
+            if (Settings.Default.BackupScheduleAuth)
+                CreateBackup("auth", AuthDatabase, total);
 
-            //if (Settings.Default.BackupScheduleChar)
-            //    CreateBackup("char", CharDatabase, total);
+            if (Settings.Default.BackupScheduleChar)
+                CreateBackup("char", CharDatabase, total);
 
-            //if (Settings.Default.BackupScheduleWorld)
-            //    CreateBackup("world", WorldDatabase, total);
+            if (Settings.Default.BackupScheduleWorld)
+                CreateBackup("world", WorldDatabase, total);
 
         }
 

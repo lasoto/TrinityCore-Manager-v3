@@ -138,7 +138,9 @@
     <Compile Include="Commands\CommandsHelper.cs" />
     <Compile Include="Commands\TCCommand.cs" />
     <Compile Include="Commands\TCCommandAttribute.cs" />
+    <Compile Include="Converters\BooleanVisibilityConverter.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Converters\InverseBooleanVisibilityConverter.cs" />
     <Compile Include="Database\AuthDatabase.cs" />
     <Compile Include="Database\CharDatabase.cs" />
     <Compile Include="Database\Classes\Account.cs" />
@@ -281,10 +283,10 @@
     <None Include="Resources\agt_action_success_16.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\agt_action_success_16.png" />
+    <Resource Include="Resources\agt_action_success_16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\agt_action_fail_16.png" />
+    <Resource Include="Resources\agt_action_fail_16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

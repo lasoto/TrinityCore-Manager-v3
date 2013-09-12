@@ -43,23 +43,23 @@ namespace TrinityCore_Manager.ViewModels
 
             IMessageService imsgs = GetService<IMessageService>();
 
-            //if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
-            //{
+            if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
+            {
 
-            //    imsgs.ShowError(new Exception("The file authserver.exe does not exist!"));
+                imsgs.ShowError(new Exception("The file authserver.exe does not exist!"));
 
-            //    return;
+                return;
 
-            //}
+            }
 
-            //if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
-            //{
+            if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
+            {
 
-            //    imsgs.ShowError(new Exception("The file worldserver.exe does not exist!"));
+                imsgs.ShowError(new Exception("The file worldserver.exe does not exist!"));
 
-            //    return;
+                return;
 
-            //}
+            }
 
             if (inst.AuthClient != null)
             {
@@ -91,17 +91,34 @@ namespace TrinityCore_Manager.ViewModels
                 }
             }
 
-            //var authClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"));
-            //var worldClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"));
+            var authClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"));
+            var worldClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"));
 
-            //inst.AuthClient = authClient;
-            //inst.WorldClient = worldClient;
+            inst.AuthClient = authClient;
+            inst.WorldClient = worldClient;
 
-            //inst.AuthClient.Start();
-            //inst.WorldClient.Start();
-
+            AuthOnline = true;
+            WorldOnline = true;
             ServerOnline = true;
 
+            inst.AuthClient.Start();
+            inst.WorldClient.Start();
+
+            authClient.ClientExited += authClient_ClientExited;
+            worldClient.ClientExited += worldClient_ClientExited;
+
+        }
+
+        private void worldClient_ClientExited(object sender, EventArgs e)
+        {
+            WorldOnline = false;
+            ServerOnline = false;
+        }
+
+        private void authClient_ClientExited(object sender, EventArgs e)
+        {
+            AuthOnline = false;
+            ServerOnline = false;
         }
 
         private async void ExecConsoleCommand()
@@ -113,6 +130,34 @@ namespace TrinityCore_Manager.ViewModels
                 await TCAction.ExecuteCommand(ConsoleCommand);
 
         }
+
+        public bool AuthOnline
+        {
+            get
+            {
+                return GetValue<bool>(AuthOnlineProperty);
+            }
+            set
+            {
+                SetValue(AuthOnlineProperty, value);
+            }
+        }
+
+        public static readonly PropertyData AuthOnlineProperty = RegisterProperty("AuthOnline", typeof(bool));
+
+        public bool WorldOnline
+        {
+            get
+            {
+                return GetValue<bool>(WorldOnlineProperty);
+            }
+            set
+            {
+                SetValue(WorldOnlineProperty, value);
+            }
+        }
+
+        public static readonly PropertyData WorldOnlineProperty = RegisterProperty("WorldOnline", typeof(bool));
 
         public bool ServerOnline
         {
