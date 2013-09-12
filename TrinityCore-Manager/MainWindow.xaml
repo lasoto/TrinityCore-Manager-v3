@@ -46,7 +46,7 @@
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
 
-                    <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300" Text="{Binding ConsoleCommand}"/>
+                    <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300" Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="CommandTextBox_KeyDown"/>
                     <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command" Command="{Binding ExecuteConsoleCommand}" />
 
                 </ribbon:RibbonGroup>
@@ -62,7 +62,7 @@
                     <ribbon:RibbonRadioButton x:Name="AnnRadioButton" Label="Server Announcement"/>
                     <ribbon:RibbonRadioButton x:Name="SNotifRadioButton" Label="Server Notification"/>
                     <ribbon:RibbonRadioButton x:Name="AGMRadioButton" Label="Announcement to GMs"/>
-                    
+
                     <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="700"/>
                     <ribbon:RibbonButton x:Name="SendMessageButton" Label="Send Message"/>
 
@@ -70,7 +70,171 @@
 
             </ribbon:RibbonTab>
 
+            <ribbon:RibbonTab x:Name="AccountManagementTab" 
+                              Header="Account Management">
+
+                <ribbon:RibbonGroup x:Name="AcctEditorPanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="AddAccountButton" Label="Add Account"/>
+                    <ribbon:RibbonButton x:Name="EditAccountButton" Label="Edit Account"/>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="AcctBanPanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="AddAccountBanButton" Label="Add Account Ban"/>
+                    <ribbon:RibbonButton x:Name="RemoveAccountBanButton" Label="Remove Account Ban"/>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="IPBanPanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="AddIPBanButton" Label="Add IP Ban"/>
+                    <ribbon:RibbonButton x:Name="RemoveIPBanButton" Label="Remove IP Ban"/>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="AcctCleanupPanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="DBAccountCleanupButton" Label="Database Account Cleanup"/>
+
+                </ribbon:RibbonGroup>
+
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="CharManagementTab" 
+                              Header="Character Management">
+
+
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="DBManagementTab" 
+                              Header="Database Management">
+
+                <ribbon:RibbonGroup x:Name="BackupRestorePanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="BackupButton" Label="Backup Database"/>
+                    <ribbon:RibbonButton x:Name="RestoreButton" Label="Restore Database"/>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="CleanPanel">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonButton x:Name="CleanWorldButton" Label="Clean World"/>
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+            
+            <ribbon:RibbonTab x:Name="CreateEditTab" Header="Create / Edit">
+                
+                <ribbon:RibbonGroup x:Name="ItemGroup" Header="Item">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonButton x:Name="CreateItemButton" Label="Create"/>
+                    <ribbon:RibbonButton x:Name="EditItemButton" Label="Edit"/>
+                    
+                </ribbon:RibbonGroup>
+                
+                <ribbon:RibbonGroup x:Name="NPCGroup" Header="NPC">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+
+                    <ribbon:RibbonButton x:Name="CreateNPCButton" Label="Create"/>
+                    <ribbon:RibbonButton x:Name="EditNPCButton" Label="Edit"/>
+
+                </ribbon:RibbonGroup>
+                
+                <ribbon:RibbonGroup x:Name="VendorGroup" Header="Vendor">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonButton x:Name="CreateVendorButton" Label="Create"/>
+                    <ribbon:RibbonButton x:Name="EditVendorButton" Label="Edit"/>
+
+                </ribbon:RibbonGroup>
+                
+                <ribbon:RibbonGroup x:Name="IDSearchGroup" Header="Search">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonButton x:Name="FindNPCGuidButton" Label="Find Unused NPC GUID"/>
+                    <ribbon:RibbonButton x:Name="FindNPCButton" Label="Find NPC"/>
+                    
+                </ribbon:RibbonGroup>
+                
+                <ribbon:RibbonGroup x:Name="SmartAIGroup" Header="SmartAI">
+
+                    <ribbon:RibbonGroup.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </ribbon:RibbonGroup.ItemsPanel>
+                    
+                    <ribbon:RibbonButton x:Name="CreateSmartAIButton" Label="Create"/>
+                    <ribbon:RibbonButton x:Name="EditSmartAIButton" Label="Edit"/>
+
+                </ribbon:RibbonGroup>
+                
+            </ribbon:RibbonTab>
+
         </ribbon:Ribbon>
+
 
         <!--<ListBox HorizontalAlignment="Left" Height="245" Margin="239,244,0,0" VerticalAlignment="Top" Width="338"
                  ItemsSource="{Binding TheAccounts}">
