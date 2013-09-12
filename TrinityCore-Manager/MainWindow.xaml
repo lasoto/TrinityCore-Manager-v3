@@ -8,7 +8,7 @@
         Title="MainWindow" Height="744" Width="1137">
 
     <i:Interaction.Behaviors>
-        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="viewModels:AccountsViewModel"/>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="viewModels:MainWindowViewModel"/>
     </i:Interaction.Behaviors>
 
     <Grid x:Name="LayoutRoot">
@@ -46,8 +46,8 @@
                         </ItemsPanelTemplate>
                     </ribbon:RibbonGroup.ItemsPanel>
 
-                    <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300"/>
-                    <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command"/>
+                    <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300" Text="{Binding ConsoleCommand}"/>
+                    <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command" Command="{Binding ExecuteConsoleCommand}" />
 
                 </ribbon:RibbonGroup>
 
@@ -72,7 +72,7 @@
 
         </ribbon:Ribbon>
 
-        <ListBox HorizontalAlignment="Left" Height="245" Margin="239,244,0,0" VerticalAlignment="Top" Width="338"
+        <!--<ListBox HorizontalAlignment="Left" Height="245" Margin="239,244,0,0" VerticalAlignment="Top" Width="338"
                  ItemsSource="{Binding TheAccounts}">
 
             <ListBox.ItemTemplate>
@@ -86,7 +86,7 @@
         </ListBox>
 
 
-        <Button Content="Button" Margin="634,380,370,276" Command="{Binding SearchForAccountCommand}" />
+        <Button Content="Button" Margin="634,380,370,276" Command="{Binding SearchForAccountCommand}" />-->
 
     </Grid>
 </Window>
