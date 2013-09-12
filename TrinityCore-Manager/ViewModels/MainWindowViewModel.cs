@@ -173,6 +173,20 @@ namespace TrinityCore_Manager.ViewModels
 
         public static readonly PropertyData ServerOnlineProperty = RegisterProperty("ServerOnline", typeof(bool));
 
+        public bool BackupCountingDown
+        {
+            get
+            {
+                return GetValue<bool>(BackupCountingDownProperty);
+            }
+            set
+            {
+                SetValue(BackupCountingDownProperty, value);
+            }
+        }
+
+        public static readonly PropertyData BackupCountingDownProperty = RegisterProperty("BackupCountingDown", typeof(bool));
+
         public string ConsoleCommand
         {
             get
@@ -186,6 +200,20 @@ namespace TrinityCore_Manager.ViewModels
         }
 
         public static readonly PropertyData ConsoleCommandProperty = RegisterProperty("ConsoleCommand", typeof(string));
+
+        public string BackupText
+        {
+            get
+            {
+                return GetValue<string>(BackupTextProperty);
+            }
+            set
+            {
+                SetValue(BackupTextProperty, value);
+            }
+        }
+
+        public static readonly PropertyData BackupTextProperty = RegisterProperty("BackupText", typeof(string));
 
     }
 }

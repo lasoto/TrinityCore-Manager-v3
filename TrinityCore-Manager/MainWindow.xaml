@@ -270,7 +270,8 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="20"/>
                                 <ColumnDefinition Width="75"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="713"/>
+                                <ColumnDefinition Width="Auto" MinWidth="225"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
                     </ItemsPanelTemplate>
@@ -296,26 +297,13 @@
                 <StatusBarItem Grid.Column="4">
                     <Image Source="{StaticResource OnImage}" Width="16" Height="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}"/>
                 </StatusBarItem>
+                <StatusBarItem Grid.Column="5">
+                    <TextBlock Visibility="{Binding BackupCountingDown, Converter={StaticResource BoolVisibilityConverter}}" Text="{Binding BackupText}"/>
+                </StatusBarItem>
 
             </StatusBar>
 
         </DockPanel>
-
-        <!--<ListBox HorizontalAlignment="Left" Height="245" Margin="239,244,0,0" VerticalAlignment="Top" Width="338"
-                 ItemsSource="{Binding TheAccounts}">
-
-            <ListBox.ItemTemplate>
-
-                <DataTemplate>
-                    <TextBlock Text="{Binding Username}"></TextBlock>
-                </DataTemplate>
-
-            </ListBox.ItemTemplate>
-
-        </ListBox>
-
-
-        <Button Content="Button" Margin="634,380,370,276" Command="{Binding SearchForAccountCommand}" />-->
 
     </Grid>
 </Window>
