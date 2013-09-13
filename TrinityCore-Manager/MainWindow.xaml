@@ -27,15 +27,21 @@
 
         <DockPanel LastChildFill="True">
 
-            <fluent:Ribbon>
+            <fluent:Ribbon DockPanel.Dock="Top">
 
                 <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management">
 
-                    <fluent:RibbonGroupBox Name="SMGroup1" Header="Server Panel" Width="150">
+                    <fluent:RibbonGroupBox Name="SMGroup1" Header="Server Panel" Width="200">
                         <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
                                          Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" />
-                        <fluent:Button Header="Start Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
+                        <fluent:Button Header="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
                                          Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" />
+                        <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" />
+                    </fluent:RibbonGroupBox>
+
+                    <fluent:RibbonGroupBox Name="SMGroup2" Header="Server Commands" Width="390">
+                        <fluent:TextBox InputWidth="300"/>
+                        <fluent:Button Header="Execute Command" Width="71"/>
                     </fluent:RibbonGroupBox>
 
                 </fluent:RibbonTabItem>
