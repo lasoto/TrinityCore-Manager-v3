@@ -29,20 +29,14 @@ namespace TrinityCore_Manager
 
         private void CommandTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-
             if (e.Key == Key.Enter)
             {
-
                 ButtonAutomationPeer peer = new ButtonAutomationPeer(ExecuteCmdButton);
                 IInvokeProvider invokeProv = peer.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
                 invokeProv.Invoke();
-
                 FocusManager.SetFocusedElement(this, CommandTextBox);
                 Keyboard.Focus(CommandTextBox);
-
             }
-
         }
-
     }
 }

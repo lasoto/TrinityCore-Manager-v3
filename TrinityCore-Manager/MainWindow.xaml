@@ -6,7 +6,7 @@
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         xmlns:converter="clr-namespace:TrinityCore_Manager.Converters"
-        Title="MainWindow" Height="744" Width="1137">
+        Title="TrinityCore Manager v3" Height="744" Width="1137">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="viewModels:MainWindowViewModel"/>
@@ -28,7 +28,7 @@
 
         <DockPanel LastChildFill="True">
 
-            <ribbon:Ribbon Margin="0,0,-2,0" HorizontalAlignment="Right" Width="1131" Grid.RowSpan="2" DockPanel.Dock="Top" Height="686">
+            <ribbon:Ribbon Margin="0,0,-2,0" HorizontalAlignment="Right" Width="1131" Grid.RowSpan="2" DockPanel.Dock="Top" Height="668">
 
                 <ribbon:RibbonTab x:Name="SMTab" 
                               Header="Server Management">
@@ -66,19 +66,14 @@
 
                 </ribbon:RibbonTab>
 
-                <ribbon:RibbonTab x:Name="CommTab" 
-                              Header="Communications">
-
+                <ribbon:RibbonTab x:Name="CommTab" Header="Communications">
                     <ribbon:RibbonGroup x:Name="CommGroup1">
-
                         <ribbon:RibbonRadioButton x:Name="AnnRadioButton" Label="Server Announcement"/>
                         <ribbon:RibbonRadioButton x:Name="SNotifRadioButton" Label="Server Notification"/>
                         <ribbon:RibbonRadioButton x:Name="AGMRadioButton" Label="Announcement to GMs"/>
-
                     </ribbon:RibbonGroup>
 
                     <ribbon:RibbonGroup x:Name="CommGroup2">
-
                         <ribbon:RibbonGroup.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center"  MaxWidth="700" />
@@ -87,25 +82,18 @@
 
                         <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="500"/>
                         <ribbon:RibbonButton x:Name="SendMessageButton" Label="Send Message"/>
-
                     </ribbon:RibbonGroup>
-
                 </ribbon:RibbonTab>
 
-                <ribbon:RibbonTab x:Name="AccountManagementTab" 
-                              Header="Account Management">
-
+                <ribbon:RibbonTab x:Name="AccountManagementTab" Header="Account Management">
                     <ribbon:RibbonGroup x:Name="AcctEditorPanel">
-
                         <ribbon:RibbonGroup.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
                             </ItemsPanelTemplate>
                         </ribbon:RibbonGroup.ItemsPanel>
-
                         <ribbon:RibbonButton x:Name="AddAccountButton" Label="Add Account"/>
                         <ribbon:RibbonButton x:Name="EditAccountButton" Label="Edit Account"/>
-
                     </ribbon:RibbonGroup>
 
                     <ribbon:RibbonGroup x:Name="AcctBanPanel">
