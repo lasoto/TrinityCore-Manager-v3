@@ -1,21 +1,21 @@
-﻿<Window x:Class="TrinityCore_Manager.MainWindow"
+﻿<fluent:RibbonWindow x:Class="TrinityCore_Manager.MainWindow2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+        xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
-        xmlns:converter="clr-namespace:TrinityCore_Manager.Converters"
-        Title="TrinityCore Manager v3" Height="744" Width="1137">
+        xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
+        Title="MainWindow2" Height="744" Width="1137">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="viewModels:MainWindowViewModel"/>
     </i:Interaction.Behaviors>
 
     <Window.Resources>
-        <converter:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
-        <converter:InverseBooleanConverter x:Key="InverseBoolConverter"/>
-        <converter:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
+        <converters:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
+        <converters:InverseBooleanConverter x:Key="InverseBoolConverter"/>
+        <converters:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
         <BitmapImage x:Key="OffImage" UriSource="Resources/agt_action_fail_16.png" />
         <BitmapImage x:Key="OnImage" UriSource="Resources/agt_action_success_16.png" />
         <BitmapImage x:Key="PlayImage" UriSource="Resources/play.ico"/>
@@ -23,278 +23,26 @@
         <BitmapImage x:Key="OpenImage" UriSource="Resources/open.ico"/>
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Grid>
 
         <DockPanel LastChildFill="True">
 
-            <ribbon:Ribbon Margin="0,0,-2,0" HorizontalAlignment="Right" Width="1131" Grid.RowSpan="2" DockPanel.Dock="Top" Height="668">
+            <fluent:Ribbon>
 
-                <ribbon:RibbonTab x:Name="SMTab" 
-                              Header="Server Management">
-                    <ribbon:RibbonGroup x:Name="HomeGroup1" Header="Server Panel">
+                <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management">
 
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
+                    <fluent:RibbonGroupBox Name="SMGroup1" Header="Server Panel" Width="150">
+                        <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
+                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" />
+                        <fluent:Button Header="Start Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
+                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" />
+                    </fluent:RibbonGroupBox>
 
-                        <ribbon:RibbonButton x:Name="StartServerButton"
-                                         Label="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
-                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeImageSource="{StaticResource PlayImage}"/>
-                        <ribbon:RibbonButton x:Name="StopServerButton"
-                                         Label="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" LargeImageSource="{StaticResource StopImage}"/>
-                        <ribbon:RibbonButton x:Name="OpenConfigButton"
-                                         Label="Open Configuration File" Foreground="Teal" LargeImageSource="{StaticResource OpenImage}"/>
-                    </ribbon:RibbonGroup>
+                </fluent:RibbonTabItem>
 
-
-                    <ribbon:RibbonGroup x:Name="HomeGroup2" Header="Server Commands">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="500" VerticalAlignment="Center" Margin="0,16,0,0" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300" Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="CommandTextBox_KeyDown"/>
-                        <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command" Command="{Binding ExecuteConsoleCommand}" BorderThickness="1,3,1,1" />
-
-                    </ribbon:RibbonGroup>
-
-
-                </ribbon:RibbonTab>
-
-                <ribbon:RibbonTab x:Name="CommTab" Header="Communications">
-                    <ribbon:RibbonGroup x:Name="CommGroup1">
-                        <ribbon:RibbonRadioButton x:Name="AnnRadioButton" Label="Server Announcement"/>
-                        <ribbon:RibbonRadioButton x:Name="SNotifRadioButton" Label="Server Notification"/>
-                        <ribbon:RibbonRadioButton x:Name="AGMRadioButton" Label="Announcement to GMs"/>
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="CommGroup2">
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center"  MaxWidth="700" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonTextBox x:Name="MessageRibbonTextBox" TextBoxWidth="500"/>
-                        <ribbon:RibbonButton x:Name="SendMessageButton" Label="Send Message"/>
-                    </ribbon:RibbonGroup>
-                </ribbon:RibbonTab>
-
-                <ribbon:RibbonTab x:Name="AccountManagementTab" Header="Account Management">
-                    <ribbon:RibbonGroup x:Name="AcctEditorPanel">
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-                        <ribbon:RibbonButton x:Name="AddAccountButton" Label="Add Account"/>
-                        <ribbon:RibbonButton x:Name="EditAccountButton" Label="Edit Account"/>
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="AcctBanPanel">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="AddAccountBanButton" Label="Add Account Ban"/>
-                        <ribbon:RibbonButton x:Name="RemoveAccountBanButton" Label="Remove Account Ban"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="IPBanPanel">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="AddIPBanButton" Label="Add IP Ban"/>
-                        <ribbon:RibbonButton x:Name="RemoveIPBanButton" Label="Remove IP Ban"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="AcctCleanupPanel">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="DBAccountCleanupButton" Label="Database Account Cleanup"/>
-
-                    </ribbon:RibbonGroup>
-
-
-                </ribbon:RibbonTab>
-
-                <ribbon:RibbonTab x:Name="CharManagementTab" 
-                              Header="Character Management">
-
-
-
-                </ribbon:RibbonTab>
-
-                <ribbon:RibbonTab x:Name="DBManagementTab" 
-                              Header="Database Management">
-
-                    <ribbon:RibbonGroup x:Name="BackupRestorePanel">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="BackupButton" Label="Backup Database"/>
-                        <ribbon:RibbonButton x:Name="RestoreButton" Label="Restore Database"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="CleanPanel">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="CleanWorldButton" Label="Clean World"/>
-
-                    </ribbon:RibbonGroup>
-
-                </ribbon:RibbonTab>
-
-                <ribbon:RibbonTab x:Name="CreateEditTab" Header="Create / Edit">
-
-                    <ribbon:RibbonGroup x:Name="ItemGroup" Header="Item">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="CreateItemButton" Label="Create"/>
-                        <ribbon:RibbonButton x:Name="EditItemButton" Label="Edit"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="NPCGroup" Header="NPC">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="CreateNPCButton" Label="Create"/>
-                        <ribbon:RibbonButton x:Name="EditNPCButton" Label="Edit"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="VendorGroup" Header="Vendor">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="CreateVendorButton" Label="Create"/>
-                        <ribbon:RibbonButton x:Name="EditVendorButton" Label="Edit"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="IDSearchGroup" Header="Search">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="FindNPCGuidButton" Label="Find Unused NPC GUID"/>
-                        <ribbon:RibbonButton x:Name="FindNPCButton" Label="Find NPC"/>
-
-                    </ribbon:RibbonGroup>
-
-                    <ribbon:RibbonGroup x:Name="SmartAIGroup" Header="SmartAI">
-
-                        <ribbon:RibbonGroup.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="300" VerticalAlignment="Center" />
-                            </ItemsPanelTemplate>
-                        </ribbon:RibbonGroup.ItemsPanel>
-
-                        <ribbon:RibbonButton x:Name="CreateSmartAIButton" Label="Create"/>
-                        <ribbon:RibbonButton x:Name="EditSmartAIButton" Label="Edit"/>
-
-                    </ribbon:RibbonGroup>
-
-                </ribbon:RibbonTab>
-
-            </ribbon:Ribbon>
-
-            <StatusBar DockPanel.Dock="Bottom">
-
-                <StatusBar.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="20"/>
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition Width="713"/>
-                                <ColumnDefinition Width="Auto" MinWidth="225"/>
-                            </Grid.ColumnDefinitions>
-                        </Grid>
-                    </ItemsPanelTemplate>
-                </StatusBar.ItemsPanel>
-
-                <StatusBarItem>
-                    <TextBlock>Auth Server</TextBlock>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="1">
-                    <Image Source="{StaticResource OffImage}" Width="16" Height="16" Visibility="{Binding AuthOnline, Converter={StaticResource InverseBoolVisibility}}"/>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="1">
-                    <Image Source="{StaticResource OnImage}" Width="16" Height="16" Visibility="{Binding AuthOnline, Converter={StaticResource BoolVisibilityConverter}}"/>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="2">
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="3">
-                    <TextBlock>World Server</TextBlock>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="4">
-                    <Image Source="{StaticResource OffImage}" Width="16" Height="16" Visibility="{Binding WorldOnline, Converter={StaticResource InverseBoolVisibility}}"/>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="4">
-                    <Image Source="{StaticResource OnImage}" Width="16" Height="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}"/>
-                </StatusBarItem>
-                <StatusBarItem Grid.Column="5">
-                    <TextBlock Visibility="{Binding BackupCountingDown, Converter={StaticResource BoolVisibilityConverter}}" Text="{Binding BackupText}"/>
-                </StatusBarItem>
-
-            </StatusBar>
+            </fluent:Ribbon>
 
         </DockPanel>
 
     </Grid>
-</Window>
+</fluent:RibbonWindow>

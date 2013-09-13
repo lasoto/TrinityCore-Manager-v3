@@ -67,6 +67,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Fluent">
+      <HintPath>..\Libraries\Fluent.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\Libraries\Ionic.Zip.dll</HintPath>
     </Reference>
@@ -196,6 +199,9 @@
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Misc\Enums\TCMTheme.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\ProcessHelper.cs" />
@@ -217,7 +223,7 @@
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <Compile Include="ViewModels\AccountsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="MainWindowOld.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -225,10 +231,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="MainWindowOld.xaml.cs">
+      <DependentUpon>MainWindowOld.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AccountModel.cs" />
