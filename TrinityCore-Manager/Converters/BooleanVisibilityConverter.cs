@@ -14,12 +14,10 @@ namespace TrinityCore_Manager.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            
             if (targetType != typeof(Visibility))
                 throw new InvalidOperationException("The target must be of type System.Windows.Visbility");
 
             return (bool)value ? Visibility.Visible : Visibility.Hidden;
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
