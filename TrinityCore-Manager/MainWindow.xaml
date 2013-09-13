@@ -50,7 +50,7 @@
                     </ribbon:RibbonGroup>
 
 
-                    <ribbon:RibbonGroup x:Name="HomeGroup2">
+                    <ribbon:RibbonGroup x:Name="HomeGroup2" Header="Server Commands">
 
                         <ribbon:RibbonGroup.ItemsPanel>
                             <ItemsPanelTemplate>
