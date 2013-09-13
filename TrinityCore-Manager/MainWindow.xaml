@@ -42,11 +42,11 @@
 
                         <ribbon:RibbonButton x:Name="StartServerButton"
                                          Label="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
-                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0,17,0,0" Height="82"/>
                         <ribbon:RibbonButton x:Name="StopServerButton"
-                                         Label="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}"/>
+                                         Label="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" BorderThickness="1,16,1,1"/>
                         <ribbon:RibbonButton x:Name="OpenConfigButton"
-                                         Label="Open Configuration File" Foreground="Teal"/>
+                                         Label="Open Configuration File" Foreground="Teal" BorderThickness="1,16,1,1"/>
                     </ribbon:RibbonGroup>
 
 
@@ -54,12 +54,12 @@
 
                         <ribbon:RibbonGroup.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" MaxWidth="500" VerticalAlignment="Center" />
+                                <WrapPanel Orientation="Horizontal" MaxWidth="500" VerticalAlignment="Center" Margin="0,16,0,0" />
                             </ItemsPanelTemplate>
                         </ribbon:RibbonGroup.ItemsPanel>
 
                         <ribbon:RibbonTextBox x:Name="CommandTextBox" TextBoxWidth="300" Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="CommandTextBox_KeyDown"/>
-                        <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command" Command="{Binding ExecuteConsoleCommand}" />
+                        <ribbon:RibbonButton x:Name="ExecuteCmdButton" Label="Execute Command" Command="{Binding ExecuteConsoleCommand}" BorderThickness="1,3,1,1" />
 
                     </ribbon:RibbonGroup>
 
