@@ -279,13 +279,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\agt_action_success_16.ico" />
+    <Resource Include="Resources\agt_action_success_16.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\agt_action_success_16.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\agt_action_fail_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\open.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

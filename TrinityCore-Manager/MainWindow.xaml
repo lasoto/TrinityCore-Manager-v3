@@ -18,6 +18,9 @@
         <converter:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
         <BitmapImage x:Key="OffImage" UriSource="Resources/agt_action_fail_16.png" />
         <BitmapImage x:Key="OnImage" UriSource="Resources/agt_action_success_16.png" />
+        <BitmapImage x:Key="PlayImage" UriSource="Resources/play.ico"/>
+        <BitmapImage x:Key="StopImage" UriSource="Resources/stop.ico"/>
+        <BitmapImage x:Key="OpenImage" UriSource="Resources/open.ico"/>
     </Window.Resources>
 
     <Grid x:Name="LayoutRoot">
@@ -42,11 +45,11 @@
 
                         <ribbon:RibbonButton x:Name="StartServerButton"
                                          Label="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
-                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0,17,0,0" Height="82"/>
+                                         Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeImageSource="{StaticResource PlayImage}"/>
                         <ribbon:RibbonButton x:Name="StopServerButton"
-                                         Label="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" BorderThickness="1,16,1,1"/>
+                                         Label="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" LargeImageSource="{StaticResource StopImage}"/>
                         <ribbon:RibbonButton x:Name="OpenConfigButton"
-                                         Label="Open Configuration File" Foreground="Teal" BorderThickness="1,16,1,1"/>
+                                         Label="Open Configuration File" Foreground="Teal" LargeImageSource="{StaticResource OpenImage}"/>
                     </ribbon:RibbonGroup>
 
 
