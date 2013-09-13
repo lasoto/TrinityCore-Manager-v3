@@ -40,7 +40,7 @@
                     </fluent:RibbonGroupBox>
 
                     <fluent:RibbonGroupBox Name="SMGroup2" Header="Server Commands" Width="390">
-                        <fluent:TextBox InputWidth="300" BorderThickness="0" Margin="0,31,0,0"/>
+                        <fluent:TextBox InputWidth="300" BorderThickness="0" Margin="0" Height="83"/>
                         <fluent:Button Header="Execute Command" Width="71"/>
                     </fluent:RibbonGroupBox>
 
