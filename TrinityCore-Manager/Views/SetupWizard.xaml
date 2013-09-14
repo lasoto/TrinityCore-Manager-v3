@@ -7,7 +7,7 @@
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         x:Class="TrinityCore_Manager.Views.SetupWizard"
-        Title="SetupWizard" Height="436" Width="689" ResizeMode="CanMinimize, NoResize">
+        Title="Setup Wizard" Height="436" Width="689" ResizeMode="CanMinimize, NoResize">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:SetupWizardViewModel}"/>

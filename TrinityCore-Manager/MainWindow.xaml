@@ -7,7 +7,7 @@
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="TrinityCore_Manager.MainWindow2"
-        Title="MainWindow2" Height="744" Width="1137">
+        Title="TrinityCore Manager v3.0" Height="744" Width="1137">
 
     <fluent:RibbonWindow.Resources>
         <converters:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
