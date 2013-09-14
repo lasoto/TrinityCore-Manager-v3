@@ -229,6 +229,14 @@
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <Compile Include="ViewModels\AccountsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\SetupWizardViewModel.cs" />
+    <Compile Include="ViewModels\Wizard\WizardConnectOptionViewModel.cs" />
+    <Compile Include="Views\SetupWizard.xaml.cs">
+      <DependentUpon>SetupWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wizard\WizardConnectOptionView.xaml.cs">
+      <DependentUpon>WizardConnectOptionView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindowOld.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -242,6 +250,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SetupWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Wizard\WizardConnectOptionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -312,6 +328,7 @@
   <ItemGroup>
     <Resource Include="Resources\open.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <PropertyGroup>

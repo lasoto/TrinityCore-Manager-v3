@@ -1,0 +1,31 @@
+﻿<catel:UserControl x:Class="TrinityCore_Manager.Views.Wizard.WizardConnectOptionView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				   xmlns:catel="http://catel.codeplex.com"
+				   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+				   xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels.Wizard">
+
+    <!-- Resources -->
+    <UserControl.Resources>
+    </UserControl.Resources>
+
+    <i:Interaction.Behaviors>
+        <catel:UserControlBehavior x:Name="mvvmBehavior" ViewModelType="viewModels:WizardConnectOptionViewModel"/>
+    </i:Interaction.Behaviors>
+
+    <!-- Content -->
+    <catel:StackGrid Height="69" Width="172">
+        <catel:StackGrid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </catel:StackGrid.RowDefinitions>
+
+        <Grid>
+            <StackPanel>
+                <RadioButton Content="Remotely" IsChecked="{Binding ConnectRemotely}"/>
+                <RadioButton Content="Locally" Margin="0,34,0,-34" IsChecked="{Binding ConnectLocally}"/>
+            </StackPanel>
+        </Grid>
+
+    </catel:StackGrid>
+</catel:UserControl>

@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wizardviews="clr-namespace:TrinityCore_Manager.Views.Wizard"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:catel="http://catel.codeplex.com"
+        xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        x:Class="TrinityCore_Manager.Views.SetupWizard"
+        Title="SetupWizard" Height="436" Width="689" ResizeMode="CanMinimize, NoResize">
+
+    <i:Interaction.Behaviors>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:SetupWizardViewModel}"/>
+    </i:Interaction.Behaviors>
+
+    <Grid>
+
+        <xctk:Wizard HorizontalAlignment="Left" x:Name="setupWizard" VerticalAlignment="Top" Height="405" Width="681" CurrentPage="{Binding Page}">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Next">
+                    <catel:EventToCommand Command="{Binding Next}" DisableAssociatedObjectOnCannotExecute="False" PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <xctk:WizardPage x:Name="WelcomePage" Title="Welcome!" Description="This wizard will guide you through the process of setting a server environment for TrinityCore Manager v3"/>
+            <xctk:WizardPage x:Name="ConnectOptionPage" Title="How would you like to connect to your TrinityCore server?" PageType="Interior">
+                <wizardviews:WizardConnectOptionView/>
+            </xctk:WizardPage>
+
+        </xctk:Wizard>
+
+    </Grid>
+</Window>
