@@ -41,7 +41,7 @@ namespace TrinityCore_Manager.ViewModels.Wizard
             }
         }
 
-        public static readonly PropertyData ConnectLocallyProperty = RegisterProperty("ConnectLocally", typeof(bool));
+        public static readonly PropertyData ConnectLocallyProperty = RegisterProperty("ConnectLocally", typeof(bool), true);
 
     }
 }

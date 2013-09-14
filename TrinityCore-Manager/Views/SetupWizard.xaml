@@ -15,7 +15,7 @@
 
     <Grid>
 
-        <xctk:Wizard HorizontalAlignment="Left" x:Name="setupWizard" VerticalAlignment="Top" Height="405" Width="681" CurrentPage="{Binding Page}">
+        <xctk:Wizard HorizontalAlignment="Left" x:Name="setupWizard" VerticalAlignment="Top" Height="405" Width="681">
 
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Next">
@@ -24,10 +24,19 @@
             </i:Interaction.Triggers>
 
             <xctk:WizardPage x:Name="WelcomePage" Title="Welcome!" Description="This wizard will guide you through the process of setting a server environment for TrinityCore Manager v3"/>
-            <xctk:WizardPage x:Name="ConnectOptionPage" Title="How would you like to connect to your TrinityCore server?" PageType="Interior">
+            <xctk:WizardPage x:Name="ConnectOptionPage" Title="Connect Type" Description="How would you like to connect to your TrinityCore server?" PageType="Interior" 
+                             NextPage="{Binding ElementName=TrinityServerFolder}">
                 <wizardviews:WizardConnectOptionView/>
             </xctk:WizardPage>
-
+            <xctk:WizardPage x:Name="TrinityServerFolder" Title="TrinityCore Server Folder" Description="Please locate your TrinityCore server folder" PageType="Interior"
+                             NextPage="{Binding ElementName=RADetailsPage}">
+                <wizardviews:WizardServerFolderWizardView/>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="RADetailsPage" Title="Remote Access" Description="Please enter your Remote Access details">
+                
+            </xctk:WizardPage>
+            
+            
         </xctk:Wizard>
 
     </Grid>

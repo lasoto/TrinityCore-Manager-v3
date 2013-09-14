@@ -13,19 +13,30 @@ using Xceed.Wpf.Toolkit.Core;
 namespace TrinityCore_Manager.ViewModels
 {
     [InterestedIn(typeof(WizardConnectOptionViewModel))]
+    [InterestedIn(typeof(WizardTrinityServerFolderViewModel))]
     public class SetupWizardViewModel : ViewModelBase
     {
 
         private readonly IUIVisualizerService _uiVisualizerService;
         private readonly IPleaseWaitService _pleaseWaitService;
+        private readonly IMessageService _messageService;
+
+        private bool _isLocal;
+
+        private string _serverPath;
 
         public Command<CancelRoutedEventArgs> Next { get; private set; }
 
-        public SetupWizardViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService)
+        public SetupWizardViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
+
+            _isLocal = false;
+
+            _serverPath = String.Empty;
 
             _uiVisualizerService = uiVisualizerService;
             _pleaseWaitService = pleaseWaitService;
+            _messageService = messageService;
 
             Next = new Command<CancelRoutedEventArgs>(NextButtonPressed);
 
@@ -34,7 +45,34 @@ namespace TrinityCore_Manager.ViewModels
         private void NextButtonPressed(CancelRoutedEventArgs e)
         {
 
-            
+            var wizard = e.Source as Xceed.Wpf.Toolkit.Wizard;
+
+            if (wizard != null)
+            {
+
+                string page = wizard.CurrentPage.Name.ToLower();
+
+                if (page == "connectoptionpage")
+                {
+
+                    //e.Cancel = true;
+
+                }
+                else if (page == "trinityserverfolder")
+                {
+
+                    if (string.IsNullOrEmpty(_serverPath))
+                    {
+
+                        _messageService.ShowError("Server path cannot be empty!");
+
+                        e.Cancel = true;
+
+                    }
+
+                }
+
+            }
 
         }
 
@@ -46,26 +84,23 @@ namespace TrinityCore_Manager.ViewModels
 
                 var model = (WizardConnectOptionViewModel)viewModel;
 
-                Console.WriteLine(Page.Name);
+                if (model.ConnectLocally)
+                    _isLocal = true;
+                else if (model.ConnectRemotely)
+                    _isLocal = false;
+
+            }
+            else if (viewModel is WizardTrinityServerFolderViewModel)
+            {
+
+                var model = (WizardTrinityServerFolderViewModel)viewModel;
+
+                _serverPath = model.ServerFolderLocation;
 
             }
 
 
         }
-
-        public WizardPage Page
-        {
-            get
-            {
-                return GetValue<WizardPage>(PageProperty);
-            }
-            set
-            {
-                SetValue(PageProperty, value);
-            }
-        }
-
-        public static readonly PropertyData PageProperty = RegisterProperty("Page", typeof(WizardPage));
 
     }
 }
