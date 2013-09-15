@@ -273,6 +273,8 @@ namespace TrinityCore_Manager.ViewModels
                 settings.RAPort = Port;
             }
 
+            settings.Save();
+
             this.SaveAndCloseViewModel();
 
         }
