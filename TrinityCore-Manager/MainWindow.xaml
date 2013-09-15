@@ -149,7 +149,7 @@
                         <fluent:Button Header="Delete Guild" Width="51" Height="85"/>
                     </fluent:RibbonGroupBox>
 
-                    <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Guild" Width="167">
+                    <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="167">
                         <fluent:Button Header="Event Active List" Width="56" Height="85"/>
                         <fluent:Button Header="Start Event" Width="57" Height="85"/>
                         <fluent:Button Header="Stop Event" Width="51" Height="85"/>
