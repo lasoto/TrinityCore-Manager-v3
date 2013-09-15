@@ -204,6 +204,7 @@
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -213,6 +214,8 @@
     <Compile Include="Misc\ServerType.cs" />
     <Compile Include="Misc\VisualStudio.cs" />
     <Compile Include="Misc\WoWItem.cs" />
+    <Compile Include="Models\WizardModel.cs" />
+    <Compile Include="Models\WizardSelectDatabaseModel.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -229,20 +232,15 @@
     <Compile Include="ViewModels\AccountsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SetupWizardViewModel.cs" />
-    <Compile Include="ViewModels\Wizard\WizardConnectOptionViewModel.cs" />
-    <Compile Include="ViewModels\Wizard\WizardRADetailsViewModel.cs" />
-    <Compile Include="ViewModels\Wizard\WizardTrinityServerFolderViewModel.cs" />
+    <Compile Include="ViewModels\WizardSelectDatabaseViewModel.cs" />
     <Compile Include="Views\SetupWizard.xaml.cs">
       <DependentUpon>SetupWizard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Wizard\WizardRADetailsView.xaml.cs">
-      <DependentUpon>WizardRADetailsView.xaml</DependentUpon>
+    <Compile Include="Views\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Wizard\WizardTrinityServerFolderView.xaml.cs">
-      <DependentUpon>WizardTrinityServerFolderView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Wizard\WizardConnectOptionView.xaml.cs">
-      <DependentUpon>WizardConnectOptionView.xaml</DependentUpon>
+    <Compile Include="Views\WizardSelectDatabase.xaml.cs">
+      <DependentUpon>WizardSelectDatabase.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindowOld.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -264,15 +262,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Wizard\WizardRADetailsView.xaml">
+    <Page Include="Views\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Wizard\WizardTrinityServerFolderView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Wizard\WizardConnectOptionView.xaml">
+    <Page Include="Views\WizardSelectDatabase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="TrinityCore_Manager.Views.WizardSelectDatabase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        xmlns:catel="http://catel.codeplex.com"
+        Title="WizardSelectDatabase" Height="326" Width="323">
+
+    <i:Interaction.Behaviors>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:WizardSelectDatabaseViewModel}"/>
+    </i:Interaction.Behaviors>
+
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="229" Margin="10,10,0,0" VerticalAlignment="Top" Width="291" ItemsSource="{Binding Databases}" SelectedValue="{Binding SelectedDatabaseName}"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="226,265,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OkCommand}"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CancelCommand}"/>
+    </Grid>
+</Window>

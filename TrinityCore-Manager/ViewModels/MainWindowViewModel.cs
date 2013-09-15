@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using Catel.Data;
 using Catel.MVVM;
 using Catel.MVVM.Services;
@@ -20,19 +21,65 @@ namespace TrinityCore_Manager.ViewModels
 
         private readonly IUIVisualizerService _uiVisualizerService;
         private readonly IPleaseWaitService _pleaseWaitService;
+        private readonly IMessageService _messageService;
 
         public Command ExecuteConsoleCommand { get; private set; }
 
         public Command StartServerCommand { get; private set; }
 
-        public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService)
+        public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
             _uiVisualizerService = uiVisualizerService;
             _pleaseWaitService = pleaseWaitService;
+            _messageService = messageService;
 
             ExecuteConsoleCommand = new Command(ExecConsoleCommand);
             StartServerCommand = new Command(StartServer);
+
+            CheckSettings();
+
+        }
+
+        private void ShowWizard(bool exit = false)
+        {
+            var wizardView = new SetupWizardViewModel(_uiVisualizerService, _pleaseWaitService, _messageService);
+
+            var result = _uiVisualizerService.ShowDialog(wizardView);
+
+            if (result.HasValue && result.Value)
+            {
+            }
+            else if (exit)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void CheckSettings()
+        {
+
+            var set = Settings.Default;
+
+            if (String.IsNullOrEmpty(set.DBHost) || String.IsNullOrEmpty(set.DBUsername) || String.IsNullOrEmpty(set.DBPassword) || String.IsNullOrEmpty(set.DBAuthName) ||
+                String.IsNullOrEmpty(set.DBCharName) || String.IsNullOrEmpty(set.DBWorldName))
+            {
+                ShowWizard(true);
+            }
+            else if ((ServerType)set.ServerType == ServerType.Local)
+            {
+                if (String.IsNullOrEmpty(set.ServerFolder))
+                {
+                    ShowWizard(true);
+                }
+            }
+            else if ((ServerType)set.ServerType == ServerType.RemoteAccess)
+            {
+                if (String.IsNullOrEmpty(set.RAUsername) || String.IsNullOrEmpty(set.RAPassword))
+                {
+                    ShowWizard(true);
+                }
+            }
 
         }
 
@@ -72,7 +119,7 @@ namespace TrinityCore_Manager.ViewModels
                         return;
 
                     ProcessHelper.KillProcess(((LocalClient)inst.AuthClient).UnderlyingProcessId);
-                
+
                 }
             }
 
@@ -87,7 +134,7 @@ namespace TrinityCore_Manager.ViewModels
                         return;
 
                     ProcessHelper.KillProcess(((LocalClient)inst.WorldClient).UnderlyingProcessId);
-                
+
                 }
             }
 

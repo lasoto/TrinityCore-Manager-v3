@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Ookii.Dialogs.Wpf;
 
 namespace TrinityCore_Manager.Views
 {
@@ -22,6 +23,23 @@ namespace TrinityCore_Manager.Views
         public SetupWizard()
         {
             InitializeComponent();
+        }
+
+        private void browseServerFolder_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new VistaFolderBrowserDialog();
+
+            var showDialog = dialog.ShowDialog();
+
+            if (showDialog.HasValue)
+            {
+
+                if (showDialog.Value)
+                {
+                    ServerFolderTextBox.SetValue(TextBox.TextProperty, dialog.SelectedPath);
+                }
+
+            }
         }
     }
 }
