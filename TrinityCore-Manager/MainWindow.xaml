@@ -40,14 +40,6 @@
                         <fluent:TextBox InputWidth="230" BorderThickness="0" Margin="0" Height="83"/>
                         <fluent:Button Header="Execute Command" Width="59" Height="66" BorderThickness="0" Padding="0" Margin="0,-11,0,0"/>
                     </fluent:RibbonGroupBox>
-
-                    <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="612">
-                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Margin="0" Padding="0" Size="Middle"/>
-                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Margin="0" Padding="0" Size="Middle"/>
-                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Margin="0,0,0,2" Padding="0" Size="Middle"/>
-                        <fluent:TextBox InputWidth="400" BorderThickness="0" Margin="0" Height="83"/>
-                        <fluent:Button Header="Send Message" Width="59" Height="68" BorderThickness="0" Padding="0" Margin="0,-11,0,0"/>
-                    </fluent:RibbonGroupBox>
                 </fluent:RibbonTabItem>
 
                 <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Account Management" IsSelected="True">
@@ -161,6 +153,14 @@
                         <fluent:Button Header="Event Active List" Width="56" Height="85"/>
                         <fluent:Button Header="Start Event" Width="57" Height="85"/>
                         <fluent:Button Header="Stop Event" Width="51" Height="85"/>
+                    </fluent:RibbonGroupBox>
+
+                    <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="612">
+                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
+                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
+                        <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
+                        <fluent:TextBox InputWidth="400" BorderThickness="0" Margin="0" Height="83"/>
+                        <fluent:Button Header="Send Message" Width="59" Height="68" BorderThickness="0" Padding="0" Margin="0,-11,0,0"/>
                     </fluent:RibbonGroupBox>
                 </fluent:RibbonTabItem>
             </fluent:Ribbon>
