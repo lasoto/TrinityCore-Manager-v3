@@ -11,6 +11,7 @@ using Catel.MVVM;
 using Catel.MVVM.Services;
 using TrinityCore_Manager.Clients;
 using TrinityCore_Manager.Misc;
+using TrinityCore_Manager.Models;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.TCM;
 
@@ -43,7 +44,28 @@ namespace TrinityCore_Manager.ViewModels
 
         private void ShowWizard(bool exit = false)
         {
-            var wizardView = new SetupWizardViewModel(_uiVisualizerService, _pleaseWaitService, _messageService);
+
+            var set = Settings.Default;
+
+            var wm = new WizardModel
+            {
+                ConnectLocally = (ServerType)set.ServerType == ServerType.Local,
+                ConnectRemotely = (ServerType)set.ServerType == ServerType.RemoteAccess,
+                ServerFolderLocation = set.ServerFolder,
+                Host = set.RAHost,
+                Port = set.RAPort,
+                Username = set.RAUsername,
+                Password = String.Empty,
+                MySQLHost = set.DBHost,
+                MySQLPort = set.DBPort,
+                MySQLUsername = set.DBUsername,
+                MySQLPassword = String.Empty,
+                SelectedAuthDB = set.DBAuthName,
+                SelectedCharDB = set.DBCharName,
+                SelectedWorldDB = set.DBWorldName,
+            };
+
+            var wizardView = new SetupWizardViewModel(wm, _uiVisualizerService, _pleaseWaitService, _messageService);
 
             var result = _uiVisualizerService.ShowDialog(wizardView);
 
@@ -54,6 +76,7 @@ namespace TrinityCore_Manager.ViewModels
             {
                 Application.Current.Shutdown();
             }
+
         }
 
         private void CheckSettings()

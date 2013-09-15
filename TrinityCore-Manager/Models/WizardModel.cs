@@ -87,6 +87,10 @@ namespace TrinityCore_Manager.Models
             {
                 return GetValue<string>(UsernameProperty);
             }
+            set
+            {
+                SetValue(UsernameProperty, value);
+            }
         }
 
         public static readonly PropertyData UsernameProperty = RegisterProperty("Username", typeof(string));
@@ -109,7 +113,11 @@ namespace TrinityCore_Manager.Models
         {
             get
             {
-                return GetValue<string>(MySQLHost);
+                return GetValue<string>(MySQLHostProperty);
+            }
+            set
+            {
+                SetValue(MySQLHostProperty, value);
             }
         }
 
