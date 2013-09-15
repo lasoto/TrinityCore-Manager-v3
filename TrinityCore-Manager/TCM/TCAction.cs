@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevComponents.DotNetBar;
 using TrinityCore_Manager.Commands;
 using TrinityCore_Manager.Database.Enums;
 using TrinityCore_Manager.Extensions;

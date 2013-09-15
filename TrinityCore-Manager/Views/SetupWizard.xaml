@@ -6,12 +6,19 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
         x:Class="TrinityCore_Manager.Views.SetupWizard"
         Title="Setup Wizard" Height="436" Width="689" ResizeMode="CanMinimize, NoResize">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:SetupWizardViewModel}"/>
     </i:Interaction.Behaviors>
+
+    <Window.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
+        <converters:InverseBooleanConverter x:Key="InverseBoolConverter"/>
+        <converters:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
+    </Window.Resources>
 
     <Grid>
 
@@ -21,22 +28,27 @@
                 <i:EventTrigger EventName="Next">
                     <catel:EventToCommand Command="{Binding Next}" DisableAssociatedObjectOnCannotExecute="False" PassEventArgsToCommand="True" />
                 </i:EventTrigger>
+                <i:EventTrigger EventName="Previous">
+                    <catel:EventToCommand Command="{Binding Previous}" DisableAssociatedObjectOnCannotExecute="False" PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="Finish">
+                    <catel:EventToCommand Command="{Binding Finish}" DisableAssociatedObjectOnCannotExecute="False" PassEventArgsToCommand="True" />
+                </i:EventTrigger>
             </i:Interaction.Triggers>
 
             <xctk:WizardPage x:Name="WelcomePage" Title="Welcome!" Description="This wizard will guide you through the process of setting a server environment for TrinityCore Manager v3"/>
             <xctk:WizardPage x:Name="ConnectOptionPage" Title="Connect Type" Description="How would you like to connect to your TrinityCore server?" PageType="Interior" 
-                             NextPage="{Binding ElementName=TrinityServerFolder}">
+                             NextPage="{Binding ElementName=TrinityInfo}">
                 <wizardviews:WizardConnectOptionView/>
             </xctk:WizardPage>
-            <xctk:WizardPage x:Name="TrinityServerFolder" Title="TrinityCore Server Folder" Description="Please locate your TrinityCore server folder" PageType="Interior"
-                             NextPage="{Binding ElementName=RADetailsPage}">
-                <wizardviews:WizardServerFolderWizardView/>
-            </xctk:WizardPage>
-            <xctk:WizardPage x:Name="RADetailsPage" Title="Remote Access" Description="Please enter your Remote Access details">
-                
+            <xctk:WizardPage x:Name="TrinityInfo" Title="Basic Information" Description="" PageType="Interior">
+                <Grid>
+                    <wizardviews:WizardServerFolderWizardView Visibility="{Binding Local, Converter={StaticResource BoolVisibilityConverter}}"/>
+                    <wizardviews:WizardRADetailsView Visibility="{Binding Local, Converter={StaticResource InverseBoolVisibility}}"/>
+                </Grid>
             </xctk:WizardPage>
             
-            
+
         </xctk:Wizard>
 
     </Grid>

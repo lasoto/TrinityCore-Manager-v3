@@ -64,10 +64,6 @@
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.3, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
     <Reference Include="Fluent">
       <HintPath>..\Libraries\Fluent.dll</HintPath>
     </Reference>
@@ -234,9 +230,13 @@
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SetupWizardViewModel.cs" />
     <Compile Include="ViewModels\Wizard\WizardConnectOptionViewModel.cs" />
+    <Compile Include="ViewModels\Wizard\WizardRADetailsViewModel.cs" />
     <Compile Include="ViewModels\Wizard\WizardTrinityServerFolderViewModel.cs" />
     <Compile Include="Views\SetupWizard.xaml.cs">
       <DependentUpon>SetupWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wizard\WizardRADetailsView.xaml.cs">
+      <DependentUpon>WizardRADetailsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Wizard\WizardTrinityServerFolderView.xaml.cs">
       <DependentUpon>WizardTrinityServerFolderView.xaml</DependentUpon>
@@ -261,6 +261,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SetupWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Wizard\WizardRADetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

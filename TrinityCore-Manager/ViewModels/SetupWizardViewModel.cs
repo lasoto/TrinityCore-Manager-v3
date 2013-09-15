@@ -14,6 +14,7 @@ namespace TrinityCore_Manager.ViewModels
 {
     [InterestedIn(typeof(WizardConnectOptionViewModel))]
     [InterestedIn(typeof(WizardTrinityServerFolderViewModel))]
+    [InterestedIn(typeof(WizardRADetailsViewModel))]
     public class SetupWizardViewModel : ViewModelBase
     {
 
@@ -21,24 +22,36 @@ namespace TrinityCore_Manager.ViewModels
         private readonly IPleaseWaitService _pleaseWaitService;
         private readonly IMessageService _messageService;
 
-        private bool _isLocal;
-
         private string _serverPath;
 
+        private string _raHost;
+        private int _raPort;
+        private string _raUsername;
+        private string _raPassword;
+
         public Command<CancelRoutedEventArgs> Next { get; private set; }
+
+        public Command<CancelRoutedEventArgs> Previous { get; private set; }
+
+        public Command<CancelRoutedEventArgs> Finish { get; private set; }
 
         public SetupWizardViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
-            _isLocal = false;
-
             _serverPath = String.Empty;
+
+            _raHost = String.Empty;
+            _raPort = 0;
+            _raUsername = String.Empty;
+            _raPassword = String.Empty;
 
             _uiVisualizerService = uiVisualizerService;
             _pleaseWaitService = pleaseWaitService;
             _messageService = messageService;
 
             Next = new Command<CancelRoutedEventArgs>(NextButtonPressed);
+            Previous = new Command<CancelRoutedEventArgs>(PreviousButtonPressed);
+            Finish = new Command<CancelRoutedEventArgs>(FinishButtonPressed);
 
         }
 
@@ -54,24 +67,64 @@ namespace TrinityCore_Manager.ViewModels
 
                 if (page == "connectoptionpage")
                 {
-
-                    //e.Cancel = true;
-
                 }
-                else if (page == "trinityserverfolder")
+                else if (page == "trinityinfo")
                 {
 
-                    if (string.IsNullOrEmpty(_serverPath))
+                    if (Local)
                     {
 
-                        _messageService.ShowError("Server path cannot be empty!");
+                        if (string.IsNullOrEmpty(_serverPath))
+                        {
 
-                        e.Cancel = true;
+                            _messageService.ShowError("Server path cannot be empty!");
+
+                            e.Cancel = true;
+
+                        }
+
+                    }
+                    else
+                    {
+
+                        if (string.IsNullOrEmpty(_raHost) || string.IsNullOrEmpty(_raUsername) || string.IsNullOrEmpty(_raPassword))
+                        {
+
+                            _messageService.ShowError("All fields must be filled out!");
+
+                            e.Cancel = true;
+
+                        }
 
                     }
 
                 }
 
+            }
+
+        }
+
+        private void PreviousButtonPressed(CancelRoutedEventArgs e)
+        {
+
+            var wizard = e.Source as Xceed.Wpf.Toolkit.Wizard;
+
+            if (wizard != null)
+            {
+
+                string page = wizard.CurrentPage.Name.ToLower();
+
+            }
+
+        }
+
+        private void FinishButtonPressed(CancelRoutedEventArgs e)
+        {
+
+            var wizard = e.Source as Xceed.Wpf.Toolkit.Wizard;
+
+            if (wizard != null)
+            {
             }
 
         }
@@ -85,9 +138,9 @@ namespace TrinityCore_Manager.ViewModels
                 var model = (WizardConnectOptionViewModel)viewModel;
 
                 if (model.ConnectLocally)
-                    _isLocal = true;
+                    Local = true;
                 else if (model.ConnectRemotely)
-                    _isLocal = false;
+                    Local = false;
 
             }
             else if (viewModel is WizardTrinityServerFolderViewModel)
@@ -98,9 +151,34 @@ namespace TrinityCore_Manager.ViewModels
                 _serverPath = model.ServerFolderLocation;
 
             }
+            else if (viewModel is WizardRADetailsViewModel)
+            {
+
+                var model = (WizardRADetailsViewModel)viewModel;
+
+                _raHost = model.Host;
+                _raPort = model.Port;
+                _raUsername = model.Username;
+                _raPassword = model.Password;
+
+            }
 
 
         }
+
+        public bool Local
+        {
+            get
+            {
+                return GetValue<bool>(LocalProperty);
+            }
+            set
+            {
+                SetValue(LocalProperty, value);
+            }
+        }
+
+        public static PropertyData LocalProperty = RegisterProperty("Local", typeof(bool), true);
 
     }
 }

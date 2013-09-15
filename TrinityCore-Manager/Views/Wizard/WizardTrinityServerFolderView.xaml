@@ -15,15 +15,12 @@
 
     <!-- Content -->
     <catel:StackGrid>
-        <catel:StackGrid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </catel:StackGrid.RowDefinitions>
         <Button Content="Browse for Folder" x:Name="browseServerFolder" HorizontalAlignment="Left" Margin="200,104,0,-97" Grid.Row="1" VerticalAlignment="Top" Width="111" 
                 Click="browseServerFolder_Click"/>
-        <TextBox x:Name="ServerFolderTextBox" HorizontalAlignment="Left" Height="23" Grid.Row="1" Text="{Binding ServerFolderLocation, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="480" Margin="10,24,0,-23" IsEnabled="False"/>
-        
+        <TextBox x:Name="ServerFolderTextBox" HorizontalAlignment="Left" Height="23" Text="{Binding ServerFolderLocation, UpdateSourceTrigger=PropertyChanged}" TextWrapping="NoWrap" 
+                 VerticalAlignment="Top" Width="480" Margin="10,49,0,0" IsReadOnly="True"/>
+        <Label Content="TrinityCore Server Folder" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top"/>
+
 
     </catel:StackGrid>
 </catel:UserControl>
