@@ -196,9 +196,9 @@
 				HorizontalAlignment="Left" Width="95">
                 <Grid>
                     <TextBlock Text="Auth Server" Foreground="White" />
-                    <Image Source="{StaticResource OffImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource InverseBoolVisibility}}" 
+                    <Image Source="{StaticResource OffImage}" Height="16" Width="16" Visibility="{Binding AuthOnline, Converter={StaticResource InverseBoolVisibility}}" 
 						HorizontalAlignment="Right"/>
-                    <Image Source="{StaticResource OnImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}" 
+                    <Image Source="{StaticResource OnImage}" Height="16" Width="16" Visibility="{Binding AuthOnline, Converter={StaticResource BoolVisibilityConverter}}" 
 						HorizontalAlignment="Right"/>
                 </Grid>
             </fluent:StatusBarItem>
