@@ -67,6 +67,9 @@
     <Reference Include="Fluent">
       <HintPath>..\Libraries\Fluent.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit">
+      <HintPath>..\packages\AvalonEdit.4.3.1.9430\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\Libraries\Ionic.Zip.dll</HintPath>
     </Reference>
@@ -204,6 +207,7 @@
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Helpers\MvvmTextEditor.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

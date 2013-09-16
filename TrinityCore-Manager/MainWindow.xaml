@@ -6,6 +6,9 @@
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:helpers="clr-namespace:TrinityCore_Manager.Helpers"
         x:Class="TrinityCore_Manager.MainWindow2"
         Title="TrinityCore Manager v3.0" Height="744" Width="1137">
 
@@ -25,19 +28,26 @@
     </i:Interaction.Behaviors>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <fluent:Ribbon>
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup1" Header="Server Panel" Width="200">
                     <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
-							Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" />
+						Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" />
                     <fluent:Button Header="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
-							Command="{Binding StopServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" />
+						Command="{Binding StopServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" />
                     <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" />
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="361">
-                    <fluent:TextBox InputWidth="230" BorderThickness="0" Margin="0" Height="83"/>
-                    <fluent:Button Header="Execute Command" BorderThickness="0" Padding="0" Margin="-10,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle"/>
+                    <fluent:TextBox x:Name="ExecCommandTextBox" InputWidth="230" BorderThickness="0" Margin="0" Height="83" 
+                                    Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="ExecCommandTextBox_KeyDown"/>
+                    <fluent:Button x:Name="ExecCommandButton" Header="Execute Command" BorderThickness="0" Padding="0" Margin="-10,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle"
+                                   Command="{Binding ExecuteConsoleCommand}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
@@ -130,8 +140,8 @@
                 <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="250">
                     <!--<fluent:Button Header="Platform" Width="51" />-->
                     <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="0,30,0,0" IsEditable="False" Header="Platform">
-                        <ComboBoxItem>x86</ComboBoxItem>
-                        <ComboBoxItem>x64</ComboBoxItem>
+                        <ComboBoxItem Content="x86"/>
+                        <ComboBoxItem Content="x64"/>
                     </fluent:ComboBox>
                     <fluent:Button Header="Compile And Replace TC" Margin="0,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle" />
                 </fluent:RibbonGroupBox>
@@ -164,35 +174,46 @@
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
 
+        <TabControl Grid.Row="1" Margin="1">
+
+            <TabItem Header="Console">
+
+                <helpers:MvvmTextEditor Text="{Binding ConsoleText, UpdateSourceTrigger=PropertyChanged}" ScrollViewer.CanContentScroll="True" 
+                                        ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+
+            </TabItem>
+
+        </TabControl>
+
         <fluent:StatusBar HorizontalAlignment="Stretch"
-                          VerticalAlignment="Bottom"
-                          Grid.Row="2">
+			VerticalAlignment="Bottom"
+			Grid.Row="2">
             <fluent:StatusBarItem Title="Auth Server"
-                                  Value="150"
-                                  HorizontalAlignment="Left" Width="95">
+				Value="150"
+				HorizontalAlignment="Left" Width="95">
                 <Grid>
                     <TextBlock Text="Auth Server" Foreground="White" />
                     <Image Source="{StaticResource OffImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource InverseBoolVisibility}}" 
-                           HorizontalAlignment="Right"/>
+						HorizontalAlignment="Right"/>
                     <Image Source="{StaticResource OnImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}" 
-                           HorizontalAlignment="Right"/>
+						HorizontalAlignment="Right"/>
                 </Grid>
             </fluent:StatusBarItem>
             <Separator HorizontalAlignment="Left" />
             <fluent:StatusBarItem Title="World Server"
-                                  Value="150"
-                                  HorizontalAlignment="Left" Width="95">
+				Value="150"
+				HorizontalAlignment="Left" Width="95">
                 <Grid>
                     <TextBlock Text="World Server" Foreground="White" />
                     <Image Source="{StaticResource OffImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource InverseBoolVisibility}}"
-                           HorizontalAlignment="Right"/>
+						HorizontalAlignment="Right"/>
                     <Image Source="{StaticResource OnImage}" Height="16" Width="16" Visibility="{Binding WorldOnline, Converter={StaticResource BoolVisibilityConverter}}"
-                           HorizontalAlignment="Right"/>
+						HorizontalAlignment="Right"/>
                 </Grid>
             </fluent:StatusBarItem>
             <Separator HorizontalAlignment="Left" />
             <fluent:StatusBarItem Title="NextBackup"
-                                  HorizontalAlignment="Right" Visibility="{Binding BackupCountingDown, Converter={StaticResource BoolVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+				HorizontalAlignment="Right" Visibility="{Binding BackupCountingDown, Converter={StaticResource BoolVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <TextBlock Text="{Binding BackupText}"/>
             </fluent:StatusBarItem>
         </fluent:StatusBar>

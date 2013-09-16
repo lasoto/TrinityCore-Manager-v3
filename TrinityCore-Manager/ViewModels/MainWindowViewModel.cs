@@ -228,6 +228,13 @@ namespace TrinityCore_Manager.ViewModels
             authClient.ClientExited += authClient_ClientExited;
             worldClient.ClientExited += worldClient_ClientExited;
 
+            worldClient.DataReceived += worldClient_DataReceived;
+
+        }
+
+        void worldClient_DataReceived(object sender, ClientReceivedDataEventArgs e)
+        {
+            ConsoleText += e.Data + Environment.NewLine;
         }
 
         private void StopServer()
@@ -265,10 +272,10 @@ namespace TrinityCore_Manager.ViewModels
         private async void ExecConsoleCommand()
         {
 
-            ConsoleCommand = String.Empty;
-
             if (TCManager.Instance.Online)
                 await TCAction.ExecuteCommand(ConsoleCommand);
+
+            ConsoleCommand = String.Empty;
 
         }
 
@@ -355,6 +362,20 @@ namespace TrinityCore_Manager.ViewModels
         }
 
         public static readonly PropertyData BackupTextProperty = RegisterProperty("BackupText", typeof(string));
+
+        public string ConsoleText
+        {
+            get
+            {
+                return GetValue<string>(ConsoleTextProperty);
+            }
+            set
+            {
+                SetValue(ConsoleTextProperty, value);
+            }
+        }
+
+        public static readonly PropertyData ConsoleTextProperty = RegisterProperty("ConsoleText", typeof(string));
 
     }
 }
