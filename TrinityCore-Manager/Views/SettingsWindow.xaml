@@ -1,0 +1,20 @@
+﻿<Window x:Class="TrinityCore_Manager.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        xmlns:catel="http://catel.codeplex.com"
+        Title="SettingsWindow" Height="182" Width="358">
+
+    <i:Interaction.Behaviors>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:SettingsViewModel}"/>
+    </i:Interaction.Behaviors>
+
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="131,55,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Themes}" SelectedValue="{Binding SelectedTheme}"/>
+        <Label Content="Theme" HorizontalAlignment="Left" Margin="80,54,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="265,121,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OkCommand}"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CancelCommand}"/>
+
+    </Grid>
+</Window>

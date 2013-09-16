@@ -49,6 +49,9 @@
                     <fluent:Button x:Name="ExecCommandButton" Header="Execute Command" BorderThickness="0" Padding="0" Margin="-10,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle"
                                    Command="{Binding ExecuteConsoleCommand}"/>
                 </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="TCM Settings" Width="86" HorizontalAlignment="Right">
+                    <fluent:Button Header="Edit" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="76" HorizontalContentAlignment="Center" Command="{Binding EditSettingsCommand}"/>
+                </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Account Management" IsSelected="True">

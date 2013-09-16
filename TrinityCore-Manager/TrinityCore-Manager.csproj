@@ -218,6 +218,7 @@
     <Compile Include="Misc\ServerType.cs" />
     <Compile Include="Misc\VisualStudio.cs" />
     <Compile Include="Misc\WoWItem.cs" />
+    <Compile Include="Models\SettingsModel.cs" />
     <Compile Include="Models\WizardModel.cs" />
     <Compile Include="Models\WizardSelectDatabaseModel.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -235,8 +236,12 @@
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <Compile Include="ViewModels\AccountsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\SetupWizardViewModel.cs" />
     <Compile Include="ViewModels\WizardSelectDatabaseViewModel.cs" />
+    <Compile Include="Views\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SetupWizard.xaml.cs">
       <DependentUpon>SetupWizard.xaml</DependentUpon>
     </Compile>
@@ -259,6 +264,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

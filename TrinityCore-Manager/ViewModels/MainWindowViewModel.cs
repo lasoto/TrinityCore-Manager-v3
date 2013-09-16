@@ -34,6 +34,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command StopServerCommand { get; private set; }
 
+        public Command EditSettingsCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -44,9 +46,70 @@ namespace TrinityCore_Manager.ViewModels
             ExecuteConsoleCommand = new Command(ExecConsoleCommand);
             StartServerCommand = new Command(StartServer);
             StopServerCommand = new Command(StopServer);
+            EditSettingsCommand = new Command(EditSettings);
 
             CheckSettings();
             InitBackupTimer();
+
+            Application.Current.Exit += Current_Exit;
+
+        }
+
+        private void EditSettings()
+        {
+
+            var sm = new SettingsModel();
+            sm.Themes.Add("Silver");
+            sm.Themes.Add("Blue");
+            sm.Themes.Add("Black");
+
+            _uiVisualizerService.ShowDialog(new SettingsViewModel(sm), (sender, e) =>
+            {
+
+                if (e.Result.HasValue && e.Result.Value)
+                {
+
+                    Application.Current.Resources.BeginInit();
+                    Application.Current.Resources.MergedDictionaries.RemoveAt(1);
+
+                    switch (sm.SelectedTheme.ToLower())
+                    {
+
+                        case "silver":
+
+                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Silver.xaml") });
+
+                            break;
+
+                        case "blue":
+
+                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Blue.xaml") });
+
+                            break;
+
+                        case "black":
+
+                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
+
+                            break;
+
+                    }
+
+                    Application.Current.Resources.EndInit();
+
+                }
+
+            });
+
+        }
+
+        void Current_Exit(object sender, ExitEventArgs e)
+        {
+
+            var inst = TCManager.Instance;
+
+            if (inst.AuthClient != null && inst.WorldClient != null && (inst.AuthClient.IsOnline || inst.WorldClient.IsOnline))
+                StopServer();
 
         }
 
@@ -211,6 +274,8 @@ namespace TrinityCore_Manager.ViewModels
 
                 }
             }
+
+            ConsoleText = String.Empty;
 
             var authClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "authserver.exe"));
             var worldClient = new LocalClient(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe"));
