@@ -53,8 +53,7 @@
                             <Button Content="Browse for Folder" x:Name="browseServerFolder" HorizontalAlignment="Left" Margin="200,104,0,-97" VerticalAlignment="Top" Width="111" 
                                 Click="browseServerFolder_Click"/>
                             <TextBox x:Name="ServerFolderTextBox" HorizontalAlignment="Left" Height="23" Text="{Binding ServerFolderLocation, UpdateSourceTrigger=PropertyChanged}" 
-                                     TextWrapping="NoWrap" 
-                                VerticalAlignment="Top" Width="480" Margin="10,49,0,0" IsReadOnly="True"/>
+                                     TextWrapping="NoWrap" VerticalAlignment="Top" Width="480" Margin="10,49,0,0" />
                             <Label Content="TrinityCore Server Folder" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top"/>
                         </Grid>
                     </StackPanel>

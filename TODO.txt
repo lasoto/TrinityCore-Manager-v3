@@ -13,3 +13,4 @@
 - Fix the WoWItem class exception when using the search item form
 - Figure out why the console stops logging the worldserver's actions (on W7 (?only?)) after a short period of time
 - Create log folder for crash dumps, so that users can send us crash dumps (via Bug Report form) with respective crash info attached and/or copy/pasted.
+- Add a AutoComplete library (or write class yourself) for textboxes ('needed' for server folder textbox in setup wizard)
