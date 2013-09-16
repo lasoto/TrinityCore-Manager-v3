@@ -274,15 +274,12 @@ namespace TrinityCore_Manager.ViewModels
                 settings.ServerType = (int)ServerType.RemoteAccess;
                 settings.RAUsername = Username;
                 settings.RAPassword = Password.ToSecureString().EncryptString(Encoding.Unicode.GetBytes(salt));
-
                 settings.RAHost = Host;
                 settings.RAPort = Port;
             }
 
             settings.Save();
-
-            this.SaveAndCloseViewModel();
-
+            SaveAndCloseViewModel();
         }
 
         [Model]

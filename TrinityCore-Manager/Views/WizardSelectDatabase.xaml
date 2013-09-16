@@ -4,7 +4,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         xmlns:catel="http://catel.codeplex.com"
-        Title="WizardSelectDatabase" Height="326" Width="323">
+        Title="Select a database" Height="326" Width="323">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:WizardSelectDatabaseViewModel}"/>
