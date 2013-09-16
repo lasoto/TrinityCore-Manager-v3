@@ -113,6 +113,12 @@ namespace TrinityCore_Manager.ViewModels
 
                 if (page == "connectoptionpage")
                 {
+                    if (!ConnectLocally && !ConnectRemotely)
+                    {
+                        _messageService.ShowError("You must choose one of the options! If you're not sure, choose 'Locally'.");
+                        e.Cancel = true;
+                        return;
+                    }
                 }
                 else if (page == "trinityinfo")
                 {
