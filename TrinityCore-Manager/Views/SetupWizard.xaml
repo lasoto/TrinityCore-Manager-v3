@@ -8,7 +8,7 @@
         xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
         xmlns:helpers="clr-namespace:TrinityCore_Manager.Helpers"
         x:Class="TrinityCore_Manager.Views.SetupWizard"
-        Title="Setup Wizard" Height="436" Width="689" ResizeMode="CanMinimize, NoResize">
+        Title="Setup Wizard" Height="443" Width="695" ResizeMode="CanMinimize, NoResize">
 
     <i:Interaction.Behaviors>
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:SetupWizardViewModel}"/>
