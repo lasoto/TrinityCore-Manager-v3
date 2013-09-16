@@ -6,7 +6,7 @@
         xmlns:catel="http://catel.codeplex.com"
         xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
         xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="TrinityCore_Manager.MainWindow2"
+        x:Class="TrinityCore_Manager.MainWindow2"
         Title="TrinityCore Manager v3.0" Height="744" Width="1137">
 
     <fluent:RibbonWindow.Resources>
@@ -34,131 +34,131 @@
                 <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" />
             </fluent:RibbonGroupBox>
 
-            <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="307">
+            <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="361">
                 <fluent:TextBox InputWidth="230" BorderThickness="0" Margin="0" Height="83"/>
-                <fluent:Button Header="Execute Command" Width="59" Height="66" BorderThickness="0" Padding="0" Margin="0,-11,0,0"/>
+                <fluent:Button Header="Execute Command" BorderThickness="0" Padding="0" Margin="-10,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle"/>
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Account Management" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup4" Header="Account Editing" Width="154">
-                <fluent:Button Header="Add Account" Width="75" Height="85"/>
-                <fluent:Button Header="Edit Account" Width="75" Height="85"/>
+                <fluent:Button Header="Add Account" Width="75"/>
+                <fluent:Button Header="Edit Account" Width="75"/>
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup5" Header="Account Banning" Width="154">
-                <fluent:Button Header="Ban Account" Width="75" Height="85"/>
-                <fluent:Button Header="Unban Account" Width="75" Height="85"/>
+                <fluent:Button Header="Ban Account" Width="75"/>
+                <fluent:Button Header="Unban Account" Width="75"/>
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup6" Header="IP Banning" Width="154">
-                <fluent:Button Header="Ban IP" Width="75" Height="85"/>
-                <fluent:Button Header="Unban IP" Width="75" Height="85"/>
+                <fluent:Button Header="Ban IP" Width="75"/>
+                <fluent:Button Header="Unban IP" Width="75"/>
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup7" Header="Account Clean-Up" Width="105">
-                <fluent:Button Header="Database Account Clean-Up" Width="105" Height="85"/>
+                <fluent:Button Header="Database Account Clean-Up" Width="105"/>
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Character Management" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup8" Header="Character Selecting" Width="154">
-                <fluent:Button Header="Select a character" Width="102" Height="85"/>
+                <fluent:Button Header="Select a character" Width="102"/>
             </fluent:RibbonGroupBox>
 
-            <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="973">
-                <fluent:Button Header="Revive Player" Width="44" Height="85"/>
-                <fluent:Button Header="Force Rename" Width="57" Height="85"/>
-                <fluent:Button Header="Ban Character" Width="63" Height="85"/>
-                <fluent:Button Header="Request Character Customization" Width="99" Height="85"/>
-                <fluent:Button Header="Request Race Change" Width="76" Height="85"/>
-                <fluent:Button Header="Request Faction Change" Width="93" Height="85"/>
-                <fluent:Button Header="Show Player Information" Width="73" Height="85"/>
-                <fluent:Button Header="Set Level" Width="42" Height="85"/>
-                <fluent:Button Header="Set Reputation" Width="71" Height="85"/>
-                <fluent:Button Header="Set Skill Level" Width="52" Height="85"/>
-                <fluent:Button Header="Remove Resurrection Sickness" Width="70" Height="85"/>
-                <fluent:Button Header="Delete character" Width="63" Height="85"/>
+            <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="960">
+                <fluent:Button Header="Revive Player" Width="44"/>
+                <fluent:Button Header="Force Rename" Width="57"/>
+                <fluent:Button Header="Ban Character" Width="63"/>
+                <fluent:Button Header="Request Character Customization" Width="99"/>
+                <fluent:Button Header="Request Race Change" Width="76"/>
+                <fluent:Button Header="Request Faction Change" Width="93"/>
+                <fluent:Button Header="Show Player Information" Width="73"/>
+                <fluent:Button Header="Set Level" Width="42"/>
+                <fluent:Button Header="Set Reputation" Width="71"/>
+                <fluent:Button Header="Set Skill Level" Width="52"/>
+                <fluent:Button Header="Remove Resurrection Sickness" Width="70"/>
+                <fluent:Button Header="Delete character" Width="63"/>
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Database Management" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup10" Header="Backup / Restore" Width="207">
-                <fluent:Button Header="Backup Database" Width="102" Height="85"/>
-                <fluent:Button Header="Restore Database" Width="102" Height="85"/>
+                <fluent:Button Header="Backup Database" Width="102"/>
+                <fluent:Button Header="Restore Database" Width="102"/>
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup11" Header="Cleanup" Width="100">
-                <fluent:Button Header="Clean World" Width="100" Height="85"/>
+                <fluent:Button Header="Clean World" Width="100"/>
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Create / Edit" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup12" Header="Items" Width="100">
-                <fluent:Button Header="Create" Width="50" Height="85"/>
-                <fluent:Button Header="Edit" Width="50" Height="85"/>
+                <fluent:Button Header="Create" Width="50" />
+                <fluent:Button Header="Edit" Width="50" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup13" Header="NPCs" Width="100">
-                <fluent:Button Header="Create" Width="50" Height="85"/>
-                <fluent:Button Header="Edit" Width="50" Height="85"/>
+                <fluent:Button Header="Create" Width="50" />
+                <fluent:Button Header="Edit" Width="50" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup14" Header="Vendors" Width="100">
-                <fluent:Button Header="Create" Width="50" Height="85"/>
-                <fluent:Button Header="Edit" Width="50" Height="85"/>
+                <fluent:Button Header="Create" Width="50" />
+                <fluent:Button Header="Edit" Width="50" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup15" Header="Search for ID's" Width="100">
-                <fluent:Button Header="Create" Width="50" Height="85"/>
-                <fluent:Button Header="Edit" Width="50" Height="85"/>
+                <fluent:Button Header="Create" Width="50" />
+                <fluent:Button Header="Edit" Width="50" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup16" Header="SmartAI" Width="100">
-                <fluent:Button Header="Create" Width="50" Height="85"/>
-                <fluent:Button Header="Edit" Width="50" Height="85"/>
+                <fluent:Button Header="Create" Width="50" />
+                <fluent:Button Header="Edit" Width="50" />
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Compile" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup17" Header="Trinity Core Panel" Width="132">
-                <fluent:Button Header="Set Trunk Location" Width="63" Height="85"/>
-                <fluent:Button Header="Download / Update" Width="59" Height="85"/>
+                <fluent:Button Header="Set Trunk Location" Width="63" />
+                <fluent:Button Header="Download / Update" Width="59" />
             </fluent:RibbonGroupBox>
 
-            <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="181">
-                <fluent:Button Header="Platform" Width="51" Height="85"/>
-                <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Height="85" Width="52">
-                    <System:String>x86</System:String>
-                    <System:String>x64</System:String>
+            <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="250">
+                <!--<fluent:Button Header="Platform" Width="51" />-->
+                <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="0,30,0,0" IsEditable="False" Header="Platform">
+                    <ComboBoxItem>x86</ComboBoxItem>
+                    <ComboBoxItem>x64</ComboBoxItem>
                 </fluent:ComboBox>
-                <fluent:Button Header="Compile And Replace TC" Width="73" Height="85"/>
+                <fluent:Button Header="Compile And Replace TC" Margin="0,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle" />
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
 
         <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Other" IsSelected="True">
             <fluent:RibbonGroupBox x:Name="SMGroup19" Header="Mail" Width="67">
-                <fluent:Button Header="Send Mail" Width="63" Height="85"/>
+                <fluent:Button Header="Send Mail" Width="63" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup20" Header="Guild" Width="156">
-                <fluent:Button Header="Create Guild" Width="51" Height="85"/>
-                <fluent:Button Header="Edit Guild" Width="51" Height="85"/>
-                <fluent:Button Header="Delete Guild" Width="51" Height="85"/>
+                <fluent:Button Header="Create Guild" Width="51" />
+                <fluent:Button Header="Edit Guild" Width="51" />
+                <fluent:Button Header="Delete Guild" Width="51" />
             </fluent:RibbonGroupBox>
 
             <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="167">
-                <fluent:Button Header="Event Active List" Width="56" Height="85"/>
-                <fluent:Button Header="Start Event" Width="57" Height="85"/>
-                <fluent:Button Header="Stop Event" Width="51" Height="85"/>
+                <fluent:Button Header="Event Active List" Width="56" />
+                <fluent:Button Header="Start Event" Width="57" />
+                <fluent:Button Header="Stop Event" Width="51" />
             </fluent:RibbonGroupBox>
 
-            <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="612">
-                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
-                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
-                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Padding="0" Size="Middle"/>
+            <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="680">
+                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Padding="0"/>
+                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Padding="0"/>
+                <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Padding="0"/>
                 <fluent:TextBox InputWidth="400" BorderThickness="0" Margin="0" Height="83"/>
-                <fluent:Button Header="Send Message" Width="59" Height="68" BorderThickness="0" Padding="0" Margin="0,-11,0,0"/>
+                <fluent:Button Header="Send Message" BorderThickness="0" Padding="0" Margin="0,30,0,0" fluent:RibbonAttachedProperties.RibbonSize="Middle"/>
             </fluent:RibbonGroupBox>
         </fluent:RibbonTabItem>
     </fluent:Ribbon>
