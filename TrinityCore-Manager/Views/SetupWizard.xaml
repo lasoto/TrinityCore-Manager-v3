@@ -23,7 +23,6 @@
     <Grid>
 
         <xctk:Wizard HorizontalAlignment="Left" x:Name="setupWizard" VerticalAlignment="Top" Height="405" Width="681" FinishButtonClosesWindow="False">
-
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Next">
                     <catel:EventToCommand Command="{Binding Next}" DisableAssociatedObjectOnCannotExecute="False" PassEventArgsToCommand="True" />
@@ -95,18 +94,18 @@
             </xctk:WizardPage>
             <xctk:WizardPage x:Name="DatabaseSelection" Title="Select Existing TrinityCore Databases" Description="Select the existing database for each type" PageType="Interior">
                 <Grid Margin="0,-49,0,49">
-                    <Label Content="Auth Db" HorizontalAlignment="Left" Margin="236,135,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="295,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" 
-                             Text="{Binding SelectedAuthDB, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Label Content="Characters Db" HorizontalAlignment="Left" Margin="205,175,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="295,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"
-                             Text="{Binding SelectedCharDB, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Label Content="World Db" HorizontalAlignment="Left" Margin="229,212,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="295,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"
-                             Text="{Binding SelectedWorldDB, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="..." HorizontalAlignment="Left" Margin="420,140,0,0" VerticalAlignment="Top" Width="33" Command="{Binding AuthDB}"/>
-                    <Button Content="..." HorizontalAlignment="Left" Margin="420,175,0,0" VerticalAlignment="Top" Width="33" Command="{Binding CharDB}"/>
-                    <Button Content="..." HorizontalAlignment="Left" Margin="420,212,0,0" VerticalAlignment="Top" Width="33" Command="{Binding WorldDB}"/>
+                    <Label Content="Auth Database" HorizontalAlignment="Left" Margin="236,135,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="325,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" IsReadOnly="True" Text="{Binding SelectedAuthDB, UpdateSourceTrigger=PropertyChanged}"/>
+                    
+                    <Label Content="Characters Database" HorizontalAlignment="Left" Margin="205,175,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="325,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" IsReadOnly="True" Text="{Binding SelectedCharDB, UpdateSourceTrigger=PropertyChanged}"/>
+                    
+                    <Label Content="World Database" HorizontalAlignment="Left" Margin="229,212,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="325,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" IsReadOnly="True" Text="{Binding SelectedWorldDB, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <Button Content="..." HorizontalAlignment="Left" Margin="490,135,0,0" VerticalAlignment="Top" Width="24" Height="25" Command="{Binding AuthDB}"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="490,175,0,0" VerticalAlignment="Top" Width="24" Height="25" Command="{Binding CharDB}"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="490,212,0,0" VerticalAlignment="Top" Width="24" Height="25" Command="{Binding WorldDB}"/>
                 </Grid>
             </xctk:WizardPage>
             <xctk:WizardPage x:Name="FinishPage" Title="Finished!" Description="You have succesfully setup TrinityCore Manager! Awesome." CanFinish="True">
