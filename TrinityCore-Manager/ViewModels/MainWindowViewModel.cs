@@ -6,10 +6,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using Catel.Data;
 using Catel.MVVM;
 using Catel.MVVM.Services;
 using TrinityCore_Manager.Clients;
+using TrinityCore_Manager.Extensions;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Models;
 using TrinityCore_Manager.Properties;
@@ -24,9 +26,13 @@ namespace TrinityCore_Manager.ViewModels
         private readonly IPleaseWaitService _pleaseWaitService;
         private readonly IMessageService _messageService;
 
+        private DispatcherTimer _backupTimer;
+
         public Command ExecuteConsoleCommand { get; private set; }
 
         public Command StartServerCommand { get; private set; }
+
+        public Command StopServerCommand { get; private set; }
 
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
@@ -37,8 +43,53 @@ namespace TrinityCore_Manager.ViewModels
 
             ExecuteConsoleCommand = new Command(ExecConsoleCommand);
             StartServerCommand = new Command(StartServer);
+            StopServerCommand = new Command(StopServer);
 
             CheckSettings();
+            InitBackupTimer();
+
+        }
+
+        private void InitBackupTimer()
+        {
+
+            if (Settings.Default.BackupScheduleAuth || Settings.Default.BackupScheduleChar || Settings.Default.BackupScheduleWorld)
+            {
+
+                TCManager.Instance.ScheduleBackups();
+
+                if (_backupTimer != null)
+                {
+                    _backupTimer.Stop();
+                }
+                else
+                {
+                    _backupTimer = new DispatcherTimer();
+                }
+
+
+                _backupTimer.Tick += backupTimer_Tick;
+                _backupTimer.Interval = new TimeSpan(0, 0, 1);
+                _backupTimer.Start();
+
+                BackupCountingDown = true;
+
+            }
+            else
+            {
+                BackupCountingDown = false;
+            }
+
+        }
+
+        private void backupTimer_Tick(object sender, EventArgs e)
+        {
+
+            DateTimeOffset dto = TCManager.Instance.BackupNext;
+
+            TimeSpan ts = dto - DateTime.Now;
+
+            BackupText = String.Format("Next backup: {0}", ts.ToReadableString());
 
         }
 
@@ -176,6 +227,26 @@ namespace TrinityCore_Manager.ViewModels
 
             authClient.ClientExited += authClient_ClientExited;
             worldClient.ClientExited += worldClient_ClientExited;
+
+        }
+
+        private void StopServer()
+        {
+
+            var inst = TCManager.Instance;
+
+            var authClient = inst.AuthClient;
+            var worldClient = inst.WorldClient;
+
+            if (authClient == null)
+                throw new NullReferenceException("authClient");
+
+            if (worldClient == null)
+                throw new NullReferenceException("worldClient");
+
+
+            authClient.Stop();
+            worldClient.Stop();
 
         }
 
