@@ -31,23 +31,25 @@ namespace TrinityCore_Manager.Views
 
             var showDialog = dialog.ShowDialog();
 
-            if (showDialog.HasValue)
+            if (showDialog.HasValue && showDialog.Value)
             {
-                if (showDialog.Value)
+            NoDebugOrReleaseFolder:
+                if (!(dialog.SelectedPath.IndexOf("debug", StringComparison.OrdinalIgnoreCase) >= 0 || dialog.SelectedPath.IndexOf("release", StringComparison.OrdinalIgnoreCase) >= 0))
                 {
-                    if (!(dialog.SelectedPath.IndexOf("debug", StringComparison.OrdinalIgnoreCase) >= 0 || dialog.SelectedPath.IndexOf("release", StringComparison.OrdinalIgnoreCase) >= 0))
+                    MessageBoxResult result = MessageBox.Show("The selected folder should contain the authserver.exe and worldserver.exe executables and are most of the time placed inside the 'debug' or 'release' folder. Do you still wish to continue?", "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                    if (result != MessageBoxResult.Yes)
                     {
-                        MessageBoxResult result = MessageBox.Show("The selected folder should contain the authserver.exe and worldserver.exe executables and are most of the time placed inside the 'debug' or 'release' folder. Do you still wish to continue?", "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        var showDialog2 = dialog.ShowDialog();
 
-                        if (result != MessageBoxResult.Yes)
-                        {
-                            dialog.ShowDialog();
-                            return;
-                        }
+                        if (showDialog2.HasValue && showDialog2.Value)
+                            goto NoDebugOrReleaseFolder;
+
+                        return;
                     }
-
-                    ServerFolderTextBox.SetValue(TextBox.TextProperty, dialog.SelectedPath);
                 }
+
+                ServerFolderTextBox.SetValue(TextBox.TextProperty, dialog.SelectedPath);
             }
         }
     }
