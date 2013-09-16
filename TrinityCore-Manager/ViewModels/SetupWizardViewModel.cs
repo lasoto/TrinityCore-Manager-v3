@@ -141,7 +141,7 @@ namespace TrinityCore_Manager.ViewModels
                     else
                     {
 
-                        if (string.IsNullOrEmpty(Host) || string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+                        if (string.IsNullOrEmpty(Host) || string.IsNullOrEmpty(Username))
                         {
 
                             _messageService.ShowError("All fields must be filled out!");
@@ -158,7 +158,7 @@ namespace TrinityCore_Manager.ViewModels
                 else if (page == "mysqldetails")
                 {
 
-                    if (string.IsNullOrEmpty(MySQLHost) || string.IsNullOrEmpty(MySQLUsername) || string.IsNullOrEmpty(MySQLPassword))
+                    if (string.IsNullOrEmpty(MySQLHost) || string.IsNullOrEmpty(MySQLUsername))
                     {
 
                         _messageService.ShowError("All fields must be filled out!");
