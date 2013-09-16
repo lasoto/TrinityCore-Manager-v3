@@ -33,12 +33,21 @@ namespace TrinityCore_Manager.Views
 
             if (showDialog.HasValue)
             {
-
                 if (showDialog.Value)
                 {
+                    if (!(dialog.SelectedPath.IndexOf("debug", StringComparison.OrdinalIgnoreCase) >= 0 || dialog.SelectedPath.IndexOf("release", StringComparison.OrdinalIgnoreCase) >= 0))
+                    {
+                        MessageBoxResult result = MessageBox.Show("The selected folder should contain the authserver.exe and worldserver.exe executables and are most of the time placed inside the 'debug' or 'release' folder. Do you still wish to continue?", "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                        if (result != MessageBoxResult.Yes)
+                        {
+                            dialog.ShowDialog();
+                            return;
+                        }
+                    }
+
                     ServerFolderTextBox.SetValue(TextBox.TextProperty, dialog.SelectedPath);
                 }
-
             }
         }
     }
