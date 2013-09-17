@@ -24,11 +24,12 @@ namespace TrinityCore_Manager.ViewModels
 
             OkCommand = new Command(ExecuteOk);
             CancelCommand = new Command(ExecuteCancel);
-
         }
 
         private void ExecuteOk()
         {
+            Properties.Settings.Default.ColorTheme = Convert.ToInt32(SelectedTheme);
+            Properties.Settings.Default.Save();
             SaveAndCloseViewModel();
         }
 

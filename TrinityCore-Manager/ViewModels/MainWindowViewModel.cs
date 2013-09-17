@@ -53,6 +53,7 @@ namespace TrinityCore_Manager.ViewModels
 
             Application.Current.Exit += Current_Exit;
 
+            SetColorTheme(Properties.Settings.Default.ColorTheme.ToString());
         }
 
         private void EditSettings()
@@ -71,36 +72,29 @@ namespace TrinityCore_Manager.ViewModels
 
                     Application.Current.Resources.BeginInit();
                     Application.Current.Resources.MergedDictionaries.RemoveAt(1);
-
-                    switch (sm.SelectedTheme.ToLower())
-                    {
-
-                        case "silver":
-
-                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Silver.xaml") });
-
-                            break;
-
-                        case "blue":
-
-                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Blue.xaml") });
-
-                            break;
-
-                        case "black":
-
-                            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
-
-                            break;
-
-                    }
-
+                    SetColorTheme(sm.SelectedTheme.ToLower());
                     Application.Current.Resources.EndInit();
 
                 }
 
             });
 
+        }
+
+        private void SetColorTheme(string colorTheme)
+        {
+            switch (colorTheme)
+            {
+                case "silver":
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Silver.xaml") });
+                    break;
+                case "blue":
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Blue.xaml") });
+                    break;
+                case "black":
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
+                    break;
+            }
         }
 
         void Current_Exit(object sender, ExitEventArgs e)

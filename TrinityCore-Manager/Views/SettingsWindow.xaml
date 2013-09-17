@@ -11,7 +11,7 @@
     </i:Interaction.Behaviors>
 
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="131,55,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Themes}" SelectedValue="{Binding SelectedTheme}"/>
+        <ComboBox x:Name="comboBoxTheme" HorizontalAlignment="Left" Margin="131,55,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Themes}" SelectedValue="{Binding SelectedTheme}"/>
         <Label Content="Theme" HorizontalAlignment="Left" Margin="80,54,0,0" VerticalAlignment="Top"/>
         <Button Content="Ok" HorizontalAlignment="Left" Margin="265,121,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OkCommand}"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CancelCommand}"/>
