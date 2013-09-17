@@ -58,22 +58,17 @@ namespace TrinityCore_Manager.ViewModels
 
         private void EditSettings()
         {
-
             var sm = new SettingsModel();
             sm.SelectedTheme = Settings.Default.ColorTheme;
 
+            sm.Themes.Add("Black");
             sm.Themes.Add("Silver");
             sm.Themes.Add("Blue");
-            sm.Themes.Add("Black");
 
             _uiVisualizerService.ShowDialog(new SettingsViewModel(sm), (sender, e) =>
             {
-
                 if (e.Result.HasValue && e.Result.Value)
-                {
                     SetColorTheme(sm.SelectedTheme);
-                }
-
             });
 
         }
@@ -86,14 +81,14 @@ namespace TrinityCore_Manager.ViewModels
 
             switch (colorTheme.ToLower())
             {
+                case "black":
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
+                    break;
                 case "silver":
                     Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Silver.xaml") });
                     break;
                 case "blue":
                     Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Blue.xaml") });
-                    break;
-                case "black":
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
                     break;
             }
 

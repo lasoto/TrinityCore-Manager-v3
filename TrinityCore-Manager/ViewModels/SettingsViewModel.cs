@@ -82,7 +82,7 @@ namespace TrinityCore_Manager.ViewModels
             }
         }
 
-        public static readonly PropertyData SelectedThemeProperty = RegisterProperty("SelectedTheme", typeof(string), "silver");
+        public static readonly PropertyData SelectedThemeProperty = RegisterProperty("SelectedTheme", typeof(string), "black");
 
     }
 }
