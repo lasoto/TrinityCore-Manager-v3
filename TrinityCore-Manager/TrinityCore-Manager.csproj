@@ -350,7 +350,96 @@
   <ItemGroup>
     <Resource Include="Resources\open.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\unlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\clean.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\person.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\angel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\customize.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\change.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\flag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\skill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\heart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\deletechar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\backupdb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\restoredb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\location.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\compile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\execute.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\list.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\greenpin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\redpin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\message.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <PropertyGroup>
