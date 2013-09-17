@@ -28,7 +28,7 @@ namespace TrinityCore_Manager.ViewModels
 
         private void ExecuteOk()
         {
-            Properties.Settings.Default.ColorTheme = Convert.ToInt32(SelectedTheme);
+            Properties.Settings.Default.ColorTheme = SelectedTheme;
             Properties.Settings.Default.Save();
             SaveAndCloseViewModel();
         }

@@ -51,15 +51,17 @@ namespace TrinityCore_Manager.ViewModels
             CheckSettings();
             InitBackupTimer();
 
-            Application.Current.Exit += Current_Exit;
+            SetColorTheme(Settings.Default.ColorTheme);
 
-            SetColorTheme(Properties.Settings.Default.ColorTheme.ToString());
+            Application.Current.Exit += Current_Exit;
         }
 
         private void EditSettings()
         {
 
             var sm = new SettingsModel();
+            sm.SelectedTheme = Settings.Default.ColorTheme;
+
             sm.Themes.Add("Silver");
             sm.Themes.Add("Blue");
             sm.Themes.Add("Black");
@@ -69,12 +71,7 @@ namespace TrinityCore_Manager.ViewModels
 
                 if (e.Result.HasValue && e.Result.Value)
                 {
-
-                    Application.Current.Resources.BeginInit();
-                    Application.Current.Resources.MergedDictionaries.RemoveAt(1);
-                    SetColorTheme(sm.SelectedTheme.ToLower());
-                    Application.Current.Resources.EndInit();
-
+                    SetColorTheme(sm.SelectedTheme);
                 }
 
             });
@@ -83,7 +80,11 @@ namespace TrinityCore_Manager.ViewModels
 
         private void SetColorTheme(string colorTheme)
         {
-            switch (colorTheme)
+
+            Application.Current.Resources.BeginInit();
+            Application.Current.Resources.MergedDictionaries.RemoveAt(1);
+
+            switch (colorTheme.ToLower())
             {
                 case "silver":
                     Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Silver.xaml") });
@@ -95,6 +96,9 @@ namespace TrinityCore_Manager.ViewModels
                     Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/Fluent;component/Themes/Office2010/Black.xaml") });
                     break;
             }
+
+            Application.Current.Resources.EndInit();
+
         }
 
         void Current_Exit(object sender, ExitEventArgs e)
