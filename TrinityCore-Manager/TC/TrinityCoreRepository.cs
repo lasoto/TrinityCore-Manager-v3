@@ -28,16 +28,20 @@ namespace TrinityCore_Manager.TC
                 {
 
                     progress.Report(((double)h.ReceivedObjects / h.TotalObjects) * 100);
+                    //progress.Report(String.Format("{0}/{1}", (double)h.ReceivedObjects, (double)h.TotalObjects));
 
                     return 0;
 
                 });
 
                 var chandler = new CheckoutProgressHandler((path, completedSteps, totalSteps) =>
+                {
 
-                    progress.Report(((double)completedSteps / totalSteps) * 100)
+                    //progress.Report(String.Format("{0}/{1}", (double)completedSteps, (double)totalSteps));
 
-                );
+                    progress.Report(((double)completedSteps / totalSteps) * 100);
+
+                });
 
                 Repository.Clone(TrinityCoreGit, cloneTo, false, true, thandler, chandler);
 

@@ -15,6 +15,7 @@ using TrinityCore_Manager.Extensions;
 using TrinityCore_Manager.Misc;
 using TrinityCore_Manager.Models;
 using TrinityCore_Manager.Properties;
+using TrinityCore_Manager.TC;
 using TrinityCore_Manager.TCM;
 
 namespace TrinityCore_Manager.ViewModels
@@ -25,6 +26,10 @@ namespace TrinityCore_Manager.ViewModels
         private readonly IUIVisualizerService _uiVisualizerService;
         private readonly IPleaseWaitService _pleaseWaitService;
         private readonly IMessageService _messageService;
+        private readonly DispatcherService _dispatcherService;
+
+        private bool _isCloning;
+        private bool _isCompiling;
 
         private DispatcherTimer _backupTimer;
 
@@ -36,6 +41,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command EditSettingsCommand { get; private set; }
 
+        public Command DownloadUpdateTCCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -43,10 +50,20 @@ namespace TrinityCore_Manager.ViewModels
             _pleaseWaitService = pleaseWaitService;
             _messageService = messageService;
 
+            _dispatcherService = GetService<DispatcherService>();
+
+            Busy = false;
+
+            _isCloning = false;
+            _isCompiling = false;
+
+            BusyProgress = 0.0;
+
             ExecuteConsoleCommand = new Command(ExecConsoleCommand);
             StartServerCommand = new Command(StartServer);
             StopServerCommand = new Command(StopServer);
             EditSettingsCommand = new Command(EditSettings);
+            DownloadUpdateTCCommand = new Command(DownloadUpdateTC);
 
             CheckSettings();
             InitBackupTimer();
@@ -54,6 +71,100 @@ namespace TrinityCore_Manager.ViewModels
             SetColorTheme(Settings.Default.ColorTheme);
 
             Application.Current.Exit += Current_Exit;
+        }
+
+        private async void DownloadUpdateTC()
+        {
+
+            if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
+            {
+
+                _messageService.ShowError("Trunk Location Required");
+
+                return;
+
+            }
+
+            if (_isCloning)
+            {
+
+                _messageService.ShowError("Cloning is already in progress!");
+
+                return;
+
+            }
+
+            if (_isCompiling)
+            {
+
+                _messageService.ShowError("Currently compiling TrinityCore! Please wait until this has finished.");
+
+                return;
+
+            }
+
+            Busy = true;
+            BusyIndeterminate = true;
+
+            _isCloning = true;
+
+            if (new DirectoryInfo(Settings.Default.TrunkLocation).GetFiles().Length == 0)
+            {
+
+                var progress = new Progress<double>(prog => _dispatcherService.BeginInvoke(() =>
+                                                    {
+
+                                                        if (BusyIndeterminate)
+                                                            BusyIndeterminate = false;
+
+                                                        if (prog - BusyProgress > 1 || prog >= 99)
+                                                        {
+                                                            BusyProgress = prog;
+                                                        }
+
+                                                    }));
+
+                await TrinityCoreRepository.Clone(Settings.Default.TrunkLocation, progress).ContinueWith(task =>
+                {
+
+                    _dispatcherService.Invoke(() =>
+                    {
+
+                        _messageService.Show("Cloning has been completed!", "Success");
+
+                    });
+
+                    _isCloning = false;
+
+                });
+
+            }
+            else
+            {
+
+                BusyIndeterminate = true;
+                OutputText = String.Empty;
+
+                var progress = new Progress<string>(prog => _dispatcherService.BeginInvokeIfRequired(delegate
+                {
+                    OutputText += prog + Environment.NewLine;
+                }));
+
+                await TrinityCoreRepository.Pull(Settings.Default.TrunkLocation, progress).ContinueWith(task =>
+                {
+
+                    _dispatcherService.BeginInvokeIfRequired(() => _messageService.Show("The TrinityCore repository has been updated to the latest version.", "Success"));
+
+                    _isCloning = false;
+
+                });
+
+            }
+
+            BusyIndeterminate = false;
+            BusyProgress = 0;
+            Busy = false;
+
         }
 
         private void EditSettings()
@@ -218,12 +329,10 @@ namespace TrinityCore_Manager.ViewModels
 
             TCManager inst = TCManager.Instance;
 
-            IMessageService imsgs = GetService<IMessageService>();
-
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
             {
 
-                imsgs.ShowError(new Exception("The file authserver.exe does not exist!"));
+                _messageService.ShowError(new Exception("The file authserver.exe does not exist!"));
 
                 return;
 
@@ -232,7 +341,7 @@ namespace TrinityCore_Manager.ViewModels
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
             {
 
-                imsgs.ShowError(new Exception("The file worldserver.exe does not exist!"));
+                _messageService.ShowError(new Exception("The file worldserver.exe does not exist!"));
 
                 return;
 
@@ -243,7 +352,7 @@ namespace TrinityCore_Manager.ViewModels
                 if (inst.AuthClient.IsOnline)
                 {
 
-                    MessageResult result = imsgs.Show("Authserver is already running! Kill it?", "Kill it?", MessageButton.YesNo, MessageImage.Question);
+                    MessageResult result = _messageService.Show("Authserver is already running! Kill it?", "Kill it?", MessageButton.YesNo, MessageImage.Question);
 
                     if (result == MessageResult.No)
                         return;
@@ -258,7 +367,7 @@ namespace TrinityCore_Manager.ViewModels
                 if (inst.WorldClient.IsOnline)
                 {
 
-                    MessageResult result = imsgs.Show("Worldserver is already running! Kill it?", "Kill it?", MessageButton.YesNo, MessageImage.Question);
+                    MessageResult result = _messageService.Show("Worldserver is already running! Kill it?", "Kill it?", MessageButton.YesNo, MessageImage.Question);
 
                     if (result == MessageResult.No)
                         return;
@@ -434,6 +543,62 @@ namespace TrinityCore_Manager.ViewModels
         }
 
         public static readonly PropertyData ConsoleTextProperty = RegisterProperty("ConsoleText", typeof(string));
+
+        public string OutputText
+        {
+            get
+            {
+                return GetValue<string>(OutputTextProperty);
+            }
+            set
+            {
+                SetValue(OutputTextProperty, value);
+            }
+        }
+
+        public static readonly PropertyData OutputTextProperty = RegisterProperty("OutputText", typeof(string));
+
+        public bool Busy
+        {
+            get
+            {
+                return GetValue<bool>(BusyProperty);
+            }
+            set
+            {
+                SetValue(BusyProperty, value);
+            }
+        }
+
+        public static readonly PropertyData BusyProperty = RegisterProperty("Busy", typeof(bool));
+
+        public double BusyProgress
+        {
+            get
+            {
+                return GetValue<double>(BusyProgressProperty);
+            }
+            set
+            {
+                SetValue(BusyProgressProperty, value);
+            }
+        }
+
+        public static readonly PropertyData BusyProgressProperty = RegisterProperty("BusyProgress", typeof(double));
+
+        public bool BusyIndeterminate
+        {
+            get
+            {
+                return GetValue<bool>(BusyIndeterminateProperty);
+            }
+            set
+            {
+                SetValue(BusyIndeterminateProperty, value);
+            }
+        }
+
+        public static readonly PropertyData BusyIndeterminateProperty = RegisterProperty("BusyIndeterminate", typeof(bool));
 
     }
 }

@@ -167,8 +167,8 @@
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Compile" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup17" Header="Trinity Core Panel" Width="132">
-                    <fluent:Button Header="Set Trunk Location" Width="63" LargeIcon="{StaticResource LocationImage}" />
-                    <fluent:Button Header="Download / Update" Width="59" LargeIcon="{StaticResource DownloadImage}" />
+                    <fluent:Button Header="Set Trunk Location" x:Name="SetTrunkLocButton" Width="63" LargeIcon="{StaticResource LocationImage}" Click="SetTrunkLocButton_Click" />
+                    <fluent:Button Header="Download / Update" Width="59" LargeIcon="{StaticResource DownloadImage}" Command="{Binding DownloadUpdateTCCommand}" />
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="250">
@@ -179,6 +179,10 @@
                     </fluent:ComboBox>
                     <fluent:Button Header="Compile And Replace TC" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
                                    LargeIcon="{StaticResource CompileImage}"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Progress" Width="600" Visibility="{Binding Busy, Converter={StaticResource BoolVisibilityConverter}}">
+                    <ProgressBar HorizontalAlignment="Right" Height="30" VerticalAlignment="Center" Width="500" Value="{Binding BusyProgress}" 
+                                 IsIndeterminate="{Binding BusyIndeterminate}"></ProgressBar>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
@@ -215,6 +219,13 @@
             <TabItem Header="Console">
 
                 <helpers:MvvmTextEditor Text="{Binding ConsoleText, UpdateSourceTrigger=PropertyChanged}" ScrollViewer.CanContentScroll="True" 
+                                        ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+
+            </TabItem>
+
+            <TabItem Header="Output">
+
+                <helpers:MvvmTextEditor Text="{Binding OutputText, UpdateSourceTrigger=PropertyChanged}" ScrollViewer.CanContentScroll="True" 
                                         ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
 
             </TabItem>

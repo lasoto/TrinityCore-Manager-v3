@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Fluent;
+using Ookii.Dialogs.Wpf;
+using TrinityCore_Manager.Properties;
 
 namespace TrinityCore_Manager
 {
@@ -37,6 +39,22 @@ namespace TrinityCore_Manager
                 FocusManager.SetFocusedElement(this, ExecCommandTextBox);
                 Keyboard.Focus(ExecCommandTextBox);
             }
+        }
+
+        private void SetTrunkLocButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var dialog = new VistaFolderBrowserDialog();
+            dialog.SelectedPath = Settings.Default.TrunkLocation;
+
+            var showDialog = dialog.ShowDialog();
+
+            if (showDialog.HasValue && showDialog.Value)
+            {
+                Settings.Default.TrunkLocation = dialog.SelectedPath;
+                Settings.Default.Save();
+            }
+
         }
 
     }
