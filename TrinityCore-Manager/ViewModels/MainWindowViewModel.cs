@@ -31,6 +31,8 @@ namespace TrinityCore_Manager.ViewModels
         private bool _isCloning;
         private bool _isCompiling;
 
+        private CancellationTokenSource _compilerCts;
+
         private DispatcherTimer _backupTimer;
 
         public Command ExecuteConsoleCommand { get; private set; }
@@ -42,6 +44,8 @@ namespace TrinityCore_Manager.ViewModels
         public Command EditSettingsCommand { get; private set; }
 
         public Command DownloadUpdateTCCommand { get; private set; }
+
+        public Command CompileCommand { get; private set; }
 
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
@@ -64,6 +68,7 @@ namespace TrinityCore_Manager.ViewModels
             StopServerCommand = new Command(StopServer);
             EditSettingsCommand = new Command(EditSettings);
             DownloadUpdateTCCommand = new Command(DownloadUpdateTC);
+            CompileCommand = new Command(Compile);
 
             CheckSettings();
             InitBackupTimer();
@@ -71,6 +76,105 @@ namespace TrinityCore_Manager.ViewModels
             SetColorTheme(Settings.Default.ColorTheme);
 
             Application.Current.Exit += Current_Exit;
+        }
+
+        private async void Compile()
+        {
+
+            if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
+            {
+
+                _messageService.ShowError("You must first set the trunk location for TrinityCore!");
+
+                return;
+
+            }
+
+            if (_isCloning)
+            {
+
+                _messageService.ShowError("Cloning in progress. Please wait until this has finished!");
+
+                return;
+
+            }
+
+            if (_isCompiling)
+            {
+
+                if (_compilerCts != null)
+                    _compilerCts.Cancel();
+
+                _messageService.ShowError("Compiling has been aborted!");
+
+                return;
+
+            }
+
+            if (Busy)
+            {
+
+                _messageService.ShowError("TrinityCore Manager is currently busy. Please wait.");
+
+                return;
+
+            }
+
+            bool x64 = CompilePlatform.Equals("x64", StringComparison.OrdinalIgnoreCase);
+
+            if (x64 && !Environment.Is64BitOperatingSystem)
+            {
+
+                _messageService.ShowError("Your operating system is not 64 bit!");
+
+                return;
+
+            }
+
+            _compilerCts = new CancellationTokenSource();
+
+            OutputText = String.Empty;
+
+            var progress = new Progress<string>(prog => _dispatcherService.BeginInvoke(() =>
+            {
+                OutputText += prog + Environment.NewLine;
+            }));
+
+            Busy = true;
+            BusyIndeterminate = true;
+
+            _isCompiling = true;
+
+            string temp = FileHelper.GenerateTempDirectory();
+
+            bool result = await CMake.Generate(Settings.Default.TrunkLocation, temp, x64, progress, _compilerCts.Token);
+
+
+            if (result)
+            {
+
+                _compilerCts = new CancellationTokenSource();
+
+                result = await TCCompiler.Compile(temp, x64, progress, _compilerCts.Token);
+
+                if (result)
+                    FileHelper.CopyDirectory(Path.Combine(temp, "bin", "Release"), Settings.Default.ServerFolder);
+                else
+                    _messageService.ShowError("Compile has failed!");
+
+                FileHelper.DeleteDirectory(temp);
+
+            }
+            else
+            {
+                _messageService.ShowError("Compile has failed!");
+            }
+
+            Busy = false;
+            BusyIndeterminate = false;
+
+            _isCompiling = false;
+
         }
 
         private async void DownloadUpdateTC()
@@ -599,6 +703,20 @@ namespace TrinityCore_Manager.ViewModels
         }
 
         public static readonly PropertyData BusyIndeterminateProperty = RegisterProperty("BusyIndeterminate", typeof(bool));
+
+        public string CompilePlatform
+        {
+            get
+            {
+                return GetValue<string>(CompilePlatformProperty);
+            }
+            set
+            {
+                SetValue(CompilePlatformProperty, value);
+            }
+        }
+
+        public static readonly PropertyData CompilePlatformProperty = RegisterProperty("CompilePlatform", typeof(string), "x86");
 
     }
 }

@@ -173,12 +173,13 @@
 
                 <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="250">
                     <!--<fluent:Button Header="Platform" Width="51" />-->
-                    <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="0,30,0,0" IsEditable="False" Header="Platform">
+                    <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="0,30,0,0" IsEditable="False" Header="Platform" 
+                                     SelectedValue="{Binding CompilePlatform, UpdateSourceTrigger=PropertyChanged}">
                         <ComboBoxItem Content="x86"/>
                         <ComboBoxItem Content="x64"/>
                     </fluent:ComboBox>
                     <fluent:Button Header="Compile And Replace TC" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
-                                   LargeIcon="{StaticResource CompileImage}"/>
+                                   LargeIcon="{StaticResource CompileImage}" Command="{Binding CompileCommand}"/>
                 </fluent:RibbonGroupBox>
                 <fluent:RibbonGroupBox Header="Progress" Width="600" Visibility="{Binding Busy, Converter={StaticResource BoolVisibilityConverter}}">
                     <ProgressBar HorizontalAlignment="Right" Height="30" VerticalAlignment="Center" Width="500" Value="{Binding BusyProgress}" 
