@@ -67,18 +67,18 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <fluent:Ribbon Grid.ColumnSpan="2">
+        <fluent:Ribbon Grid.ColumnSpan="2" IsAutomaticCollapseEnabled="False" IsQuickAccessToolBarVisible="False">
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup1" Header="Server Panel" Width="200">
+                <fluent:RibbonGroupBox x:Name="SMGroup1" Header="Server Panel" Width="217">
                     <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
-						Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" />
+						Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" Margin="0,0,10,0" />
                     <fluent:Button Header="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
-						Command="{Binding StopServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" />
-                    <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" />
+						Command="{Binding StopServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" Margin="0,0,10,0" />
+                    <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" Click="Button_Click" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="305">
-                    <fluent:TextBox x:Name="ExecCommandTextBox" InputWidth="230" BorderThickness="0" Margin="0" Height="83" 
+                <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="316">
+                    <fluent:TextBox x:Name="ExecCommandTextBox" InputWidth="230" BorderThickness="0" Margin="0,0,10,0" Height="83" 
                                     Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="ExecCommandTextBox_KeyDown"/>
                     <fluent:Button x:Name="ExecCommandButton" Header="Execute Command" BorderThickness="0" Padding="0" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
                                    Command="{Binding ExecuteConsoleCommand}" LargeIcon="{StaticResource ExecuteImage}"/>
