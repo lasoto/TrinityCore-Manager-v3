@@ -77,36 +77,36 @@
                     <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="361">
+                <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="305">
                     <fluent:TextBox x:Name="ExecCommandTextBox" InputWidth="230" BorderThickness="0" Margin="0" Height="83" 
                                     Text="{Binding ConsoleCommand, UpdateSourceTrigger=PropertyChanged}" KeyDown="ExecCommandTextBox_KeyDown"/>
                     <fluent:Button x:Name="ExecCommandButton" Header="Execute Command" BorderThickness="0" Padding="0" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
                                    Command="{Binding ExecuteConsoleCommand}" LargeIcon="{StaticResource ExecuteImage}"/>
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox Header="TCM" Width="78" HorizontalAlignment="Right">
-                    <fluent:Button Header="Edit Settings" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="76" HorizontalContentAlignment="Center" Command="{Binding EditSettingsCommand}"
+                <fluent:RibbonGroupBox Header="TCM" Width="53" HorizontalAlignment="Right">
+                    <fluent:Button Header="Edit Settings" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="49" HorizontalContentAlignment="Center" Command="{Binding EditSettingsCommand}"
                                    LargeIcon="{StaticResource SettingsImage}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Account Management" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup4" Header="Account Editing" Width="154">
-                    <fluent:Button Header="Add Account" Width="75" LargeIcon="{StaticResource AddImage}"/>
-                    <fluent:Button Header="Edit Account" Width="75" LargeIcon="{StaticResource EditImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup4" Header="Account Editing" Width="135">
+                    <fluent:Button Header="Add Account" Width="53" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0"/>
+                    <fluent:Button Header="Edit Account" Width="53" LargeIcon="{StaticResource EditImage}" Margin="0,0,22,0" BorderThickness="0"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup5" Header="Account Banning" Width="154">
-                    <fluent:Button Header="Ban Account" Width="75" LargeIcon="{StaticResource DeleteImage}"/>
-                    <fluent:Button Header="Unban Account" Width="75" LargeIcon="{StaticResource UnlockImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup5" Header="Account Banning" Width="135">
+                    <fluent:Button Header="Ban Account" Width="53" LargeIcon="{StaticResource DeleteImage}" Margin="0,0,25,0"/>
+                    <fluent:Button Header="Unban Account" Width="53" LargeIcon="{StaticResource UnlockImage}"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup6" Header="IP Banning" Width="154">
-                    <fluent:Button Header="Ban IP" Width="75" LargeIcon="{StaticResource DeleteImage}"/>
-                    <fluent:Button Header="Unban IP" Width="75" LargeIcon="{StaticResource UnlockImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup6" Header="IP Banning" Width="135">
+                    <fluent:Button Header="Ban IP" Width="53" LargeIcon="{StaticResource DeleteImage}" Margin="0,0,25,0"/>
+                    <fluent:Button Header="Unban IP" Width="53" LargeIcon="{StaticResource UnlockImage}"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup7" Header="Account Clean-Up" Width="105">
-                    <fluent:Button Header="Database Account Clean-Up" Width="105" LargeIcon="{StaticResource CleanImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup7" Header="Account Clean-Up" Width="99">
+                    <fluent:Button Header="Database Account Clean-Up" Width="97" LargeIcon="{StaticResource CleanImage}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
@@ -116,102 +116,102 @@
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="960">
-                    <fluent:Button Header="Revive Player" Width="44" LargeIcon="{StaticResource AngelImage}"/>
-                    <fluent:Button Header="Force Rename" Width="57" LargeIcon="{StaticResource RedoImage}"/>
-                    <fluent:Button Header="Ban Character" Width="63" LargeIcon="{StaticResource DeleteImage}"/>
-                    <fluent:Button Header="Request Character Customization" Width="99" LargeIcon="{StaticResource CustomizeImage}"/>
-                    <fluent:Button Header="Request Race Change" Width="76" LargeIcon="{StaticResource ChangeImage}"/>
-                    <fluent:Button Header="Request Faction Change" Width="93" LargeIcon="{StaticResource FlagImage}"/>
-                    <fluent:Button Header="Show Player Information" Width="73" LargeIcon="{StaticResource InformationImage}"/>
-                    <fluent:Button Header="Set Level" Width="42" LargeIcon="{StaticResource UpImage}"/>
-                    <fluent:Button Header="Set Reputation" Width="71" LargeIcon="{StaticResource BarImage}"/>
-                    <fluent:Button Header="Set Skill Level" Width="52" LargeIcon="{StaticResource SkillImage}"/>
-                    <fluent:Button Header="Remove Resurrection Sickness" Width="70" LargeIcon="{StaticResource HeartImage}"/>
-                    <fluent:Button Header="Delete character" Width="63" LargeIcon="{StaticResource DeleteCharImage}"/>
+                    <fluent:Button Header="Revive Player" Width="44" LargeIcon="{StaticResource AngelImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Force Rename" Width="57" LargeIcon="{StaticResource RedoImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Ban Character" Width="63" LargeIcon="{StaticResource DeleteImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Request Character Customization" Width="99" LargeIcon="{StaticResource CustomizeImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Request Race Change" Width="76" LargeIcon="{StaticResource ChangeImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Request Faction Change" Width="93" LargeIcon="{StaticResource FlagImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Show Player Information" Width="73" LargeIcon="{StaticResource InformationImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Set Level" Width="42" LargeIcon="{StaticResource UpImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Set Reputation" Width="71" LargeIcon="{StaticResource BarImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Set Skill Level" Width="52" LargeIcon="{StaticResource SkillImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Remove Resurrection Sickness" Width="70" LargeIcon="{StaticResource HeartImage}" Margin="0,0,10,0"/>
+                    <fluent:Button Header="Delete character" Width="63" LargeIcon="{StaticResource DeleteCharImage}" Margin="0,0,10,0"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Database Management" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup10" Header="Backup / Restore" Width="207">
-                    <fluent:Button Header="Backup Database" Width="102" LargeIcon="{StaticResource BackupDBImage}"/>
-                    <fluent:Button Header="Restore Database" Width="102" LargeIcon="{StaticResource RestoreDBImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup10" Header="Backup / Restore" Width="145">
+                    <fluent:Button Header="Backup Database" Width="58" LargeIcon="{StaticResource BackupDBImage}" Margin="0,0,25,0"/>
+                    <fluent:Button Header="Restore Database" Width="58" LargeIcon="{StaticResource RestoreDBImage}"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup11" Header="Cleanup" Width="100">
-                    <fluent:Button Header="Clean World" Width="100" LargeIcon="{StaticResource CleanImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup11" Header="Cleanup" Width="50">
+                    <fluent:Button Header="Clean World" Width="45" LargeIcon="{StaticResource CleanImage}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Create / Edit" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup12" Header="Items" Width="100">
-                    <fluent:Button Header="Create" Width="50" LargeIcon="{StaticResource AddImage}" />
-                    <fluent:Button Header="Edit" Width="50" LargeIcon="{StaticResource EditImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup12" Header="Items" Width="120">
+                    <fluent:Button Header="Create" Width="45" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Edit" Width="45" LargeIcon="{StaticResource EditImage}"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup13" Header="NPCs" Width="100">
-                    <fluent:Button Header="Create" Width="50" LargeIcon="{StaticResource AddImage}" />
-                    <fluent:Button Header="Edit" Width="50" LargeIcon="{StaticResource EditImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup13" Header="NPCs" Width="120">
+                    <fluent:Button Header="Create" Width="45" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Edit" Width="45" LargeIcon="{StaticResource EditImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup14" Header="Vendors" Width="100">
-                    <fluent:Button Header="Create" Width="50" LargeIcon="{StaticResource AddImage}" />
-                    <fluent:Button Header="Edit" Width="50" LargeIcon="{StaticResource EditImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup14" Header="Vendors" Width="120">
+                    <fluent:Button Header="Create" Width="45" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Edit" Width="45" LargeIcon="{StaticResource EditImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup15" Header="Search for ID's" Width="100">
-                    <fluent:Button Header="Find NPC" Width="50" LargeIcon="{StaticResource SearchImage}" />
-                    <fluent:Button Header="Find Item" Width="50" LargeIcon="{StaticResource SearchImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup15" Header="Search for ID's" Width="120">
+                    <fluent:Button Header="Find NPC" Width="45" LargeIcon="{StaticResource SearchImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Find Item" Width="45" LargeIcon="{StaticResource SearchImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup16" Header="SmartAI" Width="100">
-                    <fluent:Button Header="Create" Width="50" LargeIcon="{StaticResource AddImage}" />
-                    <fluent:Button Header="Edit" Width="50" LargeIcon="{StaticResource EditImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup16" Header="SmartAI" Width="120">
+                    <fluent:Button Header="Create" Width="45" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Edit" Width="45" LargeIcon="{StaticResource EditImage}" />
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Compile" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup17" Header="Trinity Core Panel" Width="132">
-                    <fluent:Button Header="Set Trunk Location" x:Name="SetTrunkLocButton" Width="63" LargeIcon="{StaticResource LocationImage}" Click="SetTrunkLocButton_Click" />
-                    <fluent:Button Header="Download / Update" Width="59" LargeIcon="{StaticResource DownloadImage}" Command="{Binding DownloadUpdateTCCommand}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup17" Header="Trinity Core Panel" Width="147">
+                    <fluent:Button Header="Set Trunk Location" x:Name="SetTrunkLocButton" Width="57" LargeIcon="{StaticResource LocationImage}" Click="SetTrunkLocButton_Click" Margin="0,0,25,0" />
+                    <fluent:Button Header="Download &amp; Update" Width="62" LargeIcon="{StaticResource DownloadImage}" Command="{Binding DownloadUpdateTCCommand}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="250">
+                <fluent:RibbonGroupBox x:Name="SMGroup18" Header="Compile Panel" Width="185">
                     <!--<fluent:Button Header="Platform" Width="51" />-->
-                    <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="0,30,0,0" IsEditable="False" Header="Platform" 
+                    <fluent:ComboBox x:Name="platformComboBox" SelectedIndex="0" Margin="5,30,15,0" IsEditable="False" Header="Platform" 
                                      SelectedValue="{Binding CompilePlatform, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding CompilePlatforms}">
                     </fluent:ComboBox>
                     <fluent:Button Header="Compile And Replace TC" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
                                    LargeIcon="{StaticResource CompileImage}" Command="{Binding CompileCommand}"/>
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox Header="Progress" Width="600" Visibility="{Binding Busy, Converter={StaticResource BoolVisibilityConverter}}">
-                    <ProgressBar HorizontalAlignment="Right" Height="30" VerticalAlignment="Center" Width="500" Value="{Binding BusyProgress}" 
-                                 IsIndeterminate="{Binding BusyIndeterminate}"></ProgressBar>
+                <fluent:RibbonGroupBox Header="Progress" Width="782" Visibility="{Binding Busy, Converter={StaticResource BoolVisibilityConverter}}">
+                    <ProgressBar HorizontalAlignment="Right" Height="30" VerticalAlignment="Center" Width="765" Value="{Binding BusyProgress}" 
+                		IsIndeterminate="{Binding BusyIndeterminate}" Margin="5,23,0,0"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Other" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup19" Header="Mail" Width="67">
-                    <fluent:Button Header="Send Mail" Width="63" LargeIcon="{StaticResource MailImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup19" Header="Mail" Width="48">
+                    <fluent:Button Header="Send Mail" Width="43" LargeIcon="{StaticResource MailImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup20" Header="Guild" Width="156">
-                    <fluent:Button Header="Create Guild" Width="51" LargeIcon="{StaticResource AddImage}" />
-                    <fluent:Button Header="Edit Guild" Width="51" LargeIcon="{StaticResource EditImage}" />
-                    <fluent:Button Header="Delete Guild" Width="51" LargeIcon="{StaticResource DeleteImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup20" Header="Guild" Width="188">
+                    <fluent:Button Header="Create Guild" Width="45" LargeIcon="{StaticResource AddImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Edit Guild" Width="45" LargeIcon="{StaticResource EditImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Delete Guild" Width="45" LargeIcon="{StaticResource DeleteImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="167">
-                    <fluent:Button Header="Event Active List" Width="56" LargeIcon="{StaticResource ListImage}" />
-                    <fluent:Button Header="Start Event" Width="57" LargeIcon="{StaticResource GreenPinImage}" />
-                    <fluent:Button Header="Stop Event" Width="51" LargeIcon="{StaticResource RedPinImage}" />
+                <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="188">
+                    <fluent:Button Header="Event Active List" Width="45" LargeIcon="{StaticResource ListImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Start Event" Width="45" LargeIcon="{StaticResource GreenPinImage}" Margin="0,0,25,0" />
+                    <fluent:Button Header="Stop Event" Width="45" LargeIcon="{StaticResource RedPinImage}" Margin="0" />
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="680">
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Padding="0"/>
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Padding="0"/>
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Padding="0"/>
-                    <fluent:TextBox InputWidth="400" BorderThickness="0" Margin="0" Height="83"/>
-                    <fluent:Button Header="Send Message" BorderThickness="0" Padding="0" Margin="0,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
+                    <fluent:TextBox InputWidth="400" BorderThickness="0" Margin="0" Height="83" Width="410"/>
+                    <fluent:Button Header="Send Message" BorderThickness="0" Padding="0" Margin="7,0,0,0" fluent:RibbonAttachedProperties.RibbonSize="Large"
                                    LargeIcon="{StaticResource MessageImage}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
