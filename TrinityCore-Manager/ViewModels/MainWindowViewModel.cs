@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,12 @@ namespace TrinityCore_Manager.ViewModels
             _isCompiling = false;
 
             BusyProgress = 0.0;
+
+            CompilePlatforms = new ObservableCollection<string>
+            {
+                "x86",
+                "x64"
+            };
 
             ExecuteConsoleCommand = new Command(ExecConsoleCommand);
             StartServerCommand = new Command(StartServer);
@@ -716,7 +723,21 @@ namespace TrinityCore_Manager.ViewModels
             }
         }
 
-        public static readonly PropertyData CompilePlatformProperty = RegisterProperty("CompilePlatform", typeof(string), "x86");
+        public static readonly PropertyData CompilePlatformProperty = RegisterProperty("CompilePlatform", typeof(string));
+
+        public ObservableCollection<string> CompilePlatforms
+        {
+            get
+            {
+                return GetValue<ObservableCollection<string>>(CompilePlatformsProperty);
+            }
+            set
+            {
+                SetValue(CompilePlatformsProperty, value);
+            }
+        }
+
+        public static readonly PropertyData CompilePlatformsProperty = RegisterProperty("CompilePlatforms", typeof(ObservableCollection<string>));
 
     }
 }
