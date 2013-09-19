@@ -50,9 +50,6 @@
     <Setting Name="TrunkLocation" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ColorTheme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">silver</Value>
-    </Setting>
     <Setting Name="BackupDays" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
@@ -73,6 +70,9 @@
     </Setting>
     <Setting Name="AutoSaveSettings" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ColorTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">black</Value>
     </Setting>
   </Settings>
 </SettingsFile>
