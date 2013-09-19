@@ -10,7 +10,6 @@ namespace TrinityCore_Manager.Models
 {
     public class SettingsModel : ModelBase
     {
-
         public SettingsModel()
         {
             Themes = new ObservableCollection<string>();

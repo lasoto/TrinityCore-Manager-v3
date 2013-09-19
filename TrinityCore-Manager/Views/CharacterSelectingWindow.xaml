@@ -1,0 +1,10 @@
+﻿<Window x:Class="TrinityCore_Manager.Views.CharacterSelectingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select A Character" Height="300" Width="300" ResizeMode="CanMinimize" Icon="/TrinityCore-Manager;component/Resources/search.ico">
+    
+    <GroupBox Header="Search information" HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="261" Margin="10,10,0,0">
+        <ComboBox HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="113" IsEditable="True" Margin="10,10,0,0"/>
+        
+    </GroupBox>
+</Window>

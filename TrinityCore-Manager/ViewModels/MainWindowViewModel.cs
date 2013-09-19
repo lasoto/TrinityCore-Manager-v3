@@ -48,6 +48,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command CompileCommand { get; private set; }
 
+        public Command SelectCharacterCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -76,6 +78,7 @@ namespace TrinityCore_Manager.ViewModels
             EditSettingsCommand = new Command(EditSettings);
             DownloadUpdateTCCommand = new Command(DownloadUpdateTC);
             CompileCommand = new Command(Compile);
+            SelectCharacterCommand = new Command(SelectCharacter);
 
             CheckSettings();
             InitBackupTimer();
@@ -291,6 +294,23 @@ namespace TrinityCore_Manager.ViewModels
             {
                 if (e.Result.HasValue && e.Result.Value)
                     SetColorTheme(sm.SelectedTheme);
+            });
+
+        }
+
+        private void SelectCharacter()
+        {
+            var sm = new CharacterSelectingModel();
+            //sm.SelectedTheme = Settings.Default.ColorTheme;
+
+            //sm.Themes.Add("Black");
+            //sm.Themes.Add("Silver");
+            //sm.Themes.Add("Blue");
+
+            _uiVisualizerService.ShowDialog(new CharacterSelectingViewModel(sm), (sender, e) =>
+            {
+                //if (e.Result.HasValue && e.Result.Value)
+                //    SetColorTheme(sm.SelectedTheme);
             });
 
         }

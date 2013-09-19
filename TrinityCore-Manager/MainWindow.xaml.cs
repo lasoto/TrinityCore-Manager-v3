@@ -62,5 +62,10 @@ namespace TrinityCore_Manager
 
         }
 
+        private void ComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
     }
 }

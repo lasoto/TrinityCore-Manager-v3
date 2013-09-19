@@ -111,11 +111,12 @@
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Character Management" IsSelected="True">
-                <fluent:RibbonGroupBox x:Name="SMGroup8" Header="Character Selecting" Width="154">
-                    <fluent:Button Header="Select a character" Width="102" LargeIcon="{StaticResource PersonImage}"/>
+                <fluent:RibbonGroupBox x:Name="SMGroup8" Header="Character Selecting" Width="199">
+                    <fluent:Button Header="Select a character" Width="56" LargeIcon="{StaticResource PersonImage}" Command="{Binding SelectCharacterCommand}"/>
+                    <ComboBox Width="120" Margin="10,25,0,0" IsEditable="True" KeyDown="ComboBox_KeyDown"/>
                 </fluent:RibbonGroupBox>
-
-                <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="960">
+                
+                <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="912">
                     <fluent:Button Header="Revive Player" Width="44" LargeIcon="{StaticResource AngelImage}" Margin="0,0,10,0"/>
                     <fluent:Button Header="Force Rename" Width="57" LargeIcon="{StaticResource RedoImage}" Margin="0,0,10,0"/>
                     <fluent:Button Header="Ban Character" Width="63" LargeIcon="{StaticResource DeleteImage}" Margin="0,0,10,0"/>
