@@ -10,7 +10,7 @@
         xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:helpers="clr-namespace:TrinityCore_Manager.Helpers"
         x:Class="TrinityCore_Manager.MainWindow2"
-        Title="TrinityCore Manager v3.0" Height="744" Width="1137">
+        Title="TrinityCore Manager v3.0" Height="744" Width="1137" Icon="Resources/activity_monitor_128.ico">
 
     <fluent:RibbonWindow.Resources>
         <converters:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
@@ -58,12 +58,16 @@
     </i:Interaction.Behaviors>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="1025*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <fluent:Ribbon>
+        <fluent:Ribbon Grid.ColumnSpan="2">
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup1" Header="Server Panel" Width="200">
                     <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
@@ -213,7 +217,7 @@
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
 
-        <TabControl Grid.Row="1" Margin="1">
+        <TabControl Grid.Row="1" Margin="1" Grid.ColumnSpan="2">
 
             <TabItem Header="Console">
 
@@ -233,7 +237,7 @@
 
         <fluent:StatusBar HorizontalAlignment="Stretch"
 			VerticalAlignment="Bottom"
-			Grid.Row="2">
+			Grid.Row="2" Grid.ColumnSpan="2">
             <fluent:StatusBarItem Title="Auth Server"
 				Value="150"
 				HorizontalAlignment="Left" Width="95">
