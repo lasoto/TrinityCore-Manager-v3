@@ -33,6 +33,9 @@ namespace TrinityCore_Manager.TC
 
                 var proc = ProcessHelper.StartProcess(cpath, Path.GetDirectoryName(cpath), args);
 
+                if (proc == null)
+                    return false;
+
                 proc.EnableRaisingEvents = true;
 
                 proc.BeginOutputReadLine();
@@ -80,6 +83,9 @@ namespace TrinityCore_Manager.TC
                 string cpath = VisualStudio.GetCompilerPath();
 
                 var proc = ProcessHelper.StartProcess(cpath, Path.GetDirectoryName(cpath), args);
+
+                if (proc == null)
+                    return false;
 
                 int id = proc.Id;
 

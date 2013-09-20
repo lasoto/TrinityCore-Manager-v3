@@ -48,6 +48,9 @@ namespace TrinityCore_Manager.TC
 
                     var proc = ProcessHelper.StartProcess(cmake, destDir, args);
 
+                    if (proc == null)
+                        return false;
+
                     int id = proc.Id;
 
                     proc.EnableRaisingEvents = true;

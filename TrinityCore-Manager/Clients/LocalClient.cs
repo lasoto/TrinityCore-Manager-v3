@@ -54,6 +54,10 @@ namespace TrinityCore_Manager.Clients
         {
 
             _proc = ProcessHelper.StartProcess(_exeFile, Path.GetDirectoryName(_exeFile), _exeArgs);
+
+            if (_proc == null)
+                return;
+
             _procId = _proc.Id;
 
             _proc.Exited += (sender, e) =>

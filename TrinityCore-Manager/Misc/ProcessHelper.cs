@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TrinityCore_Manager.Misc
 {
@@ -122,10 +123,16 @@ namespace TrinityCore_Manager.Misc
             proc.StartInfo = psi;
             proc.EnableRaisingEvents = true;
 
-            proc.Start();
-
-            return proc;
-
+            try
+            {
+                proc.Start();
+                return proc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "The file could not be succesfully opened!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return null;
+            }
         }
 
     }

@@ -29,6 +29,9 @@ namespace TrinityCore_Manager.Database
 
                 Process dumpProc = ProcessHelper.StartProcess("cmd.exe", Path.GetDirectoryName(outputFile), args);
 
+                if (dumpProc == null)
+                    return;
+
                 StreamReader reader = dumpProc.StandardOutput;
                 
                 StreamWriter writer = new StreamWriter(outputFile);
