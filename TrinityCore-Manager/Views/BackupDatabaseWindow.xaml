@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        xmlns:catel="http://catel.codeplex.com"
+        x:Class="TrinityCore_Manager.Views.BackupDatabaseWindow"
+        Title="BackupDatabaseWindow" Height="300" Width="496">
+
+    <i:Interaction.Behaviors>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:BackupDatabaseViewModel}"/>
+    </i:Interaction.Behaviors>
+
+    <Grid>
+        <Label Content="Database" HorizontalAlignment="Left" Margin="92,29,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Auth" HorizontalAlignment="Left" Margin="156,35,0,0" VerticalAlignment="Top" IsChecked="{Binding AuthSelected}" IsEnabled="{Binding BackupsScheduled}"/>
+        <CheckBox Content="Characters" HorizontalAlignment="Left" Margin="216,35,0,0" VerticalAlignment="Top" IsChecked="{Binding CharSelected}" IsEnabled="{Binding BackupsScheduled}"/>
+        <CheckBox Content="World" HorizontalAlignment="Left" Margin="306,35,0,0" VerticalAlignment="Top" IsChecked="{Binding WorldSelected}" IsEnabled="{Binding BackupsScheduled}"/>
+        <CheckBox Content="Schedule Backups" HorizontalAlignment="Left" Margin="177,82,0,0" VerticalAlignment="Top" IsChecked="{Binding BackupsScheduled}"/>
+        <Label Content="Backup Every" HorizontalAlignment="Left" Margin="48,160,0,0" VerticalAlignment="Top"/>
+
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="128,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupDays}"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="233,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupHours}"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="343,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupMinutes}"/>
+        <Label Content="Days" HorizontalAlignment="Left" Margin="146,135,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hours" HorizontalAlignment="Left" Margin="250,135,0,0" VerticalAlignment="Top"/>
+        <Label Content="Minutes" HorizontalAlignment="Left" Margin="359,135,0,0" VerticalAlignment="Top"/>
+        <Button Content="Backup Now!" HorizontalAlignment="Left" Margin="116,229,0,0" VerticalAlignment="Top" Width="85" Height="30" Command="{Binding BackupNowCommand}"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="306,229,0,0" VerticalAlignment="Top" Width="85" Height="30" Command="{Binding SaveCommand}"/>
+
+    </Grid>
+</Window>

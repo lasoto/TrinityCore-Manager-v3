@@ -49,7 +49,7 @@ namespace TrinityCore_Manager.TCM
         public WorldDatabase WorldDatabase { get; set; }
 
         public static readonly string BackupLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TCM", "Backups");
-        public static readonly string MySQLDumpLocation = Path.Combine(Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName), "bin", "mysqldump.exe");
+        public static readonly string MySQLDumpLocation = Path.Combine(Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName), "mysql", "mysqldump.exe");
 
         public bool Online
         {

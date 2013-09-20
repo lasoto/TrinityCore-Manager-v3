@@ -60,6 +60,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command OpenSetupWizardCommand { get; private set; }
 
+        public Command BackupDatabaseCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -92,6 +94,7 @@ namespace TrinityCore_Manager.ViewModels
             SetTrunkLocationCommand = new Command(SetTrunkLocation);
             OpenConfigurationCommand = new Command(OpenConfiguration);
             OpenSetupWizardCommand = new Command(OpenSetupWizard);
+            BackupDatabaseCommand = new Command(BackupDatabase);
 
             CheckSettings();
             InitBackupTimer();
@@ -99,6 +102,40 @@ namespace TrinityCore_Manager.ViewModels
             SetColorTheme(Settings.Default.ColorTheme);
 
             Application.Current.Exit += Current_Exit;
+        }
+
+        private void BackupDatabase()
+        {
+
+            var bm = new BackupDatabaseModel
+            {
+                AuthSelected = Settings.Default.BackupScheduleAuth,
+                CharSelected = Settings.Default.BackupScheduleChar,
+                WorldSelected = Settings.Default.BackupScheduleWorld,
+                BackupsScheduled = Settings.Default.BackupScheduleAuth || Settings.Default.BackupScheduleChar || Settings.Default.BackupScheduleWorld,
+                BackupDays = Settings.Default.BackupDays,
+                BackupHours = Settings.Default.BackupHours,
+                BackupMinutes = Settings.Default.BackupMinutes
+            };
+
+            var returnVal = _uiVisualizerService.ShowDialog(new BackupDatabaseViewModel(bm, _uiVisualizerService, _pleaseWaitService, _messageService));
+
+            if (returnVal.HasValue && returnVal.Value)
+            {
+
+                Settings.Default.BackupScheduleAuth = bm.AuthSelected;
+                Settings.Default.BackupScheduleChar = bm.CharSelected;
+                Settings.Default.BackupScheduleWorld = bm.WorldSelected;
+                Settings.Default.BackupDays = bm.BackupDays;
+                Settings.Default.BackupHours = bm.BackupHours;
+                Settings.Default.BackupMinutes = bm.BackupMinutes;
+
+                Settings.Default.Save();
+
+                InitBackupTimer();
+
+            }
+
         }
 
         private async void Compile()
@@ -405,7 +442,11 @@ namespace TrinityCore_Manager.ViewModels
             }
             else
             {
+
+                TCManager.Instance.StopScheduledBackups();
+
                 BackupCountingDown = false;
+
             }
 
         }

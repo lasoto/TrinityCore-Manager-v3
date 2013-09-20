@@ -218,6 +218,7 @@
     <Compile Include="Misc\ServerType.cs" />
     <Compile Include="Misc\VisualStudio.cs" />
     <Compile Include="Misc\WoWItem.cs" />
+    <Compile Include="Models\BackupDatabaseModel.cs" />
     <Compile Include="Models\CharacterSelectingModel.cs" />
     <Compile Include="Models\SettingsModel.cs" />
     <Compile Include="Models\WizardModel.cs" />
@@ -241,11 +242,15 @@
     <Compile Include="TC\TCCompiler.cs" />
     <Compile Include="TC\TrinityCoreRepository.cs" />
     <Compile Include="ViewModels\AccountsViewModel.cs" />
+    <Compile Include="ViewModels\BackupDatabaseViewModel.cs" />
     <Compile Include="ViewModels\CharacterSelectingViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\SetupWizardViewModel.cs" />
     <Compile Include="ViewModels\WizardSelectDatabaseViewModel.cs" />
+    <Compile Include="Views\BackupDatabaseWindow.xaml.cs">
+      <DependentUpon>BackupDatabaseWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CharacterSelectingWindow.xaml.cs">
       <DependentUpon>CharacterSelectingWindow.xaml</DependentUpon>
     </Compile>
@@ -274,6 +279,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BackupDatabaseWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -463,6 +472,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\TrinityCoreManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mysql\mysqldump.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
