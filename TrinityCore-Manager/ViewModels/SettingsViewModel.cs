@@ -19,7 +19,7 @@ namespace TrinityCore_Manager.ViewModels
 
         public SettingsViewModel(SettingsModel model)
         {
-
+            
             Settings = model;
 
             OkCommand = new Command(ExecuteOk);
