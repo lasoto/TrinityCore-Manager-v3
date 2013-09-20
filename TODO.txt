@@ -7,10 +7,10 @@
 - Add a 3D viewer for Items/Weapons/NPCs
 - Add a Splash Screen on application startup
 - Implement downloading and executing the databases in setup form (page for it already exists, needs actual implementation)
-- Pressing 'Options' (the text) should also open the context menu
 - New icon for the 'Settings' option menu
 - Re-work all places where we use a combobox to store a lot of data (showing online characters in a combobox is not going to work out for big servers)
 - Fix the WoWItem class exception when using the search item form
 - Figure out why the console stops logging the worldserver's actions (on W7 (?only?)) after a short period of time
 - Create log folder for crash dumps, so that users can send us crash dumps (via Bug Report form) with respective crash info attached and/or copy/pasted.
 - Add a AutoComplete library (or write class yourself) for textboxes ('needed' for server folder textbox in setup wizard)
+- Once the 'Options' button is implemented, move the "TCM Settings" and "Setup Wizard" in there.
