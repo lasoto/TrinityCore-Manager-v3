@@ -74,7 +74,7 @@
 						Command="{Binding StartServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource PlayImage}" Margin="0,0,10,0" />
                     <fluent:Button Header="Stop Server" Foreground="Red" IsEnabled="{Binding ServerOnline}" 
 						Command="{Binding StopServerCommand, UpdateSourceTrigger=PropertyChanged}" LargeIcon="{StaticResource StopImage}" Margin="0,0,10,0" />
-                    <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" Click="Button_Click" />
+                    <fluent:Button Header="Open Configuration File" Foreground="Teal" LargeIcon="{StaticResource OpenImage}" Command="{Binding OpenConfigurationCommand}" />
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup2" Header="Server Commands" Width="316">

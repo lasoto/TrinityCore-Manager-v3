@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command StopServerCommand { get; private set; }
 
+        public Command OpenConfigurationCommand { get; private set; }
+
         public Command EditSettingsCommand { get; private set; }
 
         public Command DownloadUpdateTCCommand { get; private set; }
@@ -83,6 +86,7 @@ namespace TrinityCore_Manager.ViewModels
             CompileCommand = new Command(Compile);
             SelectCharacterCommand = new Command(SelectCharacter);
             SetTrunkLocationCommand = new Command(SetTrunkLocation);
+            OpenConfigurationCommand = new Command(OpenConfiguration);
 
             CheckSettings();
             InitBackupTimer();
@@ -482,7 +486,7 @@ namespace TrinityCore_Manager.ViewModels
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
             {
 
-                _messageService.ShowError(new Exception("The file authserver.exe does not exist!"));
+                _messageService.ShowError(new Exception("The file authserver.exe could not be found!"));
 
                 return;
 
@@ -491,7 +495,7 @@ namespace TrinityCore_Manager.ViewModels
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
             {
 
-                _messageService.ShowError(new Exception("The file worldserver.exe does not exist!"));
+                _messageService.ShowError(new Exception("The file worldserver.exe could not be found!"));
 
                 return;
 
@@ -556,7 +560,6 @@ namespace TrinityCore_Manager.ViewModels
 
         private void StopServer()
         {
-
             var inst = TCManager.Instance;
 
             var authClient = inst.AuthClient;
@@ -572,6 +575,24 @@ namespace TrinityCore_Manager.ViewModels
             authClient.Stop();
             worldClient.Stop();
 
+        }
+
+        private void OpenConfiguration()
+        {
+            if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.conf")))
+            {
+                _messageService.ShowError(new Exception("The file 'worldserver.conf' could not be found!"));
+                return;
+            }
+
+            try
+            {
+                Process.Start(Path.Combine(Settings.Default.ServerFolder, "worldserver.conf"));
+            }
+            catch
+            {
+                _messageService.ShowError("The config file could not be opened!");
+            }
         }
 
         private void worldClient_ClientExited(object sender, EventArgs e)

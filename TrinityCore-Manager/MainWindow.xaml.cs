@@ -41,11 +41,6 @@ namespace TrinityCore_Manager
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ComboBox_KeyDown(object sender, KeyEventArgs e)
         {
             e.Handled = true;
