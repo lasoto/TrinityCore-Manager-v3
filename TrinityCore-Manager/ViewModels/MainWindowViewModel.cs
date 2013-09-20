@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -425,6 +426,8 @@ namespace TrinityCore_Manager.ViewModels
 
             var set = Settings.Default;
 
+            Version ver = Assembly.GetExecutingAssembly().GetName().Version;
+
             var wm = new WizardModel
             {
                 ConnectLocally = (ServerType)set.ServerType == ServerType.Local,
@@ -441,6 +444,7 @@ namespace TrinityCore_Manager.ViewModels
                 SelectedAuthDB = set.DBAuthName,
                 SelectedCharDB = set.DBCharName,
                 SelectedWorldDB = set.DBWorldName,
+                TCMVersion = string.Format("v{0}.{1}", ver.Major, ver.Minor)
             };
 
             var wizardView = new SetupWizardViewModel(wm, _uiVisualizerService, _pleaseWaitService, _messageService);

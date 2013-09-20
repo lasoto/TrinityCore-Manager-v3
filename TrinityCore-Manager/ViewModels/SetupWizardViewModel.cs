@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -502,6 +503,21 @@ namespace TrinityCore_Manager.ViewModels
         }
 
         public static readonly PropertyData SelectedWorldDBProperty = RegisterProperty("SelectedWorldDB", typeof(string));
+
+        [ViewModelToModel("Wizard")]
+        public string TCMVersion
+        {
+            get
+            {
+                return GetValue<string>(TCMVersionProperty);
+            }
+            set
+            {
+                SetValue(TCMVersionProperty, value);
+            }
+        }
+
+        public static readonly PropertyData TCMVersionProperty = RegisterProperty("TCMVersion", typeof(string));
 
     }
 }

@@ -51,6 +51,7 @@
         <BitmapImage x:Key="GreenPinImage" UriSource="Resources/greenpin.ico"/>
         <BitmapImage x:Key="RedPinImage" UriSource="Resources/redpin.ico"/>
         <BitmapImage x:Key="MessageImage" UriSource="Resources/message.ico"/>
+        <BitmapImage x:Key="WizardImage" UriSource="Resources/wizard.ico"/>
     </fluent:RibbonWindow.Resources>
 
     <i:Interaction.Behaviors>
@@ -86,9 +87,9 @@
                     <fluent:Button Header="Edit Settings" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="49" HorizontalContentAlignment="Center" Command="{Binding EditSettingsCommand}"
                                    LargeIcon="{StaticResource SettingsImage}"/>
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox Header="Setup" Width="53" HorizontalAlignment="Right">
-                    <fluent:Button Header="Open Setup" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="49" HorizontalContentAlignment="Center" Command="{Binding OpenSetupWizardCommand}"
-                                   LargeIcon="{DynamicResource RedoImage}"/>
+                <fluent:RibbonGroupBox Header="Setup" Width="72" HorizontalAlignment="Right">
+                    <fluent:Button Header="Open Setup Wizard" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="70" HorizontalContentAlignment="Center" 
+                                   Command="{Binding OpenSetupWizardCommand}" LargeIcon="{StaticResource WizardImage}"/>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 

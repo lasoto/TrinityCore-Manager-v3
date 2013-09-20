@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Catel.Data;
@@ -206,6 +207,20 @@ namespace TrinityCore_Manager.Models
         }
 
         public static readonly PropertyData SelectedWorldDBProperty = RegisterProperty("SelectedWorldDB", typeof(string));
+
+        public string TCMVersion
+        {
+            get
+            {
+                return GetValue<string>(TCMVersionProperty);
+            }
+            set
+            {
+                SetValue(TCMVersionProperty, value);
+            }
+        }
+
+        public static readonly PropertyData TCMVersionProperty = RegisterProperty("TCMVersion", typeof(string));
 
     }
 }
