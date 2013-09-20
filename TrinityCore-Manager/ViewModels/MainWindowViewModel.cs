@@ -213,10 +213,7 @@ namespace TrinityCore_Manager.ViewModels
         {
             if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
             {
-                //_messageService.ShowError("You must first set your trunk location! Want to do this right now?");
-                //if (_messageService.Show("You must first set your trunk location! Want to do this right now?") == MessageResult.Yes)
-                //    MessageBox.Show("Derp");
-                if (MessageBox.Show("You must first set your trunk location! Want to do this right now?", "Trunk location not set!", MessageBoxButton.YesNo, MessageBoxImage.Error) == MessageBoxResult.Yes)
+                if (_messageService.Show("You must first set your trunk location! Want to do this right now?", "Trunk location not set!", MessageButton.YesNo, MessageImage.Question) == MessageResult.Yes)
                     SetTrunkLocation();
 
                 return;
@@ -486,7 +483,7 @@ namespace TrinityCore_Manager.ViewModels
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "authserver.exe")))
             {
 
-                _messageService.ShowError(new Exception("The file authserver.exe could not be found!"));
+                _messageService.ShowError(new Exception("The file 'authserver.exe' could not be found!"));
 
                 return;
 
@@ -495,7 +492,7 @@ namespace TrinityCore_Manager.ViewModels
             if (!File.Exists(Path.Combine(Settings.Default.ServerFolder, "worldserver.exe")))
             {
 
-                _messageService.ShowError(new Exception("The file worldserver.exe could not be found!"));
+                _messageService.ShowError(new Exception("The file 'worldserver.exe' could not be found!"));
 
                 return;
 
