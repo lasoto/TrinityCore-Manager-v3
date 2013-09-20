@@ -20,6 +20,7 @@ using TrinityCore_Manager.Models;
 using TrinityCore_Manager.Properties;
 using TrinityCore_Manager.TC;
 using TrinityCore_Manager.TCM;
+using TrinityCore_Manager.Views;
 
 namespace TrinityCore_Manager.ViewModels
 {
@@ -56,6 +57,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command SetTrunkLocationCommand { get; private set; }
 
+        public Command OpenSetupWizardCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -87,6 +90,7 @@ namespace TrinityCore_Manager.ViewModels
             SelectCharacterCommand = new Command(SelectCharacter);
             SetTrunkLocationCommand = new Command(SetTrunkLocation);
             OpenConfigurationCommand = new Command(OpenConfiguration);
+            OpenSetupWizardCommand = new Command(OpenSetupWizard);
 
             CheckSettings();
             InitBackupTimer();
@@ -333,6 +337,11 @@ namespace TrinityCore_Manager.ViewModels
                 //    SetColorTheme(sm.SelectedTheme);
             });
 
+        }
+
+        private void OpenSetupWizard()
+        {
+            ShowWizard();
         }
 
         private void SetColorTheme(string colorTheme)

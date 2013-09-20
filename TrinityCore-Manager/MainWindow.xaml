@@ -86,6 +86,10 @@
                     <fluent:Button Header="Edit Settings" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="49" HorizontalContentAlignment="Center" Command="{Binding EditSettingsCommand}"
                                    LargeIcon="{StaticResource SettingsImage}"/>
                 </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Setup" Width="53" HorizontalAlignment="Right">
+                    <fluent:Button Header="Open Setup" fluent:RibbonAttachedProperties.RibbonSize="Large" Width="49" HorizontalContentAlignment="Center" Command="{Binding OpenSetupWizardCommand}"
+                                   LargeIcon="{DynamicResource RedoImage}"/>
+                </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Account Management" IsSelected="True">
