@@ -10,9 +10,9 @@
         <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:WizardSelectDatabaseViewModel}"/>
     </i:Interaction.Behaviors>
 
-    <Grid Margin="0,0,0,11">
+    <Grid Margin="0,0,0,0">
         <ListBox HorizontalAlignment="Left" Height="229" Margin="10,10,0,0" VerticalAlignment="Top" Width="291" ItemsSource="{Binding Databases}" SelectedValue="{Binding SelectedDatabaseName}"/>
         <Button Content="Ok" HorizontalAlignment="Left" Margin="226,244,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OkCommand}"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CancelCommand}"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Width="76" Command="{Binding CancelCommand}"/>
     </Grid>
 </Window>
