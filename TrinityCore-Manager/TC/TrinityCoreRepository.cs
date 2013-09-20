@@ -60,7 +60,7 @@ namespace TrinityCore_Manager.TC
                 Process pullProc = ProcessHelper.StartProcess("cmd.exe", gitDir, args);
 
                 if (pullProc == null)
-                    return false;
+                    return;
 
                 pullProc.BeginErrorReadLine();
                 pullProc.BeginOutputReadLine();

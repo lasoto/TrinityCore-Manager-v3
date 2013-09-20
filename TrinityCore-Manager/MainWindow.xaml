@@ -200,13 +200,13 @@
                     <fluent:Button Header="Delete Guild" Width="45" LargeIcon="{StaticResource DeleteImage}" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="188">
-                    <fluent:Button Header="Event Active List" Width="45" LargeIcon="{StaticResource ListImage}" Margin="0,0,25,0" />
+                <fluent:RibbonGroupBox x:Name="SMGroup21" Header="Game Events" Width="198">
+                    <fluent:Button Header="Event Active List" Width="57" LargeIcon="{StaticResource ListImage}" Margin="0,0,25,0" />
                     <fluent:Button Header="Start Event" Width="45" LargeIcon="{StaticResource GreenPinImage}" Margin="0,0,25,0" />
                     <fluent:Button Header="Stop Event" Width="45" LargeIcon="{StaticResource RedPinImage}" Margin="0" />
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="680">
+                <fluent:RibbonGroupBox x:Name="SMGroup2_Copy" Header="Send Messages" Width="649">
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Announcement" HorizontalAlignment="Left" Padding="0"/>
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Server Notification" HorizontalAlignment="Left" Padding="0"/>
                     <fluent:RadioButton GroupName="SendMessageRadioButtons" Header="Announcement to GM's" HorizontalAlignment="Left" Padding="0"/>
