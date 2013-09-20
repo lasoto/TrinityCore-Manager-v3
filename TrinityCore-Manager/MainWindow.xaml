@@ -59,15 +59,14 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="104*"/>
-            <ColumnDefinition Width="1025*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <fluent:Ribbon Grid.ColumnSpan="2" IsAutomaticCollapseEnabled="False" IsQuickAccessToolBarVisible="False">
+        <fluent:Ribbon IsAutomaticCollapseEnabled="False" IsQuickAccessToolBarVisible="False">
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Server Management" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup1" Header="Server Panel" Width="217">
                     <fluent:Button Header="Start Server" Foreground="Green" IsEnabled="{Binding ServerOnline, Converter={StaticResource InverseBoolConverter}}" 
@@ -115,7 +114,7 @@
                     <fluent:Button Header="Select a character" Width="56" LargeIcon="{StaticResource PersonImage}" Command="{Binding SelectCharacterCommand}"/>
                     <ComboBox Width="120" Margin="10,25,0,0" IsEditable="True" KeyDown="ComboBox_KeyDown"/>
                 </fluent:RibbonGroupBox>
-                
+
                 <fluent:RibbonGroupBox x:Name="SMGroup9" Header="Character Editing" Width="912">
                     <fluent:Button Header="Revive Player" Width="44" LargeIcon="{StaticResource AngelImage}" Margin="0,0,10,0"/>
                     <fluent:Button Header="Force Rename" Width="57" LargeIcon="{StaticResource RedoImage}" Margin="0,0,10,0"/>
@@ -218,7 +217,7 @@
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
 
-        <TabControl Grid.Row="1" Margin="1" Grid.ColumnSpan="2">
+        <TabControl Grid.Row="1" Margin="1">
 
             <TabItem Header="Console">
 
@@ -238,7 +237,7 @@
 
         <fluent:StatusBar HorizontalAlignment="Stretch"
 			VerticalAlignment="Bottom"
-			Grid.Row="2" Grid.ColumnSpan="2">
+			Grid.Row="2">
             <fluent:StatusBarItem Title="Auth Server"
 				Value="150"
 				HorizontalAlignment="Left" Width="95">
