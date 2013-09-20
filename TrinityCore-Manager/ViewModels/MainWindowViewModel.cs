@@ -11,6 +11,7 @@ using System.Windows.Threading;
 using Catel.Data;
 using Catel.MVVM;
 using Catel.MVVM.Services;
+using Ookii.Dialogs.Wpf;
 using TrinityCore_Manager.Clients;
 using TrinityCore_Manager.Extensions;
 using TrinityCore_Manager.Misc;
@@ -50,6 +51,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command SelectCharacterCommand { get; private set; }
 
+        public Command SetTrunkLocationCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -79,6 +82,7 @@ namespace TrinityCore_Manager.ViewModels
             DownloadUpdateTCCommand = new Command(DownloadUpdateTC);
             CompileCommand = new Command(Compile);
             SelectCharacterCommand = new Command(SelectCharacter);
+            SetTrunkLocationCommand = new Command(SetTrunkLocation);
 
             CheckSettings();
             InitBackupTimer();
@@ -187,16 +191,31 @@ namespace TrinityCore_Manager.ViewModels
 
         }
 
+        private void SetTrunkLocation()
+        {
+            var dialog = new VistaFolderBrowserDialog();
+            dialog.SelectedPath = Settings.Default.TrunkLocation;
+
+            var showDialog = dialog.ShowDialog();
+
+            if (showDialog.HasValue && showDialog.Value)
+            {
+                Settings.Default.TrunkLocation = dialog.SelectedPath;
+                Settings.Default.Save();
+            }
+        }
+
         private async void DownloadUpdateTC()
         {
-
             if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
             {
-
-                _messageService.ShowError("Trunk Location Required");
+                //_messageService.ShowError("You must first set your trunk location! Want to do this right now?");
+                //if (_messageService.Show("You must first set your trunk location! Want to do this right now?") == MessageResult.Yes)
+                //    MessageBox.Show("Derp");
+                if (MessageBox.Show("You must first set your trunk location! Want to do this right now?", "Trunk location not set!", MessageBoxButton.YesNo, MessageBoxImage.Error) == MessageBoxResult.Yes)
+                    SetTrunkLocation();
 
                 return;
-
             }
 
             if (_isCloning)

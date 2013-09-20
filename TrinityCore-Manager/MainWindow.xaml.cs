@@ -41,22 +41,6 @@ namespace TrinityCore_Manager
             }
         }
 
-        private void SetTrunkLocButton_Click(object sender, RoutedEventArgs e)
-        {
-
-            var dialog = new VistaFolderBrowserDialog();
-            dialog.SelectedPath = Settings.Default.TrunkLocation;
-
-            var showDialog = dialog.ShowDialog();
-
-            if (showDialog.HasValue && showDialog.Value)
-            {
-                Settings.Default.TrunkLocation = dialog.SelectedPath;
-                Settings.Default.Save();
-            }
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

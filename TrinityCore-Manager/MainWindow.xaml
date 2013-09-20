@@ -172,7 +172,7 @@
 
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Compile" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup17" Header="Trinity Core Panel" Width="147">
-                    <fluent:Button Header="Set Trunk Location" x:Name="SetTrunkLocButton" Width="57" LargeIcon="{StaticResource LocationImage}" Click="SetTrunkLocButton_Click" Margin="0,0,25,0" />
+                    <fluent:Button Header="Set Trunk Location" x:Name="SetTrunkLocButton" Width="57" LargeIcon="{StaticResource LocationImage}"  Command="{Binding SetTrunkLocationCommand}" Margin="0,0,25,0" />
                     <fluent:Button Header="Download &amp; Update" Width="62" LargeIcon="{StaticResource DownloadImage}" Command="{Binding DownloadUpdateTCCommand}" />
                 </fluent:RibbonGroupBox>
 
