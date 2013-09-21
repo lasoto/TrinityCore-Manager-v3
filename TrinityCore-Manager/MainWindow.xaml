@@ -139,7 +139,7 @@
             <fluent:RibbonTabItem ReduceOrder="Default,Default,Default,Large,Large,Large,Other,Other,Other" Header="Database Management" IsSelected="True">
                 <fluent:RibbonGroupBox x:Name="SMGroup10" Header="Backup / Restore" Width="145">
                     <fluent:Button Header="Backup Database" Width="58" LargeIcon="{StaticResource BackupDBImage}" Margin="0,0,25,0" Command="{Binding BackupDatabaseCommand}"/>
-                    <fluent:Button Header="Restore Database" Width="58" LargeIcon="{StaticResource RestoreDBImage}"/>
+                    <fluent:Button Header="Restore Database" Width="58" LargeIcon="{StaticResource RestoreDBImage}" Command="{Binding RestoreDatabaseCommand}"/>
                 </fluent:RibbonGroupBox>
 
                 <fluent:RibbonGroupBox x:Name="SMGroup11" Header="Cleanup" Width="50">

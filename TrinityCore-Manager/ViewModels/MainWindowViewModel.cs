@@ -62,6 +62,8 @@ namespace TrinityCore_Manager.ViewModels
 
         public Command BackupDatabaseCommand { get; private set; }
 
+        public Command RestoreDatabaseCommand { get; private set; }
+
         public MainWindowViewModel(IUIVisualizerService uiVisualizerService, IPleaseWaitService pleaseWaitService, IMessageService messageService)
         {
 
@@ -95,6 +97,7 @@ namespace TrinityCore_Manager.ViewModels
             OpenConfigurationCommand = new Command(OpenConfiguration);
             OpenSetupWizardCommand = new Command(OpenSetupWizard);
             BackupDatabaseCommand = new Command(BackupDatabase);
+            RestoreDatabaseCommand = new Command(RestoreDatabase);
 
             CheckSettings();
             InitBackupTimer();
@@ -135,6 +138,20 @@ namespace TrinityCore_Manager.ViewModels
                 InitBackupTimer();
 
             }
+
+        }
+
+        public void RestoreDatabase()
+        {
+
+            var rd = new RestoreDatabaseModel
+            {
+                AuthDatabase = Settings.Default.DBAuthName,
+                CharDatabase = Settings.Default.DBCharName,
+                WorldDatabase = Settings.Default.DBWorldName,
+            };
+
+            _uiVisualizerService.ShowDialog(new RestoreDatabaseViewModel(rd, _uiVisualizerService, _pleaseWaitService, _messageService));
 
         }
 

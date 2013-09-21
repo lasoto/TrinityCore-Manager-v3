@@ -101,9 +101,6 @@ namespace TrinityCore_Manager.TCM
         public TCManager()
         {
             var set = Settings.Default;
-            AuthDatabase = new Database.AuthDatabase("localhost", 3306, "root", "ascent", "auth");
-            CharDatabase = new Database.CharDatabase("localhost", 3306, "root", "ascent", "char");
-            WorldDatabase = new Database.WorldDatabase("localhost", 3306, "root", "ascent", "world");
             AuthDatabase = new AuthDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBAuthName);
             CharDatabase = new CharDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBCharName);
             WorldDatabase = new WorldDatabase(set.DBHost, set.DBPort, set.DBUsername, set.DBPassword.DecryptString(Encoding.Unicode.GetBytes(set.Entropy)).ToInsecureString(), set.DBWorldName);

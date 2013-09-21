@@ -1,0 +1,31 @@
+﻿<Window x:Class="TrinityCore_Manager.Views.RestoreDatabaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:viewModels="clr-namespace:TrinityCore_Manager.ViewModels"
+        xmlns:catel="http://catel.codeplex.com"
+        xmlns:converters="clr-namespace:TrinityCore_Manager.Converters"
+        Title="RestoreDatabaseWindow" Height="256" Width="427">
+
+    <i:Interaction.Behaviors>
+        <catel:WindowBehavior x:Name="mvvmBehavior" ViewModelType="{x:Type viewModels:RestoreDatabaseViewModel}"/>
+    </i:Interaction.Behaviors>
+
+    <Window.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BoolVisibilityConverter"/>
+        <converters:InverseBooleanVisibilityConverter x:Key="InverseBoolVisibility"/>
+        <converters:InverseBooleanConverter x:Key="InverseBoolConverter"/>
+    </Window.Resources>
+
+    <Grid>
+        <Label Content="Restore List" HorizontalAlignment="Left" Margin="28,36,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="104,40,0,0" VerticalAlignment="Top" Width="249" ItemsSource="{Binding DatabaseFiles}" SelectedValue="{Binding SelectedDatabase}"/>
+        <Button Content="Delete Backup" HorizontalAlignment="Left" Margin="154,67,0,0" VerticalAlignment="Top" Width="101" Command="{Binding DeleteBackupCommand}"/>
+        <ProgressBar HorizontalAlignment="Left" Height="24" Margin="10,143,0,0" VerticalAlignment="Top" Width="399" 
+                     Visibility="{Binding RestoringDatabase, Converter={StaticResource BoolVisibilityConverter}}" Value="{Binding RestoringDatabaseProgress}"/>
+        <Button Content="Restore Database" HorizontalAlignment="Left" Margin="154,188,0,0" VerticalAlignment="Top" Width="101" Height="27" Command="{Binding RestoreDatabaseCommand}"
+                IsEnabled="{Binding RestoringDatabase, Converter={StaticResource InverseBoolConverter}}"/>
+
+    </Grid>
+
+</Window>
