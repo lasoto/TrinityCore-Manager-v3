@@ -143,11 +143,10 @@ namespace TrinityCore_Manager.ViewModels
 
             if (String.IsNullOrEmpty(Settings.Default.TrunkLocation))
             {
-
-                _messageService.ShowError("You must first set the trunk location for TrinityCore!");
+                if (_messageService.Show("You must first set your trunk location! Want to do this right now?", "Trunk location not set!", MessageButton.YesNo, MessageImage.Question) == MessageResult.Yes)
+                    SetTrunkLocation();
 
                 return;
-
             }
 
             if (_isCloning)
