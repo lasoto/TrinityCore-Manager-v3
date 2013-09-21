@@ -20,9 +20,9 @@
         <CheckBox Content="Schedule Backups" HorizontalAlignment="Left" Margin="177,82,0,0" VerticalAlignment="Top" IsChecked="{Binding BackupsScheduled}"/>
         <Label Content="Backup Every" HorizontalAlignment="Left" Margin="48,160,0,0" VerticalAlignment="Top"/>
 
-        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="128,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupDays}"/>
-        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="233,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupHours}"/>
-        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="343,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupMinutes}"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="128,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupDays}" Minimum="0"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="233,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupHours}" Minimum="0"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="343,166,0,0" VerticalAlignment="Top" Width="83" Value="{Binding BackupMinutes}" Minimum="0"/>
         <Label Content="Days" HorizontalAlignment="Left" Margin="146,135,0,0" VerticalAlignment="Top"/>
         <Label Content="Hours" HorizontalAlignment="Left" Margin="250,135,0,0" VerticalAlignment="Top"/>
         <Label Content="Minutes" HorizontalAlignment="Left" Margin="359,135,0,0" VerticalAlignment="Top"/>
